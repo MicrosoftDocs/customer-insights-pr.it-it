@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643958"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269703"
 ---
-# <a name="overview-about-data-sources"></a>Panoramica sulle origini dati
+# <a name="data-sources-overview"></a>Panoramica delle origini dati
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Vedrai il nome di ciascuna origine dati inserita, il suo stato e l'ultima volta 
 |Aggiornamento in corso    |L'inserimento dati è in corso. Puoi annullare questa operazione selezionando **Arresta aggiornamento** nella colonna **Azioni**. L'interruzione dell'aggiornamento di un'origine dati la riporterà al suo ultimo stato di aggiornamento.       |
 |Non inviato     |Si sono verificati errori durante l'inserimento dati.         |
 
-Seleziona **Aggiorna stato** per esaminare maggiori dettagli sullo stato di aggiornamento, inclusi i dettagli di errore e gli aggiornamenti del processo downstream.
+Seleziona il valore nella colonna **Stato** di qualsiasi origine dati per esaminare maggiori dettagli. Nel riquadro **Dettagli stato** espandi **Origini dati**. Seleziona **Vedi dettagli** per altre informazioni sullo stato di aggiornamento, inclusi i dettagli di errore e gli aggiornamenti del processo downstream.
 
 Il caricamento dei dati potrebbe richiedere alcuni minuti. Al termine del completamento dell'aggiornamento, i dati inseriti possono essere rivisti dalla pagina **Entità**. Per ulteriori informazioni, vedi [Entità](entities.md).
 
@@ -76,3 +76,6 @@ Per aggiornare un origine dati su richiesta, segui questi passaggi:
 2. Seleziona i puntini di sospensione verticali accanto all'origine dati che desideri rimuovere e seleziona **Elimina** dal menu a discesa.
 
 3. Conferma l'eliminazione.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

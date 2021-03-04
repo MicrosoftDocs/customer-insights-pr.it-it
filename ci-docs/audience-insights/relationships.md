@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406138"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269884"
 ---
 # <a name="relationships-between-entities"></a>Relazioni tra entità
 
@@ -28,8 +28,8 @@ Durante i processi di corrispondenza e unione, le relazioni di sistema vengono c
 > ![Creazione della relazione](media/relationships-entities-merge.png "Creazione della relazione")
 
 - La **relazione *CustomerToContact*** è stata creata tra l'entità cliente e l'entità contatto. L'entità cliente ottiene il campo chiave **Contact_contactId** per creare una relazione con il campo Chiave entità contatto **contactID**.
-- La **relazione _CustomerToAccount_** è stata creata tra l'entità cliente e l'entità account. L'entità cliente ottiene il campo chiave **Account_accountId** per creare una relazione con il campo Chiave entità account **accountID**.
-- La **relazione _CustomerToWebAccount_** è stata creata tra l'entità cliente e l'entità WebAccount. L'entità cliente ottiene il campo chiave **WebAccount_webaccountId** per creare una relazione con il campo Chiave entità WebAccount **webaccountId**.
+- La **relazione *CustomerToAccount*** è stata creata tra l'entità cliente e l'entità account. L'entità cliente ottiene il campo chiave **Account_accountId** per creare una relazione con il campo Chiave entità account **accountID**.
+- La **relazione *CustomerToWebAccount*** è stata creata tra l'entità cliente e l'entità WebAccount. L'entità cliente ottiene il campo chiave **WebAccount_webaccountId** per creare una relazione con il campo Chiave entità WebAccount **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Creare una relazione
 
@@ -69,3 +69,6 @@ Definire relazioni personalizzate nella pagina **Relazioni**. Ogni relazione è 
 ## <a name="next-step"></a>Passaggio successivo
 
 Le relazioni di sistema e personalizzate vengono utilizzate per creare segmenti in base a più origini dati che non sono più in silo. Per ulteriori informazioni, vedi [Segmenti](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

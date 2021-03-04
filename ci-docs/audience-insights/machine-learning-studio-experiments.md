@@ -4,17 +4,17 @@ description: Utilizza modelli di Machine Learning Studio (versione classica) in 
 ms.date: 12/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: ameetj
 manager: shellyha
-ms.openlocfilehash: 556b6810db0ed2733a3f086291757bd85b77e371
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4669023"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270209"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Utilizzare modelli basati su Azure Machine Learning Studio (versione classica)
 
@@ -171,3 +171,6 @@ L'intero [esperimento dei suggerimenti di prodotto è accessibile in Azure AI Ga
 Per utilizzare queste previsioni in Customer Insights, è necessario **esportare** le previsioni insieme agli ID cliente. [Esportali nella stessa posizione dell'archivio BLOB di Azure](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) in cui esportare i dati di origine. Il servizio Web predittivo può essere pianificato per essere eseguito regolarmente e aggiornare i punteggi.
 
 I dati generati dal modello personalizzato possono essere utilizzati per arricchire ulteriormente i dati cliente. Per ulteriori informazioni, vedi [Modelli personalizzati apprendimento automatico](custom-models.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

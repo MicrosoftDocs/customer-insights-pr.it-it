@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643868"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477138"
 ---
-# <a name="export-destinations-preview"></a>Destinazioni esportazione (anteprima)
+# <a name="export-destinations-preview-overview"></a>Panoramica delle destinazioni di esportazione (anteprima)
 
 La pagina **Destinazioni di esportazione** mostra tutte le posizioni in cui hai impostato l'esportazione dei dati. Puoi anche aggiungere nuove destinazioni per l'esportazione. Mostra anche le opzioni di esportazione attualmente disponibili. Ottieni una rapida panoramica e una descrizione e scopri cosa puoi fare con ogni opzione di estendibilità. Esporta profili, misure e segmenti unificati in app supportate pertinenti per la tua azienda.
 
@@ -27,10 +27,13 @@ Vai a **Amministratore** > **Destinazioni di esportazione** per trovare le segue
 - [Power Automateconnettore](export-power-automate.md)
 - [Power Appsconnettore](export-power-apps.md)
 - [Power BIconnettore](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
-- [Dynamics 365 for Sales](export-dynamics365-sales.md)
+- [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
-- [Archivio BLOB di Azure](export-azure-blob-storage.md)
+- [Archiviazione BLOB di Azure](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [Connettore LiveRamp&reg;](export-liveramp.md)
 - [Bot per Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Per rimuovere una destinazione di esportazione, inizia dalla pagina **Destinazio
 2. Seleziona **Rimuovi** dal menu a discesa.
 
 3. Conferma la rimozione selezionando **Rimuovi** nella schermata di conferma.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

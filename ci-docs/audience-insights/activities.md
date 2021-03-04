@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667234"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267437"
 ---
 # <a name="customer-activities"></a>Impegni cliente
 
@@ -44,13 +44,13 @@ Le tue origini dati includono entità con dati transazionali e dati di impegni p
 
 1. Nella sezione **Configura relazione**, configura i dettagli per connettere i dati dei tuopi impegni al cliente corrispondente.
 
-   > [!div class="mx-imgBorder"]
-   > ![Definire la relazione dell'entità](media/activities-entities-define.png "Definire la relazione dell'entità")
-
     - **Campo dell'entità Impegno**: seleziona il campo nell'entità impegno che verrà utilizzato per stabilire una relazione con un'altra entità.
     - **Entità cliente**: seleziona l'entità cliente di origine corrispondente con cui l'entità impegno sarà in relazione. Puoi creare una correlazione solo con quelle entità cliente di origine utilizzate nel processo di unificazione dei dati.
     - **Campo entità cliente**: questo campo mostra la chiave primaria dell'entità cliente di origine come selezionata nel processo di mapping. Questo campo chiave primaria nell'entità cliente di origine viene utilizzato per stabilire una relazione con l'entità impegno.
     - **Nome**: se esiste già una relazione tra questa entità impegno e l'entità cliente di origine selezionata, il nome della relazione sarà in sola lettura. Se tale relazione non esiste, verrà creata una nuova relazione con il nome fornito qui.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Definire la relazione dell'entità](media/activities-entities-define.png "Definire la relazione dell'entità")
 
 1. Seleziona **Salva** per applicare le modifiche.
 
@@ -82,3 +82,6 @@ Le tue origini dati includono entità con dati transazionali e dati di impegni p
 3. Seleziona l'icona **Elimina**.
 
 4. Conferma l'eliminazione.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

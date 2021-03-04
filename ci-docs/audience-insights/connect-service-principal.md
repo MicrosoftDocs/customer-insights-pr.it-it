@@ -1,20 +1,20 @@
 ---
 title: Connettersi a un account Azure Data Lake Storage Gen2 con un'entità servizio
 description: Utilizza un'entità servizio di Azure per Audience Insights per connetterti al tuo data lake quando lo associ a Audience Insights.
-ms.date: 11/24/2020
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644093"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267727"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Connettersi a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure per Audience Insights
 
@@ -22,7 +22,9 @@ Gli strumenti automatizzati che usano i servizi di Azure deve avere sempre autor
 
 Puoi utilizzare l'entità servizio per [aggiungere o modificare in modo sicuro una cartella di Common Data Model come origine dati](connect-common-data-model.md) o per [creare un ambiente o aggiornarne uno esistente](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Per creare l'entità servizio, sono necessarie autorizzazioni di amministratore per la sottoscrizione di Azure.
+> [!IMPORTANT]
+> - L'account di archiviazione di Azure Data Lake Gen2 che intende usare l'entità servizio deve avere lo [spazio dei nomi gerarchico abilitato](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Per creare l'entità servizio, sono necessarie autorizzazioni di amministratore per la sottoscrizione di Azure.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Creare un'entità servizio di Azure per Audience Insights
 
@@ -83,7 +85,7 @@ Associa un account di archiviazione di Azure Data Lake in Audience Insights per 
 
 Segui i passaggi seguenti per fornire le informazioni necessarie sull'approccio selezionato.
 
-### <a name="resounce-based-storage-account-connection"></a>Connessione dell'account di archiviazione basata sulle risorse
+### <a name="resource-based-storage-account-connection"></a>Connessione dell'account di archiviazione basata sulle risorse
 
 1. Vai al [portale di amministrazione di Azure](https://portal.azure.com), accedi alla tua sottoscrizione e apri l'account di archiviazione.
 
@@ -108,7 +110,8 @@ Segui i passaggi seguenti per fornire le informazioni necessarie sull'approccio 
 1. Esamina la **Sottoscrizione**, il **Gruppo di risorse** e il **Nome** dell'account di archiviazione per assicurarti di selezionare i valori corretti in Audience Insights.
 
 1. In Audience Insights, scegli i valori dei campi corrispondenti quando associ l'account di archiviazione.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Immettere le informazioni dell'ID risorsa dell'account di archiviazione.":::
    
 1. Continua con i passaggi rimanenti in Audience Insights per associare l'account di archiviazione.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

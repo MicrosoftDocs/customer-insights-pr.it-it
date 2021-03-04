@@ -1,20 +1,20 @@
 ---
 title: Creare e gestire ambienti
 description: Scopri come iscriverti al servizio e come gestire gli ambienti.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644138"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270117"
 ---
 # <a name="manage-environments"></a>Gestisci ambienti
 
@@ -46,9 +46,9 @@ Ci sono due modi per creare un nuovo ambiente. Puo specifica una configurazione 
 
 Per creare un ambiente:
 
-1. Seleziona il simbolo **Impostazioni** nell'intestazione dell'app.
+1. Seleziona il selettore **Ambiente** nell'intestazione dell'app.
 
-1. Seleziona **Nuovo ambiente**.
+1. Seleziona **Nuovo**.
 
    > [!div class="mx-imgBorder"]
    > ![Impostazioni ambiente](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Per creare un ambiente:
 
    - Per l'opzione Azure Data Lake Storage Gen2, puoi scegliere tra l'utilizzo di un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Il nome del **Contenitore** non può essere modificato e sarà "customerinsights".
    
-   - Se vuoi usare [previsioni](predictions.md), immetti l'URL dell'istanza Common Data Service nl campo istanza **Indirizzo server** sotto **Usa previsioni**.
+   - Se vuoi usare [previsioni](predictions.md) o configurare la condivisione dei dati con applicazioni e soluzioni basate su Microsoft Dataverse, fornisci l'URL dell'ambiente Microsoft Dataverse in **Configura la condivisione dei dati con Microsoft Dataverse e abilita funzionalità aggiuntive**. Seleziona **Abilita la condivisione dei dati** per condividere i dati di output di Customer Insights con un Data Lake gestito di Microsoft Dataverse.
+
+     > [!NOTE]
+     > - Condivisione dei dati con un Data Lake gestito di Microsoft Dataverse non è attualmente supportata quando salvi tutti i dati nel tuo Azure Data Lake Storage.
+     > - [Previsione di valori mancanti in un'entità](predictions.md) non è attualmente supportata quando abiliti la condivisione dei dati con Data Lake gestito di Microsoft Dataverse.
+
+     > [!div class="mx-imgBorder"]
+     > ![Opzioni di configurazione per abilitare la condivisione dei dati con Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Quando esegui processi, come l'inserimento dati o la creazione di segmenti, le cartelle corrispondenti verranno create nell'account di archiviazione specificato sopra. I file di dati e i file model.json verranno creati e aggiunti alle rispettive sottocartelle in base al processo eseguito.
 
@@ -86,7 +93,7 @@ Per creare un ambiente:
 Le impostazioni di configurazione seguenti vengono copiate:
 
 - Configurazioni delle funzionalità
-- Origini dati importate/inserite
+- Origini dati inserite/importate
 - Configurazione di unificazione dei dati (mapping, corrispondenza, unione)
 - Segmenti
 - Misure
@@ -120,11 +127,11 @@ Quando l'unificazione dei dati è completa, vai a **Misure** e **Segmenti** per 
 
 Puoi modificare alcuni dei dettagli degli ambienti esistenti.
 
-1. Vai ad **Amministratore** > **Sistema** > **Informazioni**.
+1.  Seleziona il selettore **Ambiente** nell'intestazione dell'app.
 
-2. Seleziona **Modifica**
+2.  Seleziona l'icona **Modifica**.
 
-3. Puoi aggiornare il **Nome visualizzato** dell'ambiente, ma non puoi modificare i valori di **Area geografica** o **Tipo**.
+3. Nella casella **Modifica ambiente** puoi aggiornare il **Nome visualizzato** dell'ambiente, ma non puoi modificare **Area** o **Tipo**.
 
 4. Se un ambiente è configurato per l'archiviazione dei dati in Azure Data Lake Storage Gen2, puoi aggiornare la **Chiave dell' account**. Tuttavia, non puoi modificare il **Nome account** o il nome del **Contenitore**.
 
@@ -132,19 +139,27 @@ Puoi modificare alcuni dei dettagli degli ambienti esistenti.
 
 ## <a name="reset-an-existing-environment"></a>Reimpostare un ambiente esistente
 
-Puoi reimpostare un ambiente su uno stato vuoto se desideri eliminare tutte le configurazioni e rimuovere i dati inseriti.
+Come amministratore, puoi reimpostare un ambiente su uno stato vuoto se desideri eliminare tutte le configurazioni e rimuovere i dati inseriti.
 
-1.  Vai ad **Amministratore** > **Sistema** > **Informazioni**.
+1.  Seleziona il selettore **Ambiente** nell'intestazione dell'app. 
 
-2.  Seleziona **Reimposta**. 
+2.  Seleziona l'ambiente che desideri reimpostare e seleziona i puntini di sospensione **...**. 
 
-3.  Per confermare l'eliminazione, immetti il nome dell'ambiente e seleziona **Reimposta**.
+3. Scegli l'opzione **Reimposta**. 
+
+4.  Per confermare l'eliminazione, immetti il nome dell'ambiente e seleziona **Reimposta**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Eliminare un ambiente esistente (disponibile solo per gli amministratori)
+
+In qualità di amministratore, puoi eliminare un ambiente che amministri.
+
+1.  Seleziona il selettore **Ambiente** nell'intestazione dell'app.
+
+2.  Seleziona l'ambiente che desideri reimpostare e seleziona i puntini di sospensione **...**. 
+
+3. Scegli l'opzione **Elimina**. 
+
+4.  Per confermare l'eliminazione, immetti il nome dell'ambiente e seleziona **Elimina**.
 
 
-## <a name="delete-an-existing-environment"></a>Eliminare un ambiente esistente
-
-1. Vai ad **Amministratore** > **Sistema** > **Informazioni**.
-
-1. Seleziona **Elimina.**
-
-1. Per confermare l'eliminazione, immetti il nome dell'ambiente e seleziona **Elimina**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

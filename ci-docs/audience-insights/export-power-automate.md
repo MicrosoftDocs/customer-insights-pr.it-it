@@ -1,20 +1,20 @@
 ---
 title: Connettore Power Automate | Microsoft Docs
 description: Crea flussi in Microsoft Power Automate da Dynamics 365 Customer Insights.
-ms.date: 08/03/2020
+ms.date: 01/20/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406092"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268829"
 ---
 # <a name="power-automate-connector-preview"></a>Connettore Power Automate (anteprima)
 
@@ -22,7 +22,7 @@ Attiva eventi specifici che si verificano automaticamente quando i dati vengono 
 
 ## <a name="power-automate-triggers"></a>Trigger di Power Automate
 
-Puoi utilizzare una varietà di trigger che consentono di creare flussi per automatizzare attività ripetitive, come notifiche o azioni più avanzate. 
+Utilizza i trigger per creare flussi cloud e automatizzare attività ripetitive, come notifiche o azioni più avanzate. 
 
 - Trigger in caso di errore di aggiornamento dell'origine dati. 
 - Trigger in caso di completamento dell'aggiornamento dell'origine dati.
@@ -36,14 +36,20 @@ Puoi utilizzare una varietà di trigger che consentono di creare flussi per auto
 ## <a name="power-automate-actions"></a>Azioni di Power Automate
 Il connettore di Power Automate fornisce altre azioni oltre ai trigger disponibili. Per ulteriori informazioni, vedere la [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>Creare un flusso Power Automate in Audience Insights
+## <a name="create-a-power-automate-flow"></a>Creare un flusso Power Automate
 
-1. In Audience Insights, vai a **Amministratore** > **Sistema**.
+1. In Audience Insights, vai a **Amministratore** > **Destinazioni di esportazione**.
 
-1. Nella pagina **Sistema** seleziona la scheda **Stato**.
+1. Nel riquadro **Power Automate**, seleziona **Configura**.
 
-1. Nella sezione **Origini dati**, seleziona **Flussi** e seleziona **Crea un flusso** dall'elenco a discesa.
-   > [!div class="mx-imgBorder"]
-   > ![Connettore Power Automate che mostra l'azione Crea un flusso](media/power-automate-connector-create-flow.png "Connettore Power Automate che mostra l'azione Crea un flusso")
+1. Si apre il connettore di Customer Insights (anteprima) in Power Automate. **Accedi** a  Power Automate.
 
-1. In Power Automate, seleziona uno dei trigger disponibili per creare il flusso preferito. Se stai creando il tuo primo flusso, devi prima autenticarti con il connettore Power Automate.
+1. Scegli uno dei trigger disponibili e aggiungi più passaggi al tuo nuovo flusso. Per ulteriori informazioni, vedere [Creare un flusso cloud in Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+
+Esempi di come utilizzare i flussi: 
+- Pubblica un messaggio in un canale Microsoft Teams se un aggiornamento di un'origine dati non riesce. 
+- Invia un'e-mail ai proprietari dei dati quando viene superata una soglia in un segmento.
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

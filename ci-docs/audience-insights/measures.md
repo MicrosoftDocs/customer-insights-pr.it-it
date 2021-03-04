@@ -1,7 +1,7 @@
 ---
-title: Creare e modificare misure
-description: Definisci misure relative al cliente per analizzare e riflettere le prestazioni di determinate aree di business.
-ms.date: 10/15/2020
+title: Creare e gestire misure
+description: Definisci misure per analizzare e riflettere le prestazioni della tua attività.
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,105 +9,111 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406135"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269933"
 ---
 # <a name="define-and-manage-measures"></a>Definire e gestire misure
 
-Le **misure** rappresentano gli indicatori di prestazione chiave (KPI) che riflettono le prestazioni e lo stato di aree di business specifiche. Audience Insights offre un'esperienza intuitiva per la creazione di diversi tipi di misure, utilizzando un generatore di query che non richiede di codificare o convalidare le misure manualmente. Puoi tener traccia delle misure aziendali nella pagina **Home**, vedere le misure per clienti specifici sulla **Scheda cliente** e utilizzare le misure per definire i segmenti di clienti nella pagina **Segmenti**.
+Le misure ti aiutano a comprendere meglio i comportamenti dei clienti e le prestazioni aziendali recuperando i valori pertinenti da [profili unificati](data-unification.md). Ad esempio, un'azienda vuole vedere la *spesa totale per cliente* per comprendere la cronologia degli acquisti del singolo cliente. O misurare le *vendite totali dell'azienda* per comprendere i ricavi a livello aggregato dell'intera azienda.  
+
+Le misure vengono create utilizzando il generatore di misure, una piattaforma di query di dati con vari operatori e semplici opzioni di mapping. Ti consente di filtrare i dati, raggruppare i risultati, rilevare [percorsi di relazione tra entità](relationships.md) e visualizzare in anteprima l'output.
+
+Utilizza il generatore di misure per pianificare le attività aziendali eseguendo query sui dati dei clienti ed estrai informazioni dettagliate. Ad esempio, creare una misura di *spesa totale per cliente* e *rendimento totale per cliente* aiuta a identificare un gruppo di clienti con una spesa elevata ma un ritorno elevato. Puoi [creare un segmento](segments.md) per guidare le migliori azioni successive. 
 
 ## <a name="create-a-measure"></a>Creare una misura
 
-Questa sezione illustra come creare una misura da zero. Puoi creare misure con dati provenienti da più origini dati connesse tramite l'entità Cliente. Si applicano alcuni [limiti di servizio](service-limits.md).
+Questa sezione illustra come creare una nuova misura da zero. È possibile creare una misura con attributi di dati da entità di dati che hanno una relazione impostata per connettersi con l'entità Cliente. 
 
 1. In Audience Insights, vai a **Misure**.
 
-2. Seleziona **Nuova misura**.
+1. Seleziona **Nuovo**.
 
-3. Scegli il **tipo** di misura:
-
-   - **Attributo cliente**: un unico campo per cliente che riflette un punteggio, un valore o uno stato per il cliente. Gli attributi del cliente vengono creati come attributi in una nuova entità generata dal sistema chiamata **Customer_Measure**.
-
-   - **Misura del cliente**: informazioni dettagliate sul comportamento del cliente con suddivisione per dimensioni selezionate. Viene generata una nuova entità per ogni misura, potenzialmente con più record per cliente.
-
-   - **Misura aziendale**: tiene traccia delle prestazioni e dello stato dell'azienda. Le misure aziendali possono avere due output diversi: un output numerico che viene visualizzato nella pagina **Home** o una nuova entità che trovi nella pagina **Entità**.
-
-4. Specifica un **Nome** e un **nome visualizzato** facoltativo, quindi seleziona **Avanti**.
-
-5. Nella sezione **Entità**, seleziona la prima entità nell'elenco a discesa. A questo punto, è necessario decidere se sono necessarie altre entità come parte della definizione della misura.
-
-   > [!div class="mx-imgBorder"]
-   > ![Definizione misura](media/measure-definition.png "Definizione misura")
-
-   Per aggiungere più entità, seleziona **Aggiungi entità** e seleziona le entità che desideri utilizzare per la misura.
-
+1. Seleziona **Modifica nome** e fornisci un **Nome** per la misura. 
    > [!NOTE]
-   > Puoi selezionare solo entità che hanno relazioni con l'entità iniziale. Per ulteriori informazioni sulla definizione delle relazioni, vedi [Relazioni](relationships.md).
+   > Se la configurazione della nuova misura ha solo due campi, ad esempio CustomerID e un calcolo, l'output verrà aggiunto come una nuova colonna all'entità generata dal sistema denominata Customer_Measure. E sarai in grado di vedere il valore della misura nel profilo cliente unificato. Altre misure genereranno le proprie entità.
 
-6. Facoltativamente, puoi configurare le variabili. Nella sezione **Variabili**, seleziona **Nuova variabile**.
+1. Nell'area di configurazione, scegli la funzione di aggregazione dal menu a discesa **Seleziona funzione**. Le funzioni di aggregazione includono: 
+   - **Sum**
+   - **Media**
+   - **Conteggio**
+   - **Numero univoco**
+   - **Max**
+   - **Min**
+   - **Primo** : prende il primo valore del record di dati
+   - **Ultimo** : prende l'ultimo valore aggiunto al record di dati
 
-   Le variabili sono calcoli effettuati su ciascuno dei record selezionati. Ad esempio, sommando il punto vendita (POS) e le vendite online per ciascuno dei record dei clienti.
+   :::image type="content" source="media/measure-operators.png" alt-text="Operatori per i calcoli delle misure.":::
 
-7. Specifica un **nome** per la variabile.
+1. Seleziona **Aggiungi attributo** per selezionare i dati necessari per creare questa misura.
+   
+   1. Seleziona la scheda **Attributi**. 
+   1. Entità dati: scegli l'entità che include l'attributo che desideri misurare. 
+   1. Attributo dati: scegli l'attributo che desideri utilizzare nella funzione di aggregazione per calcolare la misura. Puoi selezionare un solo attributo alla volta.
+   1. È inoltre possibile selezionare un attributo di dati da una misura esistente selezionando la scheda **Misure**. In alternativa, puoi cercare un nome di entità o di misura. 
+   1. Seleziona **Aggiungi** per aggiungere l'attributo selezionato alla misura.
 
-8. Nell'area **Espressione**, scegli un campo con cui iniziare il calcolo.
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Seleziona un attributo da utilizzare nei calcoli.":::
 
-9. Digita un'espressione nell'area **Espressione** mentre scegli più campi da includere nel calcolo.
+1. Per creare misure più complesse, puoi aggiungere più attributi o utilizzare operatori matematici nella funzione di misura.
 
-   > [!NOTE]
-   > Attualmente, solo le espressioni aritmetiche sono supportate. Inoltre, il calcolo delle variabili non è supportato per entità provenienti da diversi [percorsi di entità](relationships.md).
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Crea una misura complessa con operatori matematici.":::
 
-10. Seleziona **Fine**.
+1. Per aggiungere filtri, seleziona **Filtro** nell'area di configurazione. 
+  
+   1. Nella sezione **Aggiungi attributo** del riquadro **Filtri**, seleziona l'attributo che desideri utilizzare per creare filtri.
+   1. Imposta gli operatori di filtro per definire il filtro per ogni attributo selezionato.
+   1. Seleziona **Applica** per aggiungere i filtri alla misura.
 
-11. Nella sezione **Definizione misura**, definirai il modo in cui le entità scelte e le variabili calcolate vengono aggregate in una nuova entità di misura o attributo.
+1. Per aggiungere dimensioni, seleziona **Dimensione** nell'area di configurazione. Le dimensioni verranno visualizzate come colonne nell'entità di output della misura.
+   1. Seleziona **Modifica dimensioni** per aggiungere gli attributi di dati in base ai quali raggruppare i valori di misura. Ad esempio, città o sesso. Per impostazione predefinita, la dimensione *CustomerID* è selezionata per creare *misure a livello di cliente*. È possibile rimuovere la dimensione predefinita se si desidera creare *misure a livello di azienda*.
+   1. Seleziona **Fatto** per aggiungere le dimensioni alla misura.
 
-12. Seleziona **Nuova dimensione**. Puoi pensare a una dimensione come a una funzione di *raggruppamento*. L'output dei dati dell'entità o dell'attributo Misura sarà raggruppato per tutte le dimensioni definite.
+1. Se sono presenti più percorsi tra l'entità di dati mappata e l'entità Cliente, è necessario scegliere uno dei [percorsi di relazione tra entità identificati](relationships.md). I risultati delle misure possono variare a seconda del percorso selezionato.
+   1. Seleziona **Preferenze dati** e scegli il percorso dell'entità da utilizzare per identificare la misura.
+   1. Seleziona **Fatto** per applicare la selezione. 
 
-    > [!div class="mx-imgBorder"]
-    > ![Scegliere un ciclo aggregato](media/measures-businessreport-measure-definition2.png "Scegliere un ciclo aggregato")
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Seleziona il percorso dell'entità per la misura.":::
 
-    Seleziona o inserisci le seguenti informazioni come parte della definizione della tua dimensione:
+1. Per aggiungere altri calcoli per la misura, seleziona **Nuovo calcolo**. È possibile utilizzare solo entità nello stesso percorso entità per nuovi calcoli. Gli altri calcoli verranno visualizzati come nuove colonne nell'entità di output della misura.
 
-    - **Entità**: se definisci un'entità Misura, dovrebbe includere almeno un attributo. Se definisci un attributo Misura, includerà solo un attributo per impostazione predefinita. Questa selezione riguarda la scelta dell'entità che include quell'attributo.
-    - **Campo**: scegli l'attributo specifico da includere nell'entità Misura o nell'attributo.
-    - **Bucket**: sceglie se vuoi aggregare i dati su base giornaliera, mensile o annuale. È una selezione obbligatoria solo se hai selezionato un attributo Tipo data.
-    - **Come**: definisce il nome del nuovo campo.
-    - **Nome visualizzato**: definisce il nome visualizzato del campo.
+1. Seleziona **...** sul calcolo per **duplicare**, **rinominare** o **rimuovere** un calcolo da una misura.
 
-    > [!NOTE]
-    > La misura aziendale verrà salvata come entità a numero singolo e verrà visualizzata nella pagina **Home** a meno che tu non aggiunga più dimensioni alla tua misura. Dopo aver aggiunto più dimensioni, la misura *non* verrà visualizzata nella pagina **Home**.
+1. Nell'area **Anteprima** vedrai lo schema dei dati dell'entità di output della misura, inclusi filtri e dimensioni. L'anteprima reagisce dinamicamente alle modifiche nella configurazione.
 
-13. Facoltativamente, aggiungi funzioni di aggregazione. Qualsiasi aggregazione creata genera un nuovo valore all'interno dell'entità o dell'attributo Misure. Le funzioni di aggregazione supportate sono: **Min**, **Max**, **Media**, **Mediana**, **Somma**, **Numero univoco**, **Primo** (acquisisce il primo record di un valore di dimensione) e **Ultimo** (acquisisce l'ultimo record aggiunto a un valore di dimensione).
+1. Seleziona **Esegui** per calcolare i risultati per la misura configurata. Seleziona **Salva e chiudi** se si desidera mantenere la configurazione corrente ed eseguire la misura in un secondo momento.
 
-14. Seleziona **Salva** per applicare le modifiche alla misura.
+1. Vai a **Misure** per vedere la misura appena creata nell'elenco.
 
 ## <a name="manage-your-measures"></a>Gestire le misure
 
-Dopo aver creato almeno una misura, vedrai un elenco di misure nella pagina **Misure**.
+Dopo aver [creato una misura](#create-a-measure), vedrai un elenco di misure nella pagina **Misure**.
 
-Troverai informazioni sul tipo di misura, l'autore, la data e l'ora di creazione, la data e l'ora dell'ultima modifica, lo stato (se la misura è attiva, inattiva o non riuscita) e la data e l'ora dell'ultimo aggiornamento. Quando selezioni una misura dall'elenco, puoi visualizzare un'anteprima del suo output.
+Troverai informazioni sul tipo di misura, l'autore, la data di creazione e lo stato. Quando si seleziona una misura dall'elenco, è possibile visualizzare in anteprima l'output e scaricare un file .CSV.
 
 Per aggiornare tutte le misure contemporaneamente, seleziona **Aggiorna tutto** senza selezionare una misura specifica.
 
 > [!div class="mx-imgBorder"]
 > ![Azioni per gestire singole misure](media/measure-actions.png "Azioni per gestire singole misure")
 
-In alternativa, seleziona una misura dall'elenco ed effettua una delle seguenti azioni:
+Seleziona una misura dall'elenco per le seguenti opzioni:
 
 - Seleziona il nome della misura per visualizzarne i dettagli.
 - **Modifica** la configurazione della misura.
+- **Aggiorna** la misura in base ai dati più recenti.
 - **Rinomina** la misura.
 - **Elimina** la misura.
-- Seleziona i puntini di sospensione (...) e quindi **Aggiorna** per avviare il processo di aggiornamento per la misura.
-- Seleziona i puntini di sospensione (...) e quindi **Scarica** per scaricare un file .CSV della misura.
+- **Attiva** o **Disattiva**. Le misure inattive non verranno aggiornate durante un [aggiornamento pianificato](system.md#schedule-tab).
 
 > [!TIP]
 > Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
 
 ## <a name="next-step"></a>Passaggio successivo
 
-Puoi utilizzare le misure esistenti per creare il tuo primo segmento di clienti nella pagina **Segmenti**. Per ulteriori informazioni, vedi [Segmenti](segments.md).
+Puoi utilizzare le misure esistenti per creare [un segmento di clienti](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

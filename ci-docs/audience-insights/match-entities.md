@@ -4,17 +4,17 @@ description: Metti in corrispondenza le entità per creare profili cliente unifi
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406133"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267483"
 ---
 # <a name="match-entities"></a>Mettere in corrispondenza le entità
 
@@ -22,7 +22,7 @@ Dopo aver completato la fase di mapping, puoi mettere in corrispondenza le entit
 
 ## <a name="specify-the-match-order"></a>Specificare l'ordine di corrispondenza
 
-Vai a **Unifica** > **Corrispondenza** e seleziona **Imposta ordine** per avviare la fase di corrispondenza.
+Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Definisci l'ordine** per iniziare la fase di corrispondenza.
 
 Ogni corrispondenza unifica due o più entità in una singola entità, pur mantenendo ogni record del cliente univoco. Nel seguente esempio, abbiamo selezionato tre entità: **ContactCSV: TestData** come entità **Primaria**, **WebAccountCSV: TestData** come **Entità 2** e **CallRecordSmall: TestData** come **Entità 3**. Il diagramma sopra le selezioni mostra come verrà eseguito l'ordine di corrispondenza.
 
@@ -136,7 +136,7 @@ Una volta identificato un record deduplicato, tale record verrà utilizzato nel 
 
 1. L'esecuzione del processo di corrispondenza ora raggruppa i record in base alle condizioni definite nelle regole di deduplicazione. Dopo aver raggruppato i record, i criteri di unione vengono applicati per identificare il record vincitore.
 
-1. Questo record vincitore viene quindi passato alla corrispondenza tra entità.
+1. Questo record vincitore viene quindi passato alla corrispondenza tra entità, insieme ai record non vincitori (ad esempio, ID alternativi) per migliorare la qualità della corrispondenza.
 
 1. Qualsiasi regola di corrispondenza personalizzata definita per corrispondere sempre e non corrispondere mai sostituisce le regole di deduplicazione. Se una regola di deduplicazione identifica i record corrispondenti e una regola di corrispondenza personalizzata è impostata per non corrispondere mai a tali record, questi due record non corrisponderanno.
 
@@ -157,6 +157,17 @@ Il primo processo di corrispondenza comporta la creazione di un'entità master u
 
 > [!TIP]
 > Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
+
+## <a name="deduplication-output-as-an-entity"></a>Output di deduplicazione come entità
+Oltre all'entità master unificata creata come parte della corrispondenza tra entità, il processo di deduplicazione genera anche una nuova entità per ogni entità dall'ordine di corrispondenza per identificare i record deduplicati. Queste entità possono essere trovate insieme a **ConflationMatchPairs:CustomerInsights** nella sezione **Sistema** della pagina **Entità**, con il nome **Deduplication_Datasource_Entity**.
+
+Un'entità di output della deduplicazione contiene le seguenti informazioni:
+- ID/chiavi
+  - Campo chiave primaria e relativo campo ID alternativo. Il campo ID alternativo è costituito da tutti gli ID alternativi identificati per un record.
+  - Il campo Deduplication_GroupId mostra il gruppo o il cluster identificato all'interno di un'entità che raggruppa tutti i record simili in base ai campi di deduplicazione specificati. Viene utilizzato per scopi di elaborazione del sistema. Se non sono state specificate regole di deduplicazione manuale e si applicano regole di deduplicazione definite dal sistema, potresti non trovare questo campo nell'entità di output della deduplicazione.
+  - Deduplication_WinnerId: questo campo contiene l'ID vincitore dei gruppi o cluster identificati. Se Deduplication_WinnerId è uguale al valore della chiave primaria per un record, significa che il record è il record vincitore.
+- Campi utilizzati per definire le regole di deduplicazione.
+- I campi Regola e Punteggio per indicare quale delle regole di deduplicazione è stata applicata e il punteggio restituito dall'algoritmo di corrispondenza.
 
 ## <a name="review-and-validate-your-matches"></a>Rivedere e convalidare le corrispondenze
 
@@ -200,6 +211,11 @@ Aumenta la qualità riconfigurando alcuni dei tuoi parametri di corrispondenza:
   > [!div class="mx-imgBorder"]
   > ![Duplicare una regola](media/configure-data-duplicate-rule.png "Duplicare una regola")
 
+- **Disattiva una regola** per mantenere una regola di corrispondenza pur escludendola dal processo di corrispondenza.
+
+  > [!div class="mx-imgBorder"]
+  > ![Disattivare una regola](media/configure-data-deactivate-rule.png "Disattivare una regola")
+
 - **Modifica le tue regole** selezionando il simbolo **Modifica**. Puoi applicare le modifiche seguenti:
 
   - Modifica attributi per una condizione: seleziona nuovi attributi nella riga della condizione specifica.
@@ -229,10 +245,12 @@ Puoi specificare condizioni in base a cui alcuni record devono sempre corrispond
     - Entity2Key: 34567
 
    Lo stesso file di modello può specificare record di corrispondenza personalizzati da più entità.
+   
+   Se desideri specificare la corrispondenza personalizzata per la deduplicazione in un'entità, fornisci la stessa entità sia come Entità1 che Entità2 e imposta i diversi valori di chiave primaria.
 
 5. Dopo aver aggiunto tutte le sostituzioni che vuoi applicare, salva il file del modello.
 
-6. Vai a **Dati** > **Origine dati** e inserisci i file di modello come nuove entità. Una volta inseriti, puoi usarli per specificare la configurazione della corrispondenza.
+6. Vai a **Dati** > **Origini dati** e inserisci i file di modello come nuove entità. Una volta inseriti, puoi usarli per specificare la configurazione della corrispondenza.
 
 7. Dopo aver caricato i file e le entità disponibili, seleziona nuovamente l'opzione **Corrispondenza personalizzata**. Vedrai le opzioni per specificare le entità che desideri includere. Seleziona le entità obbligatorie dal menu a discesa.
 
@@ -250,3 +268,6 @@ Puoi specificare condizioni in base a cui alcuni record devono sempre corrispond
 ## <a name="next-step"></a>Passaggio successivo
 
 Dopo aver completato il processo di corrispondenza per almeno una coppia di corrispondenza, puoi risolvere eventuali contraddizioni nei tuoi dati esaminando l'argomento [**Unione**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

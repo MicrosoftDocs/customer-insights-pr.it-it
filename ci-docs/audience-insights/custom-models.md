@@ -4,16 +4,16 @@ description: Utilizzare modelli personalizzati da Azure Machine Learning in Dyna
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668908"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267239"
 ---
 # <a name="custom-machine-learning-models"></a>Modelli di Machine Learning personalizzati
 
@@ -46,15 +46,15 @@ Le previsioni offrono funzionalità per creare migliori esperienze cliente nonch
 
 1. Scegli il servizio Web Machine Learning Studio (versione classica) o la pipeline Azure Machine Learning nell'elenco a discesa **Servizio Web che contiene il modello**. Quindi seleziona **Avanti**.
    - Leggi gli articoli sulla [pubblicazione di un servizio web in Machine Learning Studio (versione classica)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Leggi gli articoli sulla [pubblicazione di una pipeline in Azure Machine Learning utilizzando la finestra di progettazione](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > La tua pipeline deve essere pubblicata in un [endpoint di pipeline](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Leggi gli articoli sulla [pubblicazione di una pipeline in Azure Machine Learning utilizzando la finestra di progettazione](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). La tua pipeline deve essere pubblicata in un [endpoint di pipeline](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Per ogni **Input servizio Web**, seleziona l'**Entità** corrispondente di Audience Insights e seleziona **Avanti**.
+   > [!NOTE]
+   > Il flusso di lavoro del modello personalizzato applicherà l'euristica per mappare i campi di input del servizio Web agli attributi dell'entità in base al nome e al tipo di dati del campo. Verrà visualizzato un errore se un campo del servizio Web non può essere mappato a un'entità.
 
    > [!div class="mx-imgBorder"]
    > ![Configurare un flusso di lavoro](media/intelligence-screen2-updated.png "Configurare un flusso di lavoro")
-
+   
 1. Nel passaggio **Parametri di output del modello**, imposta le seguenti proprietà:
    - Machine Learning Studio (versione classica)
       1. Immetti il **Nome dell'entità** di output in cui desideri inserire i risultati di output del servizio Web.
@@ -112,3 +112,6 @@ Il flusso di lavoro viene inoltre eseguito automaticamente con ogni aggiornament
 1. Seleziona **Elimina** e conferma l'operazione.
 
 Il flusso di lavoro verrà eliminato. L'[entità](entities.md) creata durante la creazione del flusso di lavoro verrà conservata e può essere visualizzata dalla pagina **Entità**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

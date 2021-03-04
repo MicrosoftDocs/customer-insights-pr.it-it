@@ -1,30 +1,26 @@
 ---
-title: Funzionalità Audience Insights
-description: Panoramica della funzionalità Audience Insights di Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Panoramica di Audience Insights per Dynamics 365 Customer Insights
+description: Panoramica di Audience Insights per Dynamics 365 Customer Insights
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406126"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477000"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Funzionalità Audience Insights di Dynamics 365 Customer Insights
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Panoramica di Audience Insights per Dynamics 365 Customer Insights
 
-L'esperienza cliente è al centro delle ambizioni di trasformazione digitale di ogni organizzazione. Per competere nel mercato odierno, le organizzazioni devono creare relazioni significative con i propri clienti a livello personale. Una personalizzazione efficace su vasta scala richiede una visualizzazione cliente completa e unificata.
+Audience Insights ti consente di acquisire una conoscenza più approfondita dei tuoi clienti. Connetti i dati da varie origini transazionali, comportamentali e osservativi per creare una visualizzazione cliente a 360 gradi. Utilizza queste informazioni dettagliate per promuovere esperienze e processi incentrati sul cliente. Unifica e comprendi i dati cliente e utilizzali per ottenere informazioni e azioni utili.
 
-Audience Insights ti consente di acquisire una conoscenza più approfondita dei tuoi clienti. Connetti i dati da varie origini transazionali, comportamentali e osservativi per creare una visualizzazione cliente a 360 gradi. Utilizza queste informazioni dettagliate per promuovere esperienze e processi incentrati sul cliente.
-
-**Unifica e comprendi i dati cliente e utilizzali per ottenere informazioni e azioni utili.**
-
-Con Audience Insights, le organizzazioni possono:  
+## <a name="main-benefits"></a>Principali vantaggi 
 
 - **Eliminare i silo di dati e unificare i dati dei clienti**
 
@@ -33,15 +29,15 @@ Con Audience Insights, le organizzazioni possono:
 
 - **Arricchire i dati con l'intelligenza di elenchi di destinatari contenuta in Microsoft Graph**
 
-  - Crea profili cliente più ricchi incorporando l'intelligenza degli elenchi di destinatari contenuta in Microsoft Graph.  
+  - Crea profili cliente più ricchi [incorporando le informazioni sui gruppi di destinatari contenute in Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Migliorare i processi aziendali e le esperienze cliente personalizzate**
 
   - Promuovi un coinvolgimento personalizzato su tutti i canali: fornisci strumenti a professionisti del marketing, delle vendite e dei servizi con informazioni dettagliate sui clienti contestuali e predefinite e schede personalizzate dei profili cliente su misura integrate nelle applicazioni aziendali che già utilizzano ogni giorno
   - Automatizza esperienze e processi incentrati sul cliente in base a profili, misure aziendali e segmenti personalizzabili.
-  - Abilita ed estendi le esperienze line-of-business basate su Microsoft Power Platform. Crea rapidamente applicazioni con informazioni dettagliate incorporate utilizzando un approccio avanzato con uso limitato di codice di PowerApps.  
+  - Abilita ed estendi le esperienze line-of-business basate su [Microsoft Power Platform](https://powerplatform.microsoft.com/). Crea rapidamente applicazioni con informazioni dettagliate incorporate utilizzando un approccio avanzato con uso limitato di codice di PowerApps.  
 
-Audience Insights include funzionalità per i seguenti utenti chiave:
+## <a name="key-audiences"></a>Gruppi di destinatari principali
 
 - **Amministratori/analisti di dati:**
 
@@ -58,5 +54,8 @@ Audience Insights include funzionalità per i seguenti utenti chiave:
 
 - **Analisti aziendali:**
 
-  - Crea profili personalizzabili, definisci misure e crea segmenti per ottenere una visualizzazione a 360 gradi del tuo cliente, specifica per la tua organizzazione.  
-  - Utilizza i connettori predefiniti per PowerApps o Microsoft Power BI o API per rendere visibili le informazioni dettagliate nelle applicazioni business o nelle soluzioni BI.  
+  - Crea profili personalizzabili, definisci misure e crea segmenti e sfrutta l'analisi predittiva per ottenere una visualizzazione a 360 gradi del tuo cliente, specifica per la tua organizzazione.  
+  - Usa connettori predefiniti per diverse applicazioni o API Microsoft e di terze parti per elaborare ulteriormente le informazioni dettagliate.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

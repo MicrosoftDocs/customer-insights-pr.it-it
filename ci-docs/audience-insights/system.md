@@ -1,7 +1,7 @@
 ---
 title: Configurazione del sistema in Audience Insight
 description: Informazioni sulle impostazioni di sistema nella funzionalità Audience Insights di Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406136"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267345"
 ---
 # <a name="system-configuration"></a>Configurazione di sistema
 
-La pagina **Sistema** include quattro schede: **Stato**, **Pianifica**, **Informazioni** e **Generale**.
+La pagina **Sistema** include le seguenti schede:
+- [Stato](#status-tab)
+- [Pianificazione](#schedule-tab)
+- [Utilizzo API](#api-usage-tab)
+- [Informazioni su](#about-tab)
+- [Generali](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Pagina Sistema](media/system-tabs.png "Pagina Sistema")
 
 ## <a name="status-tab"></a>Scheda Stato
 
-La **scheda Stato** consente di tenere traccia dell'avanzamento dell'inserimento dati, delle esportazioni di dati e di numerosi importanti processi di prodotto. Esamina le informazioni in questa scheda per assicurarti del completamento dei processi attivi.
+La **Scheda Stato** consente di tenere traccia dell'avanzamento dell'inserimento dei dati, delle esportazioni dei dati e di molti altri importanti processi del prodotto. Esamina le informazioni in questa scheda per assicurarti del completamento dei processi attivi.
 
-Questa scheda include tabelle di stato per **Origini dati**, **Processi di sistema** e **Preparazione dei dati**. Ogni tabella tiene traccia del **Nome** dell'attività e dell'entità corrispondente, dello **Stato** dell'esecuzione più recente e di quando è stato eseguito l'**Ultimo aggiornamento**.
+Questa scheda include tabelle con informazioni sullo stato e sull'elaborazione per vari processi. Ogni tabella tiene traccia del **Nome** dell'attività e dell'entità corrispondente, dello **Stato** dell'esecuzione più recente e di quando è stato eseguito l'**Ultimo aggiornamento**.
 
 Visualizza i dettagli delle ultime diverse esecuzioni dell'attività selezionandone il nome.
 
@@ -40,7 +45,7 @@ Esistono sei tipi di stato per le attività. I seguenti tipi di stato sono visua
 - **Ignorata:** l'attività è stata ignorata. Uno o più dei processi downstream da cui dipende questa attività non riescono o vengono ignorati.
 - **Errore:** l'elaborazione dell'attività non è riuscita.
 - **Annullata:** l'elaborazione è stata annullata dall'utente prima del termine.
-- **In coda:** l'elaborazione è in coda e inizierà una volta completate tutte le attività a valle. Per ulteriori informazioni, vedi [Criteri di aggiornamento](#refresh-policies).
+- **In coda:** L'elaborazione viene messa in coda e inizierà una volta completate tutte le attività upstream. Per ulteriori informazioni, vedi [Criteri di aggiornamento](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Criteri di aggiornamento
 
@@ -89,4 +94,17 @@ Seleziona **Salva** per confermare le selezioni.
 
 ## <a name="api-usage-tab"></a>Scheda utilizzo API
 
-Trova i dettagli sull'utilizzo dell'API in tempo reale e scopri quali eventi sono avvenuti in un determinato intervallo di tempo. Per altre informazioni, vedi [Inserimento dati in tempo reale](real-time-data-ingestion.md).
+Trova i dettagli sull'utilizzo dell'API in tempo reale e guarda quali eventi si sono verificati in un determinato intervallo di tempo. Scegli il intervallo di tempo nel menu a discesa **Seleziona un intervallo di tempo**. 
+
+**Utilizzo API** contiene tre sezioni: 
+- **Chiamate API** - un grafico che visualizza il numero aggregato di chiamate all'API nel intervallo di tempo selezionato.
+
+- **Trasferimento dati** - un grafico che mostra la quantità di dati trasferiti tramite l'API nella intervallo di tempo selezionata.
+
+-  **Operazioni** - una tabella con righe per ogni operazione API disponibile e dettagli sull'utilizzo delle operazioni. È possibile selezionare il nome di un'operazione per andare al [riferimento API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Le operazioni che utilizzano l'[inserimento di dati in tempo reale](real-time-data-ingestion.md) contengono un pulsante con un simbolo di binocolo per visualizzare l'utilizzo dell'API in tempo reale. Seleziona il pulsante per aprire un riquadro laterale contenente dettagli sull'utilizzo dell'API in tempo reale nell'ambiente corrente.   
+   Usa la casella **Raggruppa per** nel riquadro **Utilizzo API in tempo reale** per scegliere come presentare al meglio le tue interazioni in tempo reale. Puoi raggruppare i dati per metodo API, nome qualificato dell'entità (entità inserita), autore creazione (origine dell'evento), risultato (esito positivo o negativo) o codici di errore. I dati sono disponibili come grafico cronologico e come tabella.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

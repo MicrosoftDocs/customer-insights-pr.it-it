@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643598"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269795"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guida di esempio per una previsione di abbandono transazionale (anteprima)
 
@@ -49,7 +49,7 @@ Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e 
    [!div class="mx-imgBorder"]
    ![Trasformare la data di nascita in data](media/ecommerce-dob-date.PNG "Trasformare la data di nascita in data")
 
-1. Nel campo "Nome" nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommerceContacts**
+1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommerceContacts**
 
 1. Salva l'origine dati.
 
@@ -66,7 +66,7 @@ Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e 
    - **PurchasedOn**: data/ora
    - **TotalPrice**: valuta
    
-1. Nel campo "Nome" nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommercePurchases**.
+1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommercePurchases**.
 
 1. Salva l'origine dati.
 
@@ -84,7 +84,7 @@ Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e 
    - **RewardsPoints**: numero intero
    - **CreatedOn**: date/ora
 
-1. Nel campo "Nome" nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **loyCustomers**.
+1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **loyCustomers**.
 
 1. Salva l'origine dati.
 
@@ -166,7 +166,7 @@ Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abba
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Selezionare Finestra di previsione e Definizione abbandono.":::
 
-1. Seleziona **Cronologia acquisti (obbligatoria)** e seleziona **Aggiungi dati** per la cronologia dell'abbonamento.
+1. Seleziona **Cronologia acquisti (obbligatoria)** e seleziona **Aggiungi dati** per la cronologia degli acquisti.
 
 1. Aggiungi l'entità **eCommercePurchases : eCommerce** ed esegui il mapping dei campi di eCommerce ai campi corrispondenti richiesti dal modello.
 
@@ -204,3 +204,6 @@ Puoi creare un nuovo segmento basato sull'entità creata dal modello.
 Ora hai un segmento che viene aggiornato dinamicamente e che identifica i clienti ad alto rischio di abbandono per questa attività di abbonamento.
 
 Per altre informazioni, vedi [Creare e gestire i segmenti](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

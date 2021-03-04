@@ -1,7 +1,7 @@
 ---
 title: Cercare e filtrare profili cliente
 description: Trova rapidamente informazioni sui profili cliente unificati e filtra per attributi specificati.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406139"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270071"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profili cliente: indice di ricerca e filtro
 
@@ -28,14 +28,6 @@ Il risultato dell'unificazione dei dati cliente è un'entità Profilo cliente ch
 Se è la prima volta che si definiscono gli attributi ricercabili come amministratore, devi definire prima i campi indicizzati. Ti consigliamo di scegliere tutti gli attributi in base ai quali gli utenti possono cercare e filtrare i clienti nella pagina **Clienti**. Puoi specificare solo gli attributi presenti nell'entità Profilo cliente creata durante il processo di unificazione dei dati.
 
 1. Apri la pagina **Clienti** e seleziona **Indicizzazione ricerca e filtro**.
-
-> [!NOTE]
-> Creiamo una configurazione dell'indice di ricerca predefinita sugli attributi disponibili nell'entità Cliente dai seguenti tipi semantici, come definito nella pagina Mappa.
-> - Nome, Cognome, Secondo nome, Nome completo
-> - Nome organizzazione
-> - Indirizzo e-mail
-> - Numero di telefono
-> - Informazioni sulla posizione
 
 2. Seleziona **+ Aggiungi** per specificare i campi indicizzati.
 
@@ -65,3 +57,10 @@ Il menu **Filtra** nella pagina **Clienti** può includere un numero variabile d
 2. Seleziona **Salva** per applicare le modifiche.
 
 3. Seleziona **Esegui** quando sei pronto per applicare le impostazioni.
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Vai alla pagina **Clienti** per cercare i profili dei clienti o utilizza i campi indicizzati per visualizzare un sottoinsieme di tutti i profili dei clienti.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

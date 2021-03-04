@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689180"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270285"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Inserimento dati in tempo reale (anteprima)
 
@@ -83,6 +83,7 @@ I dettagli di questa API, inclusi parametri e risposte, sono disponibili nella s
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Comprendi il tuo utilizzo in tempo reale con i dati di telemetria
 
-Ottieni una panoramica del volume di richieste all'API in tempo reale e informazioni sui problemi che il sistema può incontrare. Puoi [accedere alla telemetria in tempo reale](system.md#api-usage-tab) passando a **Amministratore** > **Sistema** > **Utilizzo API**. Nella tabella **Operazioni**, le righe per le operazioni API che utilizzano i metodi in tempo reale contengono un pulsante per visualizzare l'utilizzo dell'API in tempo reale. Il pulsante è visualizzato con un simbolo binoculare. Seleziona il pulsante per aprire un riquadro laterale contenente dettagli sull'utilizzo dell'API in tempo reale nell'ambiente corrente.
+Ottieni una panoramica del volume di richieste all'API in tempo reale e informazioni sui problemi che il sistema può incontrare. Puoi [accedere alla telemetria in tempo reale](system.md#api-usage-tab). 
 
-Usa il selettore **Raggruppa per** per scegliere come presentare al meglio le interazioni in tempo reale su una sequenza temporale che va dalle ultime 24 ore agli ultimi 30 giorni. Puoi raggruppare i dati per metodo API, nome qualificato dell'entità (entità inserita), autore creazione (origine dell'evento), risultato (esito positivo o negativo) o codici di errore. I dati sono disponibili come grafico cronologico e come tabella.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

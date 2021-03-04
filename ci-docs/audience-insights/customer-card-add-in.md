@@ -1,7 +1,7 @@
 ---
 title: Installa e configura il componente aggiuntivo Scheda cliente
 description: Installa e configura il componente aggiuntivo Scheda cliente per Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644048"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268049"
 ---
 # <a name="customer-card-add-in-preview"></a>Componente aggiuntivo Scheda cliente (anteprima)
 
@@ -28,7 +28,7 @@ Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics
 - Profili cliente [inseriti dall'app Dynamics 365 utilizzando Common Data Service](connect-power-query.md).
 - Gli utenti del componente aggiuntivo Scheda cliente devono essere [aggiunti come utenti](permissions.md) in Audience Insights.
 - [Funzionalità di ricerca e filtro configurate](search-filter-index.md).
-- Controllo demografico: i campi demografici, come l'età o il sesso sono disponibili nel profilo cliente unificato.
+- Controllo demografico: i campi demografici, come l'età o il sesso, sono disponibili nel profilo cliente unificato.
 - Controllo Arricchimento: richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili cliente.
 - Controllo dell'intelligenza: richiede dati generati tramite Azure Machine Learning ([previsioni](predictions.md) o [modelli personalizzati](custom-models.md))
 - Controllo delle misure: richiede [misure configurate](measures.md).
@@ -92,10 +92,26 @@ L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
 
 1. Nella finestra di dialogo **Proprietà campo**, seleziona la casella di controllo **Visualizza etichetta nel modulo**.
 
-1. Seleziona l'opzione **Web** per il controllo. Per il controllo Arricchimento, seleziona il tipo di arricchimento che vuoi visualizzare configurando il campo **enrichmentType**. È necessario aggiungere un controllo di arricchimento separato per ciascun tipo di arricchimento.
+1. Seleziona l'opzione **Web** per il controllo. Per il controllo Arricchimento, seleziona il tipo di arricchimento che vuoi visualizzare configurando il campo **enrichmentType**. Aggiungi un controllo arricchimento separato per ogni tipo di arricchimento.
 
 1. Seleziona **Salva** e **Pubblica** per pubblicare il modulo contatto aggiornato.
 
 1. Vai al modulo del contatto pubblicato. Vedrai il controllo appena aggiunto. Potrebbe essere necessario effettuare l'accesso la prima volta che lo si utilizza.
 
 1. Per personalizzare quello che vuoi visualizzare nel controllo personalizzato, seleziona il pulsante di modifica nell'angolo superiore destro.
+
+## <a name="upgrade-customer-card-add-in"></a>Aggiornare il componente aggiuntivo Scheda cliente
+Il componente aggiuntivo Scheda cliente non si aggiorna automaticamente. Per eseguire l'aggiornamento alla versione più recente, segui questa procedura nell'app Dynamics 365 in cui è installato il componente aggiuntivo.
+
+1. Nell'app Dynamics 365, vai a **Impostazioni** > **Personalizzazione** e seleziona **Soluzioni**.
+
+1. Nella tabella dei componenti aggiuntivi cerca **CustomerInsightsCustomerCard** e seleziona la riga.
+
+1. Seleziona **Applica aggiornamento soluzione** nella barra delle azioni.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Aggiorna la soluzione nell'area Personalizzazione delle app Dynamics 365":::
+
+1. Dopo aver avviato il processo di aggiornamento, vedrai un indicatore di caricamento fino al completamento dell'aggiornamento. Se non è disponibile una versione più recente, l'aggiornamento mostrerà un messaggio di errore.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

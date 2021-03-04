@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f276a73feca52023391ad92fbc84359921b85328
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406123"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268691"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Richieste diritti dell'interessato ai sensi del GDPR
 
@@ -75,3 +75,6 @@ L'amministratore di un tenant può seguire questa procedura per esportare i dati
 1. Invia un messaggio e-mail a D365CI@microsoft.com specificando l'indirizzo e-mail dell'utente nella richiesta. Il team di Customer Insights invierà un messaggio e-mail all'indirizzo di posta elettronica dell'amministratore del tenant registrato, chiedendo la conferma per esportare i dati.
 2. Accetta la conferma di esportazione dei dati per l'utente che ha effettuato la richiesta.
 3. Ricevi i dati esportati tramite l'indirizzo e-mail dell'amministratore del tenant.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

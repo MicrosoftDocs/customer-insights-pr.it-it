@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653985"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269841"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Guida di esempio per una previsione di abbandono dell'abbonamento (anteprima)
 
@@ -46,10 +46,9 @@ Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e 
    - **DateOfBirth**: data
    - **CreatedOn**: data/ora/fuso orario
 
-   [!div class="mx-imgBorder"]
-   ![Trasformare la data di nascita in data](media/ecommerce-dob-date.PNG "Trasformare la data di nascita in data")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Trasformare la data di nascita in data.":::
 
-1. Nel campo "Nome" nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommerceContacts**
+1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommerceContacts**
 
 1. Salva l'origine dati.
 
@@ -67,7 +66,7 @@ Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e 
    - **RewardsPoints**: numero intero
    - **CreatedOn**: date/ora
 
-1. Nel campo "Nome" nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **loyCustomers**.
+1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **loyCustomers**.
 
 1. Salva l'origine dati.
 
@@ -90,7 +89,7 @@ Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e 
    - **Is_auto_renew**: vero/falso
    - **RecurringFrequencyInMonths**: numero intero
 
-1. Nel campo "Nome" nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **SubscriptionHistory**.
+1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **SubscriptionHistory**.
 
 1. Salva l'origine dati.
 
@@ -230,3 +229,6 @@ Puoi creare un nuovo segmento basato sull'entità creata dal modello.
 Ora hai un segmento che viene aggiornato dinamicamente e che identifica i clienti ad alto rischio di abbandono per questa attività di abbonamento.
 
 Per altre informazioni, vedi [Creare e gestire i segmenti](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

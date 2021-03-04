@@ -1,20 +1,20 @@
 ---
 title: Connettore Power Apps
 description: Connettiti con Power Apps e Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406094"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268921"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Connettore Microsoft Power Apps (anteprima)
 
@@ -31,9 +31,9 @@ Fai riferimento alla documentazione di Power Apps per scoprire come [aggiungere 
 Dopo aver aggiunto Customer Insights come connessione dati, puoi scegliere le seguenti entità in Power Apps:
 
 - Cliente: per utilizzare i dati dal [profilo cliente unificato](customer-profiles.md).
-- Impegno del cliente unificato: per visualizzare la [sequenza temporale degli impegni](activities.md) sull'app.
+- UnifiedActivity: per visualizzare la [sequenza temporale degli impegni](activities.md) sull'app.
 
-## <a name="limitations"></a>Limitazioni
+## <a name="limitations"></a>Limiti
 
 ### <a name="retrievable-entities"></a>Entità recuperabili
 
@@ -72,3 +72,6 @@ Ad esempio, aggiungi profili cliente a un [controllo della raccolta](https://doc
 1. Per visualizzare la sequenza temporale unificata per un cliente, aggiungi un elemento Raccolta e aggiungi la proprietà Elementi: **Filtro ("UnifiedActivity", CustomerId = {Customer_Id})**
 
     Esempio: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

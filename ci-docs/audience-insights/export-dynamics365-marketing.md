@@ -1,20 +1,20 @@
 ---
 title: Esportare dati di Customer Insights in Dynamics 365 Marketing
 description: Informazioni su come configurare la connessione a Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643778"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269059"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Connettore per Dynamics 365 Marketing (anteprima)
 
@@ -24,7 +24,10 @@ Utilizza i [segmenti](segments.md) per generare campagne e contattare gruppi spe
 
 ## <a name="prerequisite"></a>Prerequisito
 
-Record del contatto [di Dynamics 365 Marketing inseriti utilizzando Common Data Service](connect-power-query.md).
+- I record dei contatti devono essere presenti in Dynamics 365 Marketing prima di poter esportare un segmento da Customer Insights a Marketing. Ulteriori informazioni su come inserire i contatti in [Dynamics 365 Marketing utilizzando Common Data Services](connect-power-query.md).
+
+  > [!NOTE]
+  > L'esportazione di segmenti da Audience Insights a Marketing non creerà nuovi record dei contatti nelle istanze di Marketing. I record dei contatti di Marketing devono essere inseriti in Audience Insights e utilizzati come origine dati. Devono inoltre essere inclusi nell'entità Cliente unificata per mappare gli ID cliente agli ID contatto prima che i segmenti possano essere esportati.
 
 ## <a name="configure-the-connector-for-marketing"></a>Configurare il connettore per Marketing
 
@@ -49,3 +52,6 @@ Record del contatto [di Dynamics 365 Marketing inseriti utilizzando Common Data 
 ## <a name="export-the-data"></a>Esportare i dati
 
 Puoi [esportare dati su richiesta](export-destinations.md). L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

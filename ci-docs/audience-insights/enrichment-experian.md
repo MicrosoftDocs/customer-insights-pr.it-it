@@ -1,20 +1,20 @@
 ---
 title: Arricchimento con l'arricchimento di terze parti Experian
 description: Informazioni generali sull'arricchimento di terze parti Experian.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668817"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269565"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Arricchisci i profili cliente con i dati demografici di Experian (anteprima)
 
@@ -41,7 +41,9 @@ Per configurare Experian, devono essere rispettati i seguenti requisiti:
 
 ## <a name="map-your-fields"></a>Esegui il mapping dei campi
 
-1. Seleziona **Aggiungi dati** e scegli i tuoi identificatori chiave da **Nome e indirizzo**, **E-mail** o **Telefono** da inviare a Experian per la risoluzione dell'identità.
+1.  Seleziona **Aggiungi dati** e scegli il **Set di dati cliente** che vuoi arricchire con i dati demografici di Experian. Puoi selezionare l'entità **Cliente** per arricchire tutti i tuoi profili cliente o selezionare un'entità segmento per arricchire solo i profili cliente contenuti in quel segmento.
+
+1. Seleziona gli identificatori chiave da **Nome e indirizzo**, **E-mail** o **Telefono** da inviare a Experian per la risoluzione dell'identità.
 
    > [!TIP]
    > Più attributi dell'identificatore chiave inviati a Experian probabilmente producono un tasso di corrispondenza più elevato.
@@ -52,8 +54,8 @@ Per configurare Experian, devono essere rispettati i seguenti requisiti:
 
 1.  Seleziona **Salva** per completare la mappatura dei campi.
 
-   > [!div class="mx-imgBorder"]
-   > ![Mapping del campo Experian](media/experian-field-mapping.png "Mapping del campo Experian")
+    > [!div class="mx-imgBorder"]
+    > ![Mapping del campo Experian](media/experian-field-mapping.png "Mapping del campo Experian")
 
 ## <a name="enrichment-results"></a>Risultati dell'arricchimento
 
@@ -71,3 +73,6 @@ Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md), 
 
 Quando abiliti Dynamics 365 Customer Insights per trasmettere dati a Experian, consenti il trasferimento di dati al di fuori dei limiti di conformità per Dynamics 365 Customer Insights, inclusi dati potenzialmente sensibili come i dati personali. Microsoft trasferirà tali dati secondo le tue istruzioni, ma hai la responsabilità di assicurarti che Experian rispetti gli obblighi di privacy o sicurezza che potresti avere. Per ulteriori informazioni, vedi [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'amministratore di Dynamics 365 Customer Insights può rimuovere questo arricchimento in qualsiasi momento per interrompere l'utilizzo di questa funzionalità.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
