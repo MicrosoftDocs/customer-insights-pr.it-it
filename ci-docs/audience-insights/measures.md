@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269933"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654737"
 ---
 # <a name="define-and-manage-measures"></a>Definire e gestire misure
 
@@ -72,8 +72,8 @@ Questa sezione illustra come creare una nuova misura da zero. È possibile crear
    1. Seleziona **Modifica dimensioni** per aggiungere gli attributi di dati in base ai quali raggruppare i valori di misura. Ad esempio, città o sesso. Per impostazione predefinita, la dimensione *CustomerID* è selezionata per creare *misure a livello di cliente*. È possibile rimuovere la dimensione predefinita se si desidera creare *misure a livello di azienda*.
    1. Seleziona **Fatto** per aggiungere le dimensioni alla misura.
 
-1. Se sono presenti più percorsi tra l'entità di dati mappata e l'entità Cliente, è necessario scegliere uno dei [percorsi di relazione tra entità identificati](relationships.md). I risultati delle misure possono variare a seconda del percorso selezionato.
-   1. Seleziona **Preferenze dati** e scegli il percorso dell'entità da utilizzare per identificare la misura.
+1. Se sono presenti più percorsi tra l'entità di dati mappata e l'entità *Cliente*, è necessario scegliere uno dei [percorsi di relazione tra entità](relationships.md) identificati. I risultati delle misure possono variare a seconda del percorso selezionato. 
+   1. Seleziona **Preferenze dati** e scegli il percorso dell'entità da utilizzare per identificare la misura. Se esiste un solo percorso per l'entità *Cliente*, questo controllo non verrà visualizzato.
    1. Seleziona **Fatto** per applicare la selezione. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Seleziona il percorso dell'entità per la misura.":::
