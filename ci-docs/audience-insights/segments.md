@@ -1,20 +1,20 @@
 ---
 title: Creare e gestire segmenti
 description: Crea segmenti di clienti per raggrupparli in base a vari attributi.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270361"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597057"
 ---
 # <a name="create-and-manage-segments"></a>Creare e gestire segmenti
 
@@ -35,19 +35,19 @@ I segmenti sono gestiti nella pagina **Segmenti**.
 
 1. In Audience Insights, vai alla pagina **Segmenti**.
 
-2. Seleziona **Nuovo** > **Segmento vuoto**.
+1. Seleziona **Nuovo** > **Segmento vuoto**.
 
-3. Nel riquadro **Nuovo segmento**, scegli un tipo di segmento e assegna un **Nome**.
+1. Nel riquadro **Nuovo segmento**, scegli un tipo di segmento e assegna un **Nome**.
 
    Facoltativamente, fornisci un nome visualizzato e una descrizione che aiuti a identificare il segmento.
 
-4. Seleziona **Avanti** per andare alla pagina **Generatore di segmenti** in cui puoi definire un gruppo. Un gruppo è un set di clienti.
+1. Seleziona **Avanti** per andare alla pagina **Generatore di segmenti** in cui puoi definire un gruppo. Un gruppo è un set di clienti.
 
-5. Scegli l'entità che include l'attributo in base al quale vuoi segmentare.
+1. Scegli l'entità che include l'attributo in base al quale vuoi segmentare.
 
-6. Scegli l'attributo in base a cui segmentare. Questo attributo può avere uno dei quattro tipi di valore: numerico, stringa, data o booleano.
+1. Scegli l'attributo in base a cui segmentare. Questo attributo può avere uno dei quattro tipi di valore: numerico, stringa, data o booleano.
 
-7. Scegli un operatore e un valore per l'attributo selezionato.
+1. Scegli un operatore e un valore per l'attributo selezionato.
 
    > [!div class="mx-imgBorder"]
    > ![Filtro gruppo clienti](media/customer-group-numbers.png "Filtro gruppo clienti")
@@ -64,9 +64,14 @@ I segmenti sono gestiti nella pagina **Segmenti**.
    > [!div class="mx-imgBorder"]
    > ![Percorso di relazione durante la creazione del segmento](media/segments-multiple-relationships.png "Percorso di relazione durante la creazione del segmento")
 
-9. Seleziona **Salva** per salvare il segmento. Il segmento verrà salvato ed elaborato se tutti i requisiti vengono convalidati. Altrimenti, verrà salvato come bozza.
+1. Per impostazione predefinita, i segmenti generano un'entità di output che contiene tutti gli attributi dei profili cliente che corrispondono ai filtri definiti. Se un segmento è basato su entità diverse dall'entità *Cliente* puoi aggiungere più attributi da queste entità all'entità di output. Seleziona **Attributi progetto** per scegliere gli attributi che verranno aggiunti all'entità di output.  
 
-10. Seleziona **Torna a Segmenti** per tornare alla pagina **Segmenti**.
+   
+   Esempio: un segmento si basa su un'entità che contiene i dati sull'impegno del cliente correlati all'entità *Cliente*. Il segmento cerca tutti i clienti che hanno chiamato l'help desk negli ultimi 60 giorni. Puoi scegliere di aggiungere la durata della chiamata e il numero di chiamate a tutti i record cliente corrispondenti nell'entità di output. Queste informazioni potrebbero essere utili per inviare un'e-mail con collegamenti utili ad articoli della guida in linea e domande frequenti per i clienti che chiamano frequentemente.
+
+1. Seleziona **Salva** per salvare il segmento. Il segmento verrà salvato ed elaborato se tutti i requisiti vengono convalidati. Altrimenti, verrà salvato come bozza.
+
+1. Seleziona **Torna a Segmenti** per tornare alla pagina **Segmenti**.
 
 ## <a name="manage-existing-segments"></a>Gestire segmenti esistenti
 
@@ -85,6 +90,7 @@ Quando selezioni un segmento sono disponibili le seguenti azioni:
 
 - **Visualizza** i dettagli del segmento, inclusa la tendenza del conteggio dei membri, un'anteprima dei membri del segmento.
 - **Modifica** il segmento per modificarne le proprietà.
+- **Crea duplicato** di un segmento. Puoi scegliere di modificare subito le proprietà o semplicemente salvare il duplicato.
 - **Aggiorna** il segmento per includere gli ultimi dati.
 - **Attiva** o **Disattiva** il segmento. I segmenti hanno due possibili stati: attivo o inattivo. Questi stati sono utili quando si modifica un segmento. Per i segmenti inattivi, la definizione del segmento esiste, ma non contiene ancora alcun cliente. Quando attivi un segmento, il suo stato cambia da "inattivo" ad "attivo" e inizia a cercare i clienti che corrispondono alla definizione del segmento. Se un [aggiornamento pianificato](system.md#schedule-tab) è configurato, i segmenti inattivi hanno **Stato** elencato come **Ignorato**, a indicare che non è stato nemmeno tentato un aggiornamento. Quando un segmento inattivo viene attivato, verrà aggiornato e incluso negli aggiornamenti pianificati.
   In alternativa, puoi utilizzare la funzionalità **Pianifica più tardi** nel menu a discesa **Attiva/Disattiva** per specificare una data e un'ora future per l'attivazione e la disattivazione di un particolare segmento.

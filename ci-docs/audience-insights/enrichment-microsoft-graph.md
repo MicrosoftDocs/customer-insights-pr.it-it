@@ -2,19 +2,19 @@
 title: Arricchimento di profili cliente con Microsoft Graph
 description: Utilizza i dati proprietari di Microsoft Graph per arricchire i tuoi dati cliente con le affinità relative al marchio e agli interessi.
 ms.date: 12/10/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: aa46dac4f9c0d27881371877b14a92a6725710da
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269335"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596458"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Arricchimento di profili cliente con le affinità relative al marchio e agli interessi (anteprima)
 
@@ -33,7 +33,7 @@ Per configurare l'arricchimento delle affinità degli interessi, vai alla scheda
 
 I dati di ricerca online di Microsoft Graph vengono utilizzati per trovare affinità per marchi e interessi in vari segmenti demografici (definiti per età, sesso o posizione). Il volume di ricerca online per un marchio o interesse determina quanta affinità un segmento demografico, rispetto ad altri segmenti, ha con quel marchio o interesse.
 
-[Altre informazioni su Microsoft Graph](https://docs.microsoft.com/graph/overview).
+[Altre informazioni su Microsoft Graph](/graph/overview).
 
 ## <a name="affinity-level-and-score"></a>Livello e punteggio di affinità
 

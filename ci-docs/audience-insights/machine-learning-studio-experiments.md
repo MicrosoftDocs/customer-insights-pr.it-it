@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270209"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598344"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Utilizzare modelli basati su Azure Machine Learning Studio (versione classica)
 
@@ -37,7 +37,7 @@ In un primo passaggio, dobbiamo creare un'area di lavoro e aprire Machine Learni
 
 1. Cerca **Area di lavoro di Machine Learning Studio** e seleziona **Crea**.
 
-1. Immetti i dettagli obbligatori per [creare l'area di lavoro](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Scegli il **Piano tariffario del piano di servizi Web** in base alla quantità di dati che intendi importare. Per le migliori prestazioni, seleziona la **Posizione** che è geograficamente più vicina a te.
+1. Immetti i dettagli obbligatori per [creare l'area di lavoro](/azure/machine-learning/studio/create-workspace). Scegli il **Piano tariffario del piano di servizi Web** in base alla quantità di dati che intendi importare. Per le migliori prestazioni, seleziona la **Posizione** che è geograficamente più vicina a te.
 
 1. Dopo aver creato la risorsa, verrà visualizzata la dashboard dell'area di lavoro di Machine Learning Studio. Seleziona **Avvia Machine Learning Studio**.
 
@@ -65,7 +65,7 @@ Ora puoi creare un nuovo esperimento o importare un modello di esperimento esist
 
    ![Configurare un servizio Web predittivo](media/predictive-webservice-control.png)
 
-1. Una volta che l'esperimento del servizio Web predittivo ha esito positivo, è possibile distribuirlo per la pianificazione automatica. Per fare in modo che il servizio Web funzioni con Customer Insights, seleziona **Distribuisci servizio Web** > **Anteprima Distribuisci servizio Web [Nuovo]**. [Scopri di più sulla distribuzione di un servizio Web](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
+1. Una volta che l'esperimento del servizio Web predittivo ha esito positivo, è possibile distribuirlo per la pianificazione automatica. Per fare in modo che il servizio Web funzioni con Customer Insights, seleziona **Distribuisci servizio Web** > **Anteprima Distribuisci servizio Web [Nuovo]**. [Scopri di più sulla distribuzione di un servizio Web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
 
    ![Distribuire un servizio Web predittivo](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ L'immagine seguente mostra la pipeline di training e valutazione del modello da 
 
 ![Modello di abbandono in Azure Machine Learning Studio](media/azure-machine-learning-model.png)
 
-Applichiamo anche una tecnica chiamata **Importanza delle funzionalità di permuta**, un aspetto importante dell'ottimizzazione del modello. I modelli incorporati hanno poche informazioni dettagliate sull'impatto di qualsiasi funzionalità specifica sulla previsione finale. Il calcolatore dell'importanza delle funzionalità utilizza un algoritmo personalizzato per calcolare l'influenza delle singole funzionalità sul risultato per un modello specifico. L'importanza della funzionalità è normalizzata tra +1 e -1. Un'influenza negativa significa che la funzionalità corrispondente ha un'influenza contro-intuitiva sul risultato e dovrebbe essere rimossa dal modello. Un'influenza positiva indica che la funzionalità sta contribuendo notevolmente alla previsione. Questi valori non sono coefficienti di correlazione in quanto sono metriche diverse. Per ulteriori informazioni, vedi [Importanza delle funzionalità di permuta](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Applichiamo anche una tecnica chiamata **Importanza delle funzionalità di permuta**, un aspetto importante dell'ottimizzazione del modello. I modelli incorporati hanno poche informazioni dettagliate sull'impatto di qualsiasi funzionalità specifica sulla previsione finale. Il calcolatore dell'importanza delle funzionalità utilizza un algoritmo personalizzato per calcolare l'influenza delle singole funzionalità sul risultato per un modello specifico. L'importanza della funzionalità è normalizzata tra +1 e -1. Un'influenza negativa significa che la funzionalità corrispondente ha un'influenza contro-intuitiva sul risultato e dovrebbe essere rimossa dal modello. Un'influenza positiva indica che la funzionalità sta contribuendo notevolmente alla previsione. Questi valori non sono coefficienti di correlazione in quanto sono metriche diverse. Per ulteriori informazioni, vedi [Importanza delle funzionalità di permuta](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 L'intero [esperimento di abbandono è disponibile in Azure AI Gallery](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ L'intero [esperimento dei suggerimenti di prodotto è accessibile in Azure AI Ga
 
 ## <a name="integrate-custom-models"></a>Integrare modelli personalizzati
 
-Per utilizzare queste previsioni in Customer Insights, è necessario **esportare** le previsioni insieme agli ID cliente. [Esportali nella stessa posizione dell'archivio BLOB di Azure](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) in cui esportare i dati di origine. Il servizio Web predittivo può essere pianificato per essere eseguito regolarmente e aggiornare i punteggi.
+Per utilizzare queste previsioni in Customer Insights, è necessario **esportare** le previsioni insieme agli ID cliente. [Esportali nella stessa posizione dell'archivio BLOB di Azure](/azure/storage/common/storage-import-export-data-from-blobs) in cui esportare i dati di origine. Il servizio Web predittivo può essere pianificato per essere eseguito regolarmente e aggiornare i punteggi.
 
 I dati generati dal modello personalizzato possono essere utilizzati per arricchire ulteriormente i dati cliente. Per ulteriori informazioni, vedi [Modelli personalizzati apprendimento automatico](custom-models.md).
 

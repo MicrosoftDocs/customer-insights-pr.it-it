@@ -1,133 +1,137 @@
 ---
 title: Mettere in corrispondenza le entità per l'unificazione dei dati
 description: Metti in corrispondenza le entità per creare profili cliente unificati.
-ms.date: 10/14/2020
+ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267483"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595569"
 ---
 # <a name="match-entities"></a>Mettere in corrispondenza le entità
 
-Dopo aver completato la fase di mapping, puoi mettere in corrispondenza le entità. La fase di corrispondenza specifica in che modo combinare i set di dati in un profilo cliente unificato. La fase di corrispondenza richiede almeno [due entità mappate](map-entities.md).
+La fase di corrispondenza specifica in che modo combinare i set di dati in un profilo cliente unificato. Dopo aver completato il [passaggio della mappa](map-entities.md) nel processo di unificazione dei dati, sei pronto per corrispondere le tue entità. La fase di corrispondenza richiede almeno due entità mappate.
+
+La pagina della corrispondenza è composta da tre sezioni: 
+- Metriche chiave che riepilogano il numero di record corrispondenti
+- Ordine di corrispondenza e regole per la corrispondenza tra entità
+- Regole per la deduplicazione delle entità di corrispondenza
 
 ## <a name="specify-the-match-order"></a>Specificare l'ordine di corrispondenza
 
 Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Definisci l'ordine** per iniziare la fase di corrispondenza.
 
-Ogni corrispondenza unifica due o più entità in una singola entità, pur mantenendo ogni record del cliente univoco. Nel seguente esempio, abbiamo selezionato tre entità: **ContactCSV: TestData** come entità **Primaria**, **WebAccountCSV: TestData** come **Entità 2** e **CallRecordSmall: TestData** come **Entità 3**. Il diagramma sopra le selezioni mostra come verrà eseguito l'ordine di corrispondenza.
+Ogni corrispondenza unifica due o più entità in un'unica entità consolidata. Allo stesso tempo, conserva i record del cliente univoci. Ad esempio, abbiamo selezionato due entità: **eCommerce:eCommerceContacts** come entità primaria e **LoyaltyScheme: loyCustomers** come seconda entità. L'ordine delle entità specifica in quale ordine il sistema tenterà di corrispondere i record.
 
-> [!div class="mx-imgBorder"]
-> ![Modificare l'ordine di corrispondenza dei dati](media/configure-data-match-order-edit-page.png "Modificare l'ordine di corrispondenza dei dati")
+:::image type="content" source="media/match-page.png" alt-text="Screenshot della pagina Corrispondenza nell'area Unifica del processo di unificazione dei dati.":::
   
-L'entità **Primaria** è corrispondente all'**Entità 2**. Il set di dati che risulta dalla prima corrispondenza è corrispondente all'**Entità 3**.
-In questo esempio, abbiamo selezionato solo due corrispondenze, ma il sistema può supportarne di più.
+L'entità primaria *eCommerce: eCommerceContacts* è corrisposta all'entità successiva *LoyaltyScheme: loyCustomers*. Il set di dati che risulta dal primo passaggio di corrispondenza viene corrisposto alla seguente entità se hai più di due entità.
 
 > [!IMPORTANT]
-> L'entità che scegli come tua entità **Primaria** servirà come base per il set di dati unificato principale. Altre entità selezionate durante la fase di corrispondenza verranno aggiunte a questa entità. Allo stesso tempo, ciò non significa che l'entità unificata includerà *tutti* i dati inclusi in questa entità.
+> L'entità che scegli come tua entità primaria servirà come base per il set di dati profili unificato. Altre entità selezionate durante la fase di corrispondenza verranno aggiunte a questa entità. Ciò non significa che l'entità unificata includerà *tutti* i dati inclusi in questa entità.
 >
 > Esistono due considerazioni che possono aiutarti a scegliere la gerarchia delle entità:
 >
-> - Quale entità pensi abbia i dati più completi e affidabili sui tuoi clienti?
-> - L'entità appena identificata ha attributi condivisi anche da altre entità (ad esempio nome, numero di telefono o indirizzo e-mail)? In caso contrario, scegli la tua seconda entità più affidabile.
+> - Scegli l'entità con i dati di profilo più completi e affidabili sui tuoi clienti come entità principale.
+> - Scegli l'entità che ha diversi attributi in comune con altre entità (ad esempio, nome, numero di telefono o indirizzo e-mail) come entità principale.
 
-Seleziona **Fatto** per salvare l'ordine di corrispondenza.
+Dopo aver specificato l'ordine di corrispondenza, vedrai le coppie di corrispondenze definite nella sezione **Dettagli record corrispondenti** in **Dati** > **Unifica** > **Corrispondenza**. Le metriche chiave saranno vuote fino al completamento del processo di corrispondenza.
 
-## <a name="define-rules-for-your-first-match-pair"></a>Definire le regole per la tua prima coppia di corrispondenza
+## <a name="define-rules-for-match-pairs"></a>Definire le regole per le coppie di corrispondenze
 
-Dopo aver specificato l'ordine di corrispondenza, vedrai le corrispondenze definite nella pagina **Corrispondenza**. I riquadri nella parte superiore dello schermo saranno vuoti fino a quando non eseguirai l'ordine di corrispondenza.
+Le regole di corrispondenza specificano la logica con cui verrà eseguita la corrispondenza per una specifica coppia di entità.
 
-> [!div class="mx-imgBorder"]
-> ![Definire le regole](media/configure-data-match-need-rules.png "Definire le regole")
+L'avviso **Necessita regole** accanto al nome di un'entità suggerisce che non è stata definita alcuna regola di corrispondenza per una coppia di corrispondenze. 
 
-L'avviso **Necessita regole** suggerisce che non è stata definita alcuna regola di corrispondenza per una coppia di corrispondenze. Le regole di corrispondenza specificano la logica con cui verrà eseguita la corrispondenza per una specifica coppia di entità.
+:::image type="content" source="media/match-rule-add.png" alt-text="Screenshot della sezione Dettagli record corrispondenti con il controllo per aggiungere regole evidenziato.":::
 
-1. Per definire la tua prima regola, apri il riquadro **Definizione regola** selezionando la riga di corrispondenza corrispondente nella tabella delle corrispondenze (1) e quindi selezionando **Crea nuova regola** (2).
+1. Seleziona **Aggiungi regole** sotto un'entità nella sezione **Dettagli record corrispondenti** per definire le regole di corrispondenza.
 
-   > [!div class="mx-imgBorder"]
-   > ![Crea nuova regola](media/configure-data-match-new-rule2.png "Crea nuova regola")
+1. Nel riquadro **Crea regola**, configura le condizioni per la regola.
 
-2. Nel riquadro **Modifica regola**, configura le condizioni per quella regola. Ogni condizione è rappresentata da due righe che includono selezioni obbligatorie.
+   :::image type="content" source="media/match-rule-conditions.png" alt-text="Screenshot di una regola di corrispondenza aperta con condizioni aggiunte.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Riquadro Nuova regola](media/configure-data-match-new-rule-condition.png "Riquadro Nuova regola")
+   - **Entità/Campo (prima riga)**: Scegli un'entità correlata e un attributo per specificare una proprietà del record che è probabilmente univoca per un cliente. Ad esempio, un numero di telefono o un indirizzo e-mail. Evita la corrispondenza in base agli attributi del tipo di attività. Ad esempio, un ID acquisto probabilmente non troverà corrispondenze in altri tipi di record.
 
-   Entità/Campo (prima): un attributo che verrà utilizzato per la corrispondenza dalla prima corrispondenza tra una coppia di entità. Gli esempi potrebbero includere un numero di telefono o un indirizzo e-mail. Scegli un attributo che sia probabilmente unico per il cliente.
+   - **Entità/Campo (seconda riga)**: Scegli un attributo correlato all'attributo dell'entità specificata nella prima riga.
 
-   > [!TIP]
-   > Evita la corrispondenza in base agli attributi di tipo impegno. In altre parole, se un attributo sembra essere un impegno, potrebbe essere un criterio insufficiente su cui basare la corrispondenza.  
+   - **Normalizza**: Seleziona una delle seguenti opzioni di normalizzazione per gli attributi selezionati. 
+     - Spazio vuoto: rimuove tutti gli spazi. *Hello World* diventa *HelloWorld*.
+     - Simboli: rimuove tutti i simboli e i caratteri speciali. *Head&Shoulder* diventa *HeadShoulder*.
+     - Testo in minuscolo: converte tutti i caratteri in minuscolo. *TUTTO MAIUSCOLO e titolo* diventa *tutto maiuscolo e titolo*.
+     - Unicode in ASCII: converte la notazione Unicode in caratteri ASCII. */u00B2* diventa *2*.
+     - Numeri: converte altri sistemi numerici, come i numeri romani, in numeri arabi. *VIII* diventa *8*.
+     - Tipi semantici: standardizza nomi, titoli, numeri di telefono, indirizzi, ecc. 
 
-   Entità/Campo (seconda): un attributo che verrà utilizzato per la corrispondenza dalla seconda corrispondenza tra una coppia di entità.
+   - **Precisione**: Consente di impostare il livello di precisione da applicare per questa condizione. 
+     - **Di base**: Scegli tra *Basso*, *Medio*, *Alto* ed *Esatto*. Seleziona **Esatta** per mettere in corrispondenza solo i record corrispondenti al 100 per cento. Seleziona uno degli altri livelli per mettere in corrispondenza i record che non sono identici al 100 per cento.
+     - **Personalizzato**: Consente di impostare una percentuale per la corrispondenza dei record. Il sistema metterà in corrispondenza solo i record che superano questa soglia.
 
-   Normalizza - **Metodo di normalizzazione**: sono disponibili varie opzioni di normalizzazione per gli attributi selezionati. Ad esempio, rimozione della punteggiatura o degli spazi
+1. Fornisci un **nome** per la regola.
 
-   Per la normalizzazione del nome dell'organizzazione (Anteprima), è anche possibile selezionare **Tipo (telefono, nome, organizzazione)**
+1. [Aggiungi altre condizioni](#add-conditions-to-a-rule) oppure seleziona **Fatto** per finalizzare la regola.
 
-   > [!div class="mx-imgBorder"]
-   > ![Normalizzazione-B2B](media/match-normalization-b2b.png "Normalizzazione-B2B")
+1. Facoltativamente, [aggiungi altre regole](#add-rules-to-a-match-pair).
 
-   Livello di precisione : il livello di precisione che verrà utilizzato per questa condizione. L'impostazione di un livello di precisione per una condizione di corrispondenza può avere due tipi: **Di base** e **Personalizzato**.  
-   - Di base: offre quattro opzioni tra cui scegliere: Bassa, Media, Alta ed Esatta. Seleziona **Esatta** per mettere in corrispondenza solo i record corrispondenti al 100 per cento. Seleziona uno degli altri livelli per mettere in corrispondenza i record che non sono identici al 100 per cento.
-   - Personalizzato: utilizza il dispositivo di scorrimento per definire la percentuale personalizzata a cui i record devono corrispondere o immetti un valore nel campo **Personalizzato**. Il sistema metterà in corrispondenza solo i record che superano questa soglia come coppie di corrispondenza di conflazione. I valori sul dispositivo di scorrimento sono compresi tra 0 e 1. Quindi lo 0,64 rappresenta il 64 percento.
+1. Seleziona **Salva** per applicare le modifiche.
 
-3. Seleziona **Fatto** per salvare la regola.
+### <a name="add-conditions-to-a-rule"></a>Aggiungere le condizioni a una regola
 
-### <a name="add-multiple-conditions"></a>Aggiungere più condizioni
+Per corrispondere le entità solo se gli attributi soddisfano più condizioni, aggiungi più condizioni a una regola di corrispondenza. Le condizioni sono collegate a un operatore logico AND e quindi eseguite solo se tutte le condizioni sono soddisfatte.
 
-Per mettere in corrispondenza entità solo se sono soddisfatte più condizioni, aggiungi più condizioni collegate tramite un operatore AND.
+1. Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Modifica** nella regola a cui vuoi aggiungere condizioni.
 
-1. Nel riquadro **Modifica regola**, seleziona **Aggiungi condizione**. Puoi anche eliminare le condizioni selezionando il pulsante Rimuovi accanto a una condizione esistente.
+1. Nel riquadro **Modifica regola**, seleziona **Aggiungi condizione**.
 
-2. Seleziona **Fatto** in modo da salvare la regola.
+1. Seleziona **Fatto** in modo da salvare la regola.
 
-## <a name="add-multiple-rules"></a>Aggiungere più regole
+### <a name="add-rules-to-a-match-pair"></a>Aggiungere regole a una coppia di corrispondenze
 
-Ogni condizione si applica a una singola coppia di attributi, mentre le regole rappresentano insiemi di condizioni. Per far corrispondere le tue entità a diversi set di attributi, puoi aggiungere più regole.
+Le regole di corrispondenza rappresentano set di condizioni. Per corrispondere le entità per condizioni in base a più attributi, aggiungi più regole.
 
-1. In Audience Insights, vai a **Dati** > **Unifica** > **Corrispondenza**.
+1.  Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Aggiungi regola** nell'entità a cui vuoi aggiungere regole.
 
-2. Seleziona l'entità che vuoi aggiornare e eseleziona **Aggiungi regole**.
-
-3. Segui la procedura come illustrato in [Definire le regole per la tua prima coppia di corrispondenza](#define-rules-for-your-first-match-pair).
+2. Segui i passaggi in [Definire le regole per le coppie di corrispondenze](#define-rules-for-match-pairs).
 
 > [!NOTE]
 > L'ordine delle regole è importante. L'algoritmo di corrispondenza tenta di mettere in corrispondenza sulla base della prima regola e continua con la seconda regola solo se non sono state identificate corrispondenze con la prima regola.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definire la deduplicazione in un'entità di corrispondenza
 
-Oltre a specificare le regole di corrispondenza tra entità come descritto nelle sezioni precedenti, è anche possibile specificare regole di deduplicazione. La *deduplicazione* è un processo. Identifica i record duplicati, li unisce in un solo record e collega tutti i record di origine a questo record unito con ID alternativi al record unito.
+Oltre alle [regole di corrispondenza tra entità](#define-rules-for-match-pairs), puoi specificare le regole di deduplicazione. La *deduplicazione* è un altro processo della corrispondenza dei record. Identifica i record duplicati e li unisce in un unico record. I record di origine vengono collegati al record unito con ID alternativi.
 
-Una volta identificato un record deduplicato, tale record verrà utilizzato nel processo di corrispondenza tra entità. La deduplicazione viene implementata a livello di entità e può essere applicata a ogni entità utilizzata nel processo di corrispondenza.
+I record deduplicati verranno utilizzati nel processo di corrispondenza tra entità. La deduplicazione avviene su singole entità e può essere configurata per ogni entità utilizzata nelle coppie di corrispondenza.
+
+Specificare regole di deduplicazione non è obbligatorio. Se non vengono configurate tali regole, vengono applicate le regole definite dal sistema. Combinano tutti i record in un unico record prima di passare i dati dell'entità alla corrispondenza tra entità per migliorare le prestazioni.
 
 ### <a name="add-deduplication-rules"></a>Aggiungere regole di deduplicazione
 
-1. In Audience Insights, vai a **Dati** > **Unifica** > **Corrispondenza**.
+1. Vai a **Dati** > **Unifica** > **Corrispondenza**.
 
-1. Nella sezione **Duplicati uniti**, seleziona **Imposta entità**.
+1. Nella sezione **Duplicati uniti**, seleziona **Imposta entità**. Nel caso in cui le regole di deduplicazione siano già state create, seleziona **Modifica**.
 
-1. Nella sezione **Preferenze di unione**, seleziona le entità a cui desideri applicare la deduplicazione.
+1. Nel riquadro **Preferenze di unione**, seleziona le entità in cui desideri eseguire la deduplicazione.
 
-1. Specifica come unire i record duplicati e scegli una delle tre opzioni di unione:
-   - *Con più dati*: identifica il record con gli attributi con più dati come record vincitore. Si tratta dell'opzione di unione predefinita.
-   - *Piu recente*: il record vincitore è quello più recente. Richiede una data o un campo numerico per definire la recency.
-   - *Meno recente*: il record vincitore è quello meno recente. Richiede una data o un campo numerico per definire la recency.
+1. Specifica come combinare i record duplicati e scegli una delle tre opzioni:
+   - **Con più dati**: identifica il record con i campi di attributo con più dati come record vincitore. È l'opzione di unione predefinita.
+   - **Piu recente**: il record vincitore è quello più recente. Richiede una data o un campo numerico per definire la recency.
+   - **Meno recente**: il record vincitore è quello meno recente. Richiede una data o un campo numerico per definire la recency.
  
    > [!div class="mx-imgBorder"]
    > ![Passaggio 1 delle regole di deduplicazione](media/match-selfconflation.png "Passaggio 1 delle regole di deduplicazione")
  
-1. Una volta selezionate le entità e impostata la relativa preferenza di unione, seleziona **Crea nuova regola** per definire le regole di deduplicazione a livello di entità.
-   - **Seleziona campo** elenca tutti i campi disponibili di quell'entità in cui desideri deduplicare i dati di origine.
-   - Specifica le impostazioni di normalizzazione e precisione in modo simile a quanto specificato nella corrispondenza tra entità.
-   - Puoi definire condizioni aggiuntive selezionando **Aggiungi condizione**.
+1. Una volta selezionate le entità e impostata la relativa preferenza di unione, seleziona **Aggiungi regola** per definire le regole di deduplicazione a livello di entità.
+   - **Seleziona campo** elenca tutti i campi disponibili da quell'entità. Scegli il campo in cui desideri verificare la presenza di duplicati. Scegli campi che sono probabilmente univoci per ogni singolo cliente. Ad esempio, un indirizzo e-mail o la combinazione di nome, città e numero di telefono.
+   - Specifica le impostazioni di normalizzazione e precisione.
+   - Definisci più condizioni aggiuntive selezionando **Aggiungi condizione**.
  
    > [!div class="mx-imgBorder"]
    > ![Passaggio 2 delle regole di deduplicazione](media/match-selfconflation-rules.png "Passaggio 2 delle regole di deduplicazione")
@@ -138,107 +142,86 @@ Una volta identificato un record deduplicato, tale record verrà utilizzato nel 
 
 1. Questo record vincitore viene quindi passato alla corrispondenza tra entità, insieme ai record non vincitori (ad esempio, ID alternativi) per migliorare la qualità della corrispondenza.
 
-1. Qualsiasi regola di corrispondenza personalizzata definita per corrispondere sempre e non corrispondere mai sostituisce le regole di deduplicazione. Se una regola di deduplicazione identifica i record corrispondenti e una regola di corrispondenza personalizzata è impostata per non corrispondere mai a tali record, questi due record non corrisponderanno.
+1. Qualsiasi regola di corrispondenza personalizzata definita sovrascrive le regole di deduplicazione. Se una regola di deduplicazione identifica i record corrispondenti e una regola di corrispondenza personalizzata è impostata per non corrispondere mai a tali record, questi due record non corrisponderanno.
 
-1. Dopo l'esecuzione del processo di corrispondenza, vedrai le statistiche di deduplicazione.
-   
-> [!NOTE]
-> Specificare regole di deduplicazione non è obbligatorio. Se non vengono configurate tali regole, vengono applicate le regole definite dal sistema. Queste comprendono tutti i record che condividono la stessa combinazione di valori (corrispondenza esatta) della chiave primaria e i campi nelle regole di corrispondenza in un singolo record prima di passare i dati dell'entità alla corrispondenza tra entità per migliorare le prestazioni e l'integrità del sistema.
+1. Dopo l'[esecuzione del processo di corrispondenza](#run-the-match-process), vedrai le statistiche di deduplicazione nei riquadri delle metriche chiave.
 
-## <a name="run-your-match-order"></a>Esegui l'ordine di corrispondenza
+### <a name="deduplication-output-as-an-entity"></a>Output di deduplicazione come entità
 
-Dopo aver definito regole di corrispondenza, inclusa la corrispondenza tra entità e le regole di deduplicazione, puoi eseguire l'ordine di corrispondenza. Nella pagina **Corrispondenza**, seleziona **Esegui** per avviare il processo. Il completamento dell'algoritmo di corrispondeza potrebbe richiedere del tempo. Non puoi modificare le proprietà nella pagina **Corrispondenza** fino al completamento del processo di corrispondenza. Troverai l'entità del profilo cliente unificato creata nella pagina **Entità**. L'entità cliente unificata viene chiamata **ConflationMatchPairs: CustomerInsights**.
-
-Per apportare ulteriori modifiche ed eseguire nuovamente il passaggio, puoi annullare una corrispondenza in corso. Seleziona il testo **Aggiornamento in corso ...** e seleziona **Annulla processo** nella parte inferiore del riquadro laterale visualizzato.
-
-Quando il processo di corrispondenza è completo, il testo **Aggiornamento in corso ...** cambierà in **Completato** e puoi riutilizzare tutte le funzionalità della pagina.
-
-Il primo processo di corrispondenza comporta la creazione di un'entità master unificata. Tutte le successive esecuzioni di corrispondenza determinano l'espansione di tale entità.
-
-> [!TIP]
-> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
-
-## <a name="deduplication-output-as-an-entity"></a>Output di deduplicazione come entità
-Oltre all'entità master unificata creata come parte della corrispondenza tra entità, il processo di deduplicazione genera anche una nuova entità per ogni entità dall'ordine di corrispondenza per identificare i record deduplicati. Queste entità possono essere trovate insieme a **ConflationMatchPairs:CustomerInsights** nella sezione **Sistema** della pagina **Entità**, con il nome **Deduplication_Datasource_Entity**.
+Il processo di deduplicazione crea una nuova entità per ogni entità dalle coppie di corrispondenza per identificare i record deduplicati. Queste entità possono essere trovate insieme a **ConflationMatchPairs:CustomerInsights** nella sezione **Sistema** della pagina **Entità**, con il nome **Deduplication_DataSource_Entity**.
 
 Un'entità di output della deduplicazione contiene le seguenti informazioni:
 - ID/chiavi
   - Campo chiave primaria e relativo campo ID alternativo. Il campo ID alternativo è costituito da tutti gli ID alternativi identificati per un record.
-  - Il campo Deduplication_GroupId mostra il gruppo o il cluster identificato all'interno di un'entità che raggruppa tutti i record simili in base ai campi di deduplicazione specificati. Viene utilizzato per scopi di elaborazione del sistema. Se non sono state specificate regole di deduplicazione manuale e si applicano regole di deduplicazione definite dal sistema, potresti non trovare questo campo nell'entità di output della deduplicazione.
+  - Il campo Deduplication_GroupId mostra il gruppo o il cluster identificato all'interno di un'entità che raggruppa tutti i record simili in base ai campi di deduplicazione specificati. È utilizzato per scopi di elaborazione del sistema. Se non sono state specificate regole di deduplicazione manuale e si applicano regole di deduplicazione definite dal sistema, potresti non trovare questo campo nell'entità di output della deduplicazione.
   - Deduplication_WinnerId: questo campo contiene l'ID vincitore dei gruppi o cluster identificati. Se Deduplication_WinnerId è uguale al valore della chiave primaria per un record, significa che il record è il record vincitore.
 - Campi utilizzati per definire le regole di deduplicazione.
 - I campi Regola e Punteggio per indicare quale delle regole di deduplicazione è stata applicata e il punteggio restituito dall'algoritmo di corrispondenza.
+   
+## <a name="run-the-match-process"></a>Eseguire il processo di corrispondenza
+
+Con le regole di corrispondenza configurate, inclusa la corrispondenza tra entità e le regole di deduplicazione, puoi eseguire il processo di corrispondenza. 
+
+Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Esegui** per avviare il processo. L'algoritmo di corrispondenza richiede un po' di tempo per essere completato e non è possibile modificare la configurazione fino al completamento. Per apportare modifiche puoi annullare l'esecuzione. Seleziona lo stato del processo e seleziona **Annulla processo** nel riquadro **Dettagli stato**.
+
+Troverai il risultato di un'esecuzione completata, l'entità profilo del cliente unificata, nella pagina **Entità**. La tua entità cliente unificata è chiamata **Clienti** nella sezione **Profili**. La prima esecuzione di una corrispondenza completata crea l'entità *Cliente*. Tutte le esecuzioni di corrispondenza successive espandono quell'entità.
+
+> [!TIP]
+> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
 
 ## <a name="review-and-validate-your-matches"></a>Rivedere e convalidare le corrispondenze
 
-Valuta la qualità delle coppie di corrispondenza e affinala:
+Vai a **Dati** > **Unifica** > **Corrispondenza** per valutare la qualità delle tue coppie di corrispondenza e perfezionarle se necessario.
 
-- Nella pagina **Corrispondenza**, troverai due riquadri che mostrano le informazioni dettagliate iniziali sui tuoi dati.
+I riquadri nella parte superiore della pagina mostrano le metriche chiave, riepilogando il numero di record e duplicati corrispondenti.
 
-  - **Clienti univoci**: mostra il numero di profili univoci identificati dal sistema.
-  - **Record corrispondenti**: mostra il numero di corrispondenze su tutte le coppie di corrispondenza.
+:::image type="content" source="media/match-KPIs.png" alt-text="Screenshot ritagliato delle metriche chiave nella pagina Corrispondenza con numeri e dettagli.":::
 
-- Nella tabella **Ordine corrispondenza**, puoi valutare i risultati di ciascuna coppia di corrispondenze confrontando il numero di record provenienti da questa entità coppia-corrispondenza con la percentuale di record con corrispondenza corretta.
+- **Record di origine univoci** mostra il numero di record di origine individuali che sono stati elaborati nell'ultima esecuzione della corrispondenza.
+- **Record corrispondenti e non corrispondenti** evidenzia quanti record univoci rimangono dopo l'elaborazione delle regole di corrispondenza.
+- **Solo record corrispondenti** mostra il numero di corrispondenze in tutte le coppie di corrispondenza.
 
-- Nella sezione **Regole** di un'entità della tabella **Ordine corrispondenza**, troverai la percentuale di record con corrispondenza corretta a livello di regola. Selezionando il simbolo della tabella accanto a una regola, puoi visualizzare tutti questi record a livello di regola. Si consiglia di rivedere un sottoinsieme dei record per convalidare la corrispondenza corretta.
+Puoi valutare i risultati di ogni coppia e le sue regole nella tabella **Dettagli record corrispondenti**. Confronta il numero di record provenienti da una coppia di corrispondenze con la percentuale di record con corrispondenza riuscita.
 
-- Sperimenta con soglie di precisione diverse intorno alle tue condizioni per identificare il valore ottimale.
+Rivedi le regole di una coppia di corrispondenze per vedere la percentuale di record corrispondenti completati a livello di regola. Seleziona i puntini di sospensione (...) e quindi seleziona **Anteprima corrispondenza** per visualizzare tutti questi record a livello di regola. Ti consigliamo di dare un'occhiata ad alcuni record per verificare che siano stati corrisposti correttamente.
 
-  1. Seleziona i puntini di sospensione (...) per la regola della coppia di corrispondenza che vuoi sperimentare e seleziona **Modifica**.
+Prova diverse soglie di precisione sulle condizioni per trovare il valore ottimale.
 
-  2. Seleziona la condizione con cui vuoi sperimentare. Ogni criterio è rappresentato da una riga nel riquadro **Regola corrispondenza**.
+  1. Seleziona i puntini di sospensione (...) per la regola che desideri sperimentare e seleziona **Modifica**.
 
-  3. Quello che vedrai nella pagina **Anteprima criteri** dipende dal livello di precisione selezionato per una condizione. Trova il numero di record corrispondenti e non corrispondenti per la condizione selezionata.
+  2. Modifica i valori di precisione nelle condizioni che desideri rivedere.
 
-     Ottieni una conoscenza approfondita degli effetti dei diversi livelli di soglia. Puoi confrontare il numero di record corrispondenti sotto ciascuno dei livelli di soglia e visualizzare i record in ciascuna opzione. Seleziona ciascuno dei riquadri e rivedi i dati nella sezione della tabella.
+  3. Seleziona **Anteprima** quindi vedi il numero di record corrisposti e non corrisposti per la condizione selezionata.
 
-## <a name="optimize-your-matches"></a>Ottimizzare le corrispondenze
+## <a name="manage-match-rules"></a>Gestire le regole di corrispondenza
 
-Aumenta la qualità riconfigurando alcuni dei tuoi parametri di corrispondenza:
+Puoi riconfigurare e ottimizzare la maggior parte dei parametri di corrispondenza.
 
-- **Modifica l'ordine di corrispondenza** selezionando **Modifica** e modifica i campi dell'ordine di corrispondenza.
+:::image type="content" source="media/match-rules-management.png" alt-text="Screenshot del menu a discesa con le opzioni delle regole di corrispondenza.":::
 
-  > [!div class="mx-imgBorder"]
-  > ![Modificare l'ordine di corrispondenza dei dati](media/configure-data-match-order-edit.png "Modificare l'ordine di corrispondenza dei dati")
+- **Modifica l'ordine delle tue regole** se hai definito più regole. Puoi riordinare le regole di corrispondenza selezionando le opzioni **Sposta su** e **Sposta giù** o tramite trascinamento.
 
-- **Modifica l'ordine delle tue regole** se hai definito più regole. Puoi riordinare le regole di corrispondenza selezionando le opzioni **Sposta su** e **Sposta giù** nella griglia delle regole di corrispondenza.
-
-  > [!div class="mx-imgBorder"]
-  > ![Modificare l'ordine delle regole](media/configure-data-change-rule-order.png "Modificare l'ordine delle regole")
-
-- **Duplica le tue regole** se hai definito una regola di corrispondenza e desideri creare una regola simile con modifiche. Puoi farlo selezionando **Duplica**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Duplicare una regola](media/configure-data-duplicate-rule.png "Duplicare una regola")
+- **Modifica le condizioni della regola** selezionando **Modifica** e scegliendo campi diversi.
 
 - **Disattiva una regola** per mantenere una regola di corrispondenza pur escludendola dal processo di corrispondenza.
 
-  > [!div class="mx-imgBorder"]
-  > ![Disattivare una regola](media/configure-data-deactivate-rule.png "Disattivare una regola")
+- **Duplica le tue regole** se hai definito una regola di corrispondenza e desideri creare una regola simile con modifiche, seleziona **Duplica**.
 
-- **Modifica le tue regole** selezionando il simbolo **Modifica**. Puoi applicare le modifiche seguenti:
+- **Elimina una regola** selezionando il simbolo **Elimina**.
 
-  - Modifica attributi per una condizione: seleziona nuovi attributi nella riga della condizione specifica.
-  - Modifica la soglia per una condizione: regola il dispositivo di scorrimento di precisione.
-  - Modifica il metodo di normalizzazione per una condizione: aggiorna il metodo di normalizzazione.
+## <a name="specify-custom-match-conditions"></a>Specificare le condizioni di corrispondenza personalizzate
 
-## <a name="specify-your-custom-match-records"></a>Specificare i record di corrispondenza personalizzati
+Puoi specificare condizioni in base a cui alcuni record devono sempre corrispondere o non corrispondere mai. Queste regole possono essere caricate per sostituire il processo di corrispondenza standard. Ad esempio, se nei nostri record sono presenti John Doe I e John Doe II, il sistema potrebbe abbinarli come una singola persona. Le regole di corrispondenza personalizzate ti consentono di specificare che i loro profili si riferiscono a persone diverse. 
 
-Puoi specificare condizioni in base a cui alcuni record devono sempre corrispondere o non corrispondere mai. Queste regole possono essere caricate in blocco nel processo di corrispondenza.
+1. Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Corrispondenza personalizzata** nella sezione **Dettagli record corrispondenti**.
 
-1. Seleziona l'opzione **Corrispondenza personalizzata** nella schermata **Ordine corrispondenza**.
+  :::image type="content" source="media/custom-match-create.png" alt-text="Screenshot della sezione delle regole di corrispondenza con il controllo per la corrispondenza personalizzata evidenziato.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Crea una corrispondenza personalizzata](media/custom-match-create.png "Crea una corrispondenza personalizzata")
+1. Se non hai impostato regole di corrispondenza personalizzate, vedrai un nuovo riquadro **Corrispondenza personalizzata** con maggiori dettagli.
 
-2. Se non hai entità caricate, vedrai una nuova finestra di dialogo **Corrispondenza personalizzata** che richiede di inserire alcuni dettagli. Se hai fornito questi dettagli in precedenza, vai direttamente al passaggio 8.
+1. Seleziona **Compila il modello** per ottenere un file modello che può specificare quali record da quali entità devono sempre corrispondere o non corrispondere mai. Dovrai compilare separatamente i record "Corrisponde sempre" e "Mai nessuna corrispondenza" in due file diversi.
 
-   > [!div class="mx-imgBorder"]
-   > ![Nuova finestra di dialogo di corrispondenza personalizzata](media/custom-match-new-dialog-box.png "Nuova finestra di dialogo di corrispondenza personalizzata")
-
-3. Seleziona **Compila il modello** per ottenere un file modello che può specificare quali record da quali entità devono sempre corrispondere o non corrispondere mai. Dovrai compilare separatamente i record "Corrisponde sempre" e "Mai nessuna corrispondenza" in due file diversi.
-
-4. Il modello contiene campi per specificare l'entità e i valori della chiave primaria dell'entità da utilizzare nella corrispondenza personalizzata. Ad esempio, se vuoi che la chiave primaria 12345 dell'entità vendite corrisponda sempre alla chiave primaria 34567 dell'entità contatto, devi specificare quanto segue:
+1. Il modello contiene campi per specificare l'entità e i valori della chiave primaria dell'entità da utilizzare nella corrispondenza personalizzata. Ad esempio, se desideri la chiave primaria *12345* dall'entità *Vendite* in modo che corrisponda sempre alla chiave primaria *34567* dall'entità *Contatto*, compila il modello:
     - Entity1: Vendite
     - Entity1Key: 12345
     - Entity2: Contatto
@@ -248,22 +231,22 @@ Puoi specificare condizioni in base a cui alcuni record devono sempre corrispond
    
    Se desideri specificare la corrispondenza personalizzata per la deduplicazione in un'entità, fornisci la stessa entità sia come Entità1 che Entità2 e imposta i diversi valori di chiave primaria.
 
-5. Dopo aver aggiunto tutte le sostituzioni che vuoi applicare, salva il file del modello.
+1. Dopo aver aggiunto tutte le sostituzioni che vuoi applicare, salva il file del modello.
 
-6. Vai a **Dati** > **Origini dati** e inserisci i file di modello come nuove entità. Una volta inseriti, puoi usarli per specificare la configurazione della corrispondenza.
+1. Vai a **Dati** > **Origini dati** e inserisci i file di modello come nuove entità. Una volta inseriti, puoi usarli per specificare la configurazione della corrispondenza.
 
-7. Dopo aver caricato i file e le entità disponibili, seleziona nuovamente l'opzione **Corrispondenza personalizzata**. Vedrai le opzioni per specificare le entità che desideri includere. Seleziona le entità obbligatorie dal menu a discesa.
+1. Dopo aver caricato i file e le entità disponibili, seleziona nuovamente l'opzione **Corrispondenza personalizzata**. Vedrai le opzioni per specificare le entità che desideri includere. Seleziona le entità obbligatorie dal menu a discesa.
 
-   > [!div class="mx-imgBorder"]
-   > ![Sostituzioni corrispondenza personalizzata](media/custom-match-overrides.png "Sostituzioni corrispondenza personalizzata")
+   :::image type="content" source="media/custom-match-overrides.png" alt-text="Screenshot della finestra di dialogo per scegliere le sostituzioni per uno scenario di corrispondenza personalizzata.":::
 
-8. Seleziona le entità che desideri utilizzare per **Corrisponde sempre** e **Mai nessuna corrispondenza**, quindi seleziona **Fatto**.
+1. Seleziona le entità che desideri utilizzare per **Corrisponde sempre** e **Mai nessuna corrispondenza**, quindi seleziona **Fatto**.
 
-9. Seleziona **Salva** nella pagina **Corrispondenza** per la configurazione della corrispondenza personalizzata che hai appena impostato.
+1. Seleziona **Salva** nella pagina **Corrispondenza** per applicare la configurazione di corrispondenza personalizzata.
 
-10. Seleziona **Esegui** nella pagina **Corrispondenza** per avviare il processo di corrispondenza e la configurazione della corrispondenza personalizzata verrà applicata. Qualsiasi regola di corrispondenza del sistema viene sostituita dal set di configurazione.
+1. Seleziona **Esegui** nella pagina **Corrispondenza** per avviare il processo di corrispondenza. Altre regole di corrispondenza specificate vengono sovrascritte dalla configurazione di corrispondenza personalizzata.
 
-11. Una volta completata la corrispondenza, puoi verificare l'entità **ConflationMatchPair** per confermare che le sostituzioni sono state applicate nelle corrispondenze di conflazione.
+> [!TIP]
+> Vai a **Dati** > **Entità** e rivedi l'entità **ConflationMatchPair** per verificare che le sostituzioni siano state applicate.
 
 ## <a name="next-step"></a>Passaggio successivo
 

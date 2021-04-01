@@ -2,23 +2,23 @@
 title: Inserire dati tramite un connettore Power Query
 description: Connettori per origini dati basati su Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267774"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596918"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connettersi a un'origine dati Power Query
 
-Power Query offre un'ampia gamma di connettori per inserire i dati. La maggior parte di questi connettori è supportata da Dynamics 365 Customer Insights. L'aggiunta di origini dati basate sui connettori Power Query generalmente segue i passaggi descritti nella sezione successiva. Tuttavia, a seconda del connettore utilizzato, sono necessarie informazioni diverse. Per ulteriori informazioni, vedere la documentazione sui singoli connettori in [Riferimento al connettore Power Query](https://docs.microsoft.com/power-query/connectors/).
+Power Query offre un'ampia gamma di connettori per inserire i dati. La maggior parte di questi connettori è supportata da Dynamics 365 Customer Insights. L'aggiunta di origini dati basate sui connettori Power Query generalmente segue i passaggi descritti nella sezione successiva. Tuttavia, a seconda del connettore utilizzato, sono necessarie informazioni diverse. Per ulteriori informazioni, vedere la documentazione sui singoli connettori in [Riferimento al connettore Power Query](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Crea una nuova origine dati
 
@@ -44,7 +44,7 @@ Power Query offre un'ampia gamma di connettori per inserire i dati. La maggior p
    > [!div class="mx-imgBorder"]
    > ![Finestra di dialogo Modifica query](media/data-manager-configure-edit-queries.png "Finestra di dialogo Modifica query")
 
-1. Puoi anche trasformare i dati. Seleziona un'entità da modificare o trasformare. Utilizza le opzioni nella finestra Power Query per applicare le trasformazioni. Ogni trasformazione viene elencata in **Passaggi applicati**. Power Query fornisce numerose opzioni di trasformazione predefinite. Per altre informazioni, vedi [Trasformazioni di Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. Puoi anche trasformare i dati. Seleziona un'entità da modificare o trasformare. Utilizza le opzioni nella finestra Power Query per applicare le trasformazioni. Ogni trasformazione viene elencata in **Passaggi applicati**. Power Query fornisce numerose opzioni di trasformazione predefinite. Per altre informazioni, vedi [Trasformazioni di Power Query](/power-query/power-query-what-is-power-query#transformations).
 
 1. Puoi aggiungere altre entità alla tua origine dati selezionando **Estrai dati** nella finestra di dialogo **Modifica query**.
 
@@ -59,7 +59,7 @@ Power Query offre un'ampia gamma di connettori per inserire i dati. La maggior p
 
 ## <a name="available-power-query-data-sources"></a>Origini dati Power Query disponibili
 
-Vedi [Riferimento al connettore Power Query](https://docs.microsoft.com/power-query/connectors/) per un elenco aggiornato dei connettori che è possibile selezionare per importare i dati in Customer Insights. 
+Vedi [Riferimento al connettore Power Query](/power-query/connectors/) per un elenco aggiornato dei connettori che è possibile selezionare per importare i dati in Customer Insights. 
 
 Connettori con un segno di spunta nella colonna **Customer Insights (Flussi di dati)** sono disponibili per creare nuove origini dati basate su Power Query. Esamina la documentazione di un connettore specifico per ulteriori informazioni su prerequisiti, limitazioni e altri dettagli.
 

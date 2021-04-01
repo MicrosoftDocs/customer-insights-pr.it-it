@@ -2,25 +2,25 @@
 title: Esportare dati di Customer Insights in Dynamics 365 Marketing
 description: Informazioni su come configurare la connessione a Dynamics 365 Marketing.
 ms.date: 02/01/2021
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 892aff643872f11307a2c43e5670edab657d7848
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269059"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597608"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Connettore per Dynamics 365 Marketing (anteprima)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Utilizza i [segmenti](segments.md) per generare campagne e contattare gruppi specifici di clienti con Dynamics 365 Marketing. Per ulteriori informazioni, vedere [Utilizzare segmenti da Dynamics 365 Customer Insights con Dynamics 365 Marketing](https://docs.microsoft.com/dynamics365/marketing/customer-insights-segments)
+Utilizza i [segmenti](segments.md) per generare campagne e contattare gruppi specifici di clienti con Dynamics 365 Marketing. Per ulteriori informazioni, vedere [Utilizzare segmenti da Dynamics 365 Customer Insights con Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
 
 ## <a name="prerequisite"></a>Prerequisito
 

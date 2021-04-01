@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267727"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596504"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Connettersi a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure per Audience Insights
 
@@ -23,7 +23,7 @@ Gli strumenti automatizzati che usano i servizi di Azure deve avere sempre autor
 Puoi utilizzare l'entità servizio per [aggiungere o modificare in modo sicuro una cartella di Common Data Model come origine dati](connect-common-data-model.md) o per [creare un ambiente o aggiornarne uno esistente](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - L'account di archiviazione di Azure Data Lake Gen2 che intende usare l'entità servizio deve avere lo [spazio dei nomi gerarchico abilitato](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - L'account di archiviazione di Azure Data Lake Gen2 che intende usare l'entità servizio deve avere lo [spazio dei nomi gerarchico abilitato](/azure/storage/blobs/data-lake-storage-namespace).
 > - Per creare l'entità servizio, sono necessarie autorizzazioni di amministratore per la sottoscrizione di Azure.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Creare un'entità servizio di Azure per Audience Insights
@@ -48,7 +48,7 @@ Prima di creare una nuova entità servizio per Audience Insights, controlla se e
 
 ### <a name="create-a-new-service-principal"></a>Creare un'entità servizio
 
-1. Installa l'ultima versione di **Azure Active Directory PowerShell per Graph**. Per ulteriori informazioni, vedi [Installare Azure Active Directory PowerShell per Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Installa l'ultima versione di **Azure Active Directory PowerShell per Graph**. Per ulteriori informazioni, vedi [Installare Azure Active Directory PowerShell per Graph](/powershell/azure/active-directory/install-adv2).
    - Nel PC, seleziona il tasto Windows sulla tastiera e cerca **Windows PowerShell**, quindi seleziona **Esegui come amministratore**.
    
    - Nella finestra di PowerShell che si apre, immetti `Install-Module AzureAD`.

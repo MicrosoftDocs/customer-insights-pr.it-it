@@ -2,19 +2,19 @@
 title: Previsione della durata del cliente (CLV)
 description: Prevedi i futuri ricavi potenziali dai clienti attivi.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268599"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595813"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Previsione del valore di durata del cliente (CLV) (anteprima)
 
@@ -194,11 +194,11 @@ Esistono tre sezioni principali di dati nella pagina dei risultati:
   
   - **Percentuale di successo nella previsione di clienti di valore elevato**
 
-  Vedi la differenza nel prevedere i clienti di alto valore utilizzando il modello di intelligenza artificiale rispetto al modello di base. Ad esempio, una percentuale di successo dell'84% significa che tra tutti i clienti di alto valore nei dati di training, il modello di intelligenza artificiale è stato in grado di acquisire con precisione l'84%. Quindi confrontiamo questa percentuale di successo con la percentuale di successo del modello di base per riportare la variazione relativa. Questo valore viene utilizzato per assegnare un grado al modello.
+    Vedi la differenza nel prevedere i clienti di alto valore utilizzando il modello di intelligenza artificiale rispetto al modello di base. Ad esempio, una percentuale di successo dell'84% significa che tra tutti i clienti di alto valore nei dati di training, il modello di intelligenza artificiale è stato in grado di acquisire con precisione l'84%. Quindi confrontiamo questa percentuale di successo con la percentuale di successo del modello di base per riportare la variazione relativa. Questo valore viene utilizzato per assegnare un grado al modello.
 
   - **Metrica di errore**
     
-  Un'altra metrica consente di rivedere le prestazioni complessive del modello in termini di errore nella previsione dei valori futuri. Usiamo la metrica complessiva Radice dell'errore quadratico medio (RMSE) per valutare questo errore. RMSE è un modo standard per misurare l'errore di un modello nella previsione di dati quantitativi. L'RMSE del modello di intelligenza artificiale viene confrontato con l'RMSE del modello di base e viene riportata la differenza relativa.
+    Un'altra metrica consente di rivedere le prestazioni complessive del modello in termini di errore nella previsione dei valori futuri. Usiamo la metrica complessiva Radice dell'errore quadratico medio (RMSE) per valutare questo errore. RMSE è un modo standard per misurare l'errore di un modello nella previsione di dati quantitativi. L'RMSE del modello di intelligenza artificiale viene confrontato con l'RMSE del modello di base e viene riportata la differenza relativa.
 
   Il modello di intelligenza artificiale dà la priorità all'accurata classificazione dei clienti in base al valore che apportano al tuo business. Quindi solo la percentuale di successo della previsione dei clienti di alto valore viene utilizzato per ricavare il grado finale del modello. La metrica RMSE è sensibile ai valori anomali. Negli scenari in cui si dispone di una piccola percentuale di clienti con valori di acquisto straordinariamente elevati, la metrica RMSE complessiva potrebbe non fornire un quadro completo delle prestazioni del modello.   
 

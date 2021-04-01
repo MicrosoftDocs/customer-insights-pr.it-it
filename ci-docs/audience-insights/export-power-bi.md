@@ -2,19 +2,19 @@
 title: Connettore Power BI
 description: Scopri come utilizzare il connettore Dynamics 365 Customer Insights in Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477093"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596044"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connettore per Power BI(anteprima)
 
@@ -23,7 +23,7 @@ Crea visualizzazioni per i dati con Power BI Desktop. Genera ulteriori informazi
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Disponi di profili cliente unificati.
-- L'ultima versione di [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) è installata sul tuo computer. [Scopri di più su Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- L'ultima versione di [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) è installata sul tuo computer. [Scopri di più su Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Configurare il connettore per Power BI
 
@@ -47,7 +47,7 @@ Crea visualizzazioni per i dati con Power BI Desktop. Genera ulteriori informazi
 
 ## <a name="large-data-sets"></a>Set di dati di grandi dimensioni
 
-Il connettore Customer Insights per Power BI è progettato per funzionare con set di dati che contengono fino a 1 milione di profili cliente. L'importazione di set di dati più grandi può funzionare, ma richiede molto tempo. Inoltre, potrebbe verificarsi un timeout nel processo a causa delle limitazioni di Power BI. Per ulteriori informazioni, vedere [Power BI: raccomandazioni per set di dati di grandi dimensioni](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Il connettore Customer Insights per Power BI è progettato per funzionare con set di dati che contengono fino a 1 milione di profili cliente. L'importazione di set di dati più grandi può funzionare, ma richiede molto tempo. Inoltre, potrebbe verificarsi un timeout nel processo a causa delle limitazioni di Power BI. Per ulteriori informazioni, vedere [Power BI: raccomandazioni per set di dati di grandi dimensioni](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Utilizzare un sottoinsieme di dati
 
@@ -70,4 +70,3 @@ Puoi identificare e rimuovere le Relazioni duplicate.
 Dopo la rimozione delle Relazioni duplicate, prova a configurare il connettore di Power BI di nuovo. L'ambiente dovrebbe essere disponibile ora.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

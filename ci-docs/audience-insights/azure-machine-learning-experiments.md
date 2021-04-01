@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267911"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597424"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilizzare modelli basati su Azure Machine Learning
 
@@ -29,9 +29,9 @@ I dati unificati in Dynamics 365 Customer Insights sono una fonte per la creazio
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Configurare l'area di lavoro di Azure Machine Learning
 
-1. Vedi [Creare un'area di lavoro di Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) per diverse opzioni per creare l'area di lavoro. Per le migliori prestazioni, crea l'area di lavoro in un'area di Azure geograficamente più vicina al tuo ambiente Customer Insights.
+1. Vedi [Creare un'area di lavoro di Azure Machine Learning](/azure/machine-learning/concept-workspace#-create-a-workspace) per diverse opzioni per creare l'area di lavoro. Per le migliori prestazioni, crea l'area di lavoro in un'area di Azure geograficamente più vicina al tuo ambiente Customer Insights.
 
-1. Accedi all'area di lavoro tramite [Azure Machine Learning Studio](https://ml.azure.com/). Esistono vari [modi di interagire](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) con l'area di lavoro.
+1. Accedi all'area di lavoro tramite [Azure Machine Learning Studio](https://ml.azure.com/). Esistono vari [modi di interagire](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) con l'area di lavoro.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Utilizzare la finestra di progettazione di Azure Machine Learning
 
@@ -39,13 +39,13 @@ La finestra di progettazione Azure Machine Learning fornisce un canvas visivo do
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Utilizzare l'SDK di Azure Machine Learning
 
-I data scientist e gli sviluppatori di intelligenza artificiale utilizzano l'[SDK di Azure Machine Learning](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) per creare flussi di lavoro di apprendimento automatico. Attualmente, i modelli il cui training è stato eseguito con l'SDK non possono essere integrati direttamente con Customer Insights. Una pipeline di inferenza batch che utilizza quel modello è necessaria per l'integrazione di Customer Insights.
+I data scientist e gli sviluppatori di intelligenza artificiale utilizzano l'[SDK di Azure Machine Learning](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) per creare flussi di lavoro di apprendimento automatico. Attualmente, i modelli il cui training è stato eseguito con l'SDK non possono essere integrati direttamente con Customer Insights. Una pipeline di inferenza batch che utilizza quel modello è necessaria per l'integrazione di Customer Insights.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Requisiti della pipeline batch per l'integrazione con Customer Insights
 
 ### <a name="dataset-configuration"></a>Configurazione di set di dati
 
-Per utilizzare dati di entità di Customer Insights nella pipeline di inferenza batch devi creare set di dati. Questi set di dati devono essere registrati nell'area di lavoro. Al momento, supportiamo solo [set di dati tabulari](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) in formato .csv. I set di dati che corrispondono a dati di entità devono essere parametrizzati come parametro della pipeline.
+Per utilizzare dati di entità di Customer Insights nella pipeline di inferenza batch devi creare set di dati. Questi set di dati devono essere registrati nell'area di lavoro. Al momento, supportiamo solo [set di dati tabulari](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) in formato .csv. I set di dati che corrispondono a dati di entità devono essere parametrizzati come parametro della pipeline.
    
 * Parametri del set di dati nella finestra di progettazione
    
@@ -76,7 +76,7 @@ Per utilizzare dati di entità di Customer Insights nella pipeline di inferenza 
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importare i dati della pipeline in Customer Insights
 
-* La finestra di progettazione fornisce il [modulo Esporta dati](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) che consente di esportare l'output di una pipeline nell'archiviazione di Azure. Attualmente, il modulo deve utilizzare il tipo di archivio dati **Archivio BLOB di Azure** e parametrizzare l'**Archivio dati** e il relativo **Percorso**. Customer Insights sovrascrive entrambi questi parametri durante l'esecuzione della pipeline con un datastore e un percorso accessibile al prodotto.
+* La finestra di progettazione fornisce il [modulo Esporta dati](/azure/machine-learning/algorithm-module-reference/export-data) che consente di esportare l'output di una pipeline nell'archiviazione di Azure. Attualmente, il modulo deve utilizzare il tipo di archivio dati **Archivio BLOB di Azure** e parametrizzare l'**Archivio dati** e il relativo **Percorso**. Customer Insights sovrascrive entrambi questi parametri durante l'esecuzione della pipeline con un datastore e un percorso accessibile al prodotto.
    > [!div class="mx-imgBorder"]
    > ![Configurazione del modulo Esporta dati](media/intelligence-designer-importdata.png "Configurazione del modulo Esporta dati")
    

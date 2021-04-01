@@ -1,20 +1,20 @@
 ---
 title: Connettore Power Automate | Microsoft Docs
-description: Crea flussi in Microsoft Power Automate da Dynamics 365 Customer Insights.
+description: Crea i flussi in Microsoft Power Automate da Dynamics 365 Customer Insights.
 ms.date: 01/20/2021
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268829"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597930"
 ---
 # <a name="power-automate-connector-preview"></a>Connettore Power Automate (anteprima)
 
@@ -34,7 +34,7 @@ Utilizza i trigger per creare flussi cloud e automatizzare attività ripetitive,
 [Configurare i trigger in Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>Azioni di Power Automate
-Il connettore di Power Automate fornisce altre azioni oltre ai trigger disponibili. Per ulteriori informazioni, vedere la [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
+Il connettore di Power Automate fornisce altre azioni oltre ai trigger disponibili. Per ulteriori informazioni, vedere la [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Creare un flusso Power Automate
 
@@ -44,7 +44,7 @@ Il connettore di Power Automate fornisce altre azioni oltre ai trigger disponibi
 
 1. Si apre il connettore di Customer Insights (anteprima) in Power Automate. **Accedi** a  Power Automate.
 
-1. Scegli uno dei trigger disponibili e aggiungi più passaggi al tuo nuovo flusso. Per ulteriori informazioni, vedere [Creare un flusso cloud in Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+1. Scegli uno dei trigger disponibili e aggiungi più passaggi al tuo nuovo flusso. Per ulteriori informazioni, vedere [Creare un flusso cloud in Power Automate](/power-automate/get-started-logic-flow).
 
 Esempi di come utilizzare i flussi: 
 - Pubblica un messaggio in un canale Microsoft Teams se un aggiornamento di un'origine dati non riesce. 
