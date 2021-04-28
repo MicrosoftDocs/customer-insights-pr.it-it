@@ -1,7 +1,7 @@
 ---
 title: Utilizzare origini dati per inserire dati
 description: Scopri come importare dati da varie origini.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595952"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887899"
 ---
 # <a name="data-sources-overview"></a>Panoramica delle origini dati
 
@@ -32,8 +32,15 @@ Puoi aggiungere un'origine dati in tre modi principali:
 - [Da una cartella di Common Data Model](connect-common-data-model.md)
 - [Dal tuo lake Common Data Service](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Non puoi ancora aggiungere dati da origini dati locale.
+## <a name="add-data-from-on-premises-data-sources"></a>Aggiungere dati dalle origini dati locale
+
+L'inserimento di dati da origini dati locale in Informazioni dettagliate gruppo di destinatari è supportata in base ai flussi di dati Power Platform. I flussi di dati possono essere abilitati in Customer Insights [fornendo l'URL dell'ambiente Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) quando si imposta l'ambiente.
+
+Le origini dati create dopo l'associazione di un ambiente Dataverse con Customer Insights utilizzeranno i [flussi di dati Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per impostazione predefinita. I flussi di dati supportano la connettività locale utilizzando i gateway di dati. Rimuovi e ricrea le origini dati che esistevano prima che un ambiente Dataverse fosse associato per utilizzare i gateway di dati locale.
+
+I gateway dati di un ambiente esistente Power BI o Power Apps saranno visibili e potrai riutilizzarli in Customer Insights. La pagina delle origini dati mostra i collegamenti per andare all'ambiente Power Platform in cui è possibile visualizzare e configurare gateway dati locali.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Screenshot della pagina delle origini dati che mostra i collegamenti che puntano all'ambiente Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Esamina i dati inseriti
 
@@ -65,7 +72,7 @@ Per aggiornare un origine dati su richiesta, segui questi passaggi:
 
 2. Seleziona i puntini di sospensione verticali accanto all'origine dati che desideri aggiornare e seleziona **Aggiorna** nell'elenco a discesa.
 
-3. L'origine dati è ora attivata per un aggiornamento manuale. L'aggiornamento di un origine dati aggiornerà sia lo schema delle entità che i dati di tutte le entità specificate nell'origine dati.
+3. L'origine dati è ora attivata per un aggiornamento manuale. L'aggiornamento di un'origine dati aggiornerà sia lo schema dell'entità che i dati per tutte le entità specificate nell'origine dati.
 
 4. Seleziona **Arresta aggiornamento** se desideri annullare un aggiornamento esistente e riportare l'origine dati allo stato dell'ultimo aggiornamento.
 

@@ -1,7 +1,7 @@
 ---
-title: Destinazioni di esportazione
-description: Esporta i dati e gestisci le destinazioni di esportazione.
-ms.date: 07/21/2020
+title: Esportare i dati da Customer Insights
+description: Gestisci le esportazioni per condividere i dati.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596090"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896148"
 ---
-# <a name="export-destinations-preview-overview"></a>Panoramica delle destinazioni di esportazione (anteprima)
+# <a name="exports-preview-overview"></a>Panoramica delle esportazioni (anteprima)
 
-La pagina **Destinazioni di esportazione** mostra tutte le posizioni in cui hai impostato l'esportazione dei dati. Puoi anche aggiungere nuove destinazioni per l'esportazione. Mostra anche le opzioni di esportazione attualmente disponibili. Ottieni una rapida panoramica e una descrizione e scopri cosa puoi fare con ogni opzione di estendibilità. Esporta profili, misure e segmenti unificati in app supportate pertinenti per la tua azienda.
+La pagina **Esportazioni** mostra tutte le esportazioni configurate. Le esportazioni condividono dati specifici con varie applicazioni. Possono includere profili o entità del cliente, schemi e dettagli di mappatura. Ogni esportazione richiede una [connessione, impostata da un amministratore, per gestire l'autenticazione e l'accesso](connections.md).
 
-Vai a **Amministratore** > **Destinazioni di esportazione** per trovare le seguenti opzioni di estendibilità:
+> [!NOTE]
+> Fino a marzo 2021, le esportazioni creavano automaticamente una connessione al servizio corrispondente. Le esportazioni ora richiedono una [connessione, creata e condivisa da un amministratore](connections.md) prima di poterle creare.
 
-- [Adobe Campaign Standard](export-adobe-campaign-standard.md)
-- [Adobe Experience Platform](export-adobe-experience-platform.md)
-- [AdRoll](export-adroll.md)
-- [Autopilot](export-autopilot.md)
-- [Archiviazione BLOB di Azure](export-azure-blob-storage.md)
-- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
-- [Bot per Microsoft Teams](export-teams-bot.md)
-- [API di Customer Insights](apis.md)
-- [DotDigital](export-dotdigital.md)
-- [Dynamics 365 Customer Service (componente aggiuntivo per la scheda cliente)](customer-card-add-in.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [Hub di Dynamics 365 Sales (componente aggiuntivo per la scheda cliente)](customer-card-add-in.md)
-- [Gestione inserzioni di Facebook](export-facebook.md)
-- [Google Ads](export-google-ads.md)
-- [LiveRamp&reg;](export-liveramp.md)
-- [Mailchimp](export-mailchimp.md)
-- [Marketo](export-marketo.md)
-- [Power Automate](export-power-automate.md)
-- [Power Apps](export-power-apps.md)
-- [Power BI](export-power-bi.md)
-- [SendGrid](export-sendgrid.md)
-- [SFTP](export-sftp.md)
+Vai a **Dati** > **Esportazioni** per visualizzare la pagina delle esportazioni. Tutti i ruoli utente hanno accesso per visualizzare le esportazioni configurate. Utilizza il campo di ricerca nella barra dei comandi per trovare le esportazioni in base al nome, al nome della connessione o al tipo di connessione.
 
-## <a name="add-a-new-export-destination"></a>Aggiungere una nuova destinazione di esportazione
+## <a name="set-up-a-new-export"></a>Configurare una nuova esportazione
 
-Per aggiungere destinazioni di esportazione, disponi delle [autorizzazioni di amministratore](permissions.md). Se esporti su servizi Microsoft, si presuppone che entrambi i servizi siano nella stessa organizzazione.
+Per impostare o modificare un'esportazione, è necessario avere delle connessioni disponibili. Le connessioni dipendono dal tuo [ruolo utente](permissions.md):
+- Gli amministratori hanno accesso a tutte le connessioni. Possono anche creare nuove connessioni durante la configurazione di un'esportazione.
+- I collaboratori possono avere accesso a connessioni specifiche. Dipendono dagli amministratori per configurare e condividere le connessioni. Per ulteriori informazioni, vedi [Consentire ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- I visualizzatori possono solo visualizzare le esportazioni esistenti ma non crearle.
 
-1. Passa a **Amministratore** > **Destinazioni di esportazione**.
+1. Vai a **Dati** > **Esportazioni**.
 
-1. Passa alla scheda **Destinazioni di esportazione personali**.
+1. Seleziona **Aggiungi esportazione** per creare una nuova destinazione di esportazione.
 
-1. Seleziona **Aggiungi destinazione** per creare una nuova destinazione di esportazione.
+1. Nel riquadro **Imposta esportazione** seleziona la connessione da utilizzare. [Le connessioni](connections.md) sono gestite dagli amministratori. 
 
-1. Nel riquadro **Aggiungi destinazione**, seleziona il **Tipo** di destinazione di esportazione nel menu a discesa.
+1. Fornisci i dettagli richiesti e seleziona **Salva** per creare l'esportazione.
 
-1. Specifica i dettagli obbligatori e seleziona **Avanti** per creare la destinazione di esportazione.
-
-Puoi anche selezionare **Configura** su un riquadro della scheda **Scopri**.
-
-## <a name="view-export-destinations"></a>Visualizzare le destinazioni di esportazione
-
-Dopo aver creato le destinazioni di esportazione, le troverai in una tabella nella scheda **Destinazioni di esportazione personali**. Questa tabella include tre colonne:
-
-- **Nome visualizzato**: il nome inserito durante la creazione della destinazione.
-- **Tipo**: il tipo di destinazione di esportazione impostato durante la creazione della destinazione.
-- **Data di creazione**: la data in cui è stata creata la destinazione.
-
-## <a name="edit-an-export-destination"></a>Modificare una destinazione di esportazione
+### <a name="edit-an-export"></a>Modificare un'esportazione
 
 1. Seleziona i puntini di sospensione verticali per la destinazione di esportazione che vuoi modificare.
 
-   > [!div class="mx-imgBorder"]
-   > ![Puntini di sospensione verticali](media/export-destinations-page-ellipsis.png "Puntini di sospensione verticali")
+1. Dal menu a discesa seleziona **Modifica**.
 
-1. Seleziona **Modifica** dal menu a discesa.
+1. Modifica i valori che vuoi aggiornare e seleziona **Salva**.
 
-1. Modifica i valori che richiedono l'aggiornamento e seleziona **Salva**.
+## <a name="view-exports-and-export-details"></a>Visualizzare le esportazioni ed esportare i dettagli
 
-## <a name="export-data-on-demand"></a>Esportare dati su richiesta
+Dopo aver creato le destinazioni di esportazione, vengono elencate in **Dati** > **Esportazioni**. Tutti gli utenti possono vedere quali dati sono condivisi e il loro stato più recente.
 
-Dopo aver configurato un connettore per una destinazione di esportazione, le esportazioni verranno eseguite con ogni [aggiornamento pianificato](system.md#schedule-tab).
+1. Vai a **Dati** > **Esportazioni**.
 
-Per esportare i dati senza attendere un aggiornamento pianificato, vai alla scheda **Destinazioni di esportazione personali** in **Amministratore** > **Destinazioni di esportazione**.
+1. Gli utenti senza autorizzazioni di modifica selezionano **Visualizza** invece di **Modifica** per vedere i dettagli dell'esportazione.
 
-> [!div class="mx-imgBorder"]
-> ![Puntini di sospensione verticali](media/export-destinations-page-ellipsis.png "Puntini di sospensione verticali")
+1. Questo riquadro laterale mostra la configurazione di questa esportazione. Senza le autorizzazioni di modifica, non è possibile modificare i valori. Seleziona **Chiudi** per tornare alla pagina delle esportazioni.
 
-- Seleziona **Esporta** sopra l'elenco per eseguire contemporaneamente l'esportazione verso tutte le destinazioni di esportazione.
-- Seleziona i puntini di sospensione (...) dopo una voce dell'elenco e quindi sceglie l'opzione **Esporta** per eseguire l'esportazione per una singola destinazione di esportazione.
+## <a name="run-exports-on-demand"></a>Eseguire le esportazioni su richiesta
 
-## <a name="remove-an-export-destination"></a>Rimuovere una destinazione di esportazione
+Dopo aver configurato un'esportazione, verrà eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab) fintanto che ha una connessione funzionante.
 
-Per rimuovere una destinazione di esportazione, inizia dalla pagina **Destinazioni di esportazione** principale.
+Per esportare i dati senza attendere un aggiornamento pianificato, vai a **Dati** > **Esportazioni**. è possibile procedere in due modi:
 
-1. Seleziona i puntini di sospensione verticali per la destinazione di esportazione che vuoi rimuovere.
+- Per eseguire tutte le esportazioni, seleziona **Esegui tutto** nella barra dei comandi. 
+- Per eseguire una singola esportazione, seleziona i puntini di sospensione (...) su un elemento dell'elenco e quindi scegli **Esegui**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Puntini di sospensione verticali](media/export-destinations-page-ellipsis.png "Puntini di sospensione verticali")
+## <a name="remove-an-export"></a>Rimuovere un'esportazione
 
-2. Seleziona **Rimuovi** dal menu a discesa.
+1. Vai a **Dati** > **Esportazioni**.
 
-3. Conferma la rimozione selezionando **Rimuovi** nella schermata di conferma.
+1. Seleziona i puntini di sospensione verticali per l'esportazione che vuoi rimuovere.
+
+1. Seleziona **Rimuovi** dal menu a discesa.
+
+1. Conferma la rimozione selezionando **Rimuovi** nella schermata di conferma.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

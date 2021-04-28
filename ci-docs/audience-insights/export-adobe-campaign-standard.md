@@ -1,7 +1,7 @@
 ---
 title: Esportare i dati di Customer Insights in Adobe Campaign Standard
 description: Scopri come utilizzare i segmenti di informazioni dettagliate gruppo di destinatari in Adobe Campaign Standard.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596320"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760286"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Utilizzare i segmenti di Customer Insights in Adobe Campaign Standard (anteprima)
 
@@ -48,15 +48,21 @@ L'e-mail di offerta che desideri inviare conterrà nome, cognome e la data di fi
 
 ## <a name="export-your-target-audience"></a>Esportare il gruppo di destinatari di destinazione
 
+### <a name="configure-a-connection"></a>Configurare una connessione
+
 Una volta identificato il nostro gruppo di destinatari di destinazione, possiamo configurare l'esportazione dalle informazioni dettagliate gruppo di destinatari a un account di archiviazione BLOB di Azure.
 
-1. In Audience Insights, vai a **Amministratore** > **Destinazioni di esportazione**.
+1. In informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Connessioni**.
 
-1. Nel riquadro **Campagna Adobe**, seleziona **Configura**.
+1. Seleziona **Aggiungi connessione** e scegli **Adobe Campaign** per configurare la connessione o seleziona **Imposta** nel riquadro **Adobe Campaign**
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Riquadro di configurazione per Adobe Campaign Standard.":::
 
-1. Fornisci un **nome visualizzato** per questa nuova destinazione di esportazione, quindi inserisci **Nome utente**, **Chiave account** e **Contenitore** dell'account di archiviazione BLOB di Azure in cui vuoi esportare il segmento.  
+1. Assegna alla tua connessione un nome riconoscibile nel campo **Nome visualizzato**. Il nome e il tipo di connessione descrivono la connessione. Consigliamo di scegliere un nome che spieghi lo scopo e l'obiettivo della connessione.
+
+1. Scegli chi può utilizzare questa connessione. Se non esegui alcuna azione, l'impostazione predefinita sarà Amministratori. Per ulteriori informazioni, vedi [Autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
+
+1. Immetti **Nome utente**, **Chiave account**, e **Contenitore** dell'account di archiviazione BLOB di Azure in cui vuoi esportare il segmento.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Screenshot della configurazione dell'account di archiviazione. "::: 
 
@@ -64,7 +70,17 @@ Una volta identificato il nostro gruppo di destinatari di destinazione, possiamo
 
    - Per informazioni su come creare un contenitore, vedi [Creare un contenitore](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Seleziona **Avanti**.
+1. Seleziona **Salva** per completare la connessione.
+
+### <a name="configure-an-export"></a>Configurare un'esportazione
+
+Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per ulteriori informazioni, vedi [Autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
+
+1. Vai a **Dati** > **Esportazioni**.
+
+1. Per creare una nuova esportazione seleziona **Aggiungi esportazione**.
+
+1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Adobe Campaign. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
 
 1. Scegli il segmento che vuoi esportare. In questo esempio, è **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Una volta identificato il nostro gruppo di destinatari di destinazione, possiamo
 
 1. Seleziona **Salva**.
 
-Dopo aver salvato la destinazione di esportazione, la trovi in **Amministratore** > **Esportazioni** > **Destinazioni di esportazione personali**.
+Dopo aver salvato la destinazione di esportazione, la trovi in **Dati** > **Esportazioni**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Screenshot con l'elenco delle esportazioni e il segmento di esempio evidenziato.":::
-
-Ora puoi [esportare il segmento su richiesta](export-destinations.md#export-data-on-demand). L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md).
+Ora puoi [esportare il segmento su richiesta](export-destinations.md#run-exports-on-demand). L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md).
 
 > [!NOTE]
 > Assicurati che il numero di record nel segmento esportato rientri nel limite consentito dalla licenza di Adobe Campaign Standard.

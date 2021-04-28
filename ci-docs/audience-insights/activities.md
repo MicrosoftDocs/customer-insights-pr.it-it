@@ -1,7 +1,7 @@
 ---
 title: Impegni cliente
 description: Definisci gli impegni cliente e visualizzali nella sequenza temporale del cliente.
-ms.date: 10/13/2020
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,79 +9,88 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: fbfa9d7e00859cc80c24b98bd2dc806f1fda7803
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
+ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596734"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "5866412"
 ---
 # <a name="customer-activities"></a>Impegni cliente
 
-Combina gli impegni cliente da [varie origini dati](data-sources.md) in Dynamics 365 Customer Insights per creare la sequenza temporale di un cliente che elenchi gli impegni in ordine cronologico. Puoi includere la sequenza temporale nelle app di interazione con i clienti in Dynamics 365 tramite il [componente aggiuntivo Scheda cliente](customer-card-add-in.md) o in un dashboard di Power BI.
+Combina le attività dei clienti da [varie origini di dati](data-sources.md) in Dynamics 365 Customer Insights per creare una sequenza temporale che elenchi le attività in ordine cronologico. Includi la sequenza temporale nelle app Dynamics 365 con la soluzione [Componente aggiuntivo Scheda cliente](customer-card-add-in.md) o in un dashboard Power BI.
 
 ## <a name="define-an-activity"></a>Definire un impegno
 
-Le tue origini dati includono entità con dati transazionali e dati di impegni provenienti da più origini dati. Identifica queste entità e seleziona gli impegni che vuoi visualizzare nella sequenza temporale del cliente. Scegli l'entità che include il tuo impegno o i tuoi impegni di destinazione.
+Le tue origini dati possono includere entità con dati transazionali e dati di impegni provenienti da più origini dati. Identifica queste entità e seleziona gli impegni che vuoi visualizzare nella sequenza temporale del cliente. Scegli l'entità che include il tuo impegno o i tuoi impegni di destinazione.
+
+> [!NOTE]
+> Un'entità deve avere almeno un attributo di tipo **Data** per essere incluso in una sequenza temporale del cliente e non puoi aggiungere entità senza campi **Data**. Il controllo **Aggiungi impegno** è disabilitato se non viene trovata tale entità.
 
 1. In Audience Insights, vai a **Dati** > **Impegni**.
 
-1. Seleziona **Aggiungi impegno**.
+1. Seleziona **Aggiungi impegno** per avviare l'esperienza guidata per il processo di configurazione dell'impegno.
 
-   > [!NOTE]
-   > Un'entità deve avere almeno un attributo di tipo **Data** per essere incluso in una sequenza temporale del cliente e non puoi aggiungere entità senza campi **Data**. Il controllo **Aggiungi impegno** è disabilitato se non viene trovata tale entità.
+1. Nel passaggio **Dati sull'impegno** imposta i valori per i seguenti campi:
 
-1. Nel riquadro **Aggiungi impegno**, imposta i valori per i seguenti campi:
-
+   - **Nome impegno**: Seleziona un nome per l'impegno.
    - **Entità**: seleziona un'entità che include dati transazionali o di impegni.
    - **Chiave primaria**: seleziona il campo che identifica in modo univoco un record. Non deve contenere valori duplicati, valori vuoti o valori mancanti.
-   - **Timestamp**: seleziona il campo che rappresenta l'ora di inizio dell'impegno.
-   - **Evento**: seleziona il campo che è l'evento per l'impegno.
-   - **Indirizzo Web**: seleziona il campo che rappresenta un URL che fornisce informazioni aggiuntive su questo impegno. Ad esempio, il sistema transazionale che genera questo impegno. Questo URL può essere qualsiasi campo di origine dati oppure può essere costruito come un nuovo campo usando una trasformazione Power Query. Questi dati URL verranno archiviati nell'entità Impegno unificata, che può essere consumata a valle utilizzando le API.
-   - **Dettagli**: facoltativamente, seleziona il campo che viene aggiunto per ulteriori dettagli.
-   - **Icona**: opzionalmente, seleziona l'icona che rappresenta questo impegno.
-   - **Tipo di impegno**: definisci il riferimento del tipo di impegno al Common Data Model che meglio descrive la definizione semantica dell'impegno.
 
-1. Nella sezione **Configura relazione**, configura i dettagli per connettere i dati dei tuopi impegni al cliente corrispondente.
+   :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Imposta i dati dell'impegno con nome, entità e chiave primaria.":::
 
-    - **Campo dell'entità Impegno**: seleziona il campo nell'entità impegno che verrà utilizzato per stabilire una relazione con un'altra entità.
-    - **Entità cliente**: seleziona l'entità cliente di origine corrispondente con cui l'entità impegno sarà in relazione. Puoi creare una correlazione solo con quelle entità cliente di origine utilizzate nel processo di unificazione dei dati.
-    - **Campo entità cliente**: questo campo mostra la chiave primaria dell'entità cliente di origine come selezionata nel processo di mapping. Questo campo chiave primaria nell'entità cliente di origine viene utilizzato per stabilire una relazione con l'entità impegno.
-    - **Nome**: se esiste già una relazione tra questa entità impegno e l'entità cliente di origine selezionata, il nome della relazione sarà in sola lettura. Se tale relazione non esiste, verrà creata una nuova relazione con il nome fornito qui.
+1. Seleziona **Avanti** per procedere al passaggio successivo.
+
+1. Nel passaggio **Relazione**, configura i dettagli per connettere i dati dell'impegno al cliente corrispondente. Questo passaggio visualizza la connessione tra le entità.  
+
+   - **Primo**: Campo esterno nell'entità dell'impegno che verrà utilizzato per stabilire una relazione con un'altra entità.
+   - **Secondo**: Entità cliente di origine corrispondente con la quale l'entità impegno sarà in relazione. È possibile fare riferimento solo alle entità del cliente di origine utilizzate nel processo di unificazione dei dati.
+   - **Terzo**: Se esiste già una relazione tra questa entità impegno e l'entità cliente di origine selezionata, il nome della relazione sarà in modalità di sola lettura. Se non esiste una relazione di questo tipo, verrà creata una nuova relazione con il nome fornito in questa casella.
+
+   :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definisci la relazione dell'entità.":::
+
+1. Seleziona **Avanti** per procedere al passaggio successivo. 
+
+1. Nel passaggio **Unificazione impegno**, scegli l'evento dell'impegno e l'ora di inizio dell'impegno. 
+   - **Campi obbligatori**
+      1. **Impegno evento**: Campo che rappresenta l'evento per questo impegno
+      2. **Timestamp**: Campo che rappresenta l'ora di inizio dell'impegno.
+
+   - **Campi facoltativi**
+      1. **Ulteriori dettagli**: Campo con informazioni rilevanti per questo impegno.
+      2. **Icona**: Icona che rappresenta al meglio questo tipo di impegno.
+      3. **indirizzo Web**: Campo contenente un URL con informazioni su questo impegno. Ad esempio, il sistema transazionale che genera questo impegno. Questo URL può essere qualsiasi campo di origine dati oppure può essere costruito come un nuovo campo usando una trasformazione Power Query. I dati dell'URL verranno archiviati nell'entità *Impegno unificato* che può essere consumata a valle utilizzando le [API](apis.md).
    
-   > [!div class="mx-imgBorder"]
-   > ![Definire la relazione dell'entità](media/activities-entities-define.png "Definire la relazione dell'entità")
+   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Specifica i dati dell'impegno del cliente in un'entità Impegno unificato.":::
 
-1. Seleziona **Salva** per applicare le modifiche.
+1. Seleziona **Avanti** per passare al passaggio successivo. Puoi selezionare **Termina e rivedi** per salvare l'impegno ora con il tipo di impegno impostato su **Altro**. 
 
-1. Nella pagina **Impegni** seleziona **Esegui**.
+1. Nel passaggio **Tipo di impegno** scegli il tipo di impegno e, facoltativamente, seleziona se vuoi mappare semanticamente alcuni tipi di impegno da utilizzare in altre aree di Customer Insights. Attualmente, i tipi di impegno *Sottoscrizione* & *SalesOrderLine* possono essere mappati semanticamente dopo aver accettato di mappare i campi. Se un tipo di impegno non è pertinente per il nuovo impegno, puoi scegliere *Altro* o *Crea nuovo* per un tipo di impegno personalizzato.
+
+1. Seleziona **Avanti** per passare al passaggio successivo. 
+
+1. Nel passaggio **Rivedi**, verifica le tue selezioni. Torna a uno dei passaggi precedenti e aggiorna le informazioni se necessario.
+
+   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Rivedi i campi specificati per un impegno.":::
+   
+1. Seleziona **Salva impegno** per applicare le modifiche e seleziona **Fatto** per tornare a **Dati** > **Impegni**. Qui puoi vedere quali impegni sono impostati per essere mostrati nella sequenza temporale. 
+
+1. Nella pagina **Impegni** seleziona **Esegui** per elaborare l'impegno. 
 
 > [!TIP]
 > Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
 
-## <a name="edit-an-activity"></a>Modifica un impegno
 
-1. In Audience Insights, vai a **Dati** > **Impegni**.
+## <a name="manage-existing-activities"></a>Gestire gli impegni esistenti
 
-2. Seleziona l'entità impegno che vuoi modificare e seleziona **Modifica**. In alternativa, puoi passare con il mouse sopra la riga dell'entità e selezionare l'icona **Modifica**.
+In **Dati** > **Impegni**, puoi visualizzare tutti gli impegni salvati e gestirli. Ogni impegno è rappresentato da una riga che include anche i dettagli sull'origine, l'entità e il tipo di impegno.
 
-3. Fate clic sull'icona **Modifica**.
+Le seguenti azioni sono disponibili quando selezioni un impegno. 
 
-4. Nel riquadro **Modifica impegno**, aggiorna i valori e seleziona **Salva**.
+- **Modifica**: Apre la configurazione dell'impegno nella fase di revisione. Puoi modificare parte o tutta la configurazione corrente da questo passaggio. Dopo aver modificato la configurazione, seleziona **Salva impegno** e poi seleziona **Esegui** per elaborare le modifiche.
 
-5. Nella pagina **Impegni** seleziona **Esegui**.
+- **Rinomina**: Apre una finestra di dialogo in cui inserire un nome diverso per l'impegno selezionato. Seleziona **Salva** per applicare le modifiche.
 
-## <a name="delete-an-activity"></a>Eliminare un impegno
-
-1. In Audience Insights, vai a **Dati** > **Impegni**.
-
-2. Seleziona l'entità impegno che vuoi rimuovere e seleziona **Elimina**. In alternativa, puoi passare con il mouse sopra la riga dell'entità e selezionare l'icona **Elimina**. Inoltre, puoi selezionare più entità impegno da eliminare contemporaneamente.
-   > [!div class="mx-imgBorder"]
-   > ![Modificare o eliminare la relazione di entità](media/activities-entities-edit-delete.png "Modificare o eliminare la relazione di entità")
-
-3. Seleziona l'icona **Elimina**.
-
-4. Conferma l'eliminazione.
-
+- **Elimina**: Apre una finestra di dialogo per confermare l'eliminazione dell'impegno selezionato. È inoltre possibile eliminare più di un impegno contemporaneamente selezionando gli impegni e quindi l'icona di eliminazione. Per confermare l'eliminazione seleziona **Elimina**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

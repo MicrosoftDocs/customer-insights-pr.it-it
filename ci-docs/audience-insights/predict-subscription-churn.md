@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595661"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906907"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsione di abbandono dell'abbonamento (anteprima)
 
@@ -49,6 +49,12 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
         - **Timestamp:** la data e l'ora dell'evento identificato dalla chiave primaria.
         - **Evento:** il nome dell'evento che si desidera utilizzare. Ad esempio, un campo chiamato "UserAction" in un servizio di streaming video potrebbe avere il valore di "Visualizzato".
         - **Dettagli:** informazioni dettagliate sull'evento. Ad esempio, un campo chiamato "ShowTitle" in un servizio di streaming video potrebbe avere il valore di un video visto dal cliente.
+- Caratteristiche dei dati consigliate:
+    - Dati storici sufficienti: dati di sottoscrizione per almeno il doppio della finestra temporale selezionata. Preferibilmente, da due a tre anni di dati dell'abbonamento.
+    - Stato della sottoscrizione: i dati includono le sottoscrizioni attive e inattive per ogni cliente, quindi ci sono più voci per ID cliente.
+    - Numero di clienti: almeno 10 profili cliente, preferibilmente più di 1.000 clienti univoci. Il modello non riesce con meno di 10 clienti e dati storici insufficienti.
+    - Completezza dei dati: meno del 20% dei valori mancanti nel campo dati dell'entità fornita.
+   
    > [!NOTE]
    > Avrai bisogno di almeno due record di attività per il 50% dei clienti per i quali desideri calcolare il tasso di abbandono.
 
@@ -67,7 +73,7 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
 ### <a name="define-customer-churn"></a>Definisci abbandono dei clienti
 
 1. Immetti un valore in **Giorni dalla fine dell'abbonamento** dopo il quale la tua azienda considera il cliente come perso. Questo periodo è in genere apprezzato da attività commerciali come offerte o altre attività di marketing che cercano di prevenire la perdita del cliente.
-1. Immetti il numero di **Giorni futuri da considerare per prevedere l'abbandono** per impostare una finestra per la quale prevedere l'abbandono. Ad esempio, per prevedere il rischio di abbandono dei tuoi clienti nei prossimi 90 giorni per allinearti agli sforzi di fidelizzazione del reparto marketing. Prevedere il rischio di abbandono per periodi di tempo più o meno lunghi può rendere più difficile la gestione dei fattori nel profilo di rischio di abbandono, ma ciò dipende in larga misura da requisiti aziendali specifici. Seleziona **Avanti** per continuare
+1. Immetti il numero di **Giorni futuri da considerare per prevedere l'abbandono** per impostare una finestra per la quale prevedere l'abbandono. Ad esempio, per prevedere il rischio di abbandono dei tuoi clienti nei prossimi 90 giorni per allinearti agli sforzi di fidelizzazione del reparto marketing. Prevedere il rischio di abbandono per periodi di tempo più o meno lunghi può rendere più difficile risolvere i fattori nel profilo di rischio di abbandono, a seconda dei requisiti aziendali specifici. Seleziona **Avanti** per continuare
    >[!TIP]
    > Puoi selezionare **Salva e chiudi** in qualsiasi momento per salvare la previsione come bozza. La previsione della bozza è disponibile nella scheda **Le mie previsioni** per continuare.
 
@@ -113,7 +119,8 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
 1. Seleziona la previsione da rivedere.
    - **Nome della previsione:** il nome della previsione specificato durante la creazione.
    - **Tipo di previsione:** il tipo di modello utilizzato per la previsione
-   - **Entità di output:** nome dell'entità per memorizzare l'output della previsione. Puoi trovare un'entità con questo nome su **Dati** > **Entità**.
+   - **Entità di output:** nome dell'entità per memorizzare l'output della previsione. Puoi trovare un'entità con questo nome su **Dati** > **Entità**.    
+     Nell'entità di output, *ChurnScore* è la probabilità prevista di abbandono e *IsChurn* è un'etichetta binaria basata su *ChurnScore* con soglia di 0,5. La soglia predefinita potrebbe non funzionare per il tuo scenario. [Crea un nuovo segmento](segments.md#create-a-new-segment) con la tua soglia preferita.
    - **Campo previsione:** questo campo è popolato solo per alcuni tipi di previsioni e non viene utilizzato nella previsione di abbandono dell'abbonamento.
    - **Stato:** lo stato corrente dell'esecuzione della previsione.
         - **In coda:** la previsione è attualmente in attesa dell'esecuzione di altri processi.

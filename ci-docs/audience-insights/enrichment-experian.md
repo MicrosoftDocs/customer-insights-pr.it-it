@@ -1,7 +1,7 @@
 ---
 title: Arricchimento con l'arricchimento di terze parti Experian
 description: Informazioni generali sull'arricchimento di terze parti Experian.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597792"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896378"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Arricchisci i profili cliente con i dati demografici di Experian (anteprima)
 
@@ -25,10 +25,10 @@ Experian è un leader globale nei servizi di marketing e reporting del credito a
 Per configurare Experian, devono essere rispettati i seguenti requisiti:
 
 - Hai un abbonamento Experian attivo. Per ottenere un abbonamento, [contatta Experian](https://www.experian.com/marketing-services/contact) direttamente. [Altre informazioni sull'arricchimento dei dati Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Disponi dell'ID utente, dell'ID parte e del numero di modello del tuo account Secure Transport (ST) abilitato per SSH che Experian ha creato per te.
-- Disponi di autorizzazioni di [amministratore](permissions.md#administrator) in Audience Insights.
 
-## <a name="configuration"></a>Configurazione
+- Una connessione Experian è già stata configurata da un amministratore *o* hai le autorizzazioni di [amministratore](permissions.md#administrator). È inoltre necessario l'ID utente, l'ID parte e il numero di modello per l'account SSH-enabled Secure Transport (ST) che Experian ha creato per te.
+
+## <a name="configure-the-enrichment"></a>Configurare l'arricchimento
 
 1. Vai a **Dati** > **Arricchimento** e selezionala scheda **Individua**.
 
@@ -36,26 +36,46 @@ Per configurare Experian, devono essere rispettati i seguenti requisiti:
 
    > [!div class="mx-imgBorder"]
    > ![Riquadro Experian](media/experian-tile.png "Riquadro Experian")
+   > 
 
-1. Seleziona **Inizia** e inserisci l'ID utente, l'ID parte e il numero di modello per il tuo account Experian Secure Transport. Rivedi e fornisci il tuo consenso per **Conformità e privacy dei dati** selezionando la casella di controllo **Accetto**. Conferma tutti gli input selezionando **Applica**.
+1. Seleziona una [connessione](connections.md) nell'elenco a discesa. Contatta un amministratore se non è disponibile alcuna connessione. Se sei un amministratore, puoi creare una connessione selezionando **Aggiungi connessione** e scegliendo Experian dal menu a discesa. 
 
-## <a name="map-your-fields"></a>Esegui il mapping dei campi
+1. Seleziona **Connettiti a Experian** per confermare la selezione della connessione.
 
-1.  Seleziona **Aggiungi dati** e scegli il **Set di dati cliente** che vuoi arricchire con i dati demografici di Experian. Puoi selezionare l'entità **Cliente** per arricchire tutti i tuoi profili cliente o selezionare un'entità segmento per arricchire solo i profili cliente contenuti in quel segmento.
+1.  Seleziona **Avanti** e scegli il **set di dati del cliente** che desideri arricchire con i dati demografici di Experian. Puoi selezionare l'entità **Cliente** per arricchire tutti i tuoi profili cliente o selezionare un'entità segmento per arricchire solo i profili cliente contenuti in quel segmento.
 
-1. Seleziona gli identificatori chiave da **Nome e indirizzo**, **E-mail** o **Telefono** da inviare a Experian per la risoluzione dell'identità.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Screenshot della scelta del set di dati cliente.":::
 
-   > [!TIP]
-   > Più attributi dell'identificatore chiave inviati a Experian probabilmente producono un tasso di corrispondenza più elevato.
+1. Seleziona **Avanti** e definisci quale tipo di campi dei profili unificati devono essere utilizzati per cercare i dati demografici corrispondenti di Experian. Almeno uno dei campi **Nome e indirizzo**, **Telefono**, o **E-mail** è obbligatorio. Per una maggiore precisione della corrispondenza, è possibile aggiungere fino a due altri campi. Questa selezione influenzerà i campi di mapping a cui hai accesso nel passaggio successivo.
 
-1. Seleziona **Avanti** e mappa gli attributi corrispondenti dall'entità cliente unificata per i campi dell'identificatore chiave selezionati.
+    > [!TIP]
+    > Più attributi dell'identificatore chiave inviati a Experian probabilmente producono un tasso di corrispondenza più elevato.
 
-1. Seleziona **Aggiungi attributo** per mappare eventuali attributi aggiuntivi che desideri inviare a Experian.
+1. Seleziona **Avanti** per iniziare il mapping del campo.
 
-1.  Seleziona **Salva** per completare la mappatura dei campi.
+1. Definisci quali campi dei profili unificati devono essere utilizzati per cercare i dati demografici corrispondenti di Experian. I campi obbligatori sono contrassegnati.
 
-    > [!div class="mx-imgBorder"]
-    > ![Mapping del campo Experian](media/experian-field-mapping.png "Mapping del campo Experian")
+1. Fornisci un nome per l'arricchimento e un nome per l'entità di output.
+
+1. Seleziona **Salva arricchimento** dopo aver esaminato le tue scelte.
+
+## <a name="configure-the-connection-for-experian"></a>Configurare la connessione per Experian 
+
+Devi essere un amministratore per configurare le connessioni. Seleziona **Aggiungi connessione** quando si configura un arricchimento *o* vai ad **Amministratore** > **Connessioni** e seleziona **Imposta** nel riquadro Experian.
+
+1. Seleziona **Inizia subito**.
+
+1. Immetti un nome per la connessione nella casella **nome visualizzato**.
+
+1. Inserisci un ID utente, un ID parte e un numero di modello validi per il tuo account Experian Secure Transport.
+
+1. Rivedi e fornisci il tuo consenso per **Conformità e privacy dei dati** selezionando la casella di controllo **Accetto**
+
+1. Seleziona **Verifica** per convalidare la configurazione.
+
+1. Dopo aver completato la verifica, seleziona **Salva**.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Riquadro di configurazione della connessione Experian.":::
 
 ## <a name="enrichment-results"></a>Risultati dell'arricchimento
 

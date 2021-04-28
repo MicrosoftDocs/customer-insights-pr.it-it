@@ -1,7 +1,7 @@
 ---
 title: Arricchimento con l'importazione personalizzata SFTP
 description: Informazioni generali sull'arricchimento con l'importazione personalizzata SFTP.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595860"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896286"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Arricchimento di profili cliente con dati personalizzati (anteprima)
 
@@ -24,29 +24,48 @@ L'importazione personalizzata SFTP (Secure File Transfer Protocol) consente di i
 
 Per configurare l'importazione personalizzata SFTP, è necessario soddisfare i seguenti prerequisiti:
 
-- Devi disporre delle credenziali utente (nome utente e password) per la posizione SFTP da cui verranno importati i dati.
-- Devi disporre dell'URL e del numero di porta (solitamente 22) per l'host STFP.
-- Disponi del nome di file e del percorso del file da importare nell'host SFTP.
-- È presente un file *model.json* che specifica lo schema per i dati da importare. Questo file deve trovarsi nella stessa directory del file da importare.
-- Devi disporre di autorizzazioni di [amministratore](permissions.md#administrator).
+- Hai il nome del file e la posizione (percorso) del file da importare sull'host SFTP.
+- C'è un file *model.json* che specifica [lo schema Common Data Model](/common-data-model/) per i dati da importare. Questo file deve trovarsi nella stessa directory del file da importare.
+- Una connessione SFTP è già stata configurata da un amministratore *o* hai le autorizzazioni di [amministratore](permissions.md#administrator). Avrai bisogno delle credenziali dell'utente, dell'URL e del numero di porta per la posizione SFTP da cui desideri importare i dati.
 
-## <a name="configuration"></a>Configurazione
+
+## <a name="configure-the-import"></a>Configurare l'importazione
 
 1. Vai a **Dati** > **Arricchimento** e selezionala scheda **Individua**.
 
-1. In **Importazione personalizzata SFTP**, seleziona **Arricchisci i miei dati**.
+1. Nel **riquadro di importazione personalizzata SFTP**, seleziona **Arricchisci i miei dati** e quindi seleziona **Attività iniziali**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Riquadro Importazione personalizzata SFTP](media/SFTP_Custom_Import_tile.png "Riquadro Importazione personalizzata SFTP")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Riquadro Importazione personalizzata SFTP.":::
 
-1. Seleziona **Inizia** e fornisci le credenziali e l'indirizzo per il server SFTP. Ad esempio, sftp://mysftpserver.com:22.
+1. Seleziona una [connessione](connections.md) nell'elenco a discesa. Contatta un amministratore se non è disponibile alcuna connessione. Se sei un amministratore, puoi creare una connessione selezionando **Aggiungi connessione** e scegliendo **Importazione personalizzata SFTP** dal menu a discesa.
 
-1. Immetti il nome del file che contiene i dati e il percorso del file sul server SFTP se non si trova nella cartella radice.
+1. Seleziona **Connettiti a Importazione personalizzata** per confermare la connessione selezionata.
 
-1. Conferma tutti gli input selezionando **Connetti a importazione personalizzata**.
+1.  Seleziona **Avanti** e inserisci il **Nome file** e il **percorso** del file di dati che vuoi importare.
 
-   > [!div class="mx-imgBorder"]
-   > ![Flyout della configurazione dell'importazione personalizzata SFTP](media/SFTP_Custom_Import_Configuration_flyout.png "Flyout della configurazione dell'importazione personalizzata SFTP")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Screenshot durante l'inserimento della posizione dei dati.":::
+
+1. Seleziona **Avanti** e fornisci un nome per l'arricchimento e un nome per l'entità di output. 
+
+1. Seleziona **Salva arricchimento** dopo aver esaminato le tue scelte.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Configurare la connessione per l'importazione personalizzata SFTP 
+
+Devi essere un amministratore per configurare le connessioni. Seleziona **Aggiungi connessione** quando si configura un arricchimento *o* vai ad **Amministratore** > **Connessioni** e seleziona **Imposta** nel riquadro Importazione personalizzata.
+
+1. Immetti un nome per la connessione nella casella **nome visualizzato**.
+
+1. Immetti un nome utente, una password e un URL host validi per il server STFP su cui risiedono i dati da importare.
+
+1. Rivedi e fornisci il tuo consenso per **Conformità e privacy dei dati** selezionando la casella di controllo **Accetto**.
+
+1. Seleziona **Verifica** per convalidare la configurazione.
+
+1. Una volta completata la verifica, è possibile salvare la connessione facendo clic su **Salva**.
+
+> [!div class="mx-imgBorder"]
+   > ![Pagina di configurazione della connessione Experian](media/enrichment-SFTP-connection.png "Pagina di configurazione della connessione Experian")
+
 
 ## <a name="defining-field-mappings"></a>Definire i mapping dei campi 
 
@@ -105,8 +124,5 @@ Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito se
 ## <a name="next-steps"></a>Passaggi successivi
 
 Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md) e [misure](measures.md) ed [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

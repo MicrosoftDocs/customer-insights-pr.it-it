@@ -9,12 +9,12 @@ author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 14ebff30d3ec7fc52dca6f86136309a3f454fa27
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9a4cb77bb4c6ef0d88b3f00802f66baab5520a07
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597470"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896424"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integrare i dati Web di Informazioni dettagliate sull'interazione con Audience Insights
 
@@ -46,7 +46,7 @@ Considerazioni sulla creazione di eventi affinati:
     - Signal.Action.Name - indicando i dettagli dell'impegno
     - Signal.User.Id - utilizzato per il mapping con l'ID cliente
     - Signal.View.Uri: utilizzato come indirizzo Web come base per segmenti o misure
-    - Signal.Export.Id - da utilizzare come chiave primaria per gli eventi <!-- system generated, do we need to list?-->
+    - Signal.Export.Id - da utilizzare come chiave primaria per gli eventi
     - Signal.Timestamp - per determinare la data e l'ora dell'impegno
 
 Seleziona i filtri per concentrarti sugli eventi e sulle pagine importanti per il tuo caso d'uso. In questo esempio, utilizzeremo il nome di azione "Promozione tramite e-mail".

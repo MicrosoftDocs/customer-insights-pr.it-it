@@ -1,7 +1,7 @@
 ---
 title: Esportare i dati di Customer Insights in Adobe Experience Platform
 description: Scopri come utilizzare i segmenti di informazioni dettagliate gruppo di destinatari in Adobe Experience Platform.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596274"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760106"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Utilizzare i segmenti di Customer Insights in Adobe Experience Platform (anteprima)
 
@@ -51,21 +51,36 @@ L'e-mail di offerta che desideri inviare conterrà nome, cognome e la data di fi
 
 Una volta identificato il nostro gruppo di destinatari di destinazione, possiamo configurare l'esportazione dalle informazioni dettagliate gruppo di destinatari a un account di archiviazione BLOB di Azure.
 
-1. In Audience Insights, vai a **Amministratore** > **Destinazioni di esportazione**.
+### <a name="configure-a-connection"></a>Configurare una connessione
 
-1. Nel riquadro **Archiviazione BLOB di Azure**, seleziona **Configura**.
+1. Vai ad **Amministratore** > **Connessioni**.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Riquadro di configurazione per Archiviazione BLOB di Azure.":::
+1. Seleziona **Aggiungi connessione** e scegli **Archiviazione BLOB di Azure** oppure seleziona **Imposta** nel riquadro **Archiviazione BLOB di Azure**:
 
-1. Fornisci un **nome visualizzato** per questa nuova destinazione di esportazione, quindi inserisci **Nome utente**, **Chiave account** e **Contenitore** dell'account di archiviazione BLOB di Azure in cui vuoi esportare il segmento.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Riquadro di configurazione per Archiviazione BLOB di Azure."::: per configurare la connessione.
+
+1. Assegna alla tua connessione un nome riconoscibile nel campo **Nome visualizzato**. Il nome e il tipo di connessione descrivono la connessione. Consigliamo di scegliere un nome che spieghi lo scopo e l'obiettivo della connessione.
+
+1. Scegli chi può utilizzare questa connessione. Se non esegui alcuna azione, l'impostazione predefinita sarà Amministratori. Per ulteriori informazioni, vedi [Consentire ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Immetti **Nome utente**, **Chiave account**, e **Contenitore** per l'account di archiviazione BLOB in cui vuoi esportare il segmento.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Screenshot della configurazione dell'account di archiviazione. "::: 
+   
+    - Per altre informazioni su come trovare il nome dell'account di archiviazione BLOB e sulla chiave dell'account, vedi [Gestire le impostazioni dell'account di archiviazione nel portale di Azure](/azure/storage/common/storage-account-manage).
+    - Per informazioni su come creare un contenitore, vedi [Creare un contenitore](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Per altre informazioni su come trovare il nome dell'account dell'archivio BLOB di Azure e la chiave dell'account, vedi [Gestire le impostazioni dell'account di archiviazione nel portale di Azure](/azure/storage/common/storage-account-manage).
+1. Seleziona **Salva** per completare la connessione. 
 
-   - Per informazioni su come creare un contenitore, vedi [Creare un contenitore](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Configurare un'esportazione
 
-1. Seleziona **Avanti**.
+Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per ulteriori informazioni, vedi [Autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
+
+1. Vai a **Dati** > **Esportazioni**.
+
+1. Per creare una nuova esportazione seleziona **Aggiungi esportazione**.
+
+1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Archiviazione BLOB di Azure. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
 
 1. Scegli il segmento che vuoi esportare. In questo esempio, è **ChurnProneCustomers**.
 
@@ -73,11 +88,9 @@ Una volta identificato il nostro gruppo di destinatari di destinazione, possiamo
 
 1. Seleziona **Salva**.
 
-Dopo aver salvato la destinazione di esportazione, la trovi in **Amministratore** > **Esportazioni** > **Destinazioni di esportazione personali**.
+Dopo aver salvato la destinazione di esportazione, la trovi in **Dati** > **Esportazioni**.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Screenshot con l'elenco delle esportazioni e il segmento di esempio evidenziato.":::
-
-Ora puoi [esportare il segmento su richiesta](export-destinations.md#export-data-on-demand). L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md).
+Ora puoi [esportare il segmento su richiesta](export-destinations.md#run-exports-on-demand). L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md).
 
 > [!NOTE]
 > Assicurati che il numero di record nel segmento esportato rientri nel limite consentito dalla licenza di Adobe Campaign Standard.

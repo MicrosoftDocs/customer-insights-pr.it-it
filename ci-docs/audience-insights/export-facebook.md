@@ -1,7 +1,7 @@
 ---
 title: Esportare dati di Customer Insights in Gestione inserzioni di Facebook
-description: Scopri come configurare la connessione a Gestione inserzioni di Facebook.
-ms.date: 06/05/2020
+description: Scopri come configurare la connessione ed esportare in Facebook Ads Manager.
+ms.date: 04/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,64 +9,83 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3e2b52fe743563e4bf61d870cbf1718e6c752a67
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ca32906a98bc734639fb369d6f5a92e8888fd850
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596688"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906815"
 ---
-# <a name="connector-for-facebook-ads-manager-preview"></a>Connettore per Gestione inserzioni di Facebook (anteprima)
+# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Esportare l'elenco di segmenti in Facebook Ads Manager (anteprima)
 
 Esporta segmenti di profili cliente unificati in Gestione inserzioni di Facebook per creare campagne in Facebook e Instagram.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites-for-connection"></a>Prerequisiti per la connessione
 
-- Devi avere un [account inserzionista **Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) che include un [account **Facebook Business**](https://business.facebook.com/).
+- Devi disporre di un [account per annunci **Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) che includa un [account aziendale di **Facebook**](https://business.facebook.com/).
 - Devi essere un amministratore nell'[account inserzionista **Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
-## <a name="connect-to-facebook-ads-manager"></a>Connessione a Gestione inserzioni di Facebook
+## <a name="known-limitations"></a>Limitazioni note
 
-1. Passa a **Amministratore** > **Destinazioni di esportazione**.
+- Fino a 10 milioni di profili cliente per esportazione in Facebook Ads Manager.
+- L'esportazione in Facebook Ads Manager è limitata ai segmenti.
+- Crea o aggiorna segmenti di gruppi di destinatari personalizzati in Facebook solo di tipo *elenco clienti*.
+- L'esportazione di segmenti con un totale di 10 milione di profili può richiedere fino a 90 minuti.
 
-1. In **Gestione inserzioni di Facebook**, seleziona **Configura**.
+## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurare la connessione a Facebook Ads Manager
 
-1. Assegna alla tua destinazione di esportazione un nome riconoscibile nel campo **Nome visualizzato**.
+Prima che gli utenti possano creare un'esportazione, un amministratore deve configurare la connessione al servizio e consentire ai collaboratori di utilizzare la connessione.
 
-1. Seleziona **Continua con Facebook** per accedere al tuo account inserzionista Facebook.
+1. Vai ad **Amministratore** > **Connessioni**.
 
-1. Consenti l'autorizzazione **ads_management** dopo l'autenticazione con Facebook.
+1. Seleziona **Aggiungi connessione** e scegli **Facebook Ads Manager** per configurare la connessione.
 
-1. Seleziona l'**account inserzionista Facebook** che vuoi utilizzare.
+1. Assegna alla tua connessione un nome riconoscibile nel campo **Nome visualizzato**. Il nome e il tipo di connessione descrivono la connessione. Consigliamo di scegliere un nome che spieghi lo scopo e l'obiettivo della connessione.
 
-1. Seleziona i **destinatari personalizzati esistenti** dall'elenco a discesa o crea **nuovi destinatari personalizzati**. Per ulteriori informazioni, vedi [**Destinatari in Gestione inserzioni di Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+1. Scegli chi può utilizzare questa connessione. Se non esegui alcuna azione, l'impostazione predefinita sarà **Amministratori**. Per ulteriori informazioni, vedi [Consentire ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Seleziona **Accetto** per confermare **Conformità e privacy dei dati**.
+1. Esegui l'autenticazione con Facebook Ads: 
 
-1. Seleziona **Avanti** per configurare l'esportazione.
+   1. Seleziona **Continua con Facebook** per accedere al tuo account inserzionista Facebook.
 
-## <a name="configure-the-connector"></a>Configurare il connettore
+   1. Consenti l'autorizzazione **ads_management** dopo l'autenticazione con Facebook.
 
-1. Nel **campo Scegli identificatore chiave**, seleziona **E-mail**, **Nome e indirizzo** o **Telefono** per inviare a Gestione inserzioni di Facebook.
+   1. Seleziona l'**account inserzionista Facebook** che vuoi utilizzare.
+
+   1. Seleziona i **destinatari personalizzati esistenti** dall'elenco a discesa o crea **nuovi destinatari personalizzati**. Per ulteriori informazioni, vedi [**Destinatari in Gestione inserzioni di Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+      > [!NOTE]
+      > Puoi creare o aggiornare segmenti di pubblico personalizzati solo su Facebook del tipo *elenco clienti* con questa esportazione. In alcuni casi, nell'elenco a discesa vengono visualizzati segmenti di pubblico personalizzati di diversi tipi. La selezione di un tipo diverso da *elenco clienti* comporterà un'esportazione non riuscita. 
+
+1. Rivedi **Privacy e conformità dei dati** e seleziona **Accetto**.
+
+1. Seleziona **Salva** per completare la connessione.
+
+## <a name="configure-an-export"></a>Configurare un'esportazione
+
+Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per ulteriori informazioni, vedi [Autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
+
+1. Vai a **Dati** > **Esportazioni**.
+
+1. Per creare una nuova esportazione seleziona **Aggiungi destinazione**. 
+
+1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione **Facebook Ads Manager**. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
+
+1. Nel **campo Scegli identificatore chiave**, seleziona **E-mail**, **Nome e indirizzo** o **Telefono** per inviare a Gestione inserzioni di Facebook. 
+
+1. Assegna alla tua connessione un nome riconoscibile nel campo **Nome visualizzato**.
 
 1. Mappa gli attributi corrispondenti dall'entità cliente unificata per l'identificatore chiave selezionato.
    > [SUGGERIMENTO] Le migliori possibilità di corrispondenza si hanno se selezioni **E-mail** come identificatore chiave. L'aggiunta di identificatori aggiuntivi può migliorare la corrispondenza.
 
-1. Seleziona **Aggiungi attributo** per mappare ulteriori attributi da inviare a Gestione inserzioni di Facebook. Gli attributi di Gestione inserzioni di Facebook sono mapping ai seguenti nomi descrittivi per l'utente: **FN** = **First Name**, **LN** = **Last Name**, **FI** = **First Initial**, **PHONE** = **Phone**, **GEN** = **Gender**, **DOB** = **Date of birth**, **ST** = **State**, **CT** = **City**, **ZIP** = **Postal code / Zip code**, **COUNTRY** = **Country / Region**
+1. Seleziona **Aggiungi attributo** per mappare più attributi da inviare a Facebook Ads Manager. Gli attributi di Gestione inserzioni di Facebook sono mapping ai seguenti nomi descrittivi per l'utente: **FN** = **Nome**, **LN** = **Cognome**, **FI** = **Iniziali**, **PHONE** = **Telefono**, **GEN** = **Sesso**, **DOB** = **Data di nascita**, **ST** = **Stato**, **CT** = **Città**, **ZIP** = **Codice postale**, **COUNTRY** = **Paese/Area geografica**
 
 1. Seleziona i segmenti da esportare.
 
 1. Seleziona **Salva**.
 
-## <a name="export-the-data"></a>Esportare i dati
+Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.
 
-Puoi [esportare dati su richiesta](export-destinations.md). L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md#schedule-tab).
-
-## <a name="known-limitations"></a>Limitazioni note
-
-- Fino a 10 milioni di profili cliente per esportazione in Facebook Ads Manager 
-- L'esportazione in Facebook Ads Manager è limitata ai segmenti.
-- L'esportazione di segmenti con un totale di 10 milione di profili può richiedere fino a 90 minuti.
+L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 

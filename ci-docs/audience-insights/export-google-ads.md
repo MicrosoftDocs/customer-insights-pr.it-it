@@ -1,67 +1,35 @@
 ---
 title: Esportare dati di Customer Insights in Google Ads
-description: Scopri come configurare la connessione a Google Ads.
-ms.date: 11/18/2020
-ms.reviewer: mhart
+description: Scopri come configurare la connessione ed esportare in Google Ads.
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6d9a25af3913e755cccec745c532b35aef3cccf9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f4c094e486577d00d8c0c64e8527829820b335f6
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598252"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759698"
 ---
-# <a name="connector-for-google-ads-preview"></a>Connettore per Google Ads (anteprima)
+# <a name="export-segments-to-google-ads-preview"></a>Esportare segmenti in Google Ads (anteprima)
 
 Esporta segmenti di profili cliente unificati nell'elenco destinatari di Google Ads e utilizzali per fare pubblicità su Google Search, Gmail, YouTube e Rete Display di Google. 
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites-for-connection"></a>Prerequisiti per la connessione
 
 -   Devi disporre di un [account Google Ads](https://ads.google.com/) e delle credenziali di amministratore corrispondenti.
+-   Hai un [token per sviluppatori Google Ads approvato](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
+-   Soddisfi i requisiti dei [criteri di corrispondenza dei clienti](https://support.google.com/adspolicy/answer/6299717)
+-   Soddisfi i requisiti delle [dimensioni degli elenchi per il remarketing](https://support.google.com/google-ads/answer/7558048) 
+
 -   In Google Ads sono presenti destinatari e ID corrispondenti. Per ulteriori informazioni, vedi [Destinatari Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
 -   Disponi di [segmenti configurati](segments.md)
 -   I profili cliente unificati nei segmenti esportati contengono campi che rappresentano un indirizzo e-mail, un nome e un cognome
-
-## <a name="connect-to-google-ads"></a>Connettiti a Google Ads
-
-1. Passa a **Amministratore** > **Destinazioni di esportazione**.
-
-1. Sotto **Google Ads**, seleziona **Configura**.
-
-1. Assegna alla tua destinazione di esportazione un nome riconoscibile nel campo **Nome visualizzato**.
-
-1. Immetti l'**[ID cliente Google Ads](https://support.google.com/google-ads/answer/1704344)**.
-
-1. Immetti il **[Token per sviluppatori di Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
-
-1. Seleziona **Accetto** per confermare **Conformità e privacy dei dati**.
-
-1. Immetti l'**[ID destinatario Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** e seleziona **Connetti** per inizializzare la connessione a Google Ads.
-
-1. Seleziona **Esegui autenticazione con Google Ads** e fornisci le tue credenziali Google Ads.
-
-1. Seleziona **Aggiungi te stesso come utente dell'esportazione** e fornisci le tue credenziali di Customer Insights.
-
-   :::image type="content" source="media/export-segments-googleads.PNG" alt-text="Screenshot di esportazione per la connessione a Google Ads":::
-
-1. Seleziona **Avanti** per configurare l'esportazione.
-
-## <a name="configure-the-connector"></a>Configurare il connettore
-
-1. Nella sezione **Corrispondenza dati** nel campo **E-mail**, seleziona il campo nel tuo profilo cliente unificato che rappresenta l'indirizzo e-mail di un cliente. Ripeti gli stessi passaggi per i campi **Nome** e **Cognome**.
-
-1. Seleziona i segmenti da esportare. Puoi esportare in totale fino a 1 milione di profili cliente in Google Ads.
-
-1. Seleziona **Salva**.
-
-## <a name="export-the-data"></a>Esportare i dati
-
-Puoi [esportare dati su richiesta](export-destinations.md). L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md#schedule-tab). I tuoi segmenti sono ora visualizzati sotto [Destinatari Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en/) in Google Ads.
 
 ## <a name="known-limitations"></a>Limitazioni note
 
@@ -69,6 +37,48 @@ Puoi [esportare dati su richiesta](export-destinations.md). L'esportazione verr�
 - L'esportazione in Google Ads è limitata ai segmenti.
 - L'esportazione di segmenti con un totale di 1 milione di profili può richiedere fino a 5 minuti a causa delle limitazioni sul lato provider. 
 - La corrispondenza in Google Ads può richiedere fino a 48 ore.
+
+## <a name="set-up-connection-to-google-ads"></a>Configurare la connessione a Google Ads
+
+1. Vai ad **Amministratore** > **Connessioni**.
+
+1. Seleziona **Aggiungi connessione** e scegli **Google Ads** per configurare la connessione.
+
+1. Assegna alla tua connessione un nome riconoscibile nel campo **Nome visualizzato**. Il nome e il tipo di connessione descrivono la connessione. Consigliamo di scegliere un nome che spieghi lo scopo e l'obiettivo della connessione.
+
+1. Scegli chi può utilizzare questa connessione. Se non esegui alcuna azione, l'impostazione predefinita sarà Amministratori. Per ulteriori informazioni, vedi [Consentire ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Immetti l'**[ID cliente Google Ads](https://support.google.com/google-ads/answer/1704344)**.
+
+1. Immetti il **[Token per sviluppatori di Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
+
+1. Seleziona **Accetto** per confermare **Conformità e privacy dei dati**.
+
+1. Seleziona **Esegui autenticazione con Google Ads** e fornisci le tue credenziali Google Ads.
+
+1. Seleziona **Aggiungi te stesso come utente dell'esportazione** e fornisci le tue credenziali di Customer Insights.
+
+1. Seleziona **Salva** per completare la connessione. 
+
+## <a name="configure-an-export"></a>Configurare un'esportazione
+
+Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per ulteriori informazioni, vedi [Autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
+
+1. Vai a **Dati** > **Esportazioni**.
+
+1. Per creare una nuova esportazione seleziona **Aggiungi destinazione**.
+
+1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Google Ads. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
+
+1. Immetti l'**[ID destinatario Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** e seleziona **Connetti** per inizializzare la connessione a Google Ads.
+
+1. Nella sezione **Corrispondenza dati** nel campo **E-mail**, seleziona il campo nel tuo profilo cliente unificato che rappresenta l'indirizzo e-mail di un cliente. Ripeti gli stessi passaggi per i campi **Nome** e **Cognome**.
+
+1. Seleziona i segmenti da esportare. Puoi esportare in totale fino a 1 milione di profili cliente in Google Ads.
+
+Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.
+
+L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 

@@ -1,7 +1,7 @@
 ---
 title: Esportare dati di Customer Insights in Dynamics 365 Marketing
-description: Informazioni su come configurare la connessione a Dynamics 365 Marketing.
-ms.date: 02/01/2021
+description: Scopri come configurare la connessione ed esportare in Dynamics 365 Marketing.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,35 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 892aff643872f11307a2c43e5670edab657d7848
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a13f6f81f5e2570d3302d88c02755f1d86321a01
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597608"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759642"
 ---
-# <a name="connector-for-dynamics-365-marketing-preview"></a>Connettore per Dynamics 365 Marketing (anteprima)
+# <a name="use-segments-in-dynamics-365-marketing-preview"></a>Utilizzare i segmenti in Dynamics 365 Marketing (anteprima)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Utilizza i [segmenti](segments.md) per generare campagne e contattare gruppi specifici di clienti con Dynamics 365 Marketing. Per ulteriori informazioni, vedere [Utilizzare segmenti da Dynamics 365 Customer Insights con Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
 
-## <a name="prerequisite"></a>Prerequisito
+## <a name="prerequisite-for-a-connection"></a>Prerequisiti per la connessione
 
 - I record dei contatti devono essere presenti in Dynamics 365 Marketing prima di poter esportare un segmento da Customer Insights a Marketing. Ulteriori informazioni su come inserire i contatti in [Dynamics 365 Marketing utilizzando Common Data Services](connect-power-query.md).
 
   > [!NOTE]
   > L'esportazione di segmenti da Audience Insights a Marketing non creerà nuovi record dei contatti nelle istanze di Marketing. I record dei contatti di Marketing devono essere inseriti in Audience Insights e utilizzati come origine dati. Devono inoltre essere inclusi nell'entità Cliente unificata per mappare gli ID cliente agli ID contatto prima che i segmenti possano essere esportati.
 
-## <a name="configure-the-connector-for-marketing"></a>Configurare il connettore per Marketing
+## <a name="set-up-connection-to-marketing"></a>Configurare la connessione a Marketing
 
-1. In Audience Insights, vai a **Amministratore** > **Destinazioni di esportazione**.
+1. Vai ad **Amministratore** > **Connessioni**.
 
-1. In **Dynamics 365 Marketing**, seleziona **Configura**.
+1. Seleziona **Aggiungi connessione** e scegli **Dynamics 365 Marketing** per configurare la connessione.
 
-1. Assegna alla tua destinazione di esportazione un nome riconoscibile nel campo **Nome visualizzato**.
+1. Assegna alla tua connessione un nome riconoscibile nel campo **Nome visualizzato**. Il nome e il tipo di connessione descrivono la connessione. Consigliamo di scegliere un nome che spieghi lo scopo e l'obiettivo della connessione.
+
+1. Scegli chi può utilizzare questa connessione. Se non esegui alcuna azione, l'impostazione predefinita sarà Amministratori. Per ulteriori informazioni, vedi [Consentire ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Inserisci l'URL di Marketing della tua organizzazione nel campo **Indirizzo server**.
 
@@ -43,15 +45,24 @@ Utilizza i [segmenti](segments.md) per generare campagne e contattare gruppi spe
 
 1. Esegui il mapping di un campo ID cliente all'ID contatto di Dynamics 365.
 
-1. Seleziona **Avanti**.
+1. Seleziona **Salva** per completare la connessione. 
+
+## <a name="configure-an-export"></a>Configurare un'esportazione
+
+Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per ulteriori informazioni, vedi [Autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
+
+1. Vai a **Dati** > **Esportazioni**.
+
+1. Per creare una nuova esportazione seleziona **Aggiungi destinazione**.
+
+1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Dynamics 365 Marketing. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
 
 1. Scegli uno o più segmenti.
 
 1. Seleziona **Salva**.
 
-## <a name="export-the-data"></a>Esportare i dati
+Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.
 
-Puoi [esportare dati su richiesta](export-destinations.md). L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md#schedule-tab).
-
+L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand). 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Esportare dati di Customer Insights in host SFTP
-description: Scopri come configurare la connessione a un host SFTP.
-ms.date: 01/27/2021
+description: Scopri come configurare la connessione ed esportare in una posizione SFTP.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,61 +9,70 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9ec14fafa8f99e34b95349371298082e166535d0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96c6026aded315008439740646827ca910cead90
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598390"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760424"
 ---
-# <a name="connector-for-sftp-preview"></a>Connettore per SFTP (anteprima)
+# <a name="export-segment-lists-and-other-data-to-sftp-preview"></a>Esportare elenchi di segmenti e altri dati su SFTP (anteprima)
 
-Utilizza i tuoi dati cliente in applicazioni di terze parti esportandoli in un host SFTP (Secure File Transfer Protocol).
+Utilizza i dati dei tuoi clienti in applicazioni di terze parti esportandoli in una posizione SFTP (Secure File Transfer Protocol).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites-for-connection"></a>Prerequisiti per la connessione
 
 - Disponibilità di un host FTP sicuro e credenziali corrispondenti.
-
-## <a name="connect-to-sftp"></a>Connetti a SFTP
-
-1. Passa a **Amministratore** > **Destinazioni di esportazione**.
-
-1. In **SFTP**, seleziona **Configura**.
-
-1. Assegna alla tua destinazione un nome riconoscibile nel campo **Nome visualizzato**.
-
-1. Fornisci un **Nome utente**, una **Password** e un **Nome host** e una **Cartella di esportazione** per il tuo account FTP sicuro.
-
-1. Seleziona **Verifica** per testare la connessione.
-
-1. Dopo aver verificato con successo, scegli se desideri esportare i tuoi dati in formato **Compresso** o **Decompresso** e seleziona il **delimitatore di campo** per i file esportati.
-
-1. Seleziona **Accetto** per confermare **Conformità e privacy dei dati**.
-
-1. Seleziona **Avanti** per iniziare a configurare l'esportazione.
-
-## <a name="configure-the-export"></a>Configurare l'esportazione
-
-1. Seleziona le entità, ad esempio i segmenti, che vuoi esportare.
-
-   > [!NOTE]
-   > Ogni entità selezionata sarà fino a cinque file di output quando esportata. 
-
-1. Seleziona **Salva**.
-
-## <a name="export-the-data"></a>Esportare i dati
-
-Puoi [esportare dati su richiesta](export-destinations.md). L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md#schedule-tab).
 
 ## <a name="known-limitations"></a>Limitazioni note
 
 - Il tempo di esecuzione di un'esportazione dipende dalle prestazioni del sistema. Consigliamo due core CPU e 1 GB di memoria come configurazione minima del server. 
 - L'esportazione di entità con un massimo di 100 milioni di profili cliente può richiedere 90 minuti se si utilizza la configurazione minima consigliata di due core CPU e 1 GB di memoria. 
 
+## <a name="set-up-connection-to-sftp"></a>Configurare la connessione a SFTP
+
+1. Vai ad **Amministratore** > **Connessioni**.
+
+1. Seleziona **Aggiungi connessione** e scegli **SFTP** per configurare la connessione.
+
+1. Assegna alla tua connessione un nome riconoscibile nel campo **Nome visualizzato**. Il nome e il tipo di connessione descrivono la connessione. Consigliamo di scegliere un nome che spieghi lo scopo e l'obiettivo della connessione.
+
+1. Scegli chi può utilizzare questa connessione. Se non esegui alcuna azione, l'impostazione predefinita sarà Amministratori. Per ulteriori informazioni, vedi [Consentire ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Fornisci un **Nome utente**, una **Password** e un **Nome host** e una **Cartella di esportazione** per il tuo account FTP sicuro.
+
+1. Seleziona **Verifica** per testare la connessione.
+
+1. Scegli se desideri esportare i tuoi dati **Compresso** o **Decompresso** e il **delimitatore di campo** per i file esportati.
+
+1. Seleziona **Accetto** per confermare **Conformità e privacy dei dati**.
+
+1. Seleziona **Salva** per completare la connessione.
+
+## <a name="configure-an-export"></a>Configurare un'esportazione
+
+Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per ulteriori informazioni, vedi [Autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
+
+1. Vai a **Dati** > **Esportazioni**.
+
+1. Per creare una nuova esportazione seleziona **Aggiungi destinazione**.
+
+1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione SFTP. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
+
+1. Seleziona le entità, ad esempio i segmenti, che vuoi esportare.
+
+   > [!NOTE]
+   > Ogni entità selezionata verrà suddivisa in un massimo di cinque file di output quando esportata. 
+
+1. Seleziona **Salva**.
+
+Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.
+
+L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand). 
+
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 
 Quando abiliti Dynamics 365 Customer Insights per trasmettere dati via SFTP, autorizzi il trasferimento di dati al di fuori dei limiti di conformità di Dynamics 365 Customer Insights, inclusi dati potenzialmente sensibili come i dati personali. Microsoft trasferirà tali dati secondo le tue istruzioni, ma devi assicurarti che la destinazione di esportazione rispetti gli obblighi di privacy o sicurezza che ti incombono. Per ulteriori informazioni, vedi [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'amministratore di Dynamics 365 Customer Insights può rimuovere questa destinazione di esportazione in qualsiasi momento per interrompere l'utilizzo di questa funzionalità.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

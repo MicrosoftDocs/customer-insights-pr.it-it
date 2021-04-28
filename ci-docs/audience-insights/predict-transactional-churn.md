@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597194"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906861"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Previsione di abbandono transazionale (anteprima)
 
@@ -46,6 +46,14 @@ La previsione di abbandono transazionale ti consente di prevedere se un cliente 
         - **Timestamp:** la data e l'ora dell'evento identificato dalla chiave primaria.
         - **Evento:** il nome dell'evento che si desidera utilizzare. Ad esempio, un campo denominato "UserAction" in un negozio di alimentari potrebbe essere un coupon utilizzato dal cliente.
         - **Dettagli:** informazioni dettagliate sull'evento. Ad esempio, un campo denominato "CouponValue" in un negozio di alimentari potrebbe essere il valore monetario del coupon.
+- Caratteristiche dei dati consigliate:
+    - Dati storici sufficienti: dati di transazione per almeno il doppio della finestra temporale selezionata. Preferibilmente, da due a tre anni di dati dell'abbonamento. 
+    - Acquisti multipli per cliente: idealmente almeno due transazioni per cliente.
+    - Numero di clienti: almeno 10 profili cliente, preferibilmente più di 1.000 clienti univoci. Il modello non riesce con meno di 10 clienti e dati storici insufficienti.
+    - Completezza dei dati: meno del 20% dei valori mancanti nel campo dati dell'entità fornita.
+
+> [!NOTE]
+> Per un'azienda con un'elevata frequenza di acquisto da parte dei clienti (ogni poche settimane) si consiglia di selezionare una finestra di previsione e una definizione di abbandono più brevi. Per una bassa frequenza di acquisto (ogni pochi mesi o una volta all'anno), scegli una finestra di previsione e una definizione di abbandono più lunghe.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Creare una previsione di abbandono transazionale
 
@@ -129,7 +137,9 @@ La previsione di abbandono transazionale ti consente di prevedere se un cliente 
 1. Seleziona la previsione da rivedere.
    - **Nome previsione:** il nome del previsione fornito durante la creazione.
    - **Tipo di previsione:** il tipo di modello utilizzato per la previsione
-   - **Entità di output:** nome dell'entità per memorizzare l'output della previsione. Puoi trovare un'entità con questo nome su **Dati** > **Entità**.
+   - **Entità di output:** nome dell'entità per memorizzare l'output della previsione. Puoi trovare un'entità con questo nome su **Dati** > **Entità**.    
+     Nell'entità di output, *ChurnScore* è la probabilità prevista di abbandono e *IsChurn* è un'etichetta binaria basata su *ChurnScore* con soglia di 0,5. La soglia predefinita potrebbe non funzionare per il tuo scenario. [Crea un nuovo segmento](segments.md#create-a-new-segment) con la tua soglia preferita.
+     Non tutti i clienti sono necessariamente clienti attivi. Alcuni di loro potrebbero non aver avuto alcun impegno per molto tempo e sono già considerati come abbandonati, in base alla tua definizione di abbandono. Prevedere il rischio di abbandono per i clienti che hanno già abbandonato non è utile perché non sono i destinatari di interesse.
    - **Campo previsione:** questo campo viene popolato solo per alcuni tipi di previsioni e non viene utilizzato nella previsione di abbandono.
    - **Stato:** lo stato dell'esecuzione della previsione.
         - **In coda:** la previsione attende l'esecuzione di altri processi.

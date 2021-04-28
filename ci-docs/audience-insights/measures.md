@@ -1,7 +1,7 @@
 ---
 title: Creare e gestire misure
 description: Definisci misure per analizzare e riflettere le prestazioni della tua attività.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654737"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887945"
 ---
 # <a name="define-and-manage-measures"></a>Definire e gestire misure
 
-Le misure ti aiutano a comprendere meglio i comportamenti dei clienti e le prestazioni aziendali recuperando i valori pertinenti da [profili unificati](data-unification.md). Ad esempio, un'azienda vuole vedere la *spesa totale per cliente* per comprendere la cronologia degli acquisti del singolo cliente. O misurare le *vendite totali dell'azienda* per comprendere i ricavi a livello aggregato dell'intera azienda.  
+Le misure ti aiutano a comprendere meglio i comportamenti dei clienti e le prestazioni aziendali. Tengono in considerazione i valori rilevanti dei [profili unificati](data-unification.md). Ad esempio, un'azienda vuole vedere la *spesa totale per cliente* per comprendere la cronologia degli acquisti del singolo cliente o misurare le *vendite totali dell'azienda* per comprendere i ricavi a livello di aggregazione dell'intera azienda.  
 
 Le misure vengono create utilizzando il generatore di misure, una piattaforma di query di dati con vari operatori e semplici opzioni di mapping. Ti consente di filtrare i dati, raggruppare i risultati, rilevare [percorsi di relazione tra entità](relationships.md) e visualizzare in anteprima l'output.
 
 Utilizza il generatore di misure per pianificare le attività aziendali eseguendo query sui dati dei clienti ed estrai informazioni dettagliate. Ad esempio, creare una misura di *spesa totale per cliente* e *rendimento totale per cliente* aiuta a identificare un gruppo di clienti con una spesa elevata ma un ritorno elevato. Puoi [creare un segmento](segments.md) per guidare le migliori azioni successive. 
 
-## <a name="create-a-measure"></a>Creare una misura
+## <a name="build-your-own-measure-from-scratch"></a>Creare la misura da zero
 
 Questa sezione illustra come creare una nuova misura da zero. È possibile creare una misura con attributi di dati da entità di dati che hanno una relazione impostata per connettersi con l'entità Cliente. 
 
 1. In Audience Insights, vai a **Misure**.
 
-1. Seleziona **Nuovo**.
+1. Seleziona **Nuovo** e scegli **Crea un valore personalizzato**.
 
 1. Seleziona **Modifica nome** e fornisci un **Nome** per la misura. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Questa sezione illustra come creare una nuova misura da zero. È possibile crear
    1. Seleziona **Modifica dimensioni** per aggiungere gli attributi di dati in base ai quali raggruppare i valori di misura. Ad esempio, città o sesso. Per impostazione predefinita, la dimensione *CustomerID* è selezionata per creare *misure a livello di cliente*. È possibile rimuovere la dimensione predefinita se si desidera creare *misure a livello di azienda*.
    1. Seleziona **Fatto** per aggiungere le dimensioni alla misura.
 
+1. Se sono presenti valori nei dati che è necessario sostituire con un numero intero, ad esempio, sostituisci *nullo* con *0*, seleziona **Regole**. Configura la regola e assicurati di scegliere solo numeri interi come sostituti.
+
 1. Se sono presenti più percorsi tra l'entità di dati mappata e l'entità *Cliente*, è necessario scegliere uno dei [percorsi di relazione tra entità](relationships.md) identificati. I risultati delle misure possono variare a seconda del percorso selezionato. 
    1. Seleziona **Preferenze dati** e scegli il percorso dell'entità da utilizzare per identificare la misura. Se esiste un solo percorso per l'entità *Cliente*, questo controllo non verrà visualizzato.
    1. Seleziona **Fatto** per applicare la selezione. 
@@ -88,9 +90,57 @@ Questa sezione illustra come creare una nuova misura da zero. È possibile crear
 
 1. Vai a **Misure** per vedere la misura appena creata nell'elenco.
 
+## <a name="use-a-template-to-build-a-measure"></a>Usare un modello per costruire una misura
+
+È possibile utilizzare modelli predefiniti di misure di uso comune per crearli. Descrizioni dettagliate dei modelli e un'esperienza guidata ti aiutano a creare misure efficienti. I modelli si basano sui dati mappati dall'entità *Impegno unificato*. Quindi assicurati di aver configurato [impegni del cliente](activities.md) prima di creare una misura da un modello.
+
+Modelli di misura disponibili: 
+- Valore medio transazione
+- Valore transazione totale
+- Ricavi medi giornalieri
+- Ricavi medi annuali
+- Numero di transazioni
+- Punti programma fedeltà ottenuti
+- Punti programma fedeltà riscattati
+- Saldo punti programma fedeltà
+- Durata del cliente attivo
+- Durata iscrizione al programma fedeltà
+- Tempo dall'ultimo acquisto
+
+La procedura seguente descrive i passaggi per creare una nuova misura utilizzando un modello.
+
+1. In Audience Insights, vai a **Misure**.
+
+1. Seleziona **Nuovo** e seleziona **Scegli un modello**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Screenshot del menu a discesa durante la creazione di una nuova misura con evidenziazione sul modello.":::
+
+1. Trova il modello che si adatta alle tue esigenze e seleziona **Scegli modello**.
+
+1. Rivedi i dati richiesti e seleziona **Attività iniziali** se disponi di tutti i dati.
+
+1. Nel riquadro **Modifica nome** imposta il nome per la misura e l'entità di output. 
+
+1. Seleziona **Fatto**.
+
+1. Nella sezione **Imposta periodo di tempo** definisci l'intervallo di tempo dei dati da utilizzare. Scegli se desideri che la nuova misura copra l'intero set di dati selezionando **Sempre**. O se vuoi che la misura si concentri su un **Periodo di tempo specifico**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Screenshot che mostra la sezione del periodo di tempo durante la configurazione di una misura da un modello.":::
+
+1. Nella sezione successiva, seleziona **Aggiungi dati** per scegliere gli impegni e mappare i dati corrispondenti dalla entità *Impegno unificato*.
+
+    1. Passaggio 1 di 2: sotto **Tipo di impegno**, scegli il tipo di entità che desideri utilizzare. Per **Impegni**, seleziona le entità che desideri mappare.
+    1. Passaggio 2 di 2: scegli l'attributo dall'entità *Impegno unificato* per il componente richiesto dalla formula. Ad esempio, per valore medio della transazione, è l'attributo che rappresenta il valore della transazione. Per **Timestamp impegno**, scegli l'attributo dall'entità Impegno unificato che rappresenta la data e l'ora dell'impegno.
+   
+1. Una volta completata la mappatura dei dati, puoi vedere lo stato come **Completato** e il nome degli impegni e degli attributi mappati.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Screenshot di una configurazione del modello di misura completata.":::
+
+1. Ora puoi selezionare **Esegui** per calcolare i risultati della misura. Per perfezionarlo in un secondo momento, seleziona **Salva bozza**.
+
 ## <a name="manage-your-measures"></a>Gestire le misure
 
-Dopo aver [creato una misura](#create-a-measure), vedrai un elenco di misure nella pagina **Misure**.
+Puoi trovare l'elenco delle misure nella pagina **Misure**.
 
 Troverai informazioni sul tipo di misura, l'autore, la data di creazione e lo stato. Quando si seleziona una misura dall'elenco, è possibile visualizzare in anteprima l'output e scaricare un file .CSV.
 

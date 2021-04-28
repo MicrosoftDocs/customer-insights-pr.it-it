@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
-ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
+ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
+ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "5710465"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "5873667"
 ---
 # <a name="work-with-customer-insights-apis"></a>Utilizzare le API di Customer Insights
 
@@ -78,7 +78,7 @@ Puoi utilizzare l'ID applicazione/client per questa registrazione con la libreri
 
 :::image type="content" source="media/grant-admin-consent.gif" alt-text="GIF animata per concedere il consenso dell'amministratore.":::
 
-Per ulteriori informazioni sulla libreria MSAL, vedi [Panoramica della libreria MSAL](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
+Per ulteriori informazioni sulla libreria MSAL, vedi [Panoramica della libreria MSAL](/azure/active-directory/develop/msal-overview).
 
 Per altre informazioni sulla registrazione di app in Azure, vedi [La nuova esperienza di registrazione di app nel portale di Azure](/azure/active-directory/develop/app-registration-portal-training-guide).
 

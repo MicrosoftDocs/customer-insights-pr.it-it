@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 737c593353878a5e322488d00de5dc5db5befda9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597838"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896516"
 ---
 # <a name="merge-entities"></a>Gestire entità
 
@@ -83,7 +83,7 @@ Se non era la prima volta che hai eseguito correttamente un'unione, tutti i proc
 
 ## <a name="next-step"></a>Passaggio successivo
 
-Configura [Impegni](activities.md), [Arricchimento](enrichment-microsoft-graph.md) o [Relazioni](relationships.md) per ulteriori informazioni dettagliate sui clienti.
+Configura [Impegni](activities.md), [Arricchimento](enrichment-hub.md) o [Relazioni](relationships.md) per ulteriori informazioni dettagliate sui clienti.
 
 Se hai già configurato gli impegni, l'arricchimento o le relazioni o se hai definito segmenti, questi verranno elaborati automaticamente per utilizzare i dati cliente più recenti.
 
