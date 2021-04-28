@@ -1,7 +1,7 @@
 ---
 title: Esportare dati di Customer Insights in Mailchimp
-description: Scopri come configurare la connessione a Mailchimp.
-ms.date: 10/26/2020
+description: Scopri come configurare la connessione ed esportare in Mailchimp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,71 +9,78 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9f86616731c3cc3d26370727103ea9c5d4288c8d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b94a8e8b6bb867ca04a64007d592b22fbd700618
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598206"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759883"
 ---
-# <a name="connector-for-mailchimp-preview"></a><span data-ttu-id="d05cf-103">Connettore per Mailchimp (anteprima)</span><span class="sxs-lookup"><span data-stu-id="d05cf-103">Connector for Mailchimp (preview)</span></span>
+# <a name="export-segment-lists-to-mailchimp-preview"></a><span data-ttu-id="c033b-103">Esportare elenchi di segmenti in Mailchimp (anteprima)</span><span class="sxs-lookup"><span data-stu-id="c033b-103">Export segment lists to Mailchimp (preview)</span></span>
 
-<span data-ttu-id="d05cf-104">Esporta segmenti di profili cliente unificati in Mailchimp per creare newsletters e campagne tramite messaggi e-mail.</span><span class="sxs-lookup"><span data-stu-id="d05cf-104">Export segments of unified customer profiles to Mailchimp to create newsletters and email campaigns.</span></span>
+<span data-ttu-id="c033b-104">Esporta segmenti di profili cliente unificati in Mailchimp per creare newsletters e campagne tramite messaggi e-mail.</span><span class="sxs-lookup"><span data-stu-id="c033b-104">Export segments of unified customer profiles to Mailchimp to create newsletters and email campaigns.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="d05cf-105">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="d05cf-105">Prerequisites</span></span>
+## <a name="prerequisites-for-connection"></a><span data-ttu-id="c033b-105">Prerequisiti per la connessione</span><span class="sxs-lookup"><span data-stu-id="c033b-105">Prerequisites for connection</span></span>
 
--   <span data-ttu-id="d05cf-106">Devi disporre di un [account Mailchimp](https://mailchimp.com/) e delle credenziali di amministratore corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="d05cf-106">You have a [Mailchimp account](https://mailchimp.com/) and corresponding administrator credentials.</span></span>
--   <span data-ttu-id="d05cf-107">In Mailchimp sono presenti destinatari e ID corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="d05cf-107">There are existing audiences in Mailchimp and the corresponding IDs.</span></span> <span data-ttu-id="d05cf-108">Per ulteriori informazioni, vedi [Destinatari Mailchimp](https://mailchimp.com/help/create-audience/).</span><span class="sxs-lookup"><span data-stu-id="d05cf-108">For more information, see [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
--   <span data-ttu-id="d05cf-109">Disponi di [segmenti configurati](segments.md)</span><span class="sxs-lookup"><span data-stu-id="d05cf-109">You have [configured segments](segments.md)</span></span>
--   <span data-ttu-id="d05cf-110">I profili cliente unificati nei segmenti esportati contengono un campo che rappresenta un indirizzo e-mail.</span><span class="sxs-lookup"><span data-stu-id="d05cf-110">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
+-   <span data-ttu-id="c033b-106">Devi disporre di un [account Mailchimp](https://mailchimp.com/) e delle credenziali di amministratore corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="c033b-106">You have a [Mailchimp account](https://mailchimp.com/) and corresponding administrator credentials.</span></span>
+-   <span data-ttu-id="c033b-107">In Mailchimp sono presenti destinatari e ID corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="c033b-107">There are existing audiences in Mailchimp and the corresponding IDs.</span></span> <span data-ttu-id="c033b-108">Per ulteriori informazioni, vedi [Destinatari Mailchimp](https://mailchimp.com/help/create-audience/).</span><span class="sxs-lookup"><span data-stu-id="c033b-108">For more information, see [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
+-   <span data-ttu-id="c033b-109">Disponi di [segmenti configurati](segments.md)</span><span class="sxs-lookup"><span data-stu-id="c033b-109">You have [configured segments](segments.md)</span></span>
+-   <span data-ttu-id="c033b-110">I profili cliente unificati nei segmenti esportati contengono un campo che rappresenta un indirizzo e-mail.</span><span class="sxs-lookup"><span data-stu-id="c033b-110">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
 
-## <a name="connect-to-mailchimp"></a><span data-ttu-id="d05cf-111">Connettiti a MailChimp</span><span class="sxs-lookup"><span data-stu-id="d05cf-111">Connect to Mailchimp</span></span>
+## <a name="known-limitations"></a><span data-ttu-id="c033b-111">Limitazioni note</span><span class="sxs-lookup"><span data-stu-id="c033b-111">Known limitations</span></span>
 
-1. <span data-ttu-id="d05cf-112">Passa a **Amministratore** > **Destinazioni di esportazione**.</span><span class="sxs-lookup"><span data-stu-id="d05cf-112">Go to **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="c033b-112">Fino a 1 milione di profili per esportazione in Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="c033b-112">Up to 1 million profiles per export to Mailchimp.</span></span>
+- <span data-ttu-id="c033b-113">L'esportazione in Mailchimp è limitata ai segmenti.</span><span class="sxs-lookup"><span data-stu-id="c033b-113">Exporting to Mailchimp is limited to segments.</span></span>
+- <span data-ttu-id="c033b-114">L'esportazione di segmenti con 1 milione di profili può richiedere fino a tre ore.</span><span class="sxs-lookup"><span data-stu-id="c033b-114">Exporting segments with 1 million profiles can take up to three hours.</span></span> 
+- <span data-ttu-id="c033b-115">Il numero di profili che puoi esportare in Mailchimp dipende ed è limitato dal tuo contratto con Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="c033b-115">The number of profiles that you can export to Mailchimp is dependent and limited on your contract with Mailchimp.</span></span>
 
-1. <span data-ttu-id="d05cf-113">Sotto **Mailchimp**, seleziona **Configura**.</span><span class="sxs-lookup"><span data-stu-id="d05cf-113">Under **Mailchimp**, select **Set up**.</span></span>
+## <a name="set-up-connection-to-mailchimp"></a><span data-ttu-id="c033b-116">Configurare la connessione a Mailchimp</span><span class="sxs-lookup"><span data-stu-id="c033b-116">Set up connection to Mailchimp</span></span>
 
-1. <span data-ttu-id="d05cf-114">Assegna alla tua destinazione di esportazione un nome riconoscibile nel campo **Nome visualizzato**.</span><span class="sxs-lookup"><span data-stu-id="d05cf-114">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="c033b-117">Vai ad **Amministratore** > **Connessioni**.</span><span class="sxs-lookup"><span data-stu-id="c033b-117">Go to **Admin** > **Connections**.</span></span>
 
-1. <span data-ttu-id="d05cf-115">Seleziona **Accetto** per confermare **Conformità e privacy dei dati**.</span><span class="sxs-lookup"><span data-stu-id="d05cf-115">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+1. <span data-ttu-id="c033b-118">Seleziona **Aggiungi connessione** e scegli **Autopilot** per configurare la connessione.</span><span class="sxs-lookup"><span data-stu-id="c033b-118">Select **Add connection** and choose **Autopilot** to configure the connection.</span></span>
 
-1. <span data-ttu-id="d05cf-116">Immetti l'**[ID destinatario Mailchimp](https://mailchimp.com/help/find-audience-id/)** e seleziona **Connetti** per inizializzare la connessione a Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="d05cf-116">Enter your **[Mailchimp audience ID](https://mailchimp.com/help/find-audience-id/)** and select **Connect** to initialize the connection to Mailchimp.</span></span>
+1. <span data-ttu-id="c033b-119">Assegna alla tua connessione un nome riconoscibile nel campo **Nome visualizzato**.</span><span class="sxs-lookup"><span data-stu-id="c033b-119">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="c033b-120">Il nome e il tipo di connessione descrivono la connessione.</span><span class="sxs-lookup"><span data-stu-id="c033b-120">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="c033b-121">Consigliamo di scegliere un nome che spieghi lo scopo e l'obiettivo della connessione.</span><span class="sxs-lookup"><span data-stu-id="c033b-121">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="d05cf-117">Seleziona **Esegui autenticazione con MailChimp** e fornisci le tue credenziali Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="d05cf-117">Select **Authenticate with Mailchimp** and provide your Mailchimp credentials.</span></span>
+1. <span data-ttu-id="c033b-122">Scegli chi può utilizzare questa connessione.</span><span class="sxs-lookup"><span data-stu-id="c033b-122">Choose who can use this connection.</span></span> <span data-ttu-id="c033b-123">Se non esegui alcuna azione, l'impostazione predefinita sarà Amministratori.</span><span class="sxs-lookup"><span data-stu-id="c033b-123">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="c033b-124">Per ulteriori informazioni, vedi [Consentire ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="c033b-124">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="d05cf-118">Seleziona **Aggiungi te stesso come utente dell'esportazione** e fornisci le tue credenziali di Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="d05cf-118">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
+1. <span data-ttu-id="c033b-125">Seleziona **Accetto** per confermare **Conformità e privacy dei dati**.</span><span class="sxs-lookup"><span data-stu-id="c033b-125">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
 
-   :::image type="content" source="media/export-connect-mailchimp.png" alt-text="Screenshot di esportazione per la connessione a Mailchimp":::
+1. <span data-ttu-id="c033b-126">Seleziona **Connettiti** per inizializzare la connessione a Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="c033b-126">Select **Connect** to initialize the connection to Mailchimp.</span></span>
 
-1. <span data-ttu-id="d05cf-120">Seleziona **Avanti** per configurare l'esportazione.</span><span class="sxs-lookup"><span data-stu-id="d05cf-120">Select **Next** to configure the export.</span></span>
+1. <span data-ttu-id="c033b-127">Seleziona **Esegui autenticazione con MailChimp** e fornisci le tue credenziali Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="c033b-127">Select **Authenticate with Mailchimp** and provide your Mailchimp credentials.</span></span>
 
-## <a name="configure-the-connector"></a><span data-ttu-id="d05cf-121">Configurare il connettore</span><span class="sxs-lookup"><span data-stu-id="d05cf-121">Configure the connector</span></span>
+1. <span data-ttu-id="c033b-128">Seleziona **Aggiungi te stesso come utente dell'esportazione** e fornisci le tue credenziali di Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="c033b-128">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
 
-1. <span data-ttu-id="d05cf-122">Nella sezione **Corrispondenza dati** nel campo **E-mail**, seleziona il campo nel tuo profilo cliente unificato che rappresenta l'indirizzo e-mail di un cliente.</span><span class="sxs-lookup"><span data-stu-id="d05cf-122">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> 
+1. <span data-ttu-id="c033b-129">Seleziona **Salva** per completare la connessione.</span><span class="sxs-lookup"><span data-stu-id="c033b-129">Select **Save** to complete the connection.</span></span> 
 
-1. <span data-ttu-id="d05cf-123">Facoltativamente, puoi esportare **Nome** e **Cognome** come campi aggiuntivi per creare messaggi e-mail più personalizzati.</span><span class="sxs-lookup"><span data-stu-id="d05cf-123">Optionally, you can export **First name** and **Last name** as additional fields to create more personalized emails.</span></span> <span data-ttu-id="d05cf-124">Seleziona **Aggiungi attributo** per eseguire il mapping di questi campi.</span><span class="sxs-lookup"><span data-stu-id="d05cf-124">Select **Add attribute** to map these fields.</span></span>
+## <a name="configure-the-connector"></a><span data-ttu-id="c033b-130">Configurare il connettore</span><span class="sxs-lookup"><span data-stu-id="c033b-130">Configure the connector</span></span>
 
-1. <span data-ttu-id="d05cf-125">Seleziona i segmenti da esportare.</span><span class="sxs-lookup"><span data-stu-id="d05cf-125">Select the segments you want to export.</span></span> <span data-ttu-id="d05cf-126">Puoi esportare in totale fino a 1 milione di profili cliente in Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="d05cf-126">You can export up to 1 million customer profiles in total to Mailchimp.</span></span>
+<span data-ttu-id="c033b-131">Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo.</span><span class="sxs-lookup"><span data-stu-id="c033b-131">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="c033b-132">Per ulteriori informazioni, vedi [Autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="c033b-132">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-   :::image type="content" source="media/export-segments-mailchimp.png" alt-text="Selezionare campi e segmenti da esportare in Mailchimp":::
+1. <span data-ttu-id="c033b-133">Vai a **Dati**> **Esportazioni**.</span><span class="sxs-lookup"><span data-stu-id="c033b-133">Go to **Data**> **Exports**.</span></span>
 
-1. <span data-ttu-id="d05cf-128">Seleziona **Salva**.</span><span class="sxs-lookup"><span data-stu-id="d05cf-128">Select **Save**.</span></span>
+1. <span data-ttu-id="c033b-134">Per creare una nuova esportazione seleziona **Aggiungi destinazione**.</span><span class="sxs-lookup"><span data-stu-id="c033b-134">To create a new export, select **Add destination**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="d05cf-129">Esportare i dati</span><span class="sxs-lookup"><span data-stu-id="d05cf-129">Export the data</span></span>
+1. <span data-ttu-id="c033b-135">Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="c033b-135">In the **Connection for export** field, choose a connection from the Mailchimp section.</span></span> <span data-ttu-id="c033b-136">Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.</span><span class="sxs-lookup"><span data-stu-id="c033b-136">If you don't see this section name, there are no connections of this type available to you.</span></span>
 
-<span data-ttu-id="d05cf-130">Puoi [esportare dati su richiesta](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="d05cf-130">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="d05cf-131">L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="d05cf-131">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="d05cf-132">I tuoi segmenti sono ora visualizzati sotto [Destinatari Marketo](https://mailchimp.com/help/create-audience/) in Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="d05cf-132">In Mailchimp, you can now find your segments under [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
+1. <span data-ttu-id="c033b-137">Immetti il tuo **[ID gruppo di destinatari Mailchimp](https://mailchimp.com/help/find-audience-id/)**</span><span class="sxs-lookup"><span data-stu-id="c033b-137">Enter your **[Mailchimp audience ID](https://mailchimp.com/help/find-audience-id/)**</span></span>
 
-## <a name="known-limitations"></a><span data-ttu-id="d05cf-133">Limitazioni note</span><span class="sxs-lookup"><span data-stu-id="d05cf-133">Known limitations</span></span>
+3. <span data-ttu-id="c033b-138">Nella sezione **Corrispondenza dati** nel campo **E-mail**, seleziona il campo nel tuo profilo cliente unificato che rappresenta l'indirizzo e-mail di un cliente.</span><span class="sxs-lookup"><span data-stu-id="c033b-138">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> 
 
-- <span data-ttu-id="d05cf-134">Fino a 1 milione di profili per esportazione in Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="d05cf-134">Up to 1 million profiles per export to Mailchimp.</span></span>
-- <span data-ttu-id="d05cf-135">L'esportazione in Mailchimp è limitata ai segmenti.</span><span class="sxs-lookup"><span data-stu-id="d05cf-135">Exporting to Mailchimp is limited to segments.</span></span>
-- <span data-ttu-id="d05cf-136">L'esportazione di segmenti con un totale di 1 milione di profili può richiedere fino a tre ore a causa delle limitazioni sul lato provider.</span><span class="sxs-lookup"><span data-stu-id="d05cf-136">Exporting segments with a total of 1 million profiles can take up to three hours due to limitations on the provider side.</span></span> 
-- <span data-ttu-id="d05cf-137">Il numero di profili che puoi esportare in Mailchimp dipende ed è limitato dal tuo contratto con Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="d05cf-137">The number of profiles that you can export to Mailchimp is dependent and limited on your contract with Mailchimp.</span></span>
+1. <span data-ttu-id="c033b-139">Facoltativamente, puoi esportare **nome** e **cognome** per creare e-mail più personalizzate.</span><span class="sxs-lookup"><span data-stu-id="c033b-139">Optionally, you can export **First name** and **Last name** to create more personalized emails.</span></span> <span data-ttu-id="c033b-140">Seleziona **Aggiungi attributo** per eseguire il mapping di questi campi.</span><span class="sxs-lookup"><span data-stu-id="c033b-140">Select **Add attribute** to map these fields.</span></span>
 
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="d05cf-138">Conformità e privacy dei dati</span><span class="sxs-lookup"><span data-stu-id="d05cf-138">Data privacy and compliance</span></span>
+1. <span data-ttu-id="c033b-141">Seleziona i segmenti da esportare.</span><span class="sxs-lookup"><span data-stu-id="c033b-141">Select the segments you want to export.</span></span> <span data-ttu-id="c033b-142">Puoi esportare in totale fino a 1 milione di profili cliente in Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="c033b-142">You can export up to 1 million customer profiles in total to Mailchimp.</span></span>
 
-<span data-ttu-id="d05cf-139">Quando abiliti Dynamics 365 Customer Insights per trasmettere dati a Mailchimp, autorizzi il trasferimento di dati al di fuori dei limiti di conformità di Dynamics 365 Customer Insights, inclusi dati potenzialmente sensibili come i dati personali.</span><span class="sxs-lookup"><span data-stu-id="d05cf-139">When you enable Dynamics 365 Customer Insights to transmit data to Mailchimp, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="d05cf-140">Microsoft trasferirà tali dati secondo le tue istruzioni, ma devi assicurarti che Mailchimp rispetti gli obblighi di privacy o sicurezza che ti incombono.</span><span class="sxs-lookup"><span data-stu-id="d05cf-140">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that Mailchimp meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="d05cf-141">Per ulteriori informazioni, vedi [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="d05cf-141">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
-<span data-ttu-id="d05cf-142">L'amministratore di Dynamics 365 Customer Insights può rimuovere questa destinazione di esportazione in qualsiasi momento per interrompere l'utilizzo di questa funzionalità.</span><span class="sxs-lookup"><span data-stu-id="d05cf-142">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
+1. <span data-ttu-id="c033b-143">Seleziona **Salva**.</span><span class="sxs-lookup"><span data-stu-id="c033b-143">Select **Save**.</span></span>
 
+<span data-ttu-id="c033b-144">Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.</span><span class="sxs-lookup"><span data-stu-id="c033b-144">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="c033b-145">L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="c033b-145">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="c033b-146">Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="c033b-146">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
+
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="c033b-147">Conformità e privacy dei dati</span><span class="sxs-lookup"><span data-stu-id="c033b-147">Data privacy and compliance</span></span>
+
+<span data-ttu-id="c033b-148">Quando abiliti Dynamics 365 Customer Insights per trasmettere dati a Mailchimp, autorizzi il trasferimento di dati al di fuori dei limiti di conformità di Dynamics 365 Customer Insights, inclusi dati potenzialmente sensibili come i dati personali.</span><span class="sxs-lookup"><span data-stu-id="c033b-148">When you enable Dynamics 365 Customer Insights to transmit data to Mailchimp, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="c033b-149">Microsoft trasferirà tali dati secondo le tue istruzioni, ma devi assicurarti che Mailchimp rispetti gli obblighi di privacy o sicurezza che ti incombono.</span><span class="sxs-lookup"><span data-stu-id="c033b-149">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that Mailchimp meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="c033b-150">Per ulteriori informazioni, vedi [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="c033b-150">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+<span data-ttu-id="c033b-151">L'amministratore di Dynamics 365 Customer Insights può rimuovere questa destinazione di esportazione in qualsiasi momento per interrompere l'utilizzo di questa funzionalità.</span><span class="sxs-lookup"><span data-stu-id="c033b-151">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
