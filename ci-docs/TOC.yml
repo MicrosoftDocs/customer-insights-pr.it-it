@@ -66,6 +66,8 @@
           href: audience-insights/enrichment-hub.md
         - name: Affinità di marchio e interessi
           href: audience-insights/enrichment-microsoft.md
+        - name: Indirizzi ottimizzati
+          href: audience-insights/enrichment-enhanced-addresses.md
         - name: Arricchimento con HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Arricchimento con Leadspace
@@ -76,14 +78,20 @@
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmenti e misure
       items:
-        - name: Creare segmenti e gruppi di clienti
+        - name: Panoramica dei segmenti
           href: audience-insights/segments.md
+        - name: Creare segmenti e gruppi di clienti
+          href: audience-insights/segment-builder.md
+        - name: Segmenti suggeriti in base alle misure
+          href: audience-insights/suggested-segments.md
+        - name: Segmenti suggeriti in base all'impegno
+          href: audience-insights/suggested-segments-activity.md
         - name: Informazioni dettagliate sui segmenti
           href: audience-insights/segment-insights.md
-        - name: Vedere segmenti suggeriti
-          href: audience-insights/suggested-segments.md
         - name: Trova clienti simili
           href: audience-insights/find-similar-customer-segments.md
+    - name: Misure
+      items:
         - name: Definire misure e KPI
           href: audience-insights/measures.md
     - name: Previsioni
@@ -116,7 +124,7 @@
       items:
         - name: Esportazioni
           items:
-            - name: Panoramica delle esportazioni (anteprima)
+            - name: Panoramica delle esportazioni
               href: audience-insights/export-destinations.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
@@ -126,6 +134,8 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
+            - name: Analisi di Azure Synapse
+              href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Adobe Experience Platform
@@ -160,9 +170,7 @@
               href: audience-insights/export-sftp.md
         - name: Altri utilizzi
           items:
-            - name: Dynamics 365 Customer Service (componente aggiuntivo)
-              href: audience-insights/customer-card-add-in.md
-            - name: Hub delle vendite di Dynamics 365 (componente aggiuntivo)
+            - name: Componente aggiuntivo Customer Card per Dynamics 365
               href: audience-insights/customer-card-add-in.md
             - name: Microsoft Teams (bot)
               href: audience-insights/export-teams-bot.md
@@ -178,7 +186,7 @@
           href: audience-insights/system.md
         - name: Assegna le autorizzazioni utente
           href: audience-insights/permissions.md
-        - name: Panoramica delle connessioni (anteprima)
+        - name: Panoramica delle connessioni
           href: audience-insights/connections.md
         - name: Gestire molteplici ambienti
           href: audience-insights/manage-environments.md
