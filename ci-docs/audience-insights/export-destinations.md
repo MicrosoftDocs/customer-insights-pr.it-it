@@ -6,22 +6,19 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896148"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016619"
 ---
 # <a name="exports-preview-overview"></a>Panoramica delle esportazioni (anteprima)
 
 La pagina **Esportazioni** mostra tutte le esportazioni configurate. Le esportazioni condividono dati specifici con varie applicazioni. Possono includere profili o entità del cliente, schemi e dettagli di mappatura. Ogni esportazione richiede una [connessione, impostata da un amministratore, per gestire l'autenticazione e l'accesso](connections.md).
-
-> [!NOTE]
-> Fino a marzo 2021, le esportazioni creavano automaticamente una connessione al servizio corrispondente. Le esportazioni ora richiedono una [connessione, creata e condivisa da un amministratore](connections.md) prima di poterle creare.
 
 Vai a **Dati** > **Esportazioni** per visualizzare la pagina delle esportazioni. Tutti i ruoli utente hanno accesso per visualizzare le esportazioni configurate. Utilizza il campo di ricerca nella barra dei comandi per trovare le esportazioni in base al nome, al nome della connessione o al tipo di connessione.
 

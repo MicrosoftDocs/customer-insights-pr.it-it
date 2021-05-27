@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f19033236190547f68d2b91ec6b32074bf7912a
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
+ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896607"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "6064896"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Arricchimento di profili cliente con le affinità relative al marchio e agli interessi (anteprima)
 
@@ -31,7 +31,7 @@ Per configurare l'arricchimento delle affinità degli interessi, vai alla scheda
 
 ## <a name="how-we-determine-affinities"></a>Come determiniamo le affinità
 
-Utilizziamo i dati della ricerca online di Microsoft per trovare affinità per marchi e interessi in vari segmenti demografici (definiti per età, sesso o posizione). Il volume di ricerca online per un marchio o interesse determina quanta affinità un segmento demografico, rispetto ad altri segmenti, ha con quel marchio o interesse. Marchio o interesse.
+Utilizziamo i dati della ricerca online di Microsoft per trovare affinità per marchi e interessi in vari segmenti demografici (definiti per età, sesso o posizione). Il volume di ricerca online per un marchio o interesse determina quanta affinità un segmento demografico, rispetto ad altri segmenti, ha con quel marchio o interesse.
 
 ## <a name="affinity-level-and-score"></a>Livello e punteggio di affinità
 

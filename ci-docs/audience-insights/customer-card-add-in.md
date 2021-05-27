@@ -1,7 +1,7 @@
 ---
-title: Installa e configura il componente aggiuntivo Scheda cliente
-description: Installa e configura il componente aggiuntivo Scheda cliente per Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Componente aggiuntivo Customer Card per app Dynamics 365
+description: Mostra i dati delle informazioni dettagliate sul gruppo di destinatari nelle app Dynamics 365 con questo componente aggiuntivo.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597332"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059593"
 ---
 # <a name="customer-card-add-in-preview"></a>Componente aggiuntivo Scheda cliente (anteprima)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics 365. Visualizza dati demografici, informazioni dettagliate e sequenze temporali degli impegni con il componente aggiuntivo Scheda cliente.
+Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics 365. Con il componente aggiuntivo Customer Card installato in un'app Dynamics 365 supportata, puoi scegliere di visualizzare dati demografici, informazioni dettagliate e cronologie degli impegni. Il componente aggiuntivo recupera i dati da Customer Insights senza influire sui dati nell'app Dynamics 365 connessa. 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- App Dynamics 365 (come Hub delle vendite o Hub del servizio clienti), versione 9.0 e successive con Unified Interface abilitato.
-- Profili cliente [inseriti dall'app Dynamics 365 utilizzando Common Data Service](connect-power-query.md).
-- Gli utenti del componente aggiuntivo Scheda cliente devono essere [aggiunti come utenti](permissions.md) in Audience Insights.
-- [Funzionalità di ricerca e filtro configurate](search-filter-index.md).
-- Controllo demografico: i campi demografici, come l'età o il sesso, sono disponibili nel profilo cliente unificato.
-- Controllo Arricchimento: richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili cliente.
-- Controllo dell'intelligenza: richiede dati generati tramite Azure Machine Learning ([previsioni](predictions.md) o [modelli personalizzati](custom-models.md))
-- Controllo delle misure: richiede [misure configurate](measures.md).
-- Controllo della sequenza temporale: richiede [impegni configurati](activities.md).
+- Il componente aggiuntivo funziona solo con le app Dynamics 365 basate su modello, come Sales o Customer Service, versione 9.0 e successive.
+- Affinché i dati di Dynamics 365 possano essere mappati ai profili cliente delle informazioni dettagliate sul gruppo di destinatari devono essere [inseriti dall'app Dynamics 365 utilizzando il connettore Common Data Service](connect-power-query.md).
+- Tutti gli utenti Dynamics 365 del componente aggiuntivo Customer Card devono essere [aggiunti come utenti](permissions.md) nelle informazioni dettagliate sul gruppo di destinatari per vedere i dati.
+- [Le funzionalità di ricerca e filtro configurate](search-filter-index.md) nelle informazioni dettagliate sul gruppo di destinatari sono necessarie affinché la ricerca dei dati funzioni.
+- Ogni controllo del componente aggiuntivo si basa su dati specifici nelle informazioni dettagliate sul gruppo di destinatari:
+  - Controllo delle misure: richiede [misure configurate](measures.md).
+  - Controllo intelligente: richiede dati generati utilizzando [previsioni](predictions.md) o [modelli personalizzati](custom-models.md).
+  - Controllo demografico: i campi demografici, come l'età o il sesso, sono disponibili nel profilo cliente unificato.
+  - Controllo Arricchimento: richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili cliente.
+  - Controllo della sequenza temporale: richiede [impegni configurati](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Installare il componente aggiuntivo Scheda cliente
 
@@ -56,9 +57,9 @@ L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
    > [!NOTE]
    > Verifica che il blocco popup del browser non blocchi la finestra di autenticazione quando selezioni il pulsante **Accedi**.
 
-1. Seleziona l'ambiente da cui vuoi recuperare i dati.
+1. Seleziona l'ambiente di Customer Insights da cui vuoi recuperare i dati.
 
-1. Definisci quale campo mappare ai record nell'app Dynamics 365.
+1. Definisci la mappatura dei campi ai record nell'app Dynamics 365. A seconda dei dati in Customer Insights, puoi scegliere di mappare le seguenti opzioni:
    - Per eseguire il mapping con un contatto, seleziona il campo nell'entità Cliente che corrisponde all'ID dell'entità di contatto.
    - Per eseguire il mapping con un account, seleziona il campo nell'entità Cliente che corrisponde all'ID dell'entità account.
 

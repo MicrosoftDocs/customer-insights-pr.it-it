@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596412"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049399"
 ---
 # <a name="entities-in-audience-insights"></a>Entità in Audience Insights
 
@@ -35,14 +35,14 @@ La pagina **Entità** elenca le entità e include diverse colonne:
 Seleziona un'entità per esplorare i diversi campi e record inclusi all'interno dell'entità.
 
 > [!div class="mx-imgBorder"]
-> ![Seleziona un'entità](media/data-manager-entities-data.png "Seleziona un'entità")
+> ![Seleziona un\'entità](media/data-manager-entities-data.png "Seleziona un'entità")
 
-- La scheda **Dati** è selezionata per impostazione predefinita e mostra una tabella che elenca i dettagli sui singoli record dell'entità.
+- La scheda **Dati** mostra una tabella che elenca i dettagli sui singoli record dell'entità.
 
 > [!div class="mx-imgBorder"]
 > ![Tabella Campi](media/data-manager-entities-fields.PNG "Tabella Campi")
 
-- La scheda **Campi** mostra una tabella per esaminare i dettagli per l'entità selezionata, ad esempio i nomi dei campi, i tipi di dati e i tipi. La colonna **Tipo** mostra i tipi associati a Common Data Model che vengono identificati automaticamente dal sistema o [mappati manualmente](map-entities.md) dagli utenti. Si tratta di tipi semantici che possono differire dai tipi di dati degli attributi; ad esempio il campo *E-mail* sotto ha come tipo di dati *Testo* ma il relativo tipo Common Data Model (semantico) potrebbe essere *Emai* o *EmailAddress*.
+- La scheda **Attributi** è selezionata per impostazione predefinita e mostra una tabella per esaminare i dettagli per l'entità selezionata, come nomi di campo, tipi di dati e tipi. La colonna **Tipo** mostra i tipi associati a Common Data Model che vengono identificati automaticamente dal sistema o [mappati manualmente](map-entities.md) dagli utenti. Si tratta di tipi semantici che possono differire dai tipi di dati degli attributi; ad esempio il campo *E-mail* sotto ha come tipo di dati *Testo* ma il relativo tipo Common Data Model (semantico) potrebbe essere *Emai* o *EmailAddress*.
 
 > [!NOTE]
 > Entrambe le tabelle mostrano solo un esempio dei dati dell'entità. Per visualizzare il set di dati completo, vai alla pagina **Origini dati** seleziona un'entità, seleziona **Modifica**, quindi visualizza i dati di questa entità con l'editor Power Query come spiegato in [Origini dati](data-sources.md).

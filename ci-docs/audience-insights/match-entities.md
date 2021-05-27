@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595569"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085627"
 ---
 # <a name="match-entities"></a>Mettere in corrispondenza le entità
 
@@ -103,6 +103,18 @@ Le regole di corrispondenza rappresentano set di condizioni. Per corrispondere l
 
 > [!NOTE]
 > L'ordine delle regole è importante. L'algoritmo di corrispondenza tenta di mettere in corrispondenza sulla base della prima regola e continua con la seconda regola solo se non sono state identificate corrispondenze con la prima regola.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Modificare l'ordine delle entità nelle regole di corrispondenza
+
+Puoi riordinare le entità per le regole di corrispondenza per modificare l'ordine in cui vengono elaborate. Le regole in conflitto a causa di un ordine modificato verranno rimosse. Devi ricreare le regole rimosse con una configurazione aggiornata.
+
+1. Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Modifica**.
+
+1. Nel riquadro **Modifica regola** seleziona il controllo **Sposta su/giù** o trascina e rilascia le entità per modificare l'ordine.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Opzioni per modificare l'ordine in cui le entità vengono elaborate nella fase di corrispondenza.":::
+
+1. Seleziona **Fatto** in modo da salvare la regola.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definire la deduplicazione in un'entità di corrispondenza
 

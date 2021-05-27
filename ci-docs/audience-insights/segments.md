@@ -1,7 +1,7 @@
 ---
-title: Creare e gestire segmenti
-description: Crea segmenti di clienti per raggrupparli in base a vari attributi.
-ms.date: 03/02/2021
+title: Segmenti nelle informazioni dettagliate sul gruppo di destinatari
+description: Panoramica sui segmenti e su come crearli e gestirli.
+ms.date: 05/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,79 +9,42 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
+ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597057"
+ms.lasthandoff: 05/14/2021
+ms.locfileid: "6034017"
 ---
-# <a name="create-and-manage-segments"></a>Creare e gestire segmenti
+# <a name="segments-overview"></a>Panoramica dei segmenti
 
 I segmenti ti consentono di raggruppare i clienti in base ad attributi demografici, transazionali o comportamentali. Puoi utilizzare i segmenti per indirizzare campagne promozionali, attività di vendita e azioni di assistenza clienti per raggiungere i tuoi obiettivi aziendali.
 
-È possibile definire filtri complessi intorno all'entità Profilo cliente e alle entità correlate. Ogni segmento, dopo l'elaborazione, crea una serie di record dei clienti che puoi esportare o su cui puoi intervenire. Si applicano alcuni [limiti di servizio](service-limits.md).
-
-Salvo diversa indicazione, tutti i segmenti sono **Segmenti dinamici**, che vengono aggiornati in base a una pianificazione ricorrente.
-
-Il seguente esempio illustra la funzionalità di segmentazione. Abbiamo definito un segmento per i clienti che hanno ordinato almeno $500 di merci negli ultimi 90 giorni *e* che sono stati coinvolti in una chiamata servizio clienti che è stata riassegnata.
-
-> [!div class="mx-imgBorder"]
-> ![Gruppi multipli](media/segmentation-group1-2.png "Gruppi multipli")
+I profili del cliente che corrispondono ai filtri di una definizione di segmento sono indicati come *membri* di un segmento. Si applicano alcuni [limiti di servizio](service-limits.md).
 
 ## <a name="create-a-new-segment"></a>Creare un nuovo segmento
 
-I segmenti sono gestiti nella pagina **Segmenti**.
+Un nuovo segmento può essere creato in modi diversi: 
 
-1. In Audience Insights, vai alla pagina **Segmenti**.
+- Segmento complesso con generatore di segmenti: [segmento vuoto](segment-builder.md#create-a-new-segment)
+- Segmenti semplici con un operatore: [segmento veloce](segment-builder.md#quick-segments)
+- Modo basato sull'intelligenza artificiale per trovare clienti simili: [clienti simili](find-similar-customer-segments.md)
+- Suggerimenti basati sull'intelligenza artificiale per misure o attributi: [segmenti suggeriti per migliorare le misure](suggested-segments.md)
+- Suggerimenti basati sulle attività: [segmenti suggeriti in base all'attività del cliente](suggested-segments-activity.md)
 
-1. Seleziona **Nuovo** > **Segmento vuoto**.
+## <a name="get-insights-on-existing-segments"></a>Ottenere le informazioni dettagliate sui segmenti esistenti
 
-1. Nel riquadro **Nuovo segmento**, scegli un tipo di segmento e assegna un **Nome**.
+Scopri ulteriori informazioni sui segmenti esistenti con le [informazioni dettagliate del segmento](segment-insights.md). Scopri cosa differenzia due segmenti o cosa hanno in comune.
 
-   Facoltativamente, fornisci un nome visualizzato e una descrizione che aiuti a identificare il segmento.
+## <a name="find-similar-customers"></a>Trova clienti simili
 
-1. Seleziona **Avanti** per andare alla pagina **Generatore di segmenti** in cui puoi definire un gruppo. Un gruppo è un set di clienti.
-
-1. Scegli l'entità che include l'attributo in base al quale vuoi segmentare.
-
-1. Scegli l'attributo in base a cui segmentare. Questo attributo può avere uno dei quattro tipi di valore: numerico, stringa, data o booleano.
-
-1. Scegli un operatore e un valore per l'attributo selezionato.
-
-   > [!div class="mx-imgBorder"]
-   > ![Filtro gruppo clienti](media/customer-group-numbers.png "Filtro gruppo clienti")
-
-   |Numero |Definizione  |
-   |---------|---------|
-   |1     |Entity          |
-   |2     |Attributo          |
-   |3    |Operatore         |
-   |4    |valore         |
-
-8. Se l'entità è connessa all'entità cliente unificata tramite [relazioni](relationships.md), devi definire il percorso della relazione per creare un segmento valido. Aggiungi le entità dal percorso della relazione fino a quando non puoi selezionare l'entità **Cliente: CustomerInsights** dal menu a discesa. Quindi, scegli **Tutti i record** per ogni condizione.
-
-   > [!div class="mx-imgBorder"]
-   > ![Percorso di relazione durante la creazione del segmento](media/segments-multiple-relationships.png "Percorso di relazione durante la creazione del segmento")
-
-1. Per impostazione predefinita, i segmenti generano un'entità di output che contiene tutti gli attributi dei profili cliente che corrispondono ai filtri definiti. Se un segmento è basato su entità diverse dall'entità *Cliente* puoi aggiungere più attributi da queste entità all'entità di output. Seleziona **Attributi progetto** per scegliere gli attributi che verranno aggiunti all'entità di output.  
-
-   
-   Esempio: un segmento si basa su un'entità che contiene i dati sull'impegno del cliente correlati all'entità *Cliente*. Il segmento cerca tutti i clienti che hanno chiamato l'help desk negli ultimi 60 giorni. Puoi scegliere di aggiungere la durata della chiamata e il numero di chiamate a tutti i record cliente corrispondenti nell'entità di output. Queste informazioni potrebbero essere utili per inviare un'e-mail con collegamenti utili ad articoli della guida in linea e domande frequenti per i clienti che chiamano frequentemente.
-
-1. Seleziona **Salva** per salvare il segmento. Il segmento verrà salvato ed elaborato se tutti i requisiti vengono convalidati. Altrimenti, verrà salvato come bozza.
-
-1. Seleziona **Torna a Segmenti** per tornare alla pagina **Segmenti**.
+Trova clienti simili ai membri di un segmento selezionato con l'aiuto dell'intelligenza artificiale. Per ulteriori informazioni, vedi [Clienti simili](find-similar-customer-segments.md).
 
 ## <a name="manage-existing-segments"></a>Gestire segmenti esistenti
 
-Nella pagina **Segmenti**, puoi visualizzare tutti i segmenti salvati e gestirli.
+Vai alla pagina **Segmenti** per visualizzare tutti i segmenti salvati e gestirli.
 
 Ogni segmento è rappresentato da una riga che include informazioni aggiuntive sul segmento.
-
-Puoi ordinare i segmenti in una colonna selezionando l'intestazione della colonna.
-
-Utilizza la casella **Cerca** nell'angolo in alto a destra per filtrare i segmenti.
 
 > [!div class="mx-imgBorder"]
 > ![Opzioni per gestire un segmento esistente](media/segments-selected-segment.png "Opzioni per gestire un segmento esistente")
@@ -106,71 +69,6 @@ Puoi aggiornare tutti i segmenti contemporaneamente selezionando **Aggiorna tutt
 > [!TIP]
 > Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
 
-## <a name="download-and-export-segments"></a>Scaricare ed esportare segmenti
-
-Puoi scaricare i tuoi segmenti in un file CSV o esportarli in Dynamics 365 Sales.
-
-### <a name="download-segments-to-a-csv-file"></a>Scaricare i segmenti in un file CSV
-
-1. In Audience Insights, vai alla pagina **Segmenti**.
-
-2. Seleziona i puntini di sospensione nel riquadro di un segmento specifico.
-
-3. Seleziona **Scarica come CSV** dall'elenco a discesa delle azioni.
-
-### <a name="export-segments-to-dynamics-365-sales"></a>Esportare segmenti in Dynamics 365 Sales
-
-Prima di esportare segmenti in Dynamics 365 Sales, un amministratore deve [creare la destinazione di esportazione](export-destinations.md) per Dynamics 365 Sales.
-
-1. In Audience Insights, vai alla pagina **Segmenti**.
-
-2. Seleziona i puntini di sospensione nel riquadro di un segmento specifico.
-
-3. Seleziona **Aggiungi a** dall'elenco a discesa delle azioni e seleziona la destinazione di esportazione su cui vuoi inicare i dati.
-
-## <a name="draft-mode-for-segments"></a>Modalità bozza per i segmenti
-
-Se non sono soddisfatti tutti i requisiti per elaborare un segmento, è possibile salvare il segmento come bozza e accedervi dalla pagina **Segmenti**.
-
-Verrà salvato come segmento inattivo e non potrà essere attivato fino a quando non sarà valido.
-
-## <a name="add-more-conditions-to-a-group"></a>Aggiungere più condizioni a un gruppo
-
-Per aggiungere più condizioni a un gruppo, è possibile utilizzare due operatori logici:
-
-- Operatore **AND**: entrambe le condizioni devono essere soddisfatte come parte del processo di segmentazione. Questa opzione è molto utile quando si definiscono condizioni tra entità diverse.
-
-- Operatore **OR**: una delle condizioni deve essere soddisfatta come parte del processo di segmentazione. Questa opzione è molto utile quando si definiscono più condizioni per la stessa entità.
-
-   > [!div class="mx-imgBorder"]
-   > ![Operatore OR in cui è necessario soddisfare una delle condizioni](media/segmentation-either-condition.png "Operatore OR in cui è necessario soddisfare una delle condizioni")
-
-Al momento è possibile nidificare un operatore **OR** sotto un operatore **AND**, ma non il contrario.
-
-## <a name="combine-multiple-groups"></a>Combinare più gruppi
-
-Ogni gruppo produce un set specifico di clienti. Puoi combinare questi gruppi per includere i clienti obbligatori per il tuo business case.
-
-1. In Audience Insights, vai alla pagina **Segmenti** e seleziona un segmento.
-
-2. Seleziona **Aggiungi gruppo**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Aggiungi gruppo per gruppo clienti](media/customer-group-add-group.png "Aggiungi gruppo per gruppo clienti")
-
-3. Seleziona uno dei seguenti operatori di set: **Unione**, **Intersezione** o **Eccezione**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Aggiungi Union per gruppo clienti](media/customer-group-union.png "Aggiungi Union per gruppo clienti")
-
-   Seleziona un operatore di set per definire un nuovo gruppo. Salva i differenti gruppi per determinare quali dati vengono conservati:
-
-   - **Union** unisce i due gruppi.
-
-   - **Intersect** sovrappone i due gruppi. Solo i dati che *sono comuni* a entrambi i gruppi vengono mantenuti nel gruppo unificato.
-
-   - **Ad eccezione di** combina i due gruppi. Solo i dati nel gruppo A che *non sono comuni* ai dati nel gruppo B vengono mantenuti.
-
 ## <a name="view-processing-history-and-segment-members"></a>Visualizzare la cronologia di elaborazione e i membri del segmento
 
 Puoi visualizzare i dati consolidati di un segmento esaminandone i dettagli.
@@ -191,43 +89,4 @@ La parte inferiore contiene un elenco dei membri del segmento.
 >
 >L'elenco è un'anteprima dei membri del segmento corrispondenti e mostra i primi 100 record del segmento in modo da poterlo valutare rapidamente e rivederne le definizioni se necessario. Per vedere tutti i record corrispondenti, è necessario [esportare il segmento](export-destinations.md).
 
-## <a name="quick-segments"></a>Segmenti rapidi
-
-Oltre al generatore di segmenti, esiste un altro percorso per la creazione di segmenti. I segmenti rapidi consentono di creare segmenti semplici (con un solo operatore) in modo rapido e con informazioni dettagliate immediate.
-
-1. Nella pagina **Segmenti**, seleziona **Nuovo** > **Crea rapidamente da**.
-
-   - Seleziona l'opzione **Profili** per creare un segmento basato sull'entità cliente unificata.
-   - Seleziona l'opzione **Misure** per creare un segmento intorno a ciascun tipo di misure attributo cliente che hai precedentemente creato nella pagina **Misure**.
-   - Seleziona l'opzione **Intelligenza** per creare un segmento attorno a una delle entità di output generate utilizzando le funzionalità **Previsioni** o **Modelli personalizzati**.
-
-2. Nella finestra di dialogo **Nuovo segmento rapido**, seleziona un attributo dal menu a discesa **Campo**.
-
-3. Il sistema fornirà alcune informazioni dettagliate aggiuntive che ti aiuteranno a creare segmenti migliori dei tuoi clienti.
-   - Per i campi di categoria, vengono visualizzati i primi 10 conteggi dei clienti. Scegli un **valore** e seleziona **Revisione**.
-
-   - Per un attributo numerico, il sistema mostrerà quale valore dell'attributo rientra nel percentile di ciascun cliente. Scegli un **operatore** e un **valore**, quindi seleziona **Revisione**.
-
-4. Il sistema fornirà una **dimensione stimata del segmento**. Puoi scegliere se generare il segmento che hai definito o modificarlo prima per ottenere una dimensione del segmento diversa.
-
-    > [!div class="mx-imgBorder"]
-    > ![Nome e stima per un segmento rapido](media/quick-segment-name.png "Nome e stima per un segmento rapido")
-
-5. Inserisci un **nome** per il segmento. Se lo desideri, inserisci un **nome visualizzato**.
-
-6. Seleziona **Salva** per creare il segmento.
-
-7. Al termine dell'elaborazione del segmento, puoi visualizzarlo come qualsiasi altro segmento che hai creato.
-
-Per i seguenti scenari, si consiglia di utilizzare il generatore di segmenti anziché la funzionalità dei segmenti consigliati:
-
-- Creazione di segmenti con filtri su campi di categoria in cui l'operatore è diverso dall'operatore **Is**
-- Creazione di segmenti con filtri su campi numerici in cui l'operatore è diverso dagli operatori **Between**, **Greater than** e **Less than**
-- Creazione di segmenti con filtri nei campi del tipo di data
-
-## <a name="next-steps"></a>Passaggi successivi
-
-[Esporta un segmento](export-destinations.md) ed esplora [Scheda cliente](customer-card-add-in.md) e [Connettori](export-power-bi.md) per ottenere informazioni dettagliate a livello di cliente.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../includes/footer-banner.md)] 
