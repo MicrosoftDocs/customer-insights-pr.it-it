@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954584"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095515"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Previsione del valore di durata del cliente (CLV) (anteprima)
 
@@ -149,7 +149,6 @@ I dati che riflettono le interazioni chiave dei clienti (come web, servizio clie
 
 1. Seleziona **Avanti**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Rivedere ed eseguire la configurazione del modello
 
 1. Nel passaggio **Rivedi i dettagli del modello** convalida la configurazione della previsione. Puoi tornare a qualsiasi parte della configurazione di previsione selezionando **Modifica** sotto il valore mostrato. È inoltre possibile selezionare un passaggio di configurazione dall'indicatore di avanzamento.
@@ -170,11 +169,10 @@ I dati che riflettono le interazioni chiave dei clienti (come web, servizio clie
 - **Stato:** lo stato dell'esecuzione della previsione.
     - **In coda:** la previsione attende il completamento di altri processi.
     - **Aggiornamento in corso:** la previsione è attualmente in esecuzione per creare risultati che verranno inseriti nell'entità di output.
-    - **Errore:** l'esecuzione della previsione non è riuscita. [Esamina i log](#troubleshoot-a-failed-prediction) per maggiori informazioni.
+    - **Errore:** l'esecuzione della previsione non è riuscita. [Esamina i log](manage-predictions.md#troubleshoot-a-failed-prediction) per maggiori informazioni.
     - **Completata:** la previsione è riuscita. Seleziona **Visualizza** sotto i puntini di sospensione verticali per esaminare i risultati della previsione.
 - **Data di modifica**: la data in cui è stata modificata la configurazione per la previsione.
 - **Ultimo aggiornamento:** la data in cui sono stati aggiornati i risultati della previsione nell'entità di output.
-
 
 ### <a name="review-prediction-results"></a>Controllare i risultati della previsione
 
@@ -216,28 +214,8 @@ Esistono tre sezioni principali di dati nella pagina dei risultati:
 
 - **Fattori più influenti** : Vengono presi in considerazione vari fattori durante la creazione della previsione del CLV in base ai dati di input forniti al modello di intelligenza artificiale. Ciascuno dei fattori ha la sua importanza calcolata per le previsioni aggregate create da un modello. Puoi utilizzare questi fattori per convalidare i risultati della previsione. Questi fattori forniscono anche maggiori informazioni sui fattori più influenti che hanno contribuito a prevedere il CLV per tutti i tuoi clienti.
 
-## <a name="refresh-a-prediction"></a>Aggiornare una previsione
+## <a name="manage-predictions"></a>Gestisci previsioni
 
-Le previsioni si aggiornano automaticamente con la stessa [pianificazione degli aggiornamenti dei dati](system.md#schedule-tab) come configurata nelle impostazioni. Puoi anche aggiornarli manualmente.
-
-1. Vai a **Intelligenza** > **Predizioni** e seleziona la scheda **Le mie previsioni**.
-2. Seleziona i puntini di sospensione verticali accanto alla previsione che vuoi aggiornare.
-3. Seleziona **Aggiorna**.
-
-## <a name="delete-a-prediction"></a>Eliminare una previsione
-
-L'eliminazione di un previsione rimuove anche la relativa entità di output.
-
-1. Vai a **Intelligenza** > **Predizioni** e seleziona la scheda **Le mie previsioni**.
-2. Seleziona i puntini di sospensione verticali accanto alla previsione che vuoi eliminare.
-3. Seleziona **Elimina.**
-
-## <a name="troubleshoot-a-failed-prediction"></a>Risolvere i problemi relativi a una previsione non riuscita
-
-1. Vai a **Intelligenza** > **Predizioni** e seleziona la scheda **Le mie previsioni**.
-2. Seleziona i puntini di sospensione verticali accanto alla previsione di cui desideri visualizzare i log degli errori.
-3. Seleziona **Log**.
-4. Esamina tutti gli errori. Esistono diversi tipi di errori che possono verificarsi e descrivono quale condizione ha causato l'errore. Ad esempio, un errore indicante che non sono disponibili dati sufficienti per prevedere con precisione viene in genere risolto caricando più dati in Audience Insights.
-
+È possibile ottimizzare, risolvere i problemi, aggiornare o eliminare le previsioni. Esamina un report sull'usabilità dei dati di input per scoprire come rendere un previsione più veloce e affidabile. Per ulteriori informazioni, vedi [Gestisci previsioni](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

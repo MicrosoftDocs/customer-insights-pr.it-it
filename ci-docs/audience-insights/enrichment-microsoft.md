@@ -1,7 +1,7 @@
 ---
 title: Arricchire i profili dei clienti con i dati di Microsoft
 description: Usa i dati proprietari di Microsoft per arricchire i dati dei tuoi clienti con affinità di marchio e interesse.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064896"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245712"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Arricchimento di profili cliente con le affinità relative al marchio e agli interessi (anteprima)
 
@@ -69,12 +69,10 @@ Un'esperienza guidata ti aiuta nella configurazione degli arricchimenti.
 
 ### <a name="define-your-brands-or-interests"></a>Definisci i tuoi marchi o interessi
 
-Selezionare una delle opzioni seguenti:
+Scegli fino a cinque marchi o interessi utilizzando una o entrambe queste opzioni:
 
-- **Settore**: il sistema identifica i principali marchi o interessi rilevanti per il tuo settore e arricchisce i dati cliente con essi.
-- **Scegli il tuo**: seleziona fino a cinque voci dall'elenco di marchi o interessi più rilevanti per la tua organizzazione.
-
-Per aggiungere un marchio o un interesse, immettilo nell'area di input per ottenere suggerimenti in base ai termini corrispondenti. Se non viene elencato un marchio o interesse che stai cercando, inviaci un feedback utilizzando il collegamento **Suggerisci**.
+- **Settore**: seleziona il tuo settore dall'elenco a discesa, quindi scegli tra i migliori marchi o interessi per quel settore.
+- **Scegli il tuo**: inserisci un marchio o un interesse rilevante per la tua organizzazione, quindi scegli tra i suggerimenti corrispondenti. Se non viene elencato un marchio o interesse che stai cercando, inviaci un feedback utilizzando il collegamento **Suggerisci**.
 
 ### <a name="review-enrichment-preferences"></a>Rivedere le preferenze di arricchimento
 

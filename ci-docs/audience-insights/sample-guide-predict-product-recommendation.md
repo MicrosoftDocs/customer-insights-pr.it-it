@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595278"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129904"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Guida di esempio per la previsione di raccomandazioni sui prodotti (anteprima)
 
@@ -22,7 +22,7 @@ In questa guida viene illustrato un esempio completo di previsione di raccomanda
 
 ## <a name="scenario"></a>Scenario
 
-Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, in vendita sul sito Web Contoso Coffee. Il suo obiettivo è capire quali prodotti dovrebbe consigliare ai clienti ricorrenti. Sapere cosa i clienti hanno maggiore **probabilità di acquistare** può aiutare a risparmiare sforzi di marketing concentrandosi su articoli specifici.
+Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, che vendono attraverso il sito Web Contoso per il caffè. Il suo obiettivo è capire quali prodotti dovrebbe consigliare ai clienti ricorrenti. Sapere cosa i clienti hanno maggiore **probabilità di acquistare** può aiutare a risparmiare sforzi di marketing concentrandosi su articoli specifici.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -65,7 +65,7 @@ Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e 
 
 1. Nel campo **Nome** nel riquadro laterale, cambia il nome dell'origine dati da **Query** a **eCommercePurchases**.
 
-1. Salva l'origine dati.
+1. **Salva** l'origine dati.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Inserire dati cliente dallo schema di fidelizzazione
@@ -83,11 +83,11 @@ Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e 
 
 1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **loyCustomers**.
 
-1. Salva l'origine dati.
+1. **Salva** l'origine dati.
 
 ## <a name="task-2---data-unification"></a>Attività 2: unificare i dati
 
-Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, unione** per creare un profilo cliente unificato. Per ulteriori informazioni, vedi [Unificazione dei dati](data-unification.md).
+Dopo aver importato i dati, iniziamo il processo di unificazione dei dati per creare un profilo cliente unificato. Per ulteriori informazioni, vedi [Unificazione dei dati](data-unification.md).
 
 ### <a name="map"></a>Mapping
 
@@ -156,7 +156,7 @@ Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abba
 
    - **Numero di prodotti** : Imposta questo valore su **5**. Questa impostazione definisce quanti prodotti desideri consigliare ai tuoi clienti.
 
-   - **Suggerire prodotti acquistati di recente dai clienti** : Seleziona **Sì** per indicare che desideri includere prodotti nella raccomandazione che i tuoi clienti hanno acquistato in precedenza.
+   - **Ripetizione degli acquisti prevista**: seleziona **Sì** per indicare che desideri includere i prodotti nella raccomandazione che i tuoi clienti hanno acquistato in precedenza.
 
    - **Finestra per guardare indietro:** Seleziona almeno **365 giorni**. Questa impostazione definisce fino a quanto tempo indietro il modello esaminerà l'impegno del cliente per utilizzarlo come input per le raccomandazioni.
    

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906907"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095653"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsione di abbandono dell'abbonamento (anteprima)
 
@@ -147,30 +147,9 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
        > [!div class="mx-imgBorder"]
        > ![Elenco che mostra i fattori influenti e la loro importanza nella previsione del risultato di abbandono](media/subscription-churn-influentialfactors.PNG "Elenco che mostra i fattori influenti e la loro importanza nella previsione del risultato di abbandono")
 
-## <a name="fix-a-failed-prediction"></a>Correggere una previsione non riuscita
+## <a name="manage-predictions"></a>Gestisci previsioni
 
-1. Vai alla scheda **Le mie previsioni** su **Intelligenza** > **Previsioni**.
-1. Seleziona la previsione per la quale desideri visualizzare i registri degli errori e seleziona **Registri**.
-   > [!div class="mx-imgBorder"]
-   > ![Visualizzazione della barra dei menu dei risultati con chiusura, modifica del modello e pulsanti dei registri](media/subscription-churn-logsbutton.PNG "Visualizzazione della barra dei menu dei risultati con chiusura, modifica del modello e pulsanti dei registri")
-1. Esamina tutti gli errori. Esistono diversi tipi di errori che possono verificarsi e descrivono quale condizione ha causato l'errore. Ad esempio, un errore indicante che non sono disponibili dati sufficienti per prevedere con precisione viene in genere risolto caricando dati aggiuntivi.
-
-## <a name="refresh-a-prediction"></a>Aggiornare una previsione
-
-Le previsioni si aggiorneranno automaticamente in base alla stessa [pianificazione di aggiornamento dei dati](system.md#schedule-tab) come configurato nelle impostazioni.
-
-1. Vai alla scheda **Le mie previsioni** su **Intelligenza** > **Previsioni**.
-1. Seleziona i puntini di sospensione verticali accanto alla previsione che vuoi aggiornare.
-1. Seleziona **Aggiorna**.
-
-## <a name="delete-a-prediction"></a>Eliminare una previsione
-
-1. Vai alla scheda **Le mie previsioni** su **Intelligenza** > **Previsioni**.
-1. Seleziona i puntini di sospensione verticali accanto alla previsione che vuoi eliminare.
-1. Seleziona **Elimina.**
-
-> [!NOTE]
-> L'eliminazione di un previsione rimuoverà l'entità di output.
+È possibile ottimizzare, risolvere i problemi, aggiornare o eliminare le previsioni. Esamina un report sull'usabilità dei dati di input per scoprire come rendere un previsione più veloce e affidabile. Per ulteriori informazioni, vedi [Gestisci previsioni](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

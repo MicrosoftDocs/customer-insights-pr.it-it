@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906861"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095607"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Previsione di abbandono transazionale (anteprima)
 
@@ -144,7 +144,7 @@ La previsione di abbandono transazionale ti consente di prevedere se un cliente 
    - **Stato:** lo stato dell'esecuzione della previsione.
         - **In coda:** la previsione attende l'esecuzione di altri processi.
         - **Aggiornamento in corso:** la previsione è attualmente in esecuzione per produrre risultati che verranno inseriti nell'entità di output.
-        - **Errore:** l'esecuzione della previsione non è riuscita. [Esamina i log](#troubleshoot-a-failed-prediction) per maggiori informazioni.
+        - **Errore:** l'esecuzione della previsione non è riuscita. [Esamina i log](manage-predictions.md#troubleshoot-a-failed-prediction) per maggiori informazioni.
         - **Completata:** la previsione è riuscita. Seleziona **Visualizza** sotto i puntini di sospensione verticali per rivedere la previsione
    - **Modificata:** la data in cui è stata modificata la configurazione per la previsione.
    - **Ultimo aggiornamento:** la data in cui sono stati aggiornati i risultati della previsione risulta nell'entità di output.
@@ -168,35 +168,9 @@ La previsione di abbandono transazionale ti consente di prevedere se un cliente 
        
     1. **Fattori più influenti:** esistono molti fattori che vengono presi in considerazione durante la creazione della previsione. Ciascuno dei fattori ha la sua importanza calcolata per le previsioni aggregate create da un modello. Puoi utilizzare questi fattori per convalidare i risultati della previsione. Oppure puoi utilizzare queste informazioni in seguito per [creare segmenti](segments.md) che potrebbero contribuire a influenzare il rischio di abbandono per i clienti.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Risolvere i problemi relativi a una previsione non riuscita
+## <a name="manage-predictions"></a>Gestisci previsioni
 
-1. Vai a **Intelligenza** > **Predizioni** e seleziona la scheda **Le mie previsioni**.
-
-1. Seleziona i puntini di sospensione verticali accanto alla previsione di cui desideri visualizzare i log degli errori.
-
-1. Seleziona **Log**.
-
-1. Esamina tutti gli errori. Esistono diversi tipi di errori che possono verificarsi e descrivono quale condizione ha causato l'errore. Ad esempio, un errore che non contiene dati sufficienti per eseguire una previsione accurata viene in genere risolto caricando dati aggiuntivi in Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Aggiornare una previsione
-
-Le previsioni si aggiorneranno automaticamente in base alla stessa [pianificazione di aggiornamento dei dati](system.md#schedule-tab) come configurato nelle impostazioni. Puoi anche aggiornarli manualmente.
-
-1. Vai a **Intelligenza** > **Predizioni** e seleziona la scheda **Le mie previsioni**.
-
-1. Seleziona i puntini di sospensione verticali accanto alla previsione che vuoi aggiornare.
-
-1. Seleziona **Aggiorna**.
-
-## <a name="delete-a-prediction"></a>Eliminare una previsione
-
-L'eliminazione di un previsione rimuove anche la relativa entità di output.
-
-1. Vai a **Intelligenza** > **Predizioni** e seleziona la scheda **Le mie previsioni**.
-
-1. Seleziona i puntini di sospensione verticali accanto alla previsione che vuoi eliminare.
-
-1. Seleziona **Elimina.**
+È possibile ottimizzare, risolvere i problemi, aggiornare o eliminare le previsioni. Esamina un report sull'usabilità dei dati di input per scoprire come rendere un previsione più veloce e affidabile. Per ulteriori informazioni, vedi [Gestisci previsioni](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

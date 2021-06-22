@@ -1,7 +1,7 @@
 ---
 title: Creare e gestire ambienti
 description: Scopri come iscriverti al servizio e come gestire gli ambienti.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887991"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259104"
 ---
 # <a name="manage-environments"></a>Gestisci ambienti
 
@@ -76,9 +76,9 @@ Per creare un ambiente:
    > Supportiamo solo gli account di archiviazione di Azure Data Lake Gen2 che si trovano nella stessa area di Azure selezionata durante la creazione dell'ambiente.
    > Sono supportati solo gli account di archiviazione abilitati per Azure Data Lake Gen2 Hierarchical Name Space (HNS).
 
-   - Per l'opzione Azure Data Lake Storage Gen2, puoi scegliere tra l'utilizzo di un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Il nome del **Contenitore** non può essere modificato e sarà "customerinsights".
+   - Per l'opzione Azure Data Lake Storage Gen2, puoi scegliere tra l'utilizzo di un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Il nome **Contenitore** non può essere cambiato e sarà `customerinsights`.
    
-   - Se vuoi usare le [previsioni](predictions.md), configura la condivisione dei dati con applicazioni e soluzioni basate su Microsoft Dataverse o abilita l'inserimento dei dati dalle origini dati locali, fornisci l'URL dell'ambiente Microsoft Dataverse in **Configura la condivisione dei dati con Microsoft Dataverse e abilita funzionalità aggiuntive**. Seleziona **Abilita la condivisione dei dati** per condividere i dati di output di Customer Insights con un Data Lake gestito di Microsoft Dataverse.
+   - Se vuoi usare le [previsioni](predictions.md), configura la condivisione dei dati con Microsoft Dataverse o abilita l'inserimento dei dati dalle origini dati locali, fornisci l'URL dell'ambiente Microsoft Dataverse in **Configura la condivisione dei dati con Microsoft Dataverse e abilita funzionalità aggiuntive**. Seleziona **Abilita la condivisione dei dati** per condividere i dati di output di Customer Insights con un Data Lake gestito di Microsoft Dataverse.
 
      > [!NOTE]
      > - Condivisione dei dati con un Data Lake gestito di Microsoft Dataverse non è attualmente supportata quando salvi tutti i dati nel tuo Azure Data Lake Storage.
@@ -87,7 +87,7 @@ Per creare un ambiente:
      > [!div class="mx-imgBorder"]
      > ![Opzioni di configurazione per abilitare la condivisione dei dati con Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Quando esegui processi, come l'inserimento dati o la creazione di segmenti, le cartelle corrispondenti verranno create nell'account di archiviazione specificato sopra. I file di dati e i file model.json verranno creati e aggiunti alle rispettive sottocartelle in base al processo eseguito.
+   Quando esegui processi, come l'inserimento dati o la creazione di segmenti, le cartelle corrispondenti verranno create nell'account di archiviazione specificato sopra. I file di dati e i file model.json verranno creati e aggiunti alle cartelle, a seconda del nome del processo.
 
    Se crei più ambienti di Customer Insights e scegli di salvare le entità di output da quegli ambienti nell'account di archiviazione, verranno create cartelle separate per ogni ambiente con ci_<environmentid> nel contenitore.
 
@@ -146,7 +146,7 @@ Puoi modificare alcuni dei dettagli degli ambienti esistenti.
    > - Condivisione dei dati con un Data Lake gestito di Microsoft Dataverse non è attualmente supportata quando salvi tutti i dati nel tuo Azure Data Lake Storage.
    > - [La previsione di valori mancanti in un'entità](predictions.md) non è attualmente supportata quando abiliti la condivisione dei dati con il data lake gestito di Microsoft Dataverse.
 
-   Una volta che abiliti la condivisione dei dati con Microsoft Dataverse, verrà attivato un aggiornamento completo delle origini dati e di altri processi. Se i processi sono attualmente in esecuzione e in coda, non vedrai l'opzione per abilitare la condivisione dei dati con Microsoft Dataverse. È possibile attendere il completamento di tali processi o annullarli per abilitare la condivisione dei dati. 
+   Dopo aver abilitato la condivisione dei dati con Microsoft Dataverse, verrà attivato un aggiornamento completo delle origini dati e di altri processi. Se i processi sono attualmente in esecuzione, non vedrai l'opzione per abilitare la condivisione dei dati con Microsoft Dataverse. Attendere il completamento di tali processi o annullarli per abilitare la condivisione dei dati. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opzioni di configurazione per abilitare la condivisione dei dati con Microsoft Dataverse.":::
    
