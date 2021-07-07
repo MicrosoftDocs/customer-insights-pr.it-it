@@ -9,16 +9,16 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
-ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6245712"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305161"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Arricchimento di profili cliente con le affinità relative al marchio e agli interessi (anteprima)
 
-Usa i dati proprietari di Microsoft per arricchire i dati dei tuoi clienti con affinità di marchio e interesse. Queste affinità sono determinate in base ai dati di persone con dati demografici simili ai tuoi clienti. Queste informazioni ti consentono di comprendere e segmentare meglio i tuoi clienti in base alle loro affinità per specifici marchi e interessi.
+Usa i dati proprietari di Microsoft per arricchire i dati dei tuoi clienti con affinità di marchio e interesse. Queste affinità si basano sui dati di persone con dati demografici simili a quelli dei tuoi clienti. Queste informazioni ti consentono di comprendere e segmentare meglio i tuoi clienti in base alle loro affinità per specifici marchi e interessi.
 
 In Audience Insights, vai a **Dati** > **Arricchimento** per [configurare e visualizzare gli arricchimenti](enrichment-hub.md).
 
@@ -27,7 +27,7 @@ Per configurare l'arricchimento delle affinità del marchio, vai alla scheda **I
 Per configurare l'arricchimento delle affinità degli interessi, vai alla scheda **Individua** e seleziona **Arricchisci i miei dati** nel riquadro **Interessi**.
 
    > [!div class="mx-imgBorder"]
-   > ![Riquadri Marchi e interessi](media/BrandsInterest-tile-Hub.png "Riquadri Marchi e interessi")
+   > ![Riquadri Marchi e Interessi](media/BrandsInterest-tile-Hub.png "Riquadri Marchi e Interessi")
 
 ## <a name="how-we-determine-affinities"></a>Come determiniamo le affinità
 
@@ -53,7 +53,7 @@ A seconda della granularità che desideri per misurare l'affinità, puoi utilizz
 
 Attualmente supportiamo le seguenti opzioni di paese/area geografica: Australia, Canada (inglese), Francia, Germania, Regno Unito o Stati Uniti (inglese).
 
-Per selezionare un paese, apri **Arricchimento marchi** o **Arricchimento interessi** e seleziona **Cambia** accanto a **Paese**. Nel riquadro **Impostazioni paese/area geografica**, scegli un'opzione e seleziona **Applica**.
+Per selezionare un paese o un'area geografica, apri **Arricchimento marchi** o **Arricchimento interessi** e seleziona **Cambia** accanto a **Paese/area geografica**. Nel riquadro **Impostazioni paese/area geografica**, scegli un'opzione e seleziona **Applica**.
 
 ### <a name="implications-related-to-country-selection"></a>Implicazioni relative alla selezione del paese
 
@@ -61,9 +61,9 @@ Per selezionare un paese, apri **Arricchimento marchi** o **Arricchimento intere
 
 - Quando [scegli un settore](#define-your-brands-or-interests), otterrai i marchi o gli interessi più pertinenti in base al paese o all'area geografica selezionati.
 
-- Quando [arricchisci i profili](#refresh-enrichment), arricchiremo tutti i profili dei clienti per i quali otteniamo i dati per i marchi e gli interessi selezionati. Compresi i profili che non si trovano nel paese o nell'area geografica selezionata. Ad esempio, se hai selezionato la Germania, arricchiremo i profili situati negli Stati Uniti se abbiamo dati disponibili per i marchi e gli interessi selezionati negli Stati Uniti.
+- [Arricchendo i profili](#refresh-enrichment), arricchiremo tutti i profili dei clienti per i quali otteniamo dati per i marchi e gli interessi selezionati, inclusi i profili che non si trovano nel paese o nell'area geografica selezionata. Ad esempio, se hai selezionato la Germania, arricchiremo i profili situati negli Stati Uniti se abbiamo dati disponibili per i marchi e gli interessi selezionati negli Stati Uniti.
 
-## <a name="configure-enrichment"></a>Configurare l'arricchimento
+## <a name="configure-enrichment"></a>Configurazione dell'arricchimento
 
 Un'esperienza guidata ti aiuta nella configurazione degli arricchimenti. 
 
@@ -88,19 +88,19 @@ Seleziona **Entità arricchita** e scegli il set di dati che desideri arricchire
 
 Mappa i campi dall'entità cliente unificata per definire il segmento demografico che desideri venga utilizzato per arricchire i tuoi dati cliente. Mappa Paese/area geografica e almeno gli attributi Data di nascita o Sesso. Inoltre, devi eseguire il mapping di almeno una città (e provincia) o un CAP. Seleziona **Modifica** per definire la mappatura dei campi e al termine seleziona **Applica**. Seleziona **Salva** per completare la mappatura dei campi.
 
-Sono supportati i seguenti formati e valori, i valori non fanno distinzione tra maiuscole e minuscole:
+Sono supportati i seguenti formati e valori (i valori non fanno distinzione tra maiuscole e minuscole):
 
-- **Data di nascita**: si consiglia di convertire la data di nascita nel tipo DateTime durante l'inserimento dati. In alternativa, può essere una stringa nel formato "aaaa-MM-gg" o "aaaa-MM-ggTHH:mm:ssZ" [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
-- **Sesso**: Maschio, Femmina, Sconosciuto
-- **Codice postale**: codici postali a cinque cifre per gli Stati Uniti, codice postale standard per gli altri paesi
-- **Città**: nome della città in inglese
+- **Data di nascita**: si consiglia di convertire la data di nascita nel tipo DateTime durante l'inserimento dati. In alternativa, può essere una stringa in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formato "aaaa-MM-gg" o "aaaa-MM-ggTHH:mm:ss".
+- **Sesso**: Maschio, Femmina, Sconosciuto.
+- **Codice postale**: CAP a cinque cifre per gli Stati Uniti, codice postale standard ovunque.
+- **Città**: nome della città in inglese.
 - **Stato/Provincia**: abbreviazione di due lettere per gli Stati Uniti e il Canada. Abbreviazione di due o tre lettere per l'Australia. Non applicabile per Francia, Germania o Regno Unito.
 - **Paese**:
 
   - US: Stati Uniti d'America, Stati Uniti, USA, US, America
   - CA: Canada, CA
   - GB: Regno Unito, UK, Gran Bretagna, GB, Regno Unito di Gran Bretagna e Irlanda del Nord, Regno Unito di Gran Bretagna
-  - AU: Australia, AU, Commonwealth di Australia
+  - AU: Australia, AU, Commonwealth of Australia
   - FR: Francia, FR, Repubblica francese
   - DE: Germania, tedesco, Deutschland, Allemagne, DE, Repubblica Federale di Germania, Repubblica di Germania
 
@@ -113,10 +113,11 @@ Infine, puoi rivedere le informazioni e fornire un nome per l'arricchimento.
 ## <a name="refresh-enrichment"></a>Aggiornare l'arricchimento
 
 Esegui l'arricchimento dopo aver configurato marchi, interessi e mappatura dei campi per i dati demografici. Per avviare il processo, seleziona **Esegui** nella pagina di configurazione del marchio o degli interessi. Inoltre, puoi consentire al sistema di eseguire automaticamente l'arricchimento come parte di un aggiornamento pianificato.
+
 A seconda della dimensione dei dati cliente, potrebbero essere necessari alcuni minuti per completare l'esecuzione di un arricchimento.
 
 > [!TIP]
-> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
+> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Visualizza dettagli** per una delle attività del lavoro, troverai informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
 
 ## <a name="enrichment-results"></a>Risultati dell'arricchimento
 
@@ -134,7 +135,7 @@ Le affinità per marchi e interessi possono essere visualizzate anche nelle sing
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md), [misure](measures.md) ed [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
+Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md) e [misure](measures.md) e persino [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

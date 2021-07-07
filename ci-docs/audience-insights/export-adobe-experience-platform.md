@@ -1,6 +1,6 @@
 ---
 title: Esportare i dati di Customer Insights in Adobe Experience Platform
-description: Scopri come utilizzare i segmenti di informazioni dettagliate gruppo di destinatari in Adobe Experience Platform.
+description: Scopri come utilizzare i segmenti di informazioni dettagliate sul gruppo di destinatari in Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760106"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305529"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Utilizzare i segmenti di Customer Insights in Adobe Experience Platform (anteprima)
 
-Come utente di informazioni dettagliate gruppo di destinatari per Dynamics 365 Customer Insights, potresti aver creato segmenti per rendere più efficienti le tue campagne di marketing rivolgendoti a un gruppo di destinatari pertinente. Per utilizzare un segmento dalle informazioni dettagliate gruppo di destinatari in Adobe Experience Platform e nelle applicazioni come Adobe Campaign Standard, devi seguire alcuni passaggi descritti in questo articolo.
+Come utente di informazioni dettagliate sul gruppo di destinatari in Dynamics 365 Customer Insights, potresti aver creato segmenti per rendere più efficienti le tue campagne di marketing mirando a segmenti di pubblico pertinenti. Per utilizzare un segmento dalle informazioni dettagliate gruppo di destinatari in Adobe Experience Platform e nelle applicazioni come Adobe Campaign Standard, devi seguire alcuni passaggi descritti in questo articolo.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Diagramma di processo dei passaggi descritti in questo articolo.":::
 
@@ -55,15 +55,15 @@ Una volta identificato il nostro gruppo di destinatari di destinazione, possiamo
 
 1. Vai ad **Amministratore** > **Connessioni**.
 
-1. Seleziona **Aggiungi connessione** e scegli **Archiviazione BLOB di Azure** oppure seleziona **Imposta** nel riquadro **Archiviazione BLOB di Azure**:
+1. Seleziona **Aggiungi connessione** e scegli **Spazio di Archiviazione BLOB di Azure** o seleziona **Imposta** nel riquadro **Spazio di Archiviazione BLOB di Azure** per configurare la connessione.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Riquadro di configurazione per Archiviazione BLOB di Azure."::: per configurare la connessione.
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Riquadro di configurazione per Archiviazione BLOB di Azure."::: 
 
 1. Assegna alla tua connessione un nome riconoscibile nel campo **Nome visualizzato**. Il nome e il tipo di connessione descrivono la connessione. Consigliamo di scegliere un nome che spieghi lo scopo e l'obiettivo della connessione.
 
 1. Scegli chi può utilizzare questa connessione. Se non esegui alcuna azione, l'impostazione predefinita sarà Amministratori. Per ulteriori informazioni, vedi [Consentire ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Immetti **Nome utente**, **Chiave account**, e **Contenitore** per l'account di archiviazione BLOB in cui vuoi esportare il segmento.  
+1. Immetti **Nome utente**, **Chiave account** e **Contenitore** per l'account di archiviazione BLOB in cui vuoi esportare il segmento.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Screenshot della configurazione dell'account di archiviazione. "::: 
    
@@ -80,7 +80,7 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Per creare una nuova esportazione seleziona **Aggiungi esportazione**.
 
-1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Archiviazione BLOB di Azure. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
+1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Archiviazione BLOB di Azure. Se non vedi questo nome di sezione, non sono disponibili connessioni di questo tipo.
 
 1. Scegli il segmento che vuoi esportare. In questo esempio, è **ChurnProneCustomers**.
 
@@ -95,7 +95,7 @@ Ora puoi [esportare il segmento su richiesta](export-destinations.md#run-exports
 > [!NOTE]
 > Assicurati che il numero di record nel segmento esportato rientri nel limite consentito dalla licenza di Adobe Campaign Standard.
 
-I dati esportati vengono archiviati nel contenitore dell'archivio BLOB di Azure configurato in precedenza. Il seguente percorso della cartella viene creato automaticamente nel tuo contenitore:
+I dati esportati vengono archiviati nel contenitore dell'archiviazione BLOB di Azure configurato in precedenza. Il seguente percorso della cartella viene creato automaticamente nel tuo contenitore:
 
 *%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv*
 
@@ -121,9 +121,10 @@ Dopo aver definito la connessione di origine, [configura un flusso di dati](http
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Crea un gruppo di destinatari in Adobe Campaign Standard
 
-Per inviare il messaggio e-mail per questa campagna, utilizzeremo Adobe Campaign Standard. Dopo aver importato i dati in Adobe Experience Platform, è necessario [creare un gruppo di destinatari](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) in Adobe Campaign Standard utilizzando i dati di Adobe Experience Platform.
+Per inviare l'e-mail per questa campagna, utilizzeremo Adobe Campaign Standard. Dopo aver importato i dati in Adobe Experience Platform, è necessario [creare un gruppo di destinatari](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) in Adobe Campaign Standard utilizzando i dati di Adobe Experience Platform.
 
-Scopri come [utilizzare il generatore di segmenti](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment) in Adobe Campaign Standard per definire un gruppo di destinatari basato sui dati di Adobe Experience Platform.
+
+Scopri come [utilizzare il generatore di segmenti](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) in Adobe Campaign Standard per definire un gruppo di destinatari basato sui dati di Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Creare e inviare l'e-mail utilizzando Adobe Campaign Standard
 

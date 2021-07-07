@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 87bf8d7b9c23633ebdc929e15ac645c55cc21e4a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 09d449e51a3a47ec916ab3d017419c9d9be1ffcf
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595385"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305715"
 ---
 # <a name="system-configuration"></a>Configurazione di sistema
 
@@ -94,7 +94,7 @@ Seleziona **Salva** per confermare le selezioni.
 
 ## <a name="api-usage-tab"></a>Scheda utilizzo API
 
-Trova i dettagli sull'utilizzo dell'API in tempo reale e guarda quali eventi si sono verificati in un determinato intervallo di tempo. Scegli il intervallo di tempo nel menu a discesa **Seleziona un intervallo di tempo**. 
+Trova i dettagli sull'utilizzo dell'API in tempo reale e guarda quali eventi si sono verificati in un determinato intervallo di tempo. Scegli l'intervallo di tempo nel menu a discesa **Seleziona un intervallo di tempo**. 
 
 **Utilizzo API** contiene tre sezioni: 
 - **Chiamate API** - un grafico che visualizza il numero aggregato di chiamate all'API nel intervallo di tempo selezionato.

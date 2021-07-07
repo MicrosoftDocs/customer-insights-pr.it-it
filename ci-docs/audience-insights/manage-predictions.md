@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095722"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315883"
 ---
 # <a name="manage-predictions"></a>Gestisci previsioni
 
@@ -35,9 +35,6 @@ Questo articolo illustra alcune attività condivise dalla maggior parte degli sc
 Il report sull'usabilità dei dati di input fornisce una visualizzazione consolidata degli errori e degli avvisi che potrebbero essere generati dalle previsioni predefinite. Fornisce inoltre consigli su come migliorare le prestazioni del modello.
 
 Il report è disponibile dopo che un modello ha completato il processo di addestramento. Viene creato separatamente per ogni modello, indipendentemente dal fatto che sia stato completato correttamente o meno.
-
-> [!NOTE]
-> Attualmente, questa funzione è disponibile solo per il modello Transaction Churn.
 
 ### <a name="view-the-input-data-usability-report"></a>Visualizza il report sull'usabilità dei dati di input
 

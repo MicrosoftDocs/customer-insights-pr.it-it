@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111392"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306262"
 ---
 # <a name="segments-overview"></a>Panoramica dei segmenti
 
@@ -38,7 +38,7 @@ Vai alla pagina **Segmenti** per visualizzare tutti i segmenti salvati e gestirl
 
 Ogni segmento è rappresentato da una riga che include informazioni aggiuntive sul segmento.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmento selezionato con l'elenco a discesa delle opzioni e le opzioni disponibili.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmento selezionato con elenco a discesa delle opzioni e opzioni disponibili.":::
 
 Quando selezioni un segmento sono disponibili le seguenti azioni:
 
@@ -68,7 +68,7 @@ Puoi esportare un segmento dalla pagina dei segmenti o dalla [pagina delle espor
 
 1. Seleziona **Mostra più [...]** per il segmento che desideri esportare.
 
-1. Seleziona **Gestisci esportazioni** dal menu a discesa delle azioni.
+1. Seleziona **Gestisci esportazioni** dall'elenco a discesa delle azioni.
 
 1. La pagina **Esportazioni (anteprima) per segmento** si apre. Puoi vedere tutte le esportazioni configurate raggruppate per esportazioni che contengono il segmento corrente o non lo contengono.
 

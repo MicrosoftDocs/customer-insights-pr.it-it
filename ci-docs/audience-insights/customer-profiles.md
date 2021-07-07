@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896332"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304609"
 ---
 # <a name="customer-profiles"></a>Profili cliente
 
@@ -57,13 +57,13 @@ Seleziona uno dei riquadri del cliente per aprire la **pagina Dettagli cliente**
 
 I dettagli del cliente includono:
 
--   **Riquadro Profilo cliente:** questo riquadro mostra i diversi valori dell'entità del profilo cliente unificato. Questi dettagli possono includere indirizzo e-mail, nome, città e così via. 
+-   **Riquadro Profilo cliente**: questo riquadro mostra i diversi valori dell'entità del profilo cliente unificato. Questi dettagli possono includere indirizzo e-mail, nome, città e così via. 
 
--   **Interessi potenziali, Marchi potenziali:** mostra se hai configurato un arricchimento di prima parte. Rappresenta potenziali interessi e affinità per i marchi che un cliente con un profilo simile a questo cliente potrebbe avere. Per ulteriori informazioni, vedi [Arricchire profili cliente con affinità di marchi e interessi](enrichment-microsoft.md).
+-   **Interessi potenziali, Marchi potenziali**: mostra se hai configurato un arricchimento di prima parte. Rappresenta potenziali interessi e affinità per i marchi che un cliente con un profilo simile a questo cliente potrebbe avere. Per ulteriori informazioni, vedi [Arricchire profili cliente con affinità di marchi e interessi](enrichment-microsoft.md).
 
--   **Misure:** mostra se hai configurato una o più misure di un tipo specifico: misure attributo cliente. Includono KPI calcolati relativi ai clienti a livello di singolo cliente. Per ulteriori informazioni, vedi [Definire e gestire misure](measures.md).
+-   **Misure**: mostra se hai configurato una o più misure di un tipo specifico: misure attributo cliente. Includono KPI calcolati relativi ai clienti a livello di singolo cliente. Per ulteriori informazioni, vedi [Definire e gestire misure](measures.md).
 
--   **Sequenza temporale impegni:** mostra se hai configurato impegni. La visualizzazione della sequenza temporale contiene impegni ordinati cronologicamente di questo cliente, a partire dall'impegno più recente. Per altre informazioni, vedi [Impegni cliente](activities.md).
+-   **Sequenza temporale impegni**: mostra se hai configurato impegni. La visualizzazione della sequenza temporale contiene impegni ordinati cronologicamente di questo cliente, a partire dall'impegno più recente. Per altre informazioni, vedi [Impegni cliente](activities.md).
 
 Seleziona **Torna a Clienti** per tornare alla pagina di ricerca del cliente.
 

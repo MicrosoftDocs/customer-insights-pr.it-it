@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965583"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305437"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Arricchimento dei profili dei clienti con indirizzi avanzati
 
@@ -22,7 +22,7 @@ Gli indirizzi nei tuoi dati possono essere non strutturati, incompleti o errati.
 
 ## <a name="how-we-enhance-addresses"></a>Come migliorare gli indirizzi
 
-Il nostro modello passa attraverso un processo in due fasi per migliorare un indirizzo. Innanzitutto, analizza l'indirizzo per identificare i suoi componenti e li inserisce in un formato strutturato. Quindi, utilizza l'intelligenza artificiale per correggere, completare e standardizzare i valori nell'indirizzo.
+Il nostro modello passa attraverso un processo in due fasi per migliorare un indirizzo. Innanzitutto, analizza l'indirizzo per identificare i suoi componenti e li inserisce in un formato strutturato. Quindi, utilizziamo l'intelligenza artificiale per correggere, completare e standardizzare i valori nell'indirizzo.
 
 ### <a name="example"></a>Esempio
 
@@ -50,7 +50,7 @@ Gli indirizzi avanzati funzionano solo con i valori già presenti nei dati degli
 2. Verifica se uno qualsiasi dei valori, come codici postali o nomi di strade, è valido.
 3. Cambia i valori che non riconosce.
 
-Il modello utilizza tecniche basate sull'apprendimento automatico per migliorare gli indirizzi. Sebbene applichiamo una soglia di affidabilità elevata per quando il modello modifica un valore di input, come con qualsiasi modello basato sull'apprendimento automatico, la precisione del 100% non è garantita.
+Il modello utilizza tecniche basate sull'apprendimento automatico per migliorare gli indirizzi. Sebbene applichiamo una soglia di confidenza elevata per quando il modello modifica un valore di input, come con qualsiasi modello basato sull'apprendimento automatico, l'accuratezza del 100% non è garantita.
 
 ## <a name="supported-countries-or-regions"></a>Paesi o aree geografiche supportati
 
@@ -76,7 +76,7 @@ Gli indirizzi devono contenere un valore di paese/area geografica. Non elaboriam
 1. Seleziona il formato degli indirizzi nel set di dati. Scegli **Indirizzo ad attributo singolo** se gli indirizzi nei tuoi dati utilizzano un unico campo. Scegli **Indirizzo a più attributi** se gli indirizzi nei tuoi dati utilizzano più di un campo dati.
 
    > [!NOTE]
-   > Il paese/area geografica è obbligatorio sia nell'indirizzo ad attributo singolo che in quello a più attributi. Gli indirizzi che non contengono valori di paese/area geografica validi o supportati non verranno arricchiti
+   > Il valore di paese/area geografica è obbligatorio sia negli indirizzi con attributo singolo che con più attributi. Gli indirizzi che non contengono valori di paese/area geografica validi o supportati non verranno arricchiti.
 
 1.  Mappa i campi dell'indirizzo dalla tua entità cliente unificato.
 
@@ -98,6 +98,6 @@ Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito se
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md), [misure](measures.md) ed [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
+Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md) e [misure](measures.md) e persino [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

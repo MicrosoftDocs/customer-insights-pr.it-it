@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085627"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306033"
 ---
 # <a name="match-entities"></a>Mettere in corrispondenza le entità
 
@@ -209,7 +209,7 @@ Prova diverse soglie di precisione sulle condizioni per trovare il valore ottima
 
 Puoi riconfigurare e ottimizzare la maggior parte dei parametri di corrispondenza.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Screenshot del menu a discesa con le opzioni delle regole di corrispondenza.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Screenshot del menu a discesa con le opzioni della regola di corrispondenza.":::
 
 - **Modifica l'ordine delle tue regole** se hai definito più regole. Puoi riordinare le regole di corrispondenza selezionando le opzioni **Sposta su** e **Sposta giù** o tramite trascinamento.
 
@@ -247,7 +247,7 @@ Puoi specificare condizioni in base a cui alcuni record devono sempre corrispond
 
 1. Vai a **Dati** > **Origini dati** e inserisci i file di modello come nuove entità. Una volta inseriti, puoi usarli per specificare la configurazione della corrispondenza.
 
-1. Dopo aver caricato i file e le entità disponibili, seleziona nuovamente l'opzione **Corrispondenza personalizzata**. Vedrai le opzioni per specificare le entità che desideri includere. Seleziona le entità obbligatorie dal menu a discesa.
+1. Dopo aver caricato i file e le entità disponibili, seleziona nuovamente l'opzione **Corrispondenza personalizzata**. Vedrai le opzioni per specificare le entità che desideri includere. Seleziona le entità richieste dal menu a discesa.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Screenshot della finestra di dialogo per scegliere le sostituzioni per uno scenario di corrispondenza personalizzata.":::
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866412"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304931"
 ---
 # <a name="customer-activities"></a>Impegni cliente
 
@@ -45,7 +45,7 @@ Le tue origini dati possono includere entità con dati transazionali e dati di i
 
    - **Primo**: Campo esterno nell'entità dell'impegno che verrà utilizzato per stabilire una relazione con un'altra entità.
    - **Secondo**: Entità cliente di origine corrispondente con la quale l'entità impegno sarà in relazione. È possibile fare riferimento solo alle entità del cliente di origine utilizzate nel processo di unificazione dei dati.
-   - **Terzo**: Se esiste già una relazione tra questa entità impegno e l'entità cliente di origine selezionata, il nome della relazione sarà in modalità di sola lettura. Se non esiste una relazione di questo tipo, verrà creata una nuova relazione con il nome fornito in questa casella.
+   - **Terzo**: Se esiste già una relazione tra questa entità impegno e l'entità cliente di origine selezionata, il nome della relazione sarà in modalità di sola lettura. Se non esiste tale relazione, verrà creata una nuova relazione con il nome fornito in questa casella.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definisci la relazione dell'entità.":::
 
@@ -53,19 +53,19 @@ Le tue origini dati possono includere entità con dati transazionali e dati di i
 
 1. Nel passaggio **Unificazione impegno**, scegli l'evento dell'impegno e l'ora di inizio dell'impegno. 
    - **Campi obbligatori**
-      1. **Impegno evento**: Campo che rappresenta l'evento per questo impegno
-      2. **Timestamp**: Campo che rappresenta l'ora di inizio dell'impegno.
+      - **Impegno evento**: Campo che rappresenta l'evento per questo impegno.
+      - **Timestamp**: Campo che rappresenta l'ora di inizio dell'impegno.
 
    - **Campi facoltativi**
-      1. **Ulteriori dettagli**: Campo con informazioni rilevanti per questo impegno.
-      2. **Icona**: Icona che rappresenta al meglio questo tipo di impegno.
-      3. **indirizzo Web**: Campo contenente un URL con informazioni su questo impegno. Ad esempio, il sistema transazionale che genera questo impegno. Questo URL può essere qualsiasi campo di origine dati oppure può essere costruito come un nuovo campo usando una trasformazione Power Query. I dati dell'URL verranno archiviati nell'entità *Impegno unificato* che può essere consumata a valle utilizzando le [API](apis.md).
+      - **Ulteriori dettagli**: Campo con informazioni rilevanti per questo impegno.
+      - **Icona**: Icona che rappresenta al meglio questo tipo di impegno.
+      - **indirizzo Web**: Campo contenente un URL con informazioni su questo impegno. Ad esempio, il sistema transazionale che genera questo impegno. Questo URL può essere qualsiasi campo di origine dati oppure può essere costruito come un nuovo campo usando una trasformazione Power Query. I dati dell'URL verranno archiviati nell'entità *Impegno unificato* che può essere consumata a valle utilizzando le [API](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Specifica i dati dell'impegno del cliente in un'entità Impegno unificato.":::
 
 1. Seleziona **Avanti** per passare al passaggio successivo. Puoi selezionare **Termina e rivedi** per salvare l'impegno ora con il tipo di impegno impostato su **Altro**. 
 
-1. Nel passaggio **Tipo di impegno** scegli il tipo di impegno e, facoltativamente, seleziona se vuoi mappare semanticamente alcuni tipi di impegno da utilizzare in altre aree di Customer Insights. Attualmente, i tipi di impegno *Sottoscrizione* & *SalesOrderLine* possono essere mappati semanticamente dopo aver accettato di mappare i campi. Se un tipo di impegno non è pertinente per il nuovo impegno, puoi scegliere *Altro* o *Crea nuovo* per un tipo di impegno personalizzato.
+1. Nel passaggio **Tipo di impegno** scegli il tipo di impegno e, facoltativamente, seleziona se vuoi mappare semanticamente alcuni tipi di impegno da utilizzare in altre aree di Customer Insights. Attualmente, i tipi di attività *Sottoscrizione* e *SalesOrderLine* possono essere mappati semanticamente dopo aver accettato di mappare i campi. Se un tipo di impegno non è pertinente per il nuovo impegno, puoi scegliere *Altro* o *Crea nuovo* per un tipo di impegno personalizzato.
 
 1. Seleziona **Avanti** per passare al passaggio successivo. 
 
@@ -89,7 +89,7 @@ Le seguenti azioni sono disponibili quando selezioni un impegno.
 
 - **Modifica**: Apre la configurazione dell'impegno nella fase di revisione. Puoi modificare parte o tutta la configurazione corrente da questo passaggio. Dopo aver modificato la configurazione, seleziona **Salva impegno** e poi seleziona **Esegui** per elaborare le modifiche.
 
-- **Rinomina**: Apre una finestra di dialogo in cui inserire un nome diverso per l'impegno selezionato. Seleziona **Salva** per applicare le modifiche.
+- **Rinomina**: apre una finestra di dialogo in cui puoi inserire un nome diverso per l'attività selezionata. Seleziona **Salva** per applicare le modifiche.
 
 - **Elimina**: Apre una finestra di dialogo per confermare l'eliminazione dell'impegno selezionato. È inoltre possibile eliminare più di un impegno contemporaneamente selezionando gli impegni e quindi l'icona di eliminazione. Per confermare l'eliminazione seleziona **Elimina**.
 

@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049255"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304801"
 ---
 # <a name="define-and-manage-measures"></a>Definire e gestire misure
 
-Le misure ti aiutano a comprendere meglio i comportamenti dei clienti e le prestazioni aziendali. Tengono in considerazione i valori rilevanti dei [profili unificati](data-unification.md). Ad esempio, un'azienda vuole vedere la *spesa totale per cliente* per comprendere la cronologia degli acquisti del singolo cliente o misurare le *vendite totali dell'azienda* per comprendere i ricavi a livello di aggregazione dell'intera azienda.  
+Le misure ti aiutano a comprendere meglio i comportamenti dei clienti e le prestazioni aziendali. Tengono in considerazione i valori rilevanti dei [profili unificati](data-unification.md). Ad esempio, un'azienda vuole vedere la *spesa totale per cliente* per comprendere la cronologia degli acquisti di un singolo cliente oppure misurare le *vendite totali dell'azienda* per comprendere le entrate a livello aggregato nell'intera attività.  
 
 Le misure vengono create utilizzando il generatore di misure, una piattaforma di query di dati con vari operatori e semplici opzioni di mapping. Ti consente di filtrare i dati, raggruppare i risultati, rilevare [percorsi di relazione tra entità](relationships.md) e visualizzare in anteprima l'output.
 
@@ -36,15 +36,15 @@ Questa sezione illustra come creare una nuova misura da zero. È possibile crear
    > [!NOTE]
    > Se la configurazione della nuova misura ha solo due campi, ad esempio CustomerID e un calcolo, l'output verrà aggiunto come una nuova colonna all'entità generata dal sistema denominata Customer_Measure. E sarai in grado di vedere il valore della misura nel profilo cliente unificato. Altre misure genereranno le proprie entità.
 
-1. Nell'area di configurazione, scegli la funzione di aggregazione dal menu a discesa **Seleziona funzione**. Le funzioni di aggregazione includono: 
+1. Nell'area di configurazione scegli la funzione di aggregazione dal menu a discesa **Seleziona funzione**. Le funzioni di aggregazione includono: 
    - **Sum**
    - **Media**
    - **Conteggio**
    - **Numero univoco**
    - **Max**
    - **Min**
-   - **Primo** : prende il primo valore del record di dati
-   - **Ultimo** : prende l'ultimo valore aggiunto al record di dati
+   - **Primo**: prende il primo valore del record di dati
+   - **Ultimo**: prende l'ultimo valore aggiunto al record di dati
 
    :::image type="content" source="media/measure-operators.png" alt-text="Operatori per i calcoli delle misure.":::
 
@@ -64,17 +64,19 @@ Questa sezione illustra come creare una nuova misura da zero. È possibile crear
 
 1. Per aggiungere filtri, seleziona **Filtro** nell'area di configurazione. 
   
-   1. Nella sezione **Aggiungi attributo** del riquadro **Filtri**, seleziona l'attributo che desideri utilizzare per creare filtri.
+   1. Nella sezione **Aggiungi attributo** del riquadro **Filtri** seleziona l'attributo che desideri utilizzare per creare filtri.
    1. Imposta gli operatori di filtro per definire il filtro per ogni attributo selezionato.
    1. Seleziona **Applica** per aggiungere i filtri alla misura.
 
 1. Per aggiungere dimensioni, seleziona **Dimensione** nell'area di configurazione. Le dimensioni verranno visualizzate come colonne nell'entità di output della misura.
+ 
    1. Seleziona **Modifica dimensioni** per aggiungere gli attributi di dati in base ai quali raggruppare i valori di misura. Ad esempio, città o sesso. Per impostazione predefinita, la dimensione *CustomerID* è selezionata per creare *misure a livello di cliente*. È possibile rimuovere la dimensione predefinita se si desidera creare *misure a livello di azienda*.
    1. Seleziona **Fatto** per aggiungere le dimensioni alla misura.
 
-1. Se sono presenti valori nei dati che è necessario sostituire con un numero intero, ad esempio, sostituisci *nullo* con *0*, seleziona **Regole**. Configura la regola e assicurati di scegliere solo numeri interi come sostituti.
+1. Se sono presenti valori nei dati che devi sostituire con un numero intero, ad esempio se devi sostituire *Null* con *0*, seleziona **Regole**. Configura la regola e assicurati di scegliere solo numeri interi come sostituti.
 
 1. Se sono presenti più percorsi tra l'entità di dati mappata e l'entità *Cliente*, è necessario scegliere uno dei [percorsi di relazione tra entità](relationships.md) identificati. I risultati delle misure possono variare a seconda del percorso selezionato. 
+   
    1. Seleziona **Preferenze dati** e scegli il percorso dell'entità da utilizzare per identificare la misura. Se esiste un solo percorso per l'entità *Cliente*, questo controllo non verrà visualizzato.
    1. Seleziona **Fatto** per applicare la selezione. 
 
@@ -123,7 +125,7 @@ La procedura seguente descrive i passaggi per creare una nuova misura utilizzand
 
 1. Seleziona **Fatto**.
 
-1. Nella sezione **Imposta periodo di tempo** definisci l'intervallo di tempo dei dati da utilizzare. Scegli se desideri che la nuova misura copra l'intero set di dati selezionando **Sempre**. O se vuoi che la misura si concentri su un **Periodo di tempo specifico**.
+1. Nella sezione **Imposta periodo di tempo** definisci l'intervallo di tempo dei dati da utilizzare. Scegli se vuoi che la nuova misura copra l'intero set di dati selezionando **Sempre** o se vuoi che la misura si concentri su un **Periodo di tempo specifico**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Screenshot che mostra la sezione del periodo di tempo durante la configurazione di una misura da un modello.":::
 
@@ -142,12 +144,12 @@ La procedura seguente descrive i passaggi per creare una nuova misura utilizzand
 
 Puoi trovare l'elenco delle misure nella pagina **Misure**.
 
-Troverai informazioni sul tipo di misura, l'autore, la data di creazione e lo stato. Quando si seleziona una misura dall'elenco, è possibile visualizzare in anteprima l'output e scaricare un file .CSV.
+Troverai informazioni sul tipo di misura, l'autore, la data di creazione e lo stato. Quando selezioni una misura dall'elenco, puoi visualizzare in anteprima l'output e scaricare un file CSV.
 
 Per aggiornare tutte le misure contemporaneamente, seleziona **Aggiorna tutto** senza selezionare una misura specifica.
 
 > [!div class="mx-imgBorder"]
-> ![Azioni per gestire singole misure](media/measure-actions.png "Azioni per gestire singole misure")
+> ![Azioni per gestire singole misure.](media/measure-actions.png "Azioni per gestire singole misure.")
 
 Seleziona una misura dall'elenco per le seguenti opzioni:
 
@@ -159,11 +161,11 @@ Seleziona una misura dall'elenco per le seguenti opzioni:
 - **Attiva** o **Disattiva**. Le misure inattive non verranno aggiornate durante un [aggiornamento pianificato](system.md#schedule-tab).
 
 > [!TIP]
-> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
+> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Visualizza dettagli** per una delle attività del lavoro, troverai informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
 
 ## <a name="next-step"></a>Passaggio successivo
 
-Puoi utilizzare le misure esistenti per creare [un segmento di clienti](segments.md).
+Puoi utilizzare le misure esistenti per creare [un segmento di clientela](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

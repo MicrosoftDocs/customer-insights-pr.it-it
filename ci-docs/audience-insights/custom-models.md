@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700673"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305642"
 ---
 # <a name="custom-machine-learning-models"></a>Modelli di Machine Learning personalizzati
 
@@ -72,7 +72,7 @@ Le previsioni offrono funzionalità per creare migliori esperienze cliente nonch
       > [!div class="mx-imgBorder"]
       > ![Riquadro dei parametri di output del modello](media/intelligence-screen3-outputparameters.png "Riquadro dei parametri di output del modello")
 
-1. Seleziona l'attributo corrispondente nell'elenco a discesa **ID cliente nei risultati** che identifica i clienti e seleziona **Salva**.
+1. Seleziona l'attributo corrispondente dall'elenco a discesa **ID cliente nei risultati** che identifica i clienti e seleziona **Salva**.
 
    > [!div class="mx-imgBorder"]
    > ![Riquadro Correla risultati ai dati del cliente](media/intelligence-screen4-relatetocustomer.png "Riquadro Correla risultati ai dati del cliente")
@@ -100,7 +100,7 @@ Le previsioni offrono funzionalità per creare migliori esperienze cliente nonch
       1. Seleziona **Nome parametro archivio dati di output** per la pipeline di test.
       1. Seleziona il **Nome parametro percorso di output** per la pipeline di test.
 
-1. Seleziona l'attributo corrispondente nell'elenco a discesa **ID cliente nei risultati** che identifica i clienti e seleziona **Salva**.
+1. Seleziona l'attributo corrispondente dall'elenco a discesa **ID cliente nei risultati** che identifica i clienti e seleziona **Salva**.
    Scegli un attributo nell'output di inferenza con valori simili alla colonna ID cliente dell'entità Cliente. Se non hai una colonna di questo tipo nel tuo set di dati, scegli un attributo che identifichi in modo univoco la riga.
 
 ## <a name="run-a-workflow"></a>Eseguire un flusso di lavoro

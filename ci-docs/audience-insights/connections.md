@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896102"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304977"
 ---
 # <a name="connections-preview-overview"></a>Panoramica delle connessioni (anteprima)
 
@@ -74,7 +74,9 @@ Quando si imposta o si modifica una connessione di esportazione, si sceglie a qu
 
 ## <a name="remove-a-connection"></a>Rimuovere una connessione
 
-Se la connessione che stai rimuovendo viene utilizzata da arricchimenti o esportazioni, devi prima scollegarli o rimuoverli. La finestra di dialogo Rimuovi ti guiderà agli arricchimenti o alle esportazioni pertinenti. Gli arricchimenti e le esportazioni distaccati diventano inattivi. Li riattivi aggiungendo loro un'altra connessione nella pagina [Arricchimenti](enrichment-hub.md) o [Esportazioni](export-destinations.md).
+Se la connessione che stai rimuovendo viene utilizzata da arricchimenti o esportazioni, devi prima scollegarli o rimuoverli. La finestra di dialogo Rimuovi ti guiderà agli arricchimenti o alle esportazioni pertinenti. 
+
+Gli arricchimenti e le esportazioni distaccati diventano inattivi. Li riattivi aggiungendo loro un'altra connessione nella pagina [Arricchimenti](enrichment-hub.md) o [Esportazioni](export-destinations.md).
 
 1. Vai ad **Amministratore** > **Connessioni (anteprima)**.
 

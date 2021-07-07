@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253045"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305483"
 ---
 # <a name="exports-preview-overview"></a>Panoramica delle esportazioni (anteprima)
 
 La pagina **Esportazioni** mostra tutte le esportazioni configurate. Le esportazioni condividono dati specifici con varie applicazioni. Possono includere profili o entità del cliente, schemi e dettagli di mappatura. Ogni esportazione richiede una [connessione, impostata da un amministratore, per gestire l'autenticazione e l'accesso](connections.md).
 
-Vai a **Dati** > **Esportazioni** per visualizzare la pagina delle esportazioni. Tutti i ruoli utente hanno accesso per visualizzare le esportazioni configurate. Utilizza il campo di ricerca nella barra dei comandi per trovare le esportazioni in base al nome, al nome della connessione o al tipo di connessione.
+Vai a **Dati** > **Esportazioni** per visualizzare la pagina delle esportazioni. Tutti i ruoli utente possono visualizzare le esportazioni configurate. Utilizza il campo di ricerca nella barra dei comandi per trovare le esportazioni in base al nome, al nome della connessione o al tipo di connessione.
 
 ## <a name="set-up-a-new-export"></a>Configurare una nuova esportazione
 
@@ -73,7 +73,7 @@ Dopo aver creato le destinazioni di esportazione, vengono elencate in **Dati** >
 
 Ogni esportazione configurata ha una pianificazione di aggiornamento. Durante un aggiornamento, il sistema cerca dati nuovi o aggiornati per includerli in un'esportazione. Per impostazione predefinita, le esportazioni vengono eseguite come parte di ogni [aggiornamento del sistema programmato](system.md#schedule-tab). Puoi personalizzare la pianificazione dell'aggiornamento o disattivarla per eseguire le esportazioni manualmente.
 
-Le pianificazioni delle esportazioni dipendono dallo stato dell'ambiente. Se ci sono aggiornamenti su [dipendenze](system.md#refresh-policies) in corso quando dovrebbe iniziare un'esportazione pianificata, il sistema completerà prima le dipendenze e quindi eseguirà l'esportazione. Puoi vedere quando un'esportazione è stata aggiornata l'ultima volta nella colonna **Aggiornato**.
+Le pianificazioni delle esportazioni dipendono dallo stato dell'ambiente. Se vi sono aggiornamenti in corso su [dipendenze](system.md#refresh-policies) quando dovrebbe iniziare un'esportazione pianificata, il sistema completerà prima gli aggiornamenti, quindi eseguirà l'esportazione. Puoi vedere quando un'esportazione è stata aggiornata l'ultima volta nella colonna **Aggiornato**.
 
 ### <a name="schedule-exports"></a>Pianifica esportazioni
 

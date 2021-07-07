@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259104"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304885"
 ---
 # <a name="manage-environments"></a>Gestisci ambienti
 
@@ -54,29 +54,32 @@ Per creare un ambiente:
 1. Seleziona **Nuovo**.
 
    > [!div class="mx-imgBorder"]
-   > ![Impostazioni ambiente](media/environment-settings-dialog.png)
+   > ![Impostazioni ambiente.](media/environment-settings-dialog.png)
 
-1. Nella finestra di dialogo **Crea nuovo ambiente** seleziona **Nuovo ambiente**.
+1. Nella finestra di dialogo **Crea un ambiente** seleziona **Nuovo ambiente**.
 
    Per [copiare i dati dall'ambiente corrente](#considerations-for-copy-configuration-preview), seleziona **Copia dall'ambiente esistente**. Vedrai un elenco di tutti gli ambienti disponibili nella tua organizzazione da cui puoi copiare i dati.
 
 1. Fornisci i seguenti dettagli:
    - **Nome**: il nome dell'ambiente. Questo campo è già compilato se hai copiato da un ambiente esistente, ma è possibile modificarlo.
-   - **Area geografica**: l'area geografica in cui il servizio viene distribuito e ospitato.
    - **Tipo**: scegli se vuoi creare un ambiente di produzione o sandbox.
-
+   - **Area geografica**: l'area geografica in cui il servizio viene distribuito e ospitato.
+   
 1. È possibile facoltativamente selezionare **Impostazioni avanzate**:
 
-   - **Salva tutti i dati in**: specifica dove vuoi archiviare i dati di output generati da Customer Insights. Avrai a disposizione due opzioni: **Archiviazione di Customer Insights** (un Azure Data Lake gestito dal team Customer Insights) e **Azure Data Lake Storage Gen2** (il tuo Azure Data Lake Storage). Per impostazione predefinita, l'opzione di archiviazione di Customer Insights è selezionata.
+   - **Salva tutti i dati in**: specifica dove vuoi archiviare i dati di output generati da Customer Insights. Avrai due opzioni: **Archiviazione di Customer Insights** (un Azure Data Lake gestito dal team Customer Insights) e **Azure Data Lake Storage** (il tuo Azure Data Lake Storage). Per impostazione predefinita, l'opzione di archiviazione di Customer Insights è selezionata.
 
-   > [!NOTE]
-   > Salvando i dati in Azure Data Lake Storage, accetti che i dati vengano trasferiti e archiviati nella posizione geografica appropriata per tale account di archiviazione di Azure, che può essere diversa da quella in cui sono archiviati i dati in Dynamics 365 Customer Insights. [Altre informazioni nel Microsoft Trust Center.](https://www.microsoft.com/trust-center)
-   >
-   > Attualmente, le entità inserite vengono sempre archiviate nel data lake gestito di Customer Insights.
-   > Supportiamo solo gli account di archiviazione di Azure Data Lake Gen2 che si trovano nella stessa area di Azure selezionata durante la creazione dell'ambiente.
-   > Sono supportati solo gli account di archiviazione abilitati per Azure Data Lake Gen2 Hierarchical Name Space (HNS).
+     > [!NOTE]
+     > Salvando i dati in Azure Data Lake Storage, accetti che i dati vengano trasferiti e archiviati nella posizione geografica appropriata per tale account di archiviazione di Azure, che può essere diversa da quella in cui sono archiviati i dati in Dynamics 365 Customer Insights. [Altre informazioni nel Microsoft Trust Center.](https://www.microsoft.com/trust-center)
+     >
+     > Attualmente, le entità inserite vengono sempre archiviate nel Data Lake gestito di Customer Insights. 
+     > 
+     > Supportiamo solo account Azure Data Lake Storage della stessa area di Azure selezionata durante la creazione dell'ambiente. 
+     > 
+     > Supportiamo solo account Azure Data Lake Storage con spazio dei nomi gerarchico abilitato.
 
-   - Per l'opzione Azure Data Lake Storage Gen2, puoi scegliere tra l'utilizzo di un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Il nome **Contenitore** non può essere cambiato e sarà `customerinsights`.
+
+   - Per l'opzione Azure Data Lake Storage puoi scegliere tra un'opzione basata sulle risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Il nome **Contenitore** non può essere cambiato e sarà `customerinsights`.
    
    - Se vuoi usare le [previsioni](predictions.md), configura la condivisione dei dati con Microsoft Dataverse o abilita l'inserimento dei dati dalle origini dati locali, fornisci l'URL dell'ambiente Microsoft Dataverse in **Configura la condivisione dei dati con Microsoft Dataverse e abilita funzionalità aggiuntive**. Seleziona **Abilita la condivisione dei dati** per condividere i dati di output di Customer Insights con un Data Lake gestito di Microsoft Dataverse.
 
@@ -85,7 +88,7 @@ Per creare un ambiente:
      > - [Previsione di valori mancanti in un'entità](predictions.md) non è attualmente supportata quando abiliti la condivisione dei dati con Data Lake gestito di Microsoft Dataverse.
 
      > [!div class="mx-imgBorder"]
-     > ![Opzioni di configurazione per abilitare la condivisione dei dati con Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Opzioni di configurazione per abilitare la condivisione dei dati con Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
 
    Quando esegui processi, come l'inserimento dati o la creazione di segmenti, le cartelle corrispondenti verranno create nell'account di archiviazione specificato sopra. I file di dati e i file model.json verranno creati e aggiunti alle cartelle, a seconda del nome del processo.
 
@@ -113,14 +116,14 @@ Le impostazioni di configurazione seguenti *non* vengono copiate:
 
 - Profili cliente.
 - Credenziali origine dati. Dovrai fornire le credenziali per ogni origine dati e aggiornare manualmente le origini dati.
-- Origini dati dalla cartella Common Data Model e data lake gestito Common Data Service. Dovrai creare tali origini dati manualmente con lo stesso nome dell'ambiente di origine.
+- Origini dati della cartella Common Data Model e Data Lake gestito da Dataverse. Dovrai creare tali origini dati manualmente con lo stesso nome dell'ambiente di origine.
 
 Quando copi un ambiente, vedrai un messaggio di conferma che il nuovo ambiente è stato creato. Seleziona **Vai a origini dati** per visualizzare l'elenco delle origini dati.
 
 Tutte le origini dati mostreranno uno stato **Credenziali obbligatorie**. Modifica le origini dati e inserisci le credenziali per aggiornarle.
 
 > [!div class="mx-imgBorder"]
-> ![Origini dati copiate](media/data-sources-copied.png)
+> ![Origini dati copiate.](media/data-sources-copied.png)
 
 Dopo aver aggiornato le origini dati, vai a **Dati** > **Unifica**. Qui troverai le impostazioni dall'ambiente di origine. Modificale in base alle necessità o seleziona **Esegui** per avviare il processo di unificazione dei dati e creare l'entità cliente unificata.
 
@@ -136,7 +139,7 @@ Puoi modificare alcuni dei dettagli degli ambienti esistenti.
 
 3. Nella casella **Modifica ambiente** puoi aggiornare il **Nome visualizzato** dell'ambiente, ma non puoi modificare **Area** o **Tipo**.
 
-4. Se un ambiente è configurato per l'archiviazione dei dati in Azure Data Lake Storage Gen2, puoi aggiornare la **Chiave dell' account**. Tuttavia, non puoi modificare il **Nome account** o il nome del **Contenitore**.
+4. Se un ambiente è configurato per memorizzare i dati in Azure Data Lake Storage, puoi aggiornare la **Chiave account**. Tuttavia, non puoi modificare il **Nome account** o il nome del **Contenitore**.
 
 5. Facoltativamente, puoi eseguire l'aggiornamento da una connessione basata sulla chiave dell'account a una connessione basata su risorse o sottoscrizione. Dopo l'aggiornamento, non puoi ripristinare la chiave dell'account. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Non puoi modificare le informazioni sul **Contenitore** durante l'aggiornamento della connessione.
 
@@ -158,19 +161,19 @@ Come amministratore, puoi reimpostare un ambiente su uno stato vuoto se desideri
 
 1.  Seleziona il selettore **Ambiente** nell'intestazione dell'app. 
 
-2.  Seleziona l'ambiente che desideri reimpostare e seleziona i puntini di sospensione **...**. 
+2.  Seleziona l'ambiente che desideri reimpostare, quindi i puntini di sospensione (**...**). 
 
 3. Scegli l'opzione **Reimposta**. 
 
 4.  Per confermare l'eliminazione, immetti il nome dell'ambiente e seleziona **Reimposta**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Eliminare un ambiente esistente (disponibile solo per gli amministratori)
+## <a name="delete-an-existing-environment"></a>Eliminare un ambiente esistente
 
 In qualità di amministratore, puoi eliminare un ambiente che amministri.
 
 1.  Seleziona il selettore **Ambiente** nell'intestazione dell'app.
 
-2.  Seleziona l'ambiente che desideri reimpostare e seleziona i puntini di sospensione **...**. 
+2.  Seleziona l'ambiente che desideri reimpostare, quindi i puntini di sospensione (**...**). 
 
 3. Scegli l'opzione **Elimina**. 
 

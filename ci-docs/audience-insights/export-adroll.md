@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124370"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304835"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Esportare segmenti in AdRoll (anteprima)
 
@@ -28,11 +28,11 @@ Esporta i segmenti dei profili cliente unificati in AdRoll e utilizzali per la p
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-- Puoi esportare fino a 250.000 profili per esportazione in AdRoll.
+- Puoi esportare fino a 250.000 profili alla volta in AdRoll.
 - Non puoi esportare segmenti con meno di 100 profili in AdRoll. 
 - L'esportazione in AdRoll è limitata ai segmenti.
 - L'esportazione di un massimo di 250.000 profili in AdRoll può richiedere fino a 10 minuti per essere completata. 
-- Il numero di profili che puoi esportare in AdRoll dipende ed è limitato dal tuo contratto con AdRoll.
+- Il numero di profili che puoi esportare in AdRoll dipende dal tuo contratto con AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Configurare la connessione ad AdRoll
 
@@ -62,9 +62,9 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Per creare una nuova esportazione seleziona **Aggiungi destinazione**.
 
-1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione AdRoll. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
+1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione AdRoll. Se non vedi questo nome di sezione, non sono disponibili connessioni di questo tipo.
 
-1. Inserisci il tuo **ID inserzionista AdRoll** Per ulteriori informazioni, vedi [Profili degli inserzionisti AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Immetti l'**ID inserzionista AdRoll**. Per ulteriori informazioni, vedi [Profili inserzionisti AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
 3. Nella sezione **Corrispondenza dati** nel campo **E-mail**, seleziona il campo nel tuo profilo cliente unificato che rappresenta l'indirizzo e-mail di un cliente. È necessario esportare i segmenti in AdRoll.
 
@@ -74,7 +74,9 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.
 
-L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand). 
+L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). 
+
+Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati

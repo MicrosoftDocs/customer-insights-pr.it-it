@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760286"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305391"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Utilizzare i segmenti di Customer Insights in Adobe Campaign Standard (anteprima)
 
-Come utente di informazioni dettagliate gruppo di destinatari per Dynamics 365 Customer Insights, potresti aver creato segmenti per rendere più efficienti le tue campagne di marketing rivolgendoti a un gruppo di destinatari pertinente. Per utilizzare un segmento dalle informazioni dettagliate gruppo di destinatari in Adobe Experience Platform e nelle applicazioni come Adobe Campaign Standard, devi seguire alcuni passaggi descritti in questo articolo.
+Come utente di informazioni dettagliate sul gruppo di destinatari in Dynamics 365 Customer Insights, potresti aver creato segmenti per rendere più efficienti le tue campagne di marketing mirando a segmenti di pubblico pertinenti. Per utilizzare un segmento dalle informazioni dettagliate gruppo di destinatari in Adobe Experience Platform e nelle applicazioni come Adobe Campaign Standard, devi seguire alcuni passaggi descritti in questo articolo.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagramma di processo dei passaggi descritti in questo articolo.":::
 
@@ -54,7 +54,7 @@ Una volta identificato il nostro gruppo di destinatari di destinazione, possiamo
 
 1. In informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Connessioni**.
 
-1. Seleziona **Aggiungi connessione** e scegli **Adobe Campaign** per configurare la connessione o seleziona **Imposta** nel riquadro **Adobe Campaign**
+1. Seleziona **Aggiungi connessione** e scegli **Adobe Campaign** per configurare la connessione o seleziona **Imposta** nel riquadro **Adobe Campaign**.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Riquadro di configurazione per Adobe Campaign Standard.":::
 
@@ -80,7 +80,7 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Per creare una nuova esportazione seleziona **Aggiungi esportazione**.
 
-1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Adobe Campaign. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
+1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Adobe Campaign. Se non vedi questo nome di sezione, non sono disponibili connessioni di questo tipo.
 
 1. Scegli il segmento che vuoi esportare. In questo esempio, è **ChurnProneCustomers**.
 
@@ -106,7 +106,7 @@ Ora puoi [esportare il segmento su richiesta](export-destinations.md#run-exports
 > [!NOTE]
 > Assicurati che il numero di record nel segmento esportato rientri nel limite consentito dalla licenza di Adobe Campaign Standard.
 
-I dati esportati vengono archiviati nel contenitore dell'archivio BLOB di Azure configurato in precedenza. Il seguente percorso della cartella viene creato automaticamente nel tuo contenitore:
+I dati esportati vengono archiviati nel contenitore dell'archiviazione BLOB di Azure configurato in precedenza. Il seguente percorso della cartella viene creato automaticamente nel tuo contenitore:
 
 *%ContainerName%/CustomerInsights_%instanceID%/% exportdestination-name%_%segmentname%_%timestamp%.csv*
 
@@ -118,7 +118,7 @@ Quando un segmento dalle informazioni dettagliate gruppo di destinatari viene es
 
 Per utilizzare il segmento in Adobe Campaign Standard, è necessario estendere lo schema del profilo in Adobe Campaign Standard per includere due campi aggiuntivi. Scopri come [estendere la risorsa profilo](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) con nuovi campi in Adobe Campaign Standard.
 
-Nel nostro esempio, questi campi sono *Nome segmento e Data del segmento (facoltativa).*
+Nel nostro esempio questi campi sono *Nome segmento e Data segmento (facoltativi)*.
 
 Utilizzeremo questi campi per identificare i profili in Adobe Campaign Standard che vogliamo scegliere come destinazione per questa campagna.
 
@@ -128,7 +128,7 @@ Se non ci sono altri record in Adobe Campaign Standard, oltre a quello che stai 
 
 Ora che tutto è a posto, dobbiamo importare i dati destinatari preparati dalle informazioni dettagliate gruppo di destinatari in Adobe Campaign Standard per creare i profili. Scopri [come importare i profili in Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) utilizzando un flusso di lavoro.
 
-Il flusso di lavoro di importazione nell'immagine seguente è stato configurato per essere eseguito ogni 8 ore e cerca segmenti delle informazioni dettagliate gruppo di destinatari esportati (file .csv nell'archiviazione BLOB di Azure). Il flusso di lavoro estrae il contenuto del file .csv in un ordine di colonna specificato. Questo flusso di lavoro è stato creato per eseguire la gestione degli errori di base e garantire che ogni record abbia un indirizzo e-mail prima di essere implementato nei dati in Adobe Campaign Standard. Il flusso di lavoro estrae anche il nome del segmento dal nome file prima di eseguire l'upsert nei dati del profilo ACS.
+Il flusso di lavoro di importazione nell'immagine sottostante è stato configurato per essere eseguito ogni otto ore e cercare i segmenti di informazioni dettagliate sul gruppo di destinatari esportati (file .csv in Archiviazione BLOB di Azure). Il flusso di lavoro estrae il contenuto del file .csv in un ordine di colonna specificato. Questo flusso di lavoro è stato creato per eseguire la gestione degli errori di base e garantire che ogni record abbia un indirizzo e-mail prima di essere implementato nei dati in Adobe Campaign Standard. Il flusso di lavoro estrae anche il nome del segmento dal nome del file prima di inserirlo nei dati del profilo di Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Screenshot di un flusso di lavoro di importazione nell'interfaccia utente di Adobe Campaign Standard.":::
 

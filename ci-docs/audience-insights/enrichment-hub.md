@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954492"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305253"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Arricchimento per i profili cliente (anteprima)
 
@@ -22,7 +22,8 @@ Utilizza i dati provenienti da origini come Microsoft e altri partner per arricc
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Pagina dell'hub di arricchimento":::
 
-In Audience Insights, vai a **Dati** > **Arricchimento** per utilizzare le opzioni di arricchimento.    
+In Audience Insights, vai a **Dati** > **Arricchimento** per utilizzare le opzioni di arricchimento.  
+
 Devi disporre delle autorizzazioni come Collaboratore o Amministratore per creare o modificare gli arricchimenti. Per ulteriori informazioni, vedi [Autorizzazioni](permissions.md).
 
 Nella scheda **Scopri**, troverai i seguenti arricchimenti:
@@ -39,7 +40,7 @@ Nella scheda **I miei arricchimenti**, puoi vedere gli arricchimenti che hai con
 
 ## <a name="manage-existing-enrichments"></a>Gestire gli arricchimenti esistenti
 
-Vai a **Arricchimenti personali** per vedere tutti gli arricchimenti configurati. Ogni arricchimento è rappresentato come una riga che include informazioni aggiuntive sull'arricchimento.
+Vai alla scheda **I miei arricchimenti** per vedere tutti gli arricchimenti configurati. Ogni arricchimento è rappresentato come una riga che include informazioni aggiuntive sull'arricchimento.
 
 Seleziona un arricchimento per vedere le opzioni disponibili. È inoltre possibile selezionare i puntini di sospensione (...) di un elemento dell'elenco per visualizzare le opzioni.
 

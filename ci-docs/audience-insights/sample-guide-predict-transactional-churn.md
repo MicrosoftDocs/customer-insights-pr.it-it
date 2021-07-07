@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595431"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306125"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guida di esempio per una previsione di abbandono transazionale (anteprima)
 
-In questa guida viene illustrato un esempio completo di previsione di abbandono transazionale in Customer Insights che utilizza i dati di esempio forniti di seguito. Tutti i dati utilizzati in questa guida non sono dati cliente reali e fanno parte del set di dati di Contoso disponibile nell'ambiente *Demo* dell'abbonamento a Customer Insights.
+In questa guida viene illustrato un esempio completo di previsione di abbandono transazionale in Customer Insights che utilizza i dati di esempio forniti di seguito. Tutti i dati utilizzati in questa guida non sono dati reali del cliente e fanno parte del set di dati Contoso trovato nell'ambiente *Demo* all'interno della sottoscrizione di Customer Insights.
 
 ## <a name="scenario"></a>Scenario
 
-Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, in vendita sul sito Web Contoso Coffee. Lo scopo dell'azienda è sapere quali clienti che acquistano regolarmente i loro prodotti smetteranno di essere clienti attivi nei prossimi 60 giorni. Sapere quali dei loro clienti **rischiano di essere persi**, può aiutarli a ridurre gli sforzi di marketing concentrandosi sulla fidelizzazione degli stessi.
+Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, che vendono attraverso il sito Web Contoso per il caffè. Lo scopo dell'azienda è sapere quali clienti che acquistano regolarmente i loro prodotti smetteranno di essere clienti attivi nei prossimi 60 giorni. Sapere quali dei loro clienti **rischiano di essere persi**, può aiutarli a ridurre gli sforzi di marketing concentrandosi sulla fidelizzazione degli stessi.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -109,9 +109,9 @@ Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, un
 
 1. Passa alla scheda **Corrispondenza** e seleziona **Imposta ordine**.
 
-1. Nell'elenco a discesa **Primaria**, scegli **eCommerceContacts : eCommerce** come origine primaria e includi tutti i record.
+1. Nell'elenco a discesa **Principale** scegli **eCommerceContacts : eCommerce** come fonte primaria e includi tutti i record.
 
-1. Nell'elenco a discesa **Entità 2**, scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
+1. Nell'elenco a discesa **Entità 2** scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Unificare la corrispondenza di eCommerce e Fedeltà.":::
 
@@ -119,16 +119,16 @@ Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, un
 
 1. Aggiungi la prima condizione utilizzando FullName.
 
-   * Per eCommerceContacts seleziona **FullName** nell'elenco a discesa.
-   * Per loyCustomers seleziona **FullName** nell'elenco a discesa.
+   * Per eCommerceContacts seleziona **FullName** nel menu a discesa.
+   * Per loyCustomers seleziona **FullName** nel menu a discesa.
    * Seleziona l'elenco a discesa **Normalizza** e scegli **Tipo (telefono, nome, indirizzo...)**.
    * Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 
 1. Immetti il nome **FullName, Email** per la nuova regola.
 
    * Aggiungi una seconda condizione per l'indirizzo e-mail selezionado **Aggiungi condizione**
-   * Per l'entità eCommerceContacts, scegli **E-mail** nel menu a discesa.
-   * Per l'entità loyCustomers, scegli **E-mail** nel menu a discesa. 
+   * Per l'entità eCommerceContacts, scegli **E-mail** nell'elenco a discesa.
+   * Per l'entità loyCustomers, scegli **E-mail** nell'elenco a discesa. 
    * Lascia vuoto il campo Normalizza. 
    * Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895918"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305207"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Arricchimento dei profili aziendali con Leadspace (anteprima)
 
@@ -36,7 +36,7 @@ Per configurare Leadspace, devono essere rispettati i seguenti requisiti:
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Screenshot del riquadro Leadspace.":::
 
-1. Seleziona una [connessione](connections.md) nell'elenco a discesa. Contatta un amministratore se non è disponibile alcuna connessione. Se sei un amministratore, puoi creare una connessione selezionando **Aggiungi connessione** e scegliendo **Leadspace**. 
+1. Seleziona una [connessione](connections.md) dall'elenco a discesa. Contatta un amministratore se non è disponibile alcuna connessione. Se sei un amministratore, puoi creare una connessione selezionando **Aggiungi connessione** e scegliendo **Leadspace**. 
 
 1. Seleziona **Connettiti a Leadspace** per confermare la connessione.
 
@@ -57,13 +57,13 @@ Per configurare Leadspace, devono essere rispettati i seguenti requisiti:
 
 Devi essere un amministratore per configurare le connessioni. Seleziona **Aggiungi connessione** quando si configura un arricchimento *o* vai ad **Amministratore** > **Connessioni** e seleziona **Imposta** nel riquadro Leadspace.
 
-1. Seleziona **Attività iniziali** 
+1. Seleziona **Inizia subito**. 
 
 1. Immetti un nome per la connessione nella casella **nome visualizzato**.
 
 1. Fornisci un token di Leadspace valido.
 
-1. Rivedi e fornisci il tuo consenso per **Conformità e privacy dei dati** selezionando la casella di controllo **Accetto**
+1. Rivedi e fornisci il tuo consenso per **Conformità e privacy dei dati** selezionando **Accetto**.
 
 1. Seleziona **Verifica** per convalidare la configurazione.
 
@@ -81,7 +81,7 @@ Per ulteriori informazioni, vedi [API di Leadspace](https://support.leadspace.co
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md), [misure](measures.md) ed [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
+Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md) e [misure](measures.md) e persino [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 

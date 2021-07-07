@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129950"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306354"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guida di esempio previsione di Customer Lifetime Value (CLV)
 
@@ -123,9 +123,9 @@ Dopo aver importato i dati, iniziamo il processo di unificazione dei dati per cr
 
 1. Passa alla scheda **Corrispondenza** e seleziona **Imposta ordine**.
 
-1. Nell'elenco a discesa **Primaria**, scegli **eCommerceContacts : eCommerce** come origine primaria e includi tutti i record.
+1. Nell'elenco a discesa **Principale** scegli **eCommerceContacts : eCommerce** come fonte primaria e includi tutti i record.
 
-1. Nell'elenco a discesa **Entità 2**, scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
+1. Nell'elenco a discesa **Entità 2** scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
 
    ![Unificare la corrispondenza di eCommerce e Fedeltà.](media/unify-match-order.png)
 
@@ -133,16 +133,16 @@ Dopo aver importato i dati, iniziamo il processo di unificazione dei dati per cr
 
 1. Aggiungi la prima condizione utilizzando FullName.
 
-   - Per eCommerceContacts seleziona **FullName** nell'elenco a discesa.
-   - Per loyCustomers seleziona **FullName** nell'elenco a discesa.
-   - Seleziona l'elenco a discesa **Normalizza** e scegli **Tipo (telefono, nome, indirizzo...)**.
+   - Per eCommerceContacts seleziona **FullName** nel menu a discesa.
+   - Per loyCustomers seleziona **FullName** nel menu a discesa.
+   - Seleziona il menu a discesa **Normalizza** e scegli **Tipo (telefono, nome, indirizzo, ...)**.
    - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 
 1. Immetti il nome **FullName, Email** per la nuova regola.
 
    - Aggiungi una seconda condizione per l'indirizzo e-mail selezionado **Aggiungi condizione**
-   - Per l'entità eCommerceContacts, scegli **E-mail** nel menu a discesa.
-   - Per l'entità loyCustomers, scegli **E-mail** nel menu a discesa.
+   - Per l'entità eCommerceContacts, scegli **E-mail** nell'elenco a discesa.
+   - Per l'entità loyCustomers, scegli **E-mail** nell'elenco a discesa.
    - Lascia vuoto il campo Normalizza.
    - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 

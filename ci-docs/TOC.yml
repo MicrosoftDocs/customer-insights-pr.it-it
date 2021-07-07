@@ -136,6 +136,8 @@
           items:
             - name: Panoramica delle esportazioni
               href: audience-insights/export-destinations.md
+            - name: Active Campaign
+              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
@@ -144,7 +146,7 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Analisi di Azure Synapse
+            - name: Azure Synapse Analytics
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
@@ -178,8 +180,12 @@
               href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
+            - name: Salesforce Marketing Cloud
+              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
+            - name: SendInBlue
+              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
@@ -234,21 +240,21 @@
       href: engagement-insights/overview.md
     - name: Versione di valutazione gratuita
       href: 'https://pi.dynamics.com/'
-    - name: Attività iniziali
+    - name: Informazioni di base
       items:
-        - name: Attività iniziali
+        - name: Informazioni di base
           href: engagement-insights/get-started.md
-        - name: Creare un'area di lavoro
+        - name: Crea un'area di lavoro
           href: engagement-insights/create-workspace.md
-        - name: Aggiungere strumenti al sito Web
-          href: engagement-insights/instrument-website.md
+        - name: Acquisizione di eventi tramite siti Web e app mobili
+          href: engagement-insights/developer-resources.md
         - name: Concetti e terminologia
           href: engagement-insights/glossary.md
     - name: Eventi
       items:
         - name: Creare e modificare eventi
           href: engagement-insights/refined-events.md
-        - name: Esportare eventi
+        - name: Esporta eventi
           href: engagement-insights/export-events.md
     - name: Report
       items:
@@ -272,10 +278,18 @@
       items:
         - name: Panoramica delle risorse per sviluppatori
           href: engagement-insights/developer-resources.md
-        - name: Esercitazione su SDK Web
+        - name: Esercitazione Web SDK
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Esempio di SDK Web
           href: engagement-insights/websdk-sample.md
+        - name: Esercitazione SDK Android
+          href: engagement-insights/get-started-android.md
+        - name: Esempio SDK Android
+          href: engagement-insights/androidsdk-sample.md
+        - name: Esercitazione SDK iOS
+          href: engagement-insights/get-started-ios.md
+        - name: Esempio di SDK iOS
+          href: engagement-insights/iossdk-sample.md
     - name: Amministrazione
       items:
         - name: Ruoli e autorizzazioni

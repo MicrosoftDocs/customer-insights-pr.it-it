@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976323"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305345"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Esportare segmenti in Google Ads (anteprima)
 
-Esporta segmenti di profili cliente unificati nell'elenco destinatari di Google Ads e utilizzali per fare pubblicità su Google Search, Gmail, YouTube e Rete Display di Google. 
+Esporta segmenti di profili cliente unificati in un elenco di gruppi di destinatari di Google Ads e utilizzali per fare pubblicità su Ricerca Google, Gmail, YouTube e Rete Display di Google. 
 
 ## <a name="prerequisites-for-connection"></a>Prerequisiti per la connessione
 
 -   Devi disporre di un [account Google Ads](https://ads.google.com/) e delle credenziali di amministratore corrispondenti.
--   Hai un [token per sviluppatori Google Ads approvato](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Soddisfi i requisiti dei [criteri di corrispondenza dei clienti](https://support.google.com/adspolicy/answer/6299717)
--   Soddisfi i requisiti delle [dimensioni degli elenchi per il remarketing](https://support.google.com/google-ads/answer/7558048) 
-
+-   Hai un [token per sviluppatori Google Ads approvato](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Soddisfi i requisiti dei [criteri di corrispondenza dei clienti](https://support.google.com/adspolicy/answer/6299717).
+-   Soddisfi i requisiti delle [dimensioni degli elenchi per il remarketing](https://support.google.com/google-ads/answer/7558048).
 -   In Google Ads sono presenti destinatari e ID corrispondenti. Per ulteriori informazioni, vedi [Destinatari Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Disponi di [segmenti configurati](segments.md)
--   I profili cliente unificati nei segmenti esportati contengono campi che rappresentano un indirizzo e-mail, un nome e un cognome
+-   Disponi di [segmenti configurati](segments.md).
+-   I profili cliente unificati nei segmenti esportati contengono campi che rappresentano un indirizzo e-mail, un nome e un cognome.
 
 ## <a name="known-limitations"></a>Limitazioni note
 
@@ -68,7 +67,7 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Per creare una nuova esportazione seleziona **Aggiungi destinazione**.
 
-1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Google Ads. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
+1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Google Ads. Se non vedi questo nome di sezione, non sono disponibili connessioni di questo tipo.
 
 1. Immetti l'**[ID destinatario Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** e seleziona **Connetti** per inizializzare la connessione a Google Ads.
 
@@ -78,7 +77,9 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.
 
-L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand). 
+L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). 
+
+Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896056"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305299"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Arricchimento dei profili cliente con HERE Technologies (anteprima)
 
@@ -26,7 +26,7 @@ Per configurare gli arricchimenti di HERE Technologies, è necessario soddisfare
 
 - Devi disporre di una sottoscrizione di HERE Technologies. Per ottenere una sottoscrizione, puoi [iscriverti qui](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) o [contatta HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) direttamente. [Ulteriori informazioni sull'arricchimento della posizione di HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- C'è una [connessione](connections.md) HERE a disposizione *o* hai le autorizzazioni di [amministratore](permissions.md#administrator) e la chiave API di HERE Technologies.
+- Una [connessione](connections.md) HERE è disponibile *o* hai le autorizzazioni [amministratore](permissions.md#administrator) e la chiave API di HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Configurare l'arricchimento
 
@@ -37,7 +37,7 @@ Per configurare gli arricchimenti di HERE Technologies, è necessario soddisfare
    > [!div class="mx-imgBorder"]
    > ![Riquadro HERE Technologies](media/HERE-tile.png "Riquadro HERE Technologies")
 
-1. Seleziona una [connessione](connections.md) nell'elenco a discesa. Contatta un amministratore se non è disponibile alcuna connessione. Se sei un amministratore, puoi creare una connessione selezionando **Aggiungi connessione**. Scegli **HERE Technologies** dal menu a discesa. 
+1. Seleziona una [connessione](connections.md) dall'elenco a discesa. Contatta un amministratore se non è disponibile alcuna connessione. Se sei un amministratore, puoi creare una connessione selezionando **Aggiungi connessione**. Scegli **HERE Technologies** dall'elenco a discesa. 
 
 1. Seleziona **Connettiti a HERE Technologies** per confermare la selezione.
 
@@ -58,7 +58,7 @@ Per configurare gli arricchimenti di HERE Technologies, è necessario soddisfare
 
 1. Seleziona **Salva arricchimento** dopo aver esaminato le tue scelte.
 
-## <a name="configure-the-connection-for-here-technologies"></a>Configurare la connessione per HERE technologies 
+## <a name="configure-the-connection-for-here-technologies"></a>Configurazione della connessione per HERE Technologies 
 
 Devi essere un amministratore per configurare le connessioni. Seleziona **Aggiungi connessione** quando si configura un arricchimento *o* vai ad **Amministratore** > **Connessioni** e seleziona **Imposta** nel riquadro HERE technologies.
 
@@ -66,13 +66,13 @@ Devi essere un amministratore per configurare le connessioni. Seleziona **Aggiun
 
 1. Fornisci una chiave API HERE Technologies valida.
 
-1. Rivedi e fornisci il tuo consenso per **Conformità e privacy dei dati** selezionando la casella di controllo **Accetto**
+1. Rivedi e fornisci il tuo consenso per **Conformità e privacy dei dati** selezionando **Accetto**.
 
 1. Seleziona **Verifica** per convalidare la configurazione.
 
 1. Dopo aver completato la verifica, seleziona **Salva**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Pagina di configurazione della connessione di HERE technologies](media/enrichment-HERE-connection.png "Pagina di configurazione della connessione di HERE technologies")
 
 ## <a name="enrichment-results"></a>Risultati dell'arricchimento
@@ -85,7 +85,7 @@ Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito se
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md), [misure](measures.md) ed [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
+Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md) e [misure](measures.md) e persino [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 
