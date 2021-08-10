@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306079"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554990"
 ---
 # <a name="segment-insights-preview"></a>Informazioni dettagliate sui segmenti (anteprima)
 
@@ -44,7 +44,7 @@ Puoi anche analizzare come cambia la sovrapposizione per attributi specifici.
 Dopo aver completato l'analisi, trova i dettagli su questa informazione dettagliata in **Segmenti** > **Informazioni dettagliate (anteprima)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Dettagli delle informazioni sulla sovrapposizione del segmento":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Dettagli delle informazioni sulla sovrapposizione del segmento.":::
 
 Seleziona una informazione per vedere i risultati dell'analisi:
 
@@ -77,7 +77,7 @@ I differenziatori di segmento ti aiutano a scoprire cosa differenzia un segmento
 Dopo aver completato l'analisi, trova i dettagli su questa informazione dettagliata in **Segmenti** > **Informazioni dettagliate (anteprima)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Dettagli delle informazioni sul differenziatore del segmento":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Dettagli delle informazioni sul differenziatore del segmento.":::
 
 Seleziona una informazione per vedere i risultati dell'analisi. L'analisi del differenziatore include due schede. La scheda **Attributi** elenca gli attributi del profilo considerati come differenziatori. La scheda **Misure** elenca i differenziatori. Ogni scheda include i seguenti dettagli:
 

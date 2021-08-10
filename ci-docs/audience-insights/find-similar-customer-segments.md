@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596780"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554210"
 ---
 # <a name="similar-customers-preview"></a>Clienti simili (anteprima)
 
@@ -50,7 +50,7 @@ Questa funzione ti consente di trovare clienti simili nella tua base di clienti 
 Dopo aver elaborato il segmento simile, troverai il nuovo segmento elencato nella pagina **Segmenti**.
 
 > [!div class="mx-imgBorder"]
-> ![Segmento di clienti simili](media/expanded-segment.png "Segmento di clienti simili")
+> ![Segmento di clienti simili.](media/expanded-segment.png "Segmento di clienti simili")
 
 Seleziona **Visualizza** nella barra delle azioni per aprire i dettagli del segmento. Questa visualizzazione contiene informazioni sulla distribuzione dei risultati attraverso [punteggi di somiglianza](#about-similarity-scores). Troverai anche i valori del punteggio di somiglianza in **Anteprima dei membri del segmento**.
 

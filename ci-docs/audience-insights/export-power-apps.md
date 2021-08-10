@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598160"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554118"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Connettore Microsoft Power Apps (anteprima)
 
@@ -56,12 +56,12 @@ Ad esempio, aggiungi profili cliente a un [controllo della raccolta](/powerapps/
 1. Aggiungi un controlo **Raccolta** a un'app che stai creando.
 
 > [!div class="mx-imgBorder"]
-> ![Aggiungere un elemento della raccolta](media/connector-powerapps9.png "Aggiungere un elemento della raccolta")
+> ![Aggiungere un elemento della raccolta.](media/connector-powerapps9.png "Aggiungere un elemento della raccolta")
 
 1. Seleziona **Cliente** come origine dati per gli elementi.
 
     > [!div class="mx-imgBorder"]
-    > ![Selezionare un'origine dati](media/choose-datasource-powerapps.png "Selezionare un'origine dati")
+    > ![Selezionare un'origine dati.](media/choose-datasource-powerapps.png "Selezionare un'origine dati")
 
 1. Puoimodificare il pannello dati a destra per selezionare quale campo deve essere visualizzato nella raccolta per l'entità Cliente.
 

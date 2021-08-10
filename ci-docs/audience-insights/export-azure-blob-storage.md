@@ -1,7 +1,7 @@
 ---
 title: Esportare dati di Customer Insights in un archivio BLOB di Azure
 description: Scopri come configurare la connessione ed esportare nell'archivio BLOB.
-ms.date: 03/03/2021
+ms.date: 06/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c19dc6d4956a33a5bd3cea706f8a154198d487f
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e38fc06a948178fcbc62c08a4cf4816e1d030e79
+ms.sourcegitcommit: 656b1a6cdff37ba4f808311fd0327ab38e02ed13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976186"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6318304"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Esportare l'elenco dei segmenti e altri dati in Archiviazione BLOB di Azure (anteprima)
 
 Archivia i dati di Customer Insights in un archivio BLOB o utilizzali per trasferire i dati ad altre applicazioni.
 
-## <a name="set-up-the-connection-to-blob-storage"></a>Configurare la connessione all'archivio BLOB
+## <a name="set-up-the-connection-to-blob-storage"></a>Configurare la connessione all'archiviazione BLOB
 
 1. Vai ad **Amministratore** > **Connessioni**.
 
@@ -30,7 +30,7 @@ Archivia i dati di Customer Insights in un archivio BLOB o utilizzali per trasfe
 
 1. Scegli chi può utilizzare questa connessione. Se non esegui alcuna azione, l'impostazione predefinita sarà Amministratori. Per ulteriori informazioni, vedi [Consentire ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Immetti il **Nome utente**, la **Chiave account**, e il **Contenitore** per il tuo account di archiviazione BLOB.
+1. Immetti il **Nome account**, la **chiave dell'account** e il **Contenitore** per il tuo account di archiviazione BLOB.
     - Per altre informazioni su come trovare il nome dell'account di archiviazione BLOB e sulla chiave dell'account, vedi [Gestire le impostazioni dell'account di archiviazione nel portale di Azure](/azure/storage/common/storage-account-manage).
     - Per informazioni su come creare un contenitore, vedi [Creare un contenitore](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
@@ -40,11 +40,14 @@ Archivia i dati di Customer Insights in un archivio BLOB o utilizzali per trasfe
 
 Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per ulteriori informazioni, vedi [Autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
 
+> [!IMPORTANT]
+> Se hai attivato l'impostazione di eliminazione temporanea per l'account di archiviazione BLOB di Azure, le esportazioni non riusciranno. Disattiva l'eliminazione temporanea per esportare i dati in BLOB. Per ulteriori informazioni, vedi [Abilita l'eliminazione temporanea dei blob](/azure/storage/blobs/soft-delete-blob-enable.md)
+
 1. Vai a **Dati** > **Esportazioni**.
 
 1. Per creare una nuova esportazione seleziona **Aggiungi destinazione**.
 
-1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Archiviazione BLOB di Azure. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
+1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Archiviazione BLOB di Azure. Se non vedi questo nome di sezione, non sono disponibili connessioni di questo tipo.
 
 1. Seleziona la casella accanto a ciascuna delle entità che desideri esportare in questa destinazione.
 
@@ -53,13 +56,16 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.
 
 L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab).     
+
 Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand). 
 
 I dati esportati vengono archiviati nel contenitore di archiviazione BLOB configurato. I seguenti percorsi di cartelle vengono creati automaticamente nel contenitore:
 
-- Per entità di origine ed entità generate dal sistema: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
+- Per entità di origine ed entità generate dal sistema:   
+  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Esempio: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- Il model.json per le entità esportate sarà a livello di %ExportDestinationName%
+ 
+- Il model.json per le entità esportate sarà a livello di %ExportDestinationName%.  
   - Esempio: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

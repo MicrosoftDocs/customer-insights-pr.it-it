@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305642"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554853"
 ---
 # <a name="custom-machine-learning-models"></a>Modelli di Machine Learning personalizzati
 
@@ -42,7 +42,7 @@ Le previsioni offrono funzionalità per creare migliori esperienze cliente nonch
 1. Assegna al tuo modello personalizzato un nome riconoscibile nel campo **Nome**.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot del riquadro Nuovo flusso di lavoro](media/new-workflowv2.png "Screenshot del riquadro Nuovo flusso di lavoro")
+   > ![Screenshot del riquadro Nuovo flusso di lavoro.](media/new-workflowv2.png "Screenshot del riquadro Nuovo flusso di lavoro")
 
 1. Seleziona l'organizzazione che contiene il servizio Web in **Tenant che contiene il servizio Web**.
 
@@ -59,7 +59,7 @@ Le previsioni offrono funzionalità per creare migliori esperienze cliente nonch
    > Il flusso di lavoro del modello personalizzato applicherà l'euristica per mappare i campi di input del servizio Web agli attributi dell'entità in base al nome e al tipo di dati del campo. Verrà visualizzato un errore se un campo del servizio Web non può essere mappato a un'entità.
 
    > [!div class="mx-imgBorder"]
-   > ![Configurare un flusso di lavoro](media/intelligence-screen2-updated.png "Configurare un flusso di lavoro")
+   > ![Configurare un flusso di lavoro.](media/intelligence-screen2-updated.png "Configurare un flusso di lavoro")
 
 1. Nel passaggio **Parametri di output del modello**, imposta le seguenti proprietà:
    - Machine Learning Studio (versione classica)
@@ -70,12 +70,12 @@ Le previsioni offrono funzionalità per creare migliori esperienze cliente nonch
       1. Seleziona il **Nome parametro percorso di output** della pipeline batch dal menu a discesa.
 
       > [!div class="mx-imgBorder"]
-      > ![Riquadro dei parametri di output del modello](media/intelligence-screen3-outputparameters.png "Riquadro dei parametri di output del modello")
+      > ![Riquadro dei parametri di output del modello.](media/intelligence-screen3-outputparameters.png "Riquadro dei parametri di output del modello")
 
 1. Seleziona l'attributo corrispondente dall'elenco a discesa **ID cliente nei risultati** che identifica i clienti e seleziona **Salva**.
 
    > [!div class="mx-imgBorder"]
-   > ![Riquadro Correla risultati ai dati del cliente](media/intelligence-screen4-relatetocustomer.png "Riquadro Correla risultati ai dati del cliente")
+   > ![Riquadro Correla risultati ai dati del cliente.](media/intelligence-screen4-relatetocustomer.png "Riquadro Correla risultati ai dati del cliente")
 
 1. Vedrai la schermata **Flusso di lavoro salvato** con dettagli sul flusso di lavoro.    
    Se hai configurato un flusso di lavoro per una pipeline di Azure Machine Learning, Audience Insights assocerà l'area di lavoro che contiene la pipeline. Audience insights otterrà un ruolo **Collaboratore** nell'area di lavoro di Azure.

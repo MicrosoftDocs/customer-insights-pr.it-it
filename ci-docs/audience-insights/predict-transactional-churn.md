@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095607"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559410"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Previsione di abbandono transazionale (anteprima)
 
@@ -47,7 +47,7 @@ La previsione di abbandono transazionale ti consente di prevedere se un cliente 
         - **Evento:** il nome dell'evento che si desidera utilizzare. Ad esempio, un campo denominato "UserAction" in un negozio di alimentari potrebbe essere un coupon utilizzato dal cliente.
         - **Dettagli:** informazioni dettagliate sull'evento. Ad esempio, un campo denominato "CouponValue" in un negozio di alimentari potrebbe essere il valore monetario del coupon.
 - Caratteristiche dei dati consigliate:
-    - Dati storici sufficienti: dati di transazione per almeno il doppio della finestra temporale selezionata. Preferibilmente, da due a tre anni di dati dell'abbonamento. 
+    - Dati storici sufficienti: dati di transazione per almeno il doppio della finestra temporale selezionata. Preferibilmente, due o tre anni di cronologia delle transazioni. 
     - Acquisti multipli per cliente: idealmente almeno due transazioni per cliente.
     - Numero di clienti: almeno 10 profili cliente, preferibilmente più di 1.000 clienti univoci. Il modello non riesce con meno di 10 clienti e dati storici insufficienti.
     - Completezza dei dati: meno del 20% dei valori mancanti nel campo dati dell'entità fornita.

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095561"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556129"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Previsione di raccomandazioni sui prodotti (anteprima)
 
@@ -64,7 +64,7 @@ Se sei interessato a provare questa funzionalità ma non hai i dati per completa
 
 1. Seleziona il riquadro **Modello di elementi consigliati per il prodotto (anteprima)** e seleziona **Utilizza questo modello**.
    > [!div class="mx-imgBorder"]
-   > ![Riquadro Modello di raccomandazione prodotto con il pulsante Utilizza questo modello](media/product-recommendation-usethismodel.PNG "Riquadro Modello di raccomandazione prodotto con il pulsante Utilizza questo modello")
+   > ![Riquadro Modello di raccomandazione prodotto con il pulsante Utilizza questo modello.](media/product-recommendation-usethismodel.PNG "Riquadro Modello di raccomandazione prodotto con il pulsante Utilizza questo modello")
 
 1. Rivedi le informazioni sui requisiti del modello. Se disponi dei dati obbligatori, seleziona **Inizia**.
 
@@ -93,7 +93,7 @@ Se sei interessato a provare questa funzionalità ma non hai i dati per completa
 
 1. Esegui il mapping dei campi semantici agli attributi nell'entità della cronologia degli acquisti e seleziona **Avanti**. Per le descrizioni dei campi, esamina i [prerequisiti](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Definire la relazione dell'entità](media/product-recommendation-purchasehistorymapping.PNG "Pagina della cronologia degli acquisti che mostra gli attributi semantici mappati ai campi nell'entità della cronologia degli acquisti selezionata")
+   > ![Definisci la relazione dell'entità.](media/product-recommendation-purchasehistorymapping.PNG "Pagina della cronologia degli acquisti che mostra gli attributi semantici mappati ai campi nell'entità della cronologia degli acquisti selezionata")
 
 1. Se i campi seguenti non sono compilati, configura la relazione tra l'entità della cronologia degli acquisti e l'entità *Cliente*.
     1. Seleziona **Entità cronologia acquisti**.
@@ -101,11 +101,11 @@ Se sei interessato a provare questa funzionalità ma non hai i dati per completa
     1. Seleziona l'**Entità cliente** che corrisponde all'entità cliente primaria.
     1. Immetti un nome che descrive la relazione.
        > [!div class="mx-imgBorder"]
-       > ![Pagina della cronologia degli acquisti che mostra la creazione di una relazione con il cliente](media/model-purchase-join.png "Pagina della cronologia degli acquisti che mostra la creazione di una relazione con il cliente")
+       > ![Pagina della cronologia degli acquisti che mostra la creazione di una relazione con il cliente.](media/model-purchase-join.png "Pagina della cronologia degli acquisti che mostra la creazione di una relazione con il cliente")
 
 1. Seleziona **Salva**.
 
-1. Seleziona **Avanti**.
+1. Selezionare **Avanti**.
 
 ### <a name="configure-product-filters"></a>Configurare filtri di prodotto
 
@@ -145,7 +145,7 @@ A volte, solo alcuni prodotti sono utili o appropriati per il tipo di previsione
 
 1. Vai alla scheda **Le mie previsioni** su **Intelligenza** > **Previsioni**.
    > [!div class="mx-imgBorder"]
-   > ![Visualizzazione della pagina Le mie previsioni](media/product-recommendation-mypredictions.PNG "Visualizzazione della pagina Le mie previsioni")
+   > ![Visualizzazione della pagina Le mie previsioni.](media/product-recommendation-mypredictions.PNG "Visualizzazione della pagina Le mie previsioni")
 
 1. Seleziona la previsione da rivedere.
    - **Nome della previsione:** il nome della previsione specificato durante la creazione.
@@ -163,7 +163,7 @@ A volte, solo alcuni prodotti sono utili o appropriati per il tipo di previsione
 
 1. Seleziona i puntini di sospensione verticali accanto alla previsione per cui desideri esaminare i risultati e seleziona **Visualizza**.
    > [!div class="mx-imgBorder"]
-   > ![Visualizzazione delle opzioni nel menu dei puntini di sospensione veriticali per una previsione che include modifica, aggiornamento, visualizzazione, registri ed eliminazione](media/product-recommendation-verticalellipses.PNG "Visualizzazione delle opzioni nel menu dei puntini di sospensione veriticali per una previsione che include modifica, aggiornamento, visualizzazione, registri ed eliminazione")
+   > ![Visualizzazione delle opzioni nel menu dei puntini di sospensione veriticali per una previsione che include modifica, aggiornamento, visualizzazione, registri ed eliminazione.](media/product-recommendation-verticalellipses.PNG "Visualizzazione delle opzioni nel menu dei puntini di sospensione veriticali per una previsione che include modifica, aggiornamento, visualizzazione, registri ed eliminazione")
 
 1. Ci sono cinque sezioni principali di dati all'interno della pagina dei risultati:
     1. **Prestazioni del modello di training:** A, B o C sono possibili punteggi. Questo punteggio indica le prestazioni della previsione e può aiutarti a prendere la decisione di utilizzare i risultati archiviati nell'entità di output.
@@ -173,13 +173,13 @@ A volte, solo alcuni prodotti sono utili o appropriati per il tipo di previsione
             - **C** Il modello verrà considerato di qualità **C** se la metrica "Successo @ K" è inferiore rispetto alla baseline.
                
                > [!div class="mx-imgBorder"]
-               > ![Visualizzazione del risultato delle prestazioni del modello](media/product-recommendation-modelperformance.PNG "Visualizzazione del risultato delle prestazioni del modello")
+               > ![Visualizzazione del risultato delle prestazioni del modello.](media/product-recommendation-modelperformance.PNG "Visualizzazione del risultato delle prestazioni del modello")
             - **Linea di base** : Il modello prende i prodotti più consigliati in base al conteggio degli acquisti di tutti i clienti e utilizza le regole apprese identificate dal modello per creare una serie di raccomandazioni per i clienti. Le previsioni vengono quindi confrontate con i prodotti di punta, come calcolato dal numero di clienti che hanno acquistato il prodotto. Se un cliente ha almeno un prodotto tra i prodotti consigliati che è stato visto anche nei prodotti più acquistati, viene considerato parte della baseline. Se ci fossero 10 di questi clienti che hanno acquistato un prodotto consigliato su 100 clienti totali, la baseline sarebbe 10%.
             - **Successo @ K** : Utilizzando un set di convalida di periodo di tempo delle transazioni, le raccomandazioni vengono create per tutti i clienti e confrontate con il set di convalida delle transazioni. Ad esempio, in un periodo di 12 mesi, il mese 12 potrebbe essere accantonato come set di dati di convalida. Se il modello prevede almeno una cosa che acquisteresti nel mese 12 in base a ciò che ha appreso dagli 11 mesi precedenti, il cliente aumenterebbe la metrica "Successo @ K".
     
     1. **Prodotti più consigliati (con conteggio):** I primi cinque prodotti previsti per i tuoi clienti.
        > [!div class="mx-imgBorder"]
-       > ![Grafico che mostra i primi 5 prodotti più consigliati](media/product-recommendation-topproducts.PNG "Grafico che mostra i primi 5 prodotti più consigliati")
+       > ![Grafico che mostra i primi 5 prodotti più consigliati.](media/product-recommendation-topproducts.PNG "Grafico che mostra i primi 5 prodotti più consigliati")
     
     1. **Fattori raccomandazione chiave:** Il modello utilizza la cronologia delle transazioni dei clienti per fornire consigli sui prodotti. Apprende i modelli basati sugli acquisti passati e trova somiglianze tra clienti e prodotti. Queste somiglianze vengono quindi utilizzate per generare le raccomandazioni sui prodotti.
     Di seguito sono riportati i fattori che potrebbero influenzare una raccomandazione di prodotto generata dal modello. 
@@ -190,20 +190,20 @@ A volte, solo alcuni prodotti sono utili o appropriati per il tipo di previsione
         Ogni raccomandazione sul prodotto è influenzata da uno o più di questi fattori. La percentuale di raccomandazioni in cui ogni fattore di influenza ha svolto un ruolo viene visualizzata in un grafico. Nell'esempio seguente, il 100% delle raccomandazioni è stato influenzato da transazioni passate, il 60% dalla somiglianza del cliente e il 22% dalla somiglianza del prodotto. Passa il mouse sulle barre nel grafico per vedere la percentuale esatta a cui hanno contribuito i fattori di influenza.
 
         > [!div class="mx-imgBorder"]
-        > ![Fattori raccomandazione chiave](media/product-recommendation-keyrecommendationfactors.png "Fattori di raccomandazione chiave appresi dal modello per generare raccomandazioni sui prodotti")
+        > ![Fattori raccomandazione chiave.](media/product-recommendation-keyrecommendationfactors.png "Fattori di raccomandazione chiave appresi dal modello per generare raccomandazioni sui prodotti")
        
      
    1. **Statistiche dei dati**: Forniscono una panoramica del numero di transazioni, clienti e prodotti presi in considerazione dal modello. Si basa sui dati di input utilizzati per apprendere i modelli e generare raccomandazioni sui prodotti.
 
       > [!div class="mx-imgBorder"]
-      > ![Statistiche dati](media/product-recommendation-datastatistics.png "Statistiche dei dati sui dati inout utilizzati dal modello per apprendere i modelli")
+      > ![Statistiche dati.](media/product-recommendation-datastatistics.png "Statistiche dei dati sui dati inout utilizzati dal modello per apprendere i modelli")
 
       Questa sezione mostra le statistiche sui punti dati che sono stati utilizzati dal modello per apprendere i modelli e generare consigli sui prodotti. Il filtro, come configurato nella configurazione del modello, verrà applicato all'output generato dal modello. Tuttavia, il modello utilizza tutti i dati disponibili per apprendere i modelli. Pertanto, se usi il filtro del prodotto nella configurazione del modello, questa sezione mostrerà il numero totale di prodotti analizzati dal modello per apprendere i modelli, che potrebbero differire dal numero di prodotti che corrispondono ai criteri di filtro definiti.
 
    1. **Elementi consigliati sui prodotti con attendibilità elevata:** Un campione di raccomandazioni fornite ai clienti che il modello ritiene probabile possano essere acquistati dal cliente.    
       Se viene aggiunto un catalogo di prodotti, gli ID dei prodotti vengono sostituiti con i nomi dei prodotti. I nomi dei prodotti forniscono informazioni più fruibili e intuitive sulle previsioni.
        > [!div class="mx-imgBorder"]
-       > ![Elenco che mostra suggerimenti ad alta affidabilità per un gruppo selezionato di singoli clienti](media/product-recommendation-highconfidence.PNG "Elenco che mostra suggerimenti ad alta affidabilità per un gruppo selezionato di singoli clienti")
+       > ![Elenco che mostra suggerimenti ad alta affidabilità per un gruppo selezionato di singoli clienti.](media/product-recommendation-highconfidence.PNG "Elenco che mostra suggerimenti ad alta affidabilità per un gruppo selezionato di singoli clienti")
 
 ## <a name="manage-predictions"></a>Gestisci previsioni
 

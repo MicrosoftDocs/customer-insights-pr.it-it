@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597516"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554328"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Richieste diritti dell'interessato ai sensi del GDPR
 
@@ -40,7 +40,7 @@ Un amministratore di Customer Insights può seguire questi passaggi per rimuover
    2. Controlla lo stato dell'origine dati in **Stato**. Un segno di spunta indica che l'aggiornamento è stato completato. Un triangolo di avviso significa che si è verificato un problema. Se viene visualizzato un triangolo di avviso, contatta D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
-> ![Gestione delle richieste di eliminazione di dati cliente ai sensi del GDPR](media/gdpr-data-sources.png "Gestione delle richieste di eliminazione di dati cliente ai sensi del GDPR")
+> ![Gestione delle richieste di eliminazione di dati cliente ai sensi del GDPR.](media/gdpr-data-sources.png "Gestione delle richieste di eliminazione di dati cliente ai sensi del GDPR")
 
 #### <a name="manage-delete-requests-for-user-data"></a>Gestire le richieste di eliminazione di dati utente
 
@@ -49,10 +49,10 @@ Un amministratore di Customer Insights può seguire questi passaggi per eliminar
 1. Accedere a Dynamics 365 Customer Insights.
 2. In Audience Insights, vai a **Amministratore** > **Autorizzazioni**.
 3. Seleziona la casella di controllo corrispondente all'utente che vuoi eliminare.
-4. Seleziona **Rimuovi**.
+4. Selezionare **Rimuovi**.
 
 > [!div class="mx-imgBorder"]
-> ![Gestire le richieste di eliminazione di dati utente ai sensi del GPDR](media/gdpr-permissions.png "Gestire le richieste di eliminazione di dati utente ai sensi del GDPR")
+> ![Gestire le richieste di eliminazione di dati utente ai sensi del GPDR.](media/gdpr-permissions.png "Gestire le richieste di eliminazione di dati utente ai sensi del GDPR")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>Rispondere alle richieste di esportazione dell'interessato ai sensi del GDPR
 

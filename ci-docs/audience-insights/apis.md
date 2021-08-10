@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304747"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554486"
 ---
 # <a name="work-with-customer-insights-apis"></a>Utilizzare le API di Customer Insights
 
@@ -35,7 +35,7 @@ Questo articolo descrive come accedere alle API di Customer Insights, creare una
  
    L'abilitazione delle API crea una chiave di sottoscrizione primaria e secondaria per l'istanza che viene utilizzata nelle richieste API. Puoi rigenerare le chiavi selezionando **Rigenera primaria** o **Rigenera secondaria** in **Amministratore** > **Autorizzazioni** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Abilitare le API di Customer Insights":::.
+   :::image type="content" source="media/enable-apis.gif" alt-text="Abilitare le API di Customer Insights.":::.
 
 1. Seleziona **Esplora le nostre API** per [provare le API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -129,7 +129,7 @@ Scopri come iniziare a utilizzare le librerie client C# in NuGet.org. Per ulteri
  
    In alternativa, esegui questo comando nella **console di Gestione pacchetti NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Aggiungere il pacchetto NuGet al progetto Visual Studio":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Aggiungere il pacchetto NuGet al progetto Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Usare la libreria client C#
 
@@ -141,7 +141,7 @@ Scopri come iniziare a utilizzare le librerie client C# in NuGet.org. Per ulteri
 
 1. Passa `HttpClient` nella costruzione del client `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Esempio di httpclient":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Esempio di httpclient.":::
 
 1. Effettua chiamate con il client ai "metodi di estensione", ad esempio `GetAllInstancesAsync`. Se l'accesso al `Microsoft.Rest.HttpOperationResponse` sottostante è preferibile, utilizza i "metodi di messaggio http", ad esempio `GetAllInstancesWithHttpMessagesAsync`.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305161"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555496"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Arricchimento di profili cliente con le affinità relative al marchio e agli interessi (anteprima)
 
@@ -27,7 +27,7 @@ Per configurare l'arricchimento delle affinità del marchio, vai alla scheda **I
 Per configurare l'arricchimento delle affinità degli interessi, vai alla scheda **Individua** e seleziona **Arricchisci i miei dati** nel riquadro **Interessi**.
 
    > [!div class="mx-imgBorder"]
-   > ![Riquadri Marchi e Interessi](media/BrandsInterest-tile-Hub.png "Riquadri Marchi e Interessi")
+   > ![Riquadri Marchi e Interessi.](media/BrandsInterest-tile-Hub.png "Riquadri Marchi e Interessi")
 
 ## <a name="how-we-determine-affinities"></a>Come determiniamo le affinità
 
@@ -123,7 +123,7 @@ A seconda della dimensione dei dati cliente, potrebbero essere necessari alcuni 
 
 Dopo aver eseguito il processo di arricchimento, vai a **I miei arricchimenti** per rivedere il numero totale di clienti arricchiti e una suddivisione di marchi e interessi nei profili cliente arricchiti.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Anteprima dei risultati dopo l'esecuzione del processo di arricchimento":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Anteprima dei risultati dopo l'esecuzione del processo di arricchimento.":::
 
 Rivedi i dati arricchiti selezionando **Visualizza dati arricchiti** nel grafico. I dati arricchiti per i marchi vanno all'entità **BrandAffinityFromMicrosoft**. I dati per gli interessi sono nell'entità **InterestAffinityFromMicrosoft**. Troverai anche queste entità elencate nel gruppo **Arricchimento** in **Dati** > **Entità**.
 
@@ -131,7 +131,7 @@ Rivedi i dati arricchiti selezionando **Visualizza dati arricchiti** nel grafico
 
 Le affinità per marchi e interessi possono essere visualizzate anche nelle singole schede cliente. Vai a **Clienti** e seleziona un profilo cliente. Nella scheda cliente troverai i grafici per i marchi o gli interessi per i quali le persone nel profilo demografico del cliente hanno affinità.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Scheda cliente con dati arricchiti":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Scheda cliente con dati arricchiti.":::
 
 ## <a name="next-steps"></a>Passaggi successivi
 

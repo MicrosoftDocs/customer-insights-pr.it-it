@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095653"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556312"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsione di abbandono dell'abbonamento (anteprima)
 
@@ -63,7 +63,7 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
 1. In Audience Insights, vai a **Intelligenza** > **Previsioni**.
 1. Seleziona il riquadro **Modello di abbandono dell'abbonamento (anteprima)** e seleziona **Utilizza questo modello**.
    > [!div class="mx-imgBorder"]
-   > ![Riquadro Modello di abbandono dell'abbonamento con il pulsante Utilizza questo modello](media/subscription-churn-usethismodel.PNG "Riquadro Modello di abbandono dell'abbonamento con il pulsante Utilizza questo modello")
+   > ![Riquadro Modello di abbandono dell'abbonamento con il pulsante Utilizza questo modello.](media/subscription-churn-usethismodel.PNG "Riquadro Modello di abbandono dell'abbonamento con il pulsante Utilizza questo modello")
 
 ### <a name="name-model"></a>Assegna nome a modello
 
@@ -86,11 +86,11 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
     1. Seleziona l'**Entità cliente** che corrisponde all'entità cliente primaria.
     1. Immetti un nome che descrive la relazione.
        > [!div class="mx-imgBorder"]
-       > ![Pagina della cronologia degli abbonamenti che mostra la creazione di una relazione con il cliente](media/subscription-churn-subscriptionhistoryrelationship.PNG "Pagina della cronologia degli abbonamenti che mostra la creazione di una relazione con il cliente")
-1. Seleziona **Avanti**.
+       > ![Pagina della cronologia degli abbonamenti che mostra la creazione di una relazione con il cliente.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Pagina della cronologia degli abbonamenti che mostra la creazione di una relazione con il cliente")
+1. Selezionare **Avanti**.
 1. Mappa i campi semantici agli attributi all'interno dell'entità cronologia abbonamenti e seleziona **Salva**. Per le descrizioni dei campi, esamina i [prerequisiti](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Pagina della cronologia degli abbonamenti che mostra gli attributi semantici mappati ai campi nell'entità cronologia degli abbonamenti selezionata](media/subscription-churn-subscriptionhistorymapping.PNG "Pagina della cronologia degli abbonamenti che mostra gli attributi semantici mappati ai campi nell'entità cronologia degli abbonamenti selezionata")
+   > ![Pagina della cronologia degli abbonamenti che mostra gli attributi semantici mappati ai campi nell'entità cronologia degli abbonamenti selezionata.](media/subscription-churn-subscriptionhistorymapping.PNG "Pagina della cronologia degli abbonamenti che mostra gli attributi semantici mappati ai campi nell'entità cronologia degli abbonamenti selezionata")
 1. Seleziona **Aggiungi dati** per **Impegni dei clienti** e scegli l'entità che fornisce le informazioni sugli impegni dei clienti come descritto nei prerequisiti.
 1. Seleziona un tipo di impegno corrispondente al tipo di impegno del cliente che stai configurando.  Seleziona **Creare nuovo** e specifica un nome se non vedi un'opzione che corrisponde al tipo di impegno di cui hai bisogno.
 1. Dovrai configurare la relazione dall'entità impegno del cliente con l'entità cliente.
@@ -101,8 +101,8 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
 1. Mappa i campi semantici agli attributi all'interno dell'entità impegno del cliente e seleziona **Salva**. Per le descrizioni dei campi, esamina i [prerequisiti](#prerequisites).
 1. (Facoltativo) Se hai altri impegni del cliente che desideri includere, ripeti i passaggi precedenti.
    > [!div class="mx-imgBorder"]
-   > ![Definire la relazione dell'entità](media/subscription-churn-customeractivitiesmapping.PNG "Pagina degli impegni dei clienti che mostra gli attributi semantici mappati ai campi nell'entità impegno del cliente selezionata")
-1. Seleziona **Avanti**.
+   > ![Definisci la relazione dell'entità.](media/subscription-churn-customeractivitiesmapping.PNG "Pagina degli impegni dei clienti che mostra gli attributi semantici mappati ai campi nell'entità impegno del cliente selezionata")
+1. Selezionare **Avanti**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Impostare la pianificazione ed esaminare la configurazione
 
@@ -115,7 +115,7 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
 
 1. Vai alla scheda **Le mie previsioni** su **Intelligenza** > **Previsioni**.
    > [!div class="mx-imgBorder"]
-   > ![Visualizzazione della pagina Le mie previsioni](media/subscription-churn-mypredictions.PNG "Visualizzazione della pagina Le mie previsioni")
+   > ![Visualizzazione della pagina Le mie previsioni.](media/subscription-churn-mypredictions.PNG "Visualizzazione della pagina Le mie previsioni")
 1. Seleziona la previsione da rivedere.
    - **Nome della previsione:** il nome della previsione specificato durante la creazione.
    - **Tipo di previsione:** il tipo di modello utilizzato per la previsione
@@ -131,7 +131,7 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
    - **Ultimo aggiornamento:** la data in cui sono stati aggiornati i risultati della previsione risulta nell'entità di output.
 1. Seleziona i puntini di sospensione verticali accanto alla previsione per cui desideri esaminare i risultati e seleziona **Visualizza**.
    > [!div class="mx-imgBorder"]
-   > ![Visualizzazione delle opzioni nel menu dei puntini di sospensione veriticali per una previsione che include modifica, aggiornamento, visualizzazione, registri ed eliminazione](media/subscription-churn-verticalellipses.PNG "Visualizzazione delle opzioni nel menu dei puntini di sospensione veriticali per una previsione che include modifica, aggiornamento, visualizzazione, registri ed eliminazione")
+   > ![Visualizzazione delle opzioni nel menu dei puntini di sospensione veriticali per una previsione che include modifica, aggiornamento, visualizzazione, registri ed eliminazione.](media/subscription-churn-verticalellipses.PNG "Visualizzazione delle opzioni nel menu dei puntini di sospensione veriticali per una previsione che include modifica, aggiornamento, visualizzazione, registri ed eliminazione")
 1. Esistono tre sezioni principali di dati nella pagina dei risultati:
     1. **Prestazioni del modello di training:** A, B o C sono possibili punteggi. Questo punteggio indica le prestazioni della previsione e può aiutarti a prendere la decisione di utilizzare i risultati archiviati nell'entità di output.
         - I punteggi sono determinati in base alle seguenti regole:
@@ -139,13 +139,13 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
             - **B** quando il modello ha previsto con precisione almeno il 50% delle previsioni totali e quando la percentuale di previsioni accurate per i clienti che hanno abbandonato è fino al 10% maggiore del tasso di abbandono medio storico.
             - **C** quando il modello ha previsto con precisione inferiore del 50% delle previsioni totali o quando la percentuale di previsioni accurate per i clienti che hanno abbandonato è inferiore al tasso di abbandono medio storico.
                > [!div class="mx-imgBorder"]
-               > ![Visualizzazione del risultato delle prestazioni del modello](media/subscription-churn-modelperformance.PNG "Visualizzazione del risultato delle prestazioni del modello")
+               > ![Visualizzazione del risultato delle prestazioni del modello.](media/subscription-churn-modelperformance.PNG "Visualizzazione del risultato delle prestazioni del modello")
     1. **Probabilità di abbandono (numero di clienti):** gruppi di clienti in base al rischio di abbandono previsto. Questi dati possono aiutarti in un secondo momento se desideri creare un segmento di clienti con elevato rischio di abbandono. Tali segmenti aiutano a capire dove dovrebbe posizionare il limite per l'appartenenza al segmento.
        > [!div class="mx-imgBorder"]
-       > ![Grafico che mostra la distribuzione dei risultati di abbandono, suddivisi in intervalli da 0-100%](media/subscription-churn-resultdistribution.PNG "Grafico che mostra la distribuzione dei risultati di abbandono, suddivisi in intervalli da 0-100%")
+       > ![Grafico che mostra la distribuzione dei risultati di abbandono, suddivisi in intervalli da 0-100%.](media/subscription-churn-resultdistribution.PNG "Grafico che mostra la distribuzione dei risultati di abbandono, suddivisi in intervalli da 0-100%")
     1. **Fattori più influenti:** esistono molti fattori che vengono presi in considerazione durante la creazione della previsione. Ciascuno dei fattori ha la sua importanza calcolata per le previsioni aggregate create da un modello. Puoi utilizzare questi fattori per convalidare i risultati della previsione. Oppure puoi utilizzare queste informazioni in seguito per [creare segmenti](segments.md) che potrebbero contribuire a influenzare il rischio di abbandono per i clienti.
        > [!div class="mx-imgBorder"]
-       > ![Elenco che mostra i fattori influenti e la loro importanza nella previsione del risultato di abbandono](media/subscription-churn-influentialfactors.PNG "Elenco che mostra i fattori influenti e la loro importanza nella previsione del risultato di abbandono")
+       > ![Elenco che mostra i fattori influenti e la loro importanza nella previsione del risultato di abbandono.](media/subscription-churn-influentialfactors.PNG "Elenco che mostra i fattori influenti e la loro importanza nella previsione del risultato di abbandono")
 
 ## <a name="manage-predictions"></a>Gestisci previsioni
 

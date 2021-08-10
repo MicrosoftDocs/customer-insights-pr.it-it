@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596550"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554899"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Connettere a una cartella Common Data Model usando un account Azure Data Lake
 
@@ -45,7 +45,7 @@ Questo articolo fornisce informazioni su come inserire dati di una cartella Comm
 
 1. Puoi scegliere tra l'utilizzo di un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Immetti le informazioni relative al **Contenitore** e seleziona **Avanti**.
    > [!div class="mx-imgBorder"]
-   > ![Finestra di dialogo di immissione dei dettagli della nuova connessione per Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Finestra di dialogo di immissione dei dettagli della nuova connessione per Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > È necessario uno dei seguenti ruoli per il contenitore o l'account di archiviazione di cui sopra per essere in grado di connettersi e creare un'origine dati:
    >  - Lettore dati BLOB di archiviazione
@@ -58,11 +58,11 @@ Questo articolo fornisce informazioni su come inserire dati di una cartella Comm
 
 1. Otterrai un elenco di entità disponibili nel file model.json o manifest.json selezionato. Puoi rivedere e selezionare dall'elenco di entità disponibili e selezionare **Salva**. Tutte le entità selezionate verranno inserite dalla nuova origine dati.
    > [!div class="mx-imgBorder"]
-   > ![Finestra di dialogo che mostra un elenco di entità da un file model.json](media/review-entities.png)
+   > ![Finestra di dialogo che mostra un elenco di entità da un file model.json.](media/review-entities.png)
 
 8. Specifica le entità di dati per cui vuoi abilitare il profiling dei dati e seleziona **Salva**. Il profiling dei dati consente l'analisi e altre funzionalità. Puoi selezionare l'intera entità, che seleziona tutti gli attributi dall'entità, o selezionare alcuni attributi di tua scelta. Per impostazione predefinita, nessuna entità è abilitata per il profiling dei dati.
    > [!div class="mx-imgBorder"]
-   > ![Finestra di dialogo che mostra un profiling dei dati](media/dataprofiling-entities.png)
+   > ![Finestra di dialogo che mostra un profiling dei dati.](media/dataprofiling-entities.png)
 
 9. Dopo aver salvato le selezioni, viene visualizzata la pagina **Origini dati**. Ora la connessione alla cartella Common Data Model viene visualizzata come origine dati.
 
@@ -81,12 +81,12 @@ Puoi aggiornare la chiave di accesso per l'account di archiviazione contenente l
 
 4. Facoltativamente, aggiorna il valore di **Chiave di accesso** e seleziona **Avanti**.
 
-   ![Finestra di dialogo per modificare e aggiornare una chiave di accesso per un'origine dati esistente](media/edit-access-key.png)
+   ![Finestra di dialogo per modificare e aggiornare una chiave di accesso per un'origine dati esistente.](media/edit-access-key.png)
 
 5. Facoltativamente, puoi eseguire l'aggiornamento da una connessione con chiave dell'account a una connessione basata su risorse o sottoscrizione. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Non puoi modificare le informazioni sul **Contenitore** durante l'aggiornamento della connessione.
    > [!div class="mx-imgBorder"]
 
-   > ![Finestra di dialogo per immettere i dettagli di connessione per Azure Data Lake a un account di archiviazione esistente](media/enter-existing-storage-details.png)
+   > ![Finestra di dialogo per immettere i dettagli di connessione per Azure Data Lake a un account di archiviazione esistente.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > È necessario uno dei seguenti ruoli per il contenitore o l'account di archiviazione di cui sopra per essere in grado di connettersi e creare un'origine dati:

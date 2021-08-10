@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598344"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555174"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Utilizzare modelli basati su Azure Machine Learning Studio (versione classica)
 
@@ -41,7 +41,7 @@ In un primo passaggio, dobbiamo creare un'area di lavoro e aprire Machine Learni
 
 1. Dopo aver creato la risorsa, verrà visualizzata la dashboard dell'area di lavoro di Machine Learning Studio. Seleziona **Avvia Machine Learning Studio**.
 
-   ![Interfaccia utente di Azure Machine Learning Studio](media/azure-machine-learning-studio.png)
+   ![Interfaccia utente di Azure Machine Learning Studio.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Utilizzare Azure Machine Learning Studio
 
@@ -55,7 +55,7 @@ Ora puoi creare un nuovo esperimento o importare un modello di esperimento esist
 
 1. Se crei un nuovo esperimento o utilizzi un modello di esperimento dalla raccolta, devi configurare le proprietà **Importa dati**. Usa l'esperienza guidata o fornisci direttamente i dettagli per accedere all'archivio BLOB di Azure che contiene i tuoi dati.  
 
-   ![Esperimento con Azure Machine Learning Studio](media/azure-machine-learning-studio-experiment.png)
+   ![Esperimento con Azure Machine Learning Studio.](media/azure-machine-learning-studio-experiment.png)
 
 1. Ora puoi creare una pipeline di elaborazione personalizzata per pulire e preelaborare i dati, estrarre le funzionalità ed eseguire il training di un modello adatto.
 
@@ -63,11 +63,11 @@ Ora puoi creare un nuovo esperimento o importare un modello di esperimento esist
 
 1. Quando sei soddisfatto della qualità di un modello, seleziona **Configura servizio Web** > **Servizio Web predittivo**. Questa opzione importa il modello con training e la pipeline di funzionalità dall'esperimento di training a un servizio predittivo. Il servizio predittivo può prendere un altro set di dati di input con lo schema utilizzato nell'esperimento di training per fare previsioni.
 
-   ![Configurare un servizio Web predittivo](media/predictive-webservice-control.png)
+   ![Configurare un servizio Web predittivo.](media/predictive-webservice-control.png)
 
 1. Una volta che l'esperimento del servizio Web predittivo ha esito positivo, è possibile distribuirlo per la pianificazione automatica. Per fare in modo che il servizio Web funzioni con Customer Insights, seleziona **Distribuisci servizio Web** > **Anteprima Distribuisci servizio Web [Nuovo]**. [Scopri di più sulla distribuzione di un servizio Web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
 
-   ![Distribuire un servizio Web predittivo](media/predictive-webservice-deploy.png)
+   ![Distribuire un servizio Web predittivo.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Modelli di esempio dalla raccolta
 
@@ -87,13 +87,13 @@ La definizione di abbandono può variare in base allo scenario. In questo esempi
 
 Il modello dell'esperimento può essere importato dalla raccolta. Innanzitutto, assicurati di importare i dati per **Attività di soggiorno in hotel**, **Dati dei clienti** e **Dati sull'utilizzo del servizio** dall'archivio BLOB di Azure.
 
-   ![Importare i dati per il modello di abbandono](media/import-data-azure-blob-storage.png)
+   ![Importare i dati per il modello di abbandono.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Definizione delle funzionalità
 
 Sulla base della definizione di abbandono, identifichiamo prima le funzionalità non elaborate che influenzeranno l'etichetta. Quindi, elaboriamo queste funzionalità non elaborate in funzionalità numeriche che possono essere utilizzate con i modelli di apprendimento automatico. L'integrazione dei dati avviene in Customer Insights di modo che possiamo unire queste tabelle utilizzando l'*ID cliente*.
 
-   ![Unire dati importati](media/join-imported-data.png)
+   ![Unisci i dati importati.](media/join-imported-data.png)
 
 La definizione delle funzionalità per la creazione del modello per l'analisi del tasso di abbandono può rivelarsi complicata. I dati sono una funzione del tempo con la nuova attività alberghiera registrata su base giornaliera. Durante la definizione delle funzionalità, vogliamo generare funzionalità statiche dai dati dinamici. In questo caso, generiamo più funzionalità dall'attività alberghiera con una finestra flessibile di un anno. Espandiamo anche funzionalità di categoria come il tipo di camera o il tipo di prenotazione in funzionalità separate utilizzando la codifica one-hot.  
 
@@ -114,7 +114,7 @@ Ora dobbiamo scegliere l'algoritmo ottimale da utilizzare. In questo caso, la ma
 
 L'immagine seguente mostra la pipeline di training e valutazione del modello da Azure Machine Learning Studio:
 
-![Modello di abbandono in Azure Machine Learning Studio](media/azure-machine-learning-model.png)
+![Modello di abbandono in Azure Machine Learning Studio.](media/azure-machine-learning-model.png)
 
 Applichiamo anche una tecnica chiamata **Importanza delle funzionalità di permuta**, un aspetto importante dell'ottimizzazione del modello. I modelli incorporati hanno poche informazioni dettagliate sull'impatto di qualsiasi funzionalità specifica sulla previsione finale. Il calcolatore dell'importanza delle funzionalità utilizza un algoritmo personalizzato per calcolare l'influenza delle singole funzionalità sul risultato per un modello specifico. L'importanza della funzionalità è normalizzata tra +1 e -1. Un'influenza negativa significa che la funzionalità corrispondente ha un'influenza contro-intuitiva sul risultato e dovrebbe essere rimossa dal modello. Un'influenza positiva indica che la funzionalità sta contribuendo notevolmente alla previsione. Questi valori non sono coefficienti di correlazione in quanto sono metriche diverse. Per ulteriori informazioni, vedi [Importanza delle funzionalità di permuta](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Definiamo l'obiettivo come la massimizzazione della quantità di denaro speso pe
 
 Come il modello di abbandono, stiamo unendo il ServiceCustomerID dell'hotel con CustomerID al fine di creare suggerimenti in modo coerente per CustomerID.
 
-![Funzionalità del modello di suggerimenti](media/azure-machine-learning-model-featurization.png)
+![Funzionalità del modello di suggerimenti.](media/azure-machine-learning-model-featurization.png)
 
 I dati provengono da tre diverse entità e le funzionalità sono derivate da esse. La definizione delle funzionalità per il problema dei suggerimenti è diversa rispetto agli scenari di abbandono o durata della relazione con il cliente. Il modello di suggerimenti richiede dati di input sotto forma di tre set di funzionalità.
 
@@ -156,13 +156,13 @@ I dati provengono da tre diverse entità e le funzionalità sono derivate da ess
 
 Prevediamo prodotti o servizi utilizzando l'algoritmo chiamato **Train Matchbox Recommender** per eseguire il training del modello di suggerimenti.
 
-![Algoritmo di suggerimenti per il prodotto](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algoritmo di suggerimenti per il prodotto.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Le tre porte di input per il modello **Train Matchbox Recommender** acquisisce i dati sull'utilizzo del servizio di training, la descrizione del cliente (facoltativa) e la descrizione del servizio. Esistono tre modi diversi per assegnare un punteggio al modello. Uno è per la valutazione del modello in cui viene calcolato un punteggio NDCG (Normalized Discounted Cumulative Gain) per classificare gli elementi valutati. In questo esperimento, il punteggio NDCG è 0,97. Le altre due opzioni sono il punteggio del modello sull'intero catalogo di servizi suggeriti o il punteggio solo sugli elementi che gli utenti non hanno utilizzato prima.
 
 Esaminando ulteriormente le distribuzioni dei suggerimenti sull'intero catalogo dei servizi, notiamo che telefono, WiFi e corriere sono i migliori servizi da consigliare. Ciò è coerente con quanto rilevato dalle distribuzioni dei dati di utilizzo del servizio:
 
-![Risultato del modello di suggerimenti](media/azure-machine-learning-model-output.png)
+![Risultato del modello di suggerimenti.](media/azure-machine-learning-model-output.png)
 
 L'intero [esperimento dei suggerimenti di prodotto è accessibile in Azure AI Gallery.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

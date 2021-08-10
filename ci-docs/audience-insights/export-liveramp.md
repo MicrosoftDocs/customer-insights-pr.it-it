@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760332"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555450"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Esportare segmenti in LiveRamp&reg; (anteprima)
 
@@ -56,7 +56,7 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Nel campo **Scegli il tuo identificatore chiave**, seleziona **E-mail**, **Nome e indirizzo** o **Telefono** per inviare a LiveRamp per la risoluzione dell'identità.
    > [!div class="mx-imgBorder"]
-   > ![Connettore LiveRamp con mappatura degli attributi](media/export-liveramp-segments.png "Connettore LiveRamp con mappatura degli attributi")
+   > ![Connettore LiveRamp con mappatura degli attributi.](media/export-liveramp-segments.png "Connettore LiveRamp con mappatura degli attributi")
 
 1. Mappa gli attributi corrispondenti dall'entità cliente unificata per l'identificatore chiave selezionato.
 

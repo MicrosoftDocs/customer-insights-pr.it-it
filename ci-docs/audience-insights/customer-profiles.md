@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304609"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554623"
 ---
 # <a name="customer-profiles"></a>Profili cliente
 
@@ -23,11 +23,11 @@ La pagina **Clienti** mostra una visualizzazione combinata dei tuoi clienti, bas
 I clienti possono essere persone fisiche o organizzazioni (anteprima). Ogni profilo cliente o organizzazione è rappresentato da un riquadro. Seleziona un riquadro per visualizzare ulteriori informazioni su quel cliente o organizzazione specifici. Utilizza i controlli di impaginazione nella parte inferiore della pagina per visualizzare altri record.
 
 > [!div class="mx-imgBorder"] 
-> ![Profili cliente B2C](media/profiles-customers.png "Profili cliente B2C")
+> ![Profili cliente B2C.](media/profiles-customers.png "Profili cliente B2C")
 
 Organizzazioni (anteprima)
 > [!div class="mx-imgBorder"] 
-> ![Profili cliente B2B](media/profile-customers-b2b.png "Profili cliente B2B")
+> ![Profili cliente B2B.](media/profile-customers-b2b.png "Profili cliente B2B")
 
 > [!NOTE]
 > Se non riesci a vedere i riquadri quando selezioni **Clienti** nello spostamento, l'amministratore deve [definire almeno un attributo ricercabile](search-filter-index.md) nell'**indice di ricerca e filtro**.
@@ -47,7 +47,7 @@ Puoi filtrare i clienti in base ai campi dell'entità Profilo cliente. Simile al
 2. Seleziona le caselle di controllo accanto agli attributi in base a cui vuoi filtrare i clienti.
 
    > [!div class="mx-imgBorder"] 
-   > ![Profili cliente](media/profiles-customers3.png "Profili cliente")
+   > ![Profili cliente.](media/profiles-customers3.png "Profili cliente")
 
 3. Rimuovi i filtri selezionando **Cancella filtri** nella pagina **Clienti**.
 

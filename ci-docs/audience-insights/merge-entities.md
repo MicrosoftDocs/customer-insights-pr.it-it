@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305647"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650139"
 ---
 # <a name="merge-entities"></a>Gestire entità
 
@@ -109,7 +109,7 @@ Alcune entità contengono più dettagli di altre. Se un'entità include i dati p
 Sia che unisci manualmente gli attributi o consenti al sistema di unirli, puoi sempre eseguire l'unione. Seleziona **Esegui** nella pagina **Unione** per avviare il processo.
 
 > [!div class="mx-imgBorder"]
-> ![Salvataggio ed esecuzione dell'unione di dati](media/configure-data-merge-save-run.png "Salvataggio ed esecuzione dell'unione di dati")
+> ![Salvataggio ed esecuzione dell'unione di dati.](media/configure-data-merge-save-run.png "Salvataggio ed esecuzione dell'unione di dati")
 
 Scegli **Esegui solo unione** se desideri solo vedere l'output riflesso nell'entità cliente unificata. I processi a valle verranno aggiornati come [definito nella pianificazione dell'aggiornamento](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Scegli **Esegui processi di unione e downstream** per aggiornare il sistema con 
 Per apportare ulteriori modifiche e rieseguire il passaggio, è possibile annullare un'unione in corso. Seleziona **Aggiornamento in corso ...** e seleziona **Annulla processo** nel riquadro laterale visualizzato.
 
 > [!TIP]
-> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
+> Dopo aver eseguito il processo di unione, seleziona lo stato del processo per aprire il riquadro **Dettagli attività**. Fornisce una panoramica del tempo di elaborazione, della data dell'ultima elaborazione e di tutti gli errori e gli avvisi associati all'attività. Seleziona **Vedi dettagli** per vedere quali entità hanno partecipato al processo corrispondente, se la risoluzione del conflitto è riuscita e se gli aggiornamenti sono stati pubblicati correttamente.  
+> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Percorso di drill-down per ottenere i dettagli dell'elaborazione dal collegamento sullo stato dell'attività.":::
 
 ## <a name="next-step"></a>Passaggio successivo
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309825"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555358"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Arricchimento dei profili dei clienti con i dati demografici di Experian (anteprima)
 
@@ -39,7 +39,7 @@ Attualmente supportiamo l'arricchimento dei profili dei clienti solo negli Stati
 1. Seleziona **Arricchisci i miei dati** nel riquadro di Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian riquadri](media/experian-tile.png "Experian tile")
+   > ![Riquadro Experian.](media/experian-tile.png "Experian tile")
    > 
 
 1. Seleziona una [connessione](connections.md) dall'elenco a discesa. Contatta un amministratore se non è disponibile alcuna connessione. Se sei un amministratore, puoi creare una connessione selezionando **Aggiungi connessione** e scegliendo Experian dall'elenco a discesa. 

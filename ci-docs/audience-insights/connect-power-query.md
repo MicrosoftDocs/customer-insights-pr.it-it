@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305896"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554688"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connettersi a un'origine dati Power Query
 
@@ -42,7 +42,7 @@ Power Query offre un'ampia gamma di connettori per inserire i dati. La maggior p
 1. La finestra di dialogo **Power Query - Modifica query** consente di rivedere e perfezionare i dati. Le entità identificate dai sistemi nell'origine dati selezionata vengono visualizzate nel riquadro di sinistra.
 
    > [!div class="mx-imgBorder"]
-   > ![Finestra di dialogo Modifica query](media/data-manager-configure-edit-queries.png "Finestra di dialogo Modifica query")
+   > ![Finestra di dialogo Modifica query.](media/data-manager-configure-edit-queries.png "Finestra di dialogo Modifica query")
 
 1. Puoi anche trasformare i dati. Seleziona un'entità da modificare o trasformare. Utilizza le opzioni nella finestra Power Query per applicare le trasformazioni. Ogni trasformazione viene elencata in **Passaggi applicati**. Power Query fornisce numerose opzioni di trasformazione predefinite. Per altre informazioni, vedi [Trasformazioni di Power Query](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Connettori con un segno di spunta nella colonna **Customer Insights (Flussi di d
 2. Seleziona i puntini di sospensione verticali accanto all'origine dati che desideri modificare e seleziona **Modifica** dal menu a tendina.
 
    > [!div class="mx-imgBorder"]
-   > ![Modifica opzione](media/edit-option-data-sources.png "Modifica opzione")
+   > ![Opzione Modifica.](media/edit-option-data-sources.png "Modifica opzione")
 
 3. Applica le modifiche e le trasformazioni nella finestra di dialogo **Power Query - Modifica query** come descritto nella sezione [Crea una nuova origine dati](#create-a-new-data-source).
 

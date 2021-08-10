@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049399"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553980"
 ---
 # <a name="entities-in-audience-insights"></a>Entità in Audience Insights
 
@@ -30,19 +30,19 @@ La pagina **Entità** elenca le entità e include diverse colonne:
 - **Ultimo aggiornamento**: data e ora dell'ultimo aggiornamento dell'entità
 - **Ultimo aggiornamento**: data e ora dell'ultimo aggiornamento dati
 
-## <a name="exploring-a-specific-entitys-data"></a>Esplorazione dei dati di un'entità specifica
+## <a name="explore-a-specific-entitys-data"></a>Esplorare i dati di un'entità specifica
 
 Seleziona un'entità per esplorare i diversi campi e record inclusi all'interno dell'entità.
 
 > [!div class="mx-imgBorder"]
-> ![Seleziona un\'entità](media/data-manager-entities-data.png "Seleziona un'entità")
+> ![Seleziona un'entità.](media/data-manager-entities-data.png "Seleziona un\'entità")
 
 - La scheda **Dati** mostra una tabella che elenca i dettagli sui singoli record dell'entità.
 
 > [!div class="mx-imgBorder"]
-> ![Tabella Campi](media/data-manager-entities-fields.PNG "Tabella Campi")
+> ![Tabella Campi.](media/data-manager-entities-fields.PNG "Tabella Campi")
 
-- La scheda **Attributi** è selezionata per impostazione predefinita e mostra una tabella per esaminare i dettagli per l'entità selezionata, come nomi di campo, tipi di dati e tipi. La colonna **Tipo** mostra i tipi associati a Common Data Model che vengono identificati automaticamente dal sistema o [mappati manualmente](map-entities.md) dagli utenti. Si tratta di tipi semantici che possono differire dai tipi di dati degli attributi; ad esempio il campo *E-mail* sotto ha come tipo di dati *Testo* ma il relativo tipo Common Data Model (semantico) potrebbe essere *Emai* o *EmailAddress*.
+- La scheda **Attributi** è selezionata per impostazione predefinita e mostra una tabella per esaminare i dettagli per l'entità selezionata, come nomi di campo, tipi di dati e tipi. La colonna **Tipo** mostra i tipi associati a Common Data Model che vengono identificati automaticamente dal sistema o [mappati manualmente](map-entities.md) dagli utenti. Questi tipi sono tipi semantici che possono differire dai tipi di dati degli attributi. Ad esempio, il campo *E-mail* sotto ha un tipo di dati *Testo* ma il suo tipo (semantico) Common Data Model potrebbe essere *E-mail* o *Indirizzo e-mail*.
 
 > [!NOTE]
 > Entrambe le tabelle mostrano solo un esempio dei dati dell'entità. Per visualizzare il set di dati completo, vai alla pagina **Origini dati** seleziona un'entità, seleziona **Modifica**, quindi visualizza i dati di questa entità con l'editor Power Query come spiegato in [Origini dati](data-sources.md).
@@ -52,11 +52,28 @@ Per altre informazioni sui dati inseriti nell'entità, la colonna **Riepilogo** 
 Seleziona l'icona del grafico per visualizzare il riepilogo dei dati.
 
 > [!div class="mx-imgBorder"]
-> ![Simbolo di riepilogo](media/data-manager-entities-summary.png "Tabella riepilogo dati")
+> ![Simbolo di riepilogo.](media/data-manager-entities-summary.png "Tabella riepilogo dati")
 
-### <a name="next-step"></a>Passaggio successivo
+## <a name="entity-specific-information"></a>Informazioni specifiche dell'entità
 
-Vedi l'argomento [Unificare](data-unification.md) per informazioni sulle operazioni di *mapping*, *corrispondenza* e *Unione* sui dati inseriti.
+La sezione seguente fornisce informazioni su alcune entità create dal sistema.
+
+### <a name="corrupted-data-sources"></a>Origini dati danneggiate
+
+I campi di un'origine dati inserita possono contenere dati danneggiati. I record con campi danneggiati vengono esposti nelle entità create dal sistema. La conoscenza dei record danneggiati consente di identificare quali dati rivedere e aggiornare nel sistema di origine. Dopo il successivo aggiornamento dell'origine dati, i record corretti vengono inseriti in Customer Insights e passati ai processi downstream. 
+
+Ad esempio, una colonna "compleanno" ha il tipo di dati impostato su "data". Il record del cliente ha la data di nascita inserita in formato "01/01/19777". Il sistema contrassegnerà questo record come danneggiato. Qualcuno può ora modificare la data di nascita nel sistema di origine in "1977". Dopo un aggiornamento automatico delle origini dati, il campo ora ha un formato valido e il record verrà rimosso dall'entità danneggiata. 
+
+Vai a **Dati** > **Entità** e cerca le entità corrotte nella sezione **Sistema**. Schema di denominazione delle entità danneggiate: "DataSourceName_EntityName_corrupt".
+
+Customer Insights elabora ancora i record danneggiati. Tuttavia, potrebbero causare problemi quando si lavora con i dati unificati.
+
+I seguenti controlli vengono eseguiti sui dati importati per esporre i record danneggiati: 
+
+- Il valore di un campo non corrisponde al tipo di dati della sua colonna.
+- I campi contengono caratteri che fanno sì che le colonne non corrispondano allo schema previsto. Ad esempio: virgolette formattate in modo errato, virgolette senza caratteri di escape o caratteri di nuova riga.
+- Se sono presenti colonne datetime/date/datetimeoffset, il loro formato deve essere specificato nel modello se non segue il formato ISO standard.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

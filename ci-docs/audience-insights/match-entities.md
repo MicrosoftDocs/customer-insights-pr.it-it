@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306033"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650323"
 ---
 # <a name="match-entities"></a>Mettere in corrispondenza le entità
 
@@ -138,7 +138,7 @@ Specificare regole di deduplicazione non è obbligatorio. Se non vengono configu
    - **Meno recente**: il record vincitore è quello meno recente. Richiede una data o un campo numerico per definire la recency.
  
    > [!div class="mx-imgBorder"]
-   > ![Passaggio 1 delle regole di deduplicazione](media/match-selfconflation.png "Passaggio 1 delle regole di deduplicazione")
+   > ![Passaggio 1 delle regole di deduplicazione.](media/match-selfconflation.png "Passaggio 1 delle regole di deduplicazione")
  
 1. Una volta selezionate le entità e impostata la relativa preferenza di unione, seleziona **Aggiungi regola** per definire le regole di deduplicazione a livello di entità.
    - **Seleziona campo** elenca tutti i campi disponibili da quell'entità. Scegli il campo in cui desideri verificare la presenza di duplicati. Scegli campi che sono probabilmente univoci per ogni singolo cliente. Ad esempio, un indirizzo e-mail o la combinazione di nome, città e numero di telefono.
@@ -146,7 +146,7 @@ Specificare regole di deduplicazione non è obbligatorio. Se non vengono configu
    - Definisci più condizioni aggiuntive selezionando **Aggiungi condizione**.
  
    > [!div class="mx-imgBorder"]
-   > ![Passaggio 2 delle regole di deduplicazione](media/match-selfconflation-rules.png "Passaggio 2 delle regole di deduplicazione")
+   > ![Passaggio 2 delle regole di deduplicazione.](media/match-selfconflation-rules.png "Passaggio 2 delle regole di deduplicazione")
 
   Puoi creare molteplici regole di deduplicazione per un'entità. 
 
@@ -179,7 +179,9 @@ Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Esegui** per avv
 Troverai il risultato di un'esecuzione completata, l'entità profilo del cliente unificata, nella pagina **Entità**. La tua entità cliente unificata è chiamata **Clienti** nella sezione **Profili**. La prima esecuzione di una corrispondenza completata crea l'entità *Cliente*. Tutte le esecuzioni di corrispondenza successive espandono quell'entità.
 
 > [!TIP]
-> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
+> Dopo aver eseguito il processo di unione, seleziona lo stato del processo per aprire il riquadro **Dettagli attività**. Fornisce una panoramica del tempo di elaborazione, della data dell'ultima elaborazione e di tutti gli errori e gli avvisi associati all'attività. Seleziona **Vedi dettagli** per vedere quali entità hanno partecipato al processo di unione, e cui regole sono state applicate, se la risoluzione del conflitto è riuscita e se gli aggiornamenti sono stati pubblicati correttamente.  
+> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Percorso di drill-down per ottenere i dettagli dell'elaborazione dal collegamento sullo stato dell'attività.":::
 
 ## <a name="review-and-validate-your-matches"></a>Rivedere e convalidare le corrispondenze
 

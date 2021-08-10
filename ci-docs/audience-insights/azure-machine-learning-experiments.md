@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597424"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554440"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilizzare modelli basati su Azure Machine Learning
 
@@ -52,7 +52,7 @@ Per utilizzare dati di entità di Customer Insights nella pipeline di inferenza 
      Nella finestra di progettazione, apri **Seleziona colonne in set di dati** e seleziona **Imposta come parametro di pipeline** dove fornisci un nome per il parametro.
 
      > [!div class="mx-imgBorder"]
-     > ![Parametrizzazione del set di dati nella finestra di progettazione](media/intelligence-designer-dataset-parameters.png "Parametrizzazione del set di dati nella finestra di progettazione")
+     > ![Parametrizzazione del set di dati nella finestra di progettazione.](media/intelligence-designer-dataset-parameters.png "Parametrizzazione del set di dati nella finestra di progettazione")
    
 * Parametro del set di dati nell'SDK (Python)
    
@@ -78,7 +78,7 @@ Per utilizzare dati di entità di Customer Insights nella pipeline di inferenza 
 
 * La finestra di progettazione fornisce il [modulo Esporta dati](/azure/machine-learning/algorithm-module-reference/export-data) che consente di esportare l'output di una pipeline nell'archiviazione di Azure. Attualmente, il modulo deve utilizzare il tipo di archivio dati **Archivio BLOB di Azure** e parametrizzare l'**Archivio dati** e il relativo **Percorso**. Customer Insights sovrascrive entrambi questi parametri durante l'esecuzione della pipeline con un datastore e un percorso accessibile al prodotto.
    > [!div class="mx-imgBorder"]
-   > ![Configurazione del modulo Esporta dati](media/intelligence-designer-importdata.png "Configurazione del modulo Esporta dati")
+   > ![Configurazione del modulo Esporta dati.](media/intelligence-designer-importdata.png "Configurazione del modulo Esporta dati")
    
 * Quando scrivi l'output di inferenza utilizzando codice, puoi caricare l'output nel percorso in un *archivio dati registrato* nell'area di lavoro. Se il percorso e l'archivio dati sono parametrizzati nella pipeline, Customer Insights sarà in grado di leggere e importare l'output di inferenza. Attualmente è supportato un singolo output tabulare in formato csv. Il percorso deve includere la directory e il nome di file.
 
