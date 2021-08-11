@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304701"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692440"
 ---
 # <a name="data-sources-overview"></a>Panoramica delle origini dati
 
@@ -30,13 +31,13 @@ Puoi aggiungere un'origine dati in tre modi principali:
 
 - [Attraverso dozzine di connettori Power Query](connect-power-query.md)
 - [Da una cartella di Common Data Model](connect-common-data-model.md)
-- [Dal tuo lake Microsoft Dataverse](connect-common-data-service-lake.md)
+- [Dal tuo lake Microsoft Dataverse](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Aggiungere dati dalle origini dati locale
 
-L'inserimento di dati da origini dati locale in informazioni dettagliate gruppo di destinatari è supportata in base ai flussi di dati Microsoft Power Platform. I flussi di dati possono essere abilitati in Customer Insights [fornendo l'URL dell'ambiente Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) quando si imposta l'ambiente.
+L'inserimento di dati da origini dati locale in informazioni dettagliate gruppo di destinatari è supportata in base ai flussi di dati Microsoft Power Platform. I flussi di dati possono essere abilitati in Customer Insights [fornendo l'URL dell'ambiente Microsoft Dataverse](get-started-paid.md) quando si imposta l'ambiente.
 
-Le origini dati create dopo l'associazione di un ambiente Dataverse con Customer Insights utilizzeranno i [flussi di dati Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per impostazione predefinita. I flussi di dati supportano la connettività locale utilizzando il gateway di dati. Rimuovi e ricrea le origini dati che esistevano prima che un ambiente Dataverse fosse associato per [utilizzare i gateway di dati locale](/data-integration/gateway/service-gateway-app.md).
+Le origini dati create dopo l'associazione di un ambiente Dataverse con Customer Insights utilizzeranno i [flussi di dati Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per impostazione predefinita. I flussi di dati supportano la connettività locale utilizzando il gateway di dati. Rimuovi e ricrea le origini dati che esistevano prima che un ambiente Dataverse fosse associato per [utilizzare i gateway di dati locale](/data-integration/gateway/service-gateway-app).
 
 I gateway dati di un ambiente esistente Power BI o Power Apps saranno visibili e potrai riutilizzarli in Customer Insights. La pagina delle origini dati mostra i collegamenti per andare all'ambiente Microsoft Power Platform in cui è possibile visualizzare e configurare i gateway dati locale.
 
@@ -45,9 +46,9 @@ I gateway dati di un ambiente esistente Power BI o Power Apps saranno visibili e
 Vedrai il nome di ciascuna origine dati inserita, il suo stato e l'ultima volta che i dati sono stati aggiornati per quell'origine. Puoi ordinare l'elenco delle origini dati per colonna.
 
 > [!div class="mx-imgBorder"]
-> ![Origine dati aggiunta](media/configure-data-datasource-added.png "Origine dati aggiunta")
+> ![Origine dati aggiunta.](media/configure-data-datasource-added.png "Origine dati aggiunta")
 
-|Stato  |Descrizione  |
+|Condizione  |Descrizione  |
 |---------|---------|
 |Operazione riuscita   |L'inserimento dell'origine dati è riuscito se un'ora è menzionata nella colonna **Aggiornato**.
 |Non avviato   |L'origine dati non è ancora stata inserita o è ancora in modalità bozza.         |

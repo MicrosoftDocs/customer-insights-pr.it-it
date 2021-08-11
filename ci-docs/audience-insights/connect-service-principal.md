@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596504"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692118"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Connettersi a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure per Audience Insights
 
 Gli strumenti automatizzati che usano i servizi di Azure deve avere sempre autorizzazioni limitate. Anziché avere applicazioni che accedono come utente con privilegi completi, Azure fornisce entità servizio. Leggi questo articolo per scoprire come connettere Audience Insights con un account di Azure Data Lake Storage Gen2 utilizzando un'entità servizio di Azure anziché chiavi di account di archiviazione. 
 
-Puoi utilizzare l'entità servizio per [aggiungere o modificare in modo sicuro una cartella di Common Data Model come origine dati](connect-common-data-model.md) o per [creare un ambiente o aggiornarne uno esistente](manage-environments.md#create-an-environment-in-an-existing-organization).
+Puoi utilizzare l'entità servizio per [aggiungere o modificare in modo sicuro una cartella di Common Data Model come origine dati](connect-common-data-model.md) o per [creare un ambiente o aggiornarne uno esistente](get-started-paid.md).
 
 > [!IMPORTANT]
 > - L'account di archiviazione di Azure Data Lake Gen2 che intende usare l'entità servizio deve avere lo [spazio dei nomi gerarchico abilitato](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ La propagazione delle modifiche può durare fino a 15 minuti.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Immetti l'ID risorsa di Azure o i dettagli della sottoscrizione di Azure nell'allegato dell'account di archiviazione di Audience Insights.
 
-Associa un account di archiviazione di Azure Data Lake in Audience Insights per [memorizzare i dati di output](manage-environments.md) o [usalo come origine dati](connect-common-data-service-lake.md). La scelta dell'opzione Azure Data Lake ti consente di scegliere tra un approccio basato sulle risorse e un approccio basato sulla sottoscrizione.
+Associa un account di archiviazione di Azure Data Lake in Audience Insights per [memorizzare i dati di output](manage-environments.md) o [usalo come origine dati](connect-dataverse-managed-lake.md). La scelta dell'opzione Azure Data Lake ti consente di scegliere tra un approccio basato sulle risorse e un approccio basato sulla sottoscrizione.
 
 Segui i passaggi seguenti per fornire le informazioni necessarie sull'approccio selezionato.
 

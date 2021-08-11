@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059593"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692210"
 ---
 # <a name="customer-card-add-in-preview"></a>Componente aggiuntivo Scheda cliente (anteprima)
 
@@ -25,7 +25,7 @@ Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Il componente aggiuntivo funziona solo con le app Dynamics 365 basate su modello, come Sales o Customer Service, versione 9.0 e successive.
-- Affinché i dati di Dynamics 365 possano essere mappati ai profili cliente delle informazioni dettagliate sul gruppo di destinatari devono essere [inseriti dall'app Dynamics 365 utilizzando il connettore Common Data Service](connect-power-query.md).
+- Affinché i dati di Dynamics 365 possano essere mappati ai profili cliente delle informazioni dettagliate sul gruppo di destinatari devono essere [inseriti dall'app Dynamics 365 utilizzando il connettore Microsoft Dataverse](connect-power-query.md).
 - Tutti gli utenti Dynamics 365 del componente aggiuntivo Customer Card devono essere [aggiunti come utenti](permissions.md) nelle informazioni dettagliate sul gruppo di destinatari per vedere i dati.
 - [Le funzionalità di ricerca e filtro configurate](search-filter-index.md) nelle informazioni dettagliate sul gruppo di destinatari sono necessarie affinché la ricerca dei dati funzioni.
 - Ogni controllo del componente aggiuntivo si basa su dati specifici nelle informazioni dettagliate sul gruppo di destinatari:
@@ -50,7 +50,7 @@ L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
 1. Seleziona il collegamento **Nome visualizzato** per la soluzione **Componente aggiuntivo Scheda cliente di Dynamics 365 Customer Insights (anteprima)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Selezionare il nome visualizzato](media/select-display-name.png "Selezionare il nome visualizzato")
+   > ![Selezionare il nome visualizzato.](media/select-display-name.png "Selezionare il nome visualizzato")
 
 1. Seleziona **Accedi** e immetti le credenziali per l'account amministratore che utilizzi per configurare Customer Insights.
 
@@ -64,7 +64,7 @@ L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
    - Per eseguire il mapping con un account, seleziona il campo nell'entità Cliente che corrisponde all'ID dell'entità account.
 
    > [!div class="mx-imgBorder"]
-   > ![Campo ID contatto](media/contact-id-field.png "Campo ID contatto")
+   > ![Campo ID contatto.](media/contact-id-field.png "Campo ID contatto")
 
 1. Seleziona **Salva configurazione** per salvare le impostazioni.
 
@@ -83,7 +83,7 @@ L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
 1. Seleziona il modulo del contatto a cui vuoi aggiungere i controlli Scheda cliente.
 
     > [!div class="mx-imgBorder"]
-    > ![Selezionare il modulo Contatto](media/contact-active-forms.png "Selezionare il modulo Contatto")
+    > ![Selezionare il modulo Contatto.](media/contact-active-forms.png "Selezionare il modulo Contatto")
 
 1. Per aggiungere un controllo, nell'editor di moduli trascina qualsiasi campo da **Esplora campi** nel punto in cui vuoi che il controllo venga visualizzato.
 
@@ -110,7 +110,7 @@ Il componente aggiuntivo Scheda cliente non si aggiorna automaticamente. Per ese
 
 1. Seleziona **Applica aggiornamento soluzione** nella barra delle azioni.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Aggiorna la soluzione nell'area Personalizzazione delle app Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Aggiorna la soluzione nell'area Personalizzazione delle app Dynamics 365.":::
 
 1. Dopo aver avviato il processo di aggiornamento, vedrai un indicatore di caricamento fino al completamento dell'aggiornamento. Se non è disponibile una versione più recente, l'aggiornamento mostrerà un messaggio di errore.
 

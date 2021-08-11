@@ -1,7 +1,7 @@
 ---
 title: Connettore Power BI
 description: Scopri come utilizzare il connettore Dynamics 365 Customer Insights in Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596044"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661107"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connettore per Power BI(anteprima)
 
@@ -39,7 +39,7 @@ Crea visualizzazioni per i dati con Power BI Desktop. Genera ulteriori informazi
 
 1. Nella finestra di dialogo **Navigator**. viene visualizzato l'elenco di tutti gli ambienti a cui hai accesso. Espandi un ambiente e apri una qualsiasi delle cartelle (entità, misure, segmenti, arricchimenti). Ad esempio, apri la cartella **Entità** per vedere tutte le entità che puoi importare.
 
-   ![Esplorazione connettori Power BI](media/power-bi-navigator.png "Esplorazione connettori Power BI")
+   ![Esplorazione connettori Power BI.](media/power-bi-navigator.png "Esplorazione connettori Power BI")
 
 1. Seleziona le caselle di controllo accanto alle entità da includere e **Carica**. Puoi selezionare più entità da più ambienti.
 
@@ -68,5 +68,11 @@ Puoi identificare e rimuovere le Relazioni duplicate.
 3. Rimuovi qualsiasi Relazione duplicata identificata.
 
 Dopo la rimozione delle Relazioni duplicate, prova a configurare il connettore di Power BI di nuovo. L'ambiente dovrebbe essere disponibile ora.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Errori nei campi della data durante il caricamento delle entità in Power BI Desktop
+
+Quando si caricano entità che contengono campi con un formato data come MM/GG/AAAA, è possibile riscontrare errori dovuti a formati locali non corrispondenti. Questa discrepanza si verifica quando il file Power BI Desktop è impostato su una lingua internazionale diversa dall'inglese (Stati Uniti), perché i campi della data negli approfondimenti destinatari vengono salvati in formato USA.
+
+Il file Power BI Desktop ha un'unica impostazione locale, che viene applicata durante il recupero dei dati. Per ottenere l'interpretazione corretta di questi campi data, impostare le impostazioni internazionali del file .BPI su Inglese (Stati Uniti). [Scopri come modificare la lingua di un file di Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

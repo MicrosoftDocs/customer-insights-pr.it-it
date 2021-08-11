@@ -1,7 +1,7 @@
 ---
 title: Creare e gestire segmenti
 description: Crea segmenti di clienti per raggrupparli in base a vari attributi.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064942"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685467"
 ---
 # <a name="create-and-manage-segments"></a>Creare e gestire segmenti
+
+> [!IMPORTANT]
+> Ci sono diverse modifiche che verranno introdotte nell'esperienza di creazione del segmento a settembre 2021: 
+> - Il generatore di segmenti avrà un aspetto leggermente diverso con elementi ridisegnati e un flusso utente migliorato.
+> - Nuovi operatori datetime e un selezionatore di date migliorato sono abilitati nel generatore di segmenti.
+> - Potrai aggiungere o rimuovere condizioni e regole dai segmenti. 
+> - Diventeranno disponibili regole nidificate che iniziano con una condizione OR. Non hai più bisogno di una condizione AND nel livello più esterno.
+> - Un riquadro laterale per selezionare gli attributi sarà costantemente disponibile.
+> - Un'opzione per selezionare i percorsi di relazione dell'entità.
+> Per provare il nuovo generatore di segmenti, invia un'e-mail con oggetto "Richiesta di abilitazione del nuovo generatore di segmenti" a cihelp [at] microsoft.com. Includi il nome della tua organizzazione e l'ID del tuo ambiente sandbox.
 
 Definisci filtri complessi per all'entità cliente unificata e le sue entità correlate. Ogni segmento, dopo l'elaborazione, crea una serie di record dei clienti che puoi esportare o su cui puoi intervenire. I segmenti sono gestiti nella pagina **Segmenti**. 
 
@@ -50,7 +60,7 @@ Durante la creazione di un segmento, puoi salvare una bozza. Verrà salvata come
 1. Scegli un operatore e un valore per l'attributo selezionato.
 
    > [!div class="mx-imgBorder"]
-   > ![Filtro gruppo clienti](media/customer-group-numbers.png "Filtro gruppo clienti")
+   > ![Filtro gruppo clienti.](media/customer-group-numbers.png "Filtro gruppo clienti")
 
    |Numero |Definizione  |
    |---------|---------|
@@ -66,7 +76,7 @@ Durante la creazione di un segmento, puoi salvare una bozza. Verrà salvata come
       - Operatore **OR**: una delle condizioni deve essere soddisfatta come parte del processo di segmentazione. Questa opzione è molto utile quando si definiscono più condizioni per la stessa entità.
 
       > [!div class="mx-imgBorder"]
-      > ![Operatore OR in cui è necessario soddisfare una delle condizioni](media/segmentation-either-condition.png "Operatore OR in cui è necessario soddisfare una delle condizioni")
+      > ![Operatore OR in cui è necessario soddisfare una delle condizioni.](media/segmentation-either-condition.png "Operatore OR in cui è necessario soddisfare una delle condizioni")
 
       Al momento è possibile nidificare un operatore **OR** sotto un operatore **AND**, ma non il contrario.
 
@@ -74,12 +84,12 @@ Durante la creazione di un segmento, puoi salvare una bozza. Verrà salvata come
    Seleziona **Aggiungi gruppo**.
 
       > [!div class="mx-imgBorder"]
-      > ![Aggiungi gruppo per gruppo clienti](media/customer-group-add-group.png "Aggiungi gruppo per gruppo clienti")
+      > ![Aggiungi gruppo di gruppo clienti.](media/customer-group-add-group.png "Aggiungi gruppo per gruppo clienti")
 
    1. Seleziona uno degli operatori impostati: **Unione**, **Intersecazione** o **Eccezione**.
 
    > [!div class="mx-imgBorder"]
-   > ![Aggiungi Union per gruppo clienti](media/customer-group-union.png "Aggiungi Union per gruppo clienti")
+   > ![Aggiungi unione per gruppo clienti.](media/customer-group-union.png "Aggiungi Union per gruppo clienti")
 
    - **Union** unisce i due gruppi.
 
@@ -90,7 +100,7 @@ Durante la creazione di un segmento, puoi salvare una bozza. Verrà salvata come
 1. Se l'entità è connessa all'entità cliente unificata tramite [relazioni](relationships.md), devi definire il percorso della relazione per creare un segmento valido. Aggiungi le entità dal percorso della relazione fino a quando non puoi selezionare l'entità **Cliente: CustomerInsights** dal menu a discesa. Quindi scegli **Tutti i record** per ogni passaggio.
 
    > [!div class="mx-imgBorder"]
-   > ![Percorso di relazione durante la creazione del segmento](media/segments-multiple-relationships.png "Percorso di relazione durante la creazione del segmento")
+   > ![Percorso di relazione durante la creazione del segmento.](media/segments-multiple-relationships.png "Percorso di relazione durante la creazione del segmento")
 
 1. Per impostazione predefinita, i segmenti generano un'entità di output che contiene tutti gli attributi dei profili cliente che corrispondono ai filtri definiti. Se un segmento è basato su entità diverse dall'entità *Cliente* puoi aggiungere più attributi da queste entità all'entità di output. Seleziona **Attributi progetto** per scegliere gli attributi che verranno aggiunti all'entità di output.  
   
@@ -127,7 +137,7 @@ I segmenti rapidi consentono di creare rapidamente segmenti semplici con un sing
 4. Il sistema fornirà una **dimensione stimata del segmento**. Puoi scegliere se generare il segmento che hai definito o modificarlo prima per ottenere una dimensione del segmento diversa.
 
     > [!div class="mx-imgBorder"]
-    > ![Nome e stima per un segmento rapido](media/quick-segment-name.png "Nome e stima per un segmento rapido")
+    > ![Nome e stima per un segmento rapido.](media/quick-segment-name.png "Nome e stima per un segmento rapido")
 
 5. Inserisci un **nome** per il segmento. Se lo desideri, inserisci un **nome visualizzato**.
 

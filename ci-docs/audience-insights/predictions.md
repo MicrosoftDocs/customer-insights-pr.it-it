@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595906"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692532"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Completare i dati parziali con le previsioni
 
@@ -31,11 +31,11 @@ Le previsioni consentono di creare facilmente valori stimati che possono miglior
 
 Prima che l'organizzazione possa utilizzare la funzionalità di previsioni, i prerequisiti seguenti devono essere soddisfatti:
 
-1. La tua organizzazione ha un'istanza [configurata in Common Data Service](/ai-builder/build-model#prerequisites) ed è nella stessa organizzazione di Customer Insights.
+1. La tua organizzazione dispone di un'istanza [impostata in Microsoft Dataverse](/ai-builder/build-model#prerequisites) ed è nella stessa organizzazione di Customer Insights.
 
-2. L'ambiente è associato alla tua istanza di Common Data Service.
+2. Il tuo ambiente di informazioni dettagliate è collegato alla tua istanza di Dataverse.
 
-Se [crei un nuovo ambiente](manage-environments.md), configuralo nella finestra di dialogo **Crea ambiente** e seleziona **Avanzate**. Se hai già creato un ambiente, vai alle relative impostazioni e seleziona **Avanzate**. In ogni caso, nella sezione **Usa previsioni**, inserisci l'URL dell'istanza Common Data Service a cui desideri associare il tuo ambiente.
+Se [crei un nuovo ambiente](get-started-paid.md), configuralo nella finestra di dialogo **Crea ambiente** e seleziona **Avanzate**. Se hai già creato un ambiente, vai alle relative impostazioni e seleziona **Avanzate**. In ogni caso, nella sezione **Usa previsioni**, inserisci l'URL dell'istanza Dataverse a cui desideri associare il tuo ambiente.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Creare una previsione nell'entità Cliente
 
@@ -47,17 +47,17 @@ Se [crei un nuovo ambiente](manage-environments.md), configuralo nella finestra 
 
 4. Individua il nome dell'attributo per il quale desideri prevedere i valori, quindi seleziona l'icona **Panoramica** nella colonna **Riepilogo**.
    > [!div class="mx-imgBorder"]
-   > ![Icona Panoramica](media/intelligence-overviewicon.png "Icona Panoramica")
+   > ![Icona Panoramica.](media/intelligence-overviewicon.png "Icona Panoramica")
 
 5. Se è presente un'alta percentuale di valori mancanti per l'attributo, seleziona **Prevedi valori mancanti** per continuare con la previsione.
    > [!div class="mx-imgBorder"]
-   > ![Stato Panoramica con il pulsante Prevedi valori mancanti visualizzato](media/intelligence-overviewpredictmissingvalues.png "Stato Panoramica con il pulsante Prevedi valori mancanti visualizzato")
+   > ![Stato Panoramica con il pulsante Prevedi valori mancanti visualizzato.](media/intelligence-overviewpredictmissingvalues.png "Stato Panoramica con il pulsante Prevedi valori mancanti visualizzato")
 
 6. Inserisci un **nome visualizzato** e un **nome di entità output** per i risultati della previsione.
 
 7. Un elenco precompilato di opzioni mostrerà dove è possibile mappare i valori a una categoria stimata. In questo caso, le uniche opzioni di categoria saranno 0 o 1 in quanto vengono mappate alla natura vera/falsa o binaria della previsione. Nella colonna Categoria, mappa i valori dei campi che desideri classificare come "0" nella previsione finale a "0" e gli elementi che desideri classificare come "1" nella previsione finale a "1".
    > [!div class="mx-imgBorder"]
-   > ![Esempio che mostra i valori dei campi mappati alle categorie](media/intelligence-categorymapping.png "Esempio che mostra i valori dei campi mappati alle categorie")
+   > ![Esempio che mostra i valori dei campi mappati alle categorie.](media/intelligence-categorymapping.png "Esempio che mostra i valori dei campi mappati alle categorie")
 
 8. Seleziona **Fatto** e la previsione verrà elaborata. L'elaborazione richiederà del tempo, a seconda delle dimensioni e della complessità dei dati. I risultati saranno disponibili in una nuova entità basata sul **nome dell'entità output** della previsione creata.
 
@@ -77,7 +77,7 @@ Come parte di questo flusso scegli un attributo specifico su cui basare il segme
 
 5. Se il segmento creato contiene dati incompleti nel campo di origine, è possibile scegliere di prevedere i valori mancanti.
    > [!div class="mx-imgBorder"]
-   > ![Pulsante Previsione](media/segments-predictoption.png "Pulsante Previsione")
+   > ![Pulsante Previsioni.](media/segments-predictoption.png "Pulsante Previsione")
 
 6. Inserisci un **nome visualizzato** e un **nome di entità output** per i risultati della previsione.
 
@@ -93,7 +93,7 @@ Come parte di questo flusso scegli un attributo specifico su cui basare il segme
 
 4. Vedrai una serie di punti dati nella visualizzazione della previsione.
    > [!div class="mx-imgBorder"]
-   > ![Pagina Previsioni](media/intelligence-predictionsviewpage.png "Pagina Previsioni")
+   > ![Pagina Previsioni.](media/intelligence-predictionsviewpage.png "Pagina Previsioni")
 
    - I **valori previsti** mostrano il mapping creato durante la fase di mapping del valore Campo alla Categoria. Questi sono i valori nel set di dati che sono stati mappati a una categoria specifica.
    -**I principali influencer** sono i fattori all'interno del set di dati che hanno più probabilità di influenzare l'attendibilità della previsione del valore Campo mappato a una categoria specifica.
@@ -139,7 +139,7 @@ La successiva esecuzione della previsione utilizzerà il modello aggiornato crea
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Se non riesci a completare il processo di Common Data Service associato a causa di un errore, puoi provare a completare il processo manualmente. Esistono due problemi noti che possono verificarsi nel processo di collegamento:
+Se non riesci a completare il processo di Dataverse associato a causa di un errore, puoi provare a completare il processo manualmente. Esistono due problemi noti che possono verificarsi nel processo di collegamento:
 
 - Il componente aggiuntivo Scheda cliente non è installato.
     1. Completa le istruzioni per [installare e configurare la soluzione](customer-card-add-in.md).
