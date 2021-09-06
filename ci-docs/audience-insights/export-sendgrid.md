@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5d3d61d2b5b68079c7717e41dee5a2f698f2b62c
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 03df2ab5fce1da1f4f662e1975533f2b538b47dbdd5cf96aae4f1007163e3729
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976921"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036106"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Esportare segmenti in SendGrid (anteprima)
 
@@ -24,7 +24,7 @@ Esporta segmenti di profili cliente unificati nell'elenco di contatti SendGrid e
 
 -   Devi disporre di un [account SendGrid](https://sendgrid.com/) e delle credenziali di amministratore corrispondenti.
 -   In SendGrid sono presenti elenchi di contatti e ID corrispondenti. Per ulteriori informazioni, vedere [SendGrid: gestire i contatti](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts).
--   Disponi di [segmenti configurati](segments.md) in Audience Insights.
+-   Disponi di [segmenti configurati](segments.md) in Informazioni dettagliate sul gruppo di destinatari.
 -   I profili cliente unificati nei segmenti esportati contengono un campo che rappresenta un indirizzo e-mail.
 
 ## <a name="known-limitations"></a>Limitazioni note

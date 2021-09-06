@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171169"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035236"
 ---
 # <a name="relationships-between-entities"></a>Relazioni tra entità
 
@@ -29,7 +29,7 @@ Esistono tre tipi di Relazioni:
 
 Durante l'unificazione dei dati, le relazioni del sistema vengono create automaticamente in base alla corrispondenza intelligente. Queste relazioni aiutano a mettere in relazione i record del profilo cliente con i record corrispondenti. Il diagramma seguente illustra la creazione di tre relazioni basate sul sistema. L'entità cliente è abbinata ad altre entità per produrre l'entità *Cliente* unificata.
 
-:::image type="content" source="media/relationships-entities-merge.png" alt-text="Diagramma con percorsi di relazioni per l'entità cliente con tre relazioni 1-n.":::
+:::image type="content" source="media/relationships-entities-merge.png" alt-text="Diagramma con percorsi relazione per l'entità cliente con tre relazioni 1-n.":::
 
 - La **relazione *CustomerToContact*** è stata creata tra l'entità *Cliente* e l'entità *Contatto*. L'entità *Cliente* ottiene il campo chiave **Contact_contactID** per creare una relazione con il campo dell'entità chiave *Contatto* **contactID**.
 - La **relazione *CustomerToAccount*** è stata creata tra l'entità *Cliente* e l'entità *Account*. L'entità *Cliente* ottiene il campo chiave **Account_accountID** per creare una relazione con il campo entità chiave *Account* **accountID**.
@@ -43,7 +43,7 @@ Durante il processo di acquisizione dei dati, il sistema controlla le origini da
 
 La relazione consiste in una *entità di origine* contenente la chiave esterna e una *entità di destinazione* a cui fa riferimento la chiave esterna dell'entità di origine. 
 
-1. In Audience Insights, vai a **Dati** > **Relazioni**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Relazioni**.
 
 2. Seleziona **Nuova relazione**.
 
@@ -82,7 +82,7 @@ Questa pagina offre una serie di opzioni per relazioni esistenti e nuove:
 
 ### <a name="explore-the-relationship-visualizer"></a>Esplora il visualizzatore di relazioni
 
-Il visualizzatore delle relazioni consente di visualizzare un diagramma di rete delle relazioni esistenti tra le entità connesse e la relativa cardinalità.
+Il visualizzatore delle relazioni consente di visualizzare un diagramma di rete delle relazioni esistenti tra le entità connesse e la relativa cardinalità. Visualizza anche il percorso relazione.
 
 Per personalizzare la visualizzazione, puoi modificare la posizione delle caselle trascinandole sulla canvas.
 
@@ -92,6 +92,20 @@ Opzioni disponibili:
 - **Esporta come immagine**: salva la vista corrente come file immagine.
 - **Passa al layout orizzontale/verticale**: modifica l'allineamento delle entità e delle relazioni.
 - **Modifica**: aggiorna le proprietà delle relazioni personalizzate nel riquadro di modifica e salva le modifiche.
+
+### <a name="relationship-path"></a>Percorso relazione
+
+Il percorso relazione descrive le entità connesse con le relazioni tra un'entità di origine e un'entità di destinazione. È utilizzato quando si crea un segmento o una misura che include altre entità oltre all'entità del profilo unificato e sono disponibili più opzioni per raggiungere l'entità del profilo unificato.
+
+Il percorso relazione informa il sistema tramite quali relazioni accedere all'entità del profilo unificato. Percorsi relazione differenti possono produrre risultati differenti.
+
+Ad esempio, l'entità *eCommerce_eCommercePurchases* ha le seguenti relazioni con l'entità *Cliente* del profilo unificato:
+
+- eCommerce_eCommercePurchases > Customer
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Customer
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Customer 
+
+Il percorso relazione determina quali entità puoi utilizzare durante la creazione di regole per misure o segmenti. La scelta dell'opzione con il percorso relazione più lungo produrrà probabilmente meno risultati poiché i record corrispondenti devono essere parte di tutte le entità. In questo esempio, un cliente deve aver acquistato merci tramite e-commerce (eCommerce_eCommercePurchases) presso un POS (POS_posPurchases) e partecipa al nostro programma fedeltà (loyaltyScheme_loyCustomers). Quando si sceglie la prima opzione, è probabile che si ottengano più risultati perché i clienti devono esistere solo in un'entità aggiuntiva.
 
 ## <a name="manage-existing-relationships"></a>Gestisci relazioni esistenti 
 
@@ -105,6 +119,6 @@ Seleziona una relazione e scegli una delle seguenti opzioni:
 
 ## <a name="next-step"></a>Passaggio successivo
 
-Le relazioni di sistema e personalizzate vengono utilizzate per [creare segmenti](segments.md) in base a più origini dati che non sono più in silo.
+Relazioni di sistema e personalizzate sono usate per [creare segmenti](segments.md) e [misure](measures.md) in base a più origini dati che non sono più in silos.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

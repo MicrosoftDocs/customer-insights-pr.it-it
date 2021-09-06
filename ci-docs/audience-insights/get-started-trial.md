@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f80654f03252142ce08241ff3ca3606be4595740
-ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
+ms.openlocfilehash: f038dedd369ac9e623146b66528efa87c47a8c23769037d8709fa9b804a0b723
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "6650481"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035420"
 ---
 # <a name="set-up-a-trial-environment"></a>Configurazione di un ambiente della versione di valutazione 
 
@@ -49,7 +49,7 @@ La configurazione dell'ambiente richiede alcuni minuti. Dopo il completamento, v
 
 :::image type="content" source="media/trial-environment.png" alt-text="Screenshot di un ambiente della versione di valutazione appena creato.":::
 
-## <a name="use-industry-specific-demo-data-sets-in-audience-insights"></a>Usa set di dati demo specifici del settore nelle informazioni dettagliate sul gruppo di destinatari
+## <a name="use-industry-specific-demo-data-sets-in-audience-insights"></a>Usa set di dati demo specifici del settore in Informazioni dettagliate sul gruppo di destinatari
 
 La connessione di origini dati reali è uno dei passaggi critici per sfruttare al meglio Customer Insights. Per valutazionere le funzionalità senza interferire con i tuoi dati, puoi facoltativamente utilizzare dati demo specifici del settore. Sono disponibili un paio di set di dati demo per i seguenti settori: 
 
@@ -68,7 +68,7 @@ La connessione di origini dati reali è uno dei passaggi critici per sfruttare a
 
 Per una versione di sola lettura di Customer Insights, su misura per un settore o uno scenario specifico, inizia utilizzando l'ambiente demo. 
  
-1.  Nelle informazioni dettagliate sul gruppo di destinatari, scegli **Demo** nella selezione dell'ambiente.
+1.  In Informazioni dettagliate sul gruppo di destinatari, scegli **Demo** nella selezione dell'ambiente.
 
 2.  In **Home**, scegli un'opzione dal menu a discesa Seleziona una demo di settore.
 
@@ -78,7 +78,7 @@ Per una versione di sola lettura di Customer Insights, su misura per un settore 
 
 Come amministratore, scegli la selezione dell'ambiente nell'intestazione dell'app per creare un nuovo ambiente. Nel nuovo ambiente, puoi configurare le tue origini dati e configurare l'app in base alle tue esigenze. 
 
-1.  In Audience Insights, vai a **Dati** > **Origini dati**.
+1.  In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Origini dati**.
 
 2.  Per importare le tue origini dati, vai alla [guida all'inserimento dati](data-sources.md).     
    Se preferisci lavorare con dati di esempio che ti consentono di provare l'inserimento dati, puoi inserire i dati dimostrativi del settore nel tuo ambiente. Scegli l'opzione **Importa da hub di dati** e segui i passaggi seguenti.

@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2f115269b9d07dd118ec18cc48b55de8aea9b5bb
-ms.sourcegitcommit: 98267da3f3eddbdfbc89600a7f54e5e664a8f069
+ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2021
-ms.locfileid: "6683478"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034182"
 ---
 # <a name="manage-environments"></a>Gestisci ambienti
 
@@ -40,7 +40,7 @@ Puoi modificare alcuni dei dettagli degli ambienti esistenti.
 
 4. Se un ambiente è configurato per memorizzare i dati in Azure Data Lake Storage, puoi aggiornare la **Chiave account**. Tuttavia, non puoi modificare il **Nome account** o il nome del **Contenitore**.
 
-5. Facoltativamente, puoi eseguire l'aggiornamento da una connessione basata sulla chiave dell'account a una connessione basata su risorse o sottoscrizione. Dopo l'aggiornamento, non puoi ripristinare la chiave dell'account. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Non puoi modificare le informazioni sul **Contenitore** durante l'aggiornamento della connessione.
+5. Facoltativamente, puoi eseguire l'aggiornamento da una connessione basata sulla chiave dell'account a una connessione basata su risorse o sottoscrizione. Dopo l'aggiornamento, non puoi ripristinare la chiave dell'account. Per ulteriori informazioni, vedi [Connettere Informazioni dettagliate sul gruppo di destinatari a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Non puoi modificare le informazioni sul **Contenitore** durante l'aggiornamento della connessione.
 
 6. Facoltativamente, puoi fornire un URL dell'ambiente Microsoft Dataverse in **Configura la condivisione dei dati con Microsoft Dataverse e abilita funzionalità aggiuntive**. Queste funzionalità includono la condivisione dei dati con applicazioni e soluzioni basate su Microsoft Dataverse, inserimento di dati da origini dati locali o l'utilizzo delle [previsioni](predictions.md). Seleziona **Abilita la condivisione dei dati** per condividere i dati di output di Customer Insights con un Data Lake gestito di Microsoft Dataverse.
 

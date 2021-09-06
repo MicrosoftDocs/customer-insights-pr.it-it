@@ -9,14 +9,14 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 81253332cbea3110c0b3804db3a4d03b514f92d4
-ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
+ms.openlocfilehash: 2966f2ede1ddbe0245471771365cbf5b593be608764aa10ed28d962c52bb8067
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "6604374"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034869"
 ---
-# <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Limiti del servizio nella funzionalità Audience Insights di Dynamics 365 Customer Insights
+# <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Limiti del servizio nella funzionalità Informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights
 
 In questo articolo vengono descritti i limiti predefiniti del servizio Customer Insights, che sono progettati per assicurare l'affidabilità e la stabilità del servizio. Tutte le richieste di modifiche possono essere effettuate tramite il [forum Idee](https://go.microsoft.com/fwlink/?linkid=2074172). 
  

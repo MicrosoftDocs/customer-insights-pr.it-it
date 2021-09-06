@@ -6,7 +6,7 @@
   href: audience-insights/get-started-trial.md
 - name: Accedi all'ambiente
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Informazioni dettagliate gruppo di destinatari
+- name: Informazioni dettagliate sul gruppo di destinatari
   items:
     - name: Hub della Guida
       href: audience-insights/index.yml
@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Klaviyo
+              href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
               href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
@@ -218,7 +220,7 @@
           href: audience-insights/supported-languages.md
     - name: Estendibilità
       items:
-        - name: Integrare i dati Web da Informazioni dettagliate sull'interazione
+        - name: Integrare i dati Web di Informazioni dettagliate sull'interazione
           href: audience-insights/integrate-engagement-insights.md
         - name: Rivedi gli schemi delle entità in Common Data Model
           href: audience-insights/entity-schemas.md
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: Limiti del servizio
       href: engagement-insights/quotas.md
-- name: Contatta il supporto
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: Integrare Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione
+  items:
+    - name: Collegare Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Utilizzare i segmenti di Informazioni dettagliate sul gruppo di destinatari nei report di informazioni dettagliate sull'interazione
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Utilizzare le dimensioni demografiche per suddividere i dati comportamentali
+      href: engagement-insights/curate-dimensions.md
+- name: Richiedere supporto
+  href: 'https://dynamics.microsoft.com/en-us/support/'

@@ -9,16 +9,16 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 570683876b10cb83d8af14552ca9bea9d80613575005d49a9af37cc16b8e75c9
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6555128"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034411"
 ---
 # <a name="map-entities-and-attributes"></a>Mappare entità e attributi
 
-Un **mapping** è la prima fase del processo di unificazione di Audience Insights. Il mapping comporta tre fasi:
+Un **mapping** è la prima fase del processo di unificazione di Informazioni dettagliate sul gruppo di destinatari. Il mapping comporta tre fasi:
 
 - *Selezione entità*: identifica le entità combinabili che portano a un set di dati con informazioni più complete sui clienti.
 - *Selezione attributi*: per ogni entità, identifica le colonne che vuoi combinare e riconciliare nelle fasi di *corrispondenza* e *unione*. Queste colonne sono denominate *Attributi*.
@@ -28,7 +28,7 @@ Per ulteriori informazioni sul flusso generale di unificazione dei dati, vedi [U
 
 ## <a name="select-the-first-entities"></a>Selezionare le prime entità
 
-1. In Audience Insights, vai a **Dati** > **Unifica** > **Mapping**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Unifica** > **Mapping**.
 
 2. Inizia la fase di mapping selezionando **Seleziona entità**.
 

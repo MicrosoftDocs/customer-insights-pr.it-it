@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685467"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377793"
 ---
 # <a name="create-and-manage-segments"></a>Creare e gestire segmenti
 
@@ -25,8 +25,25 @@ ms.locfileid: "6685467"
 > - Potrai aggiungere o rimuovere condizioni e regole dai segmenti. 
 > - Diventeranno disponibili regole nidificate che iniziano con una condizione OR. Non hai più bisogno di una condizione AND nel livello più esterno.
 > - Un riquadro laterale per selezionare gli attributi sarà costantemente disponibile.
-> - Un'opzione per selezionare i percorsi di relazione dell'entità.
-> Per provare il nuovo generatore di segmenti, invia un'e-mail con oggetto "Richiesta di abilitazione del nuovo generatore di segmenti" a cihelp [at] microsoft.com. Includi il nome della tua organizzazione e l'ID del tuo ambiente sandbox.
+> - Un'opzione per selezionare i percorsi relazione dell'entità.
+> Per provare il nuovo generatore di segmenti, invia un'e-mail con oggetto "Richiesta di abilitazione del nuovo generatore di segmenti" a cihelp [at] microsoft.com. Includi il nome dell'organizzazione e l'ID del tuo ambiente sandbox.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elementi del generatore di segmenti." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Organizza il segmento con regole e regole secondarie. Ogni regola o regola secondaria è costituita da condizioni. Combina le condizioni con operatori logici
+>
+> 2 - Scegli il [percorso relazione](relationships.md) tra entità che si applica a una regola. Il percorso relazione determina quali attributi possono essere utilizzati in una condizione.
+>
+> 3 - Gestisci regole e regole secondarie. Modifica la posizione di una regola o eliminala.
+>
+> 4 - Aggiungi condizioni e crea il livello di nidificazione appropriato usando regole secondarie.
+>
+> 5 - Applica operazioni di impostazione a regole connesse.
+>
+> 6 - Utilizza il riquadro degli attributi per aggiungere attributi di entità disponibili o creare condizioni in base agli attributi. Il riquadro mostra l'elenco di entità e attributi, in base al percorso relazione selezionato, disponibili per la regola selezionata.
+>
+> 7 - Aggiungi condizioni basate su attributi a regole e regole secondarie esistenti o aggiungile a una nuova regola.
+>
+> 8 - Annulla e ripeti le modifiche durante la creazione del segmento.
 
 Definisci filtri complessi per all'entità cliente unificata e le sue entità correlate. Ogni segmento, dopo l'elaborazione, crea una serie di record dei clienti che puoi esportare o su cui puoi intervenire. I segmenti sono gestiti nella pagina **Segmenti**. 
 
@@ -97,10 +114,10 @@ Durante la creazione di un segmento, puoi salvare una bozza. Verrà salvata come
 
    - **Ad eccezione di** combina i due gruppi. Solo i dati nel gruppo A che *non sono comuni* ai dati nel gruppo B vengono mantenuti.
 
-1. Se l'entità è connessa all'entità cliente unificata tramite [relazioni](relationships.md), devi definire il percorso della relazione per creare un segmento valido. Aggiungi le entità dal percorso della relazione fino a quando non puoi selezionare l'entità **Cliente: CustomerInsights** dal menu a discesa. Quindi scegli **Tutti i record** per ogni passaggio.
+1. Se l'entità è connessa all'entità cliente unificata tramite [relazioni](relationships.md), devi definire il percorso relazione per creare un segmento valido. Aggiungi le entità dal percorso relazione fino a quando non puoi selezionare l'entità **Cliente: CustomerInsights** dal menu a discesa. Quindi scegli **Tutti i record** per ogni passaggio.
 
    > [!div class="mx-imgBorder"]
-   > ![Percorso di relazione durante la creazione del segmento.](media/segments-multiple-relationships.png "Percorso di relazione durante la creazione del segmento")
+   > ![Percorso relazione durante la creazione del segmento.](media/segments-multiple-relationships.png "Percorso relazione durante la creazione del segmento")
 
 1. Per impostazione predefinita, i segmenti generano un'entità di output che contiene tutti gli attributi dei profili cliente che corrispondono ai filtri definiti. Se un segmento è basato su entità diverse dall'entità *Cliente* puoi aggiungere più attributi da queste entità all'entità di output. Seleziona **Attributi progetto** per scegliere gli attributi che verranno aggiunti all'entità di output.  
   
@@ -147,6 +164,6 @@ I segmenti rapidi consentono di creare rapidamente segmenti semplici con un sing
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Esporta un segmento](export-destinations.md) ed esplora [Scheda cliente](customer-card-add-in.md) e [Connettori](export-power-bi.md) per ottenere informazioni dettagliate a livello di cliente.
+[Esporta un segmento](export-destinations.md) ed esplora l'[integrazione della scheda cliente](customer-card-add-in.md) per utilizzare i segmenti in altre applicazioni.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

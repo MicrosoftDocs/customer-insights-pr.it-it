@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095515"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035374"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Previsione del valore di durata del cliente (CLV) (anteprima)
 
@@ -70,7 +70,7 @@ I seguenti dati sono obbligatori e, se contrassegnati come facoltativi, consigli
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Creare una previsione del valore di durata del cliente
 
-1. In Audience Insights, vai a **Intelligenza** > **Previsioni**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Intelligenza** > **Previsioni**.
 
 1. Seleziona il riquadro **Valore di durata del cliente** e seleziona **Utilizza modello**. 
 
@@ -145,7 +145,7 @@ I dati che riflettono le interazioni chiave dei clienti (come web, servizio clie
 
 ### <a name="set-update-schedule"></a>Impostare la pianificazione di aggiornamento
 
-1. Nel passaggio **Pianificazione aggiornamento dati** scegli la frequenza con cui ripetere il training del modello in base ai dati più recenti. Questa impostazione è importante per aggiornare la precisione delle previsioni a mano a mano che i nuovi dati vengono inseriti in Audience Insights. La maggior parte delle aziende può ripetere il training una volta al mese e ottenere una buona precisione per le loro previsioni.
+1. Nel passaggio **Pianificazione aggiornamento dati** scegli la frequenza con cui ripetere il training del modello in base ai dati più recenti. Questa impostazione è importante per aggiornare la precisione delle previsioni a mano a mano che i nuovi dati vengono inseriti in Informazioni dettagliate sul gruppo di destinatari. La maggior parte delle aziende può ripetere il training una volta al mese e ottenere una buona precisione per le loro previsioni.
 
 1. Seleziona **Avanti**.
 

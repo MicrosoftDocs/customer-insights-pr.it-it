@@ -4,17 +4,17 @@ metadata:
   author: m-hartmann
   description: Trova articoli pertinenti per consultare il contenuto della Guida.
   ms.author: mhart
-  ms.date: 10/29/2020
+  ms.date: 07/30/2021
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
-  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+  ms.openlocfilehash: 1446a2bcb24739187a37b2024c9a6070ab008989d722ebf84ef5259ec2ee4d5c
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/15/2021
-  ms.locfileid: "5598466"
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036562"
 title: Documentazione di Dynamics 365 Customer Insights
-summary: Trova risorse utili per iniziare a conoscere le funzionalità di Customer Insights.
+summary: Trova risorse utili per iniziare a utilizzare e conoscere le funzionalità di Customer Insights.
 landingContent:
 - title: Scopri Customer Insights
   linkLists:
@@ -23,10 +23,10 @@ landingContent:
     - text: " Panoramica di Customer Insights"
       url: overview.md
     - text: Piani di rilascio
-      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
-    - text: Accedi all'ambiente
-      url: https://home.ci.ai.dynamics.com/
-- title: Inizia a utilizzare Audience Insights
+      url: /dynamics365-release-plan/
+    - text: Informazioni sulla piattaforma dati dei clienti
+      url: https://dynamics.microsoft.com/ai/customer-insights/
+- title: Inizia a utilizzare Informazioni dettagliate sul gruppo di destinatari
   linkLists:
   - linkListType: get-started
     links:
@@ -34,7 +34,7 @@ landingContent:
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
     - text: Novità
       url: audience-insights/whats-new-audience-insights.md
-    - text: Documentazione di Audience Insights
+    - text: Documentazione di Informazioni dettagliate sul gruppo di destinatari
       url: audience-insights/index.yml
 - title: Contattaci
   linkLists:
@@ -46,7 +46,7 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Segnala un problema
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Esercitazioni di Audience Insights
+- title: Esercitazioni di Informazioni dettagliate sul gruppo di destinatari
   linkLists:
   - linkListType: tutorial
     links:
@@ -56,7 +56,7 @@ landingContent:
       url: /learn/modules/unified-customer-profile/
     - text: Utilizza l'app
       url: /learn/modules/working-with-customer-insights/
-- title: Esporta dati di Audience Insights
+- title: Esporta dati di Informazioni dettagliate sul gruppo di destinatari
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -66,7 +66,7 @@ landingContent:
       url: audience-insights/customer-card-add-in.md
     - text: Connettore Power BI
       url: audience-insights/export-power-bi.md
-- title: Amministra Audience Insights
+- title: Amministra Informazioni dettagliate sul gruppo di destinatari
   linkLists:
   - linkListType: how-to-guide
     links:

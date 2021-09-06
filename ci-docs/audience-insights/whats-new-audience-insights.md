@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692394"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035968"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novità della funzionalità Audience Insights di Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novità della funzionalità Informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -55,7 +55,7 @@ Gli aggiornamenti di maggio 2021 includono diverse funzionalità, aggiornamenti 
 
 ### <a name="data-ingestion"></a>Inserimento dati
 
-- **Visualizza o modifica i metadati o la definizione dell'entità quando alleghi i dati ad Azure Data Lake Storage** Ora puoi visualizzare e modificare i metadati o la definizione dell'entità nelle informazioni dettagliate sul gruppo di destinatari quando alleghi i dati da una cartella Common Data Model in Azure Data Lake Storage. Questa funzionalità fornisce feedback in tempo reale, convalida del modello e controllo degli errori. Ti consente di modificare facilmente sia model.json che manifest.json.
+- **Visualizza o modifica i metadati o la definizione dell'entità quando alleghi i dati ad Azure Data Lake Storage** Ora puoi visualizzare e modificare i metadati o la definizione dell'entità in Informazioni dettagliate sul gruppo di destinatari quando alleghi i dati da una cartella Common Data Model in Azure Data Lake Storage. Questa funzionalità fornisce feedback in tempo reale, convalida del modello e controllo degli errori. Ti consente di modificare facilmente sia model.json che manifest.json.
 
 ### <a name="extensibility"></a>Estendibilità
 
@@ -68,7 +68,7 @@ Gli aggiornamenti di maggio 2021 includono diverse funzionalità, aggiornamenti 
 - **Esporta segmenti in LinkedIn Ads** Abbiamo esteso i gruppi di destinatari per le esportazioni per includere LinkedIn Ads e consentirti di sbloccare il targeting per contatto e il targeting per azienda tramite LinkedIn esportando i dati del tuo profilo cliente unificato. Per ulteriori informazioni, vedi [Esporta segmenti in LinkedIn Ads](export-linkedin-ads.md).
 
 
-- **Esporta segmenti in Omnisend** Abbiamo esteso le nostre destinazioni di esportazione per includere Omnisend. Usa i segmenti creati nelle informazioni dettagliate sul gruppo di destinatari per generare campagne, offrire e-mail marketing e utilizzare gruppi specifici di clienti con Omnisend. Per ulteriori informazioni, vedi [Esporta segmenti in Omnisend](export-omnisend.md)
+- **Esporta segmenti in Omnisend** Abbiamo esteso le nostre destinazioni di esportazione per includere Omnisend. Usa i segmenti creati in Informazioni dettagliate sul gruppo di destinatari per generare campagne, offrire e-mail marketing e utilizzare gruppi specifici di clienti con Omnisend. Per ulteriori informazioni, vedi [Esporta segmenti in Omnisend](export-omnisend.md)
 
 ### <a name="predictions"></a>Previsioni
 

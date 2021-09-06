@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8b0bda638c9bc7bb9cb2fdb01be11489b44f28a5
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: f09be0dfa599c1ef7cf0055b7ce1df8784cf447ada64b56bc7543c214f9a5b99
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124416"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034641"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Esportare segmenti in DotDigital (anteprima)
 
@@ -24,7 +24,7 @@ Esporta segmenti di profili cliente unificati nelle rubriche di DotDigital e usa
 
 -   Devi disporre di un [account DotDigital](https://dotdigital.com/) e delle credenziali di amministratore corrispondenti.
 -   In DotDigital sono presenti rubriche e ID corrispondenti. L'ID è presente nell'URL quando selezioni e apri una rubrica. Per ulteriori informazioni, vedi [Rubriche di DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
--   Disponi di [segmenti configurati](segments.md) in Audience Insights.
+-   Disponi di [segmenti configurati](segments.md) in Informazioni dettagliate sul gruppo di destinatari.
 -   I profili cliente unificati nei segmenti esportati contengono un campo che rappresenta un indirizzo e-mail.
 
 ## <a name="known-limitations"></a>Limitazioni note

@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f8cf1be97ee8af46145a450009fd278b1821f8fe
-ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
+ms.openlocfilehash: b5f76f4c468b88aaf7037dbd2ee3bed449fbeaa5f645d52278eee05b36b4e328
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "6650482"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034457"
 ---
 # <a name="get-started-with-a-paid-subscription"></a>Attività iniziali con un abbonamento a pagamento
 
@@ -59,7 +59,7 @@ Per creare un ambiente:
      > Supportiamo solo account Azure Data Lake Storage con spazio dei nomi gerarchico abilitato.
 
 
-   - Per l'opzione Azure Data Lake Storage puoi scegliere tra un'opzione basata sulle risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Il nome **Contenitore** non può essere cambiato e sarà `customerinsights`.
+   - Per l'opzione Azure Data Lake Storage puoi scegliere tra un'opzione basata sulle risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Informazioni dettagliate sul gruppo di destinatari a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Il nome **Contenitore** non può essere cambiato e sarà `customerinsights`.
    
    - Se vuoi usare [modelli predefiniti](predictions-overview.md#out-of-box-models), configura la condivisione dei dati con Microsoft Dataverse o abilita l'inserimento di dati da origini dati locali, fornisci l'URL dell'ambiente Microsoft Dataverse in **Configura la condivisione dei dati con Microsoft Dataverse e abilita le funzionalità aggiuntive**. Seleziona **Abilita la condivisione dei dati** per condividere i dati di output di Customer Insights con un Data Lake gestito di Microsoft Dataverse.
 

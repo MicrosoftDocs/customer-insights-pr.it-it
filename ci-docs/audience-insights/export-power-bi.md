@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
-ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
+ms.openlocfilehash: a0ca431dbea839fe271cf3a512cd3a5dde6d920d396056e91b33bcf7ed84272a
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "6661107"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035512"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connettore per Power BI(anteprima)
 
@@ -57,11 +57,11 @@ Prendi in considerazione l'idea di utilizzare un sottoinsieme di dati. Ad esempi
 
 ### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>L'ambiente Customer Insights non viene visualizzato in Power BI
 
-Ambienti che hanno più di una [relazione](relationships.md) definita tra due entità identiche in Audience Insights non saranno disponibili nel connettore di Power BI.
+Ambienti che hanno più di una [relazione](relationships.md) definita tra due entità identiche in Informazioni dettagliate sul gruppo di destinatari non saranno disponibili nel connettore di Power BI.
 
 Puoi identificare e rimuovere le Relazioni duplicate.
 
-1. In Audience Insights, vai a **Dati** > **Relazioni** nell'ambiente che ti manca in Power BI.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Relazioni** nell'ambiente che ti manca in Power BI.
 2. Identifica le relazioni duplicate:
    - Controlla se c'è più di una relazione definita tra le stesse due entità.
    - Controlla se esiste una relazione creata tra due entità che sono entrambe incluse nel processo di unificazione. Esiste una relazione implicita definita tra tutte le entità incluse nel processo di unificazione.

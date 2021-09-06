@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 409dfce02c41d7c52295409912880b9224469908805e199066faeb2b7a4f1f9d
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6556312"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035328"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsione di abbandono dell'abbonamento (anteprima)
 
@@ -60,7 +60,7 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
 
 ## <a name="create-a-subscription-churn-prediction"></a>Ceare una previsione di abbandono dell'abbonamento
 
-1. In Audience Insights, vai a **Intelligenza** > **Previsioni**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Intelligenza** > **Previsioni**.
 1. Seleziona il riquadro **Modello di abbandono dell'abbonamento (anteprima)** e seleziona **Utilizza questo modello**.
    > [!div class="mx-imgBorder"]
    > ![Riquadro Modello di abbandono dell'abbonamento con il pulsante Utilizza questo modello.](media/subscription-churn-usethismodel.PNG "Riquadro Modello di abbandono dell'abbonamento con il pulsante Utilizza questo modello")
@@ -106,7 +106,7 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
 
 ### <a name="set-schedule-and-review-configuration"></a>Impostare la pianificazione ed esaminare la configurazione
 
-1. Imposta una frequenza per ripetere il training del modello. Questa impostazione è importante per aggiornare la precisione delle previsioni a mano a mano che i nuovi dati vengono inseriti in Audience Insights. La maggior parte delle aziende può ripetere il training una volta al mese e ottenere una buona precisione per le loro previsioni.
+1. Imposta una frequenza per ripetere il training del modello. Questa impostazione è importante per aggiornare la precisione delle previsioni a mano a mano che i nuovi dati vengono inseriti in Informazioni dettagliate sul gruppo di destinatari. La maggior parte delle aziende può ripetere il training una volta al mese e ottenere una buona precisione per le loro previsioni.
 1. Seleziona **Avanti**.
 1. Rivedi la configurazione. Puoi tornare a qualsiasi parte della configurazione di previsione selezionando **Modifica** sotto il valore mostrato. Oppure puoi selezionare un passaggio di configurazione dall'indicatore di avanzamento.
 1. Se tutti i valori sono configurati correttamente, seleziona **Salva ed esegui** per iniziare il processo di previsione. Nella scheda **Le mie previsioni**, puoi vedere lo stato delle tue previsioni. Il completamento del processo potrebbe richiedere diverse ore a seconda della quantità di dati utilizzati nella previsione.

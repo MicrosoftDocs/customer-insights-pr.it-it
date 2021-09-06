@@ -1,6 +1,6 @@
 ---
 title: Configurazione del sistema in Audience Insight
-description: Informazioni sulle impostazioni di sistema nella funzionalità Audience Insights di Dynamics 365 Customer Insights.
+description: Informazioni sulle impostazioni di sistema nella funzionalità Informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights.
 ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 32bb89b02947350c056c8ce8adbe37500d2099a1
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6556083"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035914"
 ---
 # <a name="system-configuration"></a>Configurazione di sistema
 
@@ -68,7 +68,7 @@ Seleziona lo stato di un'attività per visualizzare i dettagli sull'avanzamento 
 
 Utilizza la scheda **Pianifica** per pianificare gli aggiornamenti automatici di tutte le [origini dati inserite](data-sources.md). Gli aggiornamenti automatici aiutano a garantire che gli aggiornamenti delle tue origini dati si riflettano nei profili cliente unificati.
 
-1. In Audience Insights, vai a **Amministratore** > **Sistema** e seleziona la scheda **Pianifica**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Sistema** e seleziona la scheda **Pianifica**.
 
 2. Lo stato predefinito per l'aggiornamento pianificato è **Disattivato**. Per abilitare gli aggiornamenti pianificati, imposta l'interruttore nella parte superiore dello schermo su **Attivato**.
 

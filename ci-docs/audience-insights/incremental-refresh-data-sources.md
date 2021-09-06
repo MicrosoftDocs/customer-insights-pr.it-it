@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554164"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377839"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Aggiornamento incrementale per origini dati basate su Power Query
 
@@ -26,7 +26,7 @@ L'aggiornamento incrementale per le origini dati offre i seguenti vantaggi:
 
 ## <a name="configure-incremental-refresh"></a>Configura aggiornamento incrementale
 
-Audience Insights consente l'aggiornamento incrementale delle origini dati importate tramite Power Query che supportano l'inserimento incrementale. Ad esempio, i database SQL di Azure con campi di data e ora, che indicano quando è stato effettuato l'ultimo aggiornamento dei record di dati.
+Informazioni dettagliate sul gruppo di destinatari consente l'aggiornamento incrementale delle origini dati importate tramite Power Query che supportano l'inserimento incrementale. Ad esempio, i database SQL di Azure con campi di data e ora, che indicano quando è stato effettuato l'ultimo aggiornamento dei record di dati.
 
 1. [Crea una nuova origine dati basata su Power Query](connect-power-query.md).
 
@@ -44,8 +44,7 @@ Audience Insights consente l'aggiornamento incrementale delle origini dati impor
 
 1. In **Impostazioni aggiornamento incrementale**, configurerai l'aggiornamento incrementale di tutte le entità selezionate durante la creazione dell'origine dati.
 
-   > [!div class="mx-imgBorder"]
-   > ![Configurare le entità in un origine dati per l'aggiornamento incrementale.](media/incremental-refresh-settings.png "Configurare le entità in un origine dati per l'aggiornamento incrementale")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurare le entità in un origine dati per l'aggiornamento incrementale.":::
 
 1. Seleziona un'entità e fornisci i seguenti dettagli:
 

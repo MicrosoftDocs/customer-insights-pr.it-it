@@ -1,5 +1,5 @@
 ---
-title: Lingue supportate per Audience Insights
+title: Lingue supportate per Informazioni dettagliate sul gruppo di destinatari
 description: Comprendi e configura il supporto per le lingue.
 ms.date: 02/26/2021
 ms.service: customer-insights
@@ -9,14 +9,14 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595477"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035144"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Lingue supportate per Audience Insights
+# <a name="supported-languages-for-audience-insights-capability"></a>Lingue supportate per Informazioni dettagliate sul gruppo di destinatari
 
 Le informazioni dettagliate gruppo di destinatari per Dynamics 365 Customer Insights sono tradotte in molte lingue. Il seguente elenco contiene le lingue disponibili e le informazioni su ciò che è tradotto. Puoi anche scoprire come modificare le impostazioni della lingua. 
 
