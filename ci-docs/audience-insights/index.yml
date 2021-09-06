@@ -1,23 +1,23 @@
 ### YamlMime:Landing
-title: Funzionalità Audience Insights in Dynamics 365 Customer Insights
+title: Funzionalità Informazioni dettagliate sul gruppo di destinatari in Dynamics 365 Customer Insights
 summary: Inserisci, unifica e organizza i dati cliente da più origini. Crea e gestisci i profili cliente e la segmentazione in tempo reale. Integra i dati cliente con altri sistemi per renderli ancora più fruibili.
 metadata:
-  title: Documentazione di Audience Insights
-  description: Hub della Guida con collegamenti chiave per Audience Insights.
+  title: Documentazione di Informazioni dettagliate sul gruppo di destinatari
+  description: Hub della Guida con collegamenti chiave per Informazioni dettagliate sul gruppo di destinatari.
   ms.service: customer-insights
   ms.subservice: audience-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
-  ms.date: 10/16/2020
-  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
-  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
+  ms.date: 07/30/2021
+  ms.openlocfilehash: 3764ed7c7fc4bd0dfa89e8a574617a1eb6273c2e36f6e5daa5aeca2c919ba7b8
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 12/17/2020
-  ms.locfileid: "4745726"
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7031386"
 landingContent:
-- title: Informazioni su Audience Insights
+- title: Informazioni su Informazioni dettagliate sul gruppo di destinatari
   linkLists:
   - linkListType: overview
     links:
@@ -25,8 +25,8 @@ landingContent:
       url: overview.md
     - text: Funzionalità nuove e aggiornate
       url: whats-new-audience-insights.md
-    - text: Sito della community
-      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Informazioni su Informazioni dettagliate sul gruppo di destinatari
+      url: https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/
 - title: Unificare i dati
   linkLists:
   - linkListType: how-to-guide
@@ -41,7 +41,7 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Arricchire i profili dei clienti
+    - text: Arricchire i profili cliente
       url: enrichment-hub.md
     - text: Configurare le relazioni
       url: relationships.md

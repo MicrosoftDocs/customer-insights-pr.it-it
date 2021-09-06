@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.openlocfilehash: 14d420205a5c60d471ef21a04ab6d02295a65ca8fd5205ba782a300703b06102
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314632"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032214"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Esportazione di segmenti in ActiveCampaign (anteprima)
 
@@ -23,7 +23,7 @@ Esporta segmenti di profili cliente unificati in ActiveCampaign e usali per atti
 ## <a name="prerequisites"></a>Prerequisiti
 
 -   Hai un [account ActiveCampaign](https://www.activecampaign.com/) e le corrispondenti credenziali amministratore.
--   Disponi di [segmenti configurati](segments.md) in Audience Insights.
+-   Disponi di [segmenti configurati](segments.md) in Informazioni dettagliate sul gruppo di destinatari.
 -   I profili cliente unificati nei segmenti esportati contengono un campo con un indirizzo e-mail.
 
 ## <a name="known-limitations"></a>Limitazioni note

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554899"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033131"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Connettere a una cartella Common Data Model usando un account Azure Data Lake
 
@@ -26,15 +26,15 @@ Questo articolo fornisce informazioni su come inserire dati di una cartella Comm
 
 - L'inserimento dati supporta esclusivamente gli account di archiviazione di Azure Data Lake *Gen2*. Non puoi usare account di archiviazione di Azure Data Lake Gen1 per inserire i dati.
 
-- Per eseguire l'autenticazione con un'entità servizio di Azure, assicurati che sia configurata nel tenant. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md).
+- Per eseguire l'autenticazione con un'entità servizio di Azure, assicurati che sia configurata nel tenant. Per ulteriori informazioni, vedi [Connettere Informazioni dettagliate sul gruppo di destinatari a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md).
 
-- L'Azure Data Lake da cui intendi eseguire la connessione e inserire i dati deve trovarsi nella stessa area di Azure dell'ambiente Dynamics 365 Customer Insights. Le connessioni a una cartella di Common Data Model da un data lake in un'area diversa di Azure non sono supportate. Per conoscere l'area di Azure dell'ambiente, seleziona **Amministratore** > **Sistema** > **Informazioni** in Audience Insights.
+- L'Azure Data Lake da cui intendi eseguire la connessione e inserire i dati deve trovarsi nella stessa area di Azure dell'ambiente Dynamics 365 Customer Insights. Le connessioni a una cartella di Common Data Model da un data lake in un'area diversa di Azure non sono supportate. Per conoscere l'area di Azure dell'ambiente, seleziona **Amministratore** > **Sistema** > **Informazioni** in Informazioni dettagliate sul gruppo di destinatari.
 
 - I dati memorizzati nei servizi online possono essere archiviati in una posizione diversa da quella in cui i dati vengono elaborati o archiviati in Dynamics 365 Customer Insights.Importando o connettendoti a dati archiviati nei servizi online, accetti che i dati possano essere trasferiti e archiviati con Dynamics 365 Customer Insights. [Altre informazioni sono disponibili nel Microsoft Trust Center.](https://www.microsoft.com/trust-center)
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Connetti a cartella di Common Data Model
 
-1. In Audience Insights, vai a **Dati** > **Origini dati**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Origini dati**.
 
 1. Seleziona **Aggiungi origine dati**.
 
@@ -43,7 +43,7 @@ Questo articolo fornisce informazioni su come inserire dati di una cartella Comm
    - Usa solo lettere e numeri. Gli spazi e i caratteri speciali non sono consentiti.
    - Usa tra 3 e 64 caratteri.
 
-1. Puoi scegliere tra l'utilizzo di un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Immetti le informazioni relative al **Contenitore** e seleziona **Avanti**.
+1. Puoi scegliere tra l'utilizzo di un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Informazioni dettagliate sul gruppo di destinatari a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Immetti le informazioni relative al **Contenitore** e seleziona **Avanti**.
    > [!div class="mx-imgBorder"]
    > ![Finestra di dialogo di immissione dei dettagli della nuova connessione per Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -73,7 +73,7 @@ Questo articolo fornisce informazioni su come inserire dati di una cartella Comm
 
 Puoi aggiornare la chiave di accesso per l'account di archiviazione contenente la cartella di Common Data Model. Puoi anche modificare il file model.json o manifest.json. Per connetterti a un contenitore diverso dal tuo account di archiviazione o modificare il nome dell'account, [crea una nuova connessione all'origine dati](#connect-to-a-common-data-model-folder).
 
-1. In Audience Insights, vai a **Dati** > **Origini dati**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Origini dati**.
 
 2. Accanto all'origine dati che vuoi aggiornare, seleziona i puntini di sospensione.
 
@@ -83,7 +83,7 @@ Puoi aggiornare la chiave di accesso per l'account di archiviazione contenente l
 
    ![Finestra di dialogo per modificare e aggiornare una chiave di accesso per un'origine dati esistente.](media/edit-access-key.png)
 
-5. Facoltativamente, puoi eseguire l'aggiornamento da una connessione con chiave dell'account a una connessione basata su risorse o sottoscrizione. Per ulteriori informazioni, vedi [Connettere Audience Insights a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Non puoi modificare le informazioni sul **Contenitore** durante l'aggiornamento della connessione.
+5. Facoltativamente, puoi eseguire l'aggiornamento da una connessione con chiave dell'account a una connessione basata su risorse o sottoscrizione. Per ulteriori informazioni, vedi [Connettere Informazioni dettagliate sul gruppo di destinatari a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Non puoi modificare le informazioni sul **Contenitore** durante l'aggiornamento della connessione.
    > [!div class="mx-imgBorder"]
 
    > ![Finestra di dialogo per immettere i dettagli di connessione per Azure Data Lake a un account di archiviazione esistente.](media/enter-existing-storage-details.png)

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: fb3fee72b3420c636d549b600c468c574ee33a662bfafd096247dfddf40150bd
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692258"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032671"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Arricchimento dei profili dei clienti con indirizzi avanzati
 
@@ -22,7 +22,7 @@ Gli indirizzi nei tuoi dati possono essere non strutturati, incompleti o errati.
 
 ## <a name="how-we-enhance-addresses"></a>Come migliorare gli indirizzi
 
-Il nostro modello passa attraverso un processo in due fasi per migliorare un indirizzo. Innanzitutto, analizza l'indirizzo per identificare i suoi componenti e li inserisce in un formato strutturato. Quindi, utilizziamo l'intelligenza artificiale per correggere, completare e standardizzare i valori nell'indirizzo.
+Il nostro modello passa attraverso un processo in due fasi per migliorare un indirizzo. Innanzitutto analizza l'indirizzo per identificare i componenti e li inserisce in un formato strutturato. Quindi, utilizziamo l'intelligenza artificiale per correggere, completare e standardizzare i valori nell'indirizzo.
 
 ### <a name="example"></a>Esempio
 
@@ -47,8 +47,8 @@ Le informazioni sull'indirizzo potrebbero essere in un formato non standard e co
 Gli indirizzi avanzati funzionano solo con i valori già presenti nei dati degli indirizzi inseriti. Il modello non: 
 
 1. Verifica se l'indirizzo è un indirizzo valido.
-2. Verifica se uno qualsiasi dei valori, come codici postali o nomi di strade, è valido.
-3. Cambia i valori che non riconosce.
+2. Verifica se uno qualsiasi dei valori, ad esempio i codici postali oi nomi delle vie, è valido.
+3. Modifica i valori che non riconosce.
 
 Il modello utilizza tecniche basate sull'apprendimento automatico per migliorare gli indirizzi. Sebbene applichiamo una soglia di confidenza elevata per quando il modello modifica un valore di input, come con qualsiasi modello basato sull'apprendimento automatico, l'accuratezza del 100% non è garantita.
 

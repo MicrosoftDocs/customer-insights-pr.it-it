@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
-ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
+ms.openlocfilehash: 7ad08b8b782654939c6bfc2ca330a3d31e71054a2f2c97a921971d1056b7cd38
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "6650323"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033682"
 ---
 # <a name="match-entities"></a>Mettere in corrispondenza le entità
 
@@ -120,9 +120,9 @@ Puoi riordinare le entità per le regole di corrispondenza per modificare l'ordi
 
 Oltre alle [regole di corrispondenza tra entità](#define-rules-for-match-pairs), puoi specificare le regole di deduplicazione. La *deduplicazione* è un altro processo della corrispondenza dei record. Identifica i record duplicati e li unisce in un unico record. I record di origine vengono collegati al record unito con ID alternativi.
 
-I record deduplicati verranno utilizzati nel processo di corrispondenza tra entità. La deduplicazione avviene su singole entità e può essere configurata per ogni entità utilizzata nelle coppie di corrispondenza.
+I record deduplicati verranno usati nel processo di corrispondenza tra entità. La deduplicazione avviene su singole entità e può essere configurata per ogni entità usata nelle coppie di corrispondenza.
 
-Specificare regole di deduplicazione non è obbligatorio. Se non vengono configurate tali regole, vengono applicate le regole definite dal sistema. Combinano tutti i record in un unico record prima di passare i dati dell'entità alla corrispondenza tra entità per migliorare le prestazioni.
+Non è obbligatorio specificare regole di deduplicazione. Se tali regole non vengono configurate, verranno applicate le regole definite dal sistema. Combinano tutti i record in un unico record prima di passare i dati dell'entità alla corrispondenza tra entità per migliorare le prestazioni.
 
 ### <a name="add-deduplication-rules"></a>Aggiungere regole di deduplicazione
 

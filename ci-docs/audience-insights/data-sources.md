@@ -10,18 +10,18 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 75d597158233f75f0eb5f94389f9dba199d81719f2bbe4e5cc58d2a3afc7dcf8
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692440"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032855"
 ---
 # <a name="data-sources-overview"></a>Panoramica delle origini dati
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-La funzionalità Audience Insights in Dynamics 365 Customer Insights si connette ai dati da un ampio insieme di origini. La connessione a un'origine dati viene spesso definita processo di *inserimento dati*. Dopo aver inserito i dati, puoi [unificare](data-unification.md) e agire su di essi.
+La funzionalità Informazioni dettagliate sul gruppo di destinatari in Dynamics 365 Customer Insights si connette ai dati da un ampio insieme di origini. La connessione a un'origine dati viene spesso definita processo di *inserimento dati*. Dopo aver inserito i dati, puoi [unificare](data-unification.md) e agire su di essi.
 
 ## <a name="add-a-data-source"></a>Aggiungi un'origine dati
 
@@ -67,7 +67,7 @@ Vai a **Amministratore** > **Sistema** > [**Pianifica**](system.md#schedule-tab)
 
 Per aggiornare un origine dati su richiesta, segui questi passaggi:
 
-1. In Audience Insights, vai a **Dati** > **Origini dati**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Origini dati**.
 
 2. Seleziona i puntini di sospensione verticali accanto all'origine dati che desideri aggiornare e seleziona **Aggiorna** dall'elenco a discesa.
 
@@ -77,7 +77,7 @@ Per aggiornare un origine dati su richiesta, segui questi passaggi:
 
 ## <a name="delete-a-data-source"></a>Eliminare un'origine dati
 
-1. In Audience Insights, vai a **Dati** > **Origini dati**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Origini dati**.
 
 2. Seleziona i puntini di sospensione verticali accanto all'origine dati che desideri rimuovere e seleziona **Elimina** dal menu a tendina.
 

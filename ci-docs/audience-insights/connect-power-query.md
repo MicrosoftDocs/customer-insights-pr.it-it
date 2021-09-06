@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 3be417845a41c8f25c71bfc0823f42571157759b224e46d5e114037ee3df8329
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554688"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033269"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connettersi a un'origine dati Power Query
 
@@ -22,7 +22,7 @@ Power Query offre un'ampia gamma di connettori per inserire i dati. La maggior p
 
 ## <a name="create-a-new-data-source"></a>Crea una nuova origine dati
 
-1. In Audience Insights, vai a **Dati** > **Origini dati**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Origini dati**.
 
 1. Seleziona **Aggiungi origine dati**.
 
@@ -70,7 +70,7 @@ Connettori con un segno di spunta nella colonna **Customer Insights (Flussi di d
 >
 > Usando la pagina **Impostazioni**, puoi tener traccia dell'avanzamento di ciascuno dei processi attivi. Al termine di un processo, puoi tornare alla pagina **Origine dei dati** e apportare le tue modifiche.
 
-1. In Audience Insights, vai a **Dati** > **Origini dati**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Origini dati**.
 
 2. Seleziona i puntini di sospensione verticali accanto all'origine dati che desideri modificare e seleziona **Modifica** dal menu a tendina.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305207"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7031708"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Arricchimento dei profili aziendali con Leadspace (anteprima)
 
@@ -30,7 +30,7 @@ Per configurare Leadspace, devono essere rispettati i seguenti requisiti:
 
 ## <a name="configure-the-enrichment"></a>Configurare l'arricchimento
 
-1. In Audience Insights, vai a **Dati** > **Arricchimento**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Arricchimento**.
 
 1. Seleziona **Arricchisci i miei dati** nel riquadro Leadspace e seleziona **Attività iniziali**.
 

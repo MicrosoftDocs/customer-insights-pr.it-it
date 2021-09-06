@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 137de726b243b501491fcbe7866820aaee26097fcf379270c423c277374ae9a4
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6553980"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033820"
 ---
-# <a name="entities-in-audience-insights"></a>Entità in Audience Insights
+# <a name="entities-in-audience-insights"></a>Entità in Informazioni dettagliate sul gruppo di destinatari
 
 Dopo [aver configurato le origini dati](data-sources.md), vai alla pagina **Entità** per valutare la qualità dei dati inseriti. Le entità sono considerate set di dati. Molteplici funzionalità di Dynamics 365 Customer Insights sono basate su queste entità. La loro stretta revisione può aiutare a convalidare l'output di tali funzionalità.
 

@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 87323d15c44ef82ae8bc3cc971be6c36356121571cb9a9630be699ac2d157bf6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554623"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032809"
 ---
 # <a name="customer-profiles"></a>Profili cliente
 
-La pagina **Clienti** mostra una visualizzazione combinata dei tuoi clienti, basata sui dati del profilo di [tutte le origini dati](data-sources.md). I profili dei clienti sono disponibili una volta [creata l'entità cliente unificata](data-unification.md). Assicurati di completare il processo di unificazione dei dati per ottenere visualizzazioni più complete dei tuoi clienti. La pagina consente anche di cercare clienti.
+La pagina **Clienti** mostra una visualizzazione combinata dei tuoi clienti, basata sui dati del profilo di [tutte le origini dati](data-sources.md). I profili cliente sono disponibili una volta [creata l'entità cliente unificata](data-unification.md). Assicurati di completare il processo di unificazione dei dati per ottenere visualizzazioni più complete dei tuoi clienti. La pagina consente anche di cercare clienti.
 
 I clienti possono essere persone fisiche o organizzazioni (anteprima). Ogni profilo cliente o organizzazione è rappresentato da un riquadro. Seleziona un riquadro per visualizzare ulteriori informazioni su quel cliente o organizzazione specifici. Utilizza i controlli di impaginazione nella parte inferiore della pagina per visualizzare altri record.
 
@@ -69,7 +69,7 @@ Seleziona **Torna a Clienti** per tornare alla pagina di ricerca del cliente.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Aggiungere più origini dati](data-sources.md) o [creare segmenti di clienti](segments.md).
+[Aggiungi più origini dati](data-sources.md), [arricchisci i profili unificati](enrichment-hub.md) o [crea segmenti](segments.md) per utilizzare i profili unificati in altre applicazioni.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

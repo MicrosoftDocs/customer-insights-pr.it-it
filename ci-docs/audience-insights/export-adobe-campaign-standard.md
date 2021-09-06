@@ -1,6 +1,6 @@
 ---
 title: Esportare i dati di Customer Insights in Adobe Campaign Standard
-description: Scopri come utilizzare i segmenti di informazioni dettagliate gruppo di destinatari in Adobe Campaign Standard.
+description: Scopri come utilizzare i segmenti di Informazioni dettagliate sul gruppo di destinatari in Adobe Campaign Standard.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,38 +9,38 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: d301b4f0cb875303fb3d373b77177acd1c1f5219cd6f23c2a1d29ce67a222eab
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305391"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032168"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Utilizzare i segmenti di Customer Insights in Adobe Campaign Standard (anteprima)
 
-Come utente di informazioni dettagliate sul gruppo di destinatari in Dynamics 365 Customer Insights, potresti aver creato segmenti per rendere più efficienti le tue campagne di marketing mirando a segmenti di pubblico pertinenti. Per utilizzare un segmento dalle informazioni dettagliate gruppo di destinatari in Adobe Experience Platform e nelle applicazioni come Adobe Campaign Standard, devi seguire alcuni passaggi descritti in questo articolo.
+Come utente di Audience Insight in Dynamics 365 Customer Insights, potresti aver creato segmenti per rendere più efficienti le tue campagne di marketing mirando a segmenti di pubblico pertinenti. Per utilizzare un segmento di Informazioni dettagliate sul gruppo di destinatari in Adobe Experience Platform e applicazioni come Adobe Campaign Standard, devi seguire alcuni passaggi descritti in questo articolo.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagramma di processo dei passaggi descritti in questo articolo.":::
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 -   Licenza Dynamics 365 Customer Insights
--   Licenza Adobe Campaign Standard
+-   Licenza di Adobe Campaign Standard
 -   Account di archiviazione BLOB di Azure
 
 ## <a name="campaign-overview"></a>Informazioni generali campagna
 
-Per comprendere meglio come utilizzare i segmenti delle informazioni dettagliate gruppo di destinatari in Adobe Experience Platform, diamo un'occhiata a una campagna di esempio fittizia.
+Per capire meglio come utilizzare i segmenti di Informazioni dettagliate sul gruppo di destinatari in Adobe Experience Platform, diamo un'occhiata a una campagna di esempio fittizia.
 
-Supponiamo che la tua azienda offra un servizio mensile su abbonamento ai tuoi clienti negli Stati Uniti. Desideri identificare i clienti i cui abbonamenti devono essere rinnovati nei prossimi otto giorni e che non hanno ancora rinnovato l'abbonamento. Per mantenere questi clienti, desideri inviare loro un'offerta promozionale tramite e-mail, utilizzando Adobe Campaign Standard.
+Supponiamo che la tua azienda offra un servizio mensile su abbonamento ai tuoi clienti negli Stati Uniti. Desideri identificare i clienti i cui abbonamenti devono essere rinnovati nei prossimi otto giorni e che non hanno ancora rinnovato l'abbonamento. Per mantenere questi clienti, intendi inviare loro un'offerta promozionale via e-mail, utilizzando Adobe Campaign Standard.
 
-In questo esempio, vogliamo eseguire la campagna e-mail promozionale una volta. Questo articolo non copre il caso d'uso di eseguire la campagna più di una volta. Tuttavia, le informazioni dettagliate gruppo di destinatari e Adobe Campaign Standard possono essere configurati per funzionare anche in uno scenario di campagna ricorrente.
+In questo esempio, vogliamo eseguire la campagna e-mail promozionale una volta. Questo articolo non copre il caso d'uso di eseguire la campagna più di una volta. Tuttavia, Informazioni dettagliate sul gruppo di destinatari e Adobe Campaign Standard possono essere configurati per funzionare anche per uno scenario di campagna ricorrente.
 
 ## <a name="identify-your-target-audience"></a>Identificare il gruppo di destinatari di destinazione
 
-Nel nostro scenario, supponiamo che gli indirizzi e-mail dei clienti siano disponibili nelle informazioni dettagliate gruppo di destinatari e che le loro preferenze promozionali siano state analizzate per identificare i membri del segmento.
+Nel nostro scenario, supponiamo che gli indirizzi e-mail dei clienti siano disponibili in Informazioni dettagliate sul gruppo di destinatari e che le relative preferenze promozionali siano state analizzate per identificare i membri del segmento.
 
-Il [segmento che hai definito nelle informazioni dettagliate gruppo di destinatari](segments.md) è chiamato **ChurnProneCustomers** e prevedi di inviare a questi clienti la promozione tramite posta elettronica.
+Il [segmento che hai definito in Informazioni dettagliate sul gruppo di destinatari](segments.md) è denominato **ChurnProneCustomers** e prevedi di inviare a questi clienti la promozione tramite posta elettronica.
 
 :::image type="content" source="media/churn-prone-customers-segment.png" alt-text="Screenshot della pagina dei segmenti con il segmento ChurnProneCustomers creato.":::
 
@@ -50,9 +50,9 @@ L'e-mail di offerta che desideri inviare conterrà nome, cognome e la data di fi
 
 ### <a name="configure-a-connection"></a>Configurare una connessione
 
-Una volta identificato il nostro gruppo di destinatari di destinazione, possiamo configurare l'esportazione dalle informazioni dettagliate gruppo di destinatari a un account di archiviazione BLOB di Azure.
+Una volta identificato il nostro gruppo di destinatari di destinazione, possiamo configurare l'esportazione da Audience Insight a un account di archiviazione BLOB di Azure.
 
-1. In informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Connessioni**.
+1. In Audience Insight, vai a **Amministratore** > **Connessioni**.
 
 1. Seleziona **Aggiungi connessione** e scegli **Adobe Campaign** per configurare la connessione o seleziona **Imposta** nel riquadro **Adobe Campaign**.
 
@@ -80,7 +80,7 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Per creare una nuova esportazione seleziona **Aggiungi esportazione**.
 
-1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Adobe Campaign. Se non vedi questo nome di sezione, non sono disponibili connessioni di questo tipo.
+1. Nel campo **Connessione per l'esportazione** scegli una connessione nella sezione Adobe Campaign. Se non vedi questo nome di sezione, non sono disponibili connessioni di questo tipo.
 
 1. Scegli il segmento che vuoi esportare. In questo esempio, è **ChurnProneCustomers**.
 
@@ -88,14 +88,14 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Seleziona **Avanti**.
 
-1. Ora mappiamo i campi di **origine** dal segmento delle informazioni dettagliate gruppo di destinatari ai nomi dei campi di **destinazione** nello schema del profilo Adobe Campaign Standard.
+1. Ora mappiamo i campi **Origine** nel segmento di Informazioni dettagliate sul gruppo di destinatari ai nomi dei campi **Destinazione** nello schema di profili di Adobe Campaign Standard.
 
    :::image type="content" source="media/ACS-field-mapping.png" alt-text="Mappatura dei campi per il connettore Adobe Campaign Standard.":::
 
-   Se desideri aggiungere più attributi, seleziona **Aggiungi attributo**. Il nome di destinazione può essere diverso dal nome del campo di origine in modo che tu possa comunque mappare l'output del segmento dalle informazioni dettagliate gruppo di destinatari ad Adobe Campaign Standard se i campi non hanno lo stesso nome nei due sistemi.
+   Se desideri aggiungere più attributi, seleziona **Aggiungi attributo**. Il nome di destinazione può essere diverso dal nome del campo di origine in modo da poter ancora mappare l'output del segmento di Informazioni dettagliate sul gruppo di destinatari a Adobe Campaign Standard se i campi non hanno lo stesso nome nei due sistemi.
 
    > [!NOTE]
-   > L'indirizzo e-mail viene utilizzato come campo di identità, ma puoi utilizzare qualsiasi altro identificatore dal tuo profilo cliente delle informazioni dettagliate gruppo di destinatari per mappare i dati in Adobe Campaign Standard.
+   > L'indirizzo e-mail viene utilizzato come campo di identità, ma puoi utilizzare qualsiasi altro identificatore del profilo cliente di Informazioni dettagliate sul gruppo di destinatari per mappare i dati a Adobe Campaign Standard.
 
 1. Seleziona **Salva**.
 
@@ -104,7 +104,7 @@ Dopo aver salvato la destinazione di esportazione, la trovi in **Dati** > **Espo
 Ora puoi [esportare il segmento su richiesta](export-destinations.md#run-exports-on-demand). L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md).
 
 > [!NOTE]
-> Assicurati che il numero di record nel segmento esportato rientri nel limite consentito dalla licenza di Adobe Campaign Standard.
+> Assicurati che il numero di record nel segmento esportato rientri nel limite consentito della tua licenza Adobe Campaign Standard.
 
 I dati esportati vengono archiviati nel contenitore dell'archiviazione BLOB di Azure configurato in precedenza. Il seguente percorso della cartella viene creato automaticamente nel tuo contenitore:
 
@@ -114,30 +114,30 @@ Esempio: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24
 
 ## <a name="configure-adobe-campaign-standard"></a>Configurare Adobe Campaign Standard
 
-Quando un segmento dalle informazioni dettagliate gruppo di destinatari viene esportato, contiene le colonne selezionate durante la definizione della destinazione di esportazione nel passaggio precedente. Questi dati possono essere utilizzati per [creare profili in Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
+Quando un segmento di Audience Insight viene esportato, contiene le colonne selezionate durante la definizione della destinazione di esportazione nel passaggio precedente. Questi dati possono essere utilizzati per [creare profili in Adobe Campaign Standard ](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
 
-Per utilizzare il segmento in Adobe Campaign Standard, è necessario estendere lo schema del profilo in Adobe Campaign Standard per includere due campi aggiuntivi. Scopri come [estendere la risorsa profilo](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) con nuovi campi in Adobe Campaign Standard.
+Per utilizzare il segmento in Adobe Campaign Standard, dobbiamo estendere lo schema di profili in Adobe Campaign Standard per includere due campi aggiuntivi. Scopri come [estendere la risorsa del profilo](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) con nuovi campi in Adobe Campaign Standard.
 
 Nel nostro esempio questi campi sono *Nome segmento e Data segmento (facoltativi)*.
 
-Utilizzeremo questi campi per identificare i profili in Adobe Campaign Standard che vogliamo scegliere come destinazione per questa campagna.
+Useremo questi campi per identificare i profili destinatari in Adobe Campaign Standard per questa campagna.
 
-Se non ci sono altri record in Adobe Campaign Standard, oltre a quello che stai per importare, puoi saltare questo passaggio.
+Se non ci sono altri record in Adobe Campaign Standard oltre a quelli che stai per importare, puoi saltare questo passaggio.
 
-## <a name="import-data-into-adobe-campaign-standard"></a>Importare i dati in Adobe Campaign Standard
+## <a name="import-data-into-adobe-campaign-standard"></a>Importare dati in Adobe Campaign Standard
 
-Ora che tutto è a posto, dobbiamo importare i dati destinatari preparati dalle informazioni dettagliate gruppo di destinatari in Adobe Campaign Standard per creare i profili. Scopri [come importare i profili in Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) utilizzando un flusso di lavoro.
+Ora dobbiamo importare i dati preparati relativi al gruppo di destinatari da Informazioni dettagliate sul gruppo di destinatari in Adobe Campaign Standard per creare profili. Scopri [come importare i profili in Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) utilizzando un flusso di lavoro.
 
-Il flusso di lavoro di importazione nell'immagine sottostante è stato configurato per essere eseguito ogni otto ore e cercare i segmenti di informazioni dettagliate sul gruppo di destinatari esportati (file .csv in Archiviazione BLOB di Azure). Il flusso di lavoro estrae il contenuto del file .csv in un ordine di colonna specificato. Questo flusso di lavoro è stato creato per eseguire la gestione degli errori di base e garantire che ogni record abbia un indirizzo e-mail prima di essere implementato nei dati in Adobe Campaign Standard. Il flusso di lavoro estrae anche il nome del segmento dal nome del file prima di inserirlo nei dati del profilo di Adobe Campaign Standard.
+Il flusso di lavoro di importazione nell'immagine sottostante è stato configurato per essere eseguito ogni otto ore e cercare i segmenti di Audience Insight esportati (file .csv in Archiviazione BLOB di Azure). Il flusso di lavoro estrae il contenuto del file .csv in un ordine di colonna specificato. Questo flusso di lavoro è stato creato per eseguire la gestione degli errori di base e garantire che ogni record abbia un indirizzo e-mail prima di attivare i dati in Adobe Campaign Standard. Il flusso di lavoro estrae anche il nome del segmento dal nome di file prima di inserirlo nei dati del profilo di Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Screenshot di un flusso di lavoro di importazione nell'interfaccia utente di Adobe Campaign Standard.":::
 
 ## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>Recuperare il gruppo di destinatari in Adobe Campaign Standard
 
-Una volta importati i dati in Adobe Campaign Standard, [puoi creare un flusso di lavoro](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) e una [query](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) per i clienti in base ai campi *Nome segmento* e *Data segmento* per selezionare i profili che sono stati identificati per la nostra campagna di esempio.
+Una volta importati i dati in Adobe Campaign Standard, [puoi creare un flusso di lavoro](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) ed [eseguire query](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) sui clienti in base al *Nome segmento* e alla *Data segmento* per selezionare i profili identificati per la nostra campagna di esempio.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Creare e inviare l'e-mail utilizzando Adobe Campaign Standard
 
 Crea il contenuto dell'e-mail e poi [esegui il test e invia](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) la tua e-mail.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="E-mail di esempio con offerta di rinnovo di Adobe Campaign Standard.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="E-mail di esempio con offerta di rinnovo da Adobe Campaign Standard.":::

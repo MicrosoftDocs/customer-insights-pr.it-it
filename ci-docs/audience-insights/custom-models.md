@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554853"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032947"
 ---
 # <a name="custom-machine-learning-models"></a>Modelli di Machine Learning personalizzati
 
@@ -54,7 +54,7 @@ Le previsioni offrono funzionalità per creare migliori esperienze cliente nonch
    - Leggi gli articoli sulla [pubblicazione di un servizio web in Machine Learning Studio (versione classica)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
    - Leggi gli articoli sulla [pubblicazione di una pipeline in Azure Machine Learning utilizzando la finestra di progettazione](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) o [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). La tua pipeline deve essere pubblicata in un [endpoint di pipeline](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
-1. Per ogni **Input servizio Web**, seleziona l'**Entità** corrispondente di Audience Insights e seleziona **Avanti**.
+1. Per ogni **Input servizio Web**, seleziona l'**Entità** corrispondente di Informazioni dettagliate sul gruppo di destinatari e seleziona **Avanti**.
    > [!NOTE]
    > Il flusso di lavoro del modello personalizzato applicherà l'euristica per mappare i campi di input del servizio Web agli attributi dell'entità in base al nome e al tipo di dati del campo. Verrà visualizzato un errore se un campo del servizio Web non può essere mappato a un'entità.
 
@@ -78,7 +78,7 @@ Le previsioni offrono funzionalità per creare migliori esperienze cliente nonch
    > ![Riquadro Correla risultati ai dati del cliente.](media/intelligence-screen4-relatetocustomer.png "Riquadro Correla risultati ai dati del cliente")
 
 1. Vedrai la schermata **Flusso di lavoro salvato** con dettagli sul flusso di lavoro.    
-   Se hai configurato un flusso di lavoro per una pipeline di Azure Machine Learning, Audience Insights assocerà l'area di lavoro che contiene la pipeline. Audience insights otterrà un ruolo **Collaboratore** nell'area di lavoro di Azure.
+   Se hai configurato un flusso di lavoro per una pipeline di Azure Machine Learning, Informazioni dettagliate sul gruppo di destinatari assocerà l'area di lavoro che contiene la pipeline. Informazioni dettagliate sul gruppo di destinatari otterrà un ruolo **Collaboratore** nell'area di lavoro di Azure.
 
 1. Seleziona **Fatto**.
 
@@ -90,7 +90,7 @@ Le previsioni offrono funzionalità per creare migliori esperienze cliente nonch
 
 1. Puoi aggiornare il nome riconoscibile del flusso di lavoro nel campo **Nome visualizzato**, ma non puoi modificare il servizio Web o la pipeline configurato. Seleziona **Avanti**.
 
-1. Per ogni **Input servizio Web**, puoi aggiornare l'**Entità** corrispondente di Audience Insights. Quindi seleziona **Avanti**.
+1. Per ogni **Input servizio Web**, puoi aggiornare l'**Entità** corrispondente di Informazioni dettagliate sul gruppo di destinatari. Quindi seleziona **Avanti**.
 
 1. Nel passaggio **Parametri di output del modello**, imposta le seguenti proprietà:
    - Machine Learning Studio (versione classica)

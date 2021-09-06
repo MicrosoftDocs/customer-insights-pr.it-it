@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b54659f028a141fe8f351645d96e933d47568a39
-ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
+ms.openlocfilehash: 30dfe4d6c2374ba9979827ea70a71c52a1334b45dd3e36ccb1de90fae0c61ad9
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2021
-ms.locfileid: "6362423"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7031846"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Esportare segmenti in Constant Contact (anteprima)
 
@@ -23,7 +23,7 @@ Esporta segmenti di profili cliente unificati in Constant Contact e utilizzali p
 ## <a name="prerequisites-for-a-connection"></a>Prerequisiti per una connessione
 
 -   Hai un [account Constant Contact](https://www.constantcontact.com/account-home) e le corrispondenti credenziali di amministratore.
--   Disponi di [segmenti configurati](segments.md) in Audience Insights.
+-   Disponi di [segmenti configurati](segments.md) in Informazioni dettagliate sul gruppo di destinatari.
 -   I profili cliente unificati nei segmenti esportati contengono un campo che rappresenta un indirizzo e-mail.
 
 ## <a name="known-limitations"></a>Limitazioni note

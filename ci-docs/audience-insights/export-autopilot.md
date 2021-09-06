@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e320a48d5b7c35b530e3a38567b226b804879e4e
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: c9ada8a6f4e4546990a1360567b400033050119c4c4c9a3df1af8fcaab75e157
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760148"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032030"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Esportare segmenti in Autopilot (anteprima)
 
@@ -23,7 +23,7 @@ Esporta segmenti di profili cliente unificati in Autopilot e usali per l'e-mail 
 ## <a name="prerequisites-for-a-connection"></a>Prerequisiti per una connessione
 
 -   Devi disporre di un [account Autopilot](https://www.autopilothq.com/) e delle credenziali di amministratore corrispondenti.
--   Disponi di [segmenti configurati](segments.md) in Audience Insights.
+-   Disponi di [segmenti configurati](segments.md) in Informazioni dettagliate sul gruppo di destinatari.
 -   I profili cliente unificati nei segmenti esportati contengono un campo che rappresenta un indirizzo e-mail.
 
 ## <a name="known-limitations"></a>Limitazioni note

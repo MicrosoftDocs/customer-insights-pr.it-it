@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: bbc22adcd7b6e756fa6128abd855795de7480f2d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597101"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7028365"
 ---
 # <a name="suggested-segments-preview"></a>Segmenti suggeriti (anteprima)
 
@@ -27,7 +27,7 @@ Scopri segmenti interessanti dei tuoi clienti con l'aiuto di un modello di intel
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Segmenti suggeriti per migliorare i tuoi KPI
 
-Come utente di Audience Insights, probabilmente hai una serie di [misure create](measures.md) che aiutano a tenere traccia dei tuoi indicatori di prestazioni chiave (KPI). È importante capire come determinati attributi influenzano questi KPI per creare segmenti ed eseguire una campagna altamente mirata.   
+Come utente di Informazioni dettagliate sul gruppo di destinatari, probabilmente hai una serie di [misure create](measures.md) che aiutano a tenere traccia dei tuoi indicatori di prestazioni chiave (KPI). È importante capire come determinati attributi influenzano questi KPI per creare segmenti ed eseguire una campagna altamente mirata.   
 Ad esempio, si tiene traccia di una misura chiamata *TotalSpendPerCustomer*. Come azienda, ti piacerebbe vedere crescere questo numero. La scelta di una misura come attributo principale consente di selezionare gli attributi di cui si desidera valutare l'influenza. Diciamo *livello di appartenenza*, *periodo di appartenenza* e *occupazione*. Customer Insights può quindi suggerire un segmento che ti dice chi è la maggiore influenza di quella misura. Ad esempio, i *Commercialisti* che sono membri *Gold* e che sono stati con la tua azienda per *almeno cinque anni* sono i principali influencer di *TotalSpendPerCustomer*. Otterrai una dimensione del segmento stimata per ogni suggerimento. È possibile utilizzare queste informazioni per creare campagne per destinatari mirati.
 
 ## <a name="understand-what-influences-a-customer-attribute"></a>Comprendere cosa influenza un attributo dei clienti

@@ -1,6 +1,6 @@
 ---
 title: Componente aggiuntivo Customer Card per app Dynamics 365
-description: Mostra i dati delle informazioni dettagliate sul gruppo di destinatari nelle app Dynamics 365 con questo componente aggiuntivo.
+description: Mostra i dati di Informazioni dettagliate sul gruppo di destinatari nelle app Dynamics 365 con questo componente aggiuntivo.
 ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 0f6c922104df229980b308136a4d764938121b35d6d744f41b1530bdb5515e7f
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692210"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032993"
 ---
 # <a name="customer-card-add-in-preview"></a>Componente aggiuntivo Scheda cliente (anteprima)
 
@@ -25,10 +25,10 @@ Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Il componente aggiuntivo funziona solo con le app Dynamics 365 basate su modello, come Sales o Customer Service, versione 9.0 e successive.
-- Affinché i dati di Dynamics 365 possano essere mappati ai profili cliente delle informazioni dettagliate sul gruppo di destinatari devono essere [inseriti dall'app Dynamics 365 utilizzando il connettore Microsoft Dataverse](connect-power-query.md).
-- Tutti gli utenti Dynamics 365 del componente aggiuntivo Customer Card devono essere [aggiunti come utenti](permissions.md) nelle informazioni dettagliate sul gruppo di destinatari per vedere i dati.
-- [Le funzionalità di ricerca e filtro configurate](search-filter-index.md) nelle informazioni dettagliate sul gruppo di destinatari sono necessarie affinché la ricerca dei dati funzioni.
-- Ogni controllo del componente aggiuntivo si basa su dati specifici nelle informazioni dettagliate sul gruppo di destinatari:
+- Affinché i dati di Dynamics 365 possano essere mappati ai profili cliente di Informazioni dettagliate sul gruppo di destinatari devono essere [inseriti dall'app Dynamics 365 utilizzando il connettore Microsoft Dataverse](connect-power-query.md).
+- Tutti gli utenti Dynamics 365 del componente aggiuntivo Customer Card devono essere [aggiunti come utenti](permissions.md) in Informazioni dettagliate sul gruppo di destinatari per vedere i dati.
+- [Le funzionalità di ricerca e filtro configurate](search-filter-index.md) in Informazioni dettagliate sul gruppo di destinatari sono necessarie affinché la ricerca dei dati funzioni.
+- Ogni controllo del componente aggiuntivo si basa su dati specifici in Informazioni dettagliate sul gruppo di destinatari:
   - Controllo delle misure: richiede [misure configurate](measures.md).
   - Controllo intelligente: richiede dati generati utilizzando [previsioni](predictions.md) o [modelli personalizzati](custom-models.md).
   - Controllo demografico: i campi demografici, come l'età o il sesso, sono disponibili nel profilo cliente unificato.

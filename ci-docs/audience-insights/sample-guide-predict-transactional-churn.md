@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 72f3bd1f32b813fef04dc14618331e3d707b5052
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6556266"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7029450"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guida di esempio per una previsione di abbandono transazionale (anteprima)
 
@@ -46,8 +46,7 @@ Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e 
    - **DateOfBirth**: data
    - **CreatedOn**: data/ora/fuso orario
 
-   [!div class="mx-imgBorder"]
-   ![Trasformare la data di nascita in data.](media/ecommerce-dob-date.PNG "Trasformare la data di nascita in data")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Trasformare la data di nascita in data.":::
 
 1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommerceContacts**
 

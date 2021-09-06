@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e563619f40be859f3f02638adbd60b80423182b3
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 9bf401124b0ffb21b046954056141e7703386d4911f89f34ffc0fcb84bf0f4be
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554389"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032487"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot di Teams per Dynamics 365 Customer Insights (anteprima)
 
@@ -34,7 +34,7 @@ Per impostare e configurare il bot, devono essere soddisfatti i seguenti prerequ
 
 ## <a name="configure-the-bot"></a>Configurare il bot
 
-1. In Audience Insights, vai a **Amministratore** > **Destinazioni di esportazione**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Destinazioni di esportazione**.
 1. Nel riquadro Microsoft Teams, seleziona **Configura**.
 1. Vieni reindirizzato all'area **App** in Teams. Puoi anche aprire Teams e selezionare **App** nell'angolo in basso a sinistra o [scaricarla da AppSource](https://go.microsoft.com/fwlink/?linkid=2124104) direttamente.
 1. Cerca **Customer Insights** e seleziona l'app.

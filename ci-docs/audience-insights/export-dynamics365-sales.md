@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9f11ab189117da5bcc1aee843b73962ec6615e82
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 8a0654ac062e41ef7eb52a34b1ae169e28b389f86875eead774422fef60f2232
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692348"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7031535"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Utilizzare i segmenti in Dynamics 365 Sales (anteprima)
 
@@ -27,7 +27,7 @@ Utilizza i tuoi dati del cliente per creare elenchi marketing, effettuare il com
 1. I record dei contatti devono essere presenti in Dynamics 365 Sales prima di poter esportare un segmento da Customer Insights a Sales. Ulteriori informazioni su come inserire i contatti in [Dynamics 365 Sales utilizzando Microsoft Dataverse](connect-power-query.md).
 
    > [!NOTE]
-   > L'esportazione di segmenti da Audience Insights a Sales non creerà nuovi record dei contatti nelle istanze di Sales. I record dei contatti di Sales devono essere inseriti in Audience Insights e utilizzati come origine dati. Devono inoltre essere inclusi nell'entità Cliente unificata per mappare gli ID cliente agli ID contatto prima che i segmenti possano essere esportati.
+   > L'esportazione di segmenti da Informazioni dettagliate sul gruppo di destinatari a Sales non creerà nuovi record dei contatti nelle istanze di Sales. I record dei contatti di Sales devono essere inseriti in Informazioni dettagliate sul gruppo di destinatari e utilizzati come origine dati. Devono inoltre essere inclusi nell'entità Cliente unificata per mappare gli ID cliente agli ID contatto prima che i segmenti possano essere esportati.
 
 ## <a name="set-up-the-connection-to-sales"></a>Configurare la connessione a Sales
 
