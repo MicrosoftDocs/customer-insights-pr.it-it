@@ -1,0 +1,123 @@
+---
+title: Attività iniziali di SDK iOS
+description: Informazioni su come personalizzare ed eseguire l'SDK iOS
+author: britl
+ms.reviewer: mhart
+ms.author: britl
+ms.date: 06/23/2021
+ms.service: customer-insights
+ms.subservice: engagement-insights
+ms.topic: conceptual
+ms.manager: shellyha
+ms.openlocfilehash: de8291fc429ae6433301a47bfdf9a3271b1b77294fd58448c7aa6bd0783edc97
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036878"
+---
+# <a name="get-started-with-the-ios-sdk"></a>Attività iniziali di SDK iOS
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
+
+Questa esercitazione ti guida attraverso la strumentazione dell'applicazione iOS con un SDK di informazioni dettagliate sull'interazione Dynamics 365 Customer Insights. Inizierai a vedere gli eventi nel tuo portale tra cinque minuti o prima.
+
+## <a name="configuration-options"></a>Opzioni di configurazione
+
+Le seguenti opzioni di configurazione possono essere passate all'SDK tramite l'apposito file `EIConfig.plist`:
+
+- **ingestionKey**: la chiave di inserimento viene utilizzata per inviare eventi al progetto.
+- **autocollectAction**: un valore booleano per abilitare o disabilitare la strumentazione automatica dell'evento azione.
+- **autocollectAction**: un valore booleano per abilitare o disabilitare la strumentazione automatica dell'evento di visualizzazione.
+- **endpointUrl**: l'URL endpoint a cui verranno diretti gli eventi.
+
+## <a name="prerequisites"></a>Prerequisiti
+
+- Xcode, versione 9+
+- iOS, versione 8.2+
+- Una chiave di inserimento (vedi sotto per istruzioni su come ottenerla)
+
+## <a name="integrate-the-sdk-into-your-application"></a>Integrazione dell'SDK nell'applicazione
+
+Inizia il processo selezionando un'area di lavoro in cui lavorare, quindi la piattaforma mobile iOS e scaricando l'SDK.
+
+- Utilizza il selettore dell'area di lavoro nel riquadro di navigazione a sinistra per selezionare l'area di lavoro.
+
+- Se non disponi di un'area di lavoro esistente, seleziona **Nuova area di lavoro** e segui i passaggi per creare una [nuova area di lavoro](create-workspace.md).
+
+## <a name="configure-the-sdk"></a>Configurazione dell'SDK
+
+Una volta scaricato l'SDK, puoi utilizzarlo in Xcode per abilitare e definire gli eventi.
+
+1. Dopo aver creato un'area di lavoro, vai ad **Amministratore** > **Area di lavoro**, quindi seleziona **Guida all'installazione**.
+
+1. Scarica l'[SDK iOS delle informazioni dettagliate sull'interazione](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-ios-sdk.zip) e posiziona il file `EIObjC.xcframework` nella cartella `Frameworks`.
+
+1. Se una cartella `Frameworks` non esiste, creane una nella cartella del progetto.
+
+## <a name="enable-auto-instrumentation"></a>Abilitazione della strumentazione automatica
+ 
+Puoi abilitare facilmente la strumentazione automatica senza codifica. Quando il progetto verrà eseguito, terrà traccia automaticamente degli eventi `view` e `action` utilizzando la chiave di inserimento configurata. 
+
+1. Aggiorna e includi il file `EIConfig.plist` fornito nella cartella della directory del progetto per i seguenti campi:
+    - ingestionKey = `"Your-Ingestion-Key"`
+    - autocollectView = SÌ
+    - autocollectAction = SÌ
+
+2. Quindi aggiungi il file `EIConfig.plist` al tuo progetto in Xcode. 
+
+
+
+Per disabilitare la strumentazione automatica, aggiorna i seguenti campi nel file `EIConfig.plist` incluso nella cartella della directory del progetto. 
+
+```objectivec
+'autocollectView' = NO (to disable)
+'autocollectAction' = NO (to disable)
+```
+
+
+## <a name="implement-custom-events"></a>Implementazione di eventi personalizzati
+
+1. Apri il progetti in Xcode e passa alle impostazioni **Generali**. 
+1. Aggiungi `EIObjC.xcframework` al progetto nella sezione "Framework, Librerie e Contenuto incorporato".
+
+1. Importa il file di intestazione del framework in AppDelegate.m con il frammento di codice seguente:
+
+    ```objectivec
+    #import <EIObjC/EIObjC.h>
+    ```
+
+1. Inizializza l'SDK delle informazioni dettagliate sull'interazione dall'applicazione: didFinishLaunchingWithOptions.
+1. Copia il frammento XML dalla **Guida all'installazione**.
+
+    ```objectivec
+    NSError *error = [NSError new];
+    id<EIIAnalytics> analytics = [EIAnalyticsProvider analyticsForIngestionKey:nil error:&error];
+    ```
+
+1. Registra un evento:
+
+    ```objectivec
+    EIEvent *event = [EIEvent new];
+    event.name = @"video.log";
+    [event setLongValue:320 forKey:@"duration"];
+    [event setBoolValue:YES forKey:@"ad_shown"];
+    [analytics trackEvent:event];
+    ```
+
+## <a name="set-user-details-for-your-event"></a>Impostazione dei dettagli utente per il tuo evento
+
+L'SDK ti consente di definire le informazioni utente che possono essere inviate con ogni evento. Puoi specificare le informazioni dell'utente chiamando l'API `setUser:(nonnull EIUser *)user` sull'SDK.
+
+Specificare i dettagli dell'utente sul livello `Analytics` significa che tutte le telemetrie avranno queste informazioni. Tuttavia, se si specifica a livello di evento chiamando l'API `setUser:(nonnull EIUser *)user` sull'oggetto EIEvent, solo quell'evento specifico conterrà le informazioni.
+
+La classe di dati `EIUser` contiene le seguenti proprietà NSString:
+
+- **localId**: l'ID locale dell'utente.
+- **authId**: l'ID utente autenticato.
+- **authType**: il tipo di autenticazione utilizzato per ottenere l'ID utente autenticato.
+- **name**: il nome dell'utente.
+- **email**: l'indirizzo e-mail dell'utente.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
