@@ -1,20 +1,20 @@
 ---
 title: Previsione di raccomandazioni sui prodotti
 description: Prevedi i prodotti che è probabile che un cliente acquisterà o con cui interagirà.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034961"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494544"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Previsione di raccomandazioni sui prodotti (anteprima)
 
@@ -85,27 +85,28 @@ Se sei interessato a provare questa funzionalità ma non hai i dati per completa
 
 1. Se hai scelto di *non* consigliare i prodotti acquistati di recente, imposta la **Finestra per guardare indietro**. Questa impostazione specifica il intervallo di tempo che il modello considera prima di consigliare nuovamente il prodotto all'utente. Ad esempio, indica che un cliente acquista un laptop ogni due anni. Questa finestra esaminerà la cronologia degli acquisti degli ultimi due anni e, se trova un articolo, l'elemento verrà filtrato dagli elementi consigliati.
 
-1. Seleziona **Avanti**.
+1. Selezionare **Avanti**.
 
 ### <a name="add-required-data"></a>Aggiungi dati obbligatori
 
-1. Seleziona **Aggiungi dati** in **Cronologia transazioni cliente** e scegli l'entità che fornisce le informazioni sulla cronologia di transazioni/acquisti come descritto nei [prerequisiti](#prerequisites).
+1. Seleziona **Aggiungi dati** e scegli il tipo di impegno nel riquadro laterale che contiene la transazione richiesta o le informazioni sulla cronologia degli acquisti.
 
-1. Esegui il mapping dei campi semantici agli attributi nell'entità della cronologia degli acquisti e seleziona **Avanti**. Per le descrizioni dei campi, esamina i [prerequisiti](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Definisci la relazione dell'entità.](media/product-recommendation-purchasehistorymapping.PNG "Pagina della cronologia degli acquisti che mostra gli attributi semantici mappati ai campi nell'entità della cronologia degli acquisti selezionata")
+1. In **Scegli impegni** seleziona gli impegni specifici dall'impegno selezionato su cui desideri che il calcolo si concentri.
 
-1. Se i campi seguenti non sono compilati, configura la relazione tra l'entità della cronologia degli acquisti e l'entità *Cliente*.
-    1. Seleziona **Entità cronologia acquisti**.
-    1. Seleziona il **campo** che identifica il cliente nell'entità della cronologia degli acquisti. Deve essere correlato all'ID cliente primario dell'entità *Cliente*.
-    1. Seleziona l'**Entità cliente** che corrisponde all'entità cliente primaria.
-    1. Immetti un nome che descrive la relazione.
-       > [!div class="mx-imgBorder"]
-       > ![Pagina della cronologia degli acquisti che mostra la creazione di una relazione con il cliente.](media/model-purchase-join.png "Pagina della cronologia degli acquisti che mostra la creazione di una relazione con il cliente")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Riquadro laterale che mostra la scelta di impegni specifici nel tipo semantico.":::
+
+1. Se non hai ancora mappato l'attività su un tipo semantico, seleziona **Modifica** per farlo. Si apre l'esperienza guidata per mappare gli impegni semantici. Mappa i tuoi dati ai campi corrispondenti nel tipo di impegno selezionato.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Pagina di impostazione del tipo di impegno.":::
+
+1. Dopo aver mappato l'impegno sul tipo semantico corrispondente, seleziona **Avanti** per procedere 
+ 
+1. Mappa gli attributi semantici ai campi necessari per eseguire il modello.
 
 1. Seleziona **Salva**.
 
 1. Selezionare **Avanti**.
+
 
 ### <a name="configure-product-filters"></a>Configurare filtri di prodotto
 
@@ -174,8 +175,8 @@ A volte, solo alcuni prodotti sono utili o appropriati per il tipo di previsione
                
                > [!div class="mx-imgBorder"]
                > ![Visualizzazione del risultato delle prestazioni del modello.](media/product-recommendation-modelperformance.PNG "Visualizzazione del risultato delle prestazioni del modello")
-            - **Linea di base** : Il modello prende i prodotti più consigliati in base al conteggio degli acquisti di tutti i clienti e utilizza le regole apprese identificate dal modello per creare una serie di raccomandazioni per i clienti. Le previsioni vengono quindi confrontate con i prodotti di punta, come calcolato dal numero di clienti che hanno acquistato il prodotto. Se un cliente ha almeno un prodotto tra i prodotti consigliati che è stato visto anche nei prodotti più acquistati, viene considerato parte della baseline. Se ci fossero 10 di questi clienti che hanno acquistato un prodotto consigliato su 100 clienti totali, la baseline sarebbe 10%.
-            - **Successo @ K** : Utilizzando un set di convalida di periodo di tempo delle transazioni, le raccomandazioni vengono create per tutti i clienti e confrontate con il set di convalida delle transazioni. Ad esempio, in un periodo di 12 mesi, il mese 12 potrebbe essere accantonato come set di dati di convalida. Se il modello prevede almeno una cosa che acquisteresti nel mese 12 in base a ciò che ha appreso dagli 11 mesi precedenti, il cliente aumenterebbe la metrica "Successo @ K".
+            - **Linea di base**: il modello prende i prodotti più consigliati in base al conteggio degli acquisti di tutti i clienti e utilizza le regole apprese identificate dal modello per creare una serie di raccomandazioni per i clienti. Le previsioni vengono quindi confrontate con i prodotti di punta, come calcolato dal numero di clienti che hanno acquistato il prodotto. Se un cliente ha almeno un prodotto tra i prodotti consigliati che è stato visto anche nei prodotti più acquistati, viene considerato parte della baseline. Se ci fossero 10 di questi clienti che hanno acquistato un prodotto consigliato su 100 clienti totali, la baseline sarebbe 10%.
+            - **Successo @ K**: utilizzando un set di convalida di periodo di tempo delle transazioni, le raccomandazioni vengono create per tutti i clienti e confrontate con il set di convalida delle transazioni. Ad esempio, in un periodo di 12 mesi, il mese 12 potrebbe essere accantonato come set di dati di convalida. Se il modello prevede almeno una cosa che acquisteresti nel mese 12 in base a ciò che ha appreso dagli 11 mesi precedenti, il cliente aumenterebbe la metrica "Successo @ K".
     
     1. **Prodotti più consigliati (con conteggio):** I primi cinque prodotti previsti per i tuoi clienti.
        > [!div class="mx-imgBorder"]

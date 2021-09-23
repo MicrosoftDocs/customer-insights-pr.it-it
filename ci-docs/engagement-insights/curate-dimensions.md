@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
+ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461108"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466353"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Utilizzare le dimensioni demografiche per suddividere i dati comportamentali
 
@@ -29,7 +29,7 @@ Utilizzando le dimensioni demografiche di profili unificati, gli utenti di Infor
 - Un ambiente di Informazioni dettagliate sull'interazione in cui sono disponibili dati sui profili cliente collegati all'ambiente di Informazioni dettagliate sul gruppo di destinari in cui vengono creati i profili cliente. Ulteriori informazioni: [Creare un collegamento tra Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Dopo aver creato un collegamento tra gli ambienti di Informazioni dettagliate sul gruppo di destinatari e di Informazioni dettagliate sull'interazione, potresti volere solo dati specifici delle proprietà del profilo cliente, che possono essere utili come dimensioni in Informazioni dettagliate sull'interazione. Per ulteriori informazioni, vedi [Abilitare attributi e segmenti di profili unificati di Informazioni dettagliate sul gruppo di destinatari](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Dopo aver creato un collegamento tra gli ambienti di Informazioni dettagliate sul gruppo di destinatari e di Informazioni dettagliate sull'interazione, potresti volere solo dati specifici delle proprietà del profilo cliente, che possono essere utili come dimensioni in Informazioni dettagliate sull'interazione. Per ulteriori informazioni, vedi [Abilitare attributi e segmenti di profili unificati di Informazioni dettagliate sul gruppo di destinatari](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Creare un nuovo report personalizzato
 
@@ -41,7 +41,7 @@ Utilizzando le dimensioni demografiche di profili unificati, gli utenti di Infor
 
     :::image type="content" source="media/curated-dimensions2.png" alt-text="Selezionare dati demografici.":::
 
-3. Seleziona una dimensione **Signal.Customer.*xxx** (questo esempio mostra Signal.Customer.Country).
+3. Seleziona una dimensione **Signal.Customer.*xxx*** (questo esempio mostra Signal.Customer.Country).
 
     :::image type="content" source="media/curated-dimensions3.png" alt-text="Selezionare una dimensione.":::
   

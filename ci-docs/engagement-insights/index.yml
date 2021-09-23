@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Funzionalità Informazioni dettagliate sull'interazione (anteprima) in Dynamics 365 Customer Insights
+title: Funzionalità delle informazioni dettagliate sull'interazione in Dynamics 365 Customer Insights (anteprima)
 summary: Raccogli i dati per i tuoi siti Web. Comprendi le interazioni e l'attività dei clienti nei tuoi siti, in modo interattivo. Utilizza l'integrazione estesa tra Informazioni dettagliate sull'interazione e Informazioni dettagliate del gruppo di destinatari per arricchire la tua analisi comportamentale in tempo reale con i report sul profilo cliente. Arricchisci i profili cliente con attività Web per ottenere dati comportamentali in tempo reale insieme ai dati dei clienti pertinenti. Trasforma la tua azienda per ottenere valore immediato dai dati dei clienti.
 metadata:
-  title: Documentazione di Informazioni dettagliate sull'interazione (anteprima)
+  title: Documentazione delle Informazioni dettagliate sull'interazione (anteprima)
   description: Supporta l'hub con collegamenti chiave per Informazioni dettagliate sull'interazione.
   ms.service: customer-insights
   ms.subservice: engagement-insights
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036243"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494189"
 landingContent:
 - title: Informazioni su
   linkLists:
   - linkListType: overview
     links:
-    - text: Panoramica della funzionalità
+    - text: Vantaggi della funzionalità
       url: overview.md
-    - text: Termini e concetti
+    - text: Glossario dei termini
       url: glossary.md
-    - text: Informazioni su Informazioni dettagliate sull'interazione
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Funzionalità nuove e aggiornate
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Onboarding
   linkLists:
   - linkListType: how-to-guide
@@ -38,28 +38,30 @@ landingContent:
       url: create-workspace.md
     - text: Aggiungere strumenti al sito Web
       url: instrument-website.md
-- title: Report
+- title: Visualizzazione e filtro di report
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Visualizza report
       url: view-reports.md
-    - text: Crea report personalizzati
-      url: custom-reports.md
     - text: Visualizza il report sui profili unificati
       url: profile-reports.md
-    - text: Crea report grafici a imbuto
-      url: funnel-reports.md
-- title: Eventi
+    - text: Utilizza i segmenti dei gruppi di destinatari per filtrare i report
+      url: integrate-audience-insights-segments.md
+- title: Analizza
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Crea report grafici a imbuto
+      url: funnel-reports.md
+    - text: Analizza i dati comportamentali
+      url: curate-dimensions.md
+    - text: Crea report personalizzati
+      url: custom-reports.md
     - text: Crea eventi affinati
       url: refined-events.md
     - text: Esporta eventi
       url: export-events.md
-    - text: Elimina ed esporta dati personali
-      url: delete-export-personal-data.md
 - title: Risorse per sviluppatori
   linkLists:
   - linkListType: reference
@@ -80,7 +82,11 @@ landingContent:
     links:
     - text: Gestire ambienti e aree di lavoro
       url: manage-environments-workspaces.md
-    - text: Connettersi a Informazioni dettagliate sul gruppo di destinatari
-      url: configure-connections.md
+    - text: Connettiti alle informazioni dettagliate sul gruppo di destinatari
+      url: integrate-audience-insights-engagement-insights.md
     - text: Gestire i cookie e il consenso utente
       url: user-consent-storage.md
+    - text: Elimina ed esporta dati personali
+      url: delete-export-personal-data.md
+    - text: Limiti del servizio
+      url: ../service-limits.md

@@ -6,7 +6,7 @@
   href: audience-insights/get-started-trial.md
 - name: Accedi all'ambiente
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Informazioni dettagliate sul gruppo di destinatari
+- name: Informazioni dettagliate gruppo di destinatari
   items:
     - name: Hub della Guida
       href: audience-insights/index.yml
@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Funzionalità nuove e aggiornate
       href: audience-insights/whats-new-audience-insights.md
-    - name: Crea un nuovo ambiente
-      href: audience-insights/get-started-paid.md
+    - name: Informazioni di base
+      items:
+        - name: Guida introduttiva
+          href: audience-insights/get-started.md
+        - name: Crea un nuovo ambiente
+          href: audience-insights/get-started-paid.md
+        - name: Esplorare le informazioni dettagliate sul gruppo di destinatari
+          href: audience-insights/home.md
     - name: Moduli di apprendimento
       items:
         - name: Inserire i dati
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Indirizzi ottimizzati
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Arricchimento con Mappe di Azure
+          href: audience-insights/enrichment-azure-maps.md
         - name: Arricchimento con HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Arricchimento con Leadspace
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: Riferimenti API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Limiti del servizio
-      href: audience-insights/service-limits.md
-    - name: Richieste diritti dell'interessato ai sensi del GDPR
-      href: audience-insights/gdpr.md
 - name: Informazioni dettagliate sull'interazione (anteprima)
   items:
     - name: Hub della Guida
       href: engagement-insights/index.yml
     - name: Panoramica della funzionalità
       href: engagement-insights/overview.md
-    - name: Versione di valutazione gratuita
-      href: 'https://pi.dynamics.com/'
     - name: Informazioni di base
       items:
-        - name: Informazioni di base
+        - name: Guida introduttiva
           href: engagement-insights/get-started.md
         - name: Crea un'area di lavoro
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Gestire ambienti e aree di lavoro
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Configurare le connessioni
-          href: engagement-insights/configure-connections.md
         - name: Gestire i cookie e il consenso utente
           href: engagement-insights/user-consent-storage.md
-    - name: GDPR
-      items:
-        - name: Elimina ed esporta dati personali
-          href: engagement-insights/delete-export-personal-data.md
     - name: Disponibilità regionale
       href: engagement-insights/regional-availability.md
-    - name: Limiti del servizio
-      href: engagement-insights/quotas.md
 - name: Integrare Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione
   items:
     - name: Collegare Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Utilizzare le dimensioni demografiche per suddividere i dati comportamentali
       href: engagement-insights/curate-dimensions.md
+- name: Limiti del servizio
+  href: service-limits.md
+- name: Diritti e richieste DSR
+  href: dsr-rights-requests.md
 - name: Richiedere supporto
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

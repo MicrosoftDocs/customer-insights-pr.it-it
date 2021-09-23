@@ -4,17 +4,17 @@ description: Come creare, rinominare ed eliminare aree di lavoro e ambienti.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034047"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486040"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gestire ambienti e aree di lavoro
 
@@ -85,13 +85,11 @@ L'eliminazione di un'area di lavoro rimuoverà in modo definitivo tutto il conte
 
 1. Seleziona **Aggiungi membri** per consentire l'accesso e [assegnare ruoli](user-roles.md). Attualmente è disponibile solo **Amministratore area di lavoro**.
 
-1. Se configuri una [connessione a Informazioni dettagliate sul gruppo di destinatari](configure-connections.md), puoi selezionare **Consenti accesso ai dati del profilo** per consentire al membro di visualizzare i report basati sui [profili utente](profile-reports.md).
-
 1. Seleziona **Aggiungi membri** per aggiungerli alla tua area di lavoro.
 
 ## <a name="manage-an-environment"></a>Gestire un ambiente
 
-In qualità di amministratore dell'ambiente, puoi accedere a un ambiente dal riquadro di spostamento a sinistra. Puoi configurare le impostazioni dell'ambiente, altri amministratori dell'ambiente, aree di lavoro e [connessioni a Informazioni dettagliate sul gruppo di destinatari](configure-connections.md). Seleziona le schede per spostarti tra le diverse aree dell'interfaccia di amministrazione.
+In qualità di amministratore dell'ambiente, puoi accedere a un ambiente dal riquadro di spostamento a sinistra. Puoi configurare le impostazioni dell'ambiente, altri amministratori dell'ambiente e le aree di lavoro. Seleziona le schede per spostarti tra le diverse aree dell'interfaccia di amministrazione.
 
 :::image type="content" source="media/New-environment.png" alt-text="Interfaccia di amministrazione ambiente.":::
 
@@ -123,8 +121,6 @@ In qualità di amministratore dell'ambiente, puoi accedere a un ambiente dal riq
 
 1. Seleziona **Aggiungi membri** per aggiornare i membri e [assegnare ruoli](user-roles.md). Attualmente è disponibile solo **Amministratore ambiente**.
 
-1. Se configuri una [connessione a Informazioni dettagliate sul gruppo di destinatari](configure-connections.md), puoi selezionare **Consenti accesso ai dati del profilo** per consentire al membro di visualizzare i report basati sui [profili utente](profile-reports.md).
-
 1. Seleziona **Aggiungi membri** per aggiungerli al tuo ambiente.
 
 ### <a name="delete-an-environment"></a>Eliminare un ambiente
@@ -143,7 +139,7 @@ Gli amministratori dell'ambiente possono eliminare gli ambienti. Prima di poter 
 
 Stabilire connessioni a Informazioni dettagliate sul gruppo di destinatari ti consente di visualizzare report in informazioni dettagliate sull'interazione basati su profili cliente unificati. 
 
-Per ulteriori informazioni, vedi [Configurare le connessioni](configure-connections.md).
+Per ulteriori informazioni, vedi [Creare un collegamento tra Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Gestire i dati personali
 

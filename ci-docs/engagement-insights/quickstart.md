@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: eebe51d343f6afbed52a66c52ab6a60eb5cd410367fb2e4409eb8679f357c91e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 95caaa1f67a7740328b67face00acaea65452eb0
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033912"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494462"
 ---
 # <a name="first-run-experience"></a>Completamento dell'installazione
 
@@ -26,7 +26,7 @@ Informazioni dettagliate sull'interazione è una funzionalità di Dynamics 365 C
 
 Devi disporre di un account utente di Microsoft Azure Active Directory attivo. 
 
-1. Apri il sito Web delle [informazioni dettagliate sull'interazione](https://pi.dynamics.com/). 
+1. Apri il sito Web delle [informazioni dettagliate sull'interazione](https://home.ci.ai.dynamics.com/app/engagement-insights). 
 
 1. Accedi con il tuo account aziendale o dell'istituto di istruzione.
 

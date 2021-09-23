@@ -1,20 +1,20 @@
 ---
 title: Impegni cliente
-description: Definisci gli impegni cliente e visualizzali nella sequenza temporale del cliente.
-ms.date: 04/07/2021
+description: Definisci le attività dei clienti e visualizzale in una sequenza temporale sui profili dei clienti.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033636"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494416"
 ---
 # <a name="customer-activities"></a>Impegni cliente
 
@@ -60,12 +60,15 @@ Le tue origini dati possono includere entità con dati transazionali e dati di i
       - **Ulteriori dettagli**: Campo con informazioni rilevanti per questo impegno.
       - **Icona**: Icona che rappresenta al meglio questo tipo di impegno.
       - **indirizzo Web**: Campo contenente un URL con informazioni su questo impegno. Ad esempio, il sistema transazionale che genera questo impegno. Questo URL può essere qualsiasi campo di origine dati oppure può essere costruito come un nuovo campo usando una trasformazione Power Query. I dati dell'URL verranno archiviati nell'entità *Impegno unificato* che può essere consumata a valle utilizzando le [API](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Specifica i dati dell'impegno del cliente in un'entità Impegno unificato.":::
+
+   - **Mostra in sequenza temporale**
+      - Scegli se mostrare questo impegno nella visualizzazione sequenza temporale sui profili dei clienti. Seleziona **Sì** per mostrare l'impegno nella sequenza temporale oppure **No** per nasconderlo.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Specifica i dati dell'impegno del cliente in un'entità Impegno unificato.":::
 
 1. Seleziona **Avanti** per passare al passaggio successivo. Puoi selezionare **Termina e rivedi** per salvare l'impegno ora con il tipo di impegno impostato su **Altro**. 
 
-1. Nel passaggio **Tipo di impegno** scegli il tipo di impegno e, facoltativamente, seleziona se vuoi mappare semanticamente alcuni tipi di impegno da utilizzare in altre aree di Customer Insights. Attualmente, i tipi di attività *Sottoscrizione* e *SalesOrderLine* possono essere mappati semanticamente dopo aver accettato di mappare i campi. Se un tipo di impegno non è pertinente per il nuovo impegno, puoi scegliere *Altro* o *Crea nuovo* per un tipo di impegno personalizzato.
+1. Nel passaggio **Tipo di impegno** scegli il tipo di impegno e, facoltativamente, seleziona se vuoi mappare semanticamente alcuni tipi di impegno da utilizzare in altre aree di Customer Insights. Attualmente, i tipi di impegno *Feedback*, *Loyalty*, *SalesOrder*, *SalesOrderLine* e *Subscription* possono essere mappati semanticamente dopo aver accettato di mappare i campi. Se un tipo di impegno non è pertinente per il nuovo impegno, puoi scegliere *Altro* o *Crea nuovo* per un tipo di impegno personalizzato.
 
 1. Seleziona **Avanti** per passare al passaggio successivo. 
 

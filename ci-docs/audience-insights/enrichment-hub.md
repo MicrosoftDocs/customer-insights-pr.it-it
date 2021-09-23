@@ -1,7 +1,7 @@
 ---
 title: Arricchire profili cliente unificati
 description: Usa specifiche funzionalità per arricchire i tuoi dati cliente.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032533"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469991"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Arricchimento per i profili cliente (anteprima)
 
@@ -29,6 +29,7 @@ Devi disporre delle autorizzazioni come Collaboratore o Amministratore per crear
 
 Nella scheda **Scopri**, troverai i seguenti arricchimenti:
 
+- [Mappe di Azure](enrichment-azure-maps.md) fornito da Microsoft
 - [Marchi](enrichment-microsoft.md) forniti da Microsoft
 - [Interessi](enrichment-microsoft.md) forniti da Microsoft
 - [Indirizzi avanzati](enrichment-enhanced-addresses.md) forniti da Microsoft
@@ -62,5 +63,17 @@ Gli arricchimenti di terze parti vengono configurati utilizzando le [connessioni
 ## <a name="multiple-enrichments-of-the-same-type"></a>Più arricchimenti dello stesso tipo
 
 L'entità da arricchire viene specificata durante la configurazione dell'arricchimento, che ti consente di arricchire solo un sottoinsieme dei tuoi profili. Ad esempio, arricchisci i dati solo per un segmento specifico. Puoi configurare diversi arricchimenti dello stesso tipo e riutilizzare la stessa connessione. Alcuni arricchimenti avranno dei limiti al numero di arricchimenti dello stesso tipo che possono essere creati. I limiti e l'uso corrente possono essere visualizzati nella pagina **Arricchimento**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Verificare lo stato del processo di arricchimento
+
+Puoi trovare dettagli sull'elaborazione di un arricchimento, inclusi lo stato e i potenziali problemi durante l'aggiornamento o dopo il completamento di un aggiornamento. Potrai comprendere quali processi sono coinvolti nell'aggiornamento di un arricchimento e quanto tempo è necessario per eseguire i processi. Lo stato di arricchimento è supportato per Experian, Leadspace, HERE Technologies, SFTP Import e Mappe di Azure.
+
+Per vedere lo stato di un arricchimento
+
+1. Vai a **Dati** > **Arricchimento**. 
+1. Nella scheda **I miei arricchimenti** seleziona lo stato di un arricchimento per aprire un riquadro laterale. 
+1. Nel riquadro **Dettagli stato** espandi la sezione **Arricchimenti**. 
+1. Per l'arricchimento di cui vuoi vedere i progressi, seleziona **Vedi dettagli**. 
+1. Nel riquadro **Dettagli attività** seleziona **Mostra dettagli** per vedere i processi che sono coinvolti nell'aggiornamento dell'arricchimento e il relativo stato. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

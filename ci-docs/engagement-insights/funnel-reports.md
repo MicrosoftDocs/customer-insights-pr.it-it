@@ -4,17 +4,17 @@ description: Come utilizzare i report grafico a imbuto per comprendere come il g
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032260"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498647"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Creare e gestire i report grafico a imbuto
 
@@ -158,4 +158,21 @@ Puoi modificare il nome di un report grafico a imbuto, eliminarlo o modificare i
 1. Seleziona un nome per aprire il report.
 
 1. Seleziona il passaggio che desideri rimuovere e seleziona **Elimina**.
+
+## <a name="funnel-insights"></a>Informazioni dettagliate sul grafico a imbuto 
+
+Le informazioni dettagliate sull'interazione offrono ora informazioni sul grafico a imbuto. Utilizza le informazioni dettagliate sul grafico a imbuto per ottenere informazioni sul comportamento dei clienti in merito ai passaggi nel report grafico a imbuto. Quando crei e salvi un nuovo report grafico a imbuto, le informazioni dettagliate sul grafico a imbuto vengono generate automaticamente per il report. 
+
+Puoi visualizzare le informazioni dettagliate sul grafico a imbuto dalle seguenti categorie, sia a livello principale sia a livello dei passaggi: 
+
+ - Tasso di conversione 
+ - Tempo di transizione 
+ - Ora completamento 
+
+Utilizza queste informazioni dettagliate per approfondire il comportamento dei clienti e comprendere meglio i punti di uscita e le conversioni per il tuo report grafico a imbuto. 
+
+Le informazioni dettagliate sul grafico a imbuto vengono ricalcolate ogni 24 ore o quando usi il comando **Salva** per il tuo report grafico a imbuto. 
+
+> [!NOTE]
+> Per visualizzare le informazioni dettagliate per il grafico a imbuto, devi salvare il report ogni volta che apporti modifiche. 
 

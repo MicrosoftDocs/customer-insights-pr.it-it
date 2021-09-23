@@ -1,24 +1,23 @@
 ---
-title: Lingue supportate per Informazioni dettagliate sul gruppo di destinatari
+title: Lingue supportate per Dynamics 365 Customer Insights
 description: Comprendi e configura il supporto per le lingue.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035144"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483347"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Lingue supportate per Informazioni dettagliate sul gruppo di destinatari
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Lingue supportate per Dynamics 365 Customer Insights
 
-Le informazioni dettagliate gruppo di destinatari per Dynamics 365 Customer Insights sono tradotte in molte lingue. Il seguente elenco contiene le lingue disponibili e le informazioni su ciò che è tradotto. Puoi anche scoprire come modificare le impostazioni della lingua. 
+Dynamics 365 Customer Insights è tradotto in molte lingue. Il seguente elenco contiene le lingue disponibili e le informazioni su ciò che è tradotto. Puoi anche scoprire come modificare le impostazioni della lingua. 
 
 ## <a name="languages"></a>Lingue
 
@@ -69,7 +68,7 @@ Le informazioni dettagliate gruppo di destinatari per Dynamics 365 Customer Insi
 
 ## <a name="whats-translated"></a>Cos'è tradotto
 
-L'app utilizza la preferenza di lingua per visualizzare elementi come il menu, il testo delle etichette e i messaggi di sistema nella lingua preferita.
+Customer Insights utilizza la preferenza di lingua per visualizzare elementi come il menu, il testo delle etichette e i messaggi di sistema nella lingua preferita.
 
 Poiché la maggior parte delle funzionalità si basa sui dati, alcuni elementi rimangono nella loro lingua originale. Ad esempio:
 

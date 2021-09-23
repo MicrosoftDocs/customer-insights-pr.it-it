@@ -1,7 +1,7 @@
 ---
 title: Unire entità nel processo di unificazione dei dati
 description: Unisci entità per creare profili cliente unificati.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035007"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494324"
 ---
 # <a name="merge-entities"></a>Gestire entità
 
@@ -66,7 +66,7 @@ Modifica il nome visualizzato degli attributi uniti. Non è possibile modificare
 
 Escludi un attributo dal profilo del cliente unificato. Se il campo viene utilizzato in altri processi, ad esempio in un segmento, rimuovilo da questi processi prima di escluderlo dal profilo del cliente. 
 
-1. Seleziona il campo unito.
+1. Seleziona un campo unito.
   
 1. Seleziona **Mostra altro** e scegli **Escludi**.
 
@@ -76,17 +76,40 @@ Escludi un attributo dal profilo del cliente unificato. Se il campo viene utiliz
 
 Nella pagina **Unisci** seleziona **Campi esclusi** per vedere l'elenco di tutti i campi esclusi. Questo riquadro consente di aggiungere nuovamente i campi esclusi.
 
+## <a name="edit-a-merged-field"></a>Modificare un campo unito
+
+1.  Seleziona un campo unito.
+
+1.  Seleziona **Mostra altro** e scegli **Modifica**.
+
+1.  Specifica come combinare o unire i campi tramite una delle tre opzioni:
+    - **Importanza**: identifica il valore prevalente in base al grado di importanza specificato per i campi partecipanti. È l'opzione di unione predefinita. Seleziona **Sposta su/giù** per impostare la classifica per importanza.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Opzione di importanza nella finestra di dialogo dei campi di unione."::: 
+    - **Più recente**: identifica il valore prevalente in base alla maggiore recency. Richiede un campo data o numerico per ogni entità partecipante nell'ambito dei campi di unione per definire la recency.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Opzione di recency nella finestra di dialogo dei campi di unione.":::
+    - **Meno recente**: identifica il valore prevalente in base alla minore recency. Richiede un campo data o numerico per ogni entità partecipante nell'ambito dei campi di unione per definire la recency.
+
+1.  Puoi aggiungere ulteriori campi per partecipare al processo di unione.
+
+1.  Puoi rinominare il campo unito.
+
+1. Seleziona **Fatto** per applicare le modifiche.
+
+1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche. 
+
 ## <a name="manually-combine-fields"></a>Combinare manualmente i campi
 
 Specifica manualmente un attributo unito. 
 
 1. Nella pagina **Unisci** seleziona **Combina campi**.
 
-1. Fornisci un **Nome** e un **Nome del campo di output**.
+1. Specifica i criteri prevalenti dell'unione nell'elenco a discesa **Combina campi per**.
 
 1. Scegli un campo da aggiungere. Seleziona **Aggiungi campi** per combinare altri campi.
 
-1. Conferma l'esclusione.
+1. Fornisci un **Nome** e un **Nome del campo di output**.
+
+1. Seleziona **Fatto** per applicare le modifiche.
 
 1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche. 
 
@@ -103,6 +126,27 @@ Alcune entità contengono più dettagli di altre. Se un'entità include i dati p
 1. Conferma la modifica.
 
 1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche.
+
+## <a name="configure-customer-id-generation"></a>Configura la generazione dell'ID cliente 
+
+Dopo aver configurato i campi di unione, è possibile definire come generare i valori CustomerId, gli identificatori univoci del profilo cliente. Il passaggio di unione nel processo di unificazione dei dati genera l'identificatore univoco del profilo cliente. L'identificatore è il CustomerId nell'entità *Cliente* che risulta dal processo di unificazione dei dati. 
+
+Il CustomerId nell'entità Cliente si basa su un hash del primo valore delle chiavi primarie prevalenti non nulle. Queste chiavi provengono dalle entità utilizzate nella fase di corrispondenza e unione e sono influenzate dall'ordine di corrispondenza. Il CustomerID generato può quindi cambiare quando un valore di chiave primaria cambia nell'entità primaria dell'ordine di corrispondenza. Di conseguenza, il valore della chiave primaria potrebbe non rappresentare sempre lo stesso cliente.
+
+La configurazione di un ID cliente stabile consente di evitare tale comportamento.
+
+**Configura ID cliente univoco**
+
+1. Vai a **Unifica** > **Unisci**.
+
+1. Nella pagina **Unisci** seleziona la scheda **Chiavi**. 
+
+1. Passa il mouse sula riga **CustomerId** e seleziona l'opzione **Configura**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Controllo per personalizzare la generazione dell'ID.":::
+
+1. Seleziona fino a cinque campi che comprenderanno un ID cliente univoco e sono più stabili. I record che non corrispondono alla tua configurazione utilizzano invece un ID configurato dal sistema.  
+
+1. Seleziona **Fatto** ed esegui il processo di unione per applicare le modifiche.
 
 ## <a name="run-your-merge"></a>Eseguire l'unione
 

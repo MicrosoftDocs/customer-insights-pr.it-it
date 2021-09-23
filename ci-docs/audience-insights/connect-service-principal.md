@@ -1,7 +1,7 @@
 ---
 title: Connettersi a un account Azure Data Lake Storage utilizzando un'entità servizio
 description: Utilizza un'entità servizio di Azure per connetterti al data lake.
-ms.date: 07/23/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 845d1f55eb99f2adf9b437124addec4f6d016fec
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461153"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483530"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connettersi a un account Azure Data Lake Storage utilizzando un'entità servizio di Azure
-<!--note from editor: The Cloud Style Guide would have us just use "Azure Data Lake Storage" to mean the current version, unless the old version (Gen1) is mentioned. I've followed this guidance, even though it seems that our docs and Azure docs are all over the map on this.-->
+
 Gli strumenti automatizzati che usano i servizi di Azure deve avere sempre autorizzazioni limitate. Anziché avere applicazioni che accedono come utente con privilegi completi, Azure fornisce entità servizio. Questo articolo descrive come connettersi a Dynamics 365 Customer Insights con un account Azure Data Lake Storage utilizzando un'entità servizio di Azure anziché le chiavi dell'account di archiviazione. 
 
-Puoi utilizzare l'entità servizio per [aggiungere o modificare in modo sicuro una cartella Common Data Model come origine dati](connect-common-data-model.md), o per [creare o aggiornare un ambiente](get-started-paid.md).<!--note from editor: Suggested. Or it could be ", or create a new environment or update an existing one". I think "new" is implied with "create". The comma is necessary.-->
+Puoi utilizzare l'entità servizio per [aggiungere o modificare in modo sicuro una cartella Common Data Model come origine dati](connect-common-data-model.md), o per [creare o aggiornare un ambiente](get-started-paid.md).
 
 > [!IMPORTANT]
-> - L'account Data Lake Storage che utilizzerà<!--note from editor: Suggested. Or perhaps it could be "The Data Lake Storage account to which you want to give access to the service principal..."--> l'entità servizio deve avere lo [spazio dei nomi gerarchico abilitato](/azure/storage/blobs/data-lake-storage-namespace).
+> - L'account Data Lake Storage che utilizzerà l'entità servizio deve avere lo [spazio dei nomi gerarchico abilitato](/azure/storage/blobs/data-lake-storage-namespace).
 > - Per creare l'entità servizio, sono necessarie autorizzazioni di amministratore per la sottoscrizione di Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Creare un'entità servizio di Azure per Customer Insights
@@ -38,7 +38,7 @@ Prima di creare una nuova entità servizio per Informazioni dettagliate sul grup
 
 3. Sotto **Gestisci**, seleziona **Applicazioni aziendali**.
 
-4. Cerca l'ID applicazione di<!--note from editor: Via Microsoft Writing Style Guide.--> Microsoft:
+4. Cerca l'ID dell'applicazione Microsoft:
    - Informazioni dettagliate sul gruppo di destinatari: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` con il nome `Dynamics 365 AI for Customer Insights`
    - Informazioni dettagliate sull'interazione: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` con il nome `Dynamics 365 AI for Customer Insights engagement insights`
 
@@ -49,23 +49,23 @@ Prima di creare una nuova entità servizio per Informazioni dettagliate sul grup
 6. Se non vengono restituiti risultati, crea una entità servizio.
 
 >[!NOTE]
->Per sfruttare tutta la potenza di Dynamics 365 Customer Insights, ti consigliamo di aggiungere entrambe le app all'entità servizio.<!--note from editor: Using the note format is suggested, just so this doesn't get lost by being tucked up in the step.-->
+>Per sfruttare tutta la potenza di Dynamics 365 Customer Insights, ti consigliamo di aggiungere entrambe le app all'entità servizio.
 
 ### <a name="create-a-new-service-principal"></a>Creare un'entità servizio
-<!--note from editor: Some general formatting notes: The MWSG wants bold for text the user enters (in addition to UI strings and the settings users select), but there's plenty of precedent for using code format for entering text in PowerShell so I didn't change that. Note that italic should be used for placeholders, but not much else.-->
+
 1. Installa l'ultima versione di Azure Active Directory PowerShell for Graph. Per maggiori informazioni, vedi [Installare Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
 
-   1. Nel PC, seleziona il tasto WINDOWS della tastiera e cerca **Windows PowerShell** e seleziona **Esegui come amministratore**.<!--note from editor: Or should this be something like "search for **Windows PowerShell** and, if asked, select **Run as administrator**."?-->
+   1. Nel PC, seleziona il tasto WINDOWS della tastiera e cerca **Windows PowerShell** e seleziona **Esegui come amministratore**.
    
    1. Nella finestra di PowerShell che si apre, immetti `Install-Module AzureAD`.
 
 2. Creare l'entità servizio per Customer Insights con il modulo Azure AD PowerShell.
 
-   1. Nella finestra di PowerShell, immetti `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Sostituisci *"[ID tenant]"*<!--note from editor: Edit okay? Or should the quotation marks stay in the command line, in which case it would be "Replace *[your tenant ID]* --> con l'ID effettivo del tenant in cui desideri creare l'entità servizio. Il parametro del nome dell'ambiente `AzureEnvironmentName` è facoltativo.
+   1. Nella finestra di PowerShell, immetti `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Sostituisci l'*[ID tenant]* con l'ID effettivo del tenant in cui desideri creare l'entità servizio. Il parametro del nome dell'ambiente `AzureEnvironmentName` è facoltativo.
   
    1. Immetti `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Questo comando crea l'entità servizio per Informazioni dettagliate sul gruppo di destinatari nel tenant selezionato. 
 
-   1. Immetti `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Questo comando crea l'entità servizio per Informazioni dettagliate sull'interazione<!--note from editor: Edit okay?--> nel tenant selezionato.
+   1. Immetti `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Questo comando crea l'entità servizio per Informazioni dettagliate sull'interazione sul tenant selezionato.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Concedere autorizzazioni all'entità servizio per accedere all'account di archiviazione
 
@@ -90,7 +90,7 @@ La propagazione delle modifiche può durare fino a 15 minuti.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Immetti l'ID risorsa di Azure o i dettagli della sottoscrizione di Azure nell'allegato dell'account di archiviazione di Informazioni dettagliate sul gruppo di destinatari
 
-Puoi<!--note from editor: Edit suggested only if this section is optional.--> associare un account Data Lake Storage in Informazioni dettagliate sul gruppo di destinatari per [memorizzare i dati di output](manage-environments.md) o [usarlo come origine dati](connect-common-data-service-lake.md). Questa opzione ti consente di scegliere tra un approccio basato sulle risorse o un approccio basato sulla sottoscrizione. A seconda dell'approccio scelto, segui la procedura in una delle sezioni seguenti.<!--note from editor: Suggested.-->
+Puoi associare un account Data Lake Storage nelle informazioni dettagliate sul gruppo di destinatari per [archiviare i dati di output](manage-environments.md) o [usarlo come origine dati](connect-common-data-service-lake.md). Questa opzione ti consente di scegliere tra un approccio basato sulle risorse o un approccio basato sulla sottoscrizione. A seconda dell'approccio scelto, segui la procedura in una delle sezioni seguenti.
 
 ### <a name="resource-based-storage-account-connection"></a>Connessione dell'account di archiviazione basata sulle risorse
 
