@@ -4,17 +4,17 @@ description: Scenari avanzati da considerare durante la strumentazione del tuo s
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 11/12/2020
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 7455d276035bfaf1f8a93d0e3b0b0884353a4010715c05d1d696309f7eb4b233
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4c6646ecadbb604000d6c95b685cf6e420969a6d
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036333"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558707"
 ---
 # <a name="advanced-web-sdk-instrumentation"></a>Strumentazione SDK Web avanzata
 
@@ -33,20 +33,20 @@ L'oggetto `IUser` contiene le seguenti proprietà stringa:
 - **authType**: il tipo di autenticazione utilizzato per ottenere l'ID utente autenticato.
 - **name**: il nome dell'utente.
 - **email**: l'indirizzo e-mail dell'utente.
-    
-L'esempio seguente mostra un frammento di codice che invia informazioni sull'utente. Quando vedi Funzioni con denotazione *, sostituiscilo con la tua implementazione di chiamata di quei valori:  
+
+L'esempio seguente mostra un frammento di codice che invia informazioni sull'utente. Dove vedi le funzioni precedute da un simbolo asterisco *, sostituisci la funzione con la tua implementazione personalizzata:
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     user:{
@@ -58,25 +58,25 @@ window, document
 […]
 ```
 
-Inoltre puoi specificare le informazioni sull'utente chiamando l'API `setUser(user: IUser)` sull'SDK. La telemetria inviata dopo aver chiamato `setUser API` conterrà le informazioni dell'utente.
+Puoi anche specificare le informazioni dell'utente chiamando l'API `setUser(user: IUser)`. La telemetria inviata dopo aver chiamato l'API `setUser` conterrà le informazioni dell'utente.
 
 ## <a name="adding-custom-properties-for-each-event"></a>Aggiunta di proprietà personalizzate per ogni evento
 
-L'SDK ti consente di specificare proprietà personalizzate che possono essere inviate con ogni evento. Puoi specificare le proprietà personalizzate come un oggetto contenente coppie chiave-valore (il valore può essere di tipo `string | number | boolean`). L'oggetto può essere aggiunto in una proprietà chiamata `props`, simile a `src`, `name` e `cfg` nella configurazione del frammento di codice. 
+L'SDK ti consente di specificare proprietà personalizzate che possono essere inviate con ogni evento. Puoi specificare le proprietà personalizzate come un oggetto contenente coppie chiave-valore (il valore può essere di tipo `string | number | boolean`). Puoi aggiungere l'oggetto in una proprietà denominata `props`, simile a `src`, `name` e `cfg` nella configurazione del frammento di codice.
 
 L'esempio seguente mostra un frammento di codice che invia proprietà personalizzate:
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     props:{
@@ -87,7 +87,7 @@ window, document
 […]
 ```
 
-Puoi inoltre specificare singolarmente le proprietà personalizzate chiamando l'API `setProperty(name: string, value: string | number | boolean)` sull'SDK.
+Puoi anche specificare le singole proprietà personalizzate chiamando l'API `setProperty(name: string, value: string | number | boolean)`.
 
 ## <a name="sending-custom-events"></a>Invio di eventi personalizzati
 

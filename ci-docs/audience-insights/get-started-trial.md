@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f038dedd369ac9e623146b66528efa87c47a8c23769037d8709fa9b804a0b723
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3a235e924395a606b9332de3d205289288a597a9
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035420"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558828"
 ---
 # <a name="set-up-a-trial-environment"></a>Configurazione di un ambiente della versione di valutazione 
 
@@ -95,7 +95,7 @@ Ora puoi utilizzare i dati inseriti per adattare Customer Insights al tuo scenar
 
 - Le versioni di valutazione sono attive per 30 giorni per impostazione predefinita. Tuttavia, puoi estenderle dopo il 23° giorno quando accedi alla tua versione di valutazione.
 - Non puoi utilizzare il tuo account di Azure Data Lake Storage per archiviare i dati di output in una versione di valutazione. Tuttavia, puoi inserire dati da un account di archiviazione di Data Lake.
-- Puoi archiviare fino a 3 GB di dati nell'ambiente Dataverse di cui viene eseguito il provisioning automaticamente quando avvii una versione di valutazione di Customer Insights.
+- È possibile memorizzare fino a 3 GB di dati nell'ambiente Dataverse di cui viene eseguito il provisioning automaticamente quando si avvia una versione di prova di Customer Insights.
 
 ## <a name="copy-data-from-a-trial-to-a-paid-subscription"></a>Copia i dati da una versione di valutazione a un abbonamento a pagamento
 

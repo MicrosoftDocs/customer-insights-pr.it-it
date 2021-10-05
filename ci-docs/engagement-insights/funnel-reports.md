@@ -4,17 +4,17 @@ description: Come utilizzare i report grafico a imbuto per comprendere come il g
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
+ms.date: 09/21/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498647"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558925"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Creare e gestire i report grafico a imbuto
 
@@ -163,13 +163,23 @@ Puoi modificare il nome di un report grafico a imbuto, eliminarlo o modificare i
 
 Le informazioni dettagliate sull'interazione offrono ora informazioni sul grafico a imbuto. Utilizza le informazioni dettagliate sul grafico a imbuto per ottenere informazioni sul comportamento dei clienti in merito ai passaggi nel report grafico a imbuto. Quando crei e salvi un nuovo report grafico a imbuto, le informazioni dettagliate sul grafico a imbuto vengono generate automaticamente per il report. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Informazioni dettagliate sul grafico a imbuto.":::
+
+> [!NOTE]
+> Le informazioni dettagliate sul grafico a imbuto possono essere generate solo per i passaggi della creazione di grafici a imbuto che **non** includono dimensioni personalizzate. Per generare informazioni dettagliate sul grafico a imbuto per tutti i passaggi della creazione di grafici a imbuto, utilizza le dimensioni predefinite delle informazioni dettagliate sull'interazione per creare le fasi della creazione del grafico a imbuto. 
+
 Puoi visualizzare le informazioni dettagliate sul grafico a imbuto dalle seguenti categorie, sia a livello principale sia a livello dei passaggi: 
 
- - Tasso di conversione 
+ - Tasso di conversione
+ -    Il tasso di conversione tra Checkout e Acquisto è del 22%.
  - Tempo di transizione 
+ -    Il tempo di transizione medio tra Carrello e Checkout è di 23 minuti. 
  - Ora completamento 
+ -    Il tempo medio di completamento del grafico a imbuto da parte dei clienti è di 47 minuti. 
 
 Utilizza queste informazioni dettagliate per approfondire il comportamento dei clienti e comprendere meglio i punti di uscita e le conversioni per il tuo report grafico a imbuto. 
+
+Per confrontare le informazioni dettagliate tra i diversi passaggi, seleziona **Visualizza suddivisione passaggi** o **Confronto con altri passaggi** dalle schede di informazioni dettagliate. Le schede mostreranno un grafico a barre che confronta le metriche per ogni passaggio della creazione di grafici a imbuto. 
 
 Le informazioni dettagliate sul grafico a imbuto vengono ricalcolate ogni 24 ore o quando usi il comando **Salva** per il tuo report grafico a imbuto. 
 
