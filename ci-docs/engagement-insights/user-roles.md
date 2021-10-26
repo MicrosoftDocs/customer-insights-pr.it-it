@@ -4,27 +4,33 @@ description: Panoramica dei ruoli e delle autorizzazioni disponibili per i membr
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036698"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645542"
 ---
 # <a name="roles-and-permissions"></a>Ruoli e autorizzazioni
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Un'area di lavoro è uno spazio in cui archiviare e gestire eventi e report. Un membro è un utente che può accedere a un'area di lavoro. Puoi assegnare membri alla tua area di lavoro e definirne i ruoli e le autorizzazioni. I ruoli amministratore gestiscono le aree di lavoro e gli ambienti e configurano le informazioni dettagliate per altri utenti. I ruoli Collaboratore sono orientati agli analisti che non hanno bisogno di configurare le informazioni dettagliate ma vogliono creare i propri report, le proprie canalizzazioni o i propri segmenti.
+Uno spazio di lavoro è il luogo in cui si archiviano e si gestiscono eventi e rapporti. Per maggiori informazioni, vedi [Creare uno spazio di lavoro e aggiungere membri](create-workspace.md). 
+
+Uno spazio di lavoro può includere i seguenti ruoli e permessi:
+
+- I ruoli *membri* sono utenti che possono accedere a uno spazio di lavoro. Puoi assegnare membri alla tua area di lavoro e definirne i ruoli e le autorizzazioni. 
+- I ruoli di *amministratore* gestiscono gli spazi di lavoro e gli ambienti e configurano gli approfondimenti sul coinvolgimento degli altri utenti. 
+- I ruoli di *collaboratore* sono orientati verso gli analisti che non hanno bisogno di configurare gli approfondimenti sull'impegno, ma vogliono creare i propri report, funnel o segmenti.
 
 ## <a name="permissions"></a>Autorizzazioni
   
-Il grafico seguente identifica le autorizzazioni per ogni ruolo. 
+La seguente tabella identifica i permessi per ogni ruolo. 
 
 | Autorizzazione | Amministratore dell'ambiente | Amministratore area di lavoro | Collaboratore ambiente | Collaboratore area di lavoro | 
 |--|--|--|--|--|

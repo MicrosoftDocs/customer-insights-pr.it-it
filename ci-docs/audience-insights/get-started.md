@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466582"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645269"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Inizia a utilizzare la funzionalità relativa alle informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ La funzionalità relativa alle informazioni dettagliate sul gruppo di destinatar
 
 ## <a name="step-1-create-an-environment"></a>Passaggio 1. Creare un ambiente
 
-Per iniziare, devi in primo luogo creare un ambiente in cui lavorare. Se la tua organizzazione ha già acquistato una licenza, consulta [Attività iniziali con un abbonamento a pagamento](get-started-paid.md). Per avviare una prova della funzionalità relativa alle informazioni dettagliate sul gruppo di destinatari, vedere [Configurazione di un ambiente della versione di valutazione](get-started-trial.md). 
+Per iniziare, devi in primo luogo creare un ambiente in cui lavorare. Se la tua organizzazione ha già acquistato una licenza, vedi [Creare un ambiente](create-environment.md). Per avviare una prova della funzionalità relativa alle informazioni dettagliate sul gruppo di destinatari, vedere [Configurazione di un ambiente della versione di valutazione](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Passaggio 2. Esplorare le informazioni dettagliate sul gruppo di destinatari
 

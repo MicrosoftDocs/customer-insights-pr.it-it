@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483530"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645177"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connettersi a un account Azure Data Lake Storage utilizzando un'entità servizio di Azure
 
 Gli strumenti automatizzati che usano i servizi di Azure deve avere sempre autorizzazioni limitate. Anziché avere applicazioni che accedono come utente con privilegi completi, Azure fornisce entità servizio. Questo articolo descrive come connettersi a Dynamics 365 Customer Insights con un account Azure Data Lake Storage utilizzando un'entità servizio di Azure anziché le chiavi dell'account di archiviazione. 
 
-Puoi utilizzare l'entità servizio per [aggiungere o modificare in modo sicuro una cartella Common Data Model come origine dati](connect-common-data-model.md), o per [creare o aggiornare un ambiente](get-started-paid.md).
+Puoi utilizzare l'entità servizio per [aggiungere o modificare in modo sicuro una cartella Common Data Model come origine dati](connect-common-data-model.md), o per [creare o aggiornare un ambiente](create-environment.md).
 
 > [!IMPORTANT]
 > - L'account Data Lake Storage che utilizzerà l'entità servizio deve avere lo [spazio dei nomi gerarchico abilitato](/azure/storage/blobs/data-lake-storage-namespace).

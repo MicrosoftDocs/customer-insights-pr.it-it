@@ -4,17 +4,17 @@ description: Scopri come personalizzare ed eseguire un esempio di SDK Web.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 10/30/2020
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 545f4a7e9660e339dee1070ad727d5d398eb6254
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036608"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606228"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Eseguire l'esempio di SDK Web per la funzionalità relativa alle informazioni dettagliate sull'interazione di Dynamics 365 Customer Insights
 
@@ -26,7 +26,7 @@ La libreria SDK Web della funzionalità relativa alle informazioni dettagliate s
 
 - Installare [Visual Studio Code](https://code.visualstudio.com/).
 - [Installa l'estensione Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in Visual Studio Code e acquisisci familiarità con l'esecuzione di Live Server.
-- Devi disporre della [chiave di inserimento](instrument-website.md).
+- Dovete avere uno [spazio di lavoro di insights di impegno](create-workspace.md).
 
 ## <a name="run-sample"></a>Eseguire esempio
 
@@ -36,7 +36,11 @@ La libreria SDK Web della funzionalità relativa alle informazioni dettagliate s
 
 1. Apri la cartella decompressa in Visual Studio Code.
 
-1. Nel file `ei_websdk_sample.html` sostituisci la stringa "INGESTION_KEY" con la tua chiave di inserimento dal portale della funzionalità relativa alle informazioni dettagliate sull'interazione e la stringa "NAME" con il nome globale in cui desideri creare l'istanza dell'SDK. Assicurati di sostituire tutte le occorrenze.
+1. Vai al portale degli approfondimenti sull'impegno per il tuo spazio di lavoro. Seleziona **Amministratore** > **Area di lavoro**  e poi **Guida all'installazione**. Seguite la prima opzione e selezionate **Copy code** per copiare lo snippet di codice JavaScript.
+
+1. Nel file `ei_websdk_sample.html` , incollate il frammento di codice che avete appena copiato sotto questa linea:
+
+   - <-- INCOLLA IL FRAMMENTO DI CODICE JAVASCRIPT DAL PORTALE ENGAGMENT INSIGHTS QUI SOTTO QUESTA LINEA -->
 
 1. Apri il file `ei_websdk_sample.html` utilizzando Live Server in Visual Studio Code selezionando **Passa allo stato Live** dalla barra di stato.
 

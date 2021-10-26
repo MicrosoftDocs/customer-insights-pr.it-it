@@ -1,7 +1,7 @@
 ---
 title: Esportare i dati da Customer Insights
 description: Gestisci le esportazioni per condividere i dati.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034687"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623121"
 ---
 # <a name="exports-preview-overview"></a>Panoramica delle esportazioni (anteprima)
 
-La pagina **Esportazioni** mostra tutte le esportazioni configurate. Le esportazioni condividono dati specifici con varie applicazioni. Possono includere profili o entità del cliente, schemi e dettagli di mappatura. Ogni esportazione richiede una [connessione, impostata da un amministratore, per gestire l'autenticazione e l'accesso](connections.md).
+La pagina **Esportazioni** mostra tutte le esportazioni configurate. Le esportazioni condividono dati specifici con varie applicazioni. Possono includere profili di clienti, entità, schemi e dettagli di mappatura. Ogni esportazione richiede una [connessione, impostata da un amministratore, per gestire l'autenticazione e l'accesso](connections.md).
 
 Vai a **Dati** > **Esportazioni** per visualizzare la pagina delle esportazioni. Tutti i ruoli utente possono visualizzare le esportazioni configurate. Utilizza il campo di ricerca nella barra dei comandi per trovare le esportazioni in base al nome, al nome della connessione o al tipo di connessione.
 
-## <a name="set-up-a-new-export"></a>Configurare una nuova esportazione
+## <a name="export-types"></a>Tipi di esportazione
 
+Ci sono due tipi principali di esportazioni:  
+
+- Le **esportazioni di dati** permettono di esportare qualsiasi tipo di entità disponibile in approfondimenti sul pubblico. Le entità selezionate per l'esportazione vengono esportate con tutti i campi di dati, metadati, schemi e dettagli di mappatura. 
+- Le esportazioni dei **segmenti** ti permettono di esportare le entità dei segmenti da approfondimenti sul pubblico. I segmenti rappresentano una lista di profili di clienti. Quando si configura l'esportazione, si selezionano i campi di dati inclusi, a seconda del sistema di destinazione verso cui si esportano i dati. 
+
+### <a name="export-segments"></a>Esportare segmenti
+
+**Esportazione di segmenti in ambienti per conti aziendali (B2B) o clienti individuali (B2C)**  
+La maggior parte delle opzioni di esportazione supportano entrambi i tipi di ambienti. L'esportazione di segmenti in vari sistemi di destinazione ha requisiti specifici. In generale, un membro del segmento, il profilo del cliente, contiene informazioni di contatto. Mentre questo è di solito il caso per i segmenti costruiti su clienti individuali (B2C), non è necessariamente il caso per i segmenti basati su conti aziendali (B2B). 
+
+**Ambienti di esportazione dei segmenti per i conti aziendali (B2B)**  
+- I segmenti nel contesto degli ambienti per i conti aziendali sono costruiti sull'entità del *conto* . Per esportare i segmenti di conto così com'è, il sistema di destinazione deve supportare i segmenti di conto puri. Questo è il caso di [LinkedIn](export-linkedin-ads.md) quando si sceglie l'opzione **azienda** durante la definizione dell'esportazione.
+- Tutti gli altri sistemi di destinazione richiedono campi dall'entità di contatto. Per assicurarsi che i segmenti di account possano recuperare i dati dai contatti correlati, la definizione del tuo segmento deve proiettare gli attributi dell'entità contatto. Scopri di più su come [configurare i segmenti e gli attributi del progetto](segment-builder.md).
+
+**Esportazioni di segmento in ambienti per clienti individuali (B2C)**  
+- I segmenti nel contesto degli ambienti per i clienti individuali sono costruiti sull'entità *unificata del profilo del cliente* . Ogni segmento che soddisfa i requisiti dei sistemi di destinazione (per esempio, un indirizzo e-mail) può essere esportato.
+
+**Limiti alle esportazioni dei segmenti**  
+- I sistemi di destinazione di terze parti possono limitare il numero di profili di clienti che puoi esportare. 
+- Per i clienti individuali, vedrai il numero effettivo di membri del segmento quando selezioni un segmento per l'esportazione. Riceverai un avviso se un segmento è troppo grande. 
+- Per i conti aziendali, vedrai il numero di conti in un segmento; tuttavia, il numero di contatti che possono essere proiettati non appare. In alcuni casi, questo potrebbe portare il segmento esportato a contenere effettivamente più profili di clienti di quelli accettati dal sistema di destinazione. Se si superano i limiti dei risultati dei sistemi di destinazione, l'esportazione viene saltata. 
+
+## <a name="set-up-a-new-export"></a>Configurare una nuova esportazione  
 Per impostare o modificare un'esportazione, è necessario avere delle connessioni disponibili. Le connessioni dipendono dal tuo [ruolo utente](permissions.md):
-- Gli amministratori hanno accesso a tutte le connessioni. Possono anche creare nuove connessioni durante la configurazione di un'esportazione.
-- I collaboratori possono avere accesso a connessioni specifiche. Dipendono dagli amministratori per configurare e condividere le connessioni. L'elenco delle esportazioni mostra ai contributori se possono modificare o visualizzare solo un'esportazione nella colonna **Le tue autorizzazioni**. Per ulteriori informazioni, vedi [Consentire ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- I visualizzatori possono solo visualizzare le esportazioni esistenti ma non crearle.
+- Gli **amministratori** hanno accesso a tutte le connessioni. Possono anche creare nuove connessioni durante la configurazione di un'esportazione.
+- I **collaboratori** possono avere accesso a connessioni specifiche. Dipendono dagli amministratori per configurare e condividere le connessioni. L'elenco delle esportazioni mostra ai contributori se possono modificare o visualizzare solo un'esportazione nella colonna **Le tue autorizzazioni**. Per maggiori informazioni, vai a [Permettere ai collaboratori di usare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Gli spettatori** possono solo visualizzare le esportazioni esistenti, non crearle.
 
 ### <a name="define-a-new-export"></a>Definisci una nuova esportazione
 

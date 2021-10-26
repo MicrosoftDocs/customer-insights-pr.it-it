@@ -1,7 +1,7 @@
 ---
 title: Esportare dati di Customer Insights in Azure Data Lake Storage Gen2
 description: Scopri come configurare la connessione a Azure Data Lake Storage Gen2.
-ms.date: 03/03/2021
+ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,24 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: c4408e52550b6648e2a001041dc0acdb5063d6a6ef1b8e4bba3321bf25fefcfc
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 934c396559d4c4be8e640917d2265805753eb62d
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031984"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605908"
 ---
-# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a>Configurare la connessione ad Azure Data Lake Storage Gen2 (anteprima)
+# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Esportare l'elenco dei segmenti e altri dati in Azure Data Lake Storage Gen2 (anteprima)
+
+Memorizza i tuoi dati di Customer Insights in un account Data Lake Storage Gen2 o usalo per trasferire i tuoi dati ad altre applicazioni.
+
+## <a name="known-limitations"></a>Limitazioni note
+
+1. Per Azure Data Lake Storage Gen2 puoi scegliere tra il [livello di prestazioni Standard e Premium](/azure/storage/blobs/create-data-lake-storage-account) quando crei un account di storage per il tuo data lake. Se scegli il livello di prestazioni Premium, seleziona i blocchi premium come tipo di account. 
+
+
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Impostare la connessione a Azure Data Lake Storage Gen2 
+
 
 1. Vai ad **Amministratore** > **Connessioni**.
 

@@ -1,7 +1,7 @@
 ---
 title: Unire entità nel processo di unificazione dei dati
 description: Unisci entità per creare profili cliente unificati.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494324"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648259"
 ---
 # <a name="merge-entities"></a>Gestire entità
 
@@ -89,7 +91,7 @@ Nella pagina **Unisci** seleziona **Campi esclusi** per vedere l'elenco di tutti
     :::image type="content" source="media/recency-merge-option.png" alt-text="Opzione di recency nella finestra di dialogo dei campi di unione.":::
     - **Meno recente**: identifica il valore prevalente in base alla minore recency. Richiede un campo data o numerico per ogni entità partecipante nell'ambito dei campi di unione per definire la recency.
 
-1.  Puoi aggiungere ulteriori campi per partecipare al processo di unione.
+1.  È possibile aggiungere altri campi per partecipare al processo di fusione.
 
 1.  Puoi rinominare il campo unito.
 
@@ -131,15 +133,15 @@ Alcune entità contengono più dettagli di altre. Se un'entità include i dati p
 
 Dopo aver configurato i campi di unione, è possibile definire come generare i valori CustomerId, gli identificatori univoci del profilo cliente. Il passaggio di unione nel processo di unificazione dei dati genera l'identificatore univoco del profilo cliente. L'identificatore è il CustomerId nell'entità *Cliente* che risulta dal processo di unificazione dei dati. 
 
-Il CustomerId nell'entità Cliente si basa su un hash del primo valore delle chiavi primarie prevalenti non nulle. Queste chiavi provengono dalle entità utilizzate nella fase di corrispondenza e unione e sono influenzate dall'ordine di corrispondenza. Il CustomerID generato può quindi cambiare quando un valore di chiave primaria cambia nell'entità primaria dell'ordine di corrispondenza. Di conseguenza, il valore della chiave primaria potrebbe non rappresentare sempre lo stesso cliente.
+Il CustomerId nell'entità Cliente si basa su un hash del primo valore delle chiavi primarie prevalenti non nulle. Queste chiavi provengono dalle entità utilizzate nella fase di corrispondenza e unione e sono influenzate dall'ordine di corrispondenza. Il CustomerID generato può quindi cambiare quando un valore di chiave primaria cambia nell'entità primaria dell'ordine di corrispondenza. Quindi il valore della chiave primaria potrebbe non rappresentare sempre lo stesso cliente.
 
-La configurazione di un ID cliente stabile consente di evitare tale comportamento.
+La configurazione di un ID cliente stabile permette di evitare questo comportamento.
 
 **Configura ID cliente univoco**
 
 1. Vai a **Unifica** > **Unisci**.
 
-1. Nella pagina **Unisci** seleziona la scheda **Chiavi**. 
+1. Selezionare la scheda **Chiavi**. 
 
 1. Passa il mouse sula riga **CustomerId** e seleziona l'opzione **Configura**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Controllo per personalizzare la generazione dell'ID.":::
@@ -147,6 +149,30 @@ La configurazione di un ID cliente stabile consente di evitare tale comportament
 1. Seleziona fino a cinque campi che comprenderanno un ID cliente univoco e sono più stabili. I record che non corrispondono alla tua configurazione utilizzano invece un ID configurato dal sistema.  
 
 1. Seleziona **Fatto** ed esegui il processo di unione per applicare le modifiche.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Raggruppa i profili in famiglie o cluster
+
+Come parte del processo di configurazione della generazione del profilo del cliente, è possibile definire delle regole per raggruppare profili correlati in un cluster. Ci sono attualmente due tipi di cluster disponibili - cluster domestici e cluster personalizzati. Il sistema sceglie automaticamente una famiglia con regole predefinite se l'entità *Customer* contiene i campi semantici *Person.LastName* e *Location.Address*. Potete anche creare un cluster con le vostre regole e condizioni, simili alle [regole di corrispondenza](match-entities.md#define-rules-for-match-pairs).
+
+**Definire una famiglia o un gruppo**
+
+1. Vai a **Unifica** > **Unisci**.
+
+1. Nella scheda **Fondi** , seleziona **Avanzate** > **Crea cluster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Controllo per creare un nuovo cluster.":::
+
+1. Scegli tra un cluster **domestico** o un cluster **personalizzato** . Se i campi semantici *Person.LastName* e *Location.Address* esistono nell'entità *Customer* , la famiglia viene automaticamente selezionata.
+
+1. Fornire un nome per il cluster e selezionare **Done**.
+
+1. Seleziona la scheda **Cluster** per trovare il cluster che hai creato.
+
+1. Specifica le regole e le condizioni per definire il tuo cluster.
+
+1. Seleziona **Esegui** per eseguire il processo di fusione e creare il cluster.
+
+Dopo aver eseguito il processo di fusione, gli identificatori del cluster vengono aggiunti come nuovi campi all'entità *Customer* .
 
 ## <a name="run-your-merge"></a>Eseguire l'unione
 

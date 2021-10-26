@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557357"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623016"
 ---
 # <a name="relationships-between-entities"></a>Relazioni tra entità
 
@@ -68,6 +68,20 @@ La relazione consiste in una *entità di origine* contenente la chiave esterna e
 
 4. Seleziona **Salva** per creare la relazione personalizzata.
 
+## <a name="set-up-account-hierarchies"></a>Impostare le gerarchie degli account
+
+Gli ambienti che sono configurati per utilizzare gli account aziendali come target primario possono configurare gerarchie di account per gli account aziendali correlati. Per esempio, un'azienda che ha unità di business separate. 
+
+Le organizzazioni creano gerarchie di account per gestire meglio gli account e le loro relazioni reciproche. La capacità di approfondimenti sul pubblico supporta le gerarchie di account padre-figlio che già esistono nei dati dei clienti acquisiti. Per esempio, conti da Dynamics 365 Sales. Queste gerarchie possono essere configurate nella pagina **Relazioni** in approfondimenti sul pubblico, sotto la scheda gerarchia dell'account.
+
+1. Vai a **Data** > **Relationships**.
+1. Seleziona la scheda **Gerarchia dell'account** .
+1. Selezionare **Nuova gerarchia di conti**. 
+1. Nel riquadro della **gerarchia dell'account** , fornisci un nome per la gerarchia. Il sistema crea un nome per l'entità di uscita. È possibile cambiare il nome dell'entità del nome di uscita.
+1. Seleziona l'entità che contiene la tua gerarchia di conti. Di solito è nella stessa entità che contiene i conti.
+1. Seleziona l' **ID del conto** e l' **ID del genitore del conto** dall'entità selezionata 
+1. Seleziona **Salva** per applicare le impostazioni e finalizzare la gerarchia dell'account.
+
 ## <a name="view-relationships"></a>Visualizza Relazioni
 
 La pagina Relazioni elenca tutte le Relazioni che sono state create. Ogni riga rappresenta una relazione, che include anche dettagli sull'entità di origine, sull'entità di destinazione e sulla cardinalità. 
@@ -105,7 +119,7 @@ Ad esempio, l'entità *eCommerce_eCommercePurchases* ha le seguenti relazioni co
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Customer
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Customer 
 
-Un percorso di relazione determina quali entità è possibile utilizzare durante la creazione di regole per misure o segmenti. La scelta dell'opzione con il percorso relazione più lungo produrrà probabilmente meno risultati poiché i record corrispondenti devono essere parte di tutte le entità. In questo esempio, un cliente deve aver acquistato merci tramite e-commerce (eCommerce_eCommercePurchases) presso un POS (POS_posPurchases) e partecipa al nostro programma fedeltà (loyaltyScheme_loyCustomers). Quando si sceglie la prima opzione, è probabile che si ottengano più risultati perché i clienti devono esistere solo in un'entità aggiuntiva.
+Un percorso di relazione determina quali entità è possibile utilizzare durante la creazione di regole per misure o segmenti. La scelta dell'opzione con il percorso relazione più lungo produrrà probabilmente meno risultati poiché i record corrispondenti devono essere parte di tutte le entità. In questo esempio, un cliente deve aver acquistato della merce tramite e-commerce (eCommerce_eCommercePurchases) in un punto vendita (POS_posPurchases) e partecipare al nostro programma di fedeltà (loyaltyScheme_loyCustomers). Quando si sceglie la prima opzione, è probabile che si ottengano più risultati perché i clienti devono esistere solo in un'entità aggiuntiva.
 
 ### <a name="direct-relationship"></a>Relazione diretta
 

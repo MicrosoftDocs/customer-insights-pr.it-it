@@ -1,7 +1,7 @@
 ---
 title: Creare e gestire ambienti
 description: Scopri come iscriverti al servizio e come gestire gli ambienti.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034182"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645131"
 ---
 # <a name="manage-environments"></a>Gestisci ambienti
 
@@ -26,7 +26,7 @@ Seleziona il controllo **Ambiente** nell'angolo superiore destro della pagina pe
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Screenshot del comando per cambiare ambiente.":::
 
-Gli amministratori possono [creare](get-started-paid.md) e gestire ambienti.
+Gli amministratori possono [creare](create-environment.md) e gestire ambienti.
 
 ## <a name="edit-an-existing-environment"></a>Modificare un ambiente esistente
 
@@ -36,23 +36,9 @@ Puoi modificare alcuni dei dettagli degli ambienti esistenti.
 
 2.  Seleziona l'icona **Modifica**.
 
-3. Nella casella **Modifica ambiente** puoi aggiornare il **Nome visualizzato** dell'ambiente, ma non puoi modificare **Area** o **Tipo**.
+3. Nella casella **Modifica ambiente** , puoi aggiornare le impostazioni dell'ambiente.
 
-4. Se un ambiente è configurato per memorizzare i dati in Azure Data Lake Storage, puoi aggiornare la **Chiave account**. Tuttavia, non puoi modificare il **Nome account** o il nome del **Contenitore**.
-
-5. Facoltativamente, puoi eseguire l'aggiornamento da una connessione basata sulla chiave dell'account a una connessione basata su risorse o sottoscrizione. Dopo l'aggiornamento, non puoi ripristinare la chiave dell'account. Per ulteriori informazioni, vedi [Connettere Informazioni dettagliate sul gruppo di destinatari a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Non puoi modificare le informazioni sul **Contenitore** durante l'aggiornamento della connessione.
-
-6. Facoltativamente, puoi fornire un URL dell'ambiente Microsoft Dataverse in **Configura la condivisione dei dati con Microsoft Dataverse e abilita funzionalità aggiuntive**. Queste funzionalità includono la condivisione dei dati con applicazioni e soluzioni basate su Microsoft Dataverse, inserimento di dati da origini dati locali o l'utilizzo delle [previsioni](predictions.md). Seleziona **Abilita la condivisione dei dati** per condividere i dati di output di Customer Insights con un Data Lake gestito di Microsoft Dataverse.
-
-   > [!NOTE]
-   > - Condivisione dei dati con un Data Lake gestito di Microsoft Dataverse non è attualmente supportata quando salvi tutti i dati nel tuo Azure Data Lake Storage.
-   > - La [previsione di valori mancanti in un'entità](predictions.md) e i report PowerBI Embedded nelle informazioni dettagliate (se abilitati nel tuo ambiente) non sono attualmente supportati quando abiliti la condivisione dei dati con il data lake gestito di Microsoft Dataverse.
-
-   Dopo aver abilitato la condivisione dei dati con Microsoft Dataverse, verrà attivato un aggiornamento completo delle origini dati e di altri processi. Se i processi sono attualmente in esecuzione, non vedrai l'opzione per abilitare la condivisione dei dati con Microsoft Dataverse. Attendere il completamento di tali processi o annullarli per abilitare la condivisione dei dati. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opzioni di configurazione per abilitare la condivisione dei dati con Microsoft Dataverse.":::
-   
-   Quando esegui processi, come l'inserimento dati o la creazione di segmenti, le cartelle corrispondenti verranno create nell'account di archiviazione specificato sopra. I file di dati e i file model.json verranno creati e aggiunti alle rispettive sottocartelle, a seconda del processo eseguito.
+Per maggiori informazioni sulle impostazioni dell'ambiente, vedi [Creare un nuovo ambiente](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copia la configurazione dell'ambiente
 

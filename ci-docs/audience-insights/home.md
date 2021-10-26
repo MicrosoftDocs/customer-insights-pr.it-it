@@ -1,7 +1,7 @@
 ---
 title: Home page di Informazioni dettagliate sul gruppo di destinatari
 description: Esplora l'app nella home page.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469990"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617699"
 ---
 # <a name="explore-audience-insights"></a>Esplorare le informazioni dettagliate sul gruppo di destinatari
 
@@ -23,7 +23,7 @@ La **home page** mostra una panoramica di segmenti, misure e dati di arricchimen
 
 :::image type="content" source="media/home-page.png" alt-text="Screenshot della schermata Home che mostra informazioni di esempio.":::
 
-1 - Passa da una funzionalità all'altra di Customer Insights 2 - Utilizza il riquadro di sinistra per spostarti tra le diverse aree 3 - Scopri in quale ambiente lavori e gestisci gli ambienti come amministratore 4 - Specifica le impostazioni personali per Customer Insights
+1 - Passare tra le funzionalità di Customer Insights 2 - Utilizzare il pannello di sinistra per navigare tra le diverse aree e scegliere il target primario 3 - Scoprire in quale ambiente si lavora e gestire gli ambienti come amministratore 4 - Specificare le impostazioni personali per Customer Insights
 
 Sotto **Segmenti recenti**, sono visualizzati gruppi di clienti in base ad attributi demografici, comportamentali o transazionali che hai definito. [La creazione di segmenti](segments.md) ti aiuta a raggruppare la tua base di clienti e ad indirizzare meglio le tue attività commerciali.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 34dc753aa9d2420ef8780d436e14c3c27377e4779eda0f83ca6b5424f2328f22
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4403c6f535f5dc60919be3717073d52640bbe61a
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031433"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619216"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Esportare l'elenco di segmenti in Facebook Ads Manager (anteprima)
 
@@ -30,7 +30,7 @@ Esporta segmenti di profili cliente unificati in Gestione inserzioni di Facebook
 - Fino a 10 milioni di profili cliente per esportazione verso Gestore annunci di Facebook.
 - L'esportazione in Facebook Ads Manager è limitata ai segmenti.
 - Crea o aggiorna segmenti di gruppi di destinatari personalizzati in Facebook solo di tipo *elenco clienti*.
-- L'esportazione di segmenti con un totale di 10 milione di profili può richiedere fino a 90 minuti.
+- L'esportazione di segmenti con un totale di 10 milioni di profili di clienti può richiedere fino a 90 minuti per essere completata.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurare la connessione a Facebook Ads Manager
 

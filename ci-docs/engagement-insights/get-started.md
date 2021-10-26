@@ -4,18 +4,18 @@ description: Una panoramica delle risorse di assistenza per iniziare rapidamente
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 08/31/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494599"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623682"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Attività iniziali con la funzionalità Informazioni dettagliate sull'interazione di Dynamics 365 Customer Insights (anteprima pubblica)
 
@@ -39,33 +39,47 @@ La prima volta che visiti le informazioni dettagliate sull'interazione, puoi con
 
 1. Seleziona la tua area geografica e seleziona la casella se desideri acconsentire esplicitamente alla ricezione di aggiornamenti e offerte via e-mail.
 
-1. Rivedi le **condizioni per l'utilizzo delle informazioni dettagliate sull'interazione (anteprima)** e l'**Informativa sulla privacy**, quindi seleziona **Esplora la demo** per accettare queste impostazioni.
+1. Rivedere le **condizioni d'uso** e la **dichiarazione sulla privacy** di engagement insights (anteprima), e poi selezionare **Esplora la demo** per accettare queste impostazioni.
 
 1. Esplora il prodotto utilizzando una serie di dati di esempio.
 
-##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>Passaggio 3: configura un'area di lavoro e aggiungi codice al tuo sito Web
+##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>Passo 3: Impostare uno spazio di lavoro e creare rapporti
 
 In un'area di lavoro è possibile visualizzare l'attività dell'utente in tempo reale e archiviare e gestire i report. Aggiungi codice al tuo sito Web per iniziare a raccogliere *eventi*, i dati sull'impegno provenienti dagli utenti.
 
 1. [Creare un'area di lavoro](create-workspace.md) e aggiungere membri.
 
-1. [Aggiungi il codice al tuo sito Web](instrument-website.md) o all'[app mobile](developer-resources.md#capture-events-from-mobile-apps) per vedere l'attività degli utenti in arrivo nella tua area di lavoro.
+1. Aggiungi del codice al tuo [sito web](instrument-website.md) o alla tua [app mobile](developer-resources.md#capture-events-from-mobile-apps) per vedere l'attività degli utenti che arrivano nel tuo spazio di lavoro.
 
 1. Visualizza un [report in tempo reale](view-reports.md) che mostra gli utenti attivi per browser, dispositivo, sistema operativo, posizione e lingua. Puoi anche creare [report personalizzati](custom-reports.md) per creare le tue visualizzazioni.
+
+1. Crea [dimensioni](dimensions.md) per ordinare i visitatori in base ai nuovi utenti e a quelli che ritornano, [metriche](metrics.md) per aiutare a capire meglio il comportamento degli utenti e [segmenti](segments.md) per identificare sottoinsiemi di visitatori basati su caratteristiche o interazioni del sito.
     
 ## <a name="step-4-export-data-to-other-channels"></a>Passaggio 4: esporta i dati su altri canali
 
-Puoi creare *eventi affinati* (una visualizzazione virtuale) dei dati di analisi Web. Quindi filtra ed esporta i dati in Azure Data Lake Storage. Puoi inserire i dati esportati come origine dati. Per ulteriori informazioni, vedi [Creare un collegamento tra Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione](integrate-audience-insights-engagement-insights.md).
+Puoi creare *eventi affinati* (una visualizzazione virtuale) dei dati di analisi Web. Quindi filtra ed esporta i dati in Azure Data Lake Storage. Puoi inserire i dati esportati come origine dati.
 
 1. [Crea eventi affinati](refined-events.md) per l'esportazione.
 
-1. [Esporta i dati](export-events.md) in Data Lake Storage.
+1. [Esportare i dati](export-events.md) in Azure Data Lake Storage.
 
 1. [Crea un collegamento tra informazioni dettagliate sul gruppo di destinatari e informazioni dettagliate sull'interazione](integrate-audience-insights-engagement-insights.md) per condividere i dati tra le due funzionalità.
 
+1. [Riconoscere gli eventi web da utenti precedentemente autenticati](unknown-to-known.md) con la funzione **da sconosciuto a conosciuto** .
+
 1. Scopri come [eliminare ed esportare i dati degli eventi contenenti informazioni personali](delete-export-personal-data.md).
+
+## <a name="step-5-create-and-manage-funnel-reports"></a>Passo 5: Creare e gestire rapporti sul funnel
+
+Un report del grafico a imbuto raccoglie informazioni sui passaggi che si verificano durante un percorso del cliente tramite il tuo sito Web o la tua app mobile. Oltre a creare rapporti di profilo out-of-box e rapporti personalizzati, è possibile creare un rapporto funnel per identificare i percorsi che i tuoi clienti prendono prima di fare un acquisto. 
+
+1. [Creare un rapporto sul funnel](funnel-reports.md) per informare le decisioni e identificare le aree di ottimizzazione e di miglioramento dei processi.
+
+1. Crea rapporti cross-channel funnel, una volta che hai strumentato la tua app mobile con l'engagement insights [Android SDK](get-started-android.md) o [iOS SDK](get-started-ios.md).
+
+1. Utilizza gli [approfondimenti dell'imbuto](funnel-reports.md#funnel-insights) per ottenere una visione più profonda del comportamento dei clienti sui passi del tuo rapporto sull'imbuto.
  
-## <a name="step-5-stay-connected"></a>Passaggio 5: resta connesso
+## <a name="step-6-stay-connected"></a>Passaggio 6: resta connesso
 
 Ti ringraziamo per la tua partecipazione e prendiamo in considerazione tutti i feedback pertinenti nello sviluppo di versioni future. Condividi il tuo feedback e segnala i problemi tramite uno di questi canali:
 - [Community](https://go.microsoft.com/fwlink/?linkid=2141648)

@@ -1,7 +1,7 @@
 ---
 title: Componente aggiuntivo Customer Card per app Dynamics 365
 description: Mostra i dati di Informazioni dettagliate sul gruppo di destinatari nelle app Dynamics 365 con questo componente aggiuntivo.
-ms.date: 05/18/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,39 +9,40 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0f6c922104df229980b308136a4d764938121b35d6d744f41b1530bdb5515e7f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032993"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643435"
 ---
 # <a name="customer-card-add-in-preview"></a>Componente aggiuntivo Scheda cliente (anteprima)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics 365. Con il componente aggiuntivo Customer Card installato in un'app Dynamics 365 supportata, puoi scegliere di visualizzare dati demografici, informazioni dettagliate e cronologie degli impegni. Il componente aggiuntivo recupera i dati da Customer Insights senza influire sui dati nell'app Dynamics 365 connessa. 
+Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics 365. Con il Customer Card Add-in installato in un'applicazione Dynamics 365 supportata, è possibile scegliere di visualizzare i campi del profilo del cliente, gli approfondimenti e la timeline delle attività. Il componente aggiuntivo recupera i dati da Customer Insights senza influire sui dati nell'app Dynamics 365 connessa.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Il componente aggiuntivo funziona solo con le app Dynamics 365 basate su modello, come Sales o Customer Service, versione 9.0 e successive.
-- Affinché i dati di Dynamics 365 possano essere mappati ai profili cliente di Informazioni dettagliate sul gruppo di destinatari devono essere [inseriti dall'app Dynamics 365 utilizzando il connettore Microsoft Dataverse](connect-power-query.md).
+- Affinché i vostri dati Dynamics 365 siano mappati ai profili dei clienti di approfondimenti sul pubblico, devono essere [ingeriti dall'applicazione Dynamics 365 utilizzando il connettore Microsoft Dataverse ](connect-power-query.md).
 - Tutti gli utenti Dynamics 365 del componente aggiuntivo Customer Card devono essere [aggiunti come utenti](permissions.md) in Informazioni dettagliate sul gruppo di destinatari per vedere i dati.
 - [Le funzionalità di ricerca e filtro configurate](search-filter-index.md) in Informazioni dettagliate sul gruppo di destinatari sono necessarie affinché la ricerca dei dati funzioni.
-- Ogni controllo del componente aggiuntivo si basa su dati specifici in Informazioni dettagliate sul gruppo di destinatari:
-  - Controllo delle misure: richiede [misure configurate](measures.md).
-  - Controllo intelligente: richiede dati generati utilizzando [previsioni](predictions.md) o [modelli personalizzati](custom-models.md).
-  - Controllo demografico: i campi demografici, come l'età o il sesso, sono disponibili nel profilo cliente unificato.
-  - Controllo Arricchimento: richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili cliente.
-  - Controllo della sequenza temporale: richiede [impegni configurati](activities.md).
+- Ogni controllo add-in si basa su dati specifici in approfondimenti sul pubblico. Alcuni dati e controlli sono disponibili solo in ambienti di tipo specifico. La configurazione dell'add-in vi informerà se un controllo non è disponibile a causa del tipo di ambiente selezionato. Per saperne di più sui [casi d'uso dell'ambiente](work-with-business-accounts.md).
+  - **Controllo delle misure**: Richiede [misure configurate](measures.md) di attributi del cliente tipo.
+  - **Controllo dell'intelligenza**: Richiede dati generati utilizzando [previsioni](predictions.md) o [modelli personalizzati](custom-models.md).
+  - **Controllo dei dettagli del cliente**: Tutti i campi del profilo sono disponibili nel profilo cliente unificato.
+  - **Controllo dell'arricchimento**: Richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili dei clienti.
+  - **Controllo dei contatti**: Richiede la definizione di un'entità semantica di tipo contacts.
+  - **Controllo della timeline**: Richiede [attività configurate](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Installare il componente aggiuntivo Scheda cliente
 
 Il componente aggiuntivo Scheda cliente è una soluzione per le app di interazione con i clienti in Dynamics 365. Per installare la soluzione, vai a AppSource e cerca **Scheda cliente Dynamics**. Seleziona il [componente aggiuntivo Scheda cliente su AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) e seleziona **Prova adesso**.
 
-Potrebbe essere necessario accedere con le credenziali di amministratore per l'app Dynamics 365 per installare la soluzione.
-
-L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
+Potrebbe essere necessario accedere con le credenziali di amministratore per l'app Dynamics 365 per installare la soluzione. L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
 
 ## <a name="configure-the-customer-card-add-in"></a>Configurare il componente aggiuntivo Scheda cliente
 
@@ -50,7 +51,7 @@ L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
 1. Seleziona il collegamento **Nome visualizzato** per la soluzione **Componente aggiuntivo Scheda cliente di Dynamics 365 Customer Insights (anteprima)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Selezionare il nome visualizzato.](media/select-display-name.png "Selezionare il nome visualizzato")
+   > ![Selezionare il nome visualizzato.](media/select-display-name.png "Seleziona il nome del display.")
 
 1. Seleziona **Accedi** e immetti le credenziali per l'account amministratore che utilizzi per configurare Customer Insights.
 
@@ -59,12 +60,12 @@ L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
 
 1. Seleziona l'ambiente di Customer Insights da cui vuoi recuperare i dati.
 
-1. Definisci la mappatura dei campi ai record nell'app Dynamics 365. A seconda dei dati in Customer Insights, puoi scegliere di mappare le seguenti opzioni:
+1. Definisci la mappatura dei campi ai record nell'app Dynamics 365. A seconda dei vostri dati in Customer Insights, potete scegliere di mappare le seguenti opzioni:
    - Per eseguire il mapping con un contatto, seleziona il campo nell'entità Cliente che corrisponde all'ID dell'entità di contatto.
    - Per eseguire il mapping con un account, seleziona il campo nell'entità Cliente che corrisponde all'ID dell'entità account.
 
    > [!div class="mx-imgBorder"]
-   > ![Campo ID contatto.](media/contact-id-field.png "Campo ID contatto")
+   > ![Campo ID contatto.](media/contact-id-field.png "Campo ID del contatto.")
 
 1. Seleziona **Salva configurazione** per salvare le impostazioni.
 
@@ -73,21 +74,23 @@ L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
 1. Assegna il ruolo **Addetto personalizzazione scheda Customer Insights** agli utenti che personalizzeranno il contenuto mostrato sulla scheda per l'intera organizzazione.
 
 ## <a name="add-customer-card-controls-to-forms"></a>Aggiungere i controlli Scheda cliente ai moduli
-  
+
+A seconda del tuo scenario, puoi scegliere di aggiungere controlli al modulo **Contatto** o al modulo **Account** . Se il tuo ambiente di approfondimenti sul pubblico è per gli account aziendali, ti consigliamo di aggiungere i controlli al modulo Account. In questo caso, sostituite "contatto" nei passi seguenti con "account"
+
 1. Per aggiungere i controlli della scheda cliente al modulo Contatto, vai a **Impostazioni** > **Personalizzazioni** in Dynamics 365.
 
 1. Selezionare **Personalizza il sistema**.
 
-1. Accedi all'entità **Contatto**, espandila e quindi seleziona **Moduli**.
+1. Naviga fino all'entità **Contatto** , espandila e seleziona **Moduli**.
 
-1. Seleziona il modulo del contatto a cui vuoi aggiungere i controlli Scheda cliente.
+1. Seleziona il modulo di contatto a cui vuoi aggiungere i controlli della scheda cliente.
 
     > [!div class="mx-imgBorder"]
-    > ![Selezionare il modulo Contatto.](media/contact-active-forms.png "Selezionare il modulo Contatto")
+    > ![Selezionare il modulo Contatto.](media/contact-active-forms.png "Selezionare Modulo di contatto.")
 
 1. Per aggiungere un controllo, nell'editor di moduli trascina qualsiasi campo da **Esplora campi** nel punto in cui vuoi che il controllo venga visualizzato.
 
-1. Seleziona il campo sul modulo che hai appena aggiunto e scegli **Cambia proprietà**.
+1. Seleziona il campo del modulo che hai appena aggiunto e seleziona **Modifica proprietà**.
 
 1. Vai alla scheda **Controlli** e seleziona **Aggiungi controllo**. Scegli uno dei controlli personalizzati disponibili e seleziona **Aggiungi**.
 
@@ -102,11 +105,12 @@ L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
 1. Per personalizzare quello che vuoi visualizzare nel controllo personalizzato, seleziona il pulsante di modifica nell'angolo superiore destro.
 
 ## <a name="upgrade-customer-card-add-in"></a>Aggiornare il componente aggiuntivo Scheda cliente
-Il componente aggiuntivo Scheda cliente non si aggiorna automaticamente. Per eseguire l'aggiornamento alla versione più recente, segui questa procedura nell'app Dynamics 365 in cui è installato il componente aggiuntivo.
+
+Il componente aggiuntivo Scheda cliente non si aggiorna automaticamente. Per aggiornare all'ultima versione, segui questi passi nell'applicazione Dynamics 365 che ha il componente aggiuntivo installato.
 
 1. Nell'app Dynamics 365, vai a **Impostazioni** > **Personalizzazione** e seleziona **Soluzioni**.
 
-1. Nella tabella dei componenti aggiuntivi cerca **CustomerInsightsCustomerCard** e seleziona la riga.
+1. Nella tabella dei componenti aggiuntivi, cercate **CustomerInsightsCustomerCard** e selezionate la riga.
 
 1. Seleziona **Applica aggiornamento soluzione** nella barra delle azioni.
 

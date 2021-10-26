@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465210"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606089"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novità della funzionalità Informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Gli aggiornamenti vengono implementati in base all'area geografica. Quindi alcun
 
 > [!TIP]
 > Per inviare e votare funzionalità richieste e suggerimenti di prodotto, vai al [portale Ideas dell'applicazione Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Aggiornamenti di settembre 2021
+
+Gli aggiornamenti di settembre 2021 includono nuove funzionalità, aggiornamenti delle prestazioni e correzioni di bug.
+
+### <a name="activities"></a>Attività
+
+- **Miglioramenti alla timeline** delle attività Abbiamo esteso i filtri per la timeline delle attività sui profili dei clienti. Inoltre, è possibile utilizzare il nuovo pannello dei filtri per filtrare per tipo di attività e per data. Le date possono essere filtrate usando diverse condizioni. Per maggiori informazioni, vedi [Visualizzare le cronologie delle attività sui profili dei clienti](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Relazioni
+
+- **Supporto delle relazioni multi** -hop Usate le relazioni multi-hop quando configurate le attività e definite le relazioni tra le entità. Le relazioni multi-hop utilizzano un'entità intermedia per collegare due entità. Quando si configura un'attività, si può usare una relazione multi-hop per collegare l'entità attività a un'entità intermedia e poi a un'entità cliente. È possibile combinare relazioni multi-hop con relazioni multi-path. Per maggiori informazioni, vedere [Relazione multi-hop](relationships.md#multi-hop-relationship).
+
+- **Supporto per le relazioni** multipercorso Usa le relazioni multipercorso quando configuri le attività e definisci le relazioni tra le entità. Le relazioni multipercorso mettono in relazione un'entità sorgente con più di un'entità. Quando si configura un'attività, si può usare una relazione multipercorso per collegare l'entità attività a più di un'entità cliente. È possibile combinare relazioni multi-path con relazioni multi-hop. Per maggiori informazioni, vedere [Relazione multipercorso](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Aggiornamenti di agosto 2021
 
@@ -55,7 +69,7 @@ Gli aggiornamenti di giugno 2021 includono diverse funzionalità, aggiornamenti 
 ### <a name="ux-updates"></a>Aggiornamenti UX 
 
 - **Pagina dei clienti nuova e migliorata e pagina dei dettagli del profilo** Abbiamo riprogettato la pagina Clienti e le pagine dei dettagli dei profili per una migliore esperienza utente e prestazioni migliori. Queste modifiche ti consentono di visualizzare, ordinare, cercare e filtrare i clienti. I filtri sono ora rappresentati nell'URL per condividere i risultati della ricerca con altri utenti senza problemi. I risultati della ricerca possono anche essere salvati come segmento.    
-  La pagina dei dettagli per i profili dei clienti ora raggruppa i dati in varie sottosezioni come dati demografici, ID e altri attributi dei profili per una migliore leggibilità. Altre sezioni nella pagina dei dettagli dei profili sono ora più interattive. Ad esempio, la sezione delle attività ora consente il filtraggio e l'ordinamento.
+  La pagina dei dettagli per i profili dei clienti ora raggruppa i dati in varie sottosezioni come dati demografici, ID e altri attributi dei profili per una migliore leggibilità. Altre sezioni nella pagina dei dettagli dei profili sono ora più interattive. Per esempio, la sezione delle attività ora permette di filtrare e ordinare.
 
 
 ## <a name="may-2021-updates"></a>Aggiornamenti di maggio 2021

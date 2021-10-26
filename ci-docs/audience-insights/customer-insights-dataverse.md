@@ -1,7 +1,7 @@
 ---
 title: Dati di Customer Insights in Microsoft Dataverse
 description: Utilizza le entità di Customer Insights come tabelle in Microsoft Dataverse.
-ms.date: 06/15/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032901"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645223"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Utilizzare i dati di Customer Insights in Microsoft Dataverse
 
@@ -24,11 +24,7 @@ Customer Insights offre la possibilità di rendere disponibili entità di output
 
 **Organizzazioni con ambienti Dataverse esistenti**
 
-Le organizzazioni che già utilizzano Dataverse possono [usare uno dei loro ambienti Dataverse esistenti](get-started-paid.md) quando un amministratore imposta le informazioni dettagliate. Fornendo l'URL all'ambiente Dataverse, si collega al loro nuovo ambiente di informazioni dettagliate. Per garantire le migliori prestazioni possibili, gli ambienti Customer Insights e Dataverse devono essere ospitati nella stessa regione.
-
-Per allegare un ambiente Dataverse, espandere le **Impostazioni avanzate** durante la creazione dell'ambiente di informazioni dettagliate. Fornire l'URL dell'ambiente **Microsoft Dataverse** e selezionare la casella di controllo per **Abilita la condivisione dei dati**.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
+Le organizzazioni che già utilizzano Dataverse possono [usare uno dei loro ambienti Dataverse esistenti](create-environment.md) quando un amministratore imposta le informazioni dettagliate. Fornendo l'URL all'ambiente Dataverse, si collega al loro nuovo ambiente di informazioni dettagliate. Per garantire le migliori prestazioni possibili, gli ambienti Customer Insights e Dataverse devono essere ospitati nella stessa regione.
 
 **Nuova organizzazione**
 

@@ -1,7 +1,7 @@
 ---
 title: Impegni cliente
 description: Definisci le attività dei clienti e visualizzale in una sequenza temporale sui profili dei clienti.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494416"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617974"
 ---
 # <a name="customer-activities"></a>Impegni cliente
 
@@ -24,8 +24,7 @@ Combina le attività dei clienti da [varie origini di dati](data-sources.md) in 
 
 Le tue origini dati possono includere entità con dati transazionali e dati di impegni provenienti da più origini dati. Identifica queste entità e seleziona gli impegni che vuoi visualizzare nella sequenza temporale del cliente. Scegli l'entità che include il tuo impegno o i tuoi impegni di destinazione.
 
-> [!NOTE]
-> Un'entità deve avere almeno un attributo di tipo **Data** per essere incluso in una sequenza temporale del cliente e non puoi aggiungere entità senza campi **Data**. Il controllo **Aggiungi impegno** è disabilitato se non viene trovata tale entità.
+Un'entità deve avere almeno un attributo di tipo **Data** per essere incluso in una sequenza temporale del cliente e non puoi aggiungere entità senza campi **Data**. Il controllo **Aggiungi impegno** è disabilitato se non viene trovata tale entità.
 
 1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Impegni**.
 
@@ -41,13 +40,16 @@ Le tue origini dati possono includere entità con dati transazionali e dati di i
 
 1. Seleziona **Avanti** per procedere al passaggio successivo.
 
-1. Nel passaggio **Relazione**, configura i dettagli per connettere i dati dell'impegno al cliente corrispondente. Questo passaggio visualizza la connessione tra le entità.  
+1. Nel passo **Relazione** , configura i dettagli per collegare i dati della tua attività al suo record di cliente corrispondente. Questo passaggio visualizza la connessione tra le entità.  
 
    - **Primo**: Campo esterno nell'entità dell'impegno che verrà utilizzato per stabilire una relazione con un'altra entità.
    - **Secondo**: Entità cliente di origine corrispondente con la quale l'entità impegno sarà in relazione. È possibile fare riferimento solo alle entità del cliente di origine utilizzate nel processo di unificazione dei dati.
    - **Terzo**: Se esiste già una relazione tra questa entità impegno e l'entità cliente di origine selezionata, il nome della relazione sarà in modalità di sola lettura. Se non esiste tale relazione, verrà creata una nuova relazione con il nome fornito in questa casella.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definisci la relazione dell'entità.":::
+
+   > [!TIP]
+   > In ambienti B2B, è possibile selezionare tra entità di conto e altre entità. Se si seleziona un'entità di conto, il percorso della relazione viene impostato automaticamente. Per altre entità, dovete definire il percorso della relazione su una o più entità intermedie fino a raggiungere un'entità conto.
 
 1. Seleziona **Avanti** per procedere al passaggio successivo. 
 
@@ -95,5 +97,34 @@ Le seguenti azioni sono disponibili quando selezioni un impegno.
 - **Rinomina**: apre una finestra di dialogo in cui puoi inserire un nome diverso per l'attività selezionata. Seleziona **Salva** per applicare le modifiche.
 
 - **Elimina**: Apre una finestra di dialogo per confermare l'eliminazione dell'impegno selezionato. È inoltre possibile eliminare più di un impegno contemporaneamente selezionando gli impegni e quindi l'icona di eliminazione. Per confermare l'eliminazione seleziona **Elimina**.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Visualizzare la cronologia delle attività sui profili dei clienti
+
+Dopo aver configurato le attività del cliente, seleziona **Mostra in cronologia attività** nella configurazione delle attività per trovare tutte le attività del tuo cliente sul suo profilo cliente.
+
+Per aprire la linea temporale di un cliente, vai a **Clienti** e scegli il profilo del cliente che vuoi visualizzare.
+
+Se un cliente ha partecipato a un'attività che hai configurato, lo troverai nella sezione **Cronologia delle attività** .
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Visualizzare le attività configurate nei profili dei clienti.":::
+
+Ci sono diversi modi per filtrare le attività nella timeline delle attività:
+
+- Puoi selezionare una o molte delle icone di attività per raffinare i tuoi risultati e includere solo il tipo o i tipi selezionati.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrare le attività per tipo usando le icone.":::
+
+- Puoi selezionare **Filtro** per aprire un pannello di filtri per configurare i tuoi filtri della linea temporale.
+
+   1. È possibile filtrare per *TipoAttività* e *Data*
+   1. Seleziona **Applica** per utilizzare i filtri nella timeline dell'attività.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Usa il pannello dei filtri per configurare le condizioni del filtro.":::
+
+Per rimuovere i filtri, seleziona la **x** accanto ad ogni filtro applicato alla linea temporale o seleziona **Cancella filtri**.
+
+
+> [!NOTE]
+> I filtri di attività vengono rimossi quando si lascia un profilo cliente. Dovete applicarli ogni volta che aprite un profilo cliente.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

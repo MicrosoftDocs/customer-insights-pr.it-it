@@ -1,7 +1,7 @@
 ---
 title: Esportare i dati di Customer Insights in RollWorks
 description: Scopri come configurare la connessione ed esportare in RollWorks.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d8ce4d867835dcb7cf56c6fffff4e25d1f5c109af0e401fc0eb8b3a7427c1de4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f8f6a79db9cb4bb109c03a464d9f8c7f3b862ad5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034595"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617449"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Esportare segmenti in RollWorks (anteprima)
 
@@ -28,11 +28,11 @@ Esporta segmenti di profili cliente unificati in RollWorks e utilizzali per la p
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-- È possibile esportare fino a 250.000 profili per esportazione in RollWorks.
-- Non è possibile esportare segmenti con meno di 100 profili in RollWorks. 
+- Puoi esportare fino a 250'000 profili di clienti in ogni esportazione a RollWorks.
+- Non puoi esportare segmenti con meno di 100 profili di clienti in RollWorks. 
 - L'esportazione in RollWorks è limitata ai segmenti.
-- L'esportazione di un massimo di 250.000 profili in RollWorks può richiedere fino a 10 minuti per essere completata. 
-- Il numero di profili che puoi esportare in RollWorks dipende ed è limitato dal tuo contratto con RollWorks.
+- Esportare fino a 250'000 profili di clienti in RollWorks può richiedere fino a 10 minuti per essere completato. 
+- Il numero di profili di clienti che puoi esportare a RollWorks dipende e limitato dal tuo contratto con RollWorks.
 
 ## <a name="set-up-connection-to-rollworks"></a>Configurare la connessione a RollWorks
 
@@ -66,7 +66,7 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Inserisci il tuo **ID inserzionista RollWorks** [RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. Nella sezione **Corrispondenza dati** nel campo **E-mail**, seleziona il campo nel tuo profilo cliente unificato che rappresenta l'indirizzo e-mail di un cliente. È necessario per esportare i segmenti in RollWorks.
+1. Nella sezione **Corrispondenza dati** , nel campo **Email** , seleziona il campo che rappresenta l'indirizzo e-mail del cliente. È necessario per esportare i segmenti in RollWorks.
 
 1. Seleziona i segmenti da esportare. Seleziona un segmento con almeno 100 membri. Non puoi esportare segmenti più piccoli. Inoltre, la dimensione massima di un segmento da esportare è di 250.000 membri per esportazione. 
 

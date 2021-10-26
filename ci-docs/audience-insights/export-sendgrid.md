@@ -1,7 +1,7 @@
 ---
 title: Esportare dati di Customer Insights in SendGrid
 description: Scopri come configurare la connessione ed esportare in SendGrid.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 03df2ab5fce1da1f4f662e1975533f2b538b47dbdd5cf96aae4f1007163e3729
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: da3da5ea68d178deab3b9ab31dd810dee610f607
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036106"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617836"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Esportare segmenti in SendGrid (anteprima)
 
@@ -29,10 +29,10 @@ Esporta segmenti di profili cliente unificati nell'elenco di contatti SendGrid e
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-- Fino a 100.000 profili in totale a SendGrid.
+- Fino a 100'000 profili di clienti in totale a SendGrid.
 - L'esportazione in SendGrid è limitata ai segmenti.
-- L'esportazione di un massimo di 100.000 profili in SendGrid può richiedere alcune ore per essere completata. 
-- Il numero di profili che puoi esportare in SendGrid dipende ed è limitato dal tuo contratto con SendGrid.
+- Esportare fino a 100'000 profili di clienti su SendGrid può richiedere fino a qualche ora per essere completato. 
+- Il numero di profili di clienti che puoi esportare su SendGrid dipende dal tuo contratto con SendGrid ed è limitato.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Configurare la connessione a SendGrid
 
@@ -66,7 +66,7 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Immetti l'**[ID elenco SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
 
-1. Nella sezione **Corrispondenza dati** nel campo **E-mail**, seleziona il campo nel tuo profilo cliente unificato che rappresenta l'indirizzo e-mail di un cliente. Ripeti gli stessi passaggi per altri campi facoltativi come **Nome**, **Cognome**, **Paese/area geografica**, **Stato**, **Città** e **Codice postale**.
+1. Nella sezione **Corrispondenza dati** , nel campo **Email** , seleziona il campo che rappresenta l'indirizzo e-mail del cliente. Ripeti gli stessi passaggi per altri campi facoltativi come **Nome**, **Cognome**, **Paese/area geografica**, **Stato**, **Città** e **Codice postale**.
 
 1. Seleziona i segmenti da esportare. È fortemente **consigliato di non esportare più di 100.000 profili cliente in totale** in SendGrid. 
 

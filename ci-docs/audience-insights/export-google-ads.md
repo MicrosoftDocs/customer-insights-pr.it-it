@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558977"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617928"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Esportare segmenti in Google Ads (anteprima)
 
@@ -35,9 +35,9 @@ Esporta segmenti di profili cliente unificati in un elenco di gruppi di destinat
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-- Fino a 1 milione di profili per esportazione in Google Ads.
+- Fino a 1 milione di profili di clienti per esportazione in Google Ads.
 - L'esportazione in Google Ads è limitata ai segmenti.
-- L'esportazione di segmenti con un totale di 1 milione di profili può richiedere fino a 5 minuti a causa delle limitazioni sul lato provider. 
+- L'esportazione di segmenti con un totale di 1 milione di profili di clienti può richiedere fino a 5 minuti a causa delle limitazioni sul lato del fornitore. 
 - La corrispondenza in Google Ads può richiedere fino a 48 ore.
 
 ## <a name="set-up-connection-to-google-ads"></a>Configurare la connessione a Google Ads
@@ -74,7 +74,7 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Immetti l'**[ID destinatario Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** e seleziona **Connetti** per inizializzare la connessione a Google Ads.
 
-1. Nella sezione **Corrispondenza dati** nel campo **E-mail**, seleziona il campo nel tuo profilo cliente unificato che rappresenta l'indirizzo e-mail di un cliente.
+1. Nella sezione **Corrispondenza dati** , nel campo **Email** , seleziona il campo che rappresenta l'indirizzo e-mail del cliente.
 
 1. Seleziona i segmenti da esportare. Puoi esportare in totale fino a 1 milione di profili cliente in Google Ads.
 

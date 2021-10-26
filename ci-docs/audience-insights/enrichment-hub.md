@@ -1,7 +1,7 @@
 ---
 title: Arricchire profili cliente unificati
 description: Usa specifiche funzionalità per arricchire i tuoi dati cliente.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469991"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617560"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Arricchimento per i profili cliente (anteprima)
 
@@ -27,16 +27,26 @@ In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Arricc
 
 Devi disporre delle autorizzazioni come Collaboratore o Amministratore per creare o modificare gli arricchimenti. Per ulteriori informazioni, vedi [Autorizzazioni](permissions.md).
 
-Nella scheda **Scopri**, troverai i seguenti arricchimenti:
+Nella scheda **Scopri** , troverai tutte le opzioni di arricchimento supportate.
 
-- [Mappe di Azure](enrichment-azure-maps.md) fornito da Microsoft
+# <a name="individual-customers-b2c"></a>[Clienti individuali (B2C)](#tab/b2c)
+
 - [Marchi](enrichment-microsoft.md) forniti da Microsoft
 - [Interessi](enrichment-microsoft.md) forniti da Microsoft
-- [Indirizzi avanzati](enrichment-enhanced-addresses.md) forniti da Microsoft
-- [Dati aziendali](enrichment-leadspace.md) forniti da Leadspace
+- [Indirizzi avanzati](enrichment-enhanced-addresses.md) forniti da Microsoft 
 - [Dati demografici](enrichment-experian.md) forniti da Experian
-- [Dati di localizzazione](enrichment-here.md) forniti da HERE Technologies
-- [Personalizzare i dati](enrichment-SFTP-custom-import.md) mediante Secure File Transfer Protocol (SFTP)
+- [Personalizzare i dati](enrichment-SFTP-custom-import.md) mediante Secure File Transfer Protocol (SFTP) 
+- [Mappe di Azure](enrichment-azure-maps.md) fornito da Microsoft
+
+# <a name="business-accounts-b2b"></a>[Conti commerciali (B2B)](#tab/b2b)
+
+- [Dati aziendali](enrichment-leadspace.md) forniti da Leadspace
+- [Indirizzi avanzati](enrichment-enhanced-addresses.md) forniti da Microsoft 
+- [Dati di localizzazione](enrichment-here.md) forniti da HERE Technologies 
+- [Personalizzare i dati](enrichment-SFTP-custom-import.md) mediante Secure File Transfer Protocol (SFTP) 
+- [Mappe di Azure](enrichment-azure-maps.md) fornito da Microsoft
+
+---
 
 Nella scheda **I miei arricchimenti**, puoi vedere gli arricchimenti che hai configurato e modificarne le proprietà.
 
@@ -58,7 +68,7 @@ Esegui o disattiva più arricchimenti contemporaneamente selezionandoli nell'ele
 
 ## <a name="enrichments-and-connections"></a>Arricchimenti e connessioni
 
-Gli arricchimenti di terze parti vengono configurati utilizzando le [connessioni](connections.md), che un amministratore imposta con le credenziali e fornisce il consenso per il trasferimento dei dati. La connessione può essere utilizzata da amministratori e collaboratori per configurare gli arricchimenti.  
+Gli arricchimenti di terze parti vengono configurati utilizzando le [connessioni](connections.md), che un amministratore imposta con le credenziali e fornisce il consenso per il trasferimento dei dati. Le connessioni possono essere utilizzate dagli amministratori e dai collaboratori per configurare gli arricchimenti.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Più arricchimenti dello stesso tipo
 
