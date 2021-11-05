@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645131"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673738"
 ---
 # <a name="manage-environments"></a>Gestisci ambienti
 
@@ -67,7 +67,8 @@ I seguenti dati *non* vengono copiati:
 
 - Profili cliente.
 - Credenziali origine dati. Dovrai fornire le credenziali per ogni origine dati e aggiornare manualmente le origini dati.
-- Origini dati della cartella Common Data Model e Data Lake gestito da Dataverse. Dovrai creare tali origini dati manualmente con lo stesso nome dell'ambiente di origine.
+
+- Origini dati dalla cartella Common Data Model e dal data lake gestito di Dataverse. Dovrai creare tali origini dati manualmente con lo stesso nome dell'ambiente di origine.
 
 Quando copi un ambiente, vedrai un messaggio di conferma che il nuovo ambiente è stato creato. Seleziona **Vai a origini dati** per visualizzare l'elenco delle origini dati.
 

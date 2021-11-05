@@ -1,7 +1,7 @@
 ---
 title: Previsione del churn delle transazioni
 description: Determina se esiste il rischio che un cliente non acquisti più i tuoi prodotti o servizi.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643416"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673050"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Previsione del churn delle transazioni (anteprima)
 
@@ -28,6 +28,32 @@ Per gli ambienti basati su conti commerciali, possiamo prevedere il churn transa
 > Provate il tutorial per una previsione del churn delle transazioni utilizzando dati di esempio: [Previsione di churn delle transazioni (anteprima) guida di esempio](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
+
+# <a name="individual-consumers-b-to-c"></a>[Singoli utenti (da B a C)](#tab/b2c)
+
+- Almeno le [autorizzazioni di Collaboratore](permissions.md) in Customer Insights.
+- Conoscenza dell'azienda per capire cosa significa abbandono per la tua azienda. Supportiamo definizioni di abbandono basate sul tempo, ovvero un cliente è considerato come perso dopo un periodo sena acquisti.
+- Dati su transazioni/acquisti e la relativa cronologia:
+    - Identificatori di transazione per distinguere acquisti/transazioni.
+    - Identificatori di cliente per abbinare le transazioni ai clienti.
+    - Date dell'evento di transazione, che definiscono le date in cui è avvenuta la transazione.
+    - Lo schema dei dati semantici per acquisti/transazioni richiede le seguenti informazioni:
+        - **ID transazione**: Un identificatore unico di un acquisto o di una transazione.
+        - **Data della transazione**: La data dell'acquisto o della transazione.
+        - **Valore della transazione**: L'importo in valuta/valore numerico della transazione/articolo.
+        - (Opzionale) **ID unico del prodotto**: L'ID del prodotto o del servizio acquistato se i tuoi dati sono a livello di voce.
+        - (Opzionale) **Se questa transazione era un ritorno**: Un campo vero/falso che identifica se la transazione era un ritorno o no. Se il **Valore della transazione** è negativo, useremo queste informazioni per dedurre un reso.
+- (Facoltativo) Dati sugli impegni del cliente:
+    - Identificatori di impegni per distinguere gli impegni dello stesso tipo.
+    - Identificativi del cliente per mappare gli impegni ai clienti.
+    - Informazioni sull'impegno contenenti il nome e la data dell'impegno.
+    - Lo schema di dati semantici per gli impegni dei clienti include:
+        - **Chiave primaria:** l'identificatore univoco per un impegno. Ad esempio, una visita al sito Web o un record di utilizzo che mostra che il cliente ha provato un campione del prodotto.
+        - **Timestamp:** la data e l'ora dell'evento identificato dalla chiave primaria.
+        - **Evento:** il nome dell'evento che si desidera utilizzare. Ad esempio, un campo denominato "UserAction" in un negozio di alimentari potrebbe essere un coupon utilizzato dal cliente.
+        - **Dettagli:** informazioni dettagliate sull'evento. Ad esempio, un campo denominato "CouponValue" in un negozio di alimentari potrebbe essere il valore monetario del coupon.
+
+# <a name="business-accounts-b-to-b"></a>[Account aziendali (da B a B)](#tab/b2b)
 
 - Almeno le [autorizzazioni di Collaboratore](permissions.md) in Customer Insights.
 - Conoscenza dell'azienda per capire cosa significa abbandono per la tua azienda. Supportiamo definizioni di abbandono basate sul tempo, ovvero un cliente è considerato come perso dopo un periodo sena acquisti.
@@ -51,7 +77,7 @@ Per gli ambienti basati su conti commerciali, possiamo prevedere il churn transa
         - **Evento:** il nome dell'evento che si desidera utilizzare. Ad esempio, un campo denominato "UserAction" in un negozio di alimentari potrebbe essere un coupon utilizzato dal cliente.
         - **Dettagli:** informazioni dettagliate sull'evento. Ad esempio, un campo denominato "CouponValue" in un negozio di alimentari potrebbe essere il valore monetario del coupon.
 - (Opzionale) Dati sui tuoi clienti:
-    - Questi dati dovrebbero essere solo raramente, e dovrebbero allinearsi verso attributi più statici per garantire che il modello funzioni al meglio.
+    - Questi dati dovrebbero allinearsi rispetto ad attributi più statici per garantire che il modello funzioni al meglio.
     - Lo schema di dati semantici per i dati dei clienti include:
         - **CustomerID:** Un identificatore unico per un cliente.
         - **Data di creazione:** La data in cui il cliente è stato aggiunto inizialmente.
@@ -59,6 +85,9 @@ Per gli ambienti basati su conti commerciali, possiamo prevedere il churn transa
         - **Paese:** Il paese di un cliente.
         - **Industria:** Il tipo di industria di un cliente. Per esempio, un campo chiamato "Industria" in un torrefattore di caffè potrebbe indicare se il cliente era al dettaglio.
         - **Classificazione:** La categorizzazione di un cliente per il tuo business. Per esempio, un campo chiamato "ValueSegment" in una torrefazione di caffè potrebbe essere il livello di cliente basato sulla dimensione del cliente.
+
+---
+
 - Caratteristiche dei dati consigliate:
     - Dati storici sufficienti: dati di transazione per almeno il doppio della finestra temporale selezionata. Preferibilmente, due o tre anni di cronologia delle transazioni. 
     - Acquisti multipli per cliente: idealmente almeno due transazioni per cliente.
@@ -114,6 +143,32 @@ Per gli ambienti basati su conti commerciali, possiamo prevedere il churn transa
 
 1. Selezionare **Avanti**.
 
+# <a name="individual-consumers-b-to-c"></a>[Singoli utenti (da B a C)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Aggiungere altri dati (opzionale)
+
+Configura la relazione dall'entità degli impegni cliente all'entità *Cliente*.
+
+1. Seleziona il campo che identifica il cliente nella tabella degli impegni del cliente. Può essere correlato direttamente all'ID cliente primario dell'entità *Cliente*.
+
+1. Selezionate l'entità che è la vostra entità *Cliente* principale.
+
+1. Immetti un nome che descrive la relazione.
+
+#### <a name="customer-activities"></a>Impegni cliente
+
+1. Facoltativamente, seleziona **Aggiungi dati** in **Impegni cliente**.
+
+1. Seleziona il tipo di attività semantica che contiene i dati che vorresti utilizzare, poi seleziona una o più attività nella sezione **Attività** .
+
+1. Seleziona un tipo di impegno corrispondente al tipo di impegno del cliente che stai configurando. Seleziona **Creare nuovo** e scegli un tipo di impegno disponibile o creane uno.
+
+1. Selezionate **Avanti** e poi **Salva**.
+
+1. Se hai altri impegni dei clienti che desideri includere, ripeti i passaggi precedenti.
+
+# <a name="business-accounts-b-to-b"></a>[Account aziendali (da B a B)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Seleziona il livello di predizione
 
 La maggior parte delle previsioni sono create a livello del cliente. In alcune situazioni, questo potrebbe non essere abbastanza granulare per soddisfare le vostre esigenze aziendali. È possibile utilizzare questa funzione per prevedere il churn per un ramo di un cliente, ad esempio, piuttosto che per il cliente nel suo complesso.
@@ -122,7 +177,7 @@ La maggior parte delle previsioni sono create a livello del cliente. In alcune s
 
 1. Espandi le entità da cui vuoi scegliere il livello secondario, o usa la casella del filtro di ricerca per filtrare le opzioni selezionate.
 
-1. Scegliete l'attributo che volete usare come livello secondario, poi selezionate **Add**
+1. Scegli l'attributo da usare come livello secondario, quindi seleziona **Aggiungi**.
 
 1. Selezionare **Avanti**.
 
@@ -159,7 +214,7 @@ Configura la relazione dall'entità degli impegni cliente all'entità *Cliente*.
 
 1. Selezionare **Avanti**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Fornire un elenco opzionale di conti di riferimento (solo conti aziendali)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Fornisci un elenco facoltativo di account benchmark
 
 Aggiungi una lista dei tuoi clienti aziendali e degli account che vuoi usare come punti di riferimento. Otterrai i [dettagli per questi account di riferimento](#review-a-prediction-status-and-results) , compreso il loro punteggio di churn e le caratteristiche più influenti che hanno influenzato la loro previsione di churn.
 
@@ -168,6 +223,8 @@ Aggiungi una lista dei tuoi clienti aziendali e degli account che vuoi usare com
 1. Scegliere i clienti che fungono da punto di riferimento.
 
 1. Selezionare **Avanti** per continuare.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Impostazione della pianificazione e revisione della configurazione
 
@@ -201,6 +258,25 @@ Aggiungi una lista dei tuoi clienti aziendali e degli account che vuoi usare com
 1. Seleziona i puntini di sospensione verticali accanto alla previsione per cui desideri esaminare i risultati e seleziona **Visualizza**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Controllo Visualizza per visualizzare i risultati di un previsione.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Singoli utenti (da B a C)](#tab/b2c)
+
+1. Esistono tre sezioni principali di dati nella pagina dei risultati:
+   - **Prestazioni del modello di addestramento**: A, B o C sono punteggi possibili. Questo punteggio indica la performance della predizione e può aiutarvi a prendere la decisione di utilizzare i risultati memorizzati nell'entità di output. I punteggi sono determinati in base alle seguenti regole: 
+        - **A** quando il modello ha previsto con precisione almeno il 50% delle previsioni totali e quando la percentuale di previsioni accurate per i clienti che hanno abbandonato è superiore al tasso di riferimento di almeno il 10%.
+            
+        - **B** quando il modello ha previsto con precisione almeno il 50% delle previsioni totali e quando la percentuale di previsioni accurate per i clienti che hanno abbandonato è fino al 10% superiore al tasso di riferimento.
+            
+        - **C** quando il modello ha previsto con precisione meno del 50% delle previsioni totali o quando la percentuale di previsioni accurate per i clienti che hanno abbandonato è inferiore al tasso di riferimento.
+               
+        - **Baseline** prende l'input della finestra temporale di previsione per il modello (per esempio, un anno), e il modello crea diverse frazioni di tempo dividendolo per 2 fino a raggiungere un mese o meno. Utilizza queste frazioni per creare una regola aziendale per i clienti che non hanno effettuato acquisti durante tale periodo di tempo. Questi clienti vengono considerati come persi. La regola di business basata sul tempo con la più alta capacità di prevedere chi può abbandonare viene scelta come modello di riferimento.
+            
+    - **Probabilità di abbandono (numero di clienti)**: Gruppi di clienti basati sul loro rischio previsto di abbandono. Questi dati possono aiutarti in un secondo momento se desideri creare un segmento di clienti con elevato rischio di abbandono. Tali segmenti aiutano a capire dove dovrebbe posizionare il limite per l'appartenenza al segmento.
+       
+    - I **fattori più influenti**: Ci sono molti fattori che vengono presi in considerazione quando si crea la tua previsione. Ciascuno dei fattori ha la sua importanza calcolata per le previsioni aggregate create da un modello. Potete usare questi fattori per aiutare a convalidare i vostri risultati di previsione, o potete usare queste informazioni in seguito per [creare segmenti](segments.md) che potrebbero aiutare a influenzare il rischio di abbandono dei clienti.
+
+
+# <a name="business-accounts-b-to-b"></a>[Account aziendali (da B a B)](#tab/b2b)
 
 1. Esistono tre sezioni principali di dati nella pagina dei risultati:
    - **Prestazioni del modello di addestramento**: A, B o C sono punteggi possibili. Questo punteggio indica la performance della predizione e può aiutarvi a prendere la decisione di utilizzare i risultati memorizzati nell'entità di output. I punteggi sono determinati in base alle seguenti regole: 
@@ -237,6 +313,11 @@ Aggiungi una lista dei tuoi clienti aziendali e degli account che vuoi usare com
        Quando si prevede il churn a livello di account, tutti gli account sono considerati nel derivare i valori medi delle caratteristiche per i segmenti di churn. Per le previsioni di abbandono a livello secondario per ogni conto, la derivazione dei segmenti di abbandono dipende dal livello secondario dell'elemento selezionato nel pannello laterale. Per esempio, se un articolo ha un livello secondario di categoria di prodotto = forniture per ufficio, allora solo gli articoli che hanno forniture per ufficio come categoria di prodotto sono considerati quando si ricavano i valori medi delle caratteristiche per i segmenti di churn. Questa logica viene applicata per assicurare un confronto equo dei valori delle caratteristiche dell'articolo con i valori medi dei segmenti a bassa, media e alta rotazione.
 
        In alcuni casi, il valore medio dei segmenti di churn basso, medio o alto è vuoto o non disponibile perché non ci sono articoli che appartengono ai segmenti di churn corrispondenti in base alla definizione di cui sopra.
+       
+       > [!NOTE]
+       > L'interpretazione della media nelle colonne con valori bassi, medi o alti è diversa per le caratteristiche di categoria come paese o settore. Poiché la nozione del valore di caratteristica "medio" non si applica alle caratteristiche di categoria, i valori in queste colonne sono la proporzione di clienti nei segmenti di abbandono basso, medio o alto che hanno lo stesso valore della caratteristica di categoria rispetto all'articolo selezionato nel pannello laterale.
+
+---
 
 ## <a name="manage-predictions"></a>Gestisci previsioni
 

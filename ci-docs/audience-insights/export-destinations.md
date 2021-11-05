@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623121"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673328"
 ---
 # <a name="exports-preview-overview"></a>Panoramica delle esportazioni (anteprima)
 
@@ -32,14 +32,14 @@ Ci sono due tipi principali di esportazioni:
 
 ### <a name="export-segments"></a>Esportare segmenti
 
-**Esportazione di segmenti in ambienti per conti aziendali (B2B) o clienti individuali (B2C)**  
-La maggior parte delle opzioni di esportazione supportano entrambi i tipi di ambienti. L'esportazione di segmenti in vari sistemi di destinazione ha requisiti specifici. In generale, un membro del segmento, il profilo del cliente, contiene informazioni di contatto. Mentre questo è di solito il caso per i segmenti costruiti su clienti individuali (B2C), non è necessariamente il caso per i segmenti basati su conti aziendali (B2B). 
+**Esportazione di segmenti in ambienti per account aziendali (B2B) o singoli consumatori (B2C)**  
+La maggior parte delle opzioni di esportazione supportano entrambi i tipi di ambienti. L'esportazione di segmenti in vari sistemi di destinazione ha requisiti specifici. In generale, un membro del segmento, il profilo del cliente, contiene informazioni di contatto. Questo è solitamente il caso per i segmenti basati su singoli consumatori (B2C), non necessariamente il caso per i segmenti basati su account aziendali (B2B). 
 
-**Ambienti di esportazione dei segmenti per i conti aziendali (B2B)**  
+**Ambienti di esportazione del segmento per account aziendali (B2B)**  
 - I segmenti nel contesto degli ambienti per i conti aziendali sono costruiti sull'entità del *conto* . Per esportare i segmenti di conto così com'è, il sistema di destinazione deve supportare i segmenti di conto puri. Questo è il caso di [LinkedIn](export-linkedin-ads.md) quando si sceglie l'opzione **azienda** durante la definizione dell'esportazione.
 - Tutti gli altri sistemi di destinazione richiedono campi dall'entità di contatto. Per assicurarsi che i segmenti di account possano recuperare i dati dai contatti correlati, la definizione del tuo segmento deve proiettare gli attributi dell'entità contatto. Scopri di più su come [configurare i segmenti e gli attributi del progetto](segment-builder.md).
 
-**Esportazioni di segmento in ambienti per clienti individuali (B2C)**  
+**Esportazioni di segmenti in ambienti per singoli consumatori (B2C)**  
 - I segmenti nel contesto degli ambienti per i clienti individuali sono costruiti sull'entità *unificata del profilo del cliente* . Ogni segmento che soddisfa i requisiti dei sistemi di destinazione (per esempio, un indirizzo e-mail) può essere esportato.
 
 **Limiti alle esportazioni dei segmenti**  

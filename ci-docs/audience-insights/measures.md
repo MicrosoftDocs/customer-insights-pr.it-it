@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622975"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673470"
 ---
 # <a name="define-and-manage-measures"></a>Definire e gestire misure
 
@@ -28,7 +28,7 @@ Utilizza il generatore di misure per pianificare le attività aziendali eseguend
 
 Questa sezione illustra come creare una nuova misura da zero. È possibile costruire una misura con attributi di dati da entità di dati che hanno una relazione impostata per connettersi con l'entità profilo cliente unificato.
 
-# <a name="individual-customers-b2c"></a>[Clienti individuali (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Singoli utenti (da B a C)](#tab/b2c)
 
 1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Misure**.
 
@@ -92,7 +92,7 @@ Questa sezione illustra come creare una nuova misura da zero. È possibile costr
 
 1. Vai a **Misure** per vedere la misura appena creata nell'elenco.
 
-# <a name="business-accounts-b2b"></a>[Conti commerciali (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Account aziendali (da B a B)](#tab/b2b)
 
 1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Misure**.
 
@@ -164,7 +164,7 @@ Questa sezione illustra come creare una nuova misura da zero. È possibile costr
 
 È possibile utilizzare modelli predefiniti di misure di uso comune per crearli. Descrizioni dettagliate dei modelli e un'esperienza guidata ti aiutano a creare misure efficienti. I modelli si basano sui dati mappati dall'entità *Impegno unificato*. Quindi assicurati di aver configurato [impegni del cliente](activities.md) prima di creare una misura da un modello.
 
-# <a name="individual-customers-b2c"></a>[Clienti individuali (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Singoli utenti (da B a C)](#tab/b2c)
 
 È possibile utilizzare modelli predefiniti di misure di uso comune per crearli. Descrizioni dettagliate dei modelli e un'esperienza guidata ti aiutano a creare misure efficienti. I modelli si basano sui dati mappati dall'entità *Impegno unificato*. Quindi assicurati di aver configurato [impegni del cliente](activities.md) prima di creare una misura da un modello.
 
@@ -212,7 +212,7 @@ La procedura seguente descrive i passaggi per creare una nuova misura utilizzand
 
 1. Ora puoi selezionare **Esegui** per calcolare i risultati della misura. Per perfezionarlo in un secondo momento, seleziona **Salva bozza**.
 
-# <a name="business-accounts-b2b"></a>[Conti commerciali (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Account aziendali (da B a B)](#tab/b2b)
 
 Questa funzione è disponibile solo per le misure create in ambienti con clienti individuali come target primario.
 

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617380"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673838"
 ---
 # <a name="segments-overview"></a>Panoramica dei segmenti
 
@@ -26,7 +26,7 @@ I profili del cliente che corrispondono ai filtri di una definizione di segmento
 
 Un nuovo segmento può essere creato in modi diversi: 
 
-# <a name="individual-customers-b2c"></a>[Clienti individuali (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Singoli utenti (da B a C)](#tab/b2c)
 
 - Segmento complesso con costruttore di segmenti: [Costruire il nostro](segment-builder.md#create-a-new-segment) 
 - Segmenti semplici con un operatore: [segmento veloce](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Un nuovo segmento può essere creato in modi diversi:
 - Suggerimenti basati sull'intelligenza artificiale per misure o attributi: [segmenti suggeriti per migliorare le misure](suggested-segments.md) 
 - Suggerimenti basati sulle attività: [segmenti suggeriti in base all'attività del cliente](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Conti commerciali (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Account aziendali (da B a B)](#tab/b2b)
 
 - Segmento complesso con costruttore di segmenti: [Costruire il nostro](segment-builder.md#create-a-new-segment)
 

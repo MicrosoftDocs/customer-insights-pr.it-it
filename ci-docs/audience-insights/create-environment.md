@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645700"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673396"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Creare un ambiente nelle intuizioni del pubblico
 
@@ -46,7 +46,7 @@ Nel passo **Informazioni di base** , scegli se vuoi creare un ambiente da zero o
 
 Fornisci i seguenti dettagli:
    - **Nome**: il nome dell'ambiente. Questo campo è già compilato se hai copiato da un ambiente esistente, ma è possibile modificarlo.
-   - **Scegli il tuo business**: Scegliete il pubblico principale per il nuovo ambiente. Puoi lavorare con clienti individuali (B2C) o con [conti aziendali](work-with-business-accounts.md) (B2B).
+   - **Scegli la tua attività**: scegli il gruppo di destinatari principale per il nuovo ambiente. Puoi scegliere consumatori singoli (B2C) oppure [account aziendali](work-with-business-accounts.md) (B2B).
    - **Tipo**: scegli se vuoi creare un ambiente di produzione o sandbox. Gli ambienti sandbox non consentono l'aggiornamento pianificato dei dati e sono destinati alla pre-implementazione e al test. Gli ambienti sandbox usano lo stesso pubblico primario dell'ambiente di produzione attualmente selezionato.
    - **Area geografica**: l'area geografica in cui il servizio viene distribuito e ospitato.
 
@@ -66,7 +66,7 @@ Salvando i dati su Azure Data Lake Storage, l'utente accetta che i dati vengano 
 > - Azure Data Lake Storage dalla stessa regione di Azure che hai selezionato quando hai creato l'ambiente.
 > - Azure Data Lake Storage che hanno abilitato lo *spazio dei nomi gerarchico* .
 
-Per l'opzione Azure Data Lake Storage puoi scegliere tra un'opzione basata sulle risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Informazioni dettagliate sul gruppo di destinatari a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Il nome del **contenitore** sarà `customerinsights` e non può essere cambiato.
+Per l'opzione Azure Data Lake Storage puoi scegliere tra un'opzione basata sulle risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connessione a un account Azure Data Lake Storage tramite un'entità servizio di Azure](connect-service-principal.md). Il nome del **contenitore** sarà `customerinsights` e non può essere cambiato.
 
 Quando i processi di sistema come l'ingestione dei dati è completa, il sistema crea le cartelle corrispondenti nell'account di archiviazione che hai specificato. I file di dati e i file *model.json* sono creati e aggiunti alle cartelle in base al nome del processo.
 
@@ -82,8 +82,8 @@ Per utilizzare i [modelli di predizione out-of-box](predictions-overview.md#out-
 
 > [!NOTE]
 > Customer Insights non supporta i seguenti scenari di condivisione dei dati:
-> - Se salvi tutti i dati sul tuo Azure Data Lake Storage, non sarai in grado di abilitare la condivisione dei dati con un Microsoft Dataverse Managed Data Lake.
-> - Se si abilita la condivisione dei dati con un Microsoft Dataverse Managed Data Lake, non sarà possibile [creare valori predetti o mancanti in un'entità](predictions.md).
+> - Se salvi tutti i dati sull'istanza di Azure Data Lake Storage in uso, non sarai in grado di abilitare la condivisione dei dati con un data lake gestito di Dataverse.
+> - Se abiliti la condivisione dei dati con Dataverse, non sarai in grado di [creare valori previsti o mancanti in un'entità](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Passo 4: Finalizzare le impostazioni
 
@@ -93,10 +93,10 @@ Potete anche cambiare la maggior parte delle impostazioni in seguito. Per ulteri
 
 ## <a name="work-with-your-new-environment"></a>Lavora con il tuo nuovo ambiente
 
-Consulta i seguenti articoli per iniziare a configurare Customer Insights. 
+Vedi gli articoli seguenti per iniziare a configurare Customer Insights: 
 
 - [Aggiungi più utenti e assegna i autorizzazioni](permissions.md).
 - [Inserisci le tue origini dati](data-sources.md) ed eseguile attraverso il [processo di unificazione dei dati](data-unification.md) per ottenere i [profili dei clienti unificati](customer-profiles.md).
 - [Arricchisci i profili dei clienti unificati](enrichment-hub.md) o [esegui modelli predittivi](predictions-overview.md).
-- [Creare segmenti](segments.md) per raggruppare i clienti e [misurare](measures.md) la revisione dei KPI.
+- [Creare segmenti](segments.md) per raggruppare clienti e [misure](measures.md) per esaminare gli indicatori KPI.
 - Impostate[connessioni](connections.md) ed [esportazioni](export-destinations.md) per elaborare sottoinsiemi dei vostri dati in altre applicazioni.

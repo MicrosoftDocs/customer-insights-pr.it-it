@@ -1,7 +1,7 @@
 ---
 title: Iniziare con i conti aziendali come target primario
 description: Imparare a conoscere i conti aziendali come target primario Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644993"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673692"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Lavorare con gli account aziendali negli approfondimenti sul pubblico
 
-La funzionalità di approfondimenti sul pubblico in Dynamics 365 Customer Insights vi permette di configurare il vostro ambiente per diversi target primari: clienti individuali (B2C) e account aziendali (B2B). Negli scenari B2C, i dati sono incentrati sugli individui. Per il B2B, i target principali sono gli account - organizzazioni o aziende - e i contatti. Questo articolo vi aiuta a iniziare con un ambiente per i conti aziendali. Elenca le differenze per le aree di funzionalità in approfondimenti sul pubblico, a seconda del focus del tuo ambiente. Per maggiori informazioni sulle differenze, rivedete i documenti delle aree di funzione. 
+La funzionalità di informazioni dettagliate sul gruppo di destinatari presente in Dynamics 365 Customer Insights consente di configurare il tuo ambiente per diversi segmenti di gruppi di destinatari principali: singoli consumatori (B2C) e account aziendali (B2B). Negli scenari B2C, i dati sono incentrati sugli individui. Per gli scenari B2B, i destinatari principali sono account, ovvero organizzazioni o aziende, e contatti. Questo articolo vi aiuta a iniziare con un ambiente per i conti aziendali. Elenca le differenze per le aree di funzionalità in approfondimenti sul pubblico, a seconda del focus del tuo ambiente. Per maggiori informazioni sulle differenze, rivedete i documenti delle aree di funzione. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Creare un ambiente per i conti aziendali
 
@@ -32,7 +32,7 @@ Dopo aver unificato i dati, [specificate le gerarchie dei conti](relationships.m
 
 Se la tua organizzazione mantiene ambienti per clienti individuali e account aziendali, puoi usare il selettore nel pannello di sinistra per scegliere il pubblico di destinazione principale.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Switcher per cambiare il target primario tra clienti individuali e account aziendali.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Switcher per cambiare il target primario tra clienti individuali e account aziendali.":::
 
 ## <a name="supported-feature-areas"></a>Aree di funzioni supportate
 

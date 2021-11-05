@@ -1,7 +1,7 @@
 ---
 title: Creare segmenti con il generatore di segmenti
 description: Crea segmenti di clienti per raggrupparli in base a vari attributi.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623034"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673555"
 ---
 # <a name="create-segments"></a>Creare segmenti
 
@@ -23,6 +23,7 @@ Definisci filtri complessi per all'entità cliente unificata e le sue entità co
 > [!TIP]
 > - I segmenti rapidi sono supportati solo in ambienti per **clienti individuali**.    
 > - I segmenti basati su **clienti individuali** includono automaticamente le informazioni di contatto disponibili per i membri del segmento. Negli ambienti per la **contabilità aziendale**, i segmenti sono basati su conti (società o filiali). Per includere le informazioni di contatto in un segmento, usa la funzionalità degli **attributi del progetto** nel costruttore del segmento.
+>    - Verifica che le fonti dei dati di contatto siano [mappate semanticamente all'entità ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Generatore di segmenti
 
@@ -52,7 +53,7 @@ L'esempio precedente illustra la capacità di segmentazione. È stato definito u
 
 Un nuovo segmento può essere creato in modi diversi. Questa sezione descrive come creare il tuo segmento da zero. Puoi anche creare un *segmento veloce* basato su entità esistenti o utilizzare i modelli apprendimento automatico per ottenere *segmenti suggeriti*. Per maggiori informazioni, vai a [Panoramica dei segmenti](segments.md).
 
-Durante la creazione di un segmento, puoi salvare una bozza. Nella fase di bozza, un segmento viene salvato come segmento inattivo. Quando hai completato la configurazione del segmento, eseguilo per attivare il segmento. In alternativa, puoi ***Attivare** _ un segmento dalla pagina _Tutti i *segmenti**.
+Durante la creazione di un segmento, puoi salvare una bozza. Nella fase di bozza, un segmento viene salvato come segmento inattivo. Quando hai completato la configurazione del segmento, eseguilo per attivare il segmento. Puoi anche usare l'opzione **Attivare** per attivare un segmento nella pagina **Tutti i segmenti**.
 
 1. Vai alla pagina **Segmenti**.
 
@@ -93,10 +94,18 @@ Durante la creazione di un segmento, puoi salvare una bozza. Nella fase di bozza
    - Seleziona uno degli operatori impostati: **Unione**, **Intersecazione** o **Eccezione**.
 
       - **Union** unisce i due gruppi.
-      - **Intersect** sovrappone i due gruppi. Solo i dati che *sono comuni* a entrambi i gruppi vengono mantenuti nel gruppo unificato.
-      - **Ad eccezione di** combina i due gruppi. Solo i dati nel gruppo A che *non sono comuni* ai dati nel gruppo B vengono mantenuti.
+      - **Intersect** sovrappone i due gruppi. Solo i dati *comuni* a entrambi i gruppi rimangono nel gruppo unificato.
+      - **Ad eccezione di** combina i due gruppi. Solo i dati del gruppo A *non comune* ai dati del gruppo B vengono mantenuti.
 
-1. Per impostazione predefinita, i segmenti generano l'entità di output contenente tutti gli attributi dei profili cliente che corrispondono ai filtri definiti. Se un segmento è basato su entità diverse dall'entità *Cliente* puoi aggiungere più attributi da queste entità all'entità di output. Seleziona **Attributi progetto** per scegliere gli attributi che verranno aggiunti all'entità di output.  
+1. Per impostazione predefinita, i segmenti generano l'entità di output contenente tutti gli attributi dei profili cliente che corrispondono ai filtri definiti. Se un segmento è basato su entità diverse dall'entità *Cliente* puoi aggiungere più attributi da queste entità all'entità di output. Seleziona **Attributi progetto** per scegliere gli attributi che verranno aggiunti all'entità di output. 
+
+   > [!IMPORTANT]
+   > Per i segmenti basati su account aziendali, i dettagli di uno o più contatti di ciascun account dall'entità *ContactProfile* deve essere inclusa nel segmento per consentire a tale segmento di essere attivato o esportato in destinazioni che richiedono informazioni di contatto. Per ulteriori informazioni sull'entità *ContactProfile*, vedi [Mappature semantiche](semantic-mappings.md).
+   > Un output di esempio per un segmento basato su account aziendali con attributi previsti dei contatti potrebbe essere simile al seguente: 
+   >
+   > |ID  |Il nome dell'account  |Ricavi  |Nome contatto  | Ruolo contatto|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [CEO, Responsabile approvvigionamenti]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Esempio di attributi proiettati selezionati nel riquadro laterale da aggiungere all'entità di output.":::
   
@@ -107,13 +116,14 @@ Durante la creazione di un segmento, puoi salvare una bozza. Nella fase di bozza
    > - Se l'attributo che volete proiettare è a più di un salto dall'entità *Cliente* , come definito dalla relazione, questo attributo dovrebbe essere usato in ogni regola della query di segmento che state costruendo. 
    > - Se l'attributo che si vuole proiettare è a un solo salto dall'entità *Cliente* , questo attributo non ha bisogno di essere presente in ogni regola della query di segmento che si sta costruendo. 
    > - Gli **attributi proiettati** sono presi in considerazione quando si usano gli operatori di set.
-   > - Per i segmenti basati su conti commerciali, i dettagli di uno o più contatti di ogni conto devono essere inclusi nel segmento per permettere che il segmento sia attivato o esportato verso destinazioni che richiedono informazioni di contatto.
 
 1. Prima di salvare ed eseguire il segmento, seleziona **Modifica dettagli** accanto al nome del segmento. Fornisci un nome per il tuo segmento e aggiorna il **nome dell'entità Output** suggerito per il segmento. Puoi anche aggiungere una descrizione al segmento.
 
 1. Seleziona **Esegui** per salvare il segmento, attivarlo e iniziare ad elaborare il tuo segmento in base a tutte le regole e condizioni. Altrimenti, sarà salvato come un segmento inattivo.
-
+   
 1. Seleziona **Torna a Segmenti** per tornare alla pagina **Segmenti**.
+
+1. Per impostazione predefinita, il segmento viene creato come segmento dinamico. Ciò significa che il segmento viene aggiornato durante gli aggiornamenti del sistema. Per [interrompere l'aggiornamento automatico](segments.md#manage-existing-segments), seleziona l'opzione **Rendi statico**. I segmenti statici possono essere [aggiornati manualmente](segments.md#refresh-segments) in qualsiasi momento.
 
 > [!TIP]
 > - Il generatore di segmenti non suggerirà valori validi dalle entità durante l'impostazione degli operatori per le condizioni. Puoi andare a **Dati** > **Entità** e scaricare i dati dell'entità per vedere quali valori sono disponibili.

@@ -1,7 +1,7 @@
 ---
 title: Configurazione del sistema in Audience Insight
 description: Informazioni sulle impostazioni di sistema nella funzionalità Informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035914"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651845"
 ---
 # <a name="system-configuration"></a>Configurazione di sistema
 
@@ -23,10 +23,10 @@ La pagina **Sistema** include le seguenti schede:
 - [Pianificazione](#schedule-tab)
 - [Utilizzo API](#api-usage-tab)
 - [Informazioni su](#about-tab)
-- [Generali](#general-tab)
+- [GeneralE](#general-tab)
+- [Sicurezza](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Pagina Sistema.](media/system-tabs.png "Pagina Sistema")
+:::image type="content" source="media/system-tabs.png" alt-text="Schede Impostazioni nella pagina del sistema.":::
 
 ## <a name="status-tab"></a>Scheda Stato
 
@@ -84,9 +84,15 @@ La scheda **Informazioni** contiene il **nome visualizzato** della tua organizza
 
 ## <a name="general-tab"></a>Scheda Generale
 
-Ci sono due opzioni nella scheda **Generale**, **Lingua** e **Formato Paese/area geografica**.
+È possibile modificare la lingua e il formato del paese/area geografica nella scheda **Generale**.
 
-L'app [supporta varie lingue](supported-languages.md). Per cambiare la lingua preferita, seleziona una **lingua** dal menu a discesa.
+Customer Insights [supporta un certo numero di lingue](/dynamics365/get-started/availability). L'app utilizza la preferenza di lingua per visualizzare elementi come il menu, il testo delle etichette e i messaggi di sistema nella lingua preferita.
+
+I dati e le informazioni importati inseriti manualmente non vengono tradotti.
+
+### <a name="update-the-settings"></a>Aggiorna le impostazioni
+
+Per cambiare la lingua preferita, seleziona una **lingua** dal menu a discesa.
 
 Per modificare la formattazione preferita per date, ora e numeri, utilizza il menu a discesa **Formato paese/area geografica**. Un'anteprima della formattazione viene visualizzata in questo campo. Il sistema suggerirà automaticamente una selezione quando scegli una nuova lingua.
 
@@ -105,6 +111,13 @@ Trova i dettagli sull'utilizzo dell'API in tempo reale e guarda quali eventi si 
 
    Le operazioni che utilizzano l'[inserimento di dati in tempo reale](real-time-data-ingestion.md) contengono un pulsante con un simbolo di binocolo per visualizzare l'utilizzo dell'API in tempo reale. Seleziona il pulsante per aprire un riquadro laterale contenente dettagli sull'utilizzo dell'API in tempo reale nell'ambiente corrente.   
    Usa la casella **Raggruppa per** nel riquadro **Utilizzo API in tempo reale** per scegliere come presentare al meglio le tue interazioni in tempo reale. Puoi raggruppare i dati per metodo API, nome qualificato dell'entità (entità inserita), autore creazione (origine dell'evento), risultato (esito positivo o negativo) o codici di errore. I dati sono disponibili come grafico cronologico e come tabella.
+
+## <a name="security-tab"></a>Scheda Sicurezza
+
+La scheda **Sicurezza** consente di collegare e gestire la tua istanza di [Azure Key Vault](/azure/key-vault/general/basic-concepts) all'ambiente.
+Il key vault dedicato può essere utilizzato per mettere in scena e utilizzare i segreti nel confine di conformità di un'organizzazione. Le intuizioni del pubblico possono utilizzare i segreti in Azure Key Vault per impostare le [connessioni](connections.md) a sistemi di terze parti.
+
+Per ulteriori informazioni, vedi [Utilizzo dalla propria istanza di Azure Key Vault](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
