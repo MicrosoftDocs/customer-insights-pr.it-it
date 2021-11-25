@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645451"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673795"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gestire ambienti e aree di lavoro
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645451"
 
 Questo argomento discute come gestire gli spazi di lavoro e gli ambienti una volta che sono già stati creati. 
 
-- Uno *spazio di lavoro* è uno spazio per memorizzare e gestire eventi e rapporti. È qui che puoi visualizzare l'impegno degli utenti in tempo reale. Quando crei un'area di lavoro, selezioni il tipo di dati da inviare all'area di lavoro. Attualmente sono supportati i dati Web e le app mobili. Per maggiori informazioni, vedi [Creare uno spazio di lavoro e aggiungere membri](create-workspace.md).
+- Uno *spazio di lavoro* è uno spazio per memorizzare e gestire eventi e rapporti. È qui che puoi visualizzare l'impegno degli utenti in tempo reale. Quando crei un'area di lavoro, selezioni il tipo di dati da inviare all'area di lavoro. Attualmente sono supportati i dati Web e le app mobili. Per altre informazioni, vedi [Creare una nuova area di lavoro e aggiungere membri](create-workspace.md).
 
 - Un *ambiente* è uno spazio in cui si gestiscono gli spazi di lavoro e le connessioni. Per maggiori informazioni, vedere [Creare un nuovo ambiente](create-new-environment.md).
 
@@ -47,7 +47,7 @@ Puoi gestire più aree di lavoro contemporaneamente in un ambiente. Il tuo [ruol
 
 ### <a name="delete-a-workspace"></a>Eliminare un'area di lavoro
 
-L'eliminazione di un'area di lavoro rimuoverà in modo definitivo tutto il contenuto, i dati, le impostazioni e le autorizzazioni. Questa operazione non può essere annullata.
+L'eliminazione di un'area di lavoro rimuove in modo definitivo tutto il contenuto, i dati, le impostazioni e le autorizzazioni. Questa operazione non può essere annullata.
 
 1. Vai a **Amministratore** > **Area di lavoro** e seleziona **Impostazioni**.
 
@@ -71,19 +71,11 @@ Come amministratore dell'ambiente, puoi accedere a un ambiente dal pannello di n
 
 :::image type="content" source="media/environment-edit.png" alt-text="Interfaccia di amministrazione ambiente.":::
 
-### <a name="rename-an-environment"></a>Rinominare un ambiente
+### <a name="edit-an-environment-name"></a>Modificare un nome di ambiente
 
 1. Vai ad **Amministratore** > **Ambiente** e seleziona **Impostazioni**.
 
 1. Aggiorna il campo **Nome ambiente** e seleziona **Salva** per applicare le modifiche.
-
-### <a name="manage-environment-members"></a>Gestire i membri dell'ambiente
-
-1. Vai ad **Amministratore** > **Ambiente** e seleziona **Membri**.
-
-1. Seleziona **Aggiungi membri** per aggiornare i membri e [assegnare ruoli](user-roles.md). Attualmente è disponibile solo **Amministratore ambiente**.
-
-1. Seleziona **Aggiungi membri** per aggiungerli al tuo ambiente.
 
 ### <a name="delete-an-environment"></a>Eliminare un ambiente
 
@@ -97,6 +89,14 @@ Gli amministratori dell'ambiente possono eliminare gli ambienti. Prima di poter 
 
 1. Seleziona **Eimina** per eliminare l'ambiente definitivamente.
 
+### <a name="manage-environment-members"></a>Gestire i membri dell'ambiente
+
+1. Vai ad **Amministratore** > **Ambiente** e seleziona **Membri**.
+
+1. Seleziona **Aggiungi membri** per aggiornare i membri e [assegnare ruoli](user-roles.md). Attualmente è disponibile solo **Amministratore ambiente**.
+
+1. Seleziona **Aggiungi membri** per aggiungerli al tuo ambiente.
+
 ## <a name="manage-connections"></a>Gestione connessioni
 
 Stabilire connessioni a Informazioni dettagliate sul gruppo di destinatari ti consente di visualizzare report in informazioni dettagliate sull'interazione basati su profili cliente unificati. 
@@ -107,7 +107,6 @@ Per ulteriori informazioni, vedi [Creare un collegamento tra Informazioni dettag
 
 Per proteggere i dati personali dei clienti, puoi eliminare o esportare i dati che consentono l'identificazione dell'utente finale.
 
-Per ulteriori informazioni, vedi [Eliminare ed esportare i dati degli eventi contenenti informazioni personali](delete-export-personal-data.md).
-
+Per ulteriori informazioni, vedi [Eliminare ed esportare i dati degli eventi contenenti informazioni personali](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

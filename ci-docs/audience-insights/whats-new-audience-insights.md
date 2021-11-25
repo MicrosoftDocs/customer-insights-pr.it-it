@@ -1,7 +1,7 @@
 ---
 title: Funzionalità nuove e future
 description: Informazioni su nuove funzionalità, miglioramenti e correzioni di bug.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673845"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753122"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novità della funzionalità Informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights
 
@@ -26,6 +26,41 @@ Gli aggiornamenti vengono implementati in base all'area geografica. Quindi alcun
 
 > [!TIP]
 > Per inviare e votare funzionalità richieste e suggerimenti di prodotto, vai al [portale Ideas dell'applicazione Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Aggiornamenti di ottobre 2021
+
+Gli aggiornamenti di ottobre 2021 includono nuove funzionalità, aggiornamenti delle prestazioni e correzioni di bug.
+
+### <a name="b-to-b"></a>B2B
+
+A partire da ottobre 2021, puoi usare gli account aziendali e i relativi contatti in Customer Insights. In precedenza, l'app era principalmente adatta ai singoli consumatori. Diverse aree di funzionalità sono state aggiornate per supportare scenari B2B oltre a un nuovo tipo di ambiente. Per una panoramica sulle funzionalità B2B supportate, vedi [Lavorare con gli account aziendali nelle informazioni dettagliate sul gruppo di destinatari](work-with-business-accounts.md).
+
+Le sezioni seguenti evidenziano alcune delle aree chiave che sono state adattate per supportare gli account aziendali e i singoli consumatori.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Esportare i segmenti in base agli account aziendali
+
+Tutte le esportazioni di segmenti nelle informazioni dettagliate sul gruppo di destinatari sono disponibili nel contesto degli account aziendali. La maggior parte delle esportazioni di segmenti richiede una configurazione aggiuntiva e [informazioni di contatto previste](segment-builder.md#create-a-new-segment) nei segmenti sottostanti per essere valide per gli account aziendali. Per altre informazioni, vedi [Esportare segmenti](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Usare l'esportazione degli annunci LinkedIn con gli account aziendali
+
+L'esportazione degli annunci LinkedIn è ora disponibile per il targeting di contatti e di azienda nel contesto degli account aziendali. Quando si seleziona il targeting di azienda come obiettivo principale dell'esportazione di LinkedIn, è possibile esportare i segmenti creati negli account aziendali senza la necessità di proiettare le informazioni di contatto. Per altre informazioni, vai alla documentazione relativa all'[esportazione degli annunci LinkedIn](export-linkedin-ads.md) e alla differenza tra [targeting di contatto](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) e [targeting di azienda](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Creare misure basate sugli account aziendali e sulla loro gerarchia
+
+Il generatore di misure consente di creare misure correlate agli account aziendali e, facoltativamente, di usare le informazioni sulla gerarchia. Le informazioni sulla gerarchia vengono usate per eseguire il rollup di un calcolo di misura in un account e in tutti i relativi account secondari. Puoi ad esempio creare misure come i ricavi totali per ogni gruppo di account aziendali identificati dalla gerarchia. Per ulteriori informazioni, vedi [Definire e gestire misure](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Creare segmenti basati sugli account aziendali e sulla loro gerarchia
+
+Il generatore di segmenti consente di creare segmenti di account aziendali che includono facoltativamente informazioni di contatto per ciascun account in un segmento. Se hai configurato la gerarchia di account, puoi usare le informazioni sulla gerarchia di account nella creazione dei segmenti. Per altre informazioni, vedi [Creare un nuovo segmento](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Conservare gli account aziendali con informazioni approfondite sulla tendenza di abbandono
+
+Il modello di previsione dell'abbandono dei clienti supporta ora anche gli account aziendali. Puoi valutare il rischio di abbandono non solo per un account, ma anche per una combinazione di un account e una categoria di prodotto o servizio che effettua acquisti da te. Questa aggiunta consente di capire se è più probabile che un account smetta di effettuare acquisti da te in generale o solo per una determinata categoria di beni o servizi. Per aiutarti ulteriormente a usare questo modello di intelligenza artificiale, elenca anche i motivi che rendono probabile l'abbandono da parte di un account. Per altre informazioni, vedere [Previsione dell'abbandono delle transazioni (anteprima)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Visualizzare i contatti di un account aziendale nella vista Clienti
+
+Se gli account aziendali sono mappati ad account correlati, l'app Customer Insights mostra tali contatti correlati come parte della vista dei dettagli del cliente. Per altre informazioni, vedi [Profili cliente](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>Aggiornamenti di settembre 2021
 

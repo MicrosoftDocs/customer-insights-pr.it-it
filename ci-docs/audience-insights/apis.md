@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033590"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732269"
 ---
 # <a name="work-with-customer-insights-apis"></a>Utilizzare le API di Customer Insights
 
@@ -35,7 +35,7 @@ Questo articolo descrive come accedere alle API di Customer Insights, creare una
  
    L'abilitazione delle API crea una chiave di sottoscrizione primaria e secondaria per l'istanza che viene utilizzata nelle richieste API. Puoi rigenerare le chiavi selezionando **Rigenera primaria** o **Rigenera secondaria** in **Amministratore** > **Autorizzazioni** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Abilitare le API di Customer Insights.":::.
+   :::image type="content" source="media/enable-apis.gif" alt-text="Abilitare le API di Customer Insights.":::
 
 1. Seleziona **Esplora le nostre API** per [provare le API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -135,7 +135,7 @@ Scopri come iniziare a utilizzare le librerie client C# in NuGet.org. Per ulteri
 
 1. Utilizza la [libreria MSAL](/azure/active-directory/develop/msal-overview) per ottenere un `AccessToken` usando la [registrazione dell'app Azure](#create-a-new-app-registration-in-the-azure-portal) esistente.
 
-1. Dopo aver autenticato e acquisito un token, creane uno o utilizza un `HttpClient` esistente con il **DefaultRequestHeaders "Autorizzazione"** aggiuntivo impostato su **<access token> di connessione** e **Ocp-Apim-Subscription-Key** impostato su [**chiave di sottoscrizione** nell'ambiente Customer Insights ](#get-started-trying-the-customer-insights-apis).   
+1. Dopo aver eseguito correttamente l'autenticazione e l'acquisizione di un token, costruisci un nuovo `HttpClient` o utilizzane uno esistente con l'aggiuntiva **"Autorizzazione" DefaultRequestHeaders** impostata su **"Token di accesso" portante** e **Ocp-Apim-Subscription-Key** impostato sulla [**chiave di sottoscrizione** del tuo ambiente Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Reimposta l'intestazione **Autorizzazione** quando appropriato. Ad esempio, alla scadenza del token.
 

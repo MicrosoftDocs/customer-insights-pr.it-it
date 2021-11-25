@@ -1,7 +1,7 @@
 ---
 title: Completare i dati parziali con le previsioni
 description: Utilizza le previsioni per riempire dati cliente incompleti.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,17 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645039"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732411"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Completare i dati parziali con le previsioni
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa dati parziali con le previsioni (deprecata)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Questa funzionalità sarà **deprecata** a partire dal **5 novembre 2021**. Le implementazioni correnti continueranno a funzionare fino alla rimozione della funzionalità, ma non potrai creare nuove integrazioni tramite le istruzioni di seguito.
 
 Le previsioni consentono di creare facilmente valori stimati che possono migliorare la comprensione di un cliente. Nella pagina **Intelligenza** > **Predizioni**, puoi selezionare **Le mie previsioni** per visualizzare le previsioni che hai configurato in altre parti di Informazioni dettagliate sul gruppo di destinatari e consentirti di personalizzarle ulteriormente.
 
@@ -60,6 +61,8 @@ Per maggiori informazioni, vedere [Creare un nuovo ambiente](create-environment.
    > ![Esempio che mostra i valori dei campi mappati alle categorie.](media/intelligence-categorymapping.png "Esempio che mostra i valori dei campi mappati alle categorie")
 
 8. Seleziona **Fatto** e la previsione verrà elaborata. L'elaborazione richiederà del tempo, a seconda delle dimensioni e della complessità dei dati. I risultati saranno disponibili in una nuova entità basata sul **nome dell'entità output** della previsione creata.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Creare una previsione durante la creazione di un segmento
 

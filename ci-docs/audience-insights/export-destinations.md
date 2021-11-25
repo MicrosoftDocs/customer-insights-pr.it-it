@@ -1,7 +1,7 @@
 ---
 title: Esportare i dati da Customer Insights
 description: Gestisci le esportazioni per condividere i dati.
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673328"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732155"
 ---
 # <a name="exports-preview-overview"></a>Panoramica delle esportazioni (anteprima)
 
@@ -97,7 +97,9 @@ Dopo aver creato le destinazioni di esportazione, vengono elencate in **Dati** >
 
 Ogni esportazione configurata ha una pianificazione di aggiornamento. Durante un aggiornamento, il sistema cerca dati nuovi o aggiornati per includerli in un'esportazione. Per impostazione predefinita, le esportazioni vengono eseguite come parte di ogni [aggiornamento del sistema programmato](system.md#schedule-tab). Puoi personalizzare la pianificazione dell'aggiornamento o disattivarla per eseguire le esportazioni manualmente.
 
-Le pianificazioni delle esportazioni dipendono dallo stato dell'ambiente. Se vi sono aggiornamenti in corso su [dipendenze](system.md#refresh-policies) quando dovrebbe iniziare un'esportazione pianificata, il sistema completerà prima gli aggiornamenti, quindi eseguirà l'esportazione. Puoi vedere quando un'esportazione è stata aggiornata l'ultima volta nella colonna **Aggiornato**.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+Le pianificazioni delle esportazioni dipendono dallo stato dell'ambiente. Se vi sono aggiornamenti in corso su [dipendenze](system.md#refresh-processes) quando dovrebbe iniziare un'esportazione pianificata, il sistema completerà prima gli aggiornamenti, quindi eseguirà l'esportazione. Puoi vedere quando un'esportazione è stata aggiornata l'ultima volta nella colonna **Aggiornato**.
 
 ### <a name="schedule-exports"></a>Pianifica esportazioni
 

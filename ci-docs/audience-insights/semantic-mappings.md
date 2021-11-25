@@ -1,7 +1,7 @@
 ---
 title: Mappature semantiche (Anteprima)
 description: Panoramica delle mappature semantiche e come usarle.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622940"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731948"
 ---
 # <a name="semantic-mappings"></a>Mappature semantiche
 
@@ -75,8 +75,7 @@ Le **mappature semantiche sono attualmente abilitate per gli ambienti basati su 
 
 1. Per eseguire una mappatura semantica in un momento successivo, seleziona la mappatura semantica e seleziona **Refresh**.
 
-> [!TIP]
-> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Gestire le mappature semantiche esistenti
 
@@ -91,5 +90,6 @@ Su **Data** > **Mappature semantiche (anteprima)**, puoi visualizzare tutte le t
 - **Rinominare**: Apre una finestra di dialogo dove è possibile inserire un nome diverso per la mappatura semantica selezionata. Seleziona **Salva** per applicare le modifiche.
 
 - **Cancellare**: Apre una finestra di dialogo per confermare l'eliminazione della mappatura semantica selezionata. Puoi anche cancellare più di una mappatura semantica alla volta selezionando le mappature semantiche e l'icona di cancellazione. Per confermare l'eliminazione seleziona **Elimina**.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

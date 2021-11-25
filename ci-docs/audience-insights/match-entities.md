@@ -1,7 +1,7 @@
 ---
 title: Mettere in corrispondenza le entità per l'unificazione dei dati
 description: Abbina le entità per combinare i set di dati e creare profili di clienti unificati.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648213"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732639"
 ---
 # <a name="match-entities"></a>Mettere in corrispondenza le entità
 
@@ -180,10 +180,7 @@ Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Esegui** per avv
 
 Troverai il risultato di un'esecuzione completata, l'entità profilo del cliente unificata, nella pagina **Entità**. La tua entità cliente unificata è chiamata **Clienti** nella sezione **Profili**. La prima esecuzione di una corrispondenza completata crea l'entità *Cliente*. Tutte le esecuzioni di corrispondenza successive espandono quell'entità.
 
-> [!TIP]
-> Dopo aver eseguito il processo di unione, seleziona lo stato del processo per aprire il riquadro **Dettagli attività**. Fornisce una panoramica del tempo di elaborazione, della data dell'ultima elaborazione e di tutti gli errori e gli avvisi associati all'attività. Seleziona **Vedi dettagli** per vedere quali entità hanno partecipato al processo di unione, e cui regole sono state applicate, se la risoluzione del conflitto è riuscita e se gli aggiornamenti sono stati pubblicati correttamente.  
-> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Percorso di drill-down per ottenere i dettagli dell'elaborazione dal collegamento sullo stato dell'attività.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Rivedere e convalidare le corrispondenze
 

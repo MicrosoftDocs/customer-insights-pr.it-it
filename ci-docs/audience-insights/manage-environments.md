@@ -1,7 +1,7 @@
 ---
 title: Creare e gestire ambienti
 description: Scopri come iscriverti al servizio e come gestire gli ambienti.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673738"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799641"
 ---
 # <a name="manage-environments"></a>Gestisci ambienti
 
@@ -39,6 +39,19 @@ Puoi modificare alcuni dei dettagli degli ambienti esistenti.
 3. Nella casella **Modifica ambiente** , puoi aggiornare le impostazioni dell'ambiente.
 
 Per maggiori informazioni sulle impostazioni dell'ambiente, vedi [Creare un nuovo ambiente](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Connessione a Microsoft Dataverse
+   
+Il passo **Microsoft Dataverse** permette di collegare Customer Insights con il vostro ambiente Dataverse.
+
+Per utilizzare i [modelli di predizione out-of-box](predictions-overview.md#out-of-box-models), configurare la condivisione dei dati con Dataverse. Oppure puoi abilitare l'ingestione dei dati da fonti di dati on-premises, fornendo l'URL dell'ambiente Microsoft Dataverse che la tua organizzazione amministra. Seleziona **Abilita la condivisione dei dati** per condividere i dati di output di Customer Insights con un Data Lake gestito di Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opzioni di configurazione per abilitare la condivisione dei dati con Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights non supporta i seguenti scenari di condivisione dei dati:
+> - Se salvi tutti i dati sull'istanza di Azure Data Lake Storage in uso, non sarai in grado di abilitare la condivisione dei dati con un data lake gestito di Dataverse.
+> - Se abiliti la condivisione dei dati con Dataverse, non sarai in grado di [creare valori previsti o mancanti in un'entità](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copia la configurazione dell'ambiente
 

@@ -84,6 +84,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Indirizzi ottimizzati
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Dati aziendali ottimizzati
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Arricchimento con Mappe di Azure
           href: audience-insights/enrichment-azure-maps.md
         - name: Arricchimento con HERE Technologies
@@ -250,6 +252,40 @@
           href: audience-insights/apis.md
         - name: Riferimenti API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Gestione del consenso (anteprima)
+  items:
+    - name: Hub della Guida
+      href: consent-management/index.yml
+    - name: Panoramica della funzionalità
+      href: consent-management/overview.md
+    - name: Informazioni di base
+      items:
+        - name: Informazioni di base
+          href: consent-management/get-started.md
+        - name: Concetti e terminologia
+          href: consent-management/glossary.md
+    - name: Importa dati consenso
+      items:
+        - name: Importa dati consenso
+          href: consent-management/import-consent-data.md
+        - name: Impostare i dati del consenso e applicare le preferenze consenso
+          href: consent-management/set-consent-rules.md
+    - name: Gestire i dati del consenso
+      items:
+        - name: Abilitare le regole di consenso nelle informazioni dettagliate sul gruppo di destinatari
+          href: audience-insights/activate-consent.md
+        - name: Gestire le regole di consenso predefinite nelle informazioni dettagliate sul gruppo di destinatari
+          href: audience-insights/change-default-consent-rules.md
+    - name: Gestire impostazioni e utenti
+      items:
+        - name: Configurare impostazioni di sistema
+          href: consent-management/system-settings.md
+        - name: Gestire utenti e autorizzazioni
+          href: consent-management/manage-users.md
+    - name: Usare dati del consenso
+      items:
+        - name: Creare previsioni con i dati del consenso
+          href: consent-management/predictions-consent-data.md
 - name: Informazioni dettagliate sull'interazione (anteprima)
   items:
     - name: Hub della Guida

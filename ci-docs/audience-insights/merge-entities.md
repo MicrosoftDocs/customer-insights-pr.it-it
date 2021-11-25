@@ -1,7 +1,7 @@
 ---
 title: Unire entità nel processo di unificazione dei dati
 description: Unisci entità per creare profili cliente unificati.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648259"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732777"
 ---
 # <a name="merge-entities"></a>Gestire entità
 
@@ -187,10 +187,9 @@ Scegli **Esegui processi di unione e downstream** per aggiornare il sistema con 
 
 Per apportare ulteriori modifiche e rieseguire il passaggio, è possibile annullare un'unione in corso. Seleziona **Aggiornamento in corso ...** e seleziona **Annulla processo** nel riquadro laterale visualizzato.
 
-> [!TIP]
-> Dopo aver eseguito il processo di unione, seleziona lo stato del processo per aprire il riquadro **Dettagli attività**. Fornisce una panoramica del tempo di elaborazione, della data dell'ultima elaborazione e di tutti gli errori e gli avvisi associati all'attività. Seleziona **Vedi dettagli** per vedere quali entità hanno partecipato al processo corrispondente, se la risoluzione del conflitto è riuscita e se gli aggiornamenti sono stati pubblicati correttamente.  
-> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Percorso di drill-down per ottenere i dettagli dell'elaborazione dal collegamento sullo stato dell'attività.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Percorso di drill-down per ottenere i dettagli dell'elaborazione dal collegamento sullo stato dell'attività.":::
 
 ## <a name="next-step"></a>Passaggio successivo
 

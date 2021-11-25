@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483678"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732685"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Richieste diritti dell'interessato ai sensi del GDPR
 
@@ -79,7 +79,14 @@ L'amministratore di un tenant può seguire questa procedura per esportare i dati
 2. Accetta la conferma di esportazione dei dati per l'utente che ha effettuato la richiesta.
 3. Ricevi i dati esportati tramite l'indirizzo e-mail dell'amministratore del tenant.
 
-## <a name="engagement-insights"></a>Informazioni dettagliate sull'interazione
+## <a name="consent-management-preview"></a>Gestione del consenso (anteprima)
+
+La funzionalità di gestione del consenso non raccoglie direttamente i dati dell'utente. Importa ed elabora solo i dati del consenso forniti dagli utenti in altre applicazioni.
+
+Per rimuovere i dati del consenso su utenti specifici, rimuovili nelle origini dati inserite nella funzionalità di gestione del consenso. Dopo aver aggiornato l'origine dati, i dati rimossi verranno eliminati anche nel Centro consenso. Le applicazioni che usano l'entità consenso elimineranno anche i dati che sono stati rimossi dall'origine dopo un [aggiornamento](audience-insights/system.md#refresh-processes). Ti consigliamo di aggiornare rapidamente le origini dati dopo aver risposto a una richiesta dell'interessato per la rimozione dei dati dell'utente da tutti gli altri processi e le altre applicazioni.
+
+
+## <a name="engagement-insights-preview"></a>Informazioni dettagliate sull'interazione (anteprima)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Eliminazione ed esportazione dei dati degli eventi contenenti informazioni identificabili dell'utente finale
 

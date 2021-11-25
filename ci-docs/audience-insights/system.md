@@ -1,7 +1,7 @@
 ---
 title: Configurazione del sistema in Audience Insight
 description: Informazioni sulle impostazioni di sistema nella funzionalità Informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights.
-ms.date: 10/15/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651845"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732375"
 ---
 # <a name="system-configuration"></a>Configurazione di sistema
+
+Per accedere alle configurazioni di sistema nelle informazioni dettagliate sul gruppo di destinatari, nella barra di spostamento a sinistra seleziona **Amministratore** > **Sistema** per visualizzare un elenco di attività e processi di sistema.
 
 La pagina **Sistema** include le seguenti schede:
 - [Condizione](#status-tab)
@@ -30,39 +32,55 @@ La pagina **Sistema** include le seguenti schede:
 
 ## <a name="status-tab"></a>Scheda Stato
 
-La **Scheda Stato** consente di tenere traccia dell'avanzamento dell'inserimento dei dati, delle esportazioni dei dati e di molti altri importanti processi del prodotto. Esamina le informazioni in questa scheda per assicurarti del completamento dei processi attivi.
+La **scheda Stato** consente di tenere traccia dello stato delle attività, dell'inserimento dati, delle esportazioni dei dati e di molti altri importanti processi del prodotto. Rivedi le informazioni in questa scheda per garantire la completezza delle attività e dei processi attivi.
 
-Questa scheda include tabelle con informazioni sullo stato e sull'elaborazione per vari processi. Ogni tabella tiene traccia del **Nome** dell'attività e dell'entità corrispondente, dello **Stato** dell'esecuzione più recente e di quando è stato eseguito l'**Ultimo aggiornamento**.
+Questa scheda include tabelle con informazioni sullo stato e sull'elaborazione per vari processi. Ogni tabella tiene traccia del **Nome** dell'attività e dell'entità corrispondente, dello **Stato** dell'esecuzione più recente e di quando è stato eseguito l'**Ultimo aggiornamento**. Puoi visualizzare i dettagli delle ultime esecuzioni selezionando il nome dell'attività o del processo. 
 
-Visualizza i dettagli delle ultime diverse esecuzioni dell'attività selezionandone il nome.
+Seleziona lo stato accanto all'attività o al processo nella colonna **Stato** per aprire il riquadro **Dettagli stato**.
 
-### <a name="status-types"></a>Tipi di stato
+   :::image type="content" source="media/system-progress-details.png" alt-text="Riquadro dei dettagli dello stato del sistema":::
 
-Esistono sei tipi di stato per le attività. I seguenti tipi di stato sono visualizzati anche nelle pagine *Corrispondenza*, *Unione*, *Origini dati*, *Segmenti*, *Misure*, *Arricchimento*, *Impegni* e *Previsioni*:
+### <a name="status-definitions"></a>Definizioni stato
 
-- **In elaborazione:** l'attività è in corso. Lo stato può cambiare in Riuscito o Non riuscito.
-- **Riuscito:** l'attività è stata completata.
-- **Ignorata:** l'attività è stata ignorata. Uno o più dei processi downstream da cui dipende questa attività non riescono o vengono ignorati.
-- **Errore:** l'elaborazione dell'attività non è riuscita.
-- **Annullata:** l'elaborazione è stata annullata dall'utente prima del termine.
-- **In coda:** L'elaborazione viene messa in coda e inizierà una volta completate tutte le attività upstream. Per ulteriori informazioni, vedi [Criteri di aggiornamento](#refresh-policies).
+Il sistema usa i seguenti stati per attività e processi:
 
-### <a name="refresh-policies"></a>Criteri di aggiornamento
+|Condizione  |Definizione  |
+|---------|---------|
+|Operazione annullata |L'elaborazione è stata annullata dall'utente prima del completamento.   |
+|Non inviata   |Si sono verificati errori durante l'inserimento dati.         |
+|Errore  |Elaborazione non riuscita.  |
+|Non avviato   |L'origine dati non è ancora stata inserita o è ancora in modalità bozza.         |
+|In elaborazione  |L'attività o il processo è in corso.  |
+|Aggiornamento in corso    |L'inserimento dati è in corso. Puoi annullare questa operazione selezionando **Arresta aggiornamento** nella colonna **Azioni**. L'interruzione dell'aggiornamento di un'origine dati ripristinerà l'ultimo stato di aggiornamento.       |
+|Ignorato  |L'attività o il processo è stato ignorato. Uno o più dei processi downstream da cui dipende questa attività non riescono o vengono ignorati.|
+|Operazione riuscita  |L'attività o il processo è stato completato. Per le origini dati, indica che i dati sono stati inseriti correttamente se un'ora è menzionata nella colonna **Aggiornato**.|
+|In coda | L'elaborazione viene messa in coda e inizierà quando tutte le attività e i processi upstream saranno completati. Per altre informazioni, vedi [Aggiorna processi](#refresh-processes).|
 
-Questo elenco mostra i criteri di aggiornamento per ciascuno dei processi principali:
+### <a name="refresh-processes"></a>Aggiorna processi
 
-- **Origini dati:** viene eseguita in base alla [pianificazione configurata](#schedule-tab). Non dipende da nessun altro processo. La corrispondenza dipende dal buon esito di questo processo.
-- **Corrispondenza:** viene eseguita in base alla [pianificazione configurata](#schedule-tab). Dipende dall'elaborazione delle origini dati utilizzate nella definizione della corrispondenza. L'unione dipende dal buon esito di questo processo.
-- **Unione:** viene eseguita in base alla [pianificazione configurata](#schedule-tab). Dipende dal buon esito del processo di corrispondenza. Segmenti, misure, arricchimento, ricerca, impegni, previsioni e preparazione dei dati dipendono dal buon esito di questo processo.
-- **Segmenti**: viene eseguito manualmente (aggiornamento singolo) e in base alla [pianificazione configurata](#schedule-tab). Dipende dall'unione. Le informazioni dettagliate dipendono dalla sua elaborazione.
-- **Misure**: viene eseguito manualmente (aggiornamento singolo) e in base alla [pianificazione configurata](#schedule-tab). Dipende dall'unione.
-- **Impegni**: viene eseguito manualmente (aggiornamento singolo) e in base alla [pianificazione configurata](#schedule-tab). Dipende dall'unione.
-- **Arricchimento**: viene eseguito manualmente (aggiornamento singolo) e in base alla [pianificazione configurata](#schedule-tab). Dipende dall'unione.
-- **Ricerca**: viene eseguito manualmente (aggiornamento singolo) e in base alla [pianificazione configurata](#schedule-tab). Dipende dall'unione.
-- **Preparazione dei dati**: viene eseguita in base alla [pianificazione configurata](#schedule-tab). Dipende dall'unione.
-- **Informazioni dettagliate**: viene eseguito manualmente (aggiornamento singolo) e in base alla [pianificazione configurata](#schedule-tab). Dipende dai segmenti.
+L'aggiornamento di attività e processi viene eseguito in base alla [pianificazione configurata](#schedule-tab). 
 
-Seleziona lo stato di un'attività per visualizzare i dettagli sull'avanzamento dell'intero processo. I criteri di aggiornamento di cui sopra possono aiutare a capire cosa puoi fare per affrontare un'attività **Ignorata** o **In coda**.
+|Processo  |Descrizione  |
+|---------|---------|
+|Attività  |Viene eseguito manualmente (aggiornamento singolo). Dipende dal processo di unione. Le informazioni dettagliate dipendono dalla sua elaborazione.|
+|Collegamento analisi |Viene eseguito manualmente (aggiornamento singolo). Dipende dai segmenti.  |
+|Preparazione analisi |Viene eseguito manualmente (aggiornamento singolo). Dipende dai segmenti.  |
+|Preparazione dei dati   |Dipende dall'unione.   |
+|Origini dati   |Non dipende da nessun altro processo. La corrispondenza dipende dal buon esito di questo processo.  |
+|Arricchimenti   |Viene eseguito manualmente (aggiornamento singolo). Dipende dal processo di unione. |
+|Esporta destinazioni |Viene eseguito manualmente (aggiornamento singolo). Dipende dai segmenti.  |
+|Informazioni dettagliate |Viene eseguito manualmente (aggiornamento singolo). Dipende dai segmenti.  |
+|Intelligenza   |Dipende dall'unione.   |
+|Corrispondenza |Dipende dall'elaborazione delle origini dati utilizzate nella definizione della corrispondenza.      |
+|Misure  |Viene eseguito manualmente (aggiornamento singolo). Dipende dal processo di unione.  |
+|Unire   |Dipende dal buon esito del processo di corrispondenza. Segmenti, misure, arricchimento, ricerca, impegni, previsioni e preparazione dei dati dipendono dal buon esito di questo processo.   |
+|Profili   |Viene eseguito manualmente (aggiornamento singolo). Dipende dal processo di unione. |
+|Ricerca   |Viene eseguito manualmente (aggiornamento singolo). Dipende dal processo di unione. |
+|Segmenti  |Viene eseguito manualmente (aggiornamento singolo). Dipende dal processo di unione. Le informazioni dettagliate dipendono dalla sua elaborazione.|
+|Di sistema   |Dipende dal buon esito del processo di corrispondenza. Segmenti, misure, arricchimento, ricerca, impegni, previsioni e preparazione dei dati dipendono dal buon esito di questo processo.   |
+|Utente  |Viene eseguito manualmente (aggiornamento singolo). Dipende dalle entità.  |
+
+Seleziona lo stato di un processo per vedere i dettagli dello stato dell'intero processo in si trova. I processi di aggiornamento precedenti possono consentirti di individuare le operazioni da eseguire per affrontare un'attività o un processo **Ignorato** o **In coda**.
 
 ## <a name="schedule-tab"></a>Scheda Pianifica
 
@@ -86,7 +104,7 @@ La scheda **Informazioni** contiene il **nome visualizzato** della tua organizza
 
 È possibile modificare la lingua e il formato del paese/area geografica nella scheda **Generale**.
 
-Customer Insights [supporta un certo numero di lingue](/dynamics365/get-started/availability). L'app utilizza la preferenza di lingua per visualizzare elementi come il menu, il testo delle etichette e i messaggi di sistema nella lingua preferita.
+Customer Insights [supporta molte lingue](/dynamics365/get-started/availability). L'app utilizza la preferenza di lingua per visualizzare elementi come il menu, il testo delle etichette e i messaggi di sistema nella lingua preferita.
 
 I dati e le informazioni importati inseriti manualmente non vengono tradotti.
 
@@ -109,7 +127,7 @@ Trova i dettagli sull'utilizzo dell'API in tempo reale e guarda quali eventi si 
 
 -  **Operazioni** - una tabella con righe per ogni operazione API disponibile e dettagli sull'utilizzo delle operazioni. È possibile selezionare il nome di un'operazione per andare al [riferimento API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Le operazioni che utilizzano l'[inserimento di dati in tempo reale](real-time-data-ingestion.md) contengono un pulsante con un simbolo di binocolo per visualizzare l'utilizzo dell'API in tempo reale. Seleziona il pulsante per aprire un riquadro laterale contenente dettagli sull'utilizzo dell'API in tempo reale nell'ambiente corrente.   
+   Operazioni che usano l'[inserimento dati in tempo reale](real-time-data-ingestion.md) contengono un pulsante con un simbolo di binocolo per visualizzare l'uso dell'API in tempo reale. Seleziona il pulsante per aprire un riquadro laterale contenente dettagli sull'utilizzo dell'API in tempo reale nell'ambiente corrente.   
    Usa la casella **Raggruppa per** nel riquadro **Utilizzo API in tempo reale** per scegliere come presentare al meglio le tue interazioni in tempo reale. Puoi raggruppare i dati per metodo API, nome qualificato dell'entità (entità inserita), autore creazione (origine dell'evento), risultato (esito positivo o negativo) o codici di errore. I dati sono disponibili come grafico cronologico e come tabella.
 
 ## <a name="security-tab"></a>Scheda Sicurezza

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643435"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792032"
 ---
 # <a name="customer-card-add-in-preview"></a>Componente aggiuntivo Scheda cliente (anteprima)
 
@@ -34,7 +34,7 @@ Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics
   - **Controllo delle misure**: Richiede [misure configurate](measures.md) di attributi del cliente tipo.
   - **Controllo dell'intelligenza**: Richiede dati generati utilizzando [previsioni](predictions.md) o [modelli personalizzati](custom-models.md).
   - **Controllo dei dettagli del cliente**: Tutti i campi del profilo sono disponibili nel profilo cliente unificato.
-  - **Controllo dell'arricchimento**: Richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili dei clienti.
+  - **Controllo dell'arricchimento**: Richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili dei clienti. Il componente aggiuntivo relativo alle schede supporta questi arricchimenti: [Marchi](enrichment-microsoft.md) forniti da Microsoft, [Interessi](enrichment-microsoft.md) forniti da Microsoft.
   - **Controllo dei contatti**: Richiede la definizione di un'entità semantica di tipo contacts.
   - **Controllo della timeline**: Richiede [attività configurate](activities.md).
 

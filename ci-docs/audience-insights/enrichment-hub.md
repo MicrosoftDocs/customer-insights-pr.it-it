@@ -1,7 +1,7 @@
 ---
 title: Arricchire profili cliente unificati
 description: Usa specifiche funzionalità per arricchire i tuoi dati cliente.
-ms.date: 09/30/2021
+ms.date: 11/05/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
+ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673004"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "7770127"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Arricchimento per i profili cliente (anteprima)
 
@@ -42,6 +42,7 @@ Nella scheda **Scopri** , troverai tutte le opzioni di arricchimento supportate.
 
 - [Dati aziendali](enrichment-leadspace.md) forniti da Leadspace
 - [Indirizzi avanzati](enrichment-enhanced-addresses.md) forniti da Microsoft 
+- [Dati aziendali ottimizzati](enrichment-enhanced-company-data.md) forniti da Microsoft
 - [Dati di localizzazione](enrichment-here.md) forniti da HERE Technologies 
 - [Personalizzare i dati](enrichment-SFTP-custom-import.md) mediante Secure File Transfer Protocol (SFTP) 
 - [Mappe di Azure](enrichment-azure-maps.md) fornito da Microsoft

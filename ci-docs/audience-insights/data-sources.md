@@ -1,7 +1,7 @@
 ---
 title: Utilizzare origini dati per inserire dati
 description: Scopri come importare dati da varie origini.
-ms.date: 04/12/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645360"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732147"
 ---
 # <a name="data-sources-overview"></a>Panoramica delle origini dati
 
@@ -48,14 +48,7 @@ Vedrai il nome di ciascuna origine dati inserita, il suo stato e l'ultima volta 
 > [!div class="mx-imgBorder"]
 > ![Origine dati aggiunta.](media/configure-data-datasource-added.png "Origine dati aggiunta")
 
-|Condizione  |Descrizione  |
-|---------|---------|
-|Operazione riuscita   |L'inserimento dell'origine dati è riuscito se un'ora è menzionata nella colonna **Aggiornato**.
-|Non avviato   |L'origine dati non è ancora stata inserita o è ancora in modalità bozza.         |
-|Aggiornamento in corso    |L'inserimento dati è in corso. Puoi annullare questa operazione selezionando **Arresta aggiornamento** nella colonna **Azioni**. L'interruzione dell'aggiornamento di un'origine dati la riporterà al suo ultimo stato di aggiornamento.       |
-|Non inviato     |Si sono verificati errori durante l'inserimento dati.         |
-
-Seleziona il valore nella colonna **Stato** di qualsiasi origine dati per esaminare maggiori dettagli. Nel riquadro **Dettagli stato** espandi **Origini dati**. Seleziona **Vedi dettagli** per altre informazioni sullo stato di aggiornamento, inclusi i dettagli di errore e gli aggiornamenti del processo downstream.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 Il caricamento dei dati può richiedere tempo. Al termine del completamento dell'aggiornamento, i dati inseriti possono essere rivisti dalla pagina **Entità**. Per ulteriori informazioni, vedi [Entità](entities.md).
 
