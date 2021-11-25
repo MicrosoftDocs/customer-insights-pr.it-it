@@ -1,6 +1,6 @@
 ---
-title: Attiva le regole di consenso per i segmenti nelle informazioni dettagliate sul gruppo di destinatari
-description: Passaggi per collegare i dati del consenso e attivare le verifiche del consenso nelle informazioni dettagliate sul gruppo di destinatari.
+title: Attivare le regole di consenso per i segmenti
+description: Segui questi passaggi per collegare i dati del consenso e attivare le verifiche del consenso nelle informazioni dettagliate sul gruppo di destinatari. Un amministratore può anche disabilitare le verifiche del consenso.
 ms.date: 11/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,20 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 33ec3a684c2ca47badb4e5461f069d1b2e4a4f3d
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
+ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753066"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7790781"
 ---
 # <a name="activate-consent-rules"></a>Attiva regole di consenso
 
-[Centro consenso (anteprima)](../consent-management/overview.md) ti aiuta ad armonizzare i dati del consenso da varie origini. Usa l'entità *Consenso* per applicare verifiche del consenso predefinite. Dopo aver importato i dati del consenso in Centro consenso e configurato le regole per i dati del consenso importati, l'entità *Consenso* viene sincronizzata automaticamente con le informazioni dettagliate sul gruppo di destinatari.
+Il [Centro consenso (anteprima)](../consent-management/overview.md) ti aiuta ad armonizzare i dati del consenso da varie origini. Usa l'entità *Consenso* per applicare verifiche del consenso predefinite. Dopo aver importato i dati del consenso nel Centro consenso e configurato le regole per i dati, l'entità *Consenso* viene sincronizzata automaticamente con le informazioni dettagliate sul gruppo di destinatari.
 
 ## <a name="enable-consent-checks"></a>Abilita verifiche del consenso
 
-Con i dati del consenso importati nel Centro consenso (anteprima) e le regole configurate, puoi abilitare le verifiche del consenso nelle informazioni dettagliate sul gruppo di destinatari. 
+Con i dati del consenso importati nel Centro consenso (anteprima) e le regole configurate, puoi abilitare le verifiche del consenso. 
 
 :::image type="content" source="../consent-management/media/enable-consent-checks-audience-insights.png" alt-text="Scheda Consenso nelle impostazioni delle informazioni dettagliate sul gruppo di destinatari con i dati di consenso attivati.":::
 
@@ -30,13 +30,13 @@ Con i dati del consenso importati nel Centro consenso (anteprima) e le regole co
 
 1. Seleziona la scheda **Consenso (anteprima)**.
 
-1. Nella sezione **Abilita verifiche del consenso** imposta su **Attivato** l'interruttore per l'area che desideri abilitare.
+1. Nella sezione **Abilita verifiche del consenso** imposta **Attivato** per tutte le aree che desideri abilitare.
 
 1. Seleziona la casella di controllo **Consenti sostituzione delle regole predefinite di consenso** per rimuovere le verifiche del consenso predefinite applicate su un particolare segmento. 
 
 1. Nel menu a discesa seleziona dove desideri consentire le sostituzioni.     
 
-1. Nella sezione **Collega consenso ai profili cliente** scegli l'attributo che viene usato come identificatore per collegare i dati del consenso ai dati del cliente. Probabilmente è un numero di telefono o un indirizzo e-mail. 
+1. Nella sezione **Collega consenso ai profili cliente** scegli l'attributo che viene usato come identificatore per collegare i dati del consenso ai dati del cliente. È probabile che si tratti di un numero di telefono o un indirizzo e-mail. 
 
 1. Seleziona **Salva** per applicare le impostazioni.
 

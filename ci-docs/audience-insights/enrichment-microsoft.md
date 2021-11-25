@@ -1,7 +1,7 @@
 ---
 title: Arricchire i profili dei clienti con i dati di Microsoft
-description: Usa i dati proprietari di Microsoft per arricchire i dati dei tuoi clienti con affinità di marchio e interesse.
-ms.date: 11/01/2021
+description: Usa i dati proprietari di Microsoft per arricchire i dati dei tuoi clienti con affinità e share of voice.
+ms.date: 11/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,33 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
+ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732547"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "7793709"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Arricchimento di profili cliente con le affinità relative al marchio e agli interessi (anteprima)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Arricchisci i profili dei clienti con affinità e share of voice (anteprima)
 
-Usa i dati proprietari di Microsoft per arricchire i dati dei tuoi clienti con affinità di marchio e interesse. Queste affinità si basano sui dati di persone con dati demografici simili a quelli dei tuoi clienti. Queste informazioni ti consentono di comprendere e segmentare meglio i tuoi clienti in base alle loro affinità per specifici marchi e interessi.
+Usa i dati proprietari di Microsoft per arricchire i dati dei tuoi clienti con affinità di marchio, affinità di interessi e share of voice (SoV). Queste affinità e SoV si basano sui dati di persone i cui dati demografici sono simili a quelli dei tuoi clienti. Queste informazioni ti aiutano a comprendere e segmentare meglio i tuoi clienti in base alle loro affinità o SoV a marchi e interessi specifici.
 
 In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Arricchimento** per [configurare e visualizzare gli arricchimenti](enrichment-hub.md).
 
-Per configurare l'arricchimento delle affinità del marchio, vai alla scheda **Individua** e seleziona **Arricchisci i miei dati** nel riquadro **Marchi**.
+Per configurare le affinità di marchio e l'arricchimento SoV, vai alla scheda **Individua** e seleziona **Arricchisci i miei dati** nel riquadro **Marchi**.
 
-Per configurare l'arricchimento delle affinità degli interessi, vai alla scheda **Individua** e seleziona **Arricchisci i miei dati** nel riquadro **Interessi**.
+Per configurare le affinità di interessi e l'arricchimento SoV, vai alla scheda **Individua** e seleziona **Arricchisci i miei dati** nel riquadro **Interessi**.
 
    > [!div class="mx-imgBorder"]
    > ![Riquadri Marchi e Interessi.](media/BrandsInterest-tile-Hub.png "Riquadri Marchi e Interessi")
 
-## <a name="how-we-determine-affinities"></a>Come determiniamo le affinità
+## <a name="how-we-determine-affinities-and-sov"></a>Come determiniamo affinità e SoV
 
-Utilizziamo i dati della ricerca online di Microsoft per trovare affinità per marchi e interessi in vari segmenti demografici (definiti per età, sesso o posizione). Il volume di ricerca online per un marchio o interesse determina quanta affinità un segmento demografico, rispetto ad altri segmenti, ha con quel marchio o interesse.
+Per trovare affinità e SoV per marchi e interessi in vari segmenti demografici (definiti per età, sesso o posizione), vengono usati i dati delle ricerche online di Microsoft. Il volume delle ricerche online di un marchio o un interesse costituisce la base per determinare l'affinità o SoV. Ognuno offre tuttavia una prospettiva diversa per comprendere i clienti.
+
+- L'affinità è un elemento comparativo tra i segmenti demografici. Puoi usare queste informazioni per identificare i segmenti demografici che hanno la massima affinità per un determinato marchio o interesse, rispetto ad altri segmenti.
+
+- Share of voice è un elemento comparativo tra i marchi o gli interessi selezionati. Puoi usare queste informazioni per identificare quale marchio o interesse ha il valore di share of voice più elevato per un determinato segmento demografico, rispetto ad altri marchi o interessi selezionati.
 
 ## <a name="affinity-level-and-score"></a>Livello e punteggio di affinità
 
@@ -48,6 +52,10 @@ Il *livello di affinità* si compone di quattro livelli e il *punteggio di affin
 |Bassa     | 1-34        |
 
 A seconda della granularità che desideri per misurare l'affinità, puoi utilizzare il livello di affinità o il punteggio di affinità. Il punteggio di affinità ti offre un controllo più preciso.
+
+## <a name="share-of-voice-sov"></a>Share of voice (SoV)
+
+Calcoliamo il valore di SoV su una scala di 100 punti. Il SoV totale di tutti i marchi o interessi per ogni profilo cliente arricchito arriva fino a 100. A differenza delle affinità, il valore SoV è relativo ai marchi e agli interessi selezionati. Ad esempio, i valori SoV per "Microsoft" possono essere diversi se i marchi selezionati sono ("Microsoft", "GitHub") piuttosto che ("Microsoft", "LinkedIn").
 
 ## <a name="supported-countriesregions"></a>Paesi/aree geografiche supportati
 
@@ -82,7 +90,7 @@ Rivedi le tue preferenze di arricchimento predefinite e aggiornale secondo neces
 
 ### <a name="select-entity-to-enrich"></a>Selezionare l'entità da arricchire
 
-Seleziona **Entità arricchita** e scegli il set di dati che desideri arricchire con i dati aziendali di Microsoft. Puoi selezionare l'entità Cliente per arricchire tutti i tuoi profili cliente o selezionare un'entità segmento per arricchire solo i profili cliente contenuti in quel segmento.
+Seleziona **Entità arricchita** e scegli il set di dati che vuoi arricchire con i dati di Microsoft. Puoi selezionare l'entità Cliente per arricchire tutti i tuoi profili cliente o selezionare un'entità segmento per arricchire solo i profili cliente contenuti in quel segmento.
 
 ### <a name="map-your-fields"></a>Esegui il mapping dei campi
 
@@ -124,13 +132,11 @@ Dopo aver eseguito il processo di arricchimento, vai a **I miei arricchimenti** 
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Anteprima dei risultati dopo l'esecuzione del processo di arricchimento.":::
 
-Rivedi i dati arricchiti selezionando **Visualizza dati arricchiti** nel grafico. I dati arricchiti per i marchi vanno all'entità **BrandAffinityFromMicrosoft**. I dati per gli interessi sono nell'entità **InterestAffinityFromMicrosoft**. Troverai anche queste entità elencate nel gruppo **Arricchimento** in **Dati** > **Entità**.
-
-Vedrai un grafico con il numero di profili cliente arricchiti nel tempo e un'anteprima dell'entità arricchita. Seleziona **Mostra più** nel riquadro di anteprima per aprire l'entità arricchita.
+Verrà visualizzato un grafico con il numero di profili cliente arricchiti nel tempo e le anteprime delle entità arricchite. Rivedi i dati arricchiti selezionando **Visualizza altro** nei grafici **Livello di affinità** o **Share of Voice**. I dati arricchiti per i marchi vanno nelle entità **BrandAffinityFromMicrosoft** e **BrandShareOfVoiceFromMicrosoft**. I dati per gli interessi sono nelle entità **InterestAffinityFromMicrosoft** e **InterestShareOfVoiceFromMicrosoft**. Troverai anche queste entità elencate nel gruppo **Arricchimento** in **Dati** > **Entità**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Visualizzare i dati di arricchimento nella scheda cliente
 
-Le affinità per marchi e interessi possono essere visualizzate anche nelle singole schede cliente. Vai a **Clienti** e seleziona un profilo cliente. Nella scheda cliente troverai i grafici per i marchi o gli interessi per i quali le persone nel profilo demografico del cliente hanno affinità.
+Il SoV di marchi e interessi può essere visualizzato anche nelle singole schede cliente. Vai a **Clienti** e seleziona un profilo cliente. Nella scheda cliente sono presenti grafici per il SoV di marchi o interessi in base alle persone nel profilo demografico del cliente.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Scheda cliente con dati arricchiti.":::
 

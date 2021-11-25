@@ -1,7 +1,7 @@
 ---
 title: Ottimizzazione dei dati aziendali
 description: Arricchisci e normalizza i dati aziendali con i modelli Microsoft.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770175"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813923"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Arricchimento dei profili aziendali con dati aziendali ottimizzati
 
@@ -51,7 +51,8 @@ Esistono alcune limitazioni con i dati ottimizzati. Gli elementi nell'elenco di 
 
 1.  Conferma l'identità dell'azienda. Non verifichiamo se l'input è un'organizzazione esistente né che un'azienda utilizza l'output come nome standard.
 2.  Copri nel complesso le aziende a livello globale. I dati aziendali compilati di Microsoft hanno una copertura globale, ma offrono la maggior parte della copertura in Australia, Canada, Regno Unito e Stati Uniti.
-3.  Garantisci l'accuratezza o l'aggiornamento dei dati. Poiché le informazioni aziendali cambiano spesso, non possiamo garantire che i dati aziendali ottimizzati forniti siano sempre esatti o aggiornati.
+3.  Standardizza gli indirizzi aziendali a livello globale. Attualmente è supportata la standardizzazione degli indirizzi nei paesi o nelle aree geografiche seguenti: Australia, Canada, Francia, Germania, Italia, Giappone, Regno Unito e Stati Uniti.
+4.  Garantisci l'accuratezza o l'aggiornamento dei dati. Poiché le informazioni aziendali cambiano spesso, non possiamo garantire che i dati aziendali ottimizzati forniti siano sempre esatti o aggiornati.
 
 ## <a name="configure-the-enrichment"></a>Configurare l'arricchimento
 
