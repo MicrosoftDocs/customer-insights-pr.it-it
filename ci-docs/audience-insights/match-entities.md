@@ -1,7 +1,7 @@
 ---
 title: Mettere in corrispondenza le entità per l'unificazione dei dati
-description: Abbina le entità per combinare i set di dati e creare profili di clienti unificati.
-ms.date: 11/01/2021
+description: Metti in corrispondenza le entità per creare profili cliente unificati.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732639"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863816"
 ---
 # <a name="match-entities"></a>Mettere in corrispondenza le entità
 
@@ -224,17 +224,24 @@ Puoi riconfigurare e ottimizzare la maggior parte dei parametri di corrispondenz
 
 ## <a name="specify-custom-match-conditions"></a>Specificare le condizioni di corrispondenza personalizzate
 
-Puoi specificare condizioni in base a cui alcuni record devono sempre corrispondere o non corrispondere mai. Queste regole possono essere caricate per sostituire il processo di corrispondenza standard. Ad esempio, se nei nostri record sono presenti John Doe I e John Doe II, il sistema potrebbe abbinarli come una singola persona. Le regole di corrispondenza personalizzate ti consentono di specificare che i loro profili si riferiscono a persone diverse. 
+È possibile specificare condizioni che sovrascrivono la logica di corrispondenza predefinita. Le opzioni disponibili sono quattro: 
+
+|Opzione  |Description |Esempio  |
+|---------|---------|---------|
+|Corrisponde sempre     | Definisce i valori che corrispondono sempre.         |  Abbina sempre *Mike* e *MikeR*.       |
+|Mai nessuna corrispondenza     | Definisce valori che non corrispondono mai.        | Non abbina mai *John* e *Jonathan*.        |
+|Ignora personalizzato     | Definisce i valori che il sistema deve sempre ignorare in fase di corrispondenza. |  Ignora i valori *11111* e *Sconosciuto* durante la corrispondenza.        |
+|Mapping alias    | Definisce i valori che il sistema deve considerare come lo stesso valore.         | Considera *Joe* uguale a *Joseph*.        |
 
 1. Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Corrispondenza personalizzata** nella sezione **Dettagli record corrispondenti**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Screenshot della sezione delle regole di corrispondenza con il controllo per la corrispondenza personalizzata evidenziato.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Screenshot della sezione delle regole di corrispondenza con il controllo per la corrispondenza personalizzata evidenziato.":::
 
-1. Se non hai impostato regole di corrispondenza personalizzate, vedrai un nuovo riquadro **Corrispondenza personalizzata** con maggiori dettagli.
+1. Nel riquadro **Personalizzazione** vai alla scheda **Record**.
 
-1. Seleziona **Compila il modello** per ottenere un file modello che può specificare quali record da quali entità devono sempre corrispondere o non corrispondere mai. Dovrai compilare separatamente i record "Corrisponde sempre" e "Mai nessuna corrispondenza" in due file diversi.
+1. Scegli l'opzione di corrispondenza personalizzata nel menu a discesa **Tipo personalizzato** e seleziona **Scarica modello**. Hai bisogno di un modello separato per ogni opzione di corrispondenza.
 
-1. Il modello contiene campi per specificare l'entità e i valori della chiave primaria dell'entità da utilizzare nella corrispondenza personalizzata. Ad esempio, se desideri la chiave primaria *12345* dall'entità *Vendite* in modo che corrisponda sempre alla chiave primaria *34567* dall'entità *Contatto*, compila il modello:
+1. Viene scaricato un file di modello. Aprilo e inserisci i dettagli. Il modello contiene campi per specificare l'entità e i valori della chiave primaria dell'entità da utilizzare nella corrispondenza personalizzata. Ad esempio, se desideri la chiave primaria *12345* dall'entità *Vendite* in modo che corrisponda sempre alla chiave primaria *34567* dall'entità *Contatto*, compila il modello:
     - Entity1: Vendite
     - Entity1Key: 12345
     - Entity2: Contatto
@@ -244,26 +251,32 @@ Puoi specificare condizioni in base a cui alcuni record devono sempre corrispond
    
    Se desideri specificare la corrispondenza personalizzata per la deduplicazione in un'entità, fornisci la stessa entità sia come Entità1 che Entità2 e imposta i diversi valori di chiave primaria.
 
-1. Dopo aver aggiunto tutte le sostituzioni che vuoi applicare, salva il file del modello.
+1. Dopo aver aggiunto tutte le sostituzioni, salva il file di modello.
 
-1. Vai a **Dati** > **Origini dati** e inserisci i file di modello come nuove entità. Una volta inseriti, puoi usarli per specificare la configurazione della corrispondenza.
+1. Vai a **Dati** > **Origini dati** e inserisci i file di modello come nuove entità.
 
-1. Dopo aver caricato i file e le entità disponibili, seleziona nuovamente l'opzione **Corrispondenza personalizzata**. Vedrai le opzioni per specificare le entità che desideri includere. Seleziona le entità richieste dal menu a discesa.
+1. Dopo aver caricato i file e le entità disponibili, seleziona nuovamente l'opzione **Corrispondenza personalizzata**. Vedrai le opzioni per specificare le entità che desideri includere. Seleziona le entità richieste nel menu a discesa e seleziona **Fatto**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Screenshot della finestra di dialogo per scegliere le sostituzioni per uno scenario di corrispondenza personalizzata.":::
 
-1. Seleziona le entità che desideri utilizzare per **Corrisponde sempre** e **Mai nessuna corrispondenza**, quindi seleziona **Fatto**.
+1. L'applicazione della corrispondenza personalizzata dipende dall'opzione di corrispondenza da utilizzare. 
+
+   - Per **Corrisponde sempre** o **Mai nessuna corrispondenza**, continua con il passaggio successivo.
+   - Per **Ignora personalizzato** o **Mapping alias**, seleziona **Modifica** su una regola di corrispondenza esistente o crea una nuova regola. Nel menu a discesa Normalizzazione scegli l'opzione **Ignora personalizzato** o **Mapping alias** e seleziona **Fatto**.
 
 1. Seleziona **Salva** nella pagina **Corrispondenza** per applicare la configurazione di corrispondenza personalizzata.
 
 1. Seleziona **Esegui** nella pagina **Corrispondenza** per avviare il processo di corrispondenza. Altre regole di corrispondenza specificate vengono sovrascritte dalla configurazione di corrispondenza personalizzata.
 
-> [!TIP]
-> Vai a **Dati** > **Entità** e rivedi l'entità **ConflationMatchPair** per verificare che le sostituzioni siano state applicate.
+### <a name="known-issues"></a>Problemi noti
+
+- L'autoconflazione non mostra i dati normalizzati nelle entità di deduplicazione. Tuttavia, applica la normalizzazione internamente durante la deduplicazione. È progettata per tutte le normalizzazioni. 
+- Se l'impostazione del tipo semantico viene rimossa nella fase **Mapping** quando una regola di corrispondenza utilizza le opzioni Mapping alias o Ignora personalizzato, la normalizzazione non verrà applicata. Ciò accade solo se si cancella il tipo semantico dopo aver configurato la normalizzazione nella regola di corrispondenza perché il tipo semantico sarà sconosciuto.
+
 
 ## <a name="next-step"></a>Passaggio successivo
 
-Dopo aver completato il processo di corrispondenza per almeno una coppia di corrispondenza, puoi risolvere eventuali contraddizioni nei tuoi dati esaminando l'argomento [**Unione**](merge-entities.md).
+Dopo aver completato il processo di corrispondenza per almeno una coppia di corrispondenza, continua con il passaggio [**Unisci**](merge-entities.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
