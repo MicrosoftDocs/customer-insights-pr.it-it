@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770127"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884221"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Arricchimento per i profili cliente (anteprima)
 
@@ -46,6 +46,7 @@ Nella scheda **Scopri** , troverai tutte le opzioni di arricchimento supportate.
 - [Dati di localizzazione](enrichment-here.md) forniti da HERE Technologies 
 - [Personalizzare i dati](enrichment-SFTP-custom-import.md) mediante Secure File Transfer Protocol (SFTP) 
 - [Mappe di Azure](enrichment-azure-maps.md) fornito da Microsoft
+- [Dati sul coinvolgimento dell'account](enrichment-office.md) fornito da Microsoft
 
 ---
 

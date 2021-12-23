@@ -1,7 +1,7 @@
 ---
 title: Entità e set di dati
 description: Visualizza i dati nella pagina Entità.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,51 +9,57 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732085"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900432"
 ---
 # <a name="entities-in-audience-insights"></a>Entità in Informazioni dettagliate sul gruppo di destinatari
 
 Dopo [aver configurato le origini dati](data-sources.md), vai alla pagina **Entità** per valutare la qualità dei dati inseriti. Le entità sono considerate set di dati. Molteplici funzionalità di Dynamics 365 Customer Insights sono basate su queste entità. La loro stretta revisione può aiutare a convalidare l'output di tali funzionalità.
 
-La pagina **Entità** elenca le entità e include diverse colonne:
+La pagina **Entità** elenca le entità e include queste colonne:
 
-- **Nome**: il nome dell'entità di dati. Se viene visualizzato un simbolo di avviso accanto al nome di un'entità, significa che i dati per tale entità non sono stati caricati correttamente.
-- **Origine**: il tipo di origine dati che hanno inserito l'entità
-- **Autore creazione**: nome della persona che ha creato l'entità
-- **Data di creazione**: data e ora di creazione dell'entità
-- **Aggiornato da**: nome della persona che ha aggiornato l'entità
-- **Stato**: dettagli dell'ultimo aggiornamento dell'entità
+- **Nome**: il nome dell'entità dei dati. Se viene visualizzato un simbolo di avviso accanto al nome di un'entità, significa che i dati per tale entità non sono stati caricati correttamente.
+- **Origine**: tipo di origine dati che ha inglobato l'entità.
+- **Aggiornato**: l'ultima volta che è stata aggiornata l'entità.
+- **Stato**: dettagli dell'ultimo aggiornamento dell'entità.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Esplorare i dati di un'entità specifica
 
-Seleziona un'entità per esplorare i diversi campi e record inclusi all'interno dell'entità.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Entità**.
+1. Dalla pagina **Entità**, seleziona un'entità per aprire la pagina dei dettagli.  
+1. Esplorare i diversi campi e record inclusi per quell'entità.
 
-> [!div class="mx-imgBorder"]
-> ![Seleziona un'entità.](media/data-manager-entities-data.png "Seleziona un\'entità")
-
-- La scheda **Dati** mostra una tabella che elenca i dettagli sui singoli record dell'entità.
+- La scheda **Attributi** è selezionata per impostazione predefinita e mostra una tabella per esaminare i dettagli per l'entità selezionata, come nomi di campo, tipi di dati e tipi. La colonna **Tipo** mostra i tipi associati a Common Data Model che vengono identificati automaticamente dal sistema o [mappati manualmente](map-entities.md) dagli utenti. Questi tipi sono tipi semantici che possono differire dai tipi di dati degli attributi. Ad esempio, il campo *E-mail* sotto ha un tipo di dati *Testo* ma il suo tipo (semantico) Common Data Model potrebbe essere *E-mail* o *Indirizzo e-mail*.
 
 > [!div class="mx-imgBorder"]
 > ![Tabella Campi.](media/data-manager-entities-fields.PNG "Tabella Campi")
 
-- La scheda **Attributi** è selezionata per impostazione predefinita e mostra una tabella per esaminare i dettagli per l'entità selezionata, come nomi di campo, tipi di dati e tipi. La colonna **Tipo** mostra i tipi associati a Common Data Model che vengono identificati automaticamente dal sistema o [mappati manualmente](map-entities.md) dagli utenti. Questi tipi sono tipi semantici che possono differire dai tipi di dati degli attributi. Ad esempio, il campo *E-mail* sotto ha un tipo di dati *Testo* ma il suo tipo (semantico) Common Data Model potrebbe essere *E-mail* o *Indirizzo e-mail*.
-
 > [!NOTE]
-> Entrambe le tabelle mostrano solo un esempio dei dati dell'entità. Per visualizzare il set di dati completo, vai alla pagina **Origini dati** seleziona un'entità, seleziona **Modifica**, quindi visualizza i dati di questa entità con l'editor Power Query come spiegato in [Origini dati](data-sources.md).
+> Questa pagina mostra solo un campione dei dati della tua entità. Per visualizzare il set di dati completo, vai alla pagina **Origini dati** seleziona un'entità, seleziona **Modifica**, quindi visualizza i dati di questa entità con l'editor Power Query come spiegato in [Origini dati](data-sources.md).
 
-Per altre informazioni sui dati inseriti nell'entità, la colonna **Riepilogo** fornisce alcune caratteristiche importanti dei dati, ad esempio valori Null, valori mancanti, valori univoci, conteggi e distribuzioni, a seconda di come sono applicabili ai dati.
-
-Seleziona l'icona del grafico per visualizzare il riepilogo dei dati.
+Per altre informazioni sui dati inseriti nell'entità, la colonna **Riepilogo** fornisce alcune caratteristiche importanti dei dati, ad esempio valori Null, valori mancanti, valori univoci, conteggi e distribuzioni, a seconda di come sono applicabili ai dati. Seleziona l'icona del grafico per visualizzare il riepilogo dei dati.
 
 > [!div class="mx-imgBorder"]
 > ![Simbolo di riepilogo.](media/data-manager-entities-summary.png "Tabella riepilogo dati")
+
+- La scheda **Dati** mostra una tabella che elenca i dettagli sui singoli record dell'entità. I dettagli elencati dipendono dal tipo di dati dell'entità.
+
+> [!div class="mx-imgBorder"]
+> ![Seleziona un'entità.](media/data-manager-entities-data.png "Seleziona un\'entità")
+
+- La scheda **Rapporti** (disponibile per alcune entità) ti consente di visualizzare i tuoi dati creando un rapporto e include queste colonne:
+
+  - **Nome rapporto**: nome del rapporto.
+  - **Autore**: nome della persona che ha creato l'entità.
+  - **Data di creazione**: data e ora di creazione dell'entità.
+  - **Modificato da**: nome della persona che ha modificato l'entità.
+  - **Modificato**: data e ora di modifica dell'entità. 
 
 ## <a name="entity-specific-information"></a>Informazioni specifiche dell'entità
 
@@ -74,7 +80,6 @@ I seguenti controlli vengono eseguiti sui dati importati per esporre i record da
 - Il valore di un campo non corrisponde al tipo di dati della sua colonna.
 - I campi contengono caratteri che fanno sì che le colonne non corrispondano allo schema previsto. Ad esempio: virgolette formattate in modo errato, virgolette senza caratteri di escape o caratteri di nuova riga.
 - Se sono presenti colonne datetime/date/datetimeoffset, il loro formato deve essere specificato nel modello se non segue il formato ISO standard.
-
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

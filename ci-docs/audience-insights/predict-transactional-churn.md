@@ -1,5 +1,5 @@
 ---
-title: Previsione del churn delle transazioni
+title: Previsione dell'abbandono delle transazioni (video)
 description: Determina se esiste il rischio che un cliente non acquisti più i tuoi prodotti o servizi.
 ms.date: 10/20/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673050"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904077"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Previsione del churn delle transazioni (anteprima)
 

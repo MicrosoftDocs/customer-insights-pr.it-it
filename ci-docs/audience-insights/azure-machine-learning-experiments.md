@@ -1,7 +1,7 @@
 ---
 title: Esperimenti con Azure Machine Learning
 description: Utilizzare modelli basati su Azure Machine Learning in Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033177"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881743"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilizzare modelli basati su Azure Machine Learning
 
-I dati unificati in Dynamics 365 Customer Insights sono una fonte per la creazione di modelli di Machine Learning che possono generare ulteriori informazioni aziendali. Customer Insights si integra con Machine Learning Studio (versione classica) e Azure Machine Learning per l'uso di modelli personalizzati. Fai riferimento a [Esperimenti con Machine Learning Studio (versione classica)](machine-learning-studio-experiments.md) per esempi di esperimenti basati su Machine Learning Studio (versione classica). 
+I dati unificati in Dynamics 365 Customer Insights sono una fonte per la creazione di modelli di Machine Learning che possono generare ulteriori informazioni aziendali. Customer Insights si integra con Azure Machine Learning per usare i tuoi modelli personalizzati.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -35,7 +35,7 @@ I dati unificati in Dynamics 365 Customer Insights sono una fonte per la creazio
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Utilizzare la finestra di progettazione di Azure Machine Learning
 
-La finestra di progettazione Azure Machine Learning fornisce un canvas visivo dove puoi trascinare e rilasciare set di dati e moduli, simile a Machine Learning Studio (versione classica). Una pipeline batch creata mediante la finestra di progettazione può essere integrata in Customer Insights se configurata di conseguenza. 
+La progettazione di Azure Machine Learning offre un'area di disegno visiva in cui è possibile trascinare e rilasciare set di dati e moduli. Una pipeline batch creata mediante la finestra di progettazione può essere integrata in Customer Insights se configurata di conseguenza. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Utilizzare l'SDK di Azure Machine Learning
 

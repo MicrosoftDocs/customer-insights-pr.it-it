@@ -1,20 +1,20 @@
 ---
-title: Componente aggiuntivo Customer Card per app Dynamics 365
+title: Componente aggiuntivo scheda cliente per Dynamics 365 (Video)
 description: Mostra i dati di Informazioni dettagliate sul gruppo di destinatari nelle app Dynamics 365 con questo componente aggiuntivo.
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792032"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904018"
 ---
 # <a name="customer-card-add-in-preview"></a>Componente aggiuntivo Scheda cliente (anteprima)
 
@@ -34,7 +34,7 @@ Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics
   - **Controllo delle misure**: Richiede [misure configurate](measures.md) di attributi del cliente tipo.
   - **Controllo dell'intelligenza**: Richiede dati generati utilizzando [previsioni](predictions.md) o [modelli personalizzati](custom-models.md).
   - **Controllo dei dettagli del cliente**: Tutti i campi del profilo sono disponibili nel profilo cliente unificato.
-  - **Controllo dell'arricchimento**: Richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili dei clienti. Il componente aggiuntivo relativo alle schede supporta questi arricchimenti: [Marchi](enrichment-microsoft.md) forniti da Microsoft, [Interessi](enrichment-microsoft.md) forniti da Microsoft.
+  - **Controllo dell'arricchimento**: Richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili dei clienti. Il componente aggiuntivo della scheda supporta questi arricchimenti: [Marchi](enrichment-microsoft.md) fornito da Microsoft, [Interessi](enrichment-microsoft.md) fornito da Microsoft e [Dati sull'engagement di Office](enrichment-office.md) fornito da Microsoft.
   - **Controllo dei contatti**: Richiede la definizione di un'entità semantica di tipo contacts.
   - **Controllo della timeline**: Richiede [attività configurate](activities.md).
 

@@ -1,7 +1,7 @@
 ---
 title: Connettersi a un account Azure Data Lake Storage utilizzando un'entità servizio
 description: Utilizza un'entità servizio di Azure per connetterti al data lake.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645177"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900263"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connettersi a un account Azure Data Lake Storage utilizzando un'entità servizio di Azure
 
-Gli strumenti automatizzati che usano i servizi di Azure deve avere sempre autorizzazioni limitate. Anziché avere applicazioni che accedono come utente con privilegi completi, Azure fornisce entità servizio. Questo articolo descrive come connettersi a Dynamics 365 Customer Insights con un account Azure Data Lake Storage utilizzando un'entità servizio di Azure anziché le chiavi dell'account di archiviazione. 
+Questo articolo spiega come connettersi a Dynamics 365 Customer Insights con un account Azure Data Lake Storage usando un'entità servizio di Azure anziché le chiavi dell'account di archiviazione. 
 
-Puoi utilizzare l'entità servizio per [aggiungere o modificare in modo sicuro una cartella Common Data Model come origine dati](connect-common-data-model.md), o per [creare o aggiornare un ambiente](create-environment.md).
+Gli strumenti automatizzati che usano i servizi di Azure deve avere sempre autorizzazioni limitate. Anziché avere applicazioni che accedono come utente con privilegi completi, Azure fornisce entità servizio. È possibile utilizzare entità servizio per [aggiungere o modificare una cartella Common Data Model come origine dati](connect-common-data-model.md) in modo sicuro o [creare o aggiornare un ambiente](create-environment.md).
 
 > [!IMPORTANT]
 > - L'account Data Lake Storage che utilizzerà l'entità servizio deve avere lo [spazio dei nomi gerarchico abilitato](/azure/storage/blobs/data-lake-storage-namespace).
-> - Per creare l'entità servizio, sono necessarie autorizzazioni di amministratore per la sottoscrizione di Azure.
+> - Sono necessarie le autorizzazioni di amministratore per la sottoscrizione di Azure per creare un'entità servizio.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Creare un'entità servizio di Azure per Customer Insights
 
-Prima di creare una nuova entità servizio per Informazioni dettagliate sul gruppo di destinatari o Informazioni dettagliate sull'interazione, controlla se esiste già nella tua organizzazione.
+Prima di creare una nuova entità servizio per Customer Insights, verifica se esiste già nell'organizzazione.
 
 ### <a name="look-for-an-existing-service-principal"></a>Cercare un'entità servizio esistente
 

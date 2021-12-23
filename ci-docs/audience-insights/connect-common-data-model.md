@@ -1,7 +1,7 @@
 ---
 title: Connettere i dati di Common Data Model a un account Azure Data Lake
 description: Utilizza i dati di Common Data Model con Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033131"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900202"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Connettere a una cartella Common Data Model usando un account Azure Data Lake
 
@@ -30,7 +30,7 @@ Questo articolo fornisce informazioni su come inserire dati di una cartella Comm
 
 - L'Azure Data Lake da cui intendi eseguire la connessione e inserire i dati deve trovarsi nella stessa area di Azure dell'ambiente Dynamics 365 Customer Insights. Le connessioni a una cartella di Common Data Model da un data lake in un'area diversa di Azure non sono supportate. Per conoscere l'area di Azure dell'ambiente, seleziona **Amministratore** > **Sistema** > **Informazioni** in Informazioni dettagliate sul gruppo di destinatari.
 
-- I dati memorizzati nei servizi online possono essere archiviati in una posizione diversa da quella in cui i dati vengono elaborati o archiviati in Dynamics 365 Customer Insights.Importando o connettendoti a dati archiviati nei servizi online, accetti che i dati possano essere trasferiti e archiviati con Dynamics 365 Customer Insights. [Altre informazioni sono disponibili nel Microsoft Trust Center.](https://www.microsoft.com/trust-center)
+- I dati memorizzati nei servizi online possono essere archiviati in una posizione diversa da quella in cui i dati vengono elaborati o archiviati in Dynamics 365 Customer Insights.Importando o connettendoti a dati archiviati nei servizi online, accetti che i dati possano essere trasferiti e archiviati con Dynamics 365 Customer Insights. [Altre informazioni sono disponibili nel Microsoft Trust Center.](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Connetti a cartella di Common Data Model
 
@@ -38,12 +38,11 @@ Questo articolo fornisce informazioni su come inserire dati di una cartella Comm
 
 1. Seleziona **Aggiungi origine dati**.
 
-1. Seleziona **Connetti a cartella di Common Data Model**, immetti un **Nome** per l'origine dati e seleziona **Avanti**. Linee guida per i nomi: 
-   - Deve iniziare con una lettera.
-   - Usa solo lettere e numeri. Gli spazi e i caratteri speciali non sono consentiti.
-   - Usa tra 3 e 64 caratteri.
+1. Seleziona **Azure Data Lake Storage**, immetti un **Nome** per l'origine dati, quindi seleziona **Avanti**.
 
-1. Puoi scegliere tra l'utilizzo di un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Informazioni dettagliate sul gruppo di destinatari a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Immetti le informazioni relative al **Contenitore** e seleziona **Avanti**.
+   - Se richiesto, seleziona uno dei set di dati di esempio relativi al tuo settore, quindi seleziona **Avanti**. 
+
+1. Puoi scegliere tra l'utilizzo di un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connettere Informazioni dettagliate sul gruppo di destinatari a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Inserisci l'**indirizzo del server**, seleziona **Accedi**, quindi seleziona **Avanti**.
    > [!div class="mx-imgBorder"]
    > ![Finestra di dialogo di immissione dei dettagli della nuova connessione per Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ Questo articolo fornisce informazioni su come inserire dati di una cartella Comm
    > [!NOTE]
    > Qualsiasi file model.json o manifest.json associato a un'altra origine dati nell'ambiente non verrà visualizzato nell'elenco.
 
-1. Otterrai un elenco di entità disponibili nel file model.json o manifest.json selezionato. Puoi rivedere e selezionare dall'elenco di entità disponibili e selezionare **Salva**. Tutte le entità selezionate verranno inserite dalla nuova origine dati.
+1. Vedrai un elenco di entità disponibili nel file model.json o manifest.json selezionato. Rivedi e seleziona dall'elenco delle entità disponibili, quindi seleziona **Salva**. Tutte le entità selezionate verranno inserite dalla nuova origine dati.
    > [!div class="mx-imgBorder"]
    > ![Finestra di dialogo che mostra un elenco di entità da un file model.json.](media/review-entities.png)
 
-8. Specifica le entità di dati per cui vuoi abilitare il profiling dei dati e seleziona **Salva**. Il profiling dei dati consente l'analisi e altre funzionalità. Puoi selezionare l'intera entità, che seleziona tutti gli attributi dall'entità, o selezionare alcuni attributi di tua scelta. Per impostazione predefinita, nessuna entità è abilitata per il profiling dei dati.
+8. Specifica le entità di dati per cui vuoi abilitare il profiling dei dati, quindi seleziona **Salva**. Il profiling dei dati consente l'analisi e altre funzionalità. Puoi selezionare l'intera entità, che seleziona tutti gli attributi dall'entità, o selezionare alcuni attributi di tua scelta. Per impostazione predefinita, nessuna entità è abilitata per il profiling dei dati.
    > [!div class="mx-imgBorder"]
    > ![Finestra di dialogo che mostra un profiling dei dati.](media/dataprofiling-entities.png)
 

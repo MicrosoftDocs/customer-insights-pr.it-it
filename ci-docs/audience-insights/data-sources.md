@@ -1,7 +1,7 @@
 ---
 title: Utilizzare origini dati per inserire dati
 description: Scopri come importare dati da varie origini.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732147"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900364"
 ---
 # <a name="data-sources-overview"></a>Panoramica delle origini dati
 
@@ -25,19 +25,22 @@ La funzionalità Informazioni dettagliate sul gruppo di destinatari in Dynamics 
 
 ## <a name="add-a-data-source"></a>Aggiungi un'origine dati
 
-Fai riferimento agli articoli dettagliati su come aggiungere un'origine dati, a seconda dell'opzione scelta.
+Fare riferimento agli articoli dettagliati su come aggiungere un'origine dati, a seconda dell'opzione scelta.
 
-Puoi aggiungere un'origine dati in tre modi principali:
+È possibile aggiungere le seguenti origini dati:
 
-- [Attraverso dozzine di connettori Power Query](connect-power-query.md)
-- [Da una cartella di Common Data Model](connect-common-data-model.md)
-- [Dal tuo lake Microsoft Dataverse](connect-dataverse-managed-lake.md)
+- [Connettori Power Query](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse lake](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Se stai utilizzando la versione di prova, la sezione dei metodi di importazione include un'opzione **Raccolta dati di Customer Insights**. Scegli questa opzione per selezionare un campione di set di dati disponibile per vari settori. Per ulteriori informazioni, vedi la [versione di valutazione di Dynamics 365 Customer Insights](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Aggiungere dati dalle origini dati locale
 
-L'inserimento di dati da origini dati locale in informazioni dettagliate gruppo di destinatari è supportata in base ai flussi di dati Microsoft Power Platform. I flussi di dati possono essere abilitati in Customer Insights [fornendo l'URL dell'ambiente Microsoft Dataverse](create-environment.md) quando si imposta l'ambiente.
+L'inserimento di dati da origini dati locale in informazioni dettagliate gruppo di destinatari è supportata in base ai flussi di dati Microsoft Power Platform. Puoi abilitare i flussi di dati in Customer Insights [fornendo l'URL dell'ambiente Microsoft Dataverse](create-environment.md) quando si allestisce l'ambiente.
 
-Le origini dati create dopo l'associazione di un ambiente Dataverse con Customer Insights utilizzeranno i [flussi di dati Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per impostazione predefinita. I flussi di dati supportano la connettività locale utilizzando il gateway di dati. Rimuovi e ricrea le origini dati che esistevano prima che un ambiente Dataverse fosse associato per [utilizzare i gateway di dati locale](/data-integration/gateway/service-gateway-app).
+Le origini dati che vengono create dopo aver associato un ambiente Dataverse con Customer Insights usano [flussi di dati Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per impostazione predefinita. I flussi di dati supportano la connettività locale utilizzando il gateway di dati. Puoi rimuovere e ricreare origini dati che esistevano prima dell'associazione dell'ambiente Dataverse [utilizzando i gateway dati locali](/data-integration/gateway/service-gateway-app).
 
 I gateway dati di un ambiente esistente Power BI o Power Apps saranno visibili e potrai riutilizzarli in Customer Insights. La pagina delle origini dati mostra i collegamenti per andare all'ambiente Microsoft Power Platform in cui è possibile visualizzare e configurare i gateway dati locale.
 
