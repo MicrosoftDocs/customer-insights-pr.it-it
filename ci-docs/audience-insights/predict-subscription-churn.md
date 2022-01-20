@@ -1,5 +1,5 @@
 ---
-title: Previsione dell'abbandono della sottoscrizione (video)
+title: Previsione dell'abbandono dell'abbonamento (video)
 description: Prevedi se esiste il rischio che un cliente non utilizzi più i prodotti o i servizi relativi all'abbonamento della società.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903994"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967706"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsione di abbandono dell'abbonamento (anteprima)
 
@@ -77,7 +77,7 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
 1. Immetti un valore in **Giorni dalla fine dell'abbonamento** dopo il quale la tua azienda considera il cliente come perso. Questo periodo è in genere apprezzato da attività commerciali come offerte o altre attività di marketing che cercano di prevenire la perdita del cliente.
 1. Immetti il numero di **Giorni futuri da considerare per prevedere l'abbandono** per impostare una finestra per la quale prevedere l'abbandono. Ad esempio, per prevedere il rischio di abbandono dei tuoi clienti nei prossimi 90 giorni per allinearti agli sforzi di fidelizzazione del reparto marketing. Prevedere il rischio di abbandono per periodi di tempo più o meno lunghi può rendere più difficile risolvere i fattori nel profilo di rischio di abbandono, a seconda dei requisiti aziendali specifici. Seleziona **Avanti** per continuare
    >[!TIP]
-   > Puoi selezionare **Salva e chiudi** in qualsiasi momento per salvare la previsione come bozza. La previsione della bozza è disponibile nella scheda **Le mie previsioni** per continuare.
+   > Puoi selezionare **Salva la bozza** in qualsiasi momento per salvare la previsione come bozza. La previsione della bozza è disponibile nella scheda **Le mie previsioni** per continuare.
 
 ### <a name="add-required-data"></a>Aggiungi dati obbligatori
 

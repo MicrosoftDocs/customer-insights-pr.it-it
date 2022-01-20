@@ -1,7 +1,7 @@
 ---
-title: Componente aggiuntivo scheda cliente per Dynamics 365 (Video)
+title: Componente aggiuntivo scheda cliente per Dynamics 365 (video)
 description: Mostra i dati di Informazioni dettagliate sul gruppo di destinatari nelle app Dynamics 365 con questo componente aggiuntivo.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904018"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945432"
 ---
 # <a name="customer-card-add-in-preview"></a>Componente aggiuntivo Scheda cliente (anteprima)
 
@@ -27,12 +27,12 @@ Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Il componente aggiuntivo funziona solo con le app Dynamics 365 basate su modello, come Sales o Customer Service, versione 9.0 e successive.
-- Affinché i vostri dati Dynamics 365 siano mappati ai profili dei clienti di approfondimenti sul pubblico, devono essere [ingeriti dall'applicazione Dynamics 365 utilizzando il connettore Microsoft Dataverse ](connect-power-query.md).
+- Affinché i dati di Dynamics 365 vengano mappati ai profili clienti informazioni dettagliate sul gruppo di destinatari, consigliamo di [importarli dall'app Dynamics 365 utilizzando il connettore Microsoft Dataverse](connect-power-query.md). Se utilizzi un metodo diverso per importare i contatti (o gli account) di Dynamics 365, devi assicurarti che il campo `contactid` (o `accountid`) sia impostato come [chiave primaria per l'origine dati nel passaggio della mappa del processo di unificazione dei dati](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Tutti gli utenti Dynamics 365 del componente aggiuntivo Customer Card devono essere [aggiunti come utenti](permissions.md) in Informazioni dettagliate sul gruppo di destinatari per vedere i dati.
 - [Le funzionalità di ricerca e filtro configurate](search-filter-index.md) in Informazioni dettagliate sul gruppo di destinatari sono necessarie affinché la ricerca dei dati funzioni.
 - Ogni controllo add-in si basa su dati specifici in approfondimenti sul pubblico. Alcuni dati e controlli sono disponibili solo in ambienti di tipo specifico. La configurazione dell'add-in vi informerà se un controllo non è disponibile a causa del tipo di ambiente selezionato. Per saperne di più sui [casi d'uso dell'ambiente](work-with-business-accounts.md).
   - **Controllo delle misure**: Richiede [misure configurate](measures.md) di attributi del cliente tipo.
-  - **Controllo dell'intelligenza**: Richiede dati generati utilizzando [previsioni](predictions.md) o [modelli personalizzati](custom-models.md).
+  - **Controllo intelligente**: richiede dati generati utilizzando [previsioni o modelli personalizzati](predictions-overview.md).
   - **Controllo dei dettagli del cliente**: Tutti i campi del profilo sono disponibili nel profilo cliente unificato.
   - **Controllo dell'arricchimento**: Richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili dei clienti. Il componente aggiuntivo della scheda supporta questi arricchimenti: [Marchi](enrichment-microsoft.md) fornito da Microsoft, [Interessi](enrichment-microsoft.md) fornito da Microsoft e [Dati sull'engagement di Office](enrichment-office.md) fornito da Microsoft.
   - **Controllo dei contatti**: Richiede la definizione di un'entità semantica di tipo contacts.

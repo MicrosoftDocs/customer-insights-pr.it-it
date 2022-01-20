@@ -1,7 +1,7 @@
 ---
 title: Previsione di raccomandazioni sui prodotti
 description: Prevedi i prodotti che è probabile che un cliente acquisterà o con cui interagirà.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494544"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967799"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Previsione di raccomandazioni sui prodotti (anteprima)
 
@@ -79,11 +79,11 @@ Se sei interessato a provare questa funzionalità ma non hai i dati per completa
 1. Imposta il **Numero di prodotti** che vuoi consigliare a un cliente. Questo valore dipende da come il metodo di consegna inserisce i dati. Se puoi consigliare tre prodotti, imposta questo valore di conseguenza.
    
    >[!TIP]
-   > Puoi selezionare **Salva e chiudi** in qualsiasi momento per salvare la previsione come bozza. Troverai la bozza di previsione nella scheda **Le mie previsioni**.
+   > Puoi selezionare **Salva la bozza** in qualsiasi momento per salvare la previsione come bozza. Troverai la bozza di previsione nella scheda **Le mie previsioni**.
 
-1. Scegli se **Suggerire prodotti acquistati di recente dai clienti**.
+1. Scegli se desideri includere i prodotti che i clienti hanno acquistato di recente nel campo **Ripetizione degli acquisti prevista**.
 
-1. Se hai scelto di *non* consigliare i prodotti acquistati di recente, imposta la **Finestra per guardare indietro**. Questa impostazione specifica il intervallo di tempo che il modello considera prima di consigliare nuovamente il prodotto all'utente. Ad esempio, indica che un cliente acquista un laptop ogni due anni. Questa finestra esaminerà la cronologia degli acquisti degli ultimi due anni e, se trova un articolo, l'elemento verrà filtrato dagli elementi consigliati.
+1. Imposta la **Finestra per guardare indietro**. Questa impostazione specifica il intervallo di tempo che il modello considera prima di consigliare nuovamente il prodotto all'utente. Ad esempio, indica che un cliente acquista un laptop ogni due anni. Questa finestra esaminerà la cronologia degli acquisti degli ultimi due anni e, se trova un articolo, l'elemento verrà filtrato dagli elementi consigliati.
 
 1. Selezionare **Avanti**.
 

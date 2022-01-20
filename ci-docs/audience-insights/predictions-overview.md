@@ -1,21 +1,20 @@
 ---
 title: Panoramica sugli scenari di previsione supportati
 description: Scenari e opzioni di previsione coperti dall'applicazione Dynamics 365 Customer Insights.
-ms.date: 09/06/2021
+ms.date: 12/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: get-started
+ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673967"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7978018"
 ---
 # <a name="predictions-overview"></a>Panoramica delle previsioni
 
@@ -31,6 +30,7 @@ Il modo più semplice per iniziare con la previsione dei dati sono i modelli pre
 - [Raccomandazione del prodotto](predict-product-recommendation.md): suggerisce set di raccomandazioni predittive sui prodotti in base al comportamento di acquisto e ai clienti con modelli di acquisto simili.
 - [Abbandono dell'abbonamento](predict-subscription-churn.md): prevede se un cliente è a rischio perché non utilizza più i prodotti o i servizi in abbonamento della società.
 - [Abbandono transazionale](predict-transactional-churn.md): prevede se un cliente non acquisterà più i tuoi prodotti o servizi in un determinato intervallo di tempo.
+- [Analisi valutazione](sentiment-analysis.md): analizza la valutazione del feedback dei clienti e identifica gli aspetti aziendali che vengono citati frequentemente.
 
 # <a name="business-accounts-b-to-b"></a>[Account aziendali (da B a B)](#tab/b2b)
 

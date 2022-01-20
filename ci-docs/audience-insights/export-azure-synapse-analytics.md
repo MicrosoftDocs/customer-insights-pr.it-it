@@ -1,7 +1,7 @@
 ---
 title: Esportare i dati di Customer Insights in Azure Synapse Analytics
 description: Scopri come configurare la connessione ed esportare in Azure Synapse Analytics
-ms.date: 04/12/2021
+ms.date: 01/05/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f206043298bdbf8a84b0ef37b47a43290653beba7d3d0e8b807ec74513614aa8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
+ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031938"
+ms.lasthandoff: 01/10/2022
+ms.locfileid: "7951047"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Esportare i dati in Azure Synapse Analytics (anteprima)
 
@@ -49,6 +49,8 @@ In Azure:
 
 ### <a name="configure-a-connection"></a>Configurare una connessione
 
+Per creare una connessione, l'entità servizio e l'account utente in Customer Insights hanno bisogno delle autorizzazioni **Lettore** per il *gruppo di risorse* dove si trova l'area di lavoro Synapse Analytics. Inoltre, l'entità servizio e l'utente nell'area di lavoro Synapse Analytics hanno bisogno delle autorizzazioni **Amministratore Synapse**. 
+
 1. Vai ad **Amministratore** > **Connessioni**.
 
 1. Seleziona **Aggiungi connessione** e scegli **Azure Synapse Analytics** o seleziona **Imposta** nel riquadro **Azure Synapse Analytics** per configurare la connessione.
@@ -63,7 +65,7 @@ In Azure:
 
 ### <a name="configure-an-export"></a>Configurare un'esportazione
 
-Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per ulteriori informazioni, vedi [autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
+Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per configurare l'esportazione con una connessione condivisa, sono necessarie almeno le autorizzazioni **Collaboratore** in Customer Insights. Per ulteriori informazioni, vedi [autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
 
 1. Vai a **Dati** > **Esportazioni**.
 
@@ -82,6 +84,8 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.
 
 L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand).
+
+Per eseguire query sui dati esportati in Synapse Analytics, è necessario l'accesso **Lettore dati del BLOB di archiviazione** all'archiviazione di destinazione nell'area di lavoro delle esportazioni. 
 
 ### <a name="update-an-export"></a>Aggiornare un'esportazione
 

@@ -1,7 +1,7 @@
 ---
 title: Previsione dell'abbandono delle transazioni (video)
 description: Determina se esiste il rischio che un cliente non acquisti più i tuoi prodotti o servizi.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904077"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967752"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Previsione del churn delle transazioni (anteprima)
 
@@ -103,25 +103,25 @@ Per gli ambienti basati su conti commerciali, possiamo prevedere il churn transa
 
 1. Seleziona il riquadro **Modello di abbandono dei cliente (anteprima)** e seleziona **Utilizza questo modello**.
 
-1. Nel riquadro del **modello di rotazione dei clienti** , scegliete **Transazione** e selezionate **Inizia**.
+1. Nel riquadro **Modello di abbandono del cliente (anteprima)**, scegli **Transazione** e seleziona **Inizia**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Schermata con l'opzione di transazione selezionata nel riquadro del modello di rotazione dei clienti.":::
-
+ 
 ### <a name="name-model"></a>Assegna nome a modello
 
 1. Specifica un nome per il modello per distinguerlo dagli altri modelli.
 
 1. Specifica un nome per l'entità di output utilizzando solo lettere e numeri, senza spazi. Questo è il nome che verrà utilizzato dall'entità modello. 
 
-1. Seleziona **Avanti**.
+1. Selezionare **Avanti**.
 
 ### <a name="define-customer-churn"></a>Definisci abbandono cliente
 
-1. Imposta un periodo in giorni per la previsione dell'abbandono nel campo **Identifica i clienti che potrebbero abbandonare nei prossimi/nelle prossime**. Ad esempio, prevedi il rischio di abbandono dei clienti nei prossimi 90 giorni per allinearti agli sforzi di fidelizzazione del marketing. La previsione del rischio di abbandono per un periodo di tempo più o meno lungo può rendere più difficile prendere in considerazione i fattori nel profilo di rischio di abbandono, ma dipende dalle esigenze aziendali specifiche.
+1. Imposta la **finestra Previsione**. Ad esempio, prevedi il rischio di abbandono dei clienti nei prossimi 90 giorni per allinearti agli sforzi di fidelizzazione del marketing. La previsione del rischio di abbandono per un periodo di tempo più o meno lungo può rendere più difficile prendere in considerazione i fattori nel profilo di rischio di abbandono, ma dipende dalle esigenze aziendali specifiche.
    >[!TIP]
-   > Puoi selezionare **Salva e chiudi** in qualsiasi momento per salvare la previsione come bozza. La previsione della bozza è disponibile nella scheda **Le mie previsioni** per continuare.
+   > Puoi selezionare **Salva la bozza** in qualsiasi momento per salvare la previsione come bozza. La previsione della bozza è disponibile nella scheda **Le mie previsioni** per continuare.
 
-1. Immetti il numero di giorni per definire l'abbandono nel campo **Un cliente ha abbandonato se non ha effettuato alcun acquisto per**. Ad esempio, se un cliente non ha effettuato acquisti negli ultimi 30 giorni, potrebbe essere considerato come perso per la tua attività. 
+1. Immetti il numero di giorni per definire l'abbandono nel campo **Definizione abbandono**. Ad esempio, se un cliente non ha effettuato acquisti negli ultimi 30 giorni, potrebbe essere considerato come perso per la tua attività. 
 
 1. Selezionare **Avanti** per continuare.
 
@@ -129,19 +129,16 @@ Per gli ambienti basati su conti commerciali, possiamo prevedere il churn transa
 
 1. Seleziona **Aggiungi dati** e scegli il tipo di impegno nel riquadro laterale che contiene la transazione richiesta o le informazioni sulla cronologia degli acquisti.
 
-1. In **Scegli impegni** seleziona gli impegni specifici dall'impegno selezionato su cui desideri che il calcolo si concentri.
+1. Sotto **Seleziona impegni**, scegli gli impegni specifici dal tipo di impegno selezionato su cui desideri attivare il calcolo.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Riquadro laterale che mostra la scelta di impegni specifici nel tipo semantico.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Riquadro laterale che mostra la scelta di impegni specifici nel tipo semantico.":::
 
-1. Se non hai ancora mappato l'attività su un tipo semantico, seleziona **Modifica** per farlo. Si apre l'esperienza guidata per mappare gli impegni semantici. Mappa i tuoi dati ai campi corrispondenti nel tipo di impegno selezionato.
+   Se non hai ancora mappato l'attività su un tipo semantico, seleziona **Modifica** per farlo. Si apre l'esperienza guidata per mappare gli impegni semantici. Mappa i tuoi dati ai campi corrispondenti nel tipo di impegno selezionato.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Pagina di impostazione del tipo di impegno.":::
+1. Mappa gli attributi semantici ai campi necessari per eseguire il modello. Se i campi sottostanti non sono popolati, configurare la relazione tra l'entità storia degli acquisti e l'entità *Cliente* . Seleziona **Salva**.
 
-1. Dopo aver mappato l'impegno sul tipo semantico corrispondente, seleziona **Avanti** per procedere
+1. Nel passaggio **Aggiungi dati obbligatori** seleziona **Avanti** per procedere se non vuoi aggiungere altre attività.
 
-1. Mappa gli attributi semantici ai campi necessari per eseguire il modello. Se i campi sottostanti non sono popolati, configurare la relazione tra l'entità storia degli acquisti e l'entità *Cliente* .
-
-1. Selezionare **Avanti**.
 
 # <a name="individual-consumers-b-to-c"></a>[Singoli utenti (da B a C)](#tab/b2c)
 

@@ -1,7 +1,7 @@
 ---
 title: Arricchimento per l'ottimizzazione degli indirizzi (video)
 description: Arricchisci e normalizza le informazioni sugli indirizzi dei profili dei clienti con i modelli Microsoft.
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 2158d80aa088c5bf8589fb7d23586496e2d8b855
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903955"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934928"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Arricchimento dei profili dei clienti con indirizzi avanzati
 
@@ -101,6 +101,16 @@ Per avviare il processo di arricchimento, seleziona **Esegui** dalla barra dei c
 Al termine del processo di arricchimento, puoi rivedere i dati dei profili cliente appena arricchiti in **I miei arricchimenti**. Inoltre, troverai l'ora dell'ultimo aggiornamento e il numero di profili arricchiti.
 
 Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito selezionando **Visualizza dati arricchiti**.
+
+### <a name="overview-card"></a>Scheda panoramica
+
+La scheda panoramica mostra i dettagli sulla copertura dell'arricchimento. 
+
+* **Clienti elaborati e modificati**: il numero di profili cliente che sono stati arricchiti.
+
+* **Clienti elaborati e non modificati**: il numero di profili cliente che sono stati riconosciuti ma non modificati. In genere si verifica quando i dati di input sono validi e non possono essere migliorati dall'arricchimento.
+
+* **Clienti non elaborati e non modificati**: il numero di profili che non sono stati riconosciuti. Solitamente sono dati di input non validi o non supportati dall'arricchimento.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
