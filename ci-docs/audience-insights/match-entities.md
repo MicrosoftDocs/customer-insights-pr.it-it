@@ -1,7 +1,7 @@
 ---
 title: Mettere in corrispondenza le entità per l'unificazione dei dati
 description: Metti in corrispondenza le entità per creare profili cliente unificati.
-ms.date: 11/24/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863816"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>Mettere in corrispondenza le entità
 
 La fase di corrispondenza specifica in che modo combinare i set di dati in un profilo cliente unificato. Dopo aver completato il [passaggio della mappa](map-entities.md) nel processo di unificazione dei dati, sei pronto per corrispondere le tue entità. La fase di corrispondenza richiede almeno due entità mappate.
@@ -35,7 +30,7 @@ Ogni corrispondenza unifica due o più entità in un'unica entità consolidata. 
 
 :::image type="content" source="media/match-page.png" alt-text="Screenshot della pagina Corrispondenza nell'area Unifica del processo di unificazione dei dati.":::
   
-L'entità primaria *eCommerce: eCommerceContacts* è corrisposta all'entità successiva *LoyaltyScheme: loyCustomers*. Il set di dati che risulta dal primo passaggio di corrispondenza viene corrisposto alla seguente entità se hai più di due entità.
+L'entità primaria *eCommerce: eCommerceContacts* è corrisposta all'entità successiva *LoyaltyScheme: loyCustomers*. Il set di dati che risulta dal primo passaggio di corrispondenza viene confrontato con l'entità seguente se hai più di due entità.
 
 > [!IMPORTANT]
 > L'entità che scegli come tua entità primaria servirà come base per il set di dati profili unificato. Altre entità selezionate durante la fase di corrispondenza verranno aggiunte a questa entità. Ciò non significa che l'entità unificata includerà *tutti* i dati inclusi in questa entità.
@@ -130,17 +125,21 @@ Non è obbligatorio specificare regole di deduplicazione. Se tali regole non ven
 
 1. Vai a **Dati** > **Unifica** > **Corrispondenza**.
 
-1. Nella sezione **Duplicati uniti**, seleziona **Imposta entità**. Nel caso in cui le regole di deduplicazione siano già state create, seleziona **Modifica**.
+1. Nella sezione **Dettagli record deduplicati**, seleziona **Imposta entità**. Nel caso in cui le regole di deduplicazione siano già state create, seleziona **Modifica**.
 
 1. Nel riquadro **Preferenze di unione**, seleziona le entità in cui desideri eseguire la deduplicazione.
 
-1. Specifica come combinare i record duplicati e scegli una delle tre opzioni:
-   - **Con più dati**: identifica il record con i campi di attributo con più dati come record vincitore. È l'opzione di unione predefinita.
-   - **Piu recente**: il record vincitore è quello più recente. Richiede una data o un campo numerico per definire la recency.
-   - **Meno recente**: il record vincitore è quello meno recente. Richiede una data o un campo numerico per definire la recency.
+   1. Specifica come combinare i record duplicati e scegli una delle tre opzioni:
+      - **Con più dati**: identifica il record con i campi di attributo con più dati come record vincitore. È l'opzione di unione predefinita.
+      - **Piu recente**: il record vincitore è quello più recente. Richiede una data o un campo numerico per definire la recency.
+      - **Meno recente**: il record vincitore è quello meno recente. Richiede una data o un campo numerico per definire la recency.
+
+   1. Facoltativamente, seleziona **Avanzate** per definire regole di deduplicazione sui singoli attributi di un'entità. Ad esempio, puoi scegliere di conservare il messaggio e-mail più recente E l'indirizzo più completo da record diversi. Espandi l'entità per vedere tutti i suoi attributi e definisci quale opzione utilizzare per i singoli attributi. Se scegli un'opzione basata sulla recency, devi anche specificare un campo data/ora che definisca la recency. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Passaggio 1 delle regole di deduplicazione.](media/match-selfconflation.png "Passaggio 1 delle regole di deduplicazione")
+      > [!div class="mx-imgBorder"]
+      > ![Passaggio 1 delle regole di deduplicazione.](media/match-selfconflation.png "Passaggio 1 delle regole di deduplicazione")
+
+   1. Seleziona **Fatto** per applicare le tue preferenze di unione per la deduplicazione.
  
 1. Una volta selezionate le entità e impostata la relativa preferenza di unione, seleziona **Aggiungi regola** per definire le regole di deduplicazione a livello di entità.
    - **Seleziona campo** elenca tutti i campi disponibili da quell'entità. Scegli il campo in cui desideri verificare la presenza di duplicati. Scegli campi che sono probabilmente univoci per ogni singolo cliente. Ad esempio, un indirizzo e-mail o la combinazione di nome, città e numero di telefono.
@@ -158,7 +157,7 @@ Non è obbligatorio specificare regole di deduplicazione. Se tali regole non ven
 
 1. Qualsiasi regola di corrispondenza personalizzata definita sovrascrive le regole di deduplicazione. Se una regola di deduplicazione identifica i record corrispondenti e una regola di corrispondenza personalizzata è impostata per non corrispondere mai a tali record, questi due record non corrisponderanno.
 
-1. Dopo l'[esecuzione del processo di corrispondenza](#run-the-match-process), vedrai le statistiche di deduplicazione nei riquadri delle metriche chiave.
+1. Dopo aver [eseguito il processo di corrispondenza](#run-the-match-process), vedrai le statistiche di deduplicazione nei riquadri delle metriche chiave.
 
 ### <a name="deduplication-output-as-an-entity"></a>Output di deduplicazione come entità
 
@@ -222,7 +221,23 @@ Puoi riconfigurare e ottimizzare la maggior parte dei parametri di corrispondenz
 
 - **Elimina una regola** selezionando il simbolo **Elimina**.
 
-## <a name="specify-custom-match-conditions"></a>Specificare le condizioni di corrispondenza personalizzate
+## <a name="advanced-options"></a>Opzioni avanzate
+
+### <a name="add-exceptions-to-a-rule"></a>Aggiungere eccezioni a una regola
+
+Nella maggior parte dei casi, la corrispondenza delle entità porta a profili utente univoci con dati consolidati. Per affrontare in modo dinamico rari casi di falsi positivi e falsi negativi, puoi definire eccezioni per una regola di corrispondenza. Le eccezioni vengono applicate dopo l'elaborazione delle regole di corrispondenza ed evitano la corrispondenza di tutti i record, che soddisfano i criteri di eccezione.
+
+Ad esempio, se la tua regola di corrispondenza combina cognome, città e data di nascita, il sistema identificherà i gemelli con lo stesso cognome che vivono nella stessa città con lo stesso profilo. Puoi specificare un'eccezione che non corrisponde ai profili se i nomi nelle entità combinate non sono gli stessi.
+
+1. Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Modifica** nella regola a cui vuoi aggiungere condizioni.
+
+1. Nel riquadro **Modifica regola**, seleziona **Aggiungi eccezione**.
+
+1. Specifica i criteri di eccezione. 
+
+1. Seleziona **Fatto** in modo da salvare la regola.
+
+### <a name="specify-custom-match-conditions"></a>Specificare le condizioni di corrispondenza personalizzate
 
 È possibile specificare condizioni che sovrascrivono la logica di corrispondenza predefinita. Le opzioni disponibili sono quattro: 
 
@@ -241,7 +256,7 @@ Puoi riconfigurare e ottimizzare la maggior parte dei parametri di corrispondenz
 
 1. Scegli l'opzione di corrispondenza personalizzata nel menu a discesa **Tipo personalizzato** e seleziona **Scarica modello**. Hai bisogno di un modello separato per ogni opzione di corrispondenza.
 
-1. Viene scaricato un file di modello. Aprilo e inserisci i dettagli. Il modello contiene campi per specificare l'entità e i valori della chiave primaria dell'entità da utilizzare nella corrispondenza personalizzata. Ad esempio, se desideri la chiave primaria *12345* dall'entità *Vendite* in modo che corrisponda sempre alla chiave primaria *34567* dall'entità *Contatto*, compila il modello:
+1. Apri il file modello scaricato e inserisci i dettagli. Il modello contiene campi per specificare l'entità e i valori della chiave primaria dell'entità da utilizzare nella corrispondenza personalizzata. Ad esempio, se desideri la chiave primaria *12345* dall'entità *Vendite* in modo che corrisponda sempre alla chiave primaria *34567* dall'entità *Contatto*, compila il modello:
     - Entity1: Vendite
     - Entity1Key: 12345
     - Entity2: Contatto
@@ -268,7 +283,7 @@ Puoi riconfigurare e ottimizzare la maggior parte dei parametri di corrispondenz
 
 1. Seleziona **Esegui** nella pagina **Corrispondenza** per avviare il processo di corrispondenza. Altre regole di corrispondenza specificate vengono sovrascritte dalla configurazione di corrispondenza personalizzata.
 
-### <a name="known-issues"></a>Problemi noti
+#### <a name="known-issues"></a>Problemi noti
 
 - L'autoconflazione non mostra i dati normalizzati nelle entità di deduplicazione. Tuttavia, applica la normalizzazione internamente durante la deduplicazione. È progettata per tutte le normalizzazioni. 
 - Se l'impostazione del tipo semantico viene rimossa nella fase **Mapping** quando una regola di corrispondenza utilizza le opzioni Mapping alias o Ignora personalizzato, la normalizzazione non verrà applicata. Ciò accade solo se si cancella il tipo semantico dopo aver configurato la normalizzazione nella regola di corrispondenza perché il tipo semantico sarà sconosciuto.

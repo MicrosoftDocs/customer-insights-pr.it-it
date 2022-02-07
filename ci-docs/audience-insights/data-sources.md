@@ -9,22 +9,17 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 78379c827e132b3b172aa7381f4c5ef2c70b9771
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977834"
 ---
+
 # <a name="data-sources-overview"></a>Panoramica delle origini dati
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 La funzionalità Informazioni dettagliate sul gruppo di destinatari in Dynamics 365 Customer Insights si connette ai dati da un ampio insieme di origini. La connessione a un'origine dati viene spesso definita processo di *inserimento dati*. Dopo aver inserito i dati, puoi [unificare](data-unification.md) e agire su di essi.
 
 ## <a name="add-a-data-source"></a>Aggiungi un'origine dati
 
-Fare riferimento agli articoli dettagliati su come aggiungere un'origine dati, a seconda dell'opzione scelta.
+Fai riferimento agli articoli dettagliati su come aggiungere un'origine dati, a seconda dell'opzione scelta.
 
 È possibile aggiungere le seguenti origini dati:
 

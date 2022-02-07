@@ -1,7 +1,7 @@
 ---
 title: Unire entità nel processo di unificazione dei dati
 description: Unisci entità per creare profili cliente unificati.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732777"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Gestire entità
 
 La fase di unione è l'ultima fase del processo di unificazione dei dati. Il suo scopo è la riconciliazione di dati in conflitto. Esempi di dati in conflitto potrebbero includere il nome di un cliente che si trova in due dei tuoi set di dati ma si presenta in modo leggermente diverso in ciascuno ("Grant Marshall" rispetto a "Grant Marshal") o un numero di telefono che differisce nel formato (617-803-091X rispetto a 617803091X). L'unione di tali punti di dati in conflitto viene eseguita in base all'attributo per attributo.
@@ -99,11 +94,13 @@ Nella pagina **Unisci** seleziona **Campi esclusi** per vedere l'elenco di tutti
 
 1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche. 
 
-## <a name="manually-combine-fields"></a>Combinare manualmente i campi
+## <a name="combine-fields-manually"></a>Combinare i campi manualmente
 
-Specifica manualmente un attributo unito. 
+Specifica manualmente un attributo unito.
 
-1. Nella pagina **Unisci** seleziona **Combina campi**.
+1. Nella pagina **Unisci**, seleziona **Combina**.
+
+1. Scegli l'opzione **Campi**.
 
 1. Specifica i criteri prevalenti dell'unione nell'elenco a discesa **Combina campi per**.
 
@@ -114,6 +111,26 @@ Specifica manualmente un attributo unito.
 1. Seleziona **Fatto** per applicare le modifiche.
 
 1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche. 
+
+## <a name="combine-a-group-of-fields"></a>Combinare un gruppo di campi
+
+Considera un gruppo di campi come una singola unità. Ad esempio, se i nostri record contengono i campi Indirizzo1, Indirizzo2, Città, Stato e CAP. Probabilmente non vogliamo unire l'indirizzo 2 di un record diverso, pensando che renderebbe i nostri dati più completi
+
+1. Nella pagina **Unisci**, seleziona **Combina**.
+
+1. Scegli l'opzione **Gruppo di campi**.
+
+1. Specifica i criteri prevalenti dell'unione nell'elenco a discesa **Classifica gruppi per**.
+
+1. Seleziona **Aggiungi** e scegli se vuoi aggiungere più campi o gruppi aggiuntivi ai campi.
+
+1. Fornire un **Nome** e un **Nome di output** per ogni campo combinato.
+
+1. Specifica un **nome** per il gruppo di campi. 
+
+1. Seleziona **Fatto** per applicare le modifiche.
+
+1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche.
 
 ## <a name="change-the-order-of-fields"></a>Modificare l'ordine dei campi
 

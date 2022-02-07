@@ -1,7 +1,7 @@
 ---
 title: Funzionalità nuove e future
-description: Informazioni su nuove funzionalità, miglioramenti e correzioni di bug.
-ms.date: 12/02/2021
+description: 'Informazioni su nuove funzionalità, miglioramenti e correzioni di bug.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884267"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novità della funzionalità Informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Siamo lieti di annunciare i nuovissimi aggiornamenti. Questo articolo riassume le funzionalità con anteprima pubblica, i miglioramenti della disponibilità generale e gli aggiornamenti delle funzionalità. Per vedere i piani delle funzionalità a lungo termine, dai un'occhiata ai [piani di rilascio di Dynamics 365 e Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Gli aggiornamenti vengono implementati in base all'area geografica. Quindi alcun
 
 > [!TIP]
 > Per inviare e votare funzionalità richieste e suggerimenti di prodotto, vai al [portale Ideas dell'applicazione Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Aggiornamenti di dicembre 2021
+
+Gli aggiornamenti di dicembre 2021 includono nuove funzionalità, aggiornamenti delle prestazioni e correzioni di bug.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Inoltrare i log di Customer Insights a Monitoraggio di Azure
+
+Customer Insights fornisce un'integrazione diretta con Monitoraggio di Azure. Questa funzionalità include eventi di controllo ed eventi operativi. I log delle risorse di Monitoraggio di Azure consentono di monitorare e inviare i log ad Archiviazione di Azure, Azure Log Analytics o di trasmetterli in streaming su Hub eventi di Azure.
+
+Per altre informazioni, vedi [Inoltro del log in Dynamics 365 Customer Insights con Monitoraggio di Azure (anteprima)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Arricchire i profili dei clienti con i dati sull'interazione
+
+Usa i dati di Microsoft Office 365 per arricchire i profili del tuo account cliente con approfondimenti sul coinvolgimento attraverso app di Office 365. I dati sull'interazione sono costituiti da e-mail e attività di riunione, che vengono aggregati a livello di account. Ad esempio, il numero di e-mail da un account aziendale o il numero di riunioni con l'account. Non vengono condivisi dati sui singoli utenti. Questo arricchimento è disponibile solo nelle aree: UK, Europa e Nord America.
+
+Per altre informazioni, vedi [Arricchire i profili dei clienti con i dati sull'interazione (anteprima)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Funzionalità avanzate di unificazione dei dati
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Abilitare i criteri di risoluzione dei conflitti a livello di singolo attributo
+
+Quando si deduplicano i record dei clienti all'interno di un'entità, potrebbe non essere necessario scegliere un record completo come vincitore. Ora è possibile unire i campi migliori da vari record in base a regole per ogni attributo. Ad esempio, puoi scegliere di conservare il messaggio e-mail più recente E l'indirizzo più completo da record diversi. 
+
+Puoi ora definire regole di unione separate per i singoli attributi durante la deduplicazione e l'unione di record all'interno di una singola entità. In precedenza, veniva consentito di selezionare solo una singola regola di unione (conservando i record in base alla completezza dei dati recenti) e tale regola veniva applicata a livello di record a tutti gli attributi. Non è l'ideale quando alcuni dei dati che desideri conservare si trovano nel record A e altri dati validi nel record B.
+
+Per ulteriori informazioni, vedi [Definire la deduplicazione in un'entità di corrispondenza ](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Regole personalizzate per la corrispondenza
+
+Ci sono momenti in cui è necessario specificare un'eccezione alle regole generali per NON far corrispondere i record. Ciò può accadere quando più individui condividono informazioni sufficienti in modo che il sistema li abbini come un singolo individuo. Ad esempio, gemelli con lo stesso cognome, che vivono nella stessa città e condividono la data di nascita.
+
+Le eccezioni garantiscono che l'unificazione errata dei dati possa essere affrontata nelle regole di unificazione. Puoi aggiungere più eccezioni a una regola.
+
+Per altre informazioni, vedi [Aggiungere eccezioni a una regola](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Fornire ulteriori criteri di risoluzione dei conflitti e abilitare il raggruppamento degli attributi
+
+Questa funzionalità consente di considerare un gruppo di campi come una singola unità. Ad esempio, se i nostri record contengono i campi Indirizzo1, Indirizzo2, Città, Stato e CAP. Probabilmente non vogliamo unire l'indirizzo 2 di un record diverso, pensando che renderebbe i nostri dati più completi.
+
+Ora puoi combinare un gruppo di campi correlati e applicare un unico criterio di unione al gruppo. 
+
+Per altre informazioni, vedi [Combinare un gruppo di campi](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Aggiornamenti di novembre 2021
 

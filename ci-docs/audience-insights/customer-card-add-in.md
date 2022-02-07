@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
-ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "7945432"
 ---
+
 # <a name="customer-card-add-in-preview"></a>Componente aggiuntivo Scheda cliente (anteprima)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics 365. Con il Customer Card Add-in installato in un'applicazione Dynamics 365 supportata, è possibile scegliere di visualizzare i campi del profilo del cliente, gli approfondimenti e la timeline delle attività. Il componente aggiuntivo recupera i dati da Customer Insights senza influire sui dati nell'app Dynamics 365 connessa.
 
