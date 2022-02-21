@@ -1,7 +1,7 @@
 ---
 title: Arricchire profili cliente unificati
 description: Usa specifiche funzionalità per arricchire i tuoi dati cliente.
-ms.date: 11/05/2021
+ms.date: 02/07/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 5c3dda3b9bae828857258025ff79958ee22bdb6f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884221"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098794"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Arricchimento per i profili cliente (anteprima)
 
@@ -37,6 +37,7 @@ Nella scheda **Scopri** , troverai tutte le opzioni di arricchimento supportate.
 - [Dati demografici](enrichment-experian.md) forniti da Experian
 - [Personalizzare i dati](enrichment-SFTP-custom-import.md) mediante Secure File Transfer Protocol (SFTP) 
 - [Mappe di Azure](enrichment-azure-maps.md) fornito da Microsoft
+- [Dati di localizzazione](enrichment-here.md) forniti da HERE Technologies 
 
 # <a name="business-accounts-b-to-b"></a>[Account aziendali (da B a B)](#tab/b2b)
 

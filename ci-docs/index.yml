@@ -4,15 +4,15 @@ metadata:
   author: m-hartmann
   description: Trova articoli pertinenti per consultare il contenuto della Guida.
   ms.author: mhart
-  ms.date: 07/30/2021
+  ms.date: 03/02/2022
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e6a658f43b382934ee9b9b55c54fc1dff3f4df72
-  ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+  ms.openlocfilehash: e154b37f57bb2765f48a9f6b38f86dffcb05f403
+  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 09/17/2021
-  ms.locfileid: "7498602"
+  ms.lasthandoff: 02/10/2022
+  ms.locfileid: "8107204"
 title: Documentazione di Dynamics 365 Customer Insights
 summary: Trova risorse utili per iniziare a utilizzare e conoscere le funzionalità di Customer Insights.
 landingContent:
@@ -23,9 +23,13 @@ landingContent:
     - text: " Panoramica di Customer Insights"
       url: overview.md
     - text: Piani di rilascio
-      url: /dynamics365-release-plan/
+      url: /dynamics365/release-plans/
     - text: Informazioni sulla piattaforma dati dei clienti
       url: https://dynamics.microsoft.com/ai/customer-insights/
+  - linkListType: learn
+    links:
+    - text: Percorso di apprendimento di Customer Insights
+      url: /learn/paths/build-customer-insights/
 - title: Introduzione a Customer Insights
   linkLists:
   - linkListType: get-started
@@ -34,8 +38,26 @@ landingContent:
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
     - text: Novità delle informazioni dettagliate sul gruppo di destinatari
       url: audience-insights/whats-new-audience-insights.md
-    - text: Novità delle informazioni dettagliate sull'interazione
-      url: https://docs.microsoft.com/dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
+    - text: Guida introduttiva
+      url: audience-insights/get-started.md
+  - linkListType: learn
+    links:
+    - text: Informazioni di base
+      url: /learn/modules/get-started-customer-data-platform/
+- title: Amministra Informazioni dettagliate sul gruppo di destinatari
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurare il sistema
+      url: audience-insights/system.md
+    - text: Definire le autorizzazioni utente
+      url: audience-insights/permissions.md
+    - text: Gestire molteplici ambienti
+      url: audience-insights/manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Amministrare Customer Insights
+      url: /learn/modules/administer-customer-data-platform/
 - title: Contattaci
   linkLists:
   - linkListType: overview
@@ -66,16 +88,6 @@ landingContent:
       url: audience-insights/customer-card-add-in.md
     - text: Connettore Power BI
       url: audience-insights/export-power-bi.md
-- title: Amministra Informazioni dettagliate sul gruppo di destinatari
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Configurare il sistema
-      url: audience-insights/system.md
-    - text: Definire le autorizzazioni utente
-      url: audience-insights/permissions.md
-    - text: Gestire molteplici ambienti
-      url: audience-insights/manage-environments.md
 - title: Informazioni su Informazioni dettagliate sull'interazione (anteprima)
   linkLists:
   - linkListType: overview

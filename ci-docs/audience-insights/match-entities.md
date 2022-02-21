@@ -1,7 +1,7 @@
 ---
 title: Mettere in corrispondenza le entità per l'unificazione dei dati
 description: Metti in corrispondenza le entità per creare profili cliente unificati.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098840"
 ---
-
 # <a name="match-entities"></a>Mettere in corrispondenza le entità
 
 La fase di corrispondenza specifica in che modo combinare i set di dati in un profilo cliente unificato. Dopo aver completato il [passaggio della mappa](map-entities.md) nel processo di unificazione dei dati, sei pronto per corrispondere le tue entità. La fase di corrispondenza richiede almeno due entità mappate.
@@ -24,13 +29,7 @@ La pagina della corrispondenza è composta da tre sezioni:
 
 ## <a name="specify-the-match-order"></a>Specificare l'ordine di corrispondenza
 
-Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Definisci l'ordine** per iniziare la fase di corrispondenza.
-
-Ogni corrispondenza unifica due o più entità in un'unica entità consolidata. Allo stesso tempo, conserva i record del cliente univoci. Ad esempio, abbiamo selezionato due entità: **eCommerce:eCommerceContacts** come entità primaria e **LoyaltyScheme: loyCustomers** come seconda entità. L'ordine delle entità specifica in quale ordine il sistema tenterà di corrispondere i record.
-
-:::image type="content" source="media/match-page.png" alt-text="Screenshot della pagina Corrispondenza nell'area Unifica del processo di unificazione dei dati.":::
-  
-L'entità primaria *eCommerce: eCommerceContacts* è corrisposta all'entità successiva *LoyaltyScheme: loyCustomers*. Il set di dati che risulta dal primo passaggio di corrispondenza viene confrontato con l'entità seguente se hai più di due entità.
+Ogni corrispondenza unifica due o più entità in un'unica entità consolidata. Allo stesso tempo, conserva i record del cliente univoci. L'ordine di corrispondenza indica l'ordine in cui il sistema tenta di abbinare i record.
 
 > [!IMPORTANT]
 > L'entità che scegli come tua entità primaria servirà come base per il set di dati profili unificato. Altre entità selezionate durante la fase di corrispondenza verranno aggiunte a questa entità. Ciò non significa che l'entità unificata includerà *tutti* i dati inclusi in questa entità.
@@ -38,9 +37,18 @@ L'entità primaria *eCommerce: eCommerceContacts* è corrisposta all'entità suc
 > Esistono due considerazioni che possono aiutarti a scegliere la gerarchia delle entità:
 >
 > - Scegli l'entità con i dati di profilo più completi e affidabili sui tuoi clienti come entità principale.
-> - Scegli l'entità che ha diversi attributi in comune con altre entità (ad esempio, nome, numero di telefono o indirizzo e-mail) come entità principale.
+> - Scegli l'entità che ha diversi attributi in comune con altre entità (ad esempio nome, numero di telefono o indirizzo e-mail) come entità primaria.
 
-Dopo aver specificato l'ordine di corrispondenza, vedrai le coppie di corrispondenze definite nella sezione **Dettagli record corrispondenti** in **Dati** > **Unifica** > **Corrispondenza**. Le metriche chiave saranno vuote fino al completamento del processo di corrispondenza.
+1. Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Definisci l'ordine** per iniziare la fase di corrispondenza.
+1. Seleziona **Ordine entità**. Ad esempio, seleziona **eCommerce:eCommerceContacts** come entità primaria e **LoyaltyScheme:loyCustomers** come seconda entità. 
+1. Per avere ogni record nell'entità come un cliente unico e abbinato a ogni entità successiva, seleziona **Includi tutto**.
+1. Seleziona **Fatto**. 
+
+Dopo aver specificato l'ordine di corrispondenza, le coppie di corrispondenze definite vengono visualizzate nella sezione **Dettagli dei record abbinati** in **Dati** > **Unifica** > **Corrispondenza**. Le metriche chiave sono vuote fino al completamento del processo di corrispondenza.
+
+:::image type="content" source="media/match-page.png" alt-text="Screenshot della pagina Corrispondenza nell'area Unifica del processo di unificazione dei dati.":::
+  
+L'entità primaria *eCommerce: eCommerceContacts* è corrisposta all'entità successiva *LoyaltyScheme: loyCustomers*. Il set di dati che risulta dal primo passaggio di corrispondenza viene confrontato con l'entità seguente se hai più di due entità.
 
 ## <a name="define-rules-for-match-pairs"></a>Definire le regole per le coppie di corrispondenze
 
@@ -50,7 +58,7 @@ L'avviso **Necessita regole** accanto al nome di un'entità suggerisce che non �
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Screenshot della sezione Dettagli record corrispondenti con il controllo per aggiungere regole evidenziato.":::
 
-1. Seleziona **Aggiungi regole** sotto un'entità nella sezione **Dettagli record corrispondenti** per definire le regole di corrispondenza.
+1. Seleziona **Aggiungi regola** sotto un'entità nella sezione **Dettagli record abbinati** per definire le regole di corrispondenza.
 
 1. Nel riquadro **Crea regola**, configura le condizioni per la regola.
 
@@ -61,15 +69,15 @@ L'avviso **Necessita regole** accanto al nome di un'entità suggerisce che non �
    - **Entità/Campo (seconda riga)**: Scegli un attributo correlato all'attributo dell'entità specificata nella prima riga.
 
    - **Normalizza**: Seleziona una delle seguenti opzioni di normalizzazione per gli attributi selezionati. 
-     - Spazio vuoto: rimuove tutti gli spazi. *Hello World* diventa *HelloWorld*.
+     - Numeri: converte altri sistemi numerici, come i numeri romani, in numeri arabi. *VIII* diventa *8*.
      - Simboli: rimuove tutti i simboli e i caratteri speciali. *Head&Shoulder* diventa *HeadShoulder*.
      - Testo in minuscolo: converte tutti i caratteri in minuscolo. *TUTTO MAIUSCOLO e titolo* diventa *tutto maiuscolo e titolo*.
+     - Tipo (telefono, nome, indirizzo, organizzazione): standardizza nomi, titoli, numeri di telefono, indirizzi, ecc. 
      - Unicode in ASCII: converte la notazione Unicode in caratteri ASCII. */u00B2* diventa *2*.
-     - Numeri: converte altri sistemi numerici, come i numeri romani, in numeri arabi. *VIII* diventa *8*.
-     - Tipi semantici: standardizza nomi, titoli, numeri di telefono, indirizzi, ecc. 
+     - Spazio vuoto: rimuove tutti gli spazi. *Hello World* diventa *HelloWorld*.
 
    - **Precisione**: Consente di impostare il livello di precisione da applicare per questa condizione. 
-     - **Di base**: Scegli tra *Basso*, *Medio*, *Alto* ed *Esatto*. Seleziona **Esatta** per mettere in corrispondenza solo i record corrispondenti al 100 per cento. Seleziona uno degli altri livelli per mettere in corrispondenza i record che non sono identici al 100 per cento.
+     - **Di base**: Scegli tra *Basso*, *Medio*, *Alto* ed *Esatto*. Seleziona **Esatto** per abbinare solo i record che corrispondono al 100 percento. Seleziona uno degli altri livelli per mettere in corrispondenza i record che non sono identici al 100 per cento.
      - **Personalizzato**: Consente di impostare una percentuale per la corrispondenza dei record. Il sistema metterà in corrispondenza solo i record che superano questa soglia.
 
 1. Fornisci un **nome** per la regola.
@@ -88,7 +96,7 @@ Per corrispondere le entità solo se gli attributi soddisfano più condizioni, a
 
 1. Nel riquadro **Modifica regola**, seleziona **Aggiungi condizione**.
 
-1. Seleziona **Fatto** in modo da salvare la regola.
+1. Seleziona **Fatto** per salvare la regola.
 
 ### <a name="add-rules-to-a-match-pair"></a>Aggiungere regole a una coppia di corrispondenze
 
@@ -111,13 +119,13 @@ Puoi riordinare le entità per le regole di corrispondenza per modificare l'ordi
 
    :::image type="content" source="media/reorder-match-rules.png" alt-text="Opzioni per modificare l'ordine in cui le entità vengono elaborate nella fase di corrispondenza.":::
 
-1. Seleziona **Fatto** in modo da salvare la regola.
+1. Seleziona **Fatto** per salvare la regola.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definire la deduplicazione in un'entità di corrispondenza
 
 Oltre alle [regole di corrispondenza tra entità](#define-rules-for-match-pairs), puoi specificare le regole di deduplicazione. La *deduplicazione* è un altro processo della corrispondenza dei record. Identifica i record duplicati e li unisce in un unico record. I record di origine vengono collegati al record unito con ID alternativi.
 
-I record deduplicati verranno usati nel processo di corrispondenza tra entità. La deduplicazione avviene su singole entità e può essere configurata per ogni entità usata nelle coppie di corrispondenza.
+I record deduplicati vengono usati nel processo di corrispondenza tra entità. La deduplicazione avviene su singole entità e può essere configurata per ogni entità usata nelle coppie di corrispondenza.
 
 Non è obbligatorio specificare regole di deduplicazione. Se tali regole non vengono configurate, verranno applicate le regole definite dal sistema. Combinano tutti i record in un unico record prima di passare i dati dell'entità alla corrispondenza tra entità per migliorare le prestazioni.
 
@@ -134,7 +142,7 @@ Non è obbligatorio specificare regole di deduplicazione. Se tali regole non ven
       - **Piu recente**: il record vincitore è quello più recente. Richiede una data o un campo numerico per definire la recency.
       - **Meno recente**: il record vincitore è quello meno recente. Richiede una data o un campo numerico per definire la recency.
 
-   1. Facoltativamente, seleziona **Avanzate** per definire regole di deduplicazione sui singoli attributi di un'entità. Ad esempio, puoi scegliere di conservare il messaggio e-mail più recente E l'indirizzo più completo da record diversi. Espandi l'entità per vedere tutti i suoi attributi e definisci quale opzione utilizzare per i singoli attributi. Se scegli un'opzione basata sulla recency, devi anche specificare un campo data/ora che definisca la recency. 
+   1. Facoltativamente, per definire regole di deduplicazione sui singoli attributi di un'entità seleziona **Avanzate**. Ad esempio, puoi scegliere di conservare il messaggio e-mail più recente E l'indirizzo più completo da record diversi. Espandi l'entità per vedere tutti i suoi attributi e definisci quale opzione utilizzare per i singoli attributi. Se scegli un'opzione basata sulla recency, devi anche specificare un campo data/ora che definisca la recency. 
  
       > [!div class="mx-imgBorder"]
       > ![Passaggio 1 delle regole di deduplicazione.](media/match-selfconflation.png "Passaggio 1 delle regole di deduplicazione")

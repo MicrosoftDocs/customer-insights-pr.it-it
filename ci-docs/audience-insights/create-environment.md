@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892343"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088118"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Creare un ambiente nelle intuizioni del pubblico
 
@@ -28,7 +28,7 @@ Le organizzazioni possono creare *due* ambienti per ogni licenza Customer Insigh
 
 ## <a name="create-a-new-environment"></a>Crea un nuovo ambiente
 
-Dopo aver acquistato un contratto di licenza sottoscrizione per Customer Insights, l'amministratore globale del tenant di Microsoft 365 riceve un'e-mail che lo invita a creare l'ambiente. Vai a [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) per iniziare. 
+Dopo aver acquistato una licenza in abbonamento per Customer Insights, l'amministratore globale del tenant Microsoft 365 riceve un'e-mail che lo invita a creare l'ambiente. Vai a [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) per iniziare. 
 
 Un'esperienza guidata ti aiuta attraverso i passi per raccogliere tutte le informazioni necessarie per un nuovo ambiente. Hai bisogno dei [permessi di amministratore](permissions.md) in approfondimenti sul pubblico per creare o gestire gli ambienti.
 
@@ -64,7 +64,7 @@ Salvando i dati su Azure Data Lake Storage, l'utente accetta che i dati vengano 
 > Customer Insights attualmente supporta quanto segue:
 > - Entità ingerite da Power BI flussi di dati che sono memorizzati in un Data Lake gestito da Microsoft Dataverse.  
 > - Azure Data Lake Storage dalla stessa regione di Azure che hai selezionato quando hai creato l'ambiente.
-> - Azure Data Lake Storage che hanno abilitato lo *spazio dei nomi gerarchico* .
+> - Gli account Azure Data Lake Storage che sono Gen2 e hanno lo *spazio dei nomi gerarchico* abilitato. Gli account di archiviazione Azure Data Lake Gen1 non sono supportati.
 
 Per l'opzione Azure Data Lake Storage puoi scegliere tra un'opzione basata sulle risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connessione a un account Azure Data Lake Storage tramite un'entità servizio di Azure](connect-service-principal.md). Il nome del **contenitore** sarà `customerinsights` e non può essere cambiato.
 

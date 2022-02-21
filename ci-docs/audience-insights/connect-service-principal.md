@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900263"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088152"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connettersi a un account Azure Data Lake Storage utilizzando un'entità servizio di Azure
 
@@ -23,7 +23,7 @@ Questo articolo spiega come connettersi a Dynamics 365 Customer Insights con un 
 Gli strumenti automatizzati che usano i servizi di Azure deve avere sempre autorizzazioni limitate. Anziché avere applicazioni che accedono come utente con privilegi completi, Azure fornisce entità servizio. È possibile utilizzare entità servizio per [aggiungere o modificare una cartella Common Data Model come origine dati](connect-common-data-model.md) in modo sicuro o [creare o aggiornare un ambiente](create-environment.md).
 
 > [!IMPORTANT]
-> - L'account Data Lake Storage che utilizzerà l'entità servizio deve avere lo [spazio dei nomi gerarchico abilitato](/azure/storage/blobs/data-lake-storage-namespace).
+> - L'account Data Lake Storage che utilizzerà l'entità servizio deve essere Gen2 e avere lo [spazio dei nomi gerarchico abilitato](/azure/storage/blobs/data-lake-storage-namespace). Gli account di archiviazione Azure Data Lake Gen1 non sono supportati.
 > - Sono necessarie le autorizzazioni di amministratore per la sottoscrizione di Azure per creare un'entità servizio.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Creare un'entità servizio di Azure per Customer Insights

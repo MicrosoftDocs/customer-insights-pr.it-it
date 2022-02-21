@@ -2,6 +2,22 @@
   href: index.yml
 - name: Panoramica del prodotto
   href: overview.md
+- name: Catalogo delle risorse di apprendimento
+  items:
+    - name: Informazioni di base
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Inserire i dati
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Crea un profilo cliente unificato
+      href: /learn/modules/unified-customer-profile/
+    - name: Uso di Informazioni dettagliate gruppo di destinatari
+      href: /learn/modules/working-with-customer-insights/
+    - name: Arricchisci i dati e fai previsioni
+      href: /learn/modules/enrich-data/
+    - name: Gestire le connessioni esterne
+      href: /learn/modules/configure-third-party-connections/
+    - name: Amministrare Customer Insights
+      href: /learn/modules/administer-customer-data-platform/
 - name: Versione di valutazione gratuita
   items:
     - name: Iscrizione per una valutazione gratuita
@@ -30,21 +46,11 @@
           href: audience-insights/home.md
     - name: Lavorare con i conti aziendali
       href: audience-insights/work-with-business-accounts.md
-    - name: Moduli di apprendimento
-      items:
-        - name: Inserire i dati
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Crea un profilo cliente unificato
-          href: /learn/modules/unified-customer-profile/
-        - name: Utilizza l'app
-          href: /learn/modules/working-with-customer-insights/
-        - name: Arricchire dati e previsioni
-          href: /learn/modules/enrich-data/
     - name: Origini dati
       items:
         - name: Panoramica delle origini dati
           href: audience-insights/data-sources.md
-        - name: Aggiungere origini dati tramite i connettori Power Query
+        - name: Aggiungi origini dati tramite i connettori Power Query
           href: audience-insights/connect-power-query.md
         - name: Aggiungere una cartella Common Data Model come origine dati
           href: audience-insights/connect-common-data-model.md
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: Diritti e richieste DSR
   href: dsr-rights-requests.md
+- name: Richiedere supporto
+  href: /power-platform/admin/get-help-support

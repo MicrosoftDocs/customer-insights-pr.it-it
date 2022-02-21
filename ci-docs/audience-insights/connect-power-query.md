@@ -1,6 +1,6 @@
 ---
 title: Acquisire i dati tramite un connettore Power Query (video)
-description: Connettori per origini dati basati su Power Query.
+description: Connettori per origini dati basate su Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
+ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934983"
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8092077"
 ---
-# <a name="connect-to-a-power-query-data-source"></a>Connettersi a un'origine dati Power Query
+# <a name="connect-to-a-power-query-data-source"></a>Connessione a un'origine dati Power Query
 
-Power Query offre un'ampia gamma di connettori per inserire i dati. La maggior parte di questi connettori è supportata da Dynamics 365 Customer Insights. 
+Power Query offre un'ampia serie di connettori per l'inserimento dei dati. La maggior parte di questi connettori è supportata da Dynamics 365 Customer Insights. 
 
 L'aggiunta di origini dati basate sui connettori Power Query generalmente segue i passaggi descritti in questa sezione. Tuttavia, a seconda del connettore utilizzato, sono necessarie informazioni diverse. Per saperne di più, vedi la documentazione sui singoli connettori nel [Riferimento del connettore Power Query](/power-query/connectors/).
 
@@ -30,7 +30,7 @@ L'aggiunta di origini dati basate sui connettori Power Query generalmente segue 
 
 1. Seleziona **Aggiungi origine dati**.
 
-1. Seleziona **Microsoft Power Query**, quindi seleziona **Avanti**.
+1. Selezionare **Microsoft Power Query**.
 
 1. Fornisci un **Nome** per l'origine dati e seleziona **Avanti** per creare l'origine dati.
 
@@ -45,26 +45,26 @@ L'aggiunta di origini dati basate sui connettori Power Query generalmente segue 
    > [!div class="mx-imgBorder"]
    > ![Finestra di dialogo Modifica query.](media/data-manager-configure-edit-queries.png "Finestra di dialogo Modifica query")
 
-1. Puoi anche trasformare i dati. Seleziona un'entità da modificare o trasformare. Utilizza le opzioni nella finestra Power Query per applicare le trasformazioni. Ogni trasformazione viene elencata in **Passaggi applicati**. Power Query fornisce numerose opzioni di trasformazione predefinite. Per altre informazioni, vedi [Trasformazioni di Power Query](/power-query/power-query-what-is-power-query#transformations).
-
-1. Puoi aggiungere altre entità alla tua origine dati selezionando **Estrai dati** nella finestra di dialogo **Modifica query**.
+1. Puoi anche trasformare i dati. Seleziona un'entità da modificare o trasformare. Usa le opzioni nella finestra Power Query per applicare le trasformazioni. Ogni trasformazione viene elencata in **Passaggi applicati**. Power Query fornisce numerose opzioni di trasformazione predefinite. Per ulteriori informazioni, vedi [Trasformazioni di Power Query](/power-query/power-query-what-is-power-query#transformations).
 
    Si consiglia di utilizzare le seguenti trasformazioni:
 
-   - Se stai inserendo dati da un file CSV, la prima riga spesso contiene intestazioni. Vai a **Trasforma tabella** e seleziona **Usa intestazioni come prima riga**.
-   - Assicurati che il tipo di dati sia impostato in modo appropriato.
+   - Se stai inserendo dati da un file CSV, la prima riga spesso contiene intestazioni. Vai a **Trasforma**, quindi seleziona **Usa la prima riga come intestazione**.
+   - Assicurati che il tipo di dati sia impostato in modo appropriato. Ad esempio, per i campi data, seleziona un tipo di data.
 
-1. Seleziona **Salva** nella parte inferiore della finestra di Power Query per salvare le trasformazioni. Dopo aver salvato, troverai la tua origine dati su **Dati** > **Origini dati**.
+1. Per aggiungere ulteriori entità all'origine dati nella finestra **Modifica query** vai a **Home** e seleziona **Ottieni dati**.
+
+1. Seleziona **Salva** nella parte inferiore della finestra di Power Query  per salvare le trasformazioni. Dopo aver salvato, troverai la tua origine dati su **Dati** > **Origini dati**.
 
 1. Nella pagina **Origini dati** noterai che la nuova origine dati è nello stato **Aggiornamento in corso**.
 
-## <a name="available-power-query-data-sources"></a>Origini dati Power Query disponibili
+## <a name="available-power-query-data-sources"></a>Origini dati di Power Query disponibili
 
 Vedi il [Riferimento del connettore Power Query](/power-query/connectors/) per un elenco di connettori che è possibile utilizzare per importare dati in Customer Insights. 
 
-Connettori con un segno di spunta nella colonna **Customer Insights (Flussi di dati)** sono disponibili per creare nuove origini dati basate su Power Query. Esamina la documentazione di un connettore specifico per ulteriori informazioni su prerequisiti, limitazioni e altri dettagli.
+I connettori con un segno di spunta nella colonna **Informazioni dettagliate sui clienti (flussi di dati)** sono disponibili per creare nuove origini dati basate su Power Query. Esamina la documentazione di un connettore specifico per ulteriori informazioni su prerequisiti, limitazioni e altri dettagli.
 
-## <a name="edit-power-query-data-sources"></a>Modifica origini dati Power Query disponibili
+## <a name="edit-power-query-data-sources"></a>Modifica origine dati Power Query
 
 > [!NOTE]
 > Potrebbe non essere possibile apportare modifiche alle origini dati attualmente utilizzate in uno dei processi dell'app (*segmentazione*, *corrispondenza* o *unione*, ad esempio). 
@@ -80,9 +80,9 @@ Connettori con un segno di spunta nella colonna **Customer Insights (Flussi di d
 
    [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
    
-3. Applica le modifiche e le trasformazioni nella finestra di dialogo **Power Query - Modifica query** come descritto nella sezione [Crea una nuova origine dati](#create-a-new-data-source).
+3. Applica le modifiche e le trasformazioni nella finestra di dialogo **Power Query - Modifica query** come descritto in [Creare una nuova origine dati](#create-a-new-data-source) sezione.
 
-4. Seleziona **Salva** in Power Query dopo aver completato le modifiche per salvare le modifiche.
+4. Seleziona **Salva** in Power Query dopo aver completato le modifiche, per salvare le modifiche.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

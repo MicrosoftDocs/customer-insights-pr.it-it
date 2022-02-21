@@ -1,7 +1,7 @@
 ---
 title: Funzionalità nuove e future
-description: 'Informazioni su nuove funzionalità, miglioramenti e correzioni di bug.'
-ms.date: 01/27/2022
+description: Informazioni su nuove funzionalità, miglioramenti e correzioni di bug.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088290"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Novità della funzionalità Informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Gli aggiornamenti vengono implementati in base all'area geografica. Quindi alcun
 
 > [!TIP]
 > Per inviare e votare funzionalità richieste e suggerimenti di prodotto, vai al [portale Ideas dell'applicazione Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Aggiornamenti di gennaio 2022
+
+Gli aggiornamenti di gennaio 2022 includono nuove funzionalità, aggiornamenti delle prestazioni e correzioni di bug.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analisi valutazione per il feedback dei clienti
+
+Customer Insights fornisce una nuova funzionalità basata sull'intelligenza artificiale per sintetizzare la valutazione dei clienti e identificare aspetti aziendali specifici come opportunità per miglioramenti mirati. Analizzando il feedback scritto dai tuoi clienti, puoi ottenere informazioni dettagliate accurate a basso costo. L'analisi della valutazione basata su modelli di elaborazione del linguaggio naturale (NLP) che generano due informazioni dettagliate derivate per ogni ID cliente. Un punteggio di valutazione (da –5 a 5) e un elenco di aspetti aziendali applicabili. 
+
+Per ulteriori informazioni, vedi [Analizzare la valutazione del feedback dei clienti (Anteprima)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Aggiornamenti di dicembre 2021
@@ -37,7 +53,7 @@ Per altre informazioni, vedi [Inoltro del log in Dynamics 365 Customer Insights 
 
 Usa i dati di Microsoft Office 365 per arricchire i profili del tuo account cliente con approfondimenti sul coinvolgimento attraverso app di Office 365. I dati sull'interazione sono costituiti da e-mail e attività di riunione, che vengono aggregati a livello di account. Ad esempio, il numero di e-mail da un account aziendale o il numero di riunioni con l'account. Non vengono condivisi dati sui singoli utenti. Questo arricchimento è disponibile solo nelle aree: UK, Europa e Nord America.
 
-Per altre informazioni, vedi [Arricchire i profili dei clienti con i dati sull'interazione (anteprima)](enrichment-office.md)
+Per altre informazioni, vedi [Arricchire i profili dei clienti con i dati sull'interazione (Anteprima)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Funzionalità avanzate di unificazione dei dati
 

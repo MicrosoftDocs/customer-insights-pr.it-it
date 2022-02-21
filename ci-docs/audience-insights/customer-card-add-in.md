@@ -1,7 +1,7 @@
 ---
 title: Componente aggiuntivo scheda cliente per Dynamics 365 (video)
 description: Mostra i dati di Informazioni dettagliate sul gruppo di destinatari nelle app Dynamics 365 con questo componente aggiuntivo.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085253"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Componente aggiuntivo Scheda cliente (anteprima)
 
 
@@ -113,5 +118,26 @@ Il componente aggiuntivo Scheda cliente non si aggiorna automaticamente. Per agg
 
 1. Dopo aver avviato il processo di aggiornamento, vedrai un indicatore di caricamento fino al completamento dell'aggiornamento. Se non è disponibile una versione più recente, l'aggiornamento mostrerà un messaggio di errore.
 
+## <a name="troubleshooting"></a>Risoluzione dei problemi
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>I controlli dal componente aggiuntivo della scheda cliente non trovano dati
+
+**Problema:**
+
+Anche con i campi ID correttamente configurati, i controlli non riescono a trovare dati per nessun cliente.  
+
+**Risoluzione:**
+
+1. Assicurati di aver configurato il componente aggiuntivo Scheda secondo le istruzioni: [Configurare il componente aggiuntivo della scheda cliente](#configure-the-customer-card-add-in) 
+
+1. Esamina la configurazione dell'importazione dei dati. Modifica l'origine dati per il sistema Dynamics 365 che contiene il GUID dell'ID contatto. Se il GUID dell'ID contatto viene visualizzato con caratteri maiuscoli nell'editor Power Query, prova quanto segue: 
+    1. Modifica l'origine dati per aprirla nell'editor Power Query.
+    1. Selezionare la colonna ID contatto.
+    1. Seleziona **Trasforma** nella barra dell'intestazione per vedere le azioni disponibili.
+    1. Seleziona **minuscolo**. Convalida se i GUID nella tabella ora sono in minuscolo.
+    1. Salva l'origine dati.
+    1. Esegui i processi di inserimento, unificazione e downstream dei dati per propagare le modifiche al GUID. 
+
+Dopo aver completato l'aggiornamento completo, i controlli del componente aggiuntivo della scheda cliente dovrebbero mostrare i dati previsti. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

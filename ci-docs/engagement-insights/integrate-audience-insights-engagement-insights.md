@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645587"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8116019"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Creare un collegamento tra Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione
 
@@ -25,7 +25,7 @@ Utilizza profili e segmenti unificati di Informazioni dettagliate sul gruppo di 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- I profili di Informazioni dettagliate sul gruppo di destinatari devono essere archiviati in un account Azure Data Lake Storage di cui sei proprietario o in un data lake gestito di [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;. 
+- I profili di Informazioni dettagliate sul gruppo di destinatari devono essere archiviati in un account Azure Data Lake Storage di cui sei proprietario o in un data lake gestito di [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash;. 
 - Inoltre, l'ambiente delle informazioni dettagliate sul gruppo di destinatari deve avere un ambiente Dataverse associato. Se inoltre tale ambiente usa anche Dataverse per l'archiviazione dei dati, assicurati di selezionare l'opzione **Abilita condivisione dati** nelle informazioni dettagliate sul gruppo di destinatari. Per maggiori informazioni, vedere [Creare e configurare un ambiente in approfondimenti sul pubblico](../audience-insights/create-environment.md).
 - Sono necessarie autorizzazioni di amministratore per gli ambienti di Informazioni dettagliate sull'interazione e Informazioni dettagliate del gruppo di destinatari.
 - Gli ambienti collegati devono trovarsi nella stessa area geografica.
