@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008770"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analizzare la valutazione nel feedback dei clienti (anteprima)
 
 Al giorno d'oggi i clienti si aspettano prodotti, servizi ed esperienze di alta qualità. Soprattutto i clienti che condividono il loro feedback. È molto difficile per le organizzazioni analizzare un volume crescente di dati senza ridurre la precisione e aumentare il costo del lavoro. Dynamics 365 Customer Insights offre un modello di analisi valutazione per il feedback dei clienti che consente alle organizzazioni di analizzare i propri dati in modo più accurato e a un costo inferiore.
