@@ -1,19 +1,19 @@
 ---
 title: Inizia con una licenza a pagamento di Dynamics 365 Customer Insights
 author: m-hartmann
-description: Acquisisci familiarità con il completamento dell'installazione in Dynamics 365 Customer Insights ed esplorane le capacità.
+description: Familiarizzate con l'esperienza di prima esecuzione in Dynamics 365 Customer Insights ed esplorate le sue capacità.
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
-ms.topic: conceptual
+ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977677"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645699"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Iniziare dopo aver acquistato Customer Insights
 
@@ -29,7 +29,7 @@ Se stai cercando di provare il servizio e le funzionalità, vedi [Configura un a
 
 ## <a name="start-with-customer-insights"></a>Iniziare con Customer Insights
 
-Il completamento dell'installazione ti aiuta a scegliere l'obiettivo iniziale con Customer Insights e a esplorarne le funzionalità con dati di esempio. Come passo successivo, potete creare il vostro ambiente e lavorare con i vostri dati.
+L'esperienza first-run vi aiuta a scegliere il vostro focus iniziale con Customer Insights e ad esplorare le capacità con dati campione. Come passo successivo, potete creare il vostro ambiente e lavorare con i vostri dati.
 
 **Per accedere per la prima volta**:
 

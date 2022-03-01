@@ -1,5 +1,5 @@
 ---
-title: Trovare clienti simili con l'intelligenza artificiale (video)
+title: Trovare clienti simili con l'intelligenza artificiale
 description: Trova segmenti di clienti simili con l'intelligenza artificiale.
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,18 +9,16 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: de337ae989558c81fff25a6ff7cca01890ed306b
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934845"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034548"
 ---
 # <a name="similar-customers-preview"></a>Clienti simili (anteprima)
 
 Questa funzione ti consente di trovare clienti simili nella tua base di clienti usando l'intelligenza artificiale. Devi avere almeno un segmento creato per utilizzare questa funzione. L'espansione dei criteri di un segmento esistente consente di trovare clienti simili a quel segmento.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Trova clienti simili* utilizza mezzi automatizzati per valutare i dati e fare previsioni basate sui dati e quindi può essere utilizzato come metodo di profiling, in quanto il termine è definito dal Regolamento generale sulla protezione dei dati ("GDPR"). L'uso da parte del cliente di questa funzionalità per elaborare i dati può essere soggetto al GDPR o ad altre leggi o normative. Devi assicurarti che il tuo utilizzo di Dynamics 365 Customer Insights, comprese le previsioni, sia conforme a tutte le leggi e le norme applicabili, comprese le leggi relative alla privacy, ai dati personali, ai dati biometrici, alla protezione dei dati e alla riservatezza delle comunicazioni.

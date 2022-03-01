@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b219935dfbd9f7acc1104d83e2ca281801a1a4251ae4c19fc03d4b1ce46f4613
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035190"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129904"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Guida di esempio per la previsione di raccomandazioni sui prodotti (anteprima)
 
@@ -105,9 +105,9 @@ Dopo aver importato i dati, iniziamo il processo di unificazione dei dati per cr
 
 1. Passa alla scheda **Corrispondenza** e seleziona **Imposta ordine**.
 
-2. Nell'elenco a discesa **Principale** scegli **eCommerceContacts : eCommerce** come fonte primaria e includi tutti i record.
+2. Nell'elenco a discesa **Primaria**, scegli **eCommerceContacts : eCommerce** come origine primaria e includi tutti i record.
 
-3. Nell'elenco a discesa **Entità 2** scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
+3. Nell'elenco a discesa **Entità 2**, scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
 
    ![Unificare la corrispondenza di eCommerce e Fedeltà.](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Dopo aver importato i dati, iniziamo il processo di unificazione dei dati per cr
 
 5. Aggiungi la prima condizione utilizzando FullName.
 
-   - Per eCommerceContacts seleziona **FullName** nel menu a discesa.
-   - Per loyCustomers seleziona **FullName** nel menu a discesa.
+   - Per eCommerceContacts seleziona **FullName** nell'elenco a discesa.
+   - Per loyCustomers seleziona **FullName** nell'elenco a discesa.
    - Seleziona l'elenco a discesa **Normalizza** e scegli **Tipo (telefono, nome, indirizzo...)**.
    - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 
 6. Immetti il nome **FullName, Email** per la nuova regola.
 
    - Aggiungi una seconda condizione per l'indirizzo e-mail selezionado **Aggiungi condizione**
-   - Per l'entità eCommerceContacts, scegli **E-mail** nell'elenco a discesa.
-   - Per l'entità loyCustomers, scegli **E-mail** nell'elenco a discesa.
+   - Per l'entità eCommerceContacts, scegli **E-mail** nel menu a discesa.
+   - Per l'entità loyCustomers, scegli **E-mail** nel menu a discesa.
    - Lascia vuoto il campo Normalizza.
    - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 
@@ -154,7 +154,7 @@ Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abba
 
 1. Definisci tre condizioni per il modello:
 
-   - **Numero di prodotti**: imposta questo valore su **5**. Questa impostazione definisce quanti prodotti desideri consigliare ai tuoi clienti.
+   - **Numero di prodotti** : Imposta questo valore su **5**. Questa impostazione definisce quanti prodotti desideri consigliare ai tuoi clienti.
 
    - **Ripetizione degli acquisti prevista**: seleziona **Sì** per indicare che desideri includere i prodotti nella raccomandazione che i tuoi clienti hanno acquistato in precedenza.
 

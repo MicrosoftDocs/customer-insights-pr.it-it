@@ -1,7 +1,7 @@
 ---
 title: Esportare i dati di Customer Insights in Azure Synapse Analytics
 description: Scopri come configurare la connessione ed esportare in Azure Synapse Analytics
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951047"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327369"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Esportare i dati in Azure Synapse Analytics (anteprima)
 
@@ -29,27 +29,25 @@ I seguenti prerequisiti devono essere soddisfatti per configurare la connessione
 
 ## <a name="prerequisites-in-customer-insights"></a>Prerequisiti in Customer Insights
 
-* Disponi di un ruolo utente **Amministratore** nell'ambiente di Informazioni dettagliate sul gruppo di destinatari. Scopri di più sull'[impostazione delle autorizzazioni utente nell'ambiente di Informazioni dettagliate sul gruppo di destinatari](permissions.md#assign-roles-and-permissions)
+* Disponi di un ruolo utente **Amministratore** nell'ambiente di informazioni dettagliate sul gruppo di destinatari. Scopri di più sull'[impostazione delle autorizzazioni utente nell'ambiente di informazioni dettagliate sul gruppo di destinatari](permissions.md#assign-roles-and-permissions)
 
 In Azure: 
 
 - Una sottoscrizione di Azure attiva.
 
-- Se si utilizza un nuovo account Azure Data Lake Storage Gen2, *l'entità servizio per Informazioni dettagliate sul gruppo di destinatari* ha bisogno delle autorizzazioni DI **collaboratore ai dati BLOB del servizio di archiviazione**. Scopri di più sul [collegamento a un account Azure Data Lake Storage Gen2 con l'entità servizio di Azure per Informazioni dettagliate sul gruppo di destinatari](connect-service-principal.md). Il Data Lake Storage Gen2 **deve avere** lo [spazio dei nomi gerarchico](/azure/storage/blobs/data-lake-storage-namespace) abilitato.
+- Se si utilizza un nuovo account Azure Data Lake Storage Gen2, *l'entità servizio per le informazioni dettagliate sul gruppo di destinatari* ha bisogno delle autorizzazioni DI **collaboratore ai dati BLOB del servizio di archiviazione**. Scopri di più sul [collegamento a un account Azure Data Lake Storage Gen2 con l'entità servizio di Azure per le informazioni dettagliate sul gruppo di destinatari](connect-service-principal.md). Il Data Lake Storage Gen2 **deve avere** lo [spazio dei nomi gerarchico](/azure/storage/blobs/data-lake-storage-namespace) abilitato.
 
-- Nel gruppo di risorse in cui si trova l'area di lavoro Azure Synapse, *all'entità servizio* e *all'utente per Informazioni dettagliate sul gruppo di destinatari* devono essere assegnate almeno le autorizzazioni di **lettura**. Per ulteriori informazioni, vedi [Assegnare ruoli di Azure usando il portale di Azure](/azure/role-based-access-control/role-assignments-portal).
+- Nel gruppo di risorse in cui si trova l'area di lavoro Azure Synapse, *all'entità servizio* e *all'utente per le informazioni dettagliate sul gruppo di destinatari* devono essere assegnate almeno le autorizzazioni di **lettura**. Per ulteriori informazioni, vedi [Assegnare ruoli di Azure usando il portale di Azure](/azure/role-based-access-control/role-assignments-portal).
 
 - L'*utente* deve avere le autorizzazioni del **collaboratore ai dati BLOB del servizio di archiviazione** per l'account Azure Data Lake Storage Gen2 in cui si trovano i dati e deve essere collegato all'area di lavoro Azure Synapse. Scopri di più sull'[utilizzo del portale di Azure per assegnare un ruolo di Azure per l'accesso ai dati di BLOB e coda](/azure/storage/common/storage-auth-aad-rbac-portal) e sulle [autorizzazioni del collaboratore ai dati BLOB del servizio di archiviazione](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - L'*[identità gestita dall'area di lavoro Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* deve avere le autorizzazioni del **collaboratore ai dati BLOB del servizio di archiviazione** per l'account Azure Data Lake Storage Gen2 in cui si trovano i dati e deve essere collegato all'area di lavoro Azure Synapse. Scopri di più sull'[utilizzo del portale di Azure per assegnare un ruolo di Azure per l'accesso ai dati di BLOB e coda](/azure/storage/common/storage-auth-aad-rbac-portal) e sulle [autorizzazioni del collaboratore ai dati BLOB del servizio di archiviazione](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Nell'area di lavoro Azure Synapse, *l'entità servizio per Informazioni dettagliate sul gruppo di destinatari* deve avere il ruolo **amministratore Synapse** assegnato. Per ulteriori informazioni, vedi [Come impostare il controllo degli accessi per l'area di lavoro Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Nell'area di lavoro Azure Synapse, *l'entità servizio per le informazioni dettagliate sul gruppo di destinatari* deve avere il ruolo **amministratore Synapse** assegnato. Per ulteriori informazioni, vedi [Come impostare il controllo degli accessi per l'area di lavoro Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Configurare la connessione ed esportare in Azure Synapse
 
 ### <a name="configure-a-connection"></a>Configurare una connessione
-
-Per creare una connessione, l'entità servizio e l'account utente in Customer Insights hanno bisogno delle autorizzazioni **Lettore** per il *gruppo di risorse* dove si trova l'area di lavoro Synapse Analytics. Inoltre, l'entità servizio e l'utente nell'area di lavoro Synapse Analytics hanno bisogno delle autorizzazioni **Amministratore Synapse**. 
 
 1. Vai ad **Amministratore** > **Connessioni**.
 
@@ -65,7 +63,7 @@ Per creare una connessione, l'entità servizio e l'account utente in Customer In
 
 ### <a name="configure-an-export"></a>Configurare un'esportazione
 
-Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per configurare l'esportazione con una connessione condivisa, sono necessarie almeno le autorizzazioni **Collaboratore** in Customer Insights. Per ulteriori informazioni, vedi [autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
+Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per ulteriori informazioni, vedi [autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
 
 1. Vai a **Dati** > **Esportazioni**.
 
@@ -84,8 +82,6 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.
 
 L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand).
-
-Per eseguire query sui dati esportati in Synapse Analytics, è necessario l'accesso **Lettore dati del BLOB di archiviazione** all'archiviazione di destinazione nell'area di lavoro delle esportazioni. 
 
 ### <a name="update-an-export"></a>Aggiornare un'esportazione
 

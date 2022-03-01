@@ -1,5 +1,5 @@
 ---
-title: Analisi valutazione per il feedback dei clienti
+title: Analisi semantica per il feedback dei clienti
 description: Scopri come utilizzare un modello di analisi valutazione sul feedback dei clienti in Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
-ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
+ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8008770"
+ms.lasthandoff: 01/10/2022
+ms.locfileid: "7951083"
 ---
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analizzare la valutazione nel feedback dei clienti (anteprima)
 
@@ -38,7 +38,7 @@ Per garantire di poterti fidare dei risultati dei modelli, forniamo informazioni
 
 Usiamo due **Modelli di elaborazione del linguaggio naturale (NLP)**: il primo assegna a ciascun commento di feedback un punteggio di valutazione. Il secondo modello associa ogni feedback a tutti gli aspetti aziendali applicabili. I modelli sono formati su dati pubblici provenienti da fonti nei settori dei social media, della vendita al dettaglio, della ristorazione, dei prodotti di consumo e dell'auto.    
   
-Gli aspetti aziendali predefiniti per il modello da associare ai dati di feedback includono:
+- Gli aspetti aziendali predefiniti per il modello da associare ai dati di feedback includono:
 -   Gestione account
 -   Checkout e pagamento
 -   Supporto tecnico

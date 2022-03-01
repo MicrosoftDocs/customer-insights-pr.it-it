@@ -1,7 +1,7 @@
 ---
 title: Esportare dati di Customer Insights in AdRoll
-description: Scopri come configurare la connessione ed esportare in AdRoll.
-ms.date: 10/08/2021
+description: Scopri come configurare la connessione ad AdRoll.
+ms.date: 02/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,40 +9,32 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6fedd549c2e7de362f36e3fb23d363200bb92a04
+ms.sourcegitcommit: d24e52150fe5a4fab45128e12d6a03637771d9b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617354"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "5697079"
 ---
-# <a name="export-segments-to-adroll-preview"></a>Esportare segmenti in AdRoll (anteprima)
+# <a name="connector-for-adroll-preview"></a>Connettore per AdRoll (anteprima)
 
 Esporta i segmenti dei profili cliente unificati in AdRoll e utilizzali per la pubblicità. 
 
-## <a name="prerequisites-for-a-connection"></a>Prerequisiti per una connessione
+## <a name="prerequisites"></a>Prerequisiti
 
 -   Devi disporre di un [account AdRoll](https://www.adroll.com/) e delle credenziali di amministratore corrispondenti.
--   Disponi di [segmenti configurati](segments.md) in Informazioni dettagliate sul gruppo di destinatari.
+-   Disponi di [segmenti configurati](segments.md) in Audience Insights.
 -   I profili cliente unificati nei segmenti esportati contengono un campo che rappresenta un indirizzo e-mail.
 
-## <a name="known-limitations"></a>Limitazioni note
+## <a name="connect-to-adroll"></a>Connetti ad AdRoll
 
-- Puoi esportare fino a 250.000 profili di clienti alla volta in AdRoll.
-- Non puoi esportare in AdRoll segmenti con meno di 100 profili di clienti. 
-- L'esportazione in AdRoll è limitata ai segmenti.
-- Esportare fino a 250.000 profili di clienti in AdRoll può richiedere fino a 10 minuti per essere completato. 
-- Il numero di profili cliente che puoi esportare in AdRoll dipende dal tuo contratto con AdRoll.
+1. Passa a **Amministratore** > **Destinazioni di esportazione**.
 
-## <a name="set-up-connection-to-adroll"></a>Configurare la connessione ad AdRoll
+1. Sotto **AdRoll**, seleziona **Configura**.
 
-1. Vai ad **Amministratore** > **Connessioni**.
+1. Assegna alla tua destinazione di esportazione un nome riconoscibile nel campo **Nome visualizzato**.
 
-1. Seleziona **Aggiungi connessione** e scegli **AdRoll** per configurare la connessione.
-
-1. Assegna alla tua connessione un nome riconoscibile nel campo **Nome visualizzato**. Il nome e il tipo di connessione descrivono la connessione. Consigliamo di scegliere un nome che spieghi lo scopo e l'obiettivo della connessione.
-
-1. Scegli chi può utilizzare questa connessione. Se non esegui alcuna azione, l'impostazione predefinita sarà Amministratori. Per ulteriori informazioni, vedi [Consentire ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
+   :::image type="content" source="media/AdRoll_config.PNG" alt-text="Riquadro di configurazione per la connessione ad AdRoll.":::
 
 1. Seleziona **Accetto** per confermare **Conformità e privacy dei dati**.
 
@@ -52,32 +44,29 @@ Esporta i segmenti dei profili cliente unificati in AdRoll e utilizzali per la p
 
 1. Seleziona **Aggiungi te stesso come utente dell'esportazione** e fornisci le tue credenziali di Customer Insights.
 
-1. Seleziona **Salva** per completare la connessione.
+1. Inserisci lil tuo **ID inserzionista AdRoll** [Inserzionista AdRoll](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles).
 
-## <a name="configure-an-export"></a>Configurare un'esportazione
+1. Seleziona **Avanti** per configurare l'esportazione.
 
-Puoi configurare questa esportazione se hai accesso a una connessione di questo tipo. Per ulteriori informazioni, vedi [Autorizzazioni necessarie per configurare un'esportazione](export-destinations.md#set-up-a-new-export).
+## <a name="configure-the-connector"></a>Configurare il connettore
 
-1. Vai a **Dati** > **Esportazioni**.
-
-1. Per creare una nuova esportazione seleziona **Aggiungi destinazione**.
-
-1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione AdRoll. Se non vedi questo nome di sezione, non sono disponibili connessioni di questo tipo.
-
-1. Immetti l'**ID inserzionista AdRoll**. Per ulteriori informazioni, vedi [Profili inserzionisti AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
-
-1. Nella sezione **Corrispondenza dati** , nel campo **Email** , seleziona il campo che rappresenta l'indirizzo e-mail del cliente. È necessario esportare i segmenti in AdRoll.
+1. Nella sezione **Corrispondenza dati** nel campo **E-mail**, seleziona il campo nel tuo profilo cliente unificato che rappresenta l'indirizzo e-mail di un cliente. È necessario esportare i segmenti in AdRoll.
 
 1. Seleziona i segmenti da esportare. Seleziona un segmento con almeno 100 membri. Non puoi esportare segmenti più piccoli. Inoltre, la dimensione massima di un segmento da esportare è di 250.000 membri per esportazione. 
 
 1. Seleziona **Salva**.
 
-Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.
+## <a name="export-the-data"></a>Esportare i dati
 
-L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). 
+Puoi [esportare dati su richiesta](export-destinations.md). L'esportazione verrà eseguita anche con ogni [aggiornamento pianificato](system.md#schedule-tab).
 
-Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand). 
+## <a name="known-limitations"></a>Limitazioni note
 
+- Puoi esportare fino a 250.000 profili per esportazione in AdRoll.
+- Non puoi esportare segmenti con meno di 100 profili in AdRoll. 
+- L'esportazione in AdRoll è limitata ai segmenti.
+- L'esportazione di un massimo di 250.000 profili in AdRoll può richiedere fino a 10 minuti per essere completata. 
+- Il numero di profili che puoi esportare in AdRoll dipende ed è limitato dal tuo contratto con AdRoll.
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 

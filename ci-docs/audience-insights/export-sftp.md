@@ -1,5 +1,5 @@
 ---
-title: Esportare i dati di Customer Insights in host SFTP (video)
+title: Esportare dati di Customer Insights in host SFTP
 description: Scopri come configurare la connessione ed esportare in una posizione SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,18 +9,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: b19ca6b8085846785682046f83d0ed4758269e5b98303692c703d995407ca7dd
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934892"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035466"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Esportare segmenti e altri dati su SFTP (anteprima)
 
 Utilizza i dati dei tuoi clienti in applicazioni di terze parti esportandoli in una posizione SFTP (Secure File Transfer Protocol).
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Prerequisiti per la connessione
 
@@ -28,7 +26,6 @@ Utilizza i dati dei tuoi clienti in applicazioni di terze parti esportandoli in 
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-- Le destinazioni SFTP dietro i firewall non sono attualmente supportate. 
 - Il tempo di esecuzione di un'esportazione dipende dalle prestazioni del sistema. Consigliamo due core CPU e 1 GB di memoria come configurazione minima del server. 
 - L'esportazione di entità con un massimo di 100 milioni di profili cliente può richiedere 90 minuti se si utilizza la configurazione minima consigliata di due core CPU e 1 GB di memoria. 
 

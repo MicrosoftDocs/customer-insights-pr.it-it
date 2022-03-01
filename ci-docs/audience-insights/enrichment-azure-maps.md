@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cbeac7e25d83df152c38d1c59cc6734a3d1fee97
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 63f241c27ec86f357c83a301d6797f9ff87c2241
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618572"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466767"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Arricchimento dei profili dei clienti con Mappe di Azure (anteprima)
 
@@ -86,7 +86,7 @@ Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito se
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md), [misure](measures.md) ed [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 

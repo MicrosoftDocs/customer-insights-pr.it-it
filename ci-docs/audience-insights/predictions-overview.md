@@ -1,20 +1,21 @@
 ---
 title: Panoramica sugli scenari di previsione supportati
 description: Scenari e opzioni di previsione coperti dall'applicazione Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: get-started
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.custom: intro-internal
+ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978018"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036014"
 ---
 # <a name="predictions-overview"></a>Panoramica delle previsioni
 
@@ -23,21 +24,10 @@ Dynamics 365 Customer Insights viene fornito con una varietà di opzioni che sfr
 ## <a name="out-of-box-models"></a>Modelli predefiniti
 
 Il modo più semplice per iniziare con la previsione dei dati sono i modelli predefiniti, spesso indicati come modelli predefiniti. Richiedono solo determinati dati e una struttura per generare rapidamente informazioni dettagliate. Attualmente sono disponibili i seguenti modelli: 
-
-# <a name="individual-consumers-b-to-c"></a>[Singoli utenti (da B a C)](#tab/b2c)
-
-- [Valore durata cliente](predict-customer-lifetime-value.md): prevede ricavi potenziali di un cliente durante l'intera interazione con un'azienda.
+- [Valore durata cliente](predict-customer-lifetime-value.md): prevede ricavi potenziali di un cliente durante l'intera interazione con un'azienda. 
 - [Raccomandazione del prodotto](predict-product-recommendation.md): suggerisce set di raccomandazioni predittive sui prodotti in base al comportamento di acquisto e ai clienti con modelli di acquisto simili.
 - [Abbandono dell'abbonamento](predict-subscription-churn.md): prevede se un cliente è a rischio perché non utilizza più i prodotti o i servizi in abbonamento della società.
 - [Abbandono transazionale](predict-transactional-churn.md): prevede se un cliente non acquisterà più i tuoi prodotti o servizi in un determinato intervallo di tempo.
-- [Analisi valutazione](sentiment-analysis.md): analizza la valutazione del feedback dei clienti e identifica gli aspetti aziendali che vengono citati frequentemente.
-
-# <a name="business-accounts-b-to-b"></a>[Account aziendali (da B a B)](#tab/b2b)
-
-- [Abbandono transazionale](predict-transactional-churn.md): prevede se un cliente non acquisterà più i tuoi prodotti o servizi in un determinato intervallo di tempo.
-
----
-
 
 ## <a name="azure-machine-learning-integration"></a>Integrazione di Azure Machine Learning
 

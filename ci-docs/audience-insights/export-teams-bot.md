@@ -1,27 +1,27 @@
 ---
 title: Bot per Microsoft Teams
 description: Cerca i profili cliente unificati in Microsoft Teams con l'aiuto di un bot.
-ms.date: 10/08/2021
+ms.date: 04/21/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: conceptual
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6a9575de922bc2ff9c9d2212b99b4c0c8b61ab0e
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967824"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406125"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot di Teams per Dynamics 365 Customer Insights (anteprima)
 
 Connettiti con Microsoft Teams per consentire a un bot di cercare profili cliente unificati nei canali di Teams.
 
 > [!div class="mx-imgBorder"]
-> ![Bot di Teams che mostra un record del cliente.](media/teams-bot.png "Bot di Teams che mostra un record del cliente")
+> ![Bot di Teams che mostra un record del cliente](media/teams-bot.png "Bot di Teams che mostra un record del cliente")
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -31,13 +31,10 @@ Per impostare e configurare il bot, devono essere soddisfatti i seguenti prerequ
 - Il [processo di unificazione](data-unification.md) è stato completato.
 - I campi vengono aggiunti all'[indice di ricerca e dei filtri](search-filter-index.md).
 - Customer Insights e Teams sono nella stessa organizzazione.
-- Il tuo ambiente ha il target primario impostato sui clienti individuali. Gli account aziendali non sono supportati.
 
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Configurare il bot
 
-1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Destinazioni di esportazione**.
+1. In Audience Insights, vai a **Amministratore** > **Destinazioni di esportazione**.
 1. Nel riquadro Microsoft Teams, seleziona **Configura**.
 1. Vieni reindirizzato all'area **App** in Teams. Puoi anche aprire Teams e selezionare **App** nell'angolo in basso a sinistra o [scaricarla da AppSource](https://go.microsoft.com/fwlink/?linkid=2124104) direttamente.
 1. Cerca **Customer Insights** e seleziona l'app.
@@ -55,6 +52,3 @@ Il bot offre funzionalità di ricerca per profili cliente unificati.
 - Se la tua organizzazione gestisce più ambienti Customer Insights nella stessa organizzazione, puoi immettere **switchinstance** per scegliere l'ambiente a cui connettere il bot.
 
 - Immetti **Aiuto** per visualizzare un elenco di comandi disponibili per il bot.  
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

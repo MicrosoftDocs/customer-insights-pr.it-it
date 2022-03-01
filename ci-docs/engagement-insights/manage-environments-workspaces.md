@@ -4,17 +4,17 @@ description: Come creare, rinominare ed eliminare aree di lavoro e ambienti.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 10/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673795"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486040"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gestire ambienti e aree di lavoro
 
@@ -22,20 +22,42 @@ ms.locfileid: "7673795"
 
 ## <a name="overview"></a>Panoramica
 
-Questo argomento discute come gestire gli spazi di lavoro e gli ambienti una volta che sono già stati creati. 
+Un'area di lavoro è uno spazio in cui archiviare e gestire eventi e report. È qui che puoi visualizzare l'impegno degli utenti in tempo reale. Quando crei un'area di lavoro, selezioni il tipo di dati da inviare all'area di lavoro. Attualmente sono supportati i dati Web e le app mobili.
 
-- Uno *spazio di lavoro* è uno spazio per memorizzare e gestire eventi e rapporti. È qui che puoi visualizzare l'impegno degli utenti in tempo reale. Quando crei un'area di lavoro, selezioni il tipo di dati da inviare all'area di lavoro. Attualmente sono supportati i dati Web e le app mobili. Per altre informazioni, vedi [Creare una nuova area di lavoro e aggiungere membri](create-workspace.md).
+Un ambiente è uno spazio in cui gestisci le aree di lavoro e le connessioni. Il modo in cui utilizzi gli ambienti dipende dalla tua organizzazione e dal tuo caso d'uso. Ad esempio puoi creare:
 
-- Un *ambiente* è uno spazio in cui si gestiscono gli spazi di lavoro e le connessioni. Per maggiori informazioni, vedere [Creare un nuovo ambiente](create-new-environment.md).
+-   Un ambiente singolo.
+-   Ambienti separati di test e di produzione.
+-   Ambienti separati per team o reparti specifici della tua organizzazione che contengono eventi rilevanti per ogni destinatario.
+-   Ambienti separati per le diverse filiali globali della società.
+-   Connessioni alla funzionalità Informazioni dettagliate sul gruppo di destinatari di Customer Insights.
 
-## <a name="manage-an-existing-workspace"></a>Gestire uno spazio di lavoro esistente
+## <a name="choose-an-environment-and-create-a-workspace"></a>Scegliere un ambiente e creare un'area di lavoro 
+
+Ogni area di lavoro deve essere in un ambiente. Puoi selezionare un ambiente preesistente o crearne uno nuovo quando crei un'area di lavoro. Quindi puoi scegliere di aggiungere membri dell'area di lavoro e iniziare a raccogliere dati.
+
+**Per creare la tua prima area di lavoro**
+
+1. Nelle informazioni dettagliate sull'interazione seleziona **Nuovo** dalla commutazione dell'area di lavoro. 
+
+   :::image type="content" source="media/New-workspace.png" alt-text="Selettore dell'area di lavoro della pagina Customer Insights.":::
+
+1. Scegli un ambiente dall'elenco o seleziona **Crea nuovo ambiente**.
+
+1. Immetti un nome in **Nome area di lavoro**. 
+
+1. Seleziona il tipo di ambiente che desideri creare, a seconda che tu voglia misurare ciò che accade su un sito Web o in un'app mobile. 
+
+1. Puoi aggiungere membri e assegnare il relativo livello di autorizzazione dall'elenco **Ruolo**. Quindi seleziona **Fine** per creare l'area di lavoro o **Avanti** per installare il codice. 
+
+1. Installa il frammento di codice per iniziare a ricevere dati, quindi seleziona **Fatto**. 
+
+## <a name="manage-a-workspace"></a>Gestire un'area di lavoro
 
 Puoi gestire più aree di lavoro contemporaneamente in un ambiente. Il tuo [ruolo](user-roles.md) determina come puoi lavorarci. 
 
  - Per gestire l'area di lavoro, devi essere un amministratore dell'ambiente o un amministratore dell'area di lavoro.
  - In qualità di amministratore dell'area di lavoro, puoi rinominare le aree di lavoro esistenti o eliminarle. 
-
-:::image type="content" source="media/workspace-edit.png" alt-text="Centro di amministrazione dello spazio di lavoro.":::
 
 ### <a name="edit-a-workspace-name"></a>Modificare il nome di un'area di lavoro
 
@@ -47,13 +69,13 @@ Puoi gestire più aree di lavoro contemporaneamente in un ambiente. Il tuo [ruol
 
 ### <a name="delete-a-workspace"></a>Eliminare un'area di lavoro
 
-L'eliminazione di un'area di lavoro rimuove in modo definitivo tutto il contenuto, i dati, le impostazioni e le autorizzazioni. Questa operazione non può essere annullata.
+L'eliminazione di un'area di lavoro rimuoverà in modo definitivo tutto il contenuto, i dati, le impostazioni e le autorizzazioni. Questa operazione non può essere annullata.
 
 1. Vai a **Amministratore** > **Area di lavoro** e seleziona **Impostazioni**.
 
 1. Seleziona **Elimina area di lavoro**. 
 
-1. Nella finestra di dialogo **Elimina spazio di lavoro** , inserisci **CONFERMA ELIMINAZIONE** in tutto maiuscolo. 
+1. Nella finestra di dialogo **Elimina area di lavoro** immetti **CONFERMA ELIMINAZIONE**. 
 
 1. Seleziona **Elimina** per eliminare in modo definitivo l'area di lavoro.
 
@@ -65,17 +87,41 @@ L'eliminazione di un'area di lavoro rimuove in modo definitivo tutto il contenut
 
 1. Seleziona **Aggiungi membri** per aggiungerli alla tua area di lavoro.
 
-## <a name="manage-an-existing-environment"></a>Gestire un ambiente esistente
+## <a name="manage-an-environment"></a>Gestire un ambiente
 
-Come amministratore dell'ambiente, puoi accedere a un ambiente dal pannello di navigazione sinistro. Puoi configurare le impostazioni dell'ambiente, altri amministratori dell'ambiente e le aree di lavoro. Seleziona le schede per spostarti tra le diverse aree dell'interfaccia di amministrazione.
+In qualità di amministratore dell'ambiente, puoi accedere a un ambiente dal riquadro di spostamento a sinistra. Puoi configurare le impostazioni dell'ambiente, altri amministratori dell'ambiente e le aree di lavoro. Seleziona le schede per spostarti tra le diverse aree dell'interfaccia di amministrazione.
 
-:::image type="content" source="media/environment-edit.png" alt-text="Interfaccia di amministrazione ambiente.":::
+:::image type="content" source="media/New-environment.png" alt-text="Interfaccia di amministrazione ambiente.":::
 
-### <a name="edit-an-environment-name"></a>Modificare un nome di ambiente
+### <a name="create-an-environment"></a>Crea un ambiente
+
+1. Nel selettore dell'area di lavoro, seleziona **+Nuovo**.
+
+1. Nell'esperienza guidata, apri il menu a discesca **Ambiente** e seleziona **Crea nuovo ambiente**. 
+
+1. Specifica un **nome per l'ambiente**.
+
+   :::image type="content" source="media/create-environment.png" alt-text="Entra nell'esperienza guidata per specificare i dettagli dell'ambiente.":::
+
+1. Scegli **Regione** e seleziona **Avanti**. 
+
+1. Fornisci un nome per l'area di lavoro e scegli il tipo di area di lavoro che desideri creare. 
+
+1.  Facoltativamente, aggiungi membri e copia il frammento di codice che completa il processo di creazione.
+
+### <a name="rename-an-environment"></a>Rinominare un ambiente
 
 1. Vai ad **Amministratore** > **Ambiente** e seleziona **Impostazioni**.
 
 1. Aggiorna il campo **Nome ambiente** e seleziona **Salva** per applicare le modifiche.
+
+### <a name="manage-environment-members"></a>Gestire i membri dell'ambiente
+
+1. Vai ad **Amministratore** > **Ambiente** e seleziona **Membri**.
+
+1. Seleziona **Aggiungi membri** per aggiornare i membri e [assegnare ruoli](user-roles.md). Attualmente è disponibile solo **Amministratore ambiente**.
+
+1. Seleziona **Aggiungi membri** per aggiungerli al tuo ambiente.
 
 ### <a name="delete-an-environment"></a>Eliminare un ambiente
 
@@ -85,17 +131,9 @@ Gli amministratori dell'ambiente possono eliminare gli ambienti. Prima di poter 
 
 1. Seleziona **Elimina ambiente**. 
 
-1. Nella finestra di dialogo **Elimina spazio di lavoro** , inserisci **CONFERMA ELIMINAZIONE** in tutto maiuscolo. 
+1. Nella finestra di dialogo **Elimina area di lavoro** immetti **CONFERMA ELIMINAZIONE**. 
 
 1. Seleziona **Eimina** per eliminare l'ambiente definitivamente.
-
-### <a name="manage-environment-members"></a>Gestire i membri dell'ambiente
-
-1. Vai ad **Amministratore** > **Ambiente** e seleziona **Membri**.
-
-1. Seleziona **Aggiungi membri** per aggiornare i membri e [assegnare ruoli](user-roles.md). Attualmente è disponibile solo **Amministratore ambiente**.
-
-1. Seleziona **Aggiungi membri** per aggiungerli al tuo ambiente.
 
 ## <a name="manage-connections"></a>Gestione connessioni
 
@@ -107,6 +145,7 @@ Per ulteriori informazioni, vedi [Creare un collegamento tra Informazioni dettag
 
 Per proteggere i dati personali dei clienti, puoi eliminare o esportare i dati che consentono l'identificazione dell'utente finale.
 
-Per ulteriori informazioni, vedi [Eliminare ed esportare i dati degli eventi contenenti informazioni personali](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
+Per ulteriori informazioni, vedi [Eliminare ed esportare i dati degli eventi contenenti informazioni personali](delete-export-personal-data.md).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

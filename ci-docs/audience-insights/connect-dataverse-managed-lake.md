@@ -1,7 +1,7 @@
 ---
 title: Connettersi alle tabelle in Microsoft Dataverse
 description: Importa dati da un data lake Microsoft Dataverse gestito.
-ms.date: 12/06/2021
+ms.date: 07/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,35 +9,35 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: 436345d8932820eb4c517a9e9164b1377c1f62d3
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: f92d64723e6a4d2fcebdbb3758519d4bfd4aeaf4
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046430"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692579"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Connessione ai dati in un Data Lake gestito di Microsoft Dataverse
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-
-Questo articolo fornisce informazioni su come gli utenti Dataverse possono connettersi rapidamente alle entità analitiche in un lake Microsoft Dataverse gestito. 
-
-> [!NOTE]
-> Devi essere un amministratore nell'organizzazione Dataverse per procedere e visualizzare l'elenco delle entità disponibili nel lake gestito.
+Questo articolo fornisce informazioni su come gli utenti Dataverse possono connettersi rapidamente alle proprie entità analitiche in un lake gestito di Dataverse. Devi essere un amministratore dell'organizzazione Dataverse per procedere e vedere l'elenco delle entità disponibili nel lake gestito.
 
 ## <a name="important-considerations"></a>Considerazioni importanti
 
-I dati archiviati nei servizi online come Azure Data Lake Storage possono essere archiviati in una posizione diversa rispetto a quella in cui i dati vengono elaborati o archiviati in Dynamics 365 Customer Insights.Importando o connettendoti a dati archiviati nei servizi online, accetti che i dati possano essere trasferiti e archiviati con Dynamics 365 Customer Insights. [Altre informazioni sono disponibili nel Microsoft Trust Center.](https://www.microsoft.com/trust-center).
+I dati archiviati nei servizi online come Azure Data Lake Storage possono essere archiviati in una posizione diversa rispetto a quella in cui i dati vengono elaborati o archiviati in Dynamics 365 Customer Insights.Importando o connettendoti a dati archiviati nei servizi online, accetti che i dati possano essere trasferiti e archiviati con Dynamics 365 Customer Insights. [Altre informazioni sono disponibili nel Microsoft Trust Center.](https://www.microsoft.com/trust-center)
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Connettersi a un data lake gestito Dataverse
 
-1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Origini dati**.
+1. In Audience Insights, vai a **Dati** > **Origini dati**.
 
 2. Seleziona **Aggiungi origine dati**.
 
-3. Seleziona **Microsoft Dataverse**, quindi **Avanti**.
+3. Seleziona **Connetti a lake Microsoft Dataverse gestito** e seleziona **Avanti**.
 
-4. Immetti un **nome** per l'origine dati e quindi seleziona **Avanti**. 
+4. Immetti un **nome** per l'origine dati e quindi seleziona **Avanti**. Linee guida per i nomi: 
+   - Deve iniziare con una lettera.
+   - Usa solo lettere e numeri. Gli spazi e i caratteri speciali non sono consentiti.
+   - Usa tra 3 e 64 caratteri.
 
 5. Fornisci l'**Indirizzo del server** per l'organizzazione Dataverse e seleziona **Accedi**.
 
@@ -59,7 +59,7 @@ Solo un'origine dati di un ambiente può utilizzare contemporaneamente lo stesso
 Modifichi la selezione dell'entità solo dopo aver creato l'origine dati. Ad esempio, se sono state aggiunte ulteriori entità a Dataverse e vuoi importare anche quelle.    
 Per connettersi a un altro data lake Dataverse, [crea una nuova origine dati](#connect-to-a-dataverse-managed-lake).
 
-1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Origini dati**.
+1. In Audience Insights, vai a **Dati** > **Origini dati**.
 
 2. Accanto all'origine dati che vuoi aggiornare, seleziona i puntini di sospensione.
 
