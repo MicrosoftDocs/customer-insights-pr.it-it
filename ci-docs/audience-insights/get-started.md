@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645269"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353718"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Inizia a utilizzare la funzionalità relativa alle informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights
 
@@ -37,7 +39,7 @@ La prima volta che accedi alle informazioni dettagliate sul gruppo di destinatar
 
 I profili unificati sono la base per ottenere informazioni dettagliate e agire sui dati. Acquisisci dati da varie fonti ed esegui il processo di unificazione dei dati per combinare i profili unificati. Specifica le relazioni tra le entità inserite e usa le funzionalità di arricchimento per aggiungere informazioni ai profili. 
 
-1. Inserisci i dati creando origini dati da più opzioni. Scegli tra [connettori Power Query](connect-power-query.md), una [cartella Common Data Model](connect-common-data-model.md) o [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Inserisci i dati creando origini dati da più opzioni. Scegli tra [connettori Power Query](connect-power-query.md), una [cartella Common Data Model](connect-common-data-model.md), o [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Esegui il [processo di unificazione dei dati](data-unification.md) passando per le fasi di [mappatura](map-entities.md), [corrispondenza](match-entities.md) e [unione](merge-entities.md).
 

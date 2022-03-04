@@ -1,24 +1,26 @@
 ---
-title: Aggiornamento incrementale per origini dati basate su Power Query
-description: Aggiorna i dati nuovi e aggiornati per origini dati di grandi dimensioni basate su Power Query.
+title: Aggiornamento incrementale per le origini dati basate su Power Query
+description: Aggiorna dati nuovi e aggiornati per origini dati di grandi dimensioni basate su Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900273"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353687"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Aggiornamento incrementale per origini dati basate su Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Aggiornamento incrementale per le origini dati basate su Power Query
 
-Questo articolo illustra come configurare l'aggiornamento incrementale per le origini dati in base a Power Query.
+Questo articolo illustra come configurare l'aggiornamento incrementale per le origini dati basate su Power Query.
 
 L'aggiornamento incrementale per le origini dati offre i seguenti vantaggi:
 
@@ -28,7 +30,7 @@ L'aggiornamento incrementale per le origini dati offre i seguenti vantaggi:
 
 ## <a name="configure-incremental-refresh"></a>Configura aggiornamento incrementale
 
-Informazioni dettagliate sul gruppo di destinatari consente l'aggiornamento incrementale delle origini dati importate tramite Power Query che supportano l'inserimento incrementale. Ad esempio, i database SQL di Azure con campi di data e ora, che indicano quando è stato effettuato l'ultimo aggiornamento dei record di dati.
+Informazioni dettagliate gruppo di destinatari consente l'aggiornamento incrementale per le origini dati importate tramite Power Query che supportano l'inserimento incrementale. Ad esempio, i database SQL di Azure con campi di data e ora, che indicano quando è stato effettuato l'ultimo aggiornamento dei record di dati.
 
 1. [Crea una nuova origine dati basata su Power Query](connect-power-query.md).
 

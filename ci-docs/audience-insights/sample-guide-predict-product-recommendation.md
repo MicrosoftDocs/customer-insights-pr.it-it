@@ -3,26 +3,29 @@ title: Guida di esempio per la previsione di raccomandazioni sui prodotti
 description: Usa questa guida di esempio per provare il modello di previsione di raccomandazioni sui prodotti predefinito.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129904"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354652"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Guida di esempio per la previsione di raccomandazioni sui prodotti (anteprima)
+# <a name="product-recommendation-prediction-sample-guide"></a>Guida di esempio per la previsione di raccomandazioni sui prodotti
 
 In questa guida viene illustrato un esempio completo di previsione di raccomandazioni sui prodotti che utilizza i dati di esempio forniti di seguito.
 
 ## <a name="scenario"></a>Scenario
 
-Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, che vendono attraverso il sito Web Contoso per il caffè. Il suo obiettivo è capire quali prodotti dovrebbe consigliare ai clienti ricorrenti. Sapere cosa i clienti hanno maggiore **probabilità di acquistare** può aiutare a risparmiare sforzi di marketing concentrandosi su articoli specifici.
+Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, in vendita sul sito Web Contoso Coffee. Il suo obiettivo è capire quali prodotti dovrebbe consigliare ai clienti ricorrenti. Sapere cosa i clienti hanno maggiore **probabilità di acquistare** può aiutare a risparmiare sforzi di marketing concentrandosi su articoli specifici.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -31,7 +34,7 @@ Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, 
 
 ## <a name="task-1---ingest-data"></a>Attività 1: inserire dati
 
-Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e sull'[importazione di origini dati utilizzando i connettori Power Query](connect-power-query.md). Le seguenti informazioni presuppongono che tu conosca l'inserimento dati in generale.
+Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importazione delle origini dati utilizzando in specifico i connettori Power Query](connect-power-query.md). Le seguenti informazioni presuppongono che tu conosca l'inserimento dati in generale.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inserire dati cliente dalla piattaforma di eCommerce
 
@@ -105,9 +108,9 @@ Dopo aver importato i dati, iniziamo il processo di unificazione dei dati per cr
 
 1. Passa alla scheda **Corrispondenza** e seleziona **Imposta ordine**.
 
-2. Nell'elenco a discesa **Primaria**, scegli **eCommerceContacts : eCommerce** come origine primaria e includi tutti i record.
+2. Nell'elenco a discesa **Principale** scegli **eCommerceContacts : eCommerce** come fonte primaria e includi tutti i record.
 
-3. Nell'elenco a discesa **Entità 2**, scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
+3. Nell'elenco a discesa **Entità 2** scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
 
    ![Unificare la corrispondenza di eCommerce e Fedeltà.](media/unify-match-order.png)
 
@@ -115,16 +118,16 @@ Dopo aver importato i dati, iniziamo il processo di unificazione dei dati per cr
 
 5. Aggiungi la prima condizione utilizzando FullName.
 
-   - Per eCommerceContacts seleziona **FullName** nell'elenco a discesa.
-   - Per loyCustomers seleziona **FullName** nell'elenco a discesa.
+   - Per eCommerceContacts seleziona **FullName** nel menu a discesa.
+   - Per loyCustomers seleziona **FullName** nel menu a discesa.
    - Seleziona l'elenco a discesa **Normalizza** e scegli **Tipo (telefono, nome, indirizzo...)**.
    - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 
 6. Immetti il nome **FullName, Email** per la nuova regola.
 
    - Aggiungi una seconda condizione per l'indirizzo e-mail selezionado **Aggiungi condizione**
-   - Per l'entità eCommerceContacts, scegli **E-mail** nel menu a discesa.
-   - Per l'entità loyCustomers, scegli **E-mail** nel menu a discesa.
+   - Per l'entità eCommerceContacts, scegli **E-mail** nell'elenco a discesa.
+   - Per l'entità loyCustomers, scegli **E-mail** nell'elenco a discesa.
    - Lascia vuoto il campo Normalizza.
    - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 
@@ -154,7 +157,7 @@ Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abba
 
 1. Definisci tre condizioni per il modello:
 
-   - **Numero di prodotti** : Imposta questo valore su **5**. Questa impostazione definisce quanti prodotti desideri consigliare ai tuoi clienti.
+   - **Numero di prodotti**: imposta questo valore su **5**. Questa impostazione definisce quanti prodotti desideri consigliare ai tuoi clienti.
 
    - **Ripetizione degli acquisti prevista**: seleziona **Sì** per indicare che desideri includere i prodotti nella raccomandazione che i tuoi clienti hanno acquistato in precedenza.
 

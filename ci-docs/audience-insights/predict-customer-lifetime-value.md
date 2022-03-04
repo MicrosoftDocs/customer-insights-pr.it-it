@@ -3,20 +3,24 @@ title: Previsione della durata del cliente (CLV)
 description: Prevedi i futuri ricavi potenziali dai clienti attivi.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035374"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355794"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Previsione del valore di durata del cliente (CLV) (anteprima)
+# <a name="customer-lifetime-value-clv-prediction"></a>Previsione della durata del cliente (CLV)
 
 Prevedi il valore potenziale (ricavi) che i singoli clienti attivi porteranno nella tua attività in un periodo di tempo futuro definito. Questa funzionalità può aiutarti a raggiungere vari obiettivi: 
 - Identificare i clienti di alto valore ed elaborare queste informazioni
@@ -65,7 +69,7 @@ I seguenti dati sono obbligatori e, se contrassegnati come facoltativi, consigli
     - Completezza dei dati: meno del 20% di valori mancanti nei campi obbligatori nei dati di input   
 
 > [!NOTE]
-> - Il modello richiede la cronologia delle transazioni dei tuoi clienti. Al momento è possibile configurare solo un'entità della cronologia delle transazioni. Se sono presenti più entità di acquisto/transazione, uniscile in Power Query prima dell'inserimento dei dati.
+> - Il modello richiede la cronologia delle transazioni dei tuoi clienti. Al momento è possibile configurare solo un'entità della cronologia delle transazioni. Se sono presenti più entità di acquisto/transazione, puoi unirle in Power Query prima che inizi l'importazione dei dati.
 > - Per ulteriori dati sull'impegno del cliente (facoltativo), puoi aggiungere tutte le entità di impegno del cliente che desideri venga in considerazione dal modello.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Creare una previsione del valore di durata del cliente
@@ -74,7 +78,7 @@ I seguenti dati sono obbligatori e, se contrassegnati come facoltativi, consigli
 
 1. Seleziona il riquadro **Valore di durata del cliente** e seleziona **Utilizza modello**. 
 
-1. Nel riquadro **Valore durata cliente (anteprima)** seleziona **Inizia**.
+1. Nel riquadro **Valore durata cliente** seleziona **Inizia**.
 
 1. Specifica **Assegna un nome al modello** e **Nome entità di output** per distinguerli da altri modelli o entità.
 

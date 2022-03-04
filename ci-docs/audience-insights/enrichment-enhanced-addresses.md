@@ -1,20 +1,25 @@
 ---
 title: Arricchimento per l'ottimizzazione degli indirizzi (video)
 description: Arricchisci e normalizza le informazioni sugli indirizzi dei profili dei clienti con i modelli Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934928"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353641"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Arricchimento dei profili dei clienti con indirizzi avanzati
 
@@ -100,17 +105,17 @@ Per avviare il processo di arricchimento, seleziona **Esegui** dalla barra dei c
 
 Al termine del processo di arricchimento, puoi rivedere i dati dei profili cliente appena arricchiti in **I miei arricchimenti**. Inoltre, troverai l'ora dell'ultimo aggiornamento e il numero di profili arricchiti.
 
-Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito selezionando **Visualizza dati arricchiti**.
+Puoi vedere un esempio dei dati arricchiti nel riquadro **Anteprima clienti arricchita**. Seleziona **Visualizza altro** e seleziona la scheda **Dati** per accedere a una visualizzazione dettagliata di ciascun profilo arricchito.
 
 ### <a name="overview-card"></a>Scheda panoramica
 
 La scheda panoramica mostra i dettagli sulla copertura dell'arricchimento. 
 
-* **Clienti elaborati e modificati**: il numero di profili cliente che sono stati arricchiti.
+* **Indirizzi elaborati e modificati**: il numero di profili cliente con inidirizzi che sono stati arricchiti.
 
-* **Clienti elaborati e non modificati**: il numero di profili cliente che sono stati riconosciuti ma non modificati. In genere si verifica quando i dati di input sono validi e non possono essere migliorati dall'arricchimento.
+* **Indirizzi elaborati e non modificati**: il numero di profili cliente con indirizzi che sono stati riconosciuti ma non modificati. In genere si verifica quando i dati di input sono validi e non possono essere migliorati dall'arricchimento.
 
-* **Clienti non elaborati e non modificati**: il numero di profili che non sono stati riconosciuti. Solitamente sono dati di input non validi o non supportati dall'arricchimento.
+* **Indirizzi non elaborati e non modificati**: il numero di profili cliente con indirizzi che non sono stati riconosciuti. Solitamente sono dati di input non validi o non supportati dall'arricchimento.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

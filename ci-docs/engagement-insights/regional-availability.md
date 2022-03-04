@@ -4,26 +4,25 @@ description: Scopri di più sulle regioni e le aree geografiche in cui viene dis
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
-ms.service: customer-insights
+ms.date: 09/28/2021
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: 08435e651c3706257b8c0548e6e9bbf98f39dce9
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483302"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228111"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Disponibilità regionale per Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Informazioni dettagliate sull'interazione, una funzionalità di Dynamics 365 Customer Insights, introduce gradualmente più regioni in cui i clienti possono scegliere di archiviare i propri dati. Gli amministratori possono scegliere un'area quando [creano un nuovo ambiente](manage-environments-workspaces.md#create-an-environment). 
+Informazioni dettagliate sull'interazione, una funzionalità di Dynamics 365 Customer Insights, introduce gradualmente più regioni in cui i clienti possono scegliere di archiviare i propri dati. Gli amministratori possono scegliere un'area quando [creano un nuovo ambiente](create-new-environment.md). 
 
-Quando configuri le informazioni dettagliate sull'interazione per la prima volta, puoi scegliere l'area mentre esegui l'[esperienza guidata per la prima esecuzione](quickstart.md). Successivamente, ogni nuovo ambiente consente di scegliere l'area in cui verranno archiviati i dati.
+Quando configuri le informazioni dettagliate sull'interazione per la prima volta, puoi scegliere l'area mentre esegui l'[esperienza guidata per la prima esecuzione](quickstart.md). Successivamente, ogni nuovo ambiente ti consente di scegliere l'area in cui verranno archiviati i dati.
 
-Attualmente ci sono due aree geografiche: USA ed Europa. Gli utenti possono scegliere tra la regione degli Stati Uniti occidentali e la regione dell'Europa settentrionale.
+Attualmente supportiamo le aree geografiche degli Stati Uniti e dell'Europa. Gli utenti possono scegliere tra queste regioni: Stati Uniti occidentali, Stati Uniti orientali, Europa settentrionale ed Europa occidentale.
 
 Un'organizzazione può gestire ambienti in diverse regioni. Ad esempio, l'Ambiente A archivia i dati negli Stati Uniti occidentali e l'Ambiente B nell'Europa settentrionale.
 

@@ -2,19 +2,25 @@
 title: Configurazione del sistema in Audience Insight
 description: Informazioni sulle impostazioni di sistema nella funzionalità Informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732375"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354238"
 ---
 # <a name="system-configuration"></a>Configurazione di sistema
 
@@ -85,6 +91,10 @@ Seleziona lo stato di un processo per vedere i dettagli dello stato dell'intero 
 ## <a name="schedule-tab"></a>Scheda Pianifica
 
 Utilizza la scheda **Pianifica** per pianificare gli aggiornamenti automatici di tutte le [origini dati inserite](data-sources.md). Gli aggiornamenti automatici aiutano a garantire che gli aggiornamenti delle tue origini dati si riflettano nei profili cliente unificati.
+
+> [!NOTE]
+> Le origini dati gestite dall'utente si aggiornano in base alle proprie pianificazioni. Per pianificare l'aggiornamento delle origini dati gestite dall'utente, configura le impostazioni di aggiornamento su una specifica origine dati dalla pagina **Origine dati**.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Impostazioni dell'aggiornamento di un flusso di dati.":::
 
 1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Sistema** e seleziona la scheda **Pianifica**.
 

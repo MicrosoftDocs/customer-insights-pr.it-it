@@ -3,18 +3,17 @@ title: Arricchimento con l'importazione personalizzata SFTP
 description: Informazioni generali sull'arricchimento con l'importazione personalizzata SFTP.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304655"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229643"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Arricchimento di profili cliente con dati personalizzati (anteprima)
 
@@ -45,6 +44,8 @@ Per configurare l'importazione personalizzata SFTP, è necessario soddisfare i s
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Screenshot durante l'inserimento della posizione dei dati.":::
 
+1. Selezionate **Avanti** e scegliete il set di dati del cliente. Questo può essere o tutti i profili dei clienti o un segmento.
+
 1. Seleziona **Avanti** e fornisci un nome per l'arricchimento e un nome per l'entità di output. 
 
 1. Seleziona **Salva arricchimento** dopo aver esaminato le tue scelte.
@@ -64,7 +65,7 @@ Devi essere un amministratore per configurare le connessioni. Seleziona **Aggiun
 1. Una volta completata la verifica, puoi salvare la connessione selezionando **Salva**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pagina di configurazione della connessione di Experian](media/enrichment-SFTP-connection.png "Pagina di configurazione della connessione di Experian")
+   > ![Pagina di configurazione della connessione di Experian.](media/enrichment-SFTP-connection.png "Pagina di configurazione della connessione di Experian")
 
 
 ## <a name="defining-field-mappings"></a>Definire i mapping dei campi 
@@ -123,6 +124,6 @@ Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito se
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md) e [misure](measures.md) e persino [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

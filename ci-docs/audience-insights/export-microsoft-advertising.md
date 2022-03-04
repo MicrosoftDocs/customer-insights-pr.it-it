@@ -1,20 +1,19 @@
 ---
 title: Esportare dati di Customer Insights in Microsoft Advertising
 description: Scopri come configurare la connessione ed eseguire l'esportazione in Microsoft Advertising.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 8f009ed0258ded424340061e5320dd7df68c199f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124507"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226896"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Esporta segmenti in Microsoft Advertising (anteprima)
 
@@ -29,9 +28,9 @@ Esporta i segmenti di Customer Insights in Microsoft Advertising per creare segm
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-- È possibile esportare fino a 500 mila profili per esportazione in Microsoft Advertising.
+- È possibile esportare fino a 500'000 profili di clienti per esportazione in Microsoft Advertising.
 - L'esportazione in Microsoft Advertising è limitata ai segmenti.
-- L'esportazione fino a 500 mila profili in Microsoft Advertising può richiedere fino a 10 minuti per il completamento. 
+- Esportare fino a 500'000 profili di clienti in Microsoft Advertising può richiedere fino a 10 minuti per essere completato. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Configurare la connessione a Microsoft Advertising
@@ -68,7 +67,7 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Inserisci il tuo **ID cliente Microsoft Advertising e il tuo ID account**. Puoi trovare l'ID cliente (`cid`) e l'ID account (`aid`) nei parametri dell'URL quando sei connesso a Microsoft Advertising.
 
-1. Nella sezione **Corrispondenza dati**, nel campo **E-mail**, seleziona il campo nel tuo profilo cliente unificato con l'indirizzo e-mail di un cliente. È necessario esportare i segmenti in Microsoft Advertising.
+1. Nella sezione **Corrispondenza dei dati** , nel campo **Email** , seleziona il campo con l'indirizzo e-mail del cliente. È necessario esportare i segmenti in Microsoft Advertising.
 
 1. Seleziona **Salva**.
 

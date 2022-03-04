@@ -4,17 +4,16 @@ description: Come creare, modificare ed eliminare i segmenti e dove utilizzarli.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: e99c04e6c92d8ca16c2d69957e0f5b7dba0ac757
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036153"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225381"
 ---
 # <a name="view-and-create-segments"></a>Visualizza e crea segmenti
 
@@ -44,22 +43,27 @@ Questa sezione descrive come creare un *segmento vuoto* da zero.
 
 1. Seleziona **Nuovo segmento**.
 
-1. Nella **Raccolta risorse**, scegli l'attributo in base al quale desideri filtrare. Al momento, puoi creare segmenti solo in base alle dimensioni.
+1. Nella **Libreria delle risorse**, seleziona il (+) accanto all'attributo che vuoi filtrare. Al momento, puoi creare segmenti solo in base alle dimensioni.
 
-1. Scegli un operatore e un valore per l'attributo selezionato. Le operazioni seguenti non sono supportate.
+   :::image type="content" source="media/create-new-segment.png" alt-text="Creare un nuovo segmento.":::
+
+1. Nella sezione **Regola** , scegliete un operatore e un valore per l'attributo selezionato. Le operazioni seguenti non sono supportate.
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Scegli un operatore per il tuo nuovo segmento.":::
+
    - **è**: richiede una corrispondenza esatta per includere i valori. Usa **uguale a** per un singolo valore o **qualsiasi** per includere più valori.
    - **non è**: richiede una corrispondenza esatta per escludere i valori. Usa **uguale a** per un singolo valore o **qualsiasi** per includere più valori.
    - **inizia con**: una stringa con cui iniziano i valori corrispondenti.
    - **finisce con**: una stringa con cui finiscono i valori corrispondenti.
    - **contiene**: una stringa contenuta in valori corrispondenti.
 
-1. Per aggiungere più condizioni a un gruppo, è possibile utilizzare due operatori logici. Gli attributi proiettati vengono presi in considerazione quando si utilizzano operatori di gruppo.
+1. Per aggiungere più condizioni a un gruppo, si possono usare operatori logici. Gli attributi proiettati vengono presi in considerazione quando si utilizzano operatori di gruppo.
    - Operatore **AND**: entrambe le condizioni devono essere soddisfatte come parte del processo di segmentazione. Questa opzione è molto utile quando si definiscono condizioni tra entità diverse.
    - Operatore **OR**: una delle condizioni deve essere soddisfatta come parte del processo di segmentazione. Questa opzione è molto utile quando si definiscono più condizioni per la stessa entità.
 
 1. Seleziona **Salva** e il nome del segmento. 
 
-Il segmento verrà elencato nella pagina Segmenti e puoi applicarlo a tutti i report e le canalizzazioni nell'area di lavoro.
+Il segmento sarà elencato nella pagina **Segmenti** e potrai applicarlo a tutti i report e funnel nell'area di lavoro.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Utilizza un segmento in un report o in un grafico a imbuto
 
@@ -67,7 +71,7 @@ Puoi applicare i segmenti a un report o a un grafico a imbuto per filtrarli in b
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Un report sulle visualizzazioni di pagina con un elenco a discesa espanso per scegliere quali segmenti applicare.":::
 
-Per applicare un segmento, apri il report o il grafico a imbuto. Seleziona **Aggiungi condizione** e scegli **Filtra per segmento**. Scegli il segmento dall'elenco che desideri applicare. Il segmento viene applicato al report. Se un grafico non supporta il segmento, mostra un errore.
+Per applicare un segmento, apri il report o il grafico a imbuto. Seleziona **+ Aggiungi condizione** e scegli **Filtra per segmento**. Scegli il segmento dall'elenco che desideri applicare. Il segmento viene applicato al report. Se un grafico non supporta il segmento, mostra un errore. Per maggiori informazioni, vedi [Creare e gestire i rapporti sui funnel](funnel-reports.md).
  
 Puoi applicare *fino a tre segmenti* a un report o a un grafico a imbuto.
 
@@ -91,5 +95,7 @@ Puoi applicare *fino a tre segmenti* a un report o a un grafico a imbuto.
 1. Nell'elenco dei segmenti, seleziona **Altro [...]**. 
 1. Scegli **Eimina** dall'elenco a discesa.
 1. Seleziona **Elimina** per confermare.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

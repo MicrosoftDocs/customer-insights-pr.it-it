@@ -1,22 +1,24 @@
 ---
 title: Mappature semantiche (Anteprima)
 description: Panoramica delle mappature semantiche e come usarle.
-ms.date: 09/28/2021
-ms.service: customer-insights
+ms.date: 12/01/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+searchScope:
+- ci-semantic-mapping
+- customerInsights
+ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622940"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353962"
 ---
-# <a name="semantic-mappings"></a>Mappature semantiche
+# <a name="semantic-mappings-preview"></a>Mappature semantiche (Anteprima)
 
 Le mappature semantiche ti permettono di mappare i tuoi dati non-attività a schemi predefiniti. Questi schemi aiutano il pubblico a capire meglio gli attributi dei vostri dati. La mappatura semantica e i dati forniti permettono nuove intuizioni e caratteristiche negli insight del pubblico. Per mappare i dati delle vostre attività agli schemi, rivedete la documentazione delle [attività](activities.md) .
 
@@ -75,8 +77,7 @@ Le **mappature semantiche sono attualmente abilitate per gli ambienti basati su 
 
 1. Per eseguire una mappatura semantica in un momento successivo, seleziona la mappatura semantica e seleziona **Refresh**.
 
-> [!TIP]
-> Esistono [sei tipi di stato](system.md#status-types) per attività/processi. Inoltre, la maggior parte dei processi [dipende da altri processi a valle](system.md#refresh-policies). Puoi selezionare lo stato di un processo per visualizzare i dettagli sull'avanzamento dell'intero processo. Dopo aver selezionato **Vedi i dettagli** per una delle attività del processo sono disponibili informazioni aggiuntive: tempo di elaborazione, data dell'ultima elaborazione e tutti gli errori e gli avvisi associati all'attività.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Gestire le mappature semantiche esistenti
 
@@ -91,5 +92,41 @@ Su **Data** > **Mappature semantiche (anteprima)**, puoi visualizzare tutte le t
 - **Rinominare**: Apre una finestra di dialogo dove è possibile inserire un nome diverso per la mappatura semantica selezionata. Seleziona **Salva** per applicare le modifiche.
 
 - **Cancellare**: Apre una finestra di dialogo per confermare l'eliminazione della mappatura semantica selezionata. Puoi anche cancellare più di una mappatura semantica alla volta selezionando le mappature semantiche e l'icona di cancellazione. Per confermare l'eliminazione seleziona **Elimina**.
+
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utilizzare una mappatura di entità semantiche ContactProfile per creare attività a livello di contatto
+
+Dopo aver creato una mappatura delle entità semantiche *ContactProfile*, è possibile acquisire le attività dei contatti. Ti consente di vedere nella cronologia delle attività per un account quale contatto era responsabile di ciascuna attività. La maggior parte dei passaggi segue la configurazione tipica della mappatura delle attività.
+
+   > [!NOTE]
+   > Affinché le attività a livello di contatto funzionino, è necessario disporre di entrambi gli attributi **AccountID** e **ContactID** per ogni record all'interno dei dati dell'attività.
+
+1. [Definire una mappatura semantica dell'entità *ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) ed eseguire la mappatura semantica.
+
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Impegni**.
+
+1. Seleziona **Aggiungi attività** per creare una nuova attività.
+
+1. Assegna un nome all'attività, seleziona l'entità dell'attività di origine e seleziona la chiave primaria dell'entità dell'attività.
+
+1. Nel passaggio **Relazioni** crea una relazione indiretta tra i dati di origine dell'attività e gli account, utilizzando i tuoi dati di contatto come entità intermediaria. Per ulteriori informazioni, vedi [percorsi di relazione diretti e indiretti](relationships.md#relationship-paths).
+   - Esempio di relazione per un'attività chiamata *Acquisti*:
+      - **Dati sull'attività di origine degli acquisti** > **Informazioni di contatto** sull'attributo **ContactID**
+      - **Informazioni di contatto** > **Dati dell'account** sull'attributo **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Esempio di configurazione della relazione.":::
+
+1. Dopo aver impostato le relazioni, seleziona **Avanti** e completa la configurazione della mappatura delle attività. Per i passaggi dettagliati sulla creazione dell'attività, vedi [definire un'attività](activities.md).
+
+1. Esegui le mappature delle tue attività.
+
+1. Le tue attività a livello di contatto saranno ora visibili sulla cronologia dei tuoi clienti.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Risultato finale dopo la configurazione delle attività di contatto":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Filtraggio della sequenza temporale delle attività a livello di contatto
+
+Dopo aver configurato una mappatura delle attività a livello di contatto e averla eseguita, la cronologia delle attività per i tuoi clienti verrà aggiornata. Include i loro ID o nomi, a seconda della tua configurazione *ContactProfile*, per le attività su cui hanno agito. Puoi filtrare le attività in base ai contatti nella sequenza temporale per visualizzare i contatti specifici a cui sei interessato. Inoltre, puoi vedere tutte le attività che non sono assegnate a un contatto specifico selezionando **Attività non mappate a un contatto**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opzioni di filtro disponibili per le attività a livello di contatto.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

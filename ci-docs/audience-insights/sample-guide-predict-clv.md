@@ -3,18 +3,17 @@ title: Guida di esempio previsione valore di durata del cliente
 description: Usa questa guida di esempio per provare il modello di previsione di Customer Lifetime Value (CLV).
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306354"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354836"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guida di esempio previsione di Customer Lifetime Value (CLV)
 
@@ -22,7 +21,7 @@ Questa guida ti spiegherà un esempio end-to-end della previsione Customer Lifet
 
 ## <a name="scenario"></a>Scenario
 
-Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità. Vendono i prodotti attraverso il proprio sito Web Contoso di vendita di caffè. L'azienda vuole capire il valore (ricavo) che i propri clienti possono generare nei prossimi 12 mesi. Conoscere il valore atteso dei loro clienti nei prossimi 12 mesi li aiuterà a dirigere le loro iniziative di marketing su clienti di alto valore.
+Contoso è un'azienda che produce caffè e macchine per caffè di alta qualità. Vende i prodotti tramite il sito Web di Contoso Coffee. L'azienda vuole capire il valore (ricavo) che i propri clienti possono generare nei prossimi 12 mesi. Conoscere il valore atteso dei loro clienti nei prossimi 12 mesi li aiuterà a dirigere le loro iniziative di marketing su clienti di alto valore.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -31,7 +30,7 @@ Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità. 
 
 ## <a name="task-1---ingest-data"></a>Attività 1: inserire dati
 
-Rivedere gli articoli [sull'inserimento dati](data-sources.md) e [l'importazione di origini dati utilizzando i connettori Power Query](connect-power-query.md). Le seguenti informazioni presuppongono che tu conosca l'inserimento dati in generale.
+Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importazione delle origini dati utilizzando i connettori Power Query](connect-power-query.md). Le seguenti informazioni presuppongono che tu conosca l'inserimento dati in generale.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inserire dati cliente dalla piattaforma di eCommerce
 
@@ -164,7 +163,7 @@ Dopo aver importato i dati, iniziamo il processo di unificazione dei dati per cr
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Attività 3 - Configurare la previsione di Customer Lifetime Value
 
-Con i profili cliente unificati in atto, ora possiamo eseguire la previsione Customer Lifetime Value. Per informazioni dettagliate, vedere [Previsione di Customer Lifetime Value (anteprima)](predict-customer-lifetime-value.md).
+Con i profili cliente unificati in atto, ora possiamo eseguire la previsione Customer Lifetime Value. Per i passaggi dettagliati, vedi [Previsione del valore durata cliente](predict-customer-lifetime-value.md).
 
 1. Vai a **Intelligenza**  > **Previsioni** e seleziona **Modello di Valore durata cliente**.
 

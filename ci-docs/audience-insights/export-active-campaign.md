@@ -1,20 +1,19 @@
 ---
 title: Esportazione dei dati di Customer Insights in ActiveCampaign
 description: Scopri come configurare la connessione ed esportare in ActiveCampaign.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.openlocfilehash: 089b9b0d76437e695f797f941ed384734d8f772e
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314632"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227814"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Esportazione di segmenti in ActiveCampaign (anteprima)
 
@@ -23,14 +22,14 @@ Esporta segmenti di profili cliente unificati in ActiveCampaign e usali per atti
 ## <a name="prerequisites"></a>Prerequisiti
 
 -   Hai un [account ActiveCampaign](https://www.activecampaign.com/) e le corrispondenti credenziali amministratore.
--   Disponi di [segmenti configurati](segments.md) in Audience Insights.
+-   Disponi di [segmenti configurati](segments.md) in Informazioni dettagliate sul gruppo di destinatari.
 -   I profili cliente unificati nei segmenti esportati contengono un campo con un indirizzo e-mail.
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-- Puoi esportare fino a 1 milione di profili per esportazione in ActiveCampaign e il completamento può richiedere fino a 90 minuti.
+- Puoi esportare fino a 1 milione di profili di clienti per esportazione in ActiveCampaign e può richiedere fino a 90 minuti per essere completato.
 - L'esportazione in ActiveCampaign è limitata ai segmenti.
-- Il numero di profili che puoi esportare in ActiveCampaign dipende dal tuo contratto con ActiveCampaign.
+- Il numero di profili di clienti che puoi esportare in ActiveCampaign dipende dal tuo contratto con ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Configurazione della connessione ad ActiveCampaign
 
@@ -64,7 +63,7 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Immetti l'[**ID elenco ActiveCampaign**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-3. Nella sezione **Corrispondenza dati** nel campo **E-mail**, seleziona il campo nel tuo profilo cliente unificato che rappresenta l'indirizzo e-mail di un cliente. È necessario esportare segmenti in ActiveCampaign. Facoltativamente, puoi esportare nome, cognome e telefono per creare e-mail più personalizzate. Seleziona Aggiungi attributo per eseguire il mapping di questi campi.
+1. Nella sezione **Corrispondenza dati** , nel campo **Email** , seleziona il campo che rappresenta l'indirizzo e-mail del cliente. È necessario esportare segmenti in ActiveCampaign. Facoltativamente, puoi esportare nome, cognome e telefono per creare e-mail più personalizzate. Seleziona Aggiungi attributo per eseguire il mapping di questi campi.
 
 1. Seleziona **Salva**.
 

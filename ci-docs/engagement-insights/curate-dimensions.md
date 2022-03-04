@@ -2,18 +2,17 @@
 title: Utilizzare le dimensioni demografiche per suddividere i dati comportamentali (dimensioni curate)
 description: Utilizza le dimensioni curate di profili unificati per abilitare le proprietà dei profili cliente di Informazioni dettagliate sul gruppo di destinatari.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461108"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233052"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Utilizzare le dimensioni demografiche per suddividere i dati comportamentali
 
@@ -29,7 +28,7 @@ Utilizzando le dimensioni demografiche di profili unificati, gli utenti di Infor
 - Un ambiente di Informazioni dettagliate sull'interazione in cui sono disponibili dati sui profili cliente collegati all'ambiente di Informazioni dettagliate sul gruppo di destinari in cui vengono creati i profili cliente. Ulteriori informazioni: [Creare un collegamento tra Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Dopo aver creato un collegamento tra gli ambienti di Informazioni dettagliate sul gruppo di destinatari e di Informazioni dettagliate sull'interazione, potresti volere solo dati specifici delle proprietà del profilo cliente, che possono essere utili come dimensioni in Informazioni dettagliate sull'interazione. Per ulteriori informazioni, vedi [Abilitare attributi e segmenti di profili unificati di Informazioni dettagliate sul gruppo di destinatari](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Dopo aver creato un collegamento tra gli ambienti di Informazioni dettagliate sul gruppo di destinatari e di Informazioni dettagliate sull'interazione, potresti volere solo dati specifici delle proprietà del profilo cliente, che possono essere utili come dimensioni in Informazioni dettagliate sull'interazione. Per ulteriori informazioni, vedi [Abilitare attributi e segmenti di profili unificati di Informazioni dettagliate sul gruppo di destinatari](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Creare un nuovo report personalizzato
 

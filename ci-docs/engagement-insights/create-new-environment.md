@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648122"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225430"
 ---
 # <a name="create-a-new-environment"></a>Crea un nuovo ambiente 
 
@@ -40,13 +39,13 @@ Un ambiente è uno spazio in cui gestisci le aree di lavoro e le connessioni. Il
 
 1. Scegli **Regione** e seleziona **Avanti**. 
 
-1. Digita il **nome di un'area di lavoro**, che ti permette di raccogliere dati per specifici siti web o app. Per maggiori informazioni, vedi [Creare uno spazio di lavoro](create-workspace.md).
+1. Digita in **Nome dell'area di lavoro** un valore che consenta di raccogliere dati per app o siti Web specifici. Per maggiori informazioni, vedi [Creare uno spazio di lavoro](create-workspace.md).
 
-1. Scegli il **tipo di spazio di lavoro** (Web o Mobile) che vuoi creare. 
+1. Scegli il **Tipo di area di lavoro** (Web o per dispositivi mobili) che vuoi creare. 
 
 1. Seleziona **Mostra impostazioni avanzate** per abilitare o disabilitare queste impostazioni opzionali:
 
-   - Allinea **Da sconosciuto a conosciuto** a "enabled" per associare gli eventi web agli utenti che si sono autenticati in precedenza. Per maggiori informazioni, vedere [Riconoscere eventi web da visitatori precedentemente autenticati](unknown-to-known.md)
+   - Allinea **Da sconosciuto a conosciuto** a "enabled" per associare gli eventi web agli utenti che si sono autenticati in precedenza. Per ulteriori informazioni, vedi [Riconoscere eventi Web da visitatori autenticati in precedenza](unknown-to-known.md).
    - Attiva **Filtro traffico bot** su "abilitato" per rimuovere il traffico web dai bot per questo spazio di lavoro. 
 
 1. Seleziona **Completa** quando hai finito. 

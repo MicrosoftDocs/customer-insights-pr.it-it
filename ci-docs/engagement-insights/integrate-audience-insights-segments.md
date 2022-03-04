@@ -2,18 +2,17 @@
 title: Utilizzare i segmenti di Informazioni dettagliate sul gruppo di destinatari per filtrare i report di Informazioni dettagliate sull'interazione
 description: Utilizza i segmenti di Informazioni dettagliate sul gruppo di destinatari nelle analisi interattive dei dati comportamentali acquisiti da Informazioni dettagliate sull'interazione nel sito Web di un cliente.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bdd5641bb17384725491f22f70ae967ad90b1696
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 9c8c7a1a9216e04ebee100c548afbc745af396ec
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461063"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230491"
 ---
 # <a name="use-audience-insights-segments-to-filter-engagement-insights-reports"></a>Utilizzare i segmenti di Informazioni dettagliate sul gruppo di destinatari per filtrare i report di Informazioni dettagliate sull'interazione
 

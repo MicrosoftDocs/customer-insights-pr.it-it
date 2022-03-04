@@ -4,17 +4,16 @@ metadata:
   author: m-hartmann
   description: Trova articoli pertinenti per consultare il contenuto della Guida.
   ms.author: mhart
-  ms.date: 10/29/2020
-  ms.service: customer-insights
+  ms.date: 03/02/2022
   ms.topic: landing-page
-  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
-  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+  ms.openlocfilehash: 5efa266dfe8d70812f4c668b04cee2f93f206f7b
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/15/2021
-  ms.locfileid: "5598466"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350474"
 title: Documentazione di Dynamics 365 Customer Insights
-summary: Trova risorse utili per iniziare a conoscere le funzionalità di Customer Insights.
+summary: Trova risorse utili per iniziare a utilizzare e conoscere le funzionalità di Customer Insights.
 landingContent:
 - title: Scopri Customer Insights
   linkLists:
@@ -23,19 +22,41 @@ landingContent:
     - text: " Panoramica di Customer Insights"
       url: overview.md
     - text: Piani di rilascio
-      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
-    - text: Accedi all'ambiente
-      url: https://home.ci.ai.dynamics.com/
-- title: Inizia a utilizzare Audience Insights
+      url: /dynamics365/release-plans/
+    - text: Informazioni sulla piattaforma dati dei clienti
+      url: https://dynamics.microsoft.com/ai/customer-insights/
+  - linkListType: learn
+    links:
+    - text: Percorso di apprendimento di Customer Insights
+      url: /learn/paths/build-customer-insights/
+- title: Introduzione a Customer Insights
   linkLists:
   - linkListType: get-started
     links:
     - text: Iscriviti per una versione di valutazione
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Novità
+    - text: Novità delle informazioni dettagliate sul gruppo di destinatari
       url: audience-insights/whats-new-audience-insights.md
-    - text: Documentazione di Audience Insights
-      url: audience-insights/index.yml
+    - text: Guida introduttiva
+      url: audience-insights/get-started.md
+  - linkListType: learn
+    links:
+    - text: Informazioni di base
+      url: /learn/modules/get-started-customer-data-platform/
+- title: Amministrare Customer Insights
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurare il sistema
+      url: audience-insights/system.md
+    - text: Definire le autorizzazioni utente
+      url: audience-insights/permissions.md
+    - text: Gestire molteplici ambienti
+      url: audience-insights/manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Amministrare Customer Insights
+      url: /learn/modules/administer-customer-data-platform/
 - title: Contattaci
   linkLists:
   - linkListType: overview
@@ -46,63 +67,3 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Segnala un problema
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Esercitazioni di Audience Insights
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: Crea un nuovo ambiente
-      url: audience-insights/home.md
-    - text: Crea un profilo cliente unificato
-      url: /learn/modules/unified-customer-profile/
-    - text: Utilizza l'app
-      url: /learn/modules/working-with-customer-insights/
-- title: Esporta dati di Audience Insights
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Impostare destinazioni di esportazione
-      url: audience-insights/export-destinations.md
-    - text: Schede cliente nelle app Dynamics 365
-      url: audience-insights/customer-card-add-in.md
-    - text: Connettore Power BI
-      url: audience-insights/export-power-bi.md
-- title: Amministra Audience Insights
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Configurare il sistema
-      url: audience-insights/system.md
-    - text: Definire le autorizzazioni utente
-      url: audience-insights/permissions.md
-    - text: Gestire molteplici ambienti
-      url: audience-insights/manage-environments.md
-- title: Informazioni su Informazioni dettagliate sull'interazione (anteprima)
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Panoramica della funzionalità
-      url: engagement-insights/overview.md
-    - text: Termini e concetti
-      url: engagement-insights/glossary.md
-    - text: Attività iniziali
-      url: engagement-insights/get-started.md
-- title: Report di Informazioni dettagliate sull'interazione (anteprima)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Visualizza report
-      url: engagement-insights/view-reports.md
-    - text: Crea report personalizzati
-      url: engagement-insights/custom-reports.md
-    - text: Visualizza il report sui profili unificati
-      url: engagement-insights/profile-reports.md
-- title: Eventi di Informazioni dettagliate sull'interazione (anteprima)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Crea eventi elaborati
-      url: engagement-insights/refined-events.md
-    - text: Esporta eventi
-      url: engagement-insights/export-events.md
-    - text: Elimina ed esporta dati personali
-      url: engagement-insights/delete-export-personal-data.md

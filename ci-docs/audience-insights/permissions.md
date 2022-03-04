@@ -3,24 +3,27 @@ title: Gestire le autorizzazioni utente
 description: Informazioni su autorizzazioni e ruoli utente.
 ms.date: 03/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+searchScope:
+- ci-permissions
+- ci-system-security
+- customerInsights
+ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760378"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355942"
 ---
 # <a name="user-permissions"></a>Autorizzazioni utente
 
-La pagina **Autorizzazioni** consente di configurare ruoli e autorizzazioni per l'utilizzo di Audience Insights.
+La pagina **Autorizzazioni** consente di configurare ruoli e autorizzazioni per l'utilizzo di Informazioni dettagliate sul gruppo di destinatari.
 
-Devi disporre delle autorizzazioni di amministratore per visualizzare la pagina. Per accedere alla pagina delle autorizzazioni in Audience Insights, vai a **Amministratore** > **Autorizzazioni**.
+Devi disporre delle autorizzazioni di amministratore per visualizzare la pagina. Per accedere alla pagina delle autorizzazioni in Informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Autorizzazioni**.
 
 Esistono tre tipi di ruoli:
 
@@ -60,7 +63,7 @@ Esistono tre tipi di ruoli:
 
 ## <a name="assign-roles-and-permissions"></a>Assegnare ruoli e autorizzazioni
 
-1. In Audience Insights, vai a **Amministratore** > **Autorizzazioni**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Autorizzazioni**.
 
 1. Seleziona **Aggiungi utenti** per aprire il riquadro **Aggiungi/Modifica autorizzazioni**.
 
@@ -70,7 +73,7 @@ Esistono tre tipi di ruoli:
 
 ## <a name="view-current-permissions"></a>Visualizzare le autorizzazioni correnti
 
-In Audience Insights, vai a **Amministratore** > **Autorizzazioni** per vedere quali assegnazioni di ruolo sono attualmente attive.
+In Informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Autorizzazioni** per vedere quali assegnazioni di ruolo sono attualmente attive.
 
 - La colonna **Tipo** specifica un singolo utente, gruppo o applicazione. Il sistema supporta singoli utenti e gruppi.
 - I ruoli sono specificati nella colonna **Ruolo**.

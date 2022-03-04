@@ -1,24 +1,28 @@
 ---
 title: Completare i dati parziali con le previsioni
 description: Utilizza le previsioni per riempire dati cliente incompleti.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645039"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354008"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Completare i dati parziali con le previsioni
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa dati parziali con le previsioni (deprecata)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Questa funzionalità sarà **deprecata** a partire dal **5 novembre 2021**. Le implementazioni correnti continueranno a funzionare fino alla rimozione della funzionalità, ma non potrai creare nuove integrazioni tramite le istruzioni di seguito.
 
 Le previsioni consentono di creare facilmente valori stimati che possono migliorare la comprensione di un cliente. Nella pagina **Intelligenza** > **Predizioni**, puoi selezionare **Le mie previsioni** per visualizzare le previsioni che hai configurato in altre parti di Informazioni dettagliate sul gruppo di destinatari e consentirti di personalizzarle ulteriormente.
 
@@ -60,6 +64,8 @@ Per maggiori informazioni, vedere [Creare un nuovo ambiente](create-environment.
    > ![Esempio che mostra i valori dei campi mappati alle categorie.](media/intelligence-categorymapping.png "Esempio che mostra i valori dei campi mappati alle categorie")
 
 8. Seleziona **Fatto** e la previsione verrà elaborata. L'elaborazione richiederà del tempo, a seconda delle dimensioni e della complessità dei dati. I risultati saranno disponibili in una nuova entità basata sul **nome dell'entità output** della previsione creata.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Creare una previsione durante la creazione di un segmento
 
@@ -110,7 +116,7 @@ Come parte di questo flusso scegli un attributo specifico su cui basare il segme
 
 ## <a name="edit-a-prediction"></a>Modificare una previsione
 
-Dopo aver creato una previsione, è possibile personalizzare il modello in AI Builder per aumentare l'efficacia del modello.  
+Dopo aver creato un previsione, puoi personalizzare il modello in AI Builder per aumentarne l'efficacia.  
 
 1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Intelligenza** > **Previsioni** > **Le mie previsioni**.
 
@@ -125,7 +131,7 @@ Dopo aver creato una previsione, è possibile personalizzare il modello in AI Bu
 La successiva esecuzione della previsione utilizzerà il modello aggiornato creato.
 
 > [!NOTE]
-> I nuovi modelli creati in AI Builder non verranno visualizzati in Informazioni dettagliate sul gruppo di destinatari a meno che il modello non sia stato creato sulla base delle esperienze elencate sopra.
+> I nuovi modelli creati in AI Builder non vengono visualizzati nelle informazioni dettagliate sul gruppo di destinatari a meno che il modello non sia stato creato dalle esperienze sopra elencate.
 
 ## <a name="remove-a-prediction"></a>Rimuovere una previsione
 

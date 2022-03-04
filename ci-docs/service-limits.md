@@ -2,19 +2,18 @@
 title: Limiti del servizio in Dynamics 365 Customer Insights
 description: Informazioni su limiti e restrizioni.
 ms.date: 09/03/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: 9bf8f03b785fb3035e3fc979a3304d4e98fd8d28
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7791986"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350412"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Limiti del servizio nelle funzionalità Customer Insights
 
@@ -22,27 +21,25 @@ In questo articolo vengono descritti i limiti predefiniti del servizio Customer 
 
 ## <a name="audience-insights"></a>Informazioni dettagliate gruppo di destinatari
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Limiti del servizio nella funzionalità Informazioni dettagliate sul gruppo di destinatari di Dynamics 365 Customer Insights
-
 | Area  | Limiti  | Note |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmenti, misure e previsioni | 300  | Il numero totale di [segmenti](audience-insights/segments.md), [misure](audience-insights/measures.md) e [previsioni](audience-insights/predictions.md) combinati non può superare 300.  |
 | Relazioni | 20 livelli di profondità sulle relazioni nei percorsi delle entità. | Quando si creano [segmenti](audience-insights/segments.md) o [misure](audience-insights/measures.md) utilizzando l'interfaccia del generatore, i percorsi delle entità possono avere fino a 20 hop di relazione tra l'entità di inizio e l'entità di destinazione.  |
 
+<!--
+## Engagement insights
 
-## <a name="engagement-insights"></a>Informazioni dettagliate sull'interazione
+### Workspace and event quotas
 
-### <a name="workspace-and-event-quotas"></a>Quote di spazio di lavoro ed eventi
+Engagement insights is a highly scalable application that can support millions of events per second. During public preview, events have a volume threshold. There's also a limit to the number of workspaces in an organization.
 
-Le informazioni dettagliate sull'interazione sono un'applicazione altamente scalabile in grado di supportare milioni di eventi al secondo. Durante l'anteprima pubblica, gli eventi hanno una soglia di volume. Esiste anche un limite al numero di aree di lavoro in un'organizzazione.
+### Engagement insights limits
 
-### <a name="engagement-insights-limits"></a>Limiti delle informazioni dettagliate sull'interazione
+- Maximum event volume per workspace  = 100 events per second
 
-- Volume massimo di eventi per area di lavoro = 100 eventi al secondo
+- Maximum number of workspaces per organization = 100
 
-- Numero massimo di aree di lavoro per organizzazione = 100
-
-Quando gli eventi superano la soglia, è possibile che si verifichi la perdita di dati nei report basati su tali eventi. Puoi [contattare il supporto](https://go.microsoft.com/fwlink/?linkid=2145734) per richiedere un aumento del volume prima di superare i limiti. Lavoreremo con te per determinare la tua necessità di aumentare il volume e supportare la tua richiesta.
-
+When events exceed the threshold, it can lead to loss of data in reports based on those events. You can [contact support](https://go.microsoft.com/fwlink/?linkid=2145734) to request a volume increase before you exceed limits. We'll work with you to determine your need for a volume increase and support your request.
+-->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

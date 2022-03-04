@@ -3,18 +3,17 @@ title: FAQ di prova - Dynamics 365 Customer Insights
 description: Soluzioni alle domande più comuni relative all'impostazione e alla gestione delle prove di Customer Insights. Scopri come risolvere problemi specifici della piattaforma e dell'app.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
+ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642882"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229500"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Domande frequenti sulla versione di valutazione di Dynamics 365 Customer Insights
 
@@ -43,7 +42,7 @@ Quando ti iscrivi alla versione di valutazione, riceverai un messaggio e-mail co
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Come aggiungo altri utenti a una versione di valutazione?
 
-Per aggiungere utenti, vai all'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) utilizzando l'account amministratore di valutazione. Segui le [istruzioni dell'interfaccia di amministrazione](/microsoft-365/admin/add-users/add-users) per aggiungere utenti fino al limite della licenza di valutazione. Se l'utente che stai aggiungendo dispone già di un account Microsoft 365, assegnagli un ruolo di sicurezza appropriato nell'organizzazione di valutazione. Per ulteriori informazioni, vedi [Assegnare un ruolo di sicurezza a un utente](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Per aggiungere utenti, vai all'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) utilizzando l'account amministratore di valutazione. Segui le [istruzioni dell'interfaccia di amministrazione](/microsoft-365/admin/add-users/add-users) per aggiungere utenti fino al limite della licenza di valutazione. Se l'utente aggiunto dispone già di un account Microsoft 365, assegnagli un ruolo di sicurezza appropriato nell'organizzazione di valutazione. Per altre informazioni, vedi [Assegnare un ruolo di sicurezza a un utente](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Quanti utenti posso aggiungere al mio ambiente di prova?
 
@@ -63,7 +62,7 @@ Non puoi reimpostare l'ambiente di valutazione. Tuttavia, puoi attendere la fine
 
 In genere, ti consigliamo di cominciare con i tuoi dati quando esegui l'aggiornamento alla versione a pagamento di Customer Insights. 
 
-Facoltativamente, se usi solo approfondimenti sul pubblico, puoi copiare i tuoi dati da un ambiente di prova se acquisti Customer Insights. Devi essere l'amministratore della versione di valutazione di Customer Insights e l'amministratore globale del tuo tenant Microsoft 365 o l'amministratore di Dynamics 365 nella tua organizzazione per migrare le impostazioni da un ambiente della versione di valutazione a un ambiente a pagamento. 
+Facoltativamente, se usi solo approfondimenti sul pubblico, puoi copiare i tuoi dati da un ambiente di prova se acquisti Customer Insights. Devi essere l'amministratore della versione di valutazione di Customer Insights e l'amministratore globale del tuo tenant Microsoft 365 o l'amministratore di Dynamics 365 nell'organizzazione per migrare le impostazioni da un ambiente di valutazione a un ambiente a pagamento. 
 
 Dopo aver effettuato l'accesso alla tua istanza a pagamento di Customer Insights per la prima volta, ti viene chiesto di creare un nuovo ambiente. In questo processo, puoi scegliere di copiare la configurazione da un ambiente esistente e migrare la maggior parte delle impostazioni. Se disponi delle autorizzazioni sopra menzionate, l'ambiente della versione di valutazione verrà visualizzato in questo elenco. Per ulteriori informazioni, vedi [Copia la configurazione dell'ambiente](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,8 +81,9 @@ Dopo esserti iscritto alla prova, arriverai alla schermata principale dell'app. 
 
 La maggior parte delle funzionalità di Customer Insights sono disponibili nella prova.
 
-La seguente funzione non è disponibile: 
+Le funzionalità seguenti **non sono disponibili**: 
 - Non puoi creare nuovi ambienti che utilizzano il tuo account di storage Azure Data Lake.
+- Non puoi eliminare l'ambiente di valutazione. 
 
 ### <a name="how-long-does-the-trial-last"></a>Quanto dura il processo?
 

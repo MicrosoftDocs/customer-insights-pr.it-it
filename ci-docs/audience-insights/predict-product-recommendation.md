@@ -1,22 +1,21 @@
 ---
 title: Previsione di raccomandazioni sui prodotti
 description: Prevedi i prodotti che è probabile che un cliente acquisterà o con cui interagirà.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494544"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355756"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Previsione di raccomandazioni sui prodotti (anteprima)
+# <a name="product-recommendation-prediction"></a>Previsione di raccomandazioni sui prodotti
 
 Il modello di raccomandazione prodotti crea serie di raccomandazioni predittive sui prodotti. Le raccomandazioni si basano sul comportamento di acquisto precedente e sui clienti con modelli di acquisto simili. È possibile creare nuove previsioni di raccomandazioni sui prodotti nella pagina **Intelligenza** > **Previsioni**. Seleziona **Le mie previsioni** per visualizzare altre previsioni che hai creato.
 
@@ -54,7 +53,7 @@ Se sei interessato a provare questa funzionalità ma non hai i dati per completa
 
 > [!NOTE]
 > - Il modello richiede la cronologia delle transazioni dei tuoi clienti. La definizione di una transazione è abbastanza flessibile. Tutti i dati che descrivono un'interazione utente-prodotto possono funzionare come input. Ad esempio, l'acquisto di un prodotto, la partecipazione a un corso o la partecipazione a un evento.
-> - Al momento è possibile configurare solo un'entità della cronologia delle transazioni. Se sono presenti più entità di acquisto, uniscile in Power Query prima dell'inserimento dei dati.
+> - Al momento è possibile configurare solo un'entità della cronologia delle transazioni. Se sono presenti più entità di acquisto, puoi unirle in Power Query prima dell'importazione dei dati.
 > - Se l'ordine e i dettagli dell'ordine sono entità diverse, uniscili prima di utilizzarli nel modello. Il modello non funziona solo con un ID ordine o un ID ricevuta in un'entità.
 
 
@@ -62,7 +61,7 @@ Se sei interessato a provare questa funzionalità ma non hai i dati per completa
 
 1. In Customer Insights, vai a **Intelligence** > **Previsioni**.
 
-1. Seleziona il riquadro **Modello di elementi consigliati per il prodotto (anteprima)** e seleziona **Utilizza questo modello**.
+1. Seleziona il riquadro **Modello di consigli sui prodotti** e seleziona **Usa questo modello**.
    > [!div class="mx-imgBorder"]
    > ![Riquadro Modello di raccomandazione prodotto con il pulsante Utilizza questo modello.](media/product-recommendation-usethismodel.PNG "Riquadro Modello di raccomandazione prodotto con il pulsante Utilizza questo modello")
 
@@ -79,11 +78,11 @@ Se sei interessato a provare questa funzionalità ma non hai i dati per completa
 1. Imposta il **Numero di prodotti** che vuoi consigliare a un cliente. Questo valore dipende da come il metodo di consegna inserisce i dati. Se puoi consigliare tre prodotti, imposta questo valore di conseguenza.
    
    >[!TIP]
-   > Puoi selezionare **Salva e chiudi** in qualsiasi momento per salvare la previsione come bozza. Troverai la bozza di previsione nella scheda **Le mie previsioni**.
+   > Puoi selezionare **Salva la bozza** in qualsiasi momento per salvare la previsione come bozza. Troverai la bozza di previsione nella scheda **Le mie previsioni**.
 
-1. Scegli se **Suggerire prodotti acquistati di recente dai clienti**.
+1. Scegli se desideri includere i prodotti che i clienti hanno acquistato di recente nel campo **Ripetizione degli acquisti prevista**.
 
-1. Se hai scelto di *non* consigliare i prodotti acquistati di recente, imposta la **Finestra per guardare indietro**. Questa impostazione specifica il intervallo di tempo che il modello considera prima di consigliare nuovamente il prodotto all'utente. Ad esempio, indica che un cliente acquista un laptop ogni due anni. Questa finestra esaminerà la cronologia degli acquisti degli ultimi due anni e, se trova un articolo, l'elemento verrà filtrato dagli elementi consigliati.
+1. Imposta la **Finestra per guardare indietro**. Questa impostazione specifica il intervallo di tempo che il modello considera prima di consigliare nuovamente il prodotto all'utente. Ad esempio, indica che un cliente acquista un laptop ogni due anni. Questa finestra esaminerà la cronologia degli acquisti degli ultimi due anni e, se trova un articolo, l'elemento verrà filtrato dagli elementi consigliati.
 
 1. Selezionare **Avanti**.
 

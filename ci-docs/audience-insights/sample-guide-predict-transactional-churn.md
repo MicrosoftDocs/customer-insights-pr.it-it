@@ -3,26 +3,25 @@ title: Guida di esempio per una previsione di abbandono transazionale
 description: Usa questa guida di esempio per provare il modello di previsione di abbandono transazionale predefinito.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029450"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354606"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Guida di esempio per una previsione di abbandono transazionale (anteprima)
+# <a name="transactional-churn-prediction-sample-guide"></a>Guida di esempio per una previsione di abbandono transazionale
 
-In questa guida viene illustrato un esempio completo di previsione di abbandono transazionale in Customer Insights che utilizza i dati di esempio forniti di seguito. Tutti i dati utilizzati in questa guida non sono dati reali del cliente e fanno parte del set di dati Contoso trovato nell'ambiente *Demo* all'interno della sottoscrizione di Customer Insights.
+In questa guida viene illustrato un esempio completo di previsione di abbandono transazionale in Customer Insights che utilizza i dati di esempio forniti di seguito. Tutti i dati utilizzati in questa guida non sono dati cliente reali e fanno parte del set di dati di Contoso disponibile nell'ambiente *Demo* dell'abbonamento a Customer Insights.
 
 ## <a name="scenario"></a>Scenario
 
-Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, che vendono attraverso il sito Web Contoso per il caffè. Lo scopo dell'azienda è sapere quali clienti che acquistano regolarmente i loro prodotti smetteranno di essere clienti attivi nei prossimi 60 giorni. Sapere quali dei loro clienti **rischiano di essere persi**, può aiutarli a ridurre gli sforzi di marketing concentrandosi sulla fidelizzazione degli stessi.
+Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, in vendita sul sito Web Contoso Coffee. Lo scopo dell'azienda è sapere quali clienti che acquistano regolarmente i loro prodotti smetteranno di essere clienti attivi nei prossimi 60 giorni. Sapere quali dei loro clienti **rischiano di essere persi**, può aiutarli a ridurre gli sforzi di marketing concentrandosi sulla fidelizzazione degli stessi.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -31,7 +30,7 @@ Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, 
 
 ## <a name="task-1---ingest-data"></a>Attività 1: inserire dati
 
-Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e sull'[importazione di origini dati utilizzando i connettori Power Query](connect-power-query.md). Le seguenti informazioni presuppongono che tu conosca l'inserimento dati in generale. 
+Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importazione delle origini dati utilizzando in specifico i connettori Power Query](connect-power-query.md). Le seguenti informazioni presuppongono che tu conosca l'inserimento dati in generale. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inserire dati cliente dalla piattaforma di eCommerce
 
@@ -149,7 +148,7 @@ Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, un
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Attività 3: configurare la previsione di abbandono transazionale
 
-Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abbandono dell'abbonamento. Per i passaggi dettagliati, vedi [Previsione di abbandono dell'abbonamento (anteprima)](predict-subscription-churn.md). 
+Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abbandono dell'abbonamento. Per i passaggi dettagliati, vedi l'articolo [Previsione dell'abbandono della sottoscrizione](predict-subscription-churn.md). 
 
 1. Vai a **Intelligenza** > **Scopri** e seleziona per utilizzare il **Modello di abbandono dei clienti**.
 
