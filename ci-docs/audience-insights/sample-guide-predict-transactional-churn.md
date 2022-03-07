@@ -2,20 +2,21 @@
 title: Guida di esempio per una previsione di abbandono transazionale
 description: Usa questa guida di esempio per provare il modello di previsione di abbandono transazionale predefinito.
 ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.reviewer: digranad
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354606"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4643598"
 ---
-# <a name="transactional-churn-prediction-sample-guide"></a>Guida di esempio per una previsione di abbandono transazionale
+# <a name="transactional-churn-prediction-preview-sample-guide"></a>Guida di esempio per una previsione di abbandono transazionale (anteprima)
 
 In questa guida viene illustrato un esempio completo di previsione di abbandono transazionale in Customer Insights che utilizza i dati di esempio forniti di seguito. Tutti i dati utilizzati in questa guida non sono dati cliente reali e fanno parte del set di dati di Contoso disponibile nell'ambiente *Demo* dell'abbonamento a Customer Insights.
 
@@ -30,7 +31,7 @@ Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, 
 
 ## <a name="task-1---ingest-data"></a>Attività 1: inserire dati
 
-Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importazione delle origini dati utilizzando in specifico i connettori Power Query](connect-power-query.md). Le seguenti informazioni presuppongono che tu conosca l'inserimento dati in generale. 
+Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e sull'[importazione di origini dati utilizzando i connettori Power Query](connect-power-query.md). Le seguenti informazioni presuppongono che tu conosca l'inserimento dati in generale. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inserire dati cliente dalla piattaforma di eCommerce
 
@@ -45,9 +46,10 @@ Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importaz
    - **DateOfBirth**: data
    - **CreatedOn**: data/ora/fuso orario
 
-   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Trasformare la data di nascita in data.":::
+   [!div class="mx-imgBorder"]
+   ![Trasformare la data di nascita in data](media/ecommerce-dob-date.PNG "Trasformare la data di nascita in data")
 
-1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommerceContacts**
+1. Nel campo "Nome" nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommerceContacts**
 
 1. Salva l'origine dati.
 
@@ -64,7 +66,7 @@ Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importaz
    - **PurchasedOn**: data/ora
    - **TotalPrice**: valuta
    
-1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommercePurchases**.
+1. Nel campo "Nome" nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommercePurchases**.
 
 1. Salva l'origine dati.
 
@@ -82,7 +84,7 @@ Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importaz
    - **RewardsPoints**: numero intero
    - **CreatedOn**: date/ora
 
-1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **loyCustomers**.
+1. Nel campo "Nome" nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **loyCustomers**.
 
 1. Salva l'origine dati.
 
@@ -107,9 +109,9 @@ Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, un
 
 1. Passa alla scheda **Corrispondenza** e seleziona **Imposta ordine**.
 
-1. Nell'elenco a discesa **Principale** scegli **eCommerceContacts : eCommerce** come fonte primaria e includi tutti i record.
+1. Nell'elenco a discesa **Primaria**, scegli **eCommerceContacts : eCommerce** come origine primaria e includi tutti i record.
 
-1. Nell'elenco a discesa **Entità 2** scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
+1. Nell'elenco a discesa **Entità 2**, scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Unificare la corrispondenza di eCommerce e Fedeltà.":::
 
@@ -117,16 +119,16 @@ Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, un
 
 1. Aggiungi la prima condizione utilizzando FullName.
 
-   * Per eCommerceContacts seleziona **FullName** nel menu a discesa.
-   * Per loyCustomers seleziona **FullName** nel menu a discesa.
+   * Per eCommerceContacts seleziona **FullName** nell'elenco a discesa.
+   * Per loyCustomers seleziona **FullName** nell'elenco a discesa.
    * Seleziona l'elenco a discesa **Normalizza** e scegli **Tipo (telefono, nome, indirizzo...)**.
    * Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 
 1. Immetti il nome **FullName, Email** per la nuova regola.
 
    * Aggiungi una seconda condizione per l'indirizzo e-mail selezionado **Aggiungi condizione**
-   * Per l'entità eCommerceContacts, scegli **E-mail** nell'elenco a discesa.
-   * Per l'entità loyCustomers, scegli **E-mail** nell'elenco a discesa. 
+   * Per l'entità eCommerceContacts, scegli **E-mail** nel menu a discesa.
+   * Per l'entità loyCustomers, scegli **E-mail** nel menu a discesa. 
    * Lascia vuoto il campo Normalizza. 
    * Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 
@@ -148,7 +150,7 @@ Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, un
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Attività 3: configurare la previsione di abbandono transazionale
 
-Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abbandono dell'abbonamento. Per i passaggi dettagliati, vedi l'articolo [Previsione dell'abbandono della sottoscrizione](predict-subscription-churn.md). 
+Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abbandono dell'abbonamento. Per i passaggi dettagliati, vedi [Previsione di abbandono dell'abbonamento (anteprima)](predict-subscription-churn.md). 
 
 1. Vai a **Intelligenza** > **Scopri** e seleziona per utilizzare il **Modello di abbandono dei clienti**.
 
@@ -164,7 +166,7 @@ Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abba
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Selezionare Finestra di previsione e Definizione abbandono.":::
 
-1. Seleziona **Cronologia acquisti (obbligatoria)** e seleziona **Aggiungi dati** per la cronologia degli acquisti.
+1. Seleziona **Cronologia acquisti (obbligatoria)** e seleziona **Aggiungi dati** per la cronologia dell'abbonamento.
 
 1. Aggiungi l'entità **eCommercePurchases : eCommerce** ed esegui il mapping dei campi di eCommerce ai campi corrispondenti richiesti dal modello.
 
@@ -202,6 +204,3 @@ Puoi creare un nuovo segmento basato sull'entità creata dal modello.
 Ora hai un segmento che viene aggiornato dinamicamente e che identifica i clienti ad alto rischio di abbandono per questa attività di abbonamento.
 
 Per altre informazioni, vedi [Creare e gestire i segmenti](segments.md).
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

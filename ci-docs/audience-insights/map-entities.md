@@ -2,6 +2,7 @@
 title: Mappare entità e attributi per l'unificazione dei dati
 description: Seleziona entità, attributi, chiavi primarie e tipi semantici per mappare i dati nel profilo cliente unificato.
 ms.date: 10/18/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
@@ -10,14 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-map
-- ci-match
-- customerInsights
-ms.openlocfilehash: 81f1e97dfbecd9292c50529ca21da8dab9295b5d
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 7ee3feea8423f35f32ff471b3ed8eb3447584089
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354963"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648167"
 ---
 # <a name="map-entities-and-attributes"></a>Mappare entità e attributi
 
@@ -97,7 +96,7 @@ Continua con i passaggi di unificazione e assicurati che l'attributo che contien
 
 Per le organizzazioni (anteprima), il tipo di attributo deve essere mappato a "Organization.Name"
 > [!div class="mx-imgBorder"]
-> ![Chiave primaria e tipo di attributo B2B.](media/configure-data-map-edit-b2b.png "Chiave primaria e tipo di attributo B2B")
+> ![Chiave primaria e tipo di attributo B2B](media/configure-data-map-edit-b2b.png "Chiave primaria e tipo di attributo B2B")
 
 ## <a name="next-step"></a>Passaggio successivo
 

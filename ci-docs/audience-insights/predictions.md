@@ -1,30 +1,26 @@
 ---
 title: Completare i dati parziali con le previsioni
 description: Utilizza le previsioni per riempire dati cliente incompleti.
-ms.date: 11/01/2021
+ms.date: 05/05/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-predictions
-- ci-custom-models
-- customerInsights
-ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354008"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692532"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa dati parziali con le previsioni (deprecata)
+# <a name="complete-your-partial-data-with-predictions"></a>Completare i dati parziali con le previsioni
 
-> [!IMPORTANT]
-> Questa funzionalità sarà **deprecata** a partire dal **5 novembre 2021**. Le implementazioni correnti continueranno a funzionare fino alla rimozione della funzionalità, ma non potrai creare nuove integrazioni tramite le istruzioni di seguito.
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Le previsioni consentono di creare facilmente valori stimati che possono migliorare la comprensione di un cliente. Nella pagina **Intelligenza** > **Predizioni**, puoi selezionare **Le mie previsioni** per visualizzare le previsioni che hai configurato in altre parti di Informazioni dettagliate sul gruppo di destinatari e consentirti di personalizzarle ulteriormente.
+Le previsioni consentono di creare facilmente valori stimati che possono migliorare la comprensione di un cliente. Nella pagina **Intelligenza** > **Predizioni**, puoi selezionare **Le mie previsioni** per visualizzare le previsioni che hai configurato in altre parti di Audience Insights e consentirti di personalizzarle ulteriormente.
 
 > [!NOTE]
 > Non è possibile usare questa funzionalità se l'ambiente usa l'archiviazione di Azure Data Lake Gen 2.
@@ -39,11 +35,11 @@ Prima che l'organizzazione possa utilizzare la funzionalità di previsioni, i pr
 
 2. Il tuo ambiente di informazioni dettagliate è collegato alla tua istanza di Dataverse.
 
-Per maggiori informazioni, vedere [Creare un nuovo ambiente](create-environment.md).
+Se [crei un nuovo ambiente](get-started-paid.md), configuralo nella finestra di dialogo **Crea ambiente** e seleziona **Avanzate**. Se hai già creato un ambiente, vai alle relative impostazioni e seleziona **Avanzate**. In ogni caso, nella sezione **Usa previsioni**, inserisci l'URL dell'istanza Dataverse a cui desideri associare il tuo ambiente.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Creare una previsione nell'entità Cliente
 
-1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Dati** > **Entità**.
+1. In Audience Insights, vai a **Dati** > **Entità**.
 
 2. Seleziona l'entità **Cliente**.
 
@@ -65,15 +61,13 @@ Per maggiori informazioni, vedere [Creare un nuovo ambiente](create-environment.
 
 8. Seleziona **Fatto** e la previsione verrà elaborata. L'elaborazione richiederà del tempo, a seconda delle dimensioni e della complessità dei dati. I risultati saranno disponibili in una nuova entità basata sul **nome dell'entità output** della previsione creata.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
-
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Creare una previsione durante la creazione di un segmento
 
 La previsione dei valori mancanti per un attributo specifico è possibile anche durante la creazione di un segmento. In particolare, quando crei rapidamente un segmento basato sull'entità cliente unificata o sull'entità Customer_Measure.
 
 Come parte di questo flusso scegli un attributo specifico su cui basare il segmento, ad esempio Soddisfazione del cliente o Importo acquisto. Alla creazione del segmento, il sistema suggerirà un metodo per prevedere eventuali valori mancanti per questo attributo.
 
-1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Segmenti** e seleziona il riquadro **Profili**.
+1. In Audience Insights, vai a **Segmenti** e seleziona il riquadro **Profili**.
 
 2. Scegli un **campo** su cui creare un segmento e seleziona un **operatore** , quindi seleziona **Revisione**.
 
@@ -91,7 +85,7 @@ Come parte di questo flusso scegli un attributo specifico su cui basare il segme
 
 ## <a name="view-a-prediction"></a>Visualizzare una previsione
 
-1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Intelligenza** > **Previsioni** > **Le mie previsioni**.
+1. In Audience Insights, vai a **Intelligenza** > **Previsioni** > **Le mie previsioni**.
 
 2. Seleziona la previsione da rivedere.
 
@@ -108,7 +102,7 @@ Come parte di questo flusso scegli un attributo specifico su cui basare il segme
 
 ## <a name="update-a-prediction"></a>Aggiornare una previsione
 
-1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Intelligenza** > **Previsioni** > **Le mie previsioni**.
+1. In Audience Insights, vai a **Intelligenza** > **Previsioni** > **Le mie previsioni**.
 
 2. Seleziona la previsione da aggiornare e seleziona l'icona **Aggiorna**.
 
@@ -116,9 +110,9 @@ Come parte di questo flusso scegli un attributo specifico su cui basare il segme
 
 ## <a name="edit-a-prediction"></a>Modificare una previsione
 
-Dopo aver creato un previsione, puoi personalizzare il modello in AI Builder per aumentarne l'efficacia.  
+Dopo aver creato una previsione, è possibile personalizzare il modello in AI Builder per aumentare l'efficacia del modello.  
 
-1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Intelligenza** > **Previsioni** > **Le mie previsioni**.
+1. In Audience Insights, vai a **Intelligenza** > **Previsioni** > **Le mie previsioni**.
 
 2. Seleziona la previsione che desideri modificare.
 
@@ -131,11 +125,11 @@ Dopo aver creato un previsione, puoi personalizzare il modello in AI Builder per
 La successiva esecuzione della previsione utilizzerà il modello aggiornato creato.
 
 > [!NOTE]
-> I nuovi modelli creati in AI Builder non vengono visualizzati nelle informazioni dettagliate sul gruppo di destinatari a meno che il modello non sia stato creato dalle esperienze sopra elencate.
+> I nuovi modelli creati in AI Builder non verranno visualizzati in Audience Insights a meno che il modello non sia stato creato sulla base delle esperienze elencate sopra.
 
 ## <a name="remove-a-prediction"></a>Rimuovere una previsione
 
-1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Intelligenza** > **Previsioni** > **Le mie previsioni**.
+1. In Audience Insights, vai a **Intelligenza** > **Previsioni** > **Le mie previsioni**.
 
 2. Seleziona la previsione che desideri eliminare.
 

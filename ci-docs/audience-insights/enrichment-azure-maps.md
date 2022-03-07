@@ -3,17 +3,18 @@ title: Arricchisci i profili dei clienti con dati località di Mappe di Azure
 description: Informazioni generali sull'arricchimento di prima parte di Mappe di Azure.
 ms.date: 08/31/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 63f241c27ec86f357c83a301d6797f9ff87c2241
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226454"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466767"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Arricchimento dei profili dei clienti con Mappe di Azure (anteprima)
 
@@ -85,7 +86,7 @@ Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito se
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md), [misure](measures.md) ed [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 

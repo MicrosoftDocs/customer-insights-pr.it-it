@@ -1,76 +1,72 @@
 ---
 title: Visualizzare profili cliente
 description: Ottieni una visualizzazione combinata dei dati cliente unificati.
-ms.date: 09/30/2021
-ms.reviewer: mhart
+ms.date: 12/01/2020
+ms.reviewer: nimagen
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-customers-page
-- ci-customer-card
-- ci-activities
-- ci-activities-wizard
-- customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 13308c2f40cda0d7e813b4d94ab47d53b5ce2115
+ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354886"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "4653895"
 ---
 # <a name="customer-profiles"></a>Profili cliente
 
-La pagina **Clienti** mostra una vista combinata dei tuoi profili cliente unificati. I profili dei clienti sono disponibili una volta [creata l'entità Customer unificata](data-unification.md). La pagina permette di cercare i clienti e di definire l'indice per questa ricerca.
+La pagina **Clienti** mostra una visualizzazione combinata dei tuoi clienti, basata sui dati del profilo di [tutte le origini dati](data-sources.md). I profili dei clienti sono disponibili una volta [creata l'entità cliente unificata](data-unification.md). Assicurati di completare il processo di unificazione dei dati per ottenere visualizzazioni più complete dei tuoi clienti. La pagina consente anche di cercare clienti.
 
-I clienti possono essere individui oppure organizzazioni. Ogni profilo di cliente è rappresentato da una piastrella. Usa i controlli di paginazione per ottenere più record. La scheda visualizza i campi dell'entità *Cliente* come definiti nell' **indice di ricerca e filtro**. Seleziona un riquadro per vedere i dati per il cliente selezionato in una pagina dedicata chiamata [Pagina dei dettagli del cliente](customer-profiles.md#customer-details-page).
+I clienti possono essere persone fisiche o organizzazioni (anteprima). Ogni profilo cliente o organizzazione è rappresentato da un riquadro. Seleziona un riquadro per visualizzare ulteriori informazioni su quel cliente o organizzazione specifici. Utilizza i controlli di impaginazione nella parte inferiore della pagina per visualizzare altri record.
 
 > [!div class="mx-imgBorder"] 
-> ![Pagina dei clienti che mostra le piastrelle dei risultati](media/customers-page-result-tiles-B2C.png "Pagina dei clienti che mostra le piastrelle dei risultati")
+> ![Profili cliente B2C](media/profiles-customers.png "Profili cliente B2C")
+
+Organizzazioni (anteprima)
+> [!div class="mx-imgBorder"] 
+> ![Profili cliente B2B](media/profile-customers-b2b.png "Profili cliente B2B")
 
 > [!NOTE]
-> Se non riesci a vedere le tessere quando selezioni **Clienti** nella navigazione, il tuo amministratore ha bisogno di [definire almeno un attributo ricercabile](search-filter-index.md) nell' **indice di Ricerca & filtro**.
+> Se non riesci a vedere i riquadri quando selezioni **Clienti** nello spostamento, l'amministratore deve [definire almeno un attributo ricercabile](search-filter-index.md) nell'**indice di ricerca e filtro**.
 
-## <a name="search-for-customers"></a>Ricerca di clienti
+## <a name="search-for-customers"></a>Cercare clienti
 
-Cerca i clienti inserendo un nome o un altro attributo nella casella di ricerca. La ricerca funziona solo all'interno dell'entità _Cliente_ creata durante il processo di unificazione dei dati.
+Cerca i clienti inserendo un nome o un altro attributo nella casella di ricerca. La ricerca funziona solo all'interno dell'entità Profilo cliente creata durante il processo di unificazione dei dati.
 
-Come amministratore, puoi configurare gli attributi ricercabili mediante la pagina **Indicizzazione ricerca e filtro**. Per maggiori informazioni, vai a [Gestire la ricerca e il filtro dell'indice](search-filter-index.md).
+Come amministratore, puoi configurare gli attributi ricercabili mediante la pagina **Indicizzazione ricerca e filtro**. Per ulteriori informazioni, vedi [Gestisci l'indice di ricerca e filtro](search-filter-index.md).
 
-## <a name="filter-customers"></a>Applicazione di filtri ai clienti
+## <a name="filter-customers"></a>Filtrare i clienti
 
-Puoi filtrare i clienti per i campi dell'entità _Cliente_ . Simile alla ricerca, l'amministratore dovrà prima definire i campi come filtrabili utilizzando la pagina **Indicizzazione ricerca e filtro**.
+Puoi filtrare i clienti in base ai campi dell'entità Profilo cliente. Simile alla ricerca, l'amministratore dovrà prima definire i campi come filtrabili utilizzando la pagina **Indicizzazione ricerca e filtro**.
 
-1. Seleziona **Mostra filtri** nella pagina **Clienti** .
+1. Seleziona **Filtra** nella pagina **Clienti**.
 
-1. Seleziona le caselle di controllo accanto agli attributi in base a cui vuoi filtrare i clienti.
+2. Seleziona le caselle di controllo accanto agli attributi in base a cui vuoi filtrare i clienti.
 
-1. Rimuovi i filtri selezionando **Cancella filtri** nella pagina **Clienti**.
+   > [!div class="mx-imgBorder"] 
+   > ![Profili cliente](media/profiles-customers3.png "Profili cliente")
 
-## <a name="customer-details-page"></a>Pagina Dettagli cliente
+3. Rimuovi i filtri selezionando **Cancella filtri** nella pagina **Clienti**.
 
-Seleziona uno dei riquadri del cliente per aprire la **pagina Dettagli cliente**. Questa visualizzazione contiene informazioni unificate per il cliente selezionato. I dettagli del cliente includono il seguente contenuto:
+##  <a name="customer-details-page"></a>Pagina Dettagli cliente
 
-**Mattonella del profilo del cliente**: Questo riquadro mostra i diversi valori dell'entità _Customer_ unificata. Se un campo non ha un valore per il profilo cliente selezionato, non verrà mostrato. La piastrella è strutturata in sezioni:  
-  - La prima sezione mostra un insieme predefinito di campi seguito da tutti i campi che fanno parte dell'indice di ricerca e filtro. Tutti i campi relativi all'indirizzo sono combinati in una sola riga se il profilo contiene tali campi. 
-  - **Contatti per questo cliente**: Negli ambienti per i conti commerciali, vedrai tutti i contatti correlati per questo cliente come seconda sezione. Ogni contatto è mostrato con i suoi campi. I campi vuoti sono nascosti.
-  - **Campi aggiuntivi**: Mostra i restanti campi del cliente selezionato, eccetto gli ID. 
-  - **ID**: Elenca tutti gli ID sotto il nome dell'entità corrispondente. I campi sono identificati come ID dalla loro semantica, che li categorizza come tali.
+Seleziona uno dei riquadri del cliente per aprire la **pagina Dettagli cliente**. Questa visualizzazione contiene informazioni unificate per il cliente selezionato.
 
-**Cronologia delle attività**: Mostra i dati se hai configurato delle attività. La vista timeline contiene attività ordinate cronologicamente del cliente selezionato, a partire dall'attività più recente. Per maggiori informazioni, andate su [Attività del cliente](activities.md).
+I dettagli del cliente includono:
 
-**Approfondimenti**:  
-  - **Misure**: Mostra se hai configurato una o più misure di attributi del cliente. Includono KPI calcolati relativi ai clienti a livello di singolo cliente. Per maggiori informazioni, vai a [Definire e gestire le misure](measures.md).
+-   **Riquadro Profilo cliente:** questo riquadro mostra i diversi valori dell'entità del profilo cliente unificato. Questi dettagli possono includere indirizzo e-mail, nome, città e così via. 
 
-  - **Potenziali interessi, potenziali marche**: Mostra se hai configurato un arricchimento di affinità di marca o di interesse. Rappresenta i potenziali interessi e affinità per i marchi basati su altri clienti il cui profilo è simile a quello del cliente selezionato. Per maggiori informazioni, vai a [Arricchire i profili dei clienti con le affinità di marca e di interesse](enrichment-microsoft.md).
+-   **Interessi potenziali, Marchi potenziali:** mostra se hai configurato un arricchimento di prima parte. Rappresenta potenziali interessi e affinità per i marchi che un cliente con un profilo simile a questo cliente potrebbe avere. Per ulteriori informazioni, vedi [Arricchire profili cliente con affinità di marchi e interessi](enrichment-microsoft-graph.md).
 
-Per tornare alla pagina di ricerca dei clienti, seleziona **Torna ai clienti**.
+-   **Misure:** mostra se hai configurato una o più misure di un tipo specifico: misure attributo cliente. Includono KPI calcolati relativi ai clienti a livello di singolo cliente. Per ulteriori informazioni, vedi [Definire e gestire misure](measures.md).
+
+-   **Sequenza temporale impegni:** mostra se hai configurato impegni. La visualizzazione della sequenza temporale contiene impegni ordinati cronologicamente di questo cliente, a partire dall'impegno più recente. Per altre informazioni, vedi [Impegni cliente](activities.md).
+
+Seleziona **Torna a Clienti** per tornare alla pagina di ricerca del cliente.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Aggiungete[altre fonti di dati](data-sources.md), [arricchite i profili unificati](enrichment-hub.md)o [create segmenti](segments.md) per lavorare con i profili cliente unificati in altre applicazioni.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[Aggiungere più origini dati](data-sources.md) o [creare segmenti di clienti](segments.md).

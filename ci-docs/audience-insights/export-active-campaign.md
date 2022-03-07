@@ -3,17 +3,18 @@ title: Esportazione dei dati di Customer Insights in ActiveCampaign
 description: Scopri come configurare la connessione ed esportare in ActiveCampaign.
 ms.date: 10/08/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 089b9b0d76437e695f797f941ed384734d8f772e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8227814"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618158"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Esportazione di segmenti in ActiveCampaign (anteprima)
 

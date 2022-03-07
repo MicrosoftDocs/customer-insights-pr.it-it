@@ -1,31 +1,32 @@
 ---
 title: Arricchimento dei profili aziendali con l'arricchimento di terze parti Leadspace
 description: Informazioni generali sull'arricchimento di terze parti Leadspace.
-ms.date: 09/30/2021
+ms.date: 04/09/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jodahlMSFT
-ms.author: jodahl
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230639"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7031708"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Arricchimento dei profili aziendali con Leadspace (anteprima)
 
-Leadspace è una società di servizi di data science che fornisce una piattaforma per i dati dei clienti B2B. Permette agli ambienti con profili di clienti unificati basati su conti di arricchire i loro dati. Arricchisci *i profili dei clienti* con attributi come le dimensioni dell'azienda, la posizione o il settore. Arricchisci *i profili dei contatti* con attributi come il titolo, la persona o la verifica dell'e-mail.
+Leadspace è una società di data science che fornisce una piattaforma dati per clienti B2B. Consente ai clienti con profili cliente unificati per le aziende di arricchire i propri dati. Gli arricchimenti includono altri attributi ad esempio dimensioni, ubicazione, settore della società e altro ancora.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Per configurare Leadspace, devono essere rispettati i seguenti requisiti:
 
 - Hai una licenza Leadspace attiva.
-- Avete [unificato i profili dei clienti](customer-profiles.md) in base agli account.
-- Una connessione Leadspace è già stata configurata da un amministratore o hai le autorizzazioni di [amministratore](permissions.md#administrator) e la "chiave perpetua" (denominata **token Leadspace**). Contatta [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) direttamente per i dettagli sul loro prodotto.
+- Devi disporre di [profili cliente unificati](customer-profiles.md) per le aziende.
+- Una connessione Leadspace è già stata configurata da un amministratore o hai le autorizzazioni di [amministratore](permissions.md#administrator) e la "chiave perpetua" (denominata **token Leadspace**). Contatta [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) direttamente per i dettagli sul loro prodotto.
 
 ## <a name="configure-the-enrichment"></a>Configurare l'arricchimento
 
@@ -45,14 +46,10 @@ Per configurare Leadspace, devono essere rispettati i seguenti requisiti:
 
 1. Seleziona **Avanti** e definisci quali campi dei profili unificati vengono utilizzati per cercare i dati aziendali corrispondenti di Leadspace. Il campo **Nome della società** è obbligatorio. Per una maggiore precisione della corrispondenza, fino a due altri campi, **Sito web della società** e **Sede della società**, possono essere aggiunti.
 
-   :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Riquadro di mappatura dei campi di Leadspace.":::
+   :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Riquadro di mapping del campo Leadspace.":::
 
 1. Seleziona **Avanti** per completare il mapping del campo.
 
-1. Seleziona la casella di controllo se hai dei *profili di contatto* che vuoi arricchire. approfondimenti sul pubblico mapperà automaticamente i campi richiesti.
-
-   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Arricchimento dei record di contatto di Leadspace.":::
- 
 1. Fornisci un nome per l'arricchimento e seleziona **Salva arricchimento** dopo aver esaminato le tue scelte.
 
 
@@ -84,8 +81,7 @@ Per ulteriori informazioni, vedi [API di Leadspace](https://support.leadspace.co
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md) e [misure](measures.md) e persino [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 

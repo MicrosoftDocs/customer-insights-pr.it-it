@@ -3,18 +3,18 @@ title: Attività iniziali di SDK Android
 description: Informazioni su come personalizzare ed eseguire SDK Android
 author: britl
 ms.reviewer: mhart
-ms.custom: intro-internal
 ms.author: britl
-ms.date: 10/19/2021
+ms.date: 06/23/2021
+ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: b06822b2c2d6a859bdf808f7800baef43c4ab874
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226174"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036923"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Attività iniziali di SDK Android
 
@@ -35,38 +35,17 @@ Le seguenti opzioni di configurazione possono essere passate all'SDK:
 
 - Una chiave di inserimento (vedi sotto per istruzioni su come ottenerla)
 
-## <a name="integrate-the-sdk-into-your-application"></a>Integrazione dell'SDK nell'applicazione
+## <a name="step-1-integrate-the-sdk-into-your-application"></a>Passaggio 1. Integrazione dell'SDK nell'applicazione
 Inizia il processo selezionando un'area di lavoro, quindi la piattaforma mobile Android e scaricando l'SDK Android.
 
 - Utilizza il selettore dell'area di lavoro nel riquadro di navigazione a sinistra per selezionare l'area di lavoro.
 
 - Se non disponi di un'area di lavoro esistente, seleziona **Nuova area di lavoro** e segui i passaggi per creare una [nuova area di lavoro](create-workspace.md).
 
-- Dopo aver creato un'area di lavoro, vai ad **Amministratore** > **Area di lavoro**, quindi seleziona **Guida all'installazione**.
+## <a name="step-2-configure-the-sdk"></a>Passaggio 2. Configurazione dell'SDK
 
-## <a name="configure-the-sdk"></a>Configurazione dell'SDK
+1. Dopo aver creato un'area di lavoro, vai ad **Amministratore** > **Area di lavoro**, quindi seleziona **Guida all'installazione**. 
 
-Dopo aver scaricato l'SDK, puoi utilizzarlo in Android Studio per abilitare e definire gli eventi. A tale scopo, è possibile procedere in due modi:
-### <a name="option-1-use-jitpack-recommended"></a>Opzione 1. Uso di JitPack (scelta consigliata)
-1. Aggiungi il repository JitPack a `build.gradle` radice:
-    ```gradle
-    allprojects {
-        repositories {
-            ...
-            maven { url 'https://jitpack.io' }
-        }
-    }
-    ```
-
-1. Aggiungi la dipendenza:
-    ```gradle
-    dependencies {
-        implementation 'com.github.microsoft:engagementinsights-sdk-android:v1.0.0'
-        api 'com.google.code.gson:gson:2.8.1'
-    }
-    ```
-
-### <a name="option-2-use-download-link"></a>Opzione 2. Uso del collegamento per il download
 1. Scarica l'[SDK Android delle informazioni dettagliate sull'interazione](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) e posiziona il file `eiandroidsdk-debug.aar` nella cartella `libs`.
 
 1. Apri il file `build.gradle` a livello di progetto e aggiungi i frammenti di codice seguenti:
@@ -83,23 +62,12 @@ Dopo aver scaricato l'SDK, puoi utilizzarlo in Android Studio per abilitare e de
     }
     ```
 
-## <a name="enable-auto-instrumentation"></a>Abilitazione della strumentazione automatica
-
-1. Aggiungi l'autorizzazione per la rete e Internet nel file `AndroidManifest.xml` che si trova nella cartella `manifests`.
-    ```xml
-    <manifest>
-        ...
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    ```
-
-1. Imposta la configurazione dell'SDK di informazioni dettagliate sull'interazione tramite il file `AndroidManifest.xml`.
-
+1. Imposta la configurazione dell'SDK di informazioni dettagliate sull'interazione tramite il file `AndroidManifest.xml` che si trova nella cartella `manifests`. 
 1. Copia il frammento XML dalla **Guida all'installazione**. `Your-Ingestion-Key` dovrebbe essere popolata automaticamente.
 
    > [!NOTE]
    > Non devi sostituire la sezione `${applicationId}`. Viene popolata automaticamente.
-
+   
 
    ```xml
    <application>
@@ -117,24 +85,20 @@ Dopo aver scaricato l'SDK, puoi utilizzarlo in Android Studio per abilitare e de
    </application>
    ```
 
-1. Abilita o disabilita l'acquisizione automatica degli eventi `View` impostando il campo `autoCapture` precedente su `true` o `false`. 
+1. Abilita o disabilita l'acquisizione automatica degli eventi `View` impostando il campo `autoCapture` precedente su `true` o `false`.
 
-   >[!NOTE]
-   >Gli eventi `Action` devono essere aggiunti manualmente.
-
-1. (Facoltativo) Altre configurazioni includono l'impostazione dell'URL dell'agente di raccolta endpoint. Possono essere aggiunti sotto i metadati della chiave di inserimento in `AndroidManifest.xml`.
-
-   ```xml
+1. (Facoltativo) Altre configurazioni includono l'impostazione dell'URL dell'agente di raccolta endpoint. Possono essere aggiunte sotto i metadati della chiave di inserimento in `AndroidManifest.xml`:
+    ```xml
         <meta-data
             android:name="com.microsoft.engagementinsights.endpointUrl"
             android:value="https://some-endpoint-url.com" />
-   ```
+    ```
 
-## <a name="implement-custom-events"></a>Implementazione di eventi personalizzati
+## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>Passaggio 3. Inizializza l'SDK da MainActivity 
 
-Dopo aver inizializzato l'SDK, puoi lavorare con gli eventi e le loro proprietà nell'ambiente `MainActivity`.
+Dopo aver inizializzato l'SDK, puoi lavorare con gli eventi e le loro proprietà nell'ambiente MainActivity.
 
-
+    
 Java:
 ```java
 Analytics analytics = new Analytics();
@@ -146,7 +110,7 @@ var analytics = Analytics()
 ```
 
 ### <a name="set-property-for-all-events-optional"></a>Impostazione della proprietà per tutti gli eventi (facoltativo)
-
+    
 Java:
 ```java
 analytics.setProperty("year", 2021);
@@ -183,7 +147,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-## <a name="set-user-details-for-your-event-optional"></a>Impostazione dei dettagli utente per il tuo evento (facoltativo)
+### <a name="set-user-details-for-your-event-optional"></a>Impostazione dei dettagli utente per il tuo evento (facoltativo)
 
 L'SDK ti consente di definire le informazioni utente che possono essere inviate con ogni evento. Puoi specificare le informazioni dell'utente chiamando l'API `setUser(user: User)` sul livello `Analytics`.
 

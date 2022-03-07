@@ -1,22 +1,20 @@
 ---
 title: Dati di Customer Insights in Microsoft Dataverse
 description: Utilizza le entità di Customer Insights come tabelle in Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-searchScope:
-- ci-system-diagnostic
-- customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355434"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645223"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Utilizzare i dati di Customer Insights in Microsoft Dataverse
 
@@ -47,7 +45,6 @@ Alcune entità di output da informazioni dettagliate sono disponibili come tabel
 - [CustomerMeasure](#customermeasure)
 - [Arricchimento](#enrichment)
 - [Previsione](#prediction)
-- [Appartenenza al segmento](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -123,17 +120,4 @@ Questa tabella contiene l'output delle previsioni del modello.
 | Modello                | Stringa      | Nome modello                                                |
 | Valori               | Stringa JSON | Elenco degli attributi prodotti dal modello |
 | msdynci_predictionid | GUID        | GUID deterministico generato da msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
-
-### <a name="segment-membership"></a>Appartenenza al segmento
-
-Questa tabella contiene le informazioni sull'appartenenza al segmento dei profili cliente.
-
-| Column        | Type | Description                        |
-|--------------------|--------------|-----------------------------|
-| Customerid        | String       | ID profilo cliente        |
-| SegmentProvider      | String       | App che pubblica i segmenti. Impostazione predefinita: informazioni dettagliate sul gruppo di destinatari         |
-| SegmentMembershipType | String       | Tipo di cliente di questo record di appartenenza al segmento. Supporta più tipi come Cliente, Contatto o Account. Impostazione predefinita: cliente  |
-| Segmenti       | Stringa JSON  | Elenco dei segmenti univoci di cui il profilo cliente è membro      |
-| msdynci_identifier  | String   | Identificatore univoco del record di appartenenza al segmento. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | GUID deterministico generato da `msdynci_identifier`          |
+| msdynci_identifier   | Stringa      |  `Model|ModelProvider|CustomerId`                      |

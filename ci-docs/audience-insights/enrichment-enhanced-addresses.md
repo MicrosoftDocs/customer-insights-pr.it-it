@@ -1,25 +1,20 @@
 ---
-title: Arricchimento per l'ottimizzazione degli indirizzi (video)
+title: Arricchimento migliorato dell'indirizzo
 description: Arricchisci e normalizza le informazioni sugli indirizzi dei profili dei clienti con i modelli Microsoft.
-ms.date: 01/19/2022
+ms.date: 07/25/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-searchScope:
-- ci-data-sources-enrichment
-- ci-data-sources-enrichment-details
-- ci-enrichments
-- ci-enrichment-wizard
-- customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353641"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692258"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Arricchimento dei profili dei clienti con indirizzi avanzati
 
@@ -27,9 +22,7 @@ Gli indirizzi nei tuoi dati possono essere non strutturati, incompleti o errati.
 
 ## <a name="how-we-enhance-addresses"></a>Come migliorare gli indirizzi
 
-Il nostro modello passa attraverso un processo in due fasi per migliorare un indirizzo. Innanzitutto analizza l'indirizzo per identificare i componenti e li inserisce in un formato strutturato. Quindi, utilizziamo l'intelligenza artificiale per correggere, completare e standardizzare i valori nell'indirizzo.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
+Il nostro modello passa attraverso un processo in due fasi per migliorare un indirizzo. Innanzitutto, analizza l'indirizzo per identificare i suoi componenti e li inserisce in un formato strutturato. Quindi, utilizziamo l'intelligenza artificiale per correggere, completare e standardizzare i valori nell'indirizzo.
 
 ### <a name="example"></a>Esempio
 
@@ -54,8 +47,8 @@ Le informazioni sull'indirizzo potrebbero essere in un formato non standard e co
 Gli indirizzi avanzati funzionano solo con i valori già presenti nei dati degli indirizzi inseriti. Il modello non: 
 
 1. Verifica se l'indirizzo è un indirizzo valido.
-2. Verifica se uno qualsiasi dei valori, ad esempio i codici postali oi nomi delle vie, è valido.
-3. Modifica i valori che non riconosce.
+2. Verifica se uno qualsiasi dei valori, come codici postali o nomi di strade, è valido.
+3. Cambia i valori che non riconosce.
 
 Il modello utilizza tecniche basate sull'apprendimento automatico per migliorare gli indirizzi. Sebbene applichiamo una soglia di confidenza elevata per quando il modello modifica un valore di input, come con qualsiasi modello basato sull'apprendimento automatico, l'accuratezza del 100% non è garantita.
 
@@ -105,20 +98,10 @@ Per avviare il processo di arricchimento, seleziona **Esegui** dalla barra dei c
 
 Al termine del processo di arricchimento, puoi rivedere i dati dei profili cliente appena arricchiti in **I miei arricchimenti**. Inoltre, troverai l'ora dell'ultimo aggiornamento e il numero di profili arricchiti.
 
-Puoi vedere un esempio dei dati arricchiti nel riquadro **Anteprima clienti arricchita**. Seleziona **Visualizza altro** e seleziona la scheda **Dati** per accedere a una visualizzazione dettagliata di ciascun profilo arricchito.
-
-### <a name="overview-card"></a>Scheda panoramica
-
-La scheda panoramica mostra i dettagli sulla copertura dell'arricchimento. 
-
-* **Indirizzi elaborati e modificati**: il numero di profili cliente con inidirizzi che sono stati arricchiti.
-
-* **Indirizzi elaborati e non modificati**: il numero di profili cliente con indirizzi che sono stati riconosciuti ma non modificati. In genere si verifica quando i dati di input sono validi e non possono essere migliorati dall'arricchimento.
-
-* **Indirizzi non elaborati e non modificati**: il numero di profili cliente con indirizzi che non sono stati riconosciuti. Solitamente sono dati di input non validi o non supportati dall'arricchimento.
+Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito selezionando **Visualizza dati arricchiti**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md) e [misure](measures.md) e persino [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

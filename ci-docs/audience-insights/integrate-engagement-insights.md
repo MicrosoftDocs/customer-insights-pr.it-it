@@ -1,28 +1,26 @@
 ---
-title: Integrare i dati Web di Informazioni dettagliate sull'interazione con Informazioni dettagliate sul gruppo di destinatari
-description: Porta le informazioni Web sui clienti da Informazioni dettagliate sull'interazione a Informazioni dettagliate sul gruppo di destinatari.
+title: Integrare i dati Web di Informazioni dettagliate sull'interazione con Audience Insights
+description: Porta le informazioni Web sui clienti da Informazioni dettagliate sull'interazione a Audience Insights.
 ms.date: 06/24/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 037e264658bc354618cff56a89645ef7552aeb13
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: 76a53a897e90152707a7c1255ed5ed93a5f3b5a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350550"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305023"
 ---
-# <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integrare i dati Web di Informazioni dettagliate sull'interazione con Informazioni dettagliate sul gruppo di destinatari
-
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../engagement-insights/includes/cc-beta-prerelease-disclaimer.md)]
+# <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integrare i dati Web di Informazioni dettagliate sull'interazione con Audience Insights
 
 I clienti spesso effettuano le transazioni quotidiane online utilizzando i siti Web. La funzionalità di informazioni dettagliate sull'interazione (anteprima) in Dynamics 365 Customer Insights è una soluzione pratica per integrare i dati Web come origine. Oltre ai dati transazionali, demografici o comportamentali, possiamo vedere gli impegni sul Web in profili cliente unificati. Possiamo utilizzare questi profili per ottenere ulteriori informazioni dettagliate, come segmenti, misure o previsioni per l'attivazione di gruppi di destinatari.
 
-Questo articolo descrive i passaggi per trasferire i dati sull'impegno Web dei tuoi clienti da Informazioni dettagliate sull'interazione nell'ambiente Informazioni dettagliate sul gruppo di destinatari esistente.
+Questo articolo descrive i passaggi per trasferire i dati sull'impegno Web dei tuoi clienti da Informazioni dettagliate sull'interazione nell'ambiente Audience Insights esistente.
 
 In questo esempio, si presume un ambiente che contiene profili cliente unificati. I profili sono stati unificati con origini di sondaggi, vendite al dettaglio e un sistema di creazione di ticket. Mostra anche gli impegni correlati dei clienti. 
 
@@ -44,7 +42,7 @@ Per ulteriori informazioni, vedere [Creare e modificare eventi affinati](../enga
 Considerazioni sulla creazione di eventi affinati: 
 
 - Fornisci un nome significativo per l'evento affinato. Verrà utilizzato come nome dell'attività nelle informazioni dettagliate dei gruppi di destinatari.
-- Seleziona almeno le seguenti proprietà per creare un'impegno in Informazioni dettagliate sul gruppo di destinatari: 
+- Seleziona almeno le seguenti proprietà per creare un'impegno in Audience Insights: 
     - Signal.Action.Name - indica i dettagli dell'attività.
     - Signal.User.Id - viene utilizzato per il mapping con l'ID cliente.
     - Signal.View.Uri - viene utilizzato come indirizzo Web come base per segmenti o misure.
@@ -59,9 +57,9 @@ Dopo aver definito l'evento affinato, devi configurare l'esportazione dei dati d
 
 Per ulteriori informazioni, vedi [Esportare eventi](../engagement-insights/export-events.md).
 
-## <a name="ingest-event-data-to-audience-insights"></a>Inserire i dati degli eventi in Informazioni dettagliate sul gruppo di destinatari
+## <a name="ingest-event-data-to-audience-insights"></a>Inserire i dati degli eventi in Audience Insights
 
-Ora che hai definito l'evento affinato e configurato la sua esportazione, passiamo a inserire i dati in Informazioni dettagliate sul gruppo di destinatari. È necessario creare una nuova origine dati basata su una cartella Common Data Model. Immettere i dettagli per l'account di archiviazione in cui esportare gli eventi. Nel file *default.cdm.json* seleziona l'evento affinato da inserire e crea l'entità in Informazioni dettagliate sul gruppo di destinatari.
+Ora che hai definito l'evento affinato e configurato la sua esportazione, passiamo a inserire i dati in Audience Insights. È necessario creare una nuova origine dati basata su una cartella Common Data Model. Immettere i dettagli per l'account di archiviazione in cui esportare gli eventi. Nel file *default.cdm.json* seleziona l'evento affinato da inserire e crea l'entità in Audience Insights.
 
 Per ulteriori informazioni, vedi [Connettersi a una cartella Common Data Model usando un account Azure Data Lake](connect-common-data-model.md).
 
@@ -88,7 +86,7 @@ Configura il nuovo impegno con la seguente mapping:
 
 - **Tipo di attività**: in questo esempio scegliamo il tipo di attività esistente WebLog. Questa selezione è un'utile opzione di filtro per eseguire modelli di previsione o creare segmenti basati su questo tipo di impegno.
 
-- **Imposta relazione**: questa impostazione importante lega l'impegno ai profili cliente esistenti. **Signal.User.Id** è l'identificatore configurato nell'SDK da raccogliere e si riferisce all'ID utente in altre origini dati configurate in Informazioni dettagliate sul gruppo di destinatari. In questo esempio configuriamo la relazione tra Signal.User.Id e RetailCustomers:CustomerRetailId, che è la chiave primaria identificata nel passaggio della mappa del processo di unificazione dei dati.
+- **Imposta relazione**: questa impostazione importante lega l'impegno ai profili cliente esistenti. **Signal.User.Id** è l'identificatore configurato nell'SDK da raccogliere e si riferisce all'ID utente in altre origini dati configurate in Audience Insights. In questo esempio configuriamo la relazione tra Signal.User.Id e RetailCustomers:CustomerRetailId, che è la chiave primaria identificata nel passaggio della mappa del processo di unificazione dei dati.
 
 Dopo aver elaborato gli impegni, è possibile esaminare i record dei clienti e aprire una scheda cliente per visualizzare gli impegni di Informazioni dettagliate sull'interazione nella sequenza temporale. 
 
