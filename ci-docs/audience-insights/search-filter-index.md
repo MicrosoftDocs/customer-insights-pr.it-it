@@ -1,27 +1,30 @@
 ---
 title: Cercare e filtrare profili cliente
 description: Trova rapidamente informazioni sui profili cliente unificati e filtra per attributi specificati.
-ms.date: 01/19/2021
-ms.reviewer: nimagen
-ms.service: customer-insights
+ms.date: 11/01/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+searchScope:
+- ci-search-filter
+- customerInsights
+ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270071"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354514"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profili cliente: indice di ricerca e filtro
 
 Il risultato dell'unificazione dei dati cliente è un'entità Profilo cliente che fornisce una visualizzazione unificata della base clienti totale. Per [trovare rapidamente informazioni su un cliente o gruppo di clienti specifico](customer-profiles.md), puoi configurare le funzionalità **Cerca** o **Filtra** nella pagina **Cleinti**. Continua a leggere per scoprire come gli amministratori possono modificare gli attributi nella pagina **Indicizzazione ricerca e filtro**, che sono disponibili per gli utenti per la ricerca e l'applicazione di filtri.
 
-> [!div class="mx-imgBorder"]
-> ![Filtro ricerca](media/search-filter.png "Filtro ricerca")
+   :::image type="content" source="media/search-filter.png" alt-text="Filtro ricerca":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Aggiungere campi e specificare attributi
 
@@ -56,11 +59,11 @@ Il menu **Filtra** nella pagina **Clienti** può includere un numero variabile d
 
 2. Seleziona **Salva** per applicare le modifiche.
 
-3. Seleziona **Esegui** quando sei pronto per applicare le impostazioni.
+3. Seleziona **Esegui** quando sei pronto per applicare le impostazioni. Dopo essere state elaborate, le modifiche sono disponibili nelle [schede cliente nella pagina Cliente](customer-profiles.md). 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Vai alla pagina **Clienti** per cercare i profili dei clienti o utilizza i campi indicizzati per visualizzare un sottoinsieme di tutti i profili dei clienti.
+Esamina la [pagina dei profili unificati](customer-profiles.md) per cercare profili o utilizzare i campi indicizzati per visualizzare un sottoinsieme di tutti i profili unificati.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

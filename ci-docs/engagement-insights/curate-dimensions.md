@@ -2,18 +2,17 @@
 title: Utilizzare le dimensioni demografiche per suddividere i dati comportamentali (dimensioni curate)
 description: Utilizza le dimensioni curate di profili unificati per abilitare le proprietà dei profili cliente di Informazioni dettagliate sul gruppo di destinatari.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466353"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233052"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Utilizzare le dimensioni demografiche per suddividere i dati comportamentali
 
@@ -41,7 +40,7 @@ Utilizzando le dimensioni demografiche di profili unificati, gli utenti di Infor
 
     :::image type="content" source="media/curated-dimensions2.png" alt-text="Selezionare dati demografici.":::
 
-3. Seleziona una dimensione **Signal.Customer.*xxx*** (questo esempio mostra Signal.Customer.Country).
+3. Seleziona una dimensione **Signal.Customer.*xxx** (questo esempio mostra Signal.Customer.Country).
 
     :::image type="content" source="media/curated-dimensions3.png" alt-text="Selezionare una dimensione.":::
   

@@ -1,20 +1,19 @@
 ---
 title: Attivare le regole di consenso per i segmenti
 description: Segui questi passaggi per collegare i dati del consenso e attivare le verifiche del consenso nelle informazioni dettagliate sul gruppo di destinatari. Un amministratore può anche disabilitare le verifiche del consenso.
-ms.date: 11/03/2021
-ms.service: customer-insights
+ms.date: 11/12/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 4b55c82229b1a6189c0dd67d145386344286df8a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790781"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227498"
 ---
 # <a name="activate-consent-rules"></a>Attiva regole di consenso
 
@@ -49,3 +48,6 @@ Per arrestare l'utilizzo dei dati del consenso nelle informazioni dettagliate su
 1. Seleziona la scheda **Consenso (anteprima)**.
 
 1. Nella sezione **Abilita verifiche del consenso** imposta l'interruttore su **Disattivato**.
+
+> [!TIP]
+> Per interrompere l'utilizzo della funzionalità di gestione del consenso, vedi [Impostazioni di sistema in Centro consenso (anteprima)](../consent-management/system-settings.md).

@@ -1,19 +1,18 @@
 ---
 title: Creare un collegamento tra Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione
 description: Crea un collegamento attivo tra Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione per consentire la condivisione bidirezionale dei dati.
-ms.date: 07/22/2021
-ms.service: customer-insights
+ms.date: 09/08/2021
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 56adc206d83bc6e34a55f11383393b5ac66da531
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461018"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229877"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Creare un collegamento tra Informazioni dettagliate sul gruppo di destinatari e Informazioni dettagliate sull'interazione
 
@@ -25,15 +24,15 @@ Utilizza profili e segmenti unificati di Informazioni dettagliate sul gruppo di 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- I profili di Informazioni dettagliate sul gruppo di destinatari devono essere archiviati in un account Azure Data Lake Storage di cui sei proprietario o in un data lake gestito di [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;. 
-
+- I profili di Informazioni dettagliate sul gruppo di destinatari devono essere archiviati in un account Azure Data Lake Storage di cui sei proprietario o in un data lake gestito di [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash;. 
+- Inoltre, l'ambiente delle informazioni dettagliate sul gruppo di destinatari deve avere un ambiente Dataverse associato. Se inoltre tale ambiente usa anche Dataverse per l'archiviazione dei dati, assicurati di selezionare l'opzione **Abilita condivisione dati** nelle informazioni dettagliate sul gruppo di destinatari. Per maggiori informazioni, vedere [Creare e configurare un ambiente in approfondimenti sul pubblico](../audience-insights/create-environment.md).
 - Sono necessarie autorizzazioni di amministratore per gli ambienti di Informazioni dettagliate sull'interazione e Informazioni dettagliate del gruppo di destinatari.
-
 - Gli ambienti collegati devono trovarsi nella stessa area geografica.
 
 > [!NOTE]
-> - Se la sottoscrizione di Informazioni dettagliate sul gruppo di destinatari è una versione di valutazione che utilizza un data lake gestito internamente da Informazioni dettagliate sul gruppo di destinatari , contatta [pirequest@microsoft.com](mailto:pirequest@microsoft.com) per assistenza. 
-> - Se il tuo ambiente di Informazioni dettagliate sul gruppo di destinatari utilizza Azure Data Lake Storage per archiviare i dati, devi aggiungere un'entità servizio Azure di Informazioni dettagliate sull'interazione all'account di archiviazione. Per informazioni dettagliate, vedi [Connettersi a un account Azure Data Lake Storage con un'entità servizio di Azure per Informazioni dettagliate sul gruppo di destinatari](../audience-insights/connect-service-principal.md). Inoltre, l'ambiente di Informazioni dettagliate sul gruppo di destinatari deve avere un [ambiente Dataverse](../audience-insights/get-started-paid.md) associato. 
+> - Se la sottoscrizione alle informazioni dettagliate sul gruppo di destinatari è una versione di valutazione che utilizza un data lake gestito internamente dalle informazioni dettagliate sul gruppo di destinatari, contatta [pirequest@microsoft.com](mailto:pirequest@microsoft.com) per assistenza. 
+> - Se il tuo ambiente di Informazioni dettagliate sul gruppo di destinatari utilizza Azure Data Lake Storage per archiviare i dati, devi aggiungere un'entità servizio Azure di Informazioni dettagliate sull'interazione all'account di archiviazione. Per informazioni dettagliate, vedi [Connettersi a un account Azure Data Lake Storage con un'entità servizio di Azure per Informazioni dettagliate sul gruppo di destinatari](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Creare un collegamento all'ambiente
 
@@ -55,6 +54,9 @@ Puoi creare un collegamento all'ambiente aggiornando le impostazioni **Amministr
 
 Dopo aver collegato gli ambienti, puoi selezionare funzionalità facoltative per tali ambienti. Queste funzionalità abilitano attributi e segmenti di profili unificati di Informazioni dettagliate sul gruppo di destinatari per l'analisi interattiva dei dati dei clienti.
 
+> [!IMPORTANT]
+> Affinché i segmenti di Informazioni dettagliate sul gruppo di destinatari siano visualizzati in informazioni dettagliate sull'interazione, devi prima [eseguire processi di merge e downstream](../audience-insights/merge-entities.md). I processi di downstream sono importanti perché generano una tabella univoca che prepara i segmenti di Informazioni dettagliate sul gruppo di destinatari da condividere con Informazioni dettagliate sull'interazione (se è pianificato un aggiornamento del sistema, includerà automaticamente i processi di downstream).
+
 **Per analizzare i dati web in Informazioni dettagliate sull'interazione**
 
 1. Nella pagina **Amministratore dell'ambiente**, attiva **Condividi dati di Informazioni dettagliate sul gruppo di destinatari con Informazioni dettagliate sull'interazione**, quindi seleziona **Avanti**.
@@ -75,6 +77,7 @@ Dopo aver collegato gli ambienti, puoi selezionare funzionalità facoltative per
 
    > [!IMPORTANT]
    > Se non aggiungi esplicitamente gli utenti in questo passaggio, i dati non saranno visibili agli utenti in informazioni dettagliate sull'interazione.
+   > Affinché i segmenti di Informazioni dettagliate sul gruppo di destinatari siano visualizzati in informazioni dettagliate sull'interazione, devi prima [eseguire processi di merge e downstream](../audience-insights/merge-entities.md). I processi di downstream sono importanti perché generano una tabella univoca che prepara i segmenti di Informazioni dettagliate sul gruppo di destinatari da condividere con Informazioni dettagliate sull'interazione (se è pianificato un aggiornamento del sistema, includerà automaticamente i processi di downstream).
 
 1. Esamina la selezione, quindi seleziona **Fine**.
 

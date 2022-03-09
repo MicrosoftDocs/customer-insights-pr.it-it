@@ -3,20 +3,23 @@ title: Guida di esempio per la previsione di raccomandazioni sui prodotti
 description: Usa questa guida di esempio per provare il modello di previsione di raccomandazioni sui prodotti predefinito.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595278"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354652"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Guida di esempio per la previsione di raccomandazioni sui prodotti (anteprima)
+# <a name="product-recommendation-prediction-sample-guide"></a>Guida di esempio per la previsione di raccomandazioni sui prodotti
 
 In questa guida viene illustrato un esempio completo di previsione di raccomandazioni sui prodotti che utilizza i dati di esempio forniti di seguito.
 
@@ -31,7 +34,7 @@ Contoso è un'azienda che produce caffè e macchine da caffè di alta qualità, 
 
 ## <a name="task-1---ingest-data"></a>Attività 1: inserire dati
 
-Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e sull'[importazione di origini dati utilizzando i connettori Power Query](connect-power-query.md). Le seguenti informazioni presuppongono che tu conosca l'inserimento dati in generale.
+Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importazione delle origini dati utilizzando in specifico i connettori Power Query](connect-power-query.md). Le seguenti informazioni presuppongono che tu conosca l'inserimento dati in generale.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inserire dati cliente dalla piattaforma di eCommerce
 
@@ -65,7 +68,7 @@ Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e 
 
 1. Nel campo **Nome** nel riquadro laterale, cambia il nome dell'origine dati da **Query** a **eCommercePurchases**.
 
-1. Salva l'origine dati.
+1. **Salva** l'origine dati.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Inserire dati cliente dallo schema di fidelizzazione
@@ -83,11 +86,11 @@ Consulta in particolare gli articoli [sull'inserimento dati](data-sources.md) e 
 
 1. Nel campo **Nome** nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **loyCustomers**.
 
-1. Salva l'origine dati.
+1. **Salva** l'origine dati.
 
 ## <a name="task-2---data-unification"></a>Attività 2: unificare i dati
 
-Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, unione** per creare un profilo cliente unificato. Per ulteriori informazioni, vedi [Unificazione dei dati](data-unification.md).
+Dopo aver importato i dati, iniziamo il processo di unificazione dei dati per creare un profilo cliente unificato. Per ulteriori informazioni, vedi [Unificazione dei dati](data-unification.md).
 
 ### <a name="map"></a>Mapping
 
@@ -105,9 +108,9 @@ Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, un
 
 1. Passa alla scheda **Corrispondenza** e seleziona **Imposta ordine**.
 
-2. Nell'elenco a discesa **Primaria**, scegli **eCommerceContacts : eCommerce** come origine primaria e includi tutti i record.
+2. Nell'elenco a discesa **Principale** scegli **eCommerceContacts : eCommerce** come fonte primaria e includi tutti i record.
 
-3. Nell'elenco a discesa **Entità 2**, scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
+3. Nell'elenco a discesa **Entità 2** scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
 
    ![Unificare la corrispondenza di eCommerce e Fedeltà.](media/unify-match-order.png)
 
@@ -115,16 +118,16 @@ Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, un
 
 5. Aggiungi la prima condizione utilizzando FullName.
 
-   - Per eCommerceContacts seleziona **FullName** nell'elenco a discesa.
-   - Per loyCustomers seleziona **FullName** nell'elenco a discesa.
+   - Per eCommerceContacts seleziona **FullName** nel menu a discesa.
+   - Per loyCustomers seleziona **FullName** nel menu a discesa.
    - Seleziona l'elenco a discesa **Normalizza** e scegli **Tipo (telefono, nome, indirizzo...)**.
    - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 
 6. Immetti il nome **FullName, Email** per la nuova regola.
 
    - Aggiungi una seconda condizione per l'indirizzo e-mail selezionado **Aggiungi condizione**
-   - Per l'entità eCommerceContacts, scegli **E-mail** nel menu a discesa.
-   - Per l'entità loyCustomers, scegli **E-mail** nel menu a discesa.
+   - Per l'entità eCommerceContacts, scegli **E-mail** nell'elenco a discesa.
+   - Per l'entità loyCustomers, scegli **E-mail** nell'elenco a discesa.
    - Lascia vuoto il campo Normalizza.
    - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
 
@@ -154,9 +157,9 @@ Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abba
 
 1. Definisci tre condizioni per il modello:
 
-   - **Numero di prodotti** : Imposta questo valore su **5**. Questa impostazione definisce quanti prodotti desideri consigliare ai tuoi clienti.
+   - **Numero di prodotti**: imposta questo valore su **5**. Questa impostazione definisce quanti prodotti desideri consigliare ai tuoi clienti.
 
-   - **Suggerire prodotti acquistati di recente dai clienti** : Seleziona **Sì** per indicare che desideri includere prodotti nella raccomandazione che i tuoi clienti hanno acquistato in precedenza.
+   - **Ripetizione degli acquisti prevista**: seleziona **Sì** per indicare che desideri includere i prodotti nella raccomandazione che i tuoi clienti hanno acquistato in precedenza.
 
    - **Finestra per guardare indietro:** Seleziona almeno **365 giorni**. Questa impostazione definisce fino a quanto tempo indietro il modello esaminerà l'impegno del cliente per utilizzarlo come input per le raccomandazioni.
    

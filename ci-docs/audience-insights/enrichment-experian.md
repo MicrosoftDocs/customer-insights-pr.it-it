@@ -3,18 +3,17 @@ title: Arricchimento con l'arricchimento di terze parti Experian
 description: Informazioni generali sull'arricchimento di terzi parti Experian.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c54f6a00cb28b0ab11716c02aa8761dfa382f07e3360183b5d38b9720e890c21
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032625"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229969"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Arricchimento dei profili dei clienti con i dati demografici di Experian (anteprima)
 
@@ -91,7 +90,7 @@ Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito se
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Crea sulla base dei tuoi dati cliente arricchiti. Crea [segmenti](segments.md) e [misure](measures.md) e persino [esporta i dati](export-destinations.md) per offrire esperienze personalizzate ai tuoi clienti.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 

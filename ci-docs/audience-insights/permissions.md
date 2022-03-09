@@ -1,26 +1,29 @@
 ---
 title: Gestire le autorizzazioni utente
 description: Informazioni su autorizzazioni e ruoli utente.
-ms.date: 10/27/2020
-ms.reviewer: nimagen
-ms.service: customer-insights
+ms.date: 03/25/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: f7fcecdea8dc49666dd5c45bf4109c205993f326
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+searchScope:
+- ci-permissions
+- ci-system-security
+- customerInsights
+ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268415"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355942"
 ---
 # <a name="user-permissions"></a>Autorizzazioni utente
 
-La pagina **Autorizzazioni** consente di configurare ruoli e autorizzazioni per l'utilizzo di Audience Insights.
+La pagina **Autorizzazioni** consente di configurare ruoli e autorizzazioni per l'utilizzo di Informazioni dettagliate sul gruppo di destinatari.
 
-Devi disporre delle autorizzazioni di amministratore per visualizzare la pagina. Per accedere alla pagina delle autorizzazioni in Audience Insights, vai a **Amministratore** > **Autorizzazioni**.
+Devi disporre delle autorizzazioni di amministratore per visualizzare la pagina. Per accedere alla pagina delle autorizzazioni in Informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Autorizzazioni**.
 
 Esistono tre tipi di ruoli:
 
@@ -31,7 +34,7 @@ Esistono tre tipi di ruoli:
 - Visualizza ed esplora la pagina **Arricchimento**.
 - Esplora ed esporta entità usando la pagina **Entità**.
 - Visualizza lo stato dei processi di sistema utilizzando la pagina **Sistema**.
-- Esporta segmenti dalla pagina **Segmenti**.
+- Visualizza le esportazioni nella pagina **Esportazioni**.
 - Installa e usa il dashboard **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Collaboratore
@@ -43,6 +46,7 @@ Esistono tre tipi di ruoli:
 - Crea segmenti usando la pagina **Segmenti**.
 - Crea misure utilizzando la pagina **Misure**.
 - Gestisci la configurazione e arricchisci i profili cliente dalla pagina **Arricchimento** (solo per arricchimenti del produttore).
+- Gestisci e crea esportazioni in base alle connessioni condivise con i collaboratori. [Ulteriori informazioni su come gli amministratori consentono ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Amministratore
 
@@ -50,15 +54,16 @@ Esistono tre tipi di ruoli:
 - Modifica le impostazioni nella pagina **Sistema**, inclusa la lingua di lavoro e gli orari di aggiornamento per i processi di sistema.
 - Visualizza e aggiungi le autorizzazioni usando la pagina **Autorizzazioni**.
 - Imposta le definizioni di ricerca e filtro per la pagina Clienti utilizzando la pagina **Indicizzazione ricerca e filtro** (accessibile tramite la pagina **Clienti**).
-- Definisci le destinazioni dei segmenti Dynamics 365 Sales utilizzando la pagina **Destinazioni esportazione**.
+- Gestisci le connessioni e consenti loro altri ruoli utente nella pagina **Connessioni**.
 - Gestisci la configurazione e arricchisci i profili cliente dalla pagina **Arricchimento** (per tutti gli arricchimenti).
+- Gestisci e crea esportazioni nella pagina **Esportazioni**.
 - Installa e utilizza il **componente aggiuntivo Scheda cliente**.
 - Aggiungi e usa il **connettore Power Apps**.
 - Abilita l'utilizzo delle [API di Customer Insights](apis.md).
 
 ## <a name="assign-roles-and-permissions"></a>Assegnare ruoli e autorizzazioni
 
-1. In Audience Insights, vai a **Amministratore** > **Autorizzazioni**.
+1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Autorizzazioni**.
 
 1. Seleziona **Aggiungi utenti** per aprire il riquadro **Aggiungi/Modifica autorizzazioni**.
 
@@ -68,7 +73,7 @@ Esistono tre tipi di ruoli:
 
 ## <a name="view-current-permissions"></a>Visualizzare le autorizzazioni correnti
 
-In Audience Insights, vai a **Amministratore** > **Autorizzazioni** per vedere quali assegnazioni di ruolo sono attualmente attive.
+In Informazioni dettagliate sul gruppo di destinatari, vai a **Amministratore** > **Autorizzazioni** per vedere quali assegnazioni di ruolo sono attualmente attive.
 
 - La colonna **Tipo** specifica un singolo utente, gruppo o applicazione. Il sistema supporta singoli utenti e gruppi.
 - I ruoli sono specificati nella colonna **Ruolo**.

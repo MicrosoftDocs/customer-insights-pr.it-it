@@ -1,20 +1,19 @@
 ---
 title: Ottimizzazione dei dati aziendali
 description: Arricchisci e normalizza i dati aziendali con i modelli Microsoft.
-ms.date: 11/05/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770175"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229408"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Arricchimento dei profili aziendali con dati aziendali ottimizzati
 
@@ -51,7 +50,8 @@ Esistono alcune limitazioni con i dati ottimizzati. Gli elementi nell'elenco di 
 
 1.  Conferma l'identità dell'azienda. Non verifichiamo se l'input è un'organizzazione esistente né che un'azienda utilizza l'output come nome standard.
 2.  Copri nel complesso le aziende a livello globale. I dati aziendali compilati di Microsoft hanno una copertura globale, ma offrono la maggior parte della copertura in Australia, Canada, Regno Unito e Stati Uniti.
-3.  Garantisci l'accuratezza o l'aggiornamento dei dati. Poiché le informazioni aziendali cambiano spesso, non possiamo garantire che i dati aziendali ottimizzati forniti siano sempre esatti o aggiornati.
+3.  Standardizza gli indirizzi aziendali a livello globale. Attualmente è supportata la standardizzazione degli indirizzi nei paesi o nelle aree geografiche seguenti: Australia, Canada, Francia, Germania, Italia, Giappone, Regno Unito e Stati Uniti.
+4.  Garantisci l'accuratezza o l'aggiornamento dei dati. Poiché le informazioni aziendali cambiano spesso, non possiamo garantire che i dati aziendali ottimizzati forniti siano sempre esatti o aggiornati.
 
 ## <a name="configure-the-enrichment"></a>Configurare l'arricchimento
 
@@ -81,7 +81,17 @@ Per avviare il processo di arricchimento, seleziona **Esegui** dalla barra dei c
 
 Al termine del processo di arricchimento, puoi rivedere i dati dei profili cliente appena arricchiti in **I miei arricchimenti**. Inoltre, troverai l'ora dell'ultimo aggiornamento e il numero di profili arricchiti.
 
-Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito selezionando **Visualizza dati arricchiti**.
+Puoi vedere un esempio dei dati arricchiti nel riquadro **Anteprima clienti arricchita**. Seleziona **Visualizza altro** e seleziona la scheda **Dati** per accedere a una visualizzazione dettagliata di ciascun profilo arricchito.
+
+### <a name="overview-card"></a>Scheda panoramica
+
+La scheda panoramica mostra i dettagli sulla copertura dell'arricchimento. 
+
+* **Società elaborate e modificate**: il numero di profili società che sono stati arricchiti.
+
+* **Società elaborate e non modificate**: il numero di profili società che sono stati riconosciuti ma non modificati. In genere si verifica quando i dati di input sono validi e non possono essere migliorati dall'arricchimento.
+
+* **Società non elaborate e non modificate**: il numero di profili società che sono stati riconosciuti ma non riconosciuti. Solitamente si verifica per dati di input non validi o non supportati dall'arricchimento.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

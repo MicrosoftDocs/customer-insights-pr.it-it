@@ -3,20 +3,19 @@ title: Previsione dell'abbandono dell'abbonamento (video)
 description: Prevedi se esiste il rischio che un cliente non utilizzi più i prodotti o i servizi relativi all'abbonamento della società.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967706"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354698"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Previsione di abbandono dell'abbonamento (anteprima)
+# <a name="subscription-churn-prediction"></a>Previsione sull'annullamento degli abbonamenti
 
 La previsione di abbandono dell'abbonamento consente di prevedere se esiste il rischio che un cliente non utilizzi più i prodotti o i servizi relativi all'abbonamento della società. Puoi creare una nuova previsione di abbandono dell'abbonamento nella pagina **Intelligenza** > **Previsioni**. Seleziona **Le mie previsioni** per visualizzare altre previsioni che hai creato.
 
@@ -63,7 +62,7 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
 ## <a name="create-a-subscription-churn-prediction"></a>Ceare una previsione di abbandono dell'abbonamento
 
 1. In Informazioni dettagliate sul gruppo di destinatari, vai a **Intelligenza** > **Previsioni**.
-1. Seleziona il riquadro **Modello di abbandono dell'abbonamento (anteprima)** e seleziona **Utilizza questo modello**.
+1. Seleziona il riquadro **Modello di abbandono dell'abbonamento** e seleziona **Usa questo modello**.
    > [!div class="mx-imgBorder"]
    > ![Riquadro Modello di abbandono dell'abbonamento con il pulsante Utilizza questo modello.](media/subscription-churn-usethismodel.PNG "Riquadro Modello di abbandono dell'abbonamento con il pulsante Utilizza questo modello")
 
