@@ -1,7 +1,7 @@
 ---
 title: Arricchire profili cliente unificati
 description: Usa specifiche funzionalità per arricchire i tuoi dati cliente.
-ms.date: 02/07/2022
+ms.date: 02/18/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: e8cac35ccf7012524dc22cb4a499dc605dd66346
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355388"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372720"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Arricchimento per i profili cliente (anteprima)
 
@@ -42,6 +42,7 @@ Nella scheda **Scopri** , troverai tutte le opzioni di arricchimento supportate.
 - [Personalizzare i dati](enrichment-SFTP-custom-import.md) mediante Secure File Transfer Protocol (SFTP) 
 - [Mappe di Azure](enrichment-azure-maps.md) fornito da Microsoft
 - [Dati di localizzazione](enrichment-here.md) forniti da HERE Technologies 
+- [Identità](enrichment-liveramp.md) fornita da LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Account aziendali (da B a B)](#tab/b2b)
 
@@ -80,6 +81,10 @@ Gli arricchimenti di terze parti vengono configurati utilizzando le [connessioni
 ## <a name="multiple-enrichments-of-the-same-type"></a>Più arricchimenti dello stesso tipo
 
 L'entità da arricchire viene specificata durante la configurazione dell'arricchimento, che ti consente di arricchire solo un sottoinsieme dei tuoi profili. Ad esempio, arricchisci i dati solo per un segmento specifico. Puoi configurare diversi arricchimenti dello stesso tipo e riutilizzare la stessa connessione. Alcuni arricchimenti avranno dei limiti al numero di arricchimenti dello stesso tipo che possono essere creati. I limiti e l'uso corrente possono essere visualizzati nella pagina **Arricchimento**.
+
+## <a name="enrich-data-sources-before-unification"></a>Arricchire le origini dati prima dell'unificazione
+
+Puoi arricchire i dati dei tuoi clienti prima dell'unificazione dei dati per aumentare la qualità di una corrispondenza di dati. Per altre informazioni, vedi [arricchimento per le origini dati](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Verificare lo stato del processo di arricchimento
 

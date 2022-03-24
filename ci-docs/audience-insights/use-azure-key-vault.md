@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355896"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376513"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Porta il tuo key vault Azure (anteprima)
 
@@ -31,7 +31,7 @@ Per configurare il key vault in approfondimenti sul pubblico, devono essere sodd
 
 - Hai un abbonamento attivo ad Azure.
 
-- Disponi di un ruolo utente [Amministratore](permissions.md#administrator) nell'ambiente di Informazioni dettagliate sul gruppo di destinatari. Scopri di più sui [permessi degli utenti in approfondimenti sul pubblico](permissions.md#assign-roles-and-permissions).
+- Disponi di un ruolo utente [Amministratore](permissions.md#admin) nell'ambiente di Informazioni dettagliate sul gruppo di destinatari. Scopri di più sui [permessi degli utenti in approfondimenti sul pubblico](permissions.md#assign-roles-and-permissions).
 
 - Hai i ruoli [Contribuente](/azure/role-based-access-control/built-in-roles#contributor) e [Amministratore accesso utente](/azure/role-based-access-control/built-in-roles#user-access-administrator) sul key vault o sul gruppo di risorse a cui il key vault appartiene. Per ulteriori informazioni, vai a [Aggiungere o rimuovere le assegnazioni dei ruoli Azure utilizzando il portale Azure](/azure/role-based-access-control/role-assignments-portal). Se non si dispone del ruolo User Access Administrator sul key vault, è necessario impostare separatamente le autorizzazioni di controllo dell'accesso basate sui ruoli per il principal del servizio Azure per Dynamics 365 Customer Insights . Seguire i passaggi per [utilizzare un service principal di Azure](connect-service-principal.md) per il key vault che deve essere collegato.
 

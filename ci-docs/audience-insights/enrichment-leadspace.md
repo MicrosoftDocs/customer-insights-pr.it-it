@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 0db0c984f6bf9f7ded0704b6fa0caf39c7dace3a
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230639"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376789"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Arricchimento dei profili aziendali con Leadspace (anteprima)
 
@@ -25,7 +25,7 @@ Per configurare Leadspace, devono essere rispettati i seguenti requisiti:
 
 - Hai una licenza Leadspace attiva.
 - Avete [unificato i profili dei clienti](customer-profiles.md) in base agli account.
-- Una connessione Leadspace è già stata configurata da un amministratore o hai le autorizzazioni di [amministratore](permissions.md#administrator) e la "chiave perpetua" (denominata **token Leadspace**). Contatta [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) direttamente per i dettagli sul loro prodotto.
+- Una connessione Leadspace è già stata configurata da un amministratore o hai le autorizzazioni di [amministratore](permissions.md#admin) e la "chiave perpetua" (denominata **token Leadspace**). Contatta [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) direttamente per i dettagli sul loro prodotto.
 
 ## <a name="configure-the-enrichment"></a>Configurare l'arricchimento
 

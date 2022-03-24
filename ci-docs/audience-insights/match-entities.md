@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355158"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376927"
 ---
 # <a name="match-entities"></a>Mettere in corrispondenza le entità
 
@@ -180,7 +180,19 @@ Un'entità di output della deduplicazione contiene le seguenti informazioni:
   - Deduplication_WinnerId: questo campo contiene l'ID vincitore dei gruppi o cluster identificati. Se Deduplication_WinnerId è uguale al valore della chiave primaria per un record, significa che il record è il record vincitore.
 - Campi utilizzati per definire le regole di deduplicazione.
 - I campi Regola e Punteggio per indicare quale delle regole di deduplicazione è stata applicata e il punteggio restituito dall'algoritmo di corrispondenza.
-   
+ 
+## <a name="include-enriched-entities-preview"></a>Includere entità arricchite (anteprima)
+
+Se hai arricchito le entità a livello origine dati, selezionale prima di eseguire il processo di corrispondenza. Le entità arricchite possono migliorare i risultati dell'unificazione. Per altre informazioni, vedi [Arricchimento per le origini dati](data-sources-enrichment.md). 
+
+L'entità arricchita contiene i campi originali dell'origine dati e i campi arricchiti. Quindi, se scegli di lavorare con l'entità arricchita, la configurazione esistente non viene influenzata. Tuttavia, potrebbe essere necessario aggiornare le regole di corrispondenza per utilizzare i campi arricchiti.
+
+1. Vai a **Dati** > **Unifica** > **Corrispondenza** e seleziona **Usa entità arricchite** all'inizio della pagina.
+
+1. Nel riquadro **Usa entità arricchite** scegli una o più entità arricchite.
+
+1. Seleziona **Fatto**. Ovunque venga utilizzata l'entità di origine (come l'ordine di corrispondenza o le regole), viene automaticamente modificata nell'entità arricchita.
+  
 ## <a name="run-the-match-process"></a>Eseguire il processo di corrispondenza
 
 Con le regole di corrispondenza configurate, inclusa la corrispondenza tra entità e le regole di deduplicazione, puoi eseguire il processo di corrispondenza. 

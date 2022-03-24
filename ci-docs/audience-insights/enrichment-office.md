@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228479"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376835"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Arricchisci i profili dei clienti con i dati di coinvolgimento (anteprima)
 
@@ -28,7 +28,7 @@ Per configurare l'arricchimento, devono essere rispettati i seguenti requisiti:
 - Avere una licenza cloud Office 365 attiva.
 - Hai [profili dei clienti unificati](customer-profiles.md) basati su [conti aziendali](work-with-business-accounts.md).
 - Il tuo ambiente Customer Insights deve avere un'[organizzazione Microsoft Dataverse allegata](create-environment.md#step-3-connect-to-microsoft-dataverse).
-- Devi avere autorizzazioni di [amministratore](permissions.md#administrator).
+- Devi avere autorizzazioni di [amministratore](permissions.md#admin).
 - Hai o puoi ottenere il consenso dal tuo amministratore del tenant di Office 365 per usare i dati Office 365 per fornire  **Approfondimenti per l'organizzazione** all'interno delle applicazioni Dynamics 365.
 
 ## <a name="configure-the-enrichment"></a>Configurare l'arricchimento

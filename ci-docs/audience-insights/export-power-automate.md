@@ -8,16 +8,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dc9bbe22b7f10cf92f06cae18fbece9808b87dce
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: dd90ef4576246b49d4a9c74005196ee9813a6744
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226719"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455912"
 ---
 # <a name="power-automate-connector-preview"></a>Connettore Power Automate (anteprima)
 
 Attiva eventi specifici che si verificano automaticamente quando i dati vengono modificati e gestisci flussi più complessi direttamente in [Power Automate](https://flow.microsoft.com/).
+
+## <a name="known-limitations"></a>Limitazioni note
+
+- Puoi fare un massimo di 100 chiamate ogni 60 secondi. Puoi chiamare l'endpoint dell'API più volte utilizzando il parametro $skip. [Ulteriori informazioni sul parametro $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ## <a name="power-automate-triggers"></a>Trigger di Power Automate
 

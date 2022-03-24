@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355022"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455860"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Utilizzare i segmenti in Dynamics 365 Sales (anteprima)
 
@@ -31,7 +31,7 @@ Utilizza i tuoi dati cliente per creare elenchi marketing, effettuare il complet
 
 ## <a name="prerequisite-for-connection"></a>Prerequisiti per la connessione
 
-1. I record dei contatti devono essere presenti in Dynamics 365 Sales prima di poter esportare un segmento da Customer Insights a Sales. Ulteriori informazioni su come inserire i contatti in [Dynamics 365 Sales utilizzando Microsoft Dataverse](connect-power-query.md).
+1. I record dei contatti devono essere presenti in Dynamics 365 Sales prima di poter esportare un segmento da Customer Insights a Sales. Ulteriori informazioni su come importare i contatti da [Dynamics 365 Sales utilizzando Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > L'esportazione di segmenti da Informazioni dettagliate sul gruppo di destinatari a Sales non creerà nuovi record dei contatti nelle istanze di Sales. I record dei contatti di Sales devono essere inseriti in Informazioni dettagliate sul gruppo di destinatari e utilizzati come origine dati. Devono inoltre essere inclusi nell'entità Cliente unificata per mappare gli ID cliente agli ID contatto prima che i segmenti possano essere esportati.

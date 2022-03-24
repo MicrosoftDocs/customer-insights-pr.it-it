@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350136"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8456003"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Iniziare dopo aver acquistato Customer Insights
 
@@ -39,7 +39,4 @@ Il completamento dell'installazione ti aiuta a scegliere l'obiettivo iniziale co
 
 ## <a name="create-your-own-environment"></a>Crea il tuo ambiente
 
-Dopo il tuo primo accesso, vedrai un ambiente con dati di esempio. Puoi usare questi dati per esplorare le caratteristiche e familiarizzare con l'applicazione. Per utilizzare i tuoi dati, devi [creare un ambiente](audience-insights/get-started-paid.md).
-
-
-
+Dopo il tuo primo accesso, vedrai un ambiente con dati di esempio. Puoi usare questi dati per esplorare le caratteristiche e familiarizzare con l'applicazione. Per utilizzare i tuoi dati, devi [creare un ambiente](/dynamics365/customer-insights/audience-insights/create-environment).
