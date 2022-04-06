@@ -1,7 +1,7 @@
 ---
 title: Arricchire profili cliente unificati
 description: Usa specifiche funzionalità per arricchire i tuoi dati cliente.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,17 +10,12 @@ ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
-- ci-enrichments
-- ci-enrichment-details
-- ci-enrichment-wizard
-- customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372720"
+  - ci-enrichments
+  - ci-enrichment-details
+  - ci-enrichment-wizard
+  - customerInsights
 ---
+
 # <a name="enrichment-for-customer-profiles-preview"></a>Arricchimento per i profili cliente (anteprima)
 
 Utilizza i dati provenienti da origini come Microsoft e altri partner per arricchire i dati dei tuoi clienti.
@@ -97,5 +92,19 @@ Per vedere lo stato di un arricchimento
 1. Nel riquadro **Dettagli stato** espandi la sezione **Arricchimenti**. 
 1. Per l'arricchimento di cui vuoi vedere i progressi, seleziona **Vedi dettagli**. 
 1. Nel riquadro **Dettagli attività** seleziona **Mostra dettagli** per vedere i processi che sono coinvolti nell'aggiornamento dell'arricchimento e il relativo stato. 
+
+## <a name="enrichment-results"></a>Risultati dell'arricchimento
+
+Dopo un ciclo di arricchimento completato, è possibile esaminare i risultati dell'arricchimento.
+
+1. Vai a **Dati** > **Arricchimento**. 
+1. Selezionare l'arricchimento di cui desideri le informazioni.
+
+Tutti gli arricchimenti mostrano informazioni di base come il numero di profili arricchiti, un'anteprima dell'entità di arricchimento generata e il numero di profili arricchiti nel tempo. Se disponibile, il campo **Numero di clienti arricchiti per campo** fornisce un'analisi dettagliata della copertura di ciascun campo arricchito.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Pagina dei risultati degli arricchimenti.":::
+
+Alcuni arricchimenti mostrano anche informazioni specifiche per il tipo di arricchimento. Per altre informazioni, fare riferimento alla documentazione per il relativo arricchimento.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

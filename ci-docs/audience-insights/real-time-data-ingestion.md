@@ -1,5 +1,5 @@
 ---
-title: Limitazioni e inserimento dati in tempo reale
+title: Inserimento dati in tempo reale (anteprima)
 description: Informazioni generali sulle funzionalità in tempo reale di Informazioni dettagliate sul gruppo di destinatari.
 ms.date: 10/27/2020
 ms.reviewer: mhart
@@ -9,15 +9,10 @@ author: Nils-2m
 ms.author: nikeller
 manager: shellyha
 searchScope:
-- ci-system-api-usage
-- customerInsights
-ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355480"
+  - ci-system-api-usage
+  - customerInsights
 ---
+
 # <a name="real-time-data-ingestion-preview"></a>Inserimento dati in tempo reale (anteprima)
 
 La funzionalità quasi in tempo reale consente di visualizzare, in pochi secondi, le interazioni più recenti che i tuoi clienti hanno effettuato con i tuoi prodotti o servizi.

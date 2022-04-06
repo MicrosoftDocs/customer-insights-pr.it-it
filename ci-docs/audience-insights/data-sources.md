@@ -1,7 +1,7 @@
 ---
 title: Utilizzare origini dati per inserire dati
 description: Scopri come importare dati da varie origini.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -9,16 +9,11 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-data-sources
-- ci-create-data-source
-- customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354054"
+  - ci-data-sources
+  - ci-create-data-source
+  - customerInsights
 ---
+
 # <a name="data-sources-overview"></a>Panoramica delle origini dati
 
 
@@ -47,7 +42,18 @@ Le origini dati che vengono create dopo aver associato un ambiente Dataverse con
 
 I gateway dati di un ambiente esistente Power BI o Power Apps saranno visibili e potrai riutilizzarli in Customer Insights. La pagina delle origini dati mostra i collegamenti per andare all'ambiente Microsoft Power Platform in cui è possibile visualizzare e configurare i gateway dati locale.
 
+> [!IMPORTANT]
+> Assicurati che i gateway siano aggiornati all'ultima versione. È possibile installare un aggiornamento e riconfigurare un gateway direttamente da un prompt visualizzato sullo schermo del gateway oppure [scaricare l'ultima versione](https://powerapps.microsoft.com/downloads/). Se non si utilizza l'ultima versione del gateway, l'aggiornamento del flusso di dati non viene eseguito e viene visualizzato un messaggio di errore come **La parola chiave non è supportata: proprietà di configurazione. Nome parametro: parola chiave**.
+
 ## <a name="review-ingested-data"></a>Esamina i dati inseriti
+Se il tuo ambiente contiene flussi di dati di Power Platform, nella pagina **Origini dati** sono elencate tre sezioni: 
+- **Condivisa**: origini dati che possono essere gestite da tutti gli amministratori di Customer Insights. I flussi di dati Power BI, il tuo account di archiviazione e il collegamento a un data lake gestito da Dataverse sono esempi di origini dati condivise.
+- **Gestito da me**: i flussi di dati di Power Platform creati possono essere gestiti solo da te. Altri amministratori di Customer Insights possono solo visualizzare questi flussi di dati, ma non modificarli, aggiornarli o eliminarli.
+- **Gestito da altri**: flussi di dati di Power Platform creati da altri amministratori. Puoi solo visualizzarli. Indica il titolare del flusso di dati a cui rivolgersi per qualsiasi assistenza.
+> [!NOTE]
+> Tutte le entità possono essere visualizzate e utilizzate da altri utenti. La contestualità dell'utente si applica solo alle origini dati e non alle entità che risultano dai flussi di dati.
+
+Se non viene utilizzato alcun flusso di dati di Power Platform, non vedrai alcun gruppo né sezione. La pagina **Origini dati** contiene solo un elenco di tutte le origini dati.
 
 Vedrai il nome di ciascuna origine dati inserita, il suo stato e l'ultima volta che i dati sono stati aggiornati per quell'origine. Puoi ordinare l'elenco delle origini dati per colonna.
 

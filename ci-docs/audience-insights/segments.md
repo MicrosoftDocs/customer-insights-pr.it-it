@@ -1,7 +1,7 @@
 ---
 title: Segmenti in Informazioni dettagliate sul gruppo di destinatari
 description: Panoramica sui segmenti e su come crearli e gestirli.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -9,18 +9,13 @@ ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-customers-page
-- ci-enrichment-details
-- ci-segments
-- ci-segment-details
-- customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355988"
+  - ci-customers-page
+  - ci-enrichment-details
+  - ci-segments
+  - ci-segment-details
+  - customerInsights
 ---
+
 # <a name="segments-overview"></a>Panoramica dei segmenti
 
 I segmenti ti consentono di raggruppare i clienti in base ad attributi demografici, transazionali o comportamentali. Puoi utilizzare i segmenti per indirizzare campagne promozionali, attività di vendita e azioni di assistenza clienti per raggiungere i tuoi obiettivi aziendali.
@@ -68,7 +63,9 @@ Quando selezioni un segmento sono disponibili le seguenti azioni:
 
 ## <a name="refresh-segments"></a>Aggiornare i segmenti
 
-Puoi aggiornare tutti i segmenti contemporaneamente selezionando **Aggiorna tutto** nella pagina **Segmenti** oppure puoi aggiornare uno o più segmenti quando li selezioni e scegli **Aggiorna** dalle opzioni. In alternativa, puoi configurare un aggiornamento ricorrente in **Amministratore** > **Sistema** > **Pianifica**.
+Puoi aggiornare tutti i segmenti contemporaneamente selezionando **Aggiorna tutto** nella pagina **Segmenti** oppure puoi aggiornare uno o più segmenti quando li selezioni e scegli **Aggiorna** dalle opzioni. In alternativa, puoi configurare un aggiornamento ricorrente in **Amministratore** > **Sistema** > **Pianifica**. Quando viene configurato un aggiornamento ricorrente, si applicano le seguenti regole:
+- Tutti i segmenti con tipo **Dinamico** o **Espansione** verranno aggiornati automaticamente alla cadenza impostata. Al termine dell'aggiornamento, il campo **Stato** indica se si sono verificati problemi durante l'aggiornamento del segmento. Il campo **Ultimo aggiornamento** mostra un timestamp dell'ultimo aggiornamento completato. Se si verifica un errore, selezionalo per visualizzare i dettagli su ciò che è accaduto.
+- I segmenti con tipo **Statico** *non* vengono aggiornati automaticamente. Il campo **Ultimo aggiornamento** mostra un timestamp dell'ultima volta che i segmenti statici sono stati eseguiti o aggiornati manualmente.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

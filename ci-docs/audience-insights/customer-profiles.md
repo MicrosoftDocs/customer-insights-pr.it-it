@@ -9,23 +9,20 @@ author: Nils-2m
 ms.author: nikeller
 manager: shellyha
 searchScope:
-- ci-customers-page
-- ci-customer-card
-- ci-activities
-- ci-activities-wizard
-- customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354886"
+  - ci-customers-page
+  - ci-customer-card
+  - ci-activities
+  - ci-activities-wizard
+  - customerInsights
 ---
+
 # <a name="customer-profiles"></a>Profili cliente
 
 La pagina **Clienti** mostra una vista combinata dei tuoi profili cliente unificati. I profili dei clienti sono disponibili una volta [creata l'entità Customer unificata](data-unification.md). La pagina permette di cercare i clienti e di definire l'indice per questa ricerca.
 
-I clienti possono essere individui oppure organizzazioni. Ogni profilo di cliente è rappresentato da una piastrella. Usa i controlli di paginazione per ottenere più record. La scheda visualizza i campi dell'entità *Cliente* come definiti nell' **indice di ricerca e filtro**. Seleziona un riquadro per vedere i dati per il cliente selezionato in una pagina dedicata chiamata [Pagina dei dettagli del cliente](customer-profiles.md#customer-details-page).
+I clienti possono essere individui oppure organizzazioni. Ogni profilo di cliente è rappresentato da una piastrella. Usa i controlli di paginazione per ottenere più record. La scheda visualizza i campi dell'entità *Cliente* come definiti nell' **indice di ricerca e filtro**. L'ordine dei campi all'interno di ciascuna scheda viene selezionato dal sistema.
+
+Seleziona un riquadro per vedere i dati per il cliente selezionato in una pagina dedicata chiamata [Pagina dei dettagli del cliente](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Pagina dei clienti che mostra le piastrelle dei risultati](media/customers-page-result-tiles-B2C.png "Pagina dei clienti che mostra le piastrelle dei risultati")

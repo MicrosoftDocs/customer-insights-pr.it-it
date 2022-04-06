@@ -1,20 +1,15 @@
 ---
 title: Panoramica sugli scenari di previsione supportati
 description: Scenari e opzioni di previsione coperti dall'applicazione Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228249"
 ---
+
 # <a name="predictions-overview"></a>Panoramica delle previsioni
 
 Dynamics 365 Customer Insights viene fornito con una varietà di opzioni che sfruttano l'intelligenza artificiale e l'apprendimento automatico per prevedere i dati. 
@@ -36,6 +31,11 @@ Il modo più semplice per iniziare con la previsione dei dati sono i modelli pre
 - [Abbandono transazionale](predict-transactional-churn.md): prevede se un cliente non acquisterà più i tuoi prodotti o servizi in un determinato intervallo di tempo.
 
 ---
+
+> [!TIP]
+> Ti consigliamo di aggiornare regolarmente i modelli predefiniti con dati aggiornati per assicurarti che forniscano informazioni precise al caso d'uso aziendale. I dati vengono aggiornati ad hoc quando il sistema acquisisce origini dati nuove o aggiornate. Tuttavia, in questo caso i modelli calcolano nuovamente il punteggio e continuano a utilizzare i dati di training esistenti.
+> 
+> È possibile configurare un **Programma di aggiornamento** impostando il programma di nuovo training del modello nell'esperienza di configurazione. Vengono eseguiti nuovamente il training del modello e il calcolo del punteggio in base a questo programma, che puoi modificare in qualsiasi momento.
 
 
 ## <a name="azure-machine-learning-integration"></a>Integrazione di Azure Machine Learning
