@@ -8,8 +8,13 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: 8d7cf95c1f157c771b2d655346464e5af03d73b9
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8524155"
 ---
-
 # <a name="export-segment-lists-to-braze-preview"></a>Esportare elenchi di segmenti in Braze (anteprima)
 
 Esportare segmenti di profili cliente unificati in Braze e utilizzarli per attività di marketing.

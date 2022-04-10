@@ -9,13 +9,18 @@ author: Nils-2m
 ms.author: nikeller
 manager: shellyha
 searchScope:
-  - ci-customers-page
-  - ci-customer-card
-  - ci-activities
-  - ci-activities-wizard
-  - customerInsights
+- ci-customers-page
+- ci-customer-card
+- ci-activities
+- ci-activities-wizard
+- customerInsights
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523731"
 ---
-
 # <a name="customer-profiles"></a>Profili cliente
 
 La pagina **Clienti** mostra una vista combinata dei tuoi profili cliente unificati. I profili dei clienti sono disponibili una volta [creata l'entità Customer unificata](data-unification.md). La pagina permette di cercare i clienti e di definire l'indice per questa ricerca.
