@@ -1,19 +1,19 @@
 ---
 title: Esportare i dati di Customer Insights in Azure Synapse Analytics
 description: Informazioni su come configurare la connessione ad Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231317"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560392"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Esportare i dati in Azure Synapse Analytics (anteprima)
 
@@ -28,21 +28,21 @@ I seguenti prerequisiti devono essere soddisfatti per configurare la connessione
 
 ## <a name="prerequisites-in-customer-insights"></a>Prerequisiti in Customer Insights
 
-* Disponi di un ruolo utente **Amministratore** nell'ambiente di Informazioni dettagliate sul gruppo di destinatari. Scopri di più sull'[impostazione delle autorizzazioni utente nell'ambiente di Informazioni dettagliate sul gruppo di destinatari](permissions.md#assign-roles-and-permissions)
+* Il tuo account utente Azure Active Directory (AD) ha il ruolo di **Amministratore** in Customer Insights. Scopri di più sull'[impostazione delle autorizzazioni utente nell'ambiente di Informazioni dettagliate sul gruppo di destinatari](permissions.md#assign-roles-and-permissions)
 
 In Azure: 
 
 - Una sottoscrizione di Azure attiva.
 
-- Se si utilizza un nuovo account Azure Data Lake Storage Gen2, *l'entità servizio per Informazioni dettagliate sul gruppo di destinatari* ha bisogno delle autorizzazioni DI **collaboratore ai dati BLOB del servizio di archiviazione**. Scopri di più sul [collegamento a un account Azure Data Lake Storage Gen2 con l'entità servizio di Azure per Informazioni dettagliate sul gruppo di destinatari](connect-service-principal.md). Il Data Lake Storage Gen2 **deve avere** lo [spazio dei nomi gerarchico](/azure/storage/blobs/data-lake-storage-namespace) abilitato.
+- Se si usa un nuovo account Azure Data Lake Storage Gen2, per l'*entità servizio per Customer Insights* sono necessarie autorizzazioni di **collaboratore dati BLOB di archiviazione**. Scopri di più sul [collegamento a un account Azure Data Lake Storage Gen2 con l'entità servizio di Azure per Informazioni dettagliate sul gruppo di destinatari](connect-service-principal.md). Il Data Lake Storage Gen2 **deve avere** lo [spazio dei nomi gerarchico](/azure/storage/blobs/data-lake-storage-namespace) abilitato.
 
-- Nel gruppo di risorse in cui si trova l'area di lavoro Azure Synapse, *all'entità servizio* e *all'utente per Informazioni dettagliate sul gruppo di destinatari* devono essere assegnate almeno le autorizzazioni di **lettura**. Per ulteriori informazioni, vedi [Assegnare ruoli di Azure usando il portale di Azure](/azure/role-based-access-control/role-assignments-portal).
+- Nel gruppo di risorse in cui si trova Azure Synapse workspace, all'*entità servizio* e l'utente *Azure AD con autorizzazioni di amministratore in Customer Insights* devono essere assegnate almeno le autorizzazioni di **lettore**. Per ulteriori informazioni, vedi [Assegnare ruoli di Azure usando il portale di Azure](/azure/role-based-access-control/role-assignments-portal).
 
-- L'*utente* deve avere le autorizzazioni del **collaboratore ai dati BLOB del servizio di archiviazione** per l'account Azure Data Lake Storage Gen2 in cui si trovano i dati e deve essere collegato all'area di lavoro Azure Synapse. Scopri di più sull'[utilizzo del portale di Azure per assegnare un ruolo di Azure per l'accesso ai dati di BLOB e coda](/azure/storage/common/storage-auth-aad-rbac-portal) e sulle [autorizzazioni del collaboratore ai dati BLOB del servizio di archiviazione](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- All'utente *Azure AD con autorizzazioni di amministratore in Customer Insights* devono essere assegnate le autorizzazione di **collaboratore dati BLOB di archiviazione** nell'account Azure Data Lake Storage Gen2 in cui si trovano i dati e l'utente deve essere collegato ad Azure Synapse workspace. Scopri di più sull'[utilizzo del portale di Azure per assegnare un ruolo di Azure per l'accesso ai dati di BLOB e coda](/azure/storage/common/storage-auth-aad-rbac-portal) e sulle [autorizzazioni del collaboratore ai dati BLOB del servizio di archiviazione](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - L'*[identità gestita dall'area di lavoro Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* deve avere le autorizzazioni del **collaboratore ai dati BLOB del servizio di archiviazione** per l'account Azure Data Lake Storage Gen2 in cui si trovano i dati e deve essere collegato all'area di lavoro Azure Synapse. Scopri di più sull'[utilizzo del portale di Azure per assegnare un ruolo di Azure per l'accesso ai dati di BLOB e coda](/azure/storage/common/storage-auth-aad-rbac-portal) e sulle [autorizzazioni del collaboratore ai dati BLOB del servizio di archiviazione](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Nell'area di lavoro Azure Synapse, *l'entità servizio per Informazioni dettagliate sul gruppo di destinatari* deve avere il ruolo **amministratore Synapse** assegnato. Per ulteriori informazioni, vedi [Come impostare il controllo degli accessi per l'area di lavoro Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- In Azure Synapse workspace, all'*entità servizio per Customer Insights* deve essere assegnato il ruolo di **amministratore di Synapse**. Per ulteriori informazioni, vedi [Come impostare il controllo degli accessi per l'area di lavoro Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Configurare la connessione ed esportare in Azure Synapse
 

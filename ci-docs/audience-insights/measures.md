@@ -1,12 +1,12 @@
 ---
 title: Comprendere e gestire le misure
 description: Scopri come le misure aiutano ad analizzare e riflettere le prestazioni della tua attività.
-ms.date: 02/28/2022
+ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measures
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: ef10f480086ccac4fa5c6c58818e35ecae67532c
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359783"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529682"
 ---
 # <a name="measures-overview"></a>Panoramica delle misure
 
@@ -27,7 +27,7 @@ Le misure ti aiutano a comprendere meglio i comportamenti dei clienti e le prest
 
 Le misure vengono create [utilizzando il generatore di misure](measure-builder.md), una piattaforma di query di dati con vari operatori e semplici opzioni di mapping. Ti consente di filtrare i dati, raggruppare i risultati, rilevare [percorsi di relazione tra entità](relationships.md) e visualizzare in anteprima l'output. Puoi [utilizzare modelli predefiniti](measure-templates.md) per configurare in modo efficiente le misure di uso comune.
 
-Utilizza il generatore di misure per pianificare le attività aziendali eseguendo query sui dati dei clienti ed estrai informazioni dettagliate. Ad esempio, creare una misura di *spesa totale per cliente* e *rendimento totale per cliente* aiuta a identificare un gruppo di clienti con una spesa elevata ma un ritorno elevato. Puoi [creare un segmento](segments.md) sulla base di queste misure per guidare le prossime azioni migliori. 
+Utilizza il generatore di misure per pianificare le attività aziendali eseguendo query sui dati dei clienti ed estrai informazioni dettagliate. Ad esempio, creare una misura di *spesa totale per cliente* e *rendimento totale per cliente* aiuta a identificare un gruppo di clienti con una spesa elevata ma un ritorno elevato. Puoi [creare un segmento](segments.md) sulla base di queste misure per guidare le prossime azioni migliori.
 
 ## <a name="manage-your-measures"></a>Gestire le misure
 
@@ -35,18 +35,17 @@ Puoi trovare l'elenco delle misure nella pagina **Misure**.
 
 Troverai informazioni sul tipo di misura, l'autore, la data di creazione e lo stato. Quando selezioni una misura dall'elenco, puoi visualizzare in anteprima l'output e scaricare un file CSV.
 
-Per aggiornare tutte le misure contemporaneamente, seleziona **Aggiorna tutto** senza selezionare una misura specifica.
+:::image type="content" source="media/measures-actions.png" alt-text="Azioni per gestire singole misure."lightbox="media/measures-actions.png":::
 
-:::image type="content" source="media/measure-actions.png" alt-text="Azioni per gestire singole misure.":::
+Quando si seleziona una misura sono disponibili le seguenti azioni:
 
-Seleziona una misura dall'elenco per le seguenti opzioni:
-
-- Seleziona il nome della misura per visualizzarne i dettagli.
 - **Modifica** la configurazione della misura.
-- **Aggiorna** la misura in base ai dati più recenti.
+- **Duplica** una misura. Puoi scegliere di modificare subito le proprietà o semplicemente salvare il duplicato.
+- **Aggiorna** la misura in base ai dati più recenti. Per aggiornare tutte le misure contemporaneamente, seleziona tutte le misure e quindi **Aggiorna**.
 - **Rinomina** la misura.
-- **Elimina** la misura.
 - **Attiva** o **Disattiva**. Le misure inattive non verranno aggiornate durante un [aggiornamento pianificato](system.md#schedule-tab).
+- **Tag** per [gestire i tag](work-with-tags-columns.md#manage-tags) per il segmento.
+- **Elimina** la misura.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

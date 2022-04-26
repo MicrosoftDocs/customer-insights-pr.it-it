@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Esplorare le informazioni dettagliate sul gruppo di destinatari
           href: audience-insights/home.md
+        - name: Utilizzare tag e colonne
+          href: audience-insights/work-with-tags-columns.md
         - name: Lavorare con i conti aziendali
           href: audience-insights/work-with-business-accounts.md
     - name: Origini dati

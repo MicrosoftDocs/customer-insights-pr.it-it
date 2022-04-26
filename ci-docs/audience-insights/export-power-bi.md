@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225520"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552061"
 ---
 # <a name="connector-for-power-bi-preview"></a>Connettore per Power BI(anteprima)
 
@@ -72,6 +72,6 @@ Dopo la rimozione delle Relazioni duplicate, prova a configurare il connettore d
 
 Quando si caricano entità che contengono campi con un formato data come MM/GG/AAAA, è possibile riscontrare errori dovuti a formati locali non corrispondenti. Questa discrepanza si verifica quando il file Power BI Desktop è impostato su una lingua internazionale diversa dall'inglese (Stati Uniti), perché i campi della data negli approfondimenti destinatari vengono salvati in formato USA.
 
-Il file Power BI Desktop ha un'unica impostazione locale, che viene applicata durante il recupero dei dati. Per ottenere l'interpretazione corretta di questi campi data, impostare le impostazioni internazionali del file .BPI su Inglese (Stati Uniti). [Scopri come modificare la lingua di un file di Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+Il file Power BI Desktop ha un'unica impostazione locale, che viene applicata durante il recupero dei dati. Per ottenere l'interpretazione corretta di questi campi data, impostare le impostazioni internazionali del file .BPI su Inglese (Stati Uniti). [Scopri come modificare la lingua di un file di Power BI Desktop](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

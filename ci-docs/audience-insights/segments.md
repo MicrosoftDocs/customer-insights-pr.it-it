@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508571"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529544"
 ---
 # <a name="segments-overview"></a>Panoramica dei segmenti
 
@@ -51,20 +51,26 @@ Vai alla pagina **Segmenti** per visualizzare tutti i segmenti salvati e gestirl
 
 Ogni segmento è rappresentato da una riga che include informazioni aggiuntive sul segmento.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmento selezionato con elenco a discesa delle opzioni e opzioni disponibili.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmento selezionato con elenco a discesa delle opzioni e opzioni disponibili." lightbox="media/segments-selected-segment.png":::
 
-Quando selezioni un segmento sono disponibili le seguenti azioni:
+Quando si seleziona un segmento sono disponibili le seguenti azioni:
 
 - **Visualizza** i dettagli del segmento, inclusa la tendenza del conteggio dei membri, un'anteprima dei membri del segmento.
+- **Scarica** l'elenco dei membri in un file .CSV.
 - **Modifica** il segmento per modificarne le proprietà.
 - **Crea duplicato** di un segmento. Puoi scegliere di modificare subito le proprietà o semplicemente salvare il duplicato.
 - **Aggiorna** il segmento per includere gli ultimi dati.
-- **Attiva** o **Disattiva** il segmento. I segmenti hanno due possibili stati: attivo o inattivo. Questi stati sono utili quando si modifica un segmento. Per i segmenti inattivi, la definizione del segmento esiste, ma non contiene ancora alcun cliente. Quando attivi un segmento, il suo stato cambia da "inattivo" ad "attivo" e inizia a cercare i clienti che corrispondono alla definizione del segmento. Se un [aggiornamento pianificato](system.md#schedule-tab) è configurato, i segmenti inattivi hanno **Stato** elencato come **Ignorato**, a indicare che non è stato nemmeno tentato un aggiornamento. Quando un segmento inattivo viene attivato, verrà aggiornato e incluso negli aggiornamenti pianificati.
+- **Attiva** o **Disattiva** il segmento. Per i segmenti inattivi, la definizione del segmento esiste, ma non contiene ancora alcun cliente. Un segmento attivo cerca i clienti che corrispondono alla definizione del segmento. Se un [aggiornamento pianificato](system.md#schedule-tab) è configurato, i segmenti inattivi hanno **Stato** elencato come **Ignorato**, a indicare che non è stato nemmeno tentato un aggiornamento. Quando un segmento inattivo viene attivato, verrà aggiornato e incluso negli aggiornamenti pianificati.
   In alternativa, puoi utilizzare la funzionalità **Pianifica più tardi** nel menu a discesa **Attiva/Disattiva** per specificare una data e un'ora future per l'attivazione e la disattivazione di un particolare segmento.
+- **[Trova clienti simili](find-similar-customer-segments.md)** dal segmento.
 - **Rinomina** il segmento.
+- **Tag** per [gestire i tag](work-with-tags-columns.md#manage-tags) per il segmento.
 - **Scarica** l'elenco dei membri in un file .CSV.
 - **Gestisci esportazioni** per vedere i segmenti relativi alle esportazioni e gestirli. [Altre informazioni sulle esportazioni.](export-destinations.md)
 - **Elimina** il segmento.
+- **Colonne** per [personalizzare le colonne](work-with-tags-columns.md#customize-columns) visualizzate.
+- **Filtro** per [filtrare in base ai tag](work-with-tags-columns.md#filter-on-tags).
+- **Nome di ricerca** per eseguire la ricerca in base al nome del segmento.
 
 ## <a name="refresh-segments"></a>Aggiornare i segmenti
 
