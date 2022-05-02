@@ -3,17 +3,17 @@ title: Iscriviti per una prova gratuita - Dynamics 365 Customer Insights
 description: Scopri come registrarti rapidamente e iniziare una prova gratuita di Customer Insights. Esplora l'app e trova ulteriori risorse di apprendimento.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 04/12/2022
 ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350228"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641721"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Iscrizione per una valutazione gratuita di Dynamics 365 Customer Insights
 
@@ -21,7 +21,7 @@ Customer Insights offre una prova gratuita di 30 giorni. Dopo una rapida registr
 
 **Per iscriversi per la versione di valutazione**:
 
-1. Vai alla [pagina di riepilogo della prova](https://dynamics.microsoft.com/get-started/?appname=customerinsights) e seleziona **Iscriviti ora**.
+1. Vai alla [pagina della panoramica della versione di valutazione](https://dynamics.microsoft.com/ai/customer-insights/) e seleziona **Prova Customer Insights gratis**.
 1. Segui le istruzioni sullo schermo per accedere all'[indirizzo e-mail associato al tuo account Microsoft](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa) e le tue informazioni di contatto.
 1. Fai delle selezioni e scegli la tua attenzione fino ad arrivare alla pagina iniziale per la tua capacità selezionata.
 
@@ -31,12 +31,12 @@ La prova richiede qualche istante per essere caricata, e poi si può iniziare a 
 
 L'ambiente di prova include le stesse caratteristiche della versione a pagamento. I seguenti collegamenti ti guideranno attraverso l'utilizzo di alcune delle funzionalità chiave.
 
-- [Quickstart per gli approfondimenti sul pubblico.](audience-insights/get-started.md)
-- [Aggiungere altri utenti e assegnare i permessi.](audience-insights/permissions.md)
-- [Inserisci le tue origini dati](audience-insights/data-sources.md) ed eseguile attraverso il [processo di unificazione dei dati](audience-insights/data-unification.md) per ottenere i [profili dei clienti unificati](audience-insights/customer-profiles.md).
-- [Arricchisci i profili dei clienti unificati](audience-insights/enrichment-hub.md) o [esegui modelli predittivi](audience-insights/predictions-overview.md).
-- Creare [segmenti](audience-insights/segments.md) per raggruppare i clienti e [misure](audience-insights/measures.md) per rivedere i KPI.
-- Imposta le [connessioni](audience-insights/connections.md) e le [esportazioni](audience-insights/export-destinations.md) per elaborare sottoinsiemi di dati in altre applicazioni.
+- [Introduzione a Customer Insights.](get-started.md)
+- [Aggiungere altri utenti e assegnare i permessi.](permissions.md)
+- [Inserisci le tue origini dati](data-sources.md) ed eseguile attraverso il [processo di unificazione dei dati](data-unification.md) per ottenere i [profili dei clienti unificati](customer-profiles.md).
+- [Arricchisci i profili dei clienti unificati](enrichment-hub.md) o [esegui modelli predittivi](predictions-overview.md).
+- Creare [segmenti](segments.md) per raggruppare i clienti e [misure](measures.md) per rivedere i KPI.
+- Imposta le [connessioni](connections.md) e le [esportazioni](export-destinations.md) per elaborare sottoinsiemi di dati in altre applicazioni.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
