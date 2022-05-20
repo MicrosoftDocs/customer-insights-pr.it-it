@@ -1,7 +1,7 @@
 ---
 title: Guida di esempio per la previsione di raccomandazioni sui prodotti
 description: Usa questa guida di esempio per provare il modello di previsione di raccomandazioni sui prodotti predefinito.
-ms.date: 02/10/2021
+ms.date: 05/16/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 1115bab13bdca4a308a8d9eb5a1dc270801d16be
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cc72cce15fa0c9e92dbf202c803e99514c9ce2b1
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647109"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762691"
 ---
 # <a name="product-recommendation-prediction-sample-guide"></a>Guida di esempio per la previsione di raccomandazioni sui prodotti
 
@@ -40,7 +40,7 @@ Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importaz
 
 1. Crea un origine dati denominata **eCommerce**, scegli l'opzione di importazione e seleziona il connettore **Testo/CSV**.
 
-1. Immetti l'URL per i contatti di eCommerce https://aka.ms/ciadclasscontacts.
+1. Immetti l'URL per i contatti di eCommerce: [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
 
 1. Durante la modifica dei dati, seleziona **Trasforma** e quindi **Usa la prima riga come intestazioni**.
 
@@ -50,15 +50,15 @@ Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importaz
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Trasformare la data di nascita in data.":::
 
-5. Nel campo "Nome" nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommerceContacts**
+1. Nel campo "Nome" nel riquadro a destra, cambia il nome dell'origine dati da **Query** a **eCommerceContacts**
 
-6. **Salva** l'origine dati.
+1. **Salva** l'origine dati.
 
 ### <a name="ingest-online-purchase-data"></a>Inserire dati sugli acquisti online
 
 1. Aggiungi un altro set di dati alla stessa origine dati **eCommerce**. Scegli di nuovo il connettore **Testo/CSV**.
 
-1. Immetti l'URL per i dati degli **Acquisti online** https://aka.ms/ciadclassonline.
+1. Immetti l'URL per i dati di **Acquisti online** [https://aka.ms/ciadclassonline](https://aka.ms/ciadclassonline).
 
 1. Durante la modifica dei dati, seleziona **Trasforma** e quindi **Usa la prima riga come intestazioni**.
 
@@ -70,12 +70,11 @@ Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importaz
 
 1. **Salva** l'origine dati.
 
-
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Inserire dati cliente dallo schema di fidelizzazione
 
 1. Crea un origine dati denominata **LoyaltyScheme**, scegli l'opzione di importazione e seleziona il connettore **Testo/CSV**.
 
-1. Immetti l'URL per i contatti di eCommerce https://aka.ms/ciadclasscustomerloyalty.
+1. Immetti l'URL per i contatti di eCommerce [https://aka.ms/ciadclasscustomerloyalty](https://aka.ms/ciadclasscustomerloyalty).
 
 1. Durante la modifica dei dati, seleziona **Trasforma** e quindi **Usa la prima riga come intestazioni**.
 
@@ -90,64 +89,11 @@ Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importaz
 
 ## <a name="task-2---data-unification"></a>Attività 2: unificare i dati
 
-Dopo aver importato i dati, iniziamo il processo di unificazione dei dati per creare un profilo cliente unificato. Per ulteriori informazioni, vedi [Unificazione dei dati](data-unification.md).
-
-### <a name="map"></a>Mapping
-
-1. Dopo l'inserimento dei dati, esegui il mapping dei dati di eCommerce e Fedeltà ai tipi di dati comuni. Vai a **Dati** > **Unifica** > **Mapping**.
-
-2. Seleziona le entità che rappresentano il profilo cliente, ovvero **eCommerceContacts** e **loyCustomers**.
-
-   ![Unificare le origini dati di e-commerce e fedeltà.](media/unify-ecommerce-loyalty.png)
-
-3. Seleziona **ContactId** come chiave primaria per **eCommerceContacts** e **LoyaltyID** come chiave primaria per **loyCustomers**.
-
-   ![Unifica LoyaltyId come chiave primaria.](media/unify-loyaltyid.png)
-
-### <a name="match"></a>Corrispondenza
-
-1. Passa alla scheda **Corrispondenza** e seleziona **Imposta ordine**.
-
-2. Nell'elenco a discesa **Principale** scegli **eCommerceContacts : eCommerce** come fonte primaria e includi tutti i record.
-
-3. Nell'elenco a discesa **Entità 2** scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
-
-   ![Unificare la corrispondenza di eCommerce e Fedeltà.](media/unify-match-order.png)
-
-4. Seleziona **Crea una nuova regola**
-
-5. Aggiungi la prima condizione utilizzando FullName.
-
-   - Per eCommerceContacts seleziona **FullName** nel menu a discesa.
-   - Per loyCustomers seleziona **FullName** nel menu a discesa.
-   - Seleziona l'elenco a discesa **Normalizza** e scegli **Tipo (telefono, nome, indirizzo...)**.
-   - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
-
-6. Immetti il nome **FullName, Email** per la nuova regola.
-
-   - Aggiungi una seconda condizione per l'indirizzo e-mail selezionado **Aggiungi condizione**
-   - Per l'entità eCommerceContacts, scegli **E-mail** nell'elenco a discesa.
-   - Per l'entità loyCustomers, scegli **E-mail** nell'elenco a discesa.
-   - Lascia vuoto il campo Normalizza.
-   - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
-
-   ![Unificare la regola di corrispondenza per nome ed e-mail.](media/unify-match-rule.png)
-
-7. Seleziona **Salva** ed **Esegui**.
-
-### <a name="merge"></a>Unione
-
-1. Vai alla scheda **Unione**.
-
-1. In **ContactId** per l'entità **loyCustomers**, cambia il nome visualizzato in **ContactIdLOYALTY** per differenziarlo dagli altri ID inseriti.
-
-   ![Rinominare contactid dall'ID del programma di fedeltà.](media/unify-merge-contactid.png)
-
-1. Seleziona **Salva** ed **Esegui** per avviare il processo di unione.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-product-recommendation-prediction"></a>Attività 3: configurare la previsione di raccomandazioni sui prodotti
 
-Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abbandono dell'abbonamento.
+Con i profili cliente unificati, ora possiamo eseguire la previsione di consigli del prodotto.
 
 1. Vai a **Intelligenza** > **Previsione** e scegli **Raccomandazioni prodotto**.
 
@@ -162,27 +108,36 @@ Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abba
    - **Ripetizione degli acquisti prevista**: seleziona **Sì** per indicare che desideri includere i prodotti nella raccomandazione che i tuoi clienti hanno acquistato in precedenza.
 
    - **Finestra per guardare indietro:** Seleziona almeno **365 giorni**. Questa impostazione definisce fino a quanto tempo indietro il modello esaminerà l'impegno del cliente per utilizzarlo come input per le raccomandazioni.
-   
+
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="Preferenze del modello di raccomandazione sui prodotti.":::
 
-1. Seleziona **Dati obbligatori** e seleziona **Aggiungi dati** per la cronologia degli acquisti.
+1. Nel passaggio **Aggiungi dati obbligatori** seleziona **Aggiungi dati**.
 
-1. Aggiungi l'entità **eCommercePurchases : eCommerce** ed esegui il mapping dei campi di eCommerce ai campi corrispondenti richiesti dal modello.
+1. Nel riquadro **Aggiungi dati** scegli **SalesOrderLine** come entità della cronologia degli acquisti. A questo punto, probabilmente non è ancora configurata. Apri il collegamento nel riquadro per creare l'impegno con i seguenti passaggi:
+   1. Immetti un valore nel campo **Nome impegno** e scegli *eCommercePurchases:eCommerce* come **Entità impegno**. Il campo **Chiave primaria** è *PurchaseId*.
+   1. Definisci e assegna un nome alla relazione con l'entità *eCommerceContacts:eCommerce* e scegli **ContactId** come chiave esterna.
+   1. Per Unificazione impegno, imposta **Impegno evento** come *TotalPrice* e Timestamp su *PurchasedOn*. È possibile specificare più campi come indicato in [Impegni cliente](activities.md).
+   1. Per **Tipo di impegno** scegli *SalesOrderLine*. Esegui il mapping dei campi di impegno seguenti:
+      - ID riga ordine: PurchaseId
+      - ID ordine: PurchaseId
+      - Dati ordine: PurchasedOn
+      - ID prodotto: ProductId
+      - Importo: TotalPrice
+   1. Rivedi e termina l'impegno prima di tornare alla configurazione del modello.
 
-1. Associa l'entità **eCommercePurchases : eCommerce** a **eCommerceContacts : eCommerce**.
+1. Nel passaggio **Seleziona impegni** scegli l'impegno creato nella sezione **Impegni**. Seleziona **Avanti** e la mappatura degli attributi è già compilata. Seleziona **Salva**.
 
-   ![Associare le entità di e-Commerce.](media/model-purchase-join.png)
+1. In questa guida di esempio, saltiamo le impostazioni **Aggiungi informazioni sul prodotto** e **Filtri prodotto** perché non disponiamo di dati sulle informazioni sul prodotto.
 
-1. Seleziona **Avanti** per impostare la pianificazione del modello.
+1. Nel passaggio **Aggiornamenti dei dati** impostare la pianificazione del modello.
 
    È necessario eseguire regolarmente il training del modello affinché apprenda nuovi modelli quando vengono inseriti nuovi dati. Per questo esempio, seleziona **Mensile**.
 
-1. Dopo aver esaminato tutti i dettagli, seleziona **Salva ed esegui**.
-
+1. Dopo aver esaminato tutti i dettagli, seleziona **Salva ed esegui**. Ci vorranno alcuni minuti per eseguire il modello la prima volta.
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Attività 4: esaminare i risultati e le spiegazioni del modello
 
-Lascia che il modello termini il training e la valutazione dei dati. Ora puoi esaminare le spiegazioni del modello di raccomandazione dei prodotti. Per ulteriori informazioni, vedi [Esaminare lo stato e i risultati di una previsione](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Lascia che il modello termini il training e la valutazione dei dati. Ora puoi esaminare le spiegazioni del modello di raccomandazione dei prodotti. Per ulteriori informazioni, vedi [Esaminare lo stato e i risultati di una previsione](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-purchased-products"></a>Attività 5: creare un segmento di prodotti ad acquisto elevato
 
@@ -190,21 +145,19 @@ L'esecuzione del modello di produzione crea una nuova entità visibile in **Dati
 
 Puoi creare un nuovo segmento basato sull'entità creata dal modello.
 
-1. Vai a **Segmenti**. Seleziona **Nuovo** e scegli **Crea a partire da** > **Intelligenza**.
+1. Vai a **Segmenti**. Seleziona **Nuovo** e scegli **Crea da intelligence**.
 
    ![Creazione di un segmento con l'output del modello.](media/segment-intelligence.png)
 
 1. Seleziona l'endpoint **OOBProductRecommendationModelPrediction** e definisci il segmento:
 
    - Campo: ProductID
-   - Operatore: Valore
    - Valore: seleziona i primi tre ID prodotto
 
    :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Crea un segmento dai risultati del modello.":::
 
-Ora hai un segmento che viene aggiornato dinamicamente che identifica i clienti che sono più disposti ad acquistare i tre prodotti più consigliati 
+Ora hai un segmento aggiornato dinamicamente che identifica i clienti che possono essere interessati ad acquistare i tre prodotti più consigliati.
 
 Per altre informazioni, vedi [Creare e gestire i segmenti](segments.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

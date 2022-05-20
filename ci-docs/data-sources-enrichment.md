@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646575"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755691"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Arricchimento per le origini dati (anteprima)
 
@@ -26,7 +26,7 @@ Devi disporre delle autorizzazioni collaboratore o amministratore per creare o m
 1. Vai a **Dati** > **Unifica**. Seleziona l'entità che desideri arricchire e seleziona un attributo come chiave primaria per l'entità. Per ulteriori informazioni, vedi [Selezionare la chiave primaria](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Vai a **Dati** > **Origini dati**.
- 
+
 1. Seleziona i puntini verticali accanto all'origine dati che vuoi arricchire e seleziona **Arricchisci**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Pagina Arricchimento delle origini dati,":::

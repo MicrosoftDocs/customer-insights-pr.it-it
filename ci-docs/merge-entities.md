@@ -1,188 +1,168 @@
 ---
-title: Unire entità nel processo di unificazione dei dati
+title: Unificare i campi cliente o account
 description: Unisci entità per creare profili cliente unificati.
-ms.date: 01/28/2022
+recommendations: false
+ms.date: 05/04/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
-- ci-match
 - ci-merge
+- ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 978a7c9bc440398fa39e9fa1d366d74e5c7aaea0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647374"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740862"
 ---
-# <a name="merge-entities"></a>Gestire entità
+# <a name="unify-customer-fields"></a>Unificare i campi cliente
 
-La fase di unione è l'ultima fase del processo di unificazione dei dati. Il suo scopo è la riconciliazione di dati in conflitto. Esempi di dati in conflitto potrebbero includere il nome di un cliente che si trova in due dei tuoi set di dati ma si presenta in modo leggermente diverso in ciascuno ("Grant Marshall" rispetto a "Grant Marshal") o un numero di telefono che differisce nel formato (617-803-091X rispetto a 617803091X). L'unione di tali punti di dati in conflitto viene eseguita in base all'attributo per attributo.
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-:::image type="content" source="media/merge-fields-page.png" alt-text="Pagina di unione nel processo di unificazione dei dati che mostra la tabella con i campi uniti che definiscono il profilo del cliente unificato.":::
+In questo passaggio del processo di unificazione, scegli ed escludi gli attributi da unire all'interno dell'entità del tuo profilo unificato. Ad esempio, se tre entità avevano dati e-mail, puoi mantenere tutti i tre i campi e-mail separati o puoi unirli in un unico campo e-mail per il profilo unificato. Alcuni attributi vengono combinati automaticamente dal sistema. Puoi creare ID cliente stabili e univoci e raggruppare profili correlati in un cluster.
 
-Dopo aver completato la [fase di corrispondenza](match-entities.md), avvii la fase di unione selezionando il riquadro **Unione** nella pagina **Unifica**.
+:::image type="content" source="media/m3_unify.png" alt-text="Pagina di unione nel processo di unificazione dei dati che mostra la tabella con i campi uniti che definiscono il profilo del cliente unificato.":::
 
-## <a name="review-system-recommendations"></a>Rivedere gli elementi consigliati del sistema
+## <a name="review-and-update-the-customer-fields"></a>Rivedi e aggiorna i campi cliente
 
-In **Dati** > **Unifica** > **Unisci**, scegli ed escludi gli attributi da unire all'interno dell'entità del profilo del cliente unificato. Il profilo del cliente unificato è il risultato del processo di unificazione dei dati. Alcuni attributi vengono automaticamente uniti dal sistema.
+1. Esamina l'elenco dei campi che verranno unificati nella scheda **Campi cliente** della tabella. Apporta eventuali modifiche, se applicabile.
 
-Per visualizzare gli attributi inclusi in uno degli attributi uniti automaticamente, seleziona quell'attributo unito nella scheda **Campi cliente** della tabella. Gli attributi che compongono l'attributo unito verranno visualizzati in due nuove righe sotto l'attributo unito.
+   1. Per tutti i campi combinati, puoi:
+      - [Modifica](#edit-a-merged-field)
+      - [Rinomina](#rename-fields)
+      - [Separa](#separate-merged-fields)
+      - [Escludi](#exclude-fields)
+      - [Sposta su o sposta giù](#change-the-order-of-fields)
 
-## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Separare, rinominare, escludere e modificare i campi uniti
+   1. Per tutti i campi singoli, puoi:
+      - [Combina campi](#combine-fields-manually)
+      - [Combinare un gruppo di campi](#combine-a-group-of-fields)
+      - [Rinomina](#rename-fields)
+      - [Escludi](#exclude-fields)
+      - [Sposta su o sposta giù](#change-the-order-of-fields)
 
-È possibile modificare il modo in cui il sistema elabora gli attributi uniti per generare il profilo del cliente unificato. Seleziona **Mostra altro** e scegli cosa vuoi cambiare.
+1. Facoltativamente, [genera la configurazione dell'ID cliente](#configure-customer-id-generation).
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opzioni nel menu a discesa Mostra altro per gestire gli attributi uniti.":::
+1. Facoltativamente, [raggruppa profili in famiglie o cluster](#group-profiles-into-households-or-clusters).
 
-Per ulteriori informazioni, vedi la sezione riportata di seguito.
+> [!div class="nextstepaction"]
+> [Passaggio successivo: rivedi l'unificazione](review-unification.md)
 
-## <a name="separate-merged-fields"></a>Separare i campi uniti
+### <a name="edit-a-merged-field"></a>Modificare un campo unito
 
-Per separare i campi uniti, trova l'attributo nella tabella. I campi separati vengono visualizzati come punti dati individuali nel profilo del cliente unificato. 
+1. Seleziona un campo unito e scegli **Modifica**. Viene visualizzato il riquadro Combina campi.
 
-1. Seleziona il campo unito.
-  
-1. Seleziona **Mostra altro** e scegli **Separa campi**.
- 
-1. Conferma la separazione.
-
-1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche.
-
-## <a name="rename-merged-fields"></a>Rinominare i campi uniti
-
-Modifica il nome visualizzato degli attributi uniti. Non è possibile modificare il nome dell'entità di output.
-
-1. Seleziona il campo unito.
-  
-1. Seleziona **Mostra altro** e scegli **Rinomina**.
-
-1. Conferma il nome visualizzato modificato. 
-
-1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche.
-
-## <a name="exclude-merged-fields"></a>Escludere i campi uniti
-
-Escludi un attributo dal profilo del cliente unificato. Se il campo viene utilizzato in altri processi, ad esempio in un segmento, rimuovilo da questi processi prima di escluderlo dal profilo del cliente. 
-
-1. Seleziona un campo unito.
-  
-1. Seleziona **Mostra altro** e scegli **Escludi**.
-
-1. Conferma l'esclusione.
-
-1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche. 
-
-Nella pagina **Unisci** seleziona **Campi esclusi** per vedere l'elenco di tutti i campi esclusi. Questo riquadro consente di aggiungere nuovamente i campi esclusi.
-
-## <a name="edit-a-merged-field"></a>Modificare un campo unito
-
-1.  Seleziona un campo unito.
-
-1.  Seleziona **Mostra altro** e scegli **Modifica**.
-
-1.  Specifica come combinare o unire i campi tramite una delle tre opzioni:
+1. Specifica come combinare o unire i campi tramite una delle tre opzioni:
     - **Importanza**: identifica il valore prevalente in base al grado di importanza specificato per i campi partecipanti. È l'opzione di unione predefinita. Seleziona **Sposta su/giù** per impostare la classifica per importanza.
-    :::image type="content" source="media/importance-merge-option.png" alt-text="Opzione di importanza nella finestra di dialogo dei campi di unione."::: 
+
+      :::image type="content" source="media/importance-merge-option.png" alt-text="Opzione di importanza nella finestra di dialogo dei campi di unione.":::
+
     - **Più recente**: identifica il valore prevalente in base alla maggiore recency. Richiede un campo data o numerico per ogni entità partecipante nell'ambito dei campi di unione per definire la recency.
-    :::image type="content" source="media/recency-merge-option.png" alt-text="Opzione di recency nella finestra di dialogo dei campi di unione.":::
+
+      :::image type="content" source="media/recency-merge-option.png" alt-text="Opzione di recency nella finestra di dialogo dei campi di unione.":::
+
     - **Meno recente**: identifica il valore prevalente in base alla minore recency. Richiede un campo data o numerico per ogni entità partecipante nell'ambito dei campi di unione per definire la recency.
 
-1.  È possibile aggiungere altri campi per partecipare al processo di fusione.
+1. È possibile aggiungere altri campi per partecipare al processo di fusione.
 
-1.  Puoi rinominare il campo unito.
+1. Puoi rinominare il campo unito.
 
 1. Seleziona **Fatto** per applicare le modifiche.
 
-1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche. 
+### <a name="rename-fields"></a>Rinominare i campi
 
-## <a name="combine-fields-manually"></a>Combinare i campi manualmente
+Modifica il nome visualizzato dei campi uniti o separati. Non è possibile modificare il nome dell'entità di output.
 
-Specifica manualmente un attributo unito.
+1. Seleziona il campo e scegli **Rinomina**.
 
-1. Nella pagina **Unisci**, seleziona **Combina**.
+1. Immetti il nuovo nome visualizzato.
 
-1. Scegli l'opzione **Campi**.
+1. Seleziona **Fatto**.
+
+### <a name="separate-merged-fields"></a>Separare i campi uniti
+
+Per separare i campi uniti, trova l'attributo nella tabella. I campi separati vengono visualizzati come punti dati individuali nel profilo del cliente unificato.
+
+1. Seleziona il campo unito e scegli **Campi separati**.
+
+1. Conferma la separazione.
+
+### <a name="exclude-fields"></a>Escludi i campi
+
+Escludi un campo unito o separato dal profilo cliente unificato. Se il campo viene utilizzato in altri processi, ad esempio in un segmento, rimuovilo da questi processi prima di escluderlo dal profilo del cliente.
+
+1. Seleziona un campo e scegli **Escludi**.
+
+1. Conferma l'esclusione.
+
+Per visualizzare l'elenco di tutti i campi esclusi, seleziona **Campi esclusi**. Se necessario, puoi riaggiungere il campo escluso.
+
+### <a name="change-the-order-of-fields"></a>Modificare l'ordine dei campi
+
+Alcune entità contengono più dettagli di altre. Se un'entità include i dati più recenti su un campo, puoi dare la priorità ad altre entità quando unisci i valori.
+
+1. Seleziona il campo.
+  
+1. Scegli **Sposta su/giù** per impostare l'ordine o trascinare i campi nella posizione desiderata.
+
+### <a name="combine-fields-manually"></a>Combinare i campi manualmente
+
+Combina i campi separati per creare un attributo unito.
+
+1. Seleziona **Combina** > **Campi**. Viene visualizzato il riquadro Combina campi.
 
 1. Specifica i criteri prevalenti dell'unione nell'elenco a discesa **Combina campi per**.
 
-1. Scegli un campo da aggiungere. Seleziona **Aggiungi campi** per combinare altri campi.
+1. Seleziona **Aggiungi campo** per combinare più campi.
 
 1. Fornisci un **Nome** e un **Nome del campo di output**.
 
 1. Seleziona **Fatto** per applicare le modifiche.
 
-1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche. 
+### <a name="combine-a-group-of-fields"></a>Combinare un gruppo di campi
 
-## <a name="combine-a-group-of-fields"></a>Combinare un gruppo di campi
+Considera un gruppo di campi come una singola unità. Ad esempio, se i nostri record contengono i campi Indirizzo1, Indirizzo2, Città, Stato e CAP, non vogliamo unirli in Indirizzo2 di un record diverso, pensando che ciò renderebbe i nostri dati più completi.
 
-Considera un gruppo di campi come una singola unità. Ad esempio, se i nostri record contengono i campi Indirizzo1, Indirizzo2, Città, Stato e CAP. Probabilmente non vogliamo unire l'indirizzo 2 di un record diverso, pensando che renderebbe i nostri dati più completi
-
-1. Nella pagina **Unisci**, seleziona **Combina**.
-
-1. Scegli l'opzione **Gruppo di campi**.
+1. Seleziona **Combina** > **Gruppo di campi**.
 
 1. Specifica i criteri prevalenti dell'unione nell'elenco a discesa **Classifica gruppi per**.
 
-1. Seleziona **Aggiungi** e scegli se vuoi aggiungere più campi o gruppi aggiuntivi ai campi.
+1. Seleziona **Aggiungi** e scegli se vuoi aggiungere più campi o gruppi ai campi.
 
 1. Fornire un **Nome** e un **Nome di output** per ogni campo combinato.
 
-1. Specifica un **nome** per il gruppo di campi. 
+1. Specifica un **nome** per il gruppo di campi.
 
 1. Seleziona **Fatto** per applicare le modifiche.
 
-1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche.
+## <a name="configure-customer-id-generation"></a>Configura la generazione dell'ID cliente
 
-## <a name="change-the-order-of-fields"></a>Modificare l'ordine dei campi
+Definisci come generare i valori ID cliente, ovvero gli identificatori univoci del profilo cliente. Il passaggio di unificazione dei campi nel processo di unificazione dei dati genera l'identificatore univoco del profilo cliente. L'identificatore è il *CustomerId* nell'entità *Cliente* generata dal processo di unificazione dei dati.
 
-Alcune entità contengono più dettagli di altre. Se un'entità include i dati più recenti su un campo, puoi dare la priorità ad altre entità quando unisci i valori.
-
-1. Seleziona il campo unito.
-  
-1. Seleziona **Mostra altro** e scegli **Modifica**.
-
-1. Nel riquadro **Combina campi** seleziona **Sposta su/giù** per impostare l'ordine o trascinali nella posizione desiderata.
-
-1. Conferma la modifica.
-
-1. Seleziona **Salva** ed **Esegui** per elaborare le modifiche.
-
-## <a name="configure-customer-id-generation"></a>Configura la generazione dell'ID cliente 
-
-Dopo aver configurato i campi di unione, è possibile definire come generare i valori CustomerId, gli identificatori univoci del profilo cliente. Il passaggio di unione nel processo di unificazione dei dati genera l'identificatore univoco del profilo cliente. L'identificatore è il CustomerId nell'entità *Cliente* che risulta dal processo di unificazione dei dati. 
-
-Il CustomerId nell'entità Cliente si basa su un hash del primo valore delle chiavi primarie prevalenti non nulle. Queste chiavi provengono dalle entità utilizzate nella fase di corrispondenza e unione e sono influenzate dall'ordine di corrispondenza. Il CustomerID generato può quindi cambiare quando un valore di chiave primaria cambia nell'entità primaria dell'ordine di corrispondenza. Quindi il valore della chiave primaria potrebbe non rappresentare sempre lo stesso cliente.
+Il valore *CustomerId* si basa su un hash del primo valore delle chiavi primarie prevalenti non nulle. Tali chiavi provengono dalle entità utilizzate nell'unificazione dei dati e sono influenzate dall'ordine di corrispondenza.Pertanto, l'ID cliente generato può cambiare quando un valore di chiave primaria cambia nell'entità primaria dell'ordine di corrispondenza. Il valore della chiave primaria potrebbe non rappresentare sempre lo stesso cliente.
 
 La configurazione di un ID cliente stabile permette di evitare questo comportamento.
 
-**Configura ID cliente univoco**
+1. Selezionare la scheda **Chiavi**.
 
-1. Vai a **Unifica** > **Unisci**.
-
-1. Selezionare la scheda **Chiavi**. 
-
-1. Passa il mouse sula riga **CustomerId** e seleziona l'opzione **Configura**.
+1. Passa il mouse sulla riga **CustomerId** e seleziona **Configura**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Controllo per personalizzare la generazione dell'ID.":::
 
 1. Seleziona fino a cinque campi che comprenderanno un ID cliente univoco e sono più stabili. I record che non corrispondono alla tua configurazione utilizzano invece un ID configurato dal sistema.  
 
-1. Seleziona **Fatto** ed esegui il processo di unione per applicare le modifiche.
+1. Seleziona **Fatto**.
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Raggruppa i profili in famiglie o cluster
 
-Come parte del processo di configurazione della generazione del profilo del cliente, è possibile definire delle regole per raggruppare profili correlati in un cluster. Ci sono attualmente due tipi di cluster disponibili - cluster domestici e cluster personalizzati. Il sistema sceglie automaticamente una famiglia con regole predefinite se l'entità *Customer* contiene i campi semantici *Person.LastName* e *Location.Address*. Potete anche creare un cluster con le vostre regole e condizioni, simili alle [regole di corrispondenza](match-entities.md#define-rules-for-match-pairs).
+Puoi definire regole per raggruppare i profili correlati in un cluster. Ci sono attualmente due tipi di cluster disponibili - cluster domestici e cluster personalizzati. Il sistema sceglie automaticamente una famiglia con regole predefinite se l'entità *Customer* contiene i campi semantici *Person.LastName* e *Location.Address*. Potete anche creare un cluster con le vostre regole e condizioni, simili alle [regole di corrispondenza](match-entities.md#define-rules-for-match-pairs).
 
-**Definire una famiglia o un gruppo**
-
-1. Vai a **Unifica** > **Unisci**.
-
-1. Nella scheda **Fondi** , seleziona **Avanzate** > **Crea cluster**.
+1. Seleziona **Avanzate** > **Crea cluster**.
 
    :::image type="content" source="media/create-cluster.png" alt-text="Controllo per creare un nuovo cluster.":::
 
@@ -194,31 +174,9 @@ Come parte del processo di configurazione della generazione del profilo del clie
 
 1. Specifica le regole e le condizioni per definire il tuo cluster.
 
-1. Seleziona **Esegui** per eseguire il processo di fusione e creare il cluster.
+1. Seleziona **Fatto**. Il cluster viene creato al termine del processo di unificazione. Gli identificatori del cluster vengono aggiunti come nuovi campi all'entità *Cliente*.
 
-Dopo aver eseguito il processo di fusione, gli identificatori del cluster vengono aggiunti come nuovi campi all'entità *Customer* .
-
-## <a name="run-your-merge"></a>Eseguire l'unione
-
-Sia che unisci manualmente gli attributi o consenti al sistema di unirli, puoi sempre eseguire l'unione. Seleziona **Esegui** nella pagina **Unione** per avviare il processo.
-
-> [!div class="mx-imgBorder"]
-> ![Salvataggio ed esecuzione dell'unione di dati.](media/configure-data-merge-save-run.png "Salvataggio ed esecuzione dell'unione di dati")
-
-Scegli **Esegui solo unione** se desideri solo vedere l'output riflesso nell'entità cliente unificata. I processi a valle verranno aggiornati come [definito nella pianificazione dell'aggiornamento](system.md#schedule-tab).
-
-Scegli **Esegui processi di unione e downstream** per aggiornare il sistema con le modifiche. Tutti i processi, inclusi arricchimento, segmenti e misure verranno rieseguiti automaticamente. Dopo che tutti i processi a valle sono stati completati, i profili dei clienti riflettono le modifiche apportate.
-
-Per apportare ulteriori modifiche e rieseguire il passaggio, è possibile annullare un'unione in corso. Seleziona **Aggiornamento in corso ...** e seleziona **Annulla processo** nel riquadro laterale visualizzato.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-:::image type="content" source="media/process-detail-path.png" alt-text="Percorso di drill-down per ottenere i dettagli dell'elaborazione dal collegamento sullo stato dell'attività.":::
-
-## <a name="next-step"></a>Passaggio successivo
-
-Configura [Impegni](activities.md), [Arricchimento](enrichment-hub.md) o [Relazioni](relationships.md) per ulteriori informazioni dettagliate sui clienti.
-
-Se hai già configurato attività, arricchimenti o segmenti, verranno elaborati automaticamente per utilizzare i dati dei clienti più recenti.
+> [!div class="nextstepaction"]
+> [Passaggio successivo: rivedi l'unificazione](review-unification.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Guida di esempio per una previsione di abbandono transazionale
 description: Usa questa guida di esempio per provare il modello di previsione di abbandono transazionale predefinito.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647269"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741324"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Guida di esempio per una previsione di abbandono transazionale
 
@@ -86,69 +86,13 @@ Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importaz
 
 1. Salva l'origine dati.
 
-
 ## <a name="task-2---data-unification"></a>Attività 2: unificare i dati
 
-Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, unione** per creare un profilo cliente unificato. Per ulteriori informazioni, vedi [Unificazione dei dati](data-unification.md).
-
-### <a name="map"></a>Mapping
-
-1. Dopo l'inserimento dei dati, esegui il mapping dei dati di eCommerce e Fedeltà ai tipi di dati comuni. Vai a **Dati** > **Unifica** > **Mapping**.
-
-1. Seleziona le entità che rappresentano il profilo cliente, ovvero **eCommerceContacts** e **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Unificare le origini dati di e-commerce e fedeltà.":::
-
-1. Seleziona **ContactId** come chiave primaria per **eCommerceContacts** e **LoyaltyID** come chiave primaria per **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unifica LoyaltyId come chiave primaria.":::
-
-### <a name="match"></a>Corrispondenza
-
-1. Passa alla scheda **Corrispondenza** e seleziona **Imposta ordine**.
-
-1. Nell'elenco a discesa **Principale** scegli **eCommerceContacts : eCommerce** come fonte primaria e includi tutti i record.
-
-1. Nell'elenco a discesa **Entità 2** scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Unificare la corrispondenza di eCommerce e Fedeltà.":::
-
-1. Seleziona **Crea una nuova regola**
-
-1. Aggiungi la prima condizione utilizzando FullName.
-
-   * Per eCommerceContacts seleziona **FullName** nel menu a discesa.
-   * Per loyCustomers seleziona **FullName** nel menu a discesa.
-   * Seleziona l'elenco a discesa **Normalizza** e scegli **Tipo (telefono, nome, indirizzo...)**.
-   * Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
-
-1. Immetti il nome **FullName, Email** per la nuova regola.
-
-   * Aggiungi una seconda condizione per l'indirizzo e-mail selezionado **Aggiungi condizione**
-   * Per l'entità eCommerceContacts, scegli **E-mail** nell'elenco a discesa.
-   * Per l'entità loyCustomers, scegli **E-mail** nell'elenco a discesa. 
-   * Lascia vuoto il campo Normalizza. 
-   * Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Unificare la regola di corrispondenza per nome ed e-mail.":::
-
-7. Seleziona **Salva** ed **Esegui**.
-
-### <a name="merge"></a>Unione
-
-1. Vai alla scheda **Unione**.
-
-1. In **ContactId** per l'entità **loyCustomers**, cambia il nome visualizzato in **ContactIdLOYALTY** per differenziarlo dagli altri ID inseriti.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="Rinominare contactid dall'ID del programma di fedeltà.":::
-
-1. Seleziona **Salva** ed **Esegui** per avviare il processo di unione.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Attività 3: configurare la previsione di abbandono transazionale
 
-Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abbandono dell'abbonamento. Per i passaggi dettagliati, vedi l'articolo [Previsione dell'abbandono della sottoscrizione](predict-subscription-churn.md). 
+Con i profili cliente unificati, ora possiamo eseguire la previsione di abbandono della transazione. Per i passaggi dettagliati, vedi l'articolo [Previsione dell'abbandono della transazione](predict-transactional-churn.md). 
 
 1. Vai a **Intelligenza** > **Scopri** e seleziona per utilizzare il **Modello di abbandono dei clienti**.
 
@@ -180,7 +124,7 @@ Dopo aver unificato i profili cliente, possiamo eseguire la previsione dell'abba
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Attività 4: esaminare i risultati e le spiegazioni del modello
 
-Lascia che il modello termini il training e la valutazione dei dati. Ora puoi esaminare le spiegazioni del modello di abbandono dell'abbonamento. Per ulteriori informazioni, vedi [Esaminare lo stato e i risultati di una previsione](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Lascia che il modello termini il training e la valutazione dei dati. Ora puoi rivedere le spiegazioni del modello di abbandono. Per ulteriori informazioni, vedi [Esaminare lo stato e i risultati di una previsione](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Attività 5: creare un segmento di clienti ad alto rischio di abbandono
 
@@ -192,14 +136,12 @@ Puoi creare un nuovo segmento basato sull'entità creata dal modello.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Creazione di un segmento con l'output del modello.":::
 
-1. Seleziona l'endpoint **OOBSubscriptionChurnPrediction** e definisci il segmento: 
+1. Seleziona l'endpoint **OOBeCommerceChurnPrediction** e definisci il segmento: 
    - Campo: ChurnScore
    - Operatore: maggiore di
    - Valore: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Impostare il segmento di abbandono dell'abbonamento.":::
 
-Ora hai un segmento che viene aggiornato dinamicamente e che identifica i clienti ad alto rischio di abbandono per questa attività di abbonamento.
+Ora hai un segmento aggiornato dinamicamente che identifica i clienti ad alto rischio di abbandono.
 
 Per altre informazioni, vedi [Creare e gestire i segmenti](segments.md).
 

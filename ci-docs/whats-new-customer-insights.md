@@ -1,19 +1,19 @@
 ---
 title: Funzionalità nuove e future
 description: Informazioni su nuove funzionalità, miglioramenti e correzioni di bug.
-ms.date: 04/05/2022
+ms.date: 05/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 25c6e2897d836854408871b2c74afa16ecba7435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
+ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647249"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "8700942"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novità di Dynamics 365 Customer Insights
 
@@ -24,6 +24,28 @@ Gli aggiornamenti vengono implementati in base all'area geografica. Quindi alcun
 > [!TIP]
 > Per inviare e votare funzionalità richieste e suggerimenti di prodotto, vai al [portale Ideas dell'applicazione Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="april-2022-updates"></a>Aggiornamenti di aprile 2022
+
+Gli aggiornamenti di aprile 2022 includono nuove funzionalità, aggiornamenti delle prestazioni e correzioni di bug.
+
+### <a name="dun--bradstreet-enrichment-preview"></a>Arricchimento Dun & Bradstreet (anteprima)
+
+Dun & Bradstreet fornisce dati commerciali, analisi e informazioni dettagliate per le aziende. Consente ai clienti con profili cliente unificati per le aziende di arricchire i propri dati. Gli arricchimenti includono attributi quali il numero DUNS, le dimensioni, l'ubicazione e il settore di attività della società e altro ancora.
+
+Per ulteriori informazioni, vedi [Arricchimento dei profili aziendali con Dun & Bradstreet (anteprima)](enrichment-dnb.md).
+
+### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Definisci il tipo di misura durante la creazione di una nuova misura
+
+Ora puoi distinguere tra misure per profili individuali e misure per l'intera azienda. Mentre le misure aziendali vengono visualizzate nella home page di Customer Insights, quelle dei clienti sono esposte nelle viste dettagliate relative.
+
+Per ulteriori informazioni, vedi [Usare il generatore di misure per creare misure da zero](measure-builder.md).
+
+### <a name="consolidation-of-customer-insights-documentation"></a>Consolidamento della documentazione di Customer Insights
+
+Abbiamo rivisitato i nostri articoli di documentazione e rimosso le menzioni delle funzionalità sulle informazioni dettagliate sul coinvolgimento e sui destinatari. Nel seguito, faremo riferimento in modo coerente al nome del prodotto Customer Insights quando descriviamo le funzionalità principali dell'applicazione. Questa modifica porta anche a una significativa ristrutturazione del sommario, della struttura degli URL e dei percorsi dei file nel repository della documentazione sottostante. Tutti i tuoi segnalibri o link esistenti continuano a funzionare e reindirizzano agli URL aggiornati.
+
+Se vuoi comunicarci come percepisci il cambiamento o se individui qualcosa che non funziona come previsto, [invia il feedback per questa pagina](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>Aggiornamenti di marzo 2022
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653573"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740908"
 ---
 # <a name="user-permissions"></a>Autorizzazioni utente
 
@@ -41,7 +41,7 @@ Esistono tre tipi di ruoli:
 
 - Tutte le autorizzazioni disponibili per il visualizzatore.
 - Carica e trasforma i dati utilizzando la pagina **Origini dati**.
-- Completa le sezioni *Unificazione dei dati* (**Mapping**, **Corrispondenza** e **Unione**) che risultano nell'entità profilo cliente unificata.
+- Completa le operazioni di **Unificazione dei dati** che generano l'entità del profilo cliente unificato.
 - Definisci **Relazioni** e **Impegni**.
 - Crea segmenti usando la pagina **Segmenti**.
 - Crea misure utilizzando la pagina **Misure**.

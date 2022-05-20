@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646799"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755503"
 ---
 # <a name="customer-activities"></a>Impegni cliente
 
-Combina le attività dei clienti da [varie origini di dati](data-sources.md) in Dynamics 365 Customer Insights per creare una sequenza temporale che elenchi le attività in ordine cronologico. Includi la sequenza temporale nelle app Dynamics 365 con la soluzione [Componente aggiuntivo Scheda cliente](customer-card-add-in.md) o in un dashboard Power BI.
+Combina gli impegni dei clienti da [varie origini dati](data-sources.md) in Dynamics 365 Customer Insights. Crea una sequenza temporale che elenca gli impegni in ordine cronologico. Includi la sequenza temporale nelle app Dynamics 365 con la soluzione [Componente aggiuntivo Scheda cliente](customer-card-add-in.md) soluzione.
 
 ## <a name="define-an-activity"></a>Definire un impegno
 
@@ -78,7 +78,7 @@ Un'entità deve avere almeno un attributo di tipo **Data** per essere incluso in
 
 1. Seleziona **Avanti** per passare al passaggio successivo. Puoi selezionare **Termina e rivedi** per salvare l'impegno ora con il tipo di impegno impostato su **Altro**. 
 
-1. Nel passaggio **Tipo di impegno** scegli il tipo di impegno e, facoltativamente, seleziona se vuoi mappare semanticamente alcuni tipi di impegno da utilizzare in altre aree di Customer Insights. Attualmente, i tipi di impegno *Feedback*, *Loyalty*, *SalesOrder*, *SalesOrderLine* e *Subscription* possono essere mappati semanticamente dopo aver accettato di mappare i campi. Se un tipo di impegno non è pertinente per il nuovo impegno, puoi scegliere *Altro* o *Crea nuovo* per un tipo di impegno personalizzato.
+1. Nel passaggio **Tipo di impegno** scegli il tipo di impegno e, facoltativamente, seleziona se vuoi mappare semanticamente alcuni tipi di impegno da utilizzare in altre aree di Customer Insights. Attualmente, i tipi di impegno *Feedback*, *Fedeltà*, *SalesOrder*, *SalesOrderLine* e *Abbonamento* supportano la semantica dopo aver accettato di mappare i campi. Se un tipo di impegno non è pertinente per il nuovo impegno, puoi scegliere *Altro* o *Crea nuovo* per un tipo di impegno personalizzato.
 
 1. Seleziona **Avanti** per passare al passaggio successivo. 
 
@@ -110,7 +110,7 @@ Dopo aver configurato le attività del cliente, seleziona **Mostra in cronologia
 
 Per aprire la linea temporale di un cliente, vai a **Clienti** e scegli il profilo del cliente che vuoi visualizzare.
 
-Se un cliente ha partecipato a un'attività che hai configurato, lo troverai nella sezione **Cronologia delle attività** .
+Se un cliente ha partecipato a un impegno configurato, sarà disponibile nella sezione **Sequenza temporale impegni**.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Visualizzare le attività configurate nei profili dei clienti.":::
 

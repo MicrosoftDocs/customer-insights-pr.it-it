@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646535"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755359"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Arricchimento dei profili dei clienti con Mappe di Azure (anteprima)
 
@@ -51,7 +51,7 @@ Per configurare l'arricchimento dei dati di Mappe di Azure, devono essere soddis
 
 1. Seleziona **Avanti** per completare il mapping del campo.
 
-1. Valuta se vuoi modificare **Impostazioni avanzate**. Si tratta di impostazioni fornite per garantire la massima flessibilità di gestione dei casi d'uso avanzati, ma i valori predefiniti saranno adeguati nella maggior parte dei casi:
+1. Valuta se vuoi modificare **Impostazioni avanzate**. Queste impostazioni vengono fornite per offrire la massima flessibilità per gestire casi d'uso avanzati, ma i valori predefiniti saranno adeguati nella maggior parte dei casi:
    - **Tipo di indirizzi**: in base al comportamento predefinito, l'arricchimento restituirà la migliore corrispondenza di indirizzo anche se incompleto. Per ottenere solo indirizzi completi, ad esempio indirizzi che includono il numero civico, deseleziona tutte le caselle di controllo tranne **Indirizzi punti**. 
    - **Lingua**: per impostazione predefinita, gli indirizzi vengono restituiti nella lingua dell'area geografica a cui l'indirizzo risulta associato. Per applicare una lingua di indirizzo standard, seleziona la lingua dal menu a discesa. Ad esempio, selezionando **Inglese** verrà restituito **Copenhagen, Denmark** anziché **København, Danmark**.
 
@@ -89,7 +89,7 @@ Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito se
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 
-Quando abiliti Dynamics 365 Customer Insights per trasmettere i dati a Mappe di Azure, consenti il trasferimento di dati al di fuori del limite di conformità per Dynamics 365 Customer Insights, inclusi i dati potenzialmente sensibili come i Dati Personali. Microsoft trasferirà tali dati alle tue istruzioni, ma sei tu a dover garantire che Mappe di Azure soddisfi tutti gli obblighi di privacy e sicurezza che sei tenuto a rispettare. Per maggiori informazioni, vai a [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Quando abiliti Dynamics 365 Customer Insights per trasmettere i dati a Mappe di Azure, consenti il trasferimento di dati al di fuori del limite di conformità per Dynamics 365 Customer Insights, inclusi i dati potenzialmente sensibili come i Dati Personali. Microsoft trasferirà tali dati su tua istruzione, ma sei tenuto a garantire che Mappe di Azure soddisfi qualsiasi obbligo di privacy o sicurezza che potresti avere. Per maggiori informazioni, vai a [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 L'amministratore di Dynamics 365 Customer Insights può rimuovere questo arricchimento in qualsiasi momento per interrompere l'utilizzo di questa funzionalità.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

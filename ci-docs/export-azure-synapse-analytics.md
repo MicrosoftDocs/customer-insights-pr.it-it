@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646686"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741508"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Esportare i dati in Azure Synapse Analytics (anteprima)
 
@@ -34,7 +34,7 @@ In Azure:
 
 - Una sottoscrizione di Azure attiva.
 
-- Se si usa un nuovo account Azure Data Lake Storage Gen2, per l'*entità servizio per Customer Insights* sono necessarie autorizzazioni di **collaboratore dati BLOB di archiviazione**. Scopri di più sul [collegamento a un account Azure Data Lake Storage Gen2 con l'entità servizio di Azure per Informazioni dettagliate sul gruppo di destinatari](connect-service-principal.md). Il Data Lake Storage Gen2 **deve avere** lo [spazio dei nomi gerarchico](/azure/storage/blobs/data-lake-storage-namespace) abilitato.
+- Se si usa un nuovo account Azure Data Lake Storage Gen2, per l'*entità servizio per Customer Insights* sono necessarie autorizzazioni di **collaboratore dati BLOB di archiviazione**. Scopri di più sul [collegamento a un account Gen2 di Azure Data Lake Storage con un'entità servizio di Azure per Customer Insights](connect-service-principal.md). Il Data Lake Storage Gen2 **deve avere** lo [spazio dei nomi gerarchico](/azure/storage/blobs/data-lake-storage-namespace) abilitato.
 
 - Nel gruppo di risorse in cui si trova Azure Synapse workspace, all'*entità servizio* e l'utente *Azure AD con autorizzazioni di amministratore in Customer Insights* devono essere assegnate almeno le autorizzazioni di **lettore**. Per ulteriori informazioni, vedi [Assegnare ruoli di Azure usando il portale di Azure](/azure/role-based-access-control/role-assignments-portal).
 

@@ -1,7 +1,7 @@
 ---
 title: Visualizzare profili cliente
 description: Ottieni una visualizzazione combinata dei dati cliente unificati.
-ms.date: 09/30/2021
+ms.date: 05/13/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 45ef6abcd612178a097569825e32ff9ac779de01
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646595"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755787"
 ---
 # <a name="customer-profiles"></a>Profili cliente
 
@@ -29,7 +29,7 @@ I clienti possono essere individui oppure organizzazioni. Ogni profilo di client
 
 Seleziona un riquadro per vedere i dati per il cliente selezionato in una pagina dedicata chiamata [Pagina dei dettagli del cliente](customer-profiles.md#customer-details-page).
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Pagina dei clienti che mostra le piastrelle dei risultati](media/customers-page-result-tiles-B2C.png "Pagina dei clienti che mostra le piastrelle dei risultati")
 
 > [!NOTE]
@@ -37,13 +37,13 @@ Seleziona un riquadro per vedere i dati per il cliente selezionato in una pagina
 
 ## <a name="search-for-customers"></a>Ricerca di clienti
 
-Cerca i clienti inserendo un nome o un altro attributo nella casella di ricerca. La ricerca funziona solo all'interno dell'entità _Cliente_ creata durante il processo di unificazione dei dati.
+Cerca i clienti inserendo un nome o un altro attributo nella casella di ricerca. La ricerca funziona solo all'interno dell'entità *Cliente* creata durante il processo di unificazione dei dati.
 
 Come amministratore, puoi configurare gli attributi ricercabili mediante la pagina **Indicizzazione ricerca e filtro**. Per maggiori informazioni, vai a [Gestire la ricerca e il filtro dell'indice](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Applicazione di filtri ai clienti
 
-Puoi filtrare i clienti per i campi dell'entità _Cliente_ . Simile alla ricerca, l'amministratore dovrà prima definire i campi come filtrabili utilizzando la pagina **Indicizzazione ricerca e filtro**.
+Puoi filtrare i clienti per i campi dell'entità *Cliente* . Simile alla ricerca, l'amministratore dovrà prima definire i campi come filtrabili utilizzando la pagina **Indicizzazione ricerca e filtro**.
 
 1. Seleziona **Mostra filtri** nella pagina **Clienti** .
 
@@ -55,24 +55,25 @@ Puoi filtrare i clienti per i campi dell'entità _Cliente_ . Simile alla ricerca
 
 Seleziona uno dei riquadri del cliente per aprire la **pagina Dettagli cliente**. Questa visualizzazione contiene informazioni unificate per il cliente selezionato. I dettagli del cliente includono il seguente contenuto:
 
-**Mattonella del profilo del cliente**: Questo riquadro mostra i diversi valori dell'entità _Customer_ unificata. Se un campo non ha un valore per il profilo cliente selezionato, non verrà mostrato. La piastrella è strutturata in sezioni:  
-  - La prima sezione mostra un insieme predefinito di campi seguito da tutti i campi che fanno parte dell'indice di ricerca e filtro. Tutti i campi relativi all'indirizzo sono combinati in una sola riga se il profilo contiene tali campi. 
-  - **Contatti per questo cliente**: Negli ambienti per i conti commerciali, vedrai tutti i contatti correlati per questo cliente come seconda sezione. Ogni contatto è mostrato con i suoi campi. I campi vuoti sono nascosti.
-  - **Campi aggiuntivi**: Mostra i restanti campi del cliente selezionato, eccetto gli ID. 
-  - **ID**: Elenca tutti gli ID sotto il nome dell'entità corrispondente. I campi sono identificati come ID dalla loro semantica, che li categorizza come tali.
+**Mattonella del profilo del cliente**: Questo riquadro mostra i diversi valori dell'entità *Customer* unificata. Se un campo non ha un valore per il profilo cliente selezionato, non verrà mostrato. La piastrella è strutturata in sezioni:
+
+- La prima sezione mostra un insieme predefinito di campi seguito da tutti i campi che fanno parte dell'indice di ricerca e filtro. Tutti i campi relativi all'indirizzo sono combinati in una sola riga se il profilo contiene tali campi.
+- **Contatti per questo cliente**: Negli ambienti per i conti commerciali, vedrai tutti i contatti correlati per questo cliente come seconda sezione. Ogni contatto è mostrato con i suoi campi. I campi vuoti sono nascosti.
+- **Campi aggiuntivi**: Mostra i restanti campi del cliente selezionato, eccetto gli ID.
+- **ID**: Elenca tutti gli ID sotto il nome dell'entità corrispondente. I campi sono identificati come ID dalla loro semantica, che li categorizza come tali.
 
 **Cronologia delle attività**: Mostra i dati se hai configurato delle attività. La vista timeline contiene attività ordinate cronologicamente del cliente selezionato, a partire dall'attività più recente. Per maggiori informazioni, andate su [Attività del cliente](activities.md).
 
-**Approfondimenti**:  
-  - **Misure**: Mostra se hai configurato una o più misure di attributi del cliente. Includono KPI calcolati relativi ai clienti a livello di singolo cliente. Per maggiori informazioni, vai a [Definire e gestire le misure](measures.md).
+**Approfondimenti**:
 
-  - **Potenziali interessi, potenziali marche**: Mostra se hai configurato un arricchimento di affinità di marca o di interesse. Rappresenta i potenziali interessi e affinità per i marchi basati su altri clienti il cui profilo è simile a quello del cliente selezionato. Per maggiori informazioni, vai a [Arricchire i profili dei clienti con le affinità di marca e di interesse](enrichment-microsoft.md).
+- **Misure**: Mostra se hai configurato una o più misure di attributi del cliente. Includono KPI calcolati relativi ai clienti a livello di singolo cliente. Per maggiori informazioni, vai a [Definire e gestire le misure](measures.md).
+
+- **Potenziali interessi, potenziali marche**: Mostra se hai configurato un arricchimento di affinità di marca o di interesse. Rappresenta i potenziali interessi e affinità per i marchi basati su altri clienti il cui profilo è simile a quello del cliente selezionato. Per maggiori informazioni, vai a [Arricchire i profili dei clienti con le affinità di marca e di interesse](enrichment-microsoft.md).
 
 Per tornare alla pagina di ricerca dei clienti, seleziona **Torna ai clienti**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Aggiungete[altre fonti di dati](data-sources.md), [arricchite i profili unificati](enrichment-hub.md)o [create segmenti](segments.md) per lavorare con i profili cliente unificati in altre applicazioni.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

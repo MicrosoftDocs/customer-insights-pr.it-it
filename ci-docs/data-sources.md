@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: bcc50c6fa8f8e2a66ef6164bfa9022e068c0e374
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646580"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739213"
 ---
 # <a name="data-sources-overview"></a>Panoramica delle origini dati
 
@@ -35,9 +35,6 @@ Fai riferimento agli articoli dettagliati su come aggiungere un'origine dati, a 
 - [Da una cartella di Common Data Model](connect-common-data-model.md)
 - [Dal tuo lake Microsoft Dataverse](connect-dataverse-managed-lake.md)
 - [Da un database di Azure Synapse Analytics](connect-synapse.md)
-
-> [!NOTE]
-> Se stai utilizzando la versione di prova, la sezione dei metodi di importazione include un'opzione **Raccolta dati di Customer Insights**. Scegli questa opzione per selezionare un campione di set di dati disponibile per vari settori. Per ulteriori informazioni, vedi la [versione di valutazione di Dynamics 365 Customer Insights](trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Aggiungere dati dalle origini dati locale
 

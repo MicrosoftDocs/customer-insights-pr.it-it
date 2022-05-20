@@ -1,19 +1,19 @@
 ---
 title: Guida di esempio previsione valore di durata del cliente
 description: Usa questa guida di esempio per provare il modello di previsione di Customer Lifetime Value (CLV).
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647114"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740816"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guida di esempio previsione di Customer Lifetime Value (CLV)
 
@@ -102,64 +102,7 @@ Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importaz
 
 ## <a name="task-2---data-unification"></a>Attività 2: unificare i dati
 
-Dopo aver importato i dati, iniziamo il processo di unificazione dei dati per creare un profilo cliente unificato. Per ulteriori informazioni, vedi [Unificazione dei dati](data-unification.md).
-
-### <a name="map"></a>Mapping
-
-1. Dopo l'inserimento dei dati, esegui il mapping dei dati di eCommerce e Fedeltà ai tipi di dati comuni. Vai a **Dati** > **Unifica** > **Mapping**.
-
-1. Seleziona le entità che rappresentano il profilo cliente, ovvero **eCommerceContacts** e **loyCustomers**. Selezionare quindi **Applica**.
-
-   ![Unificare le origini dati di e-commerce e fedeltà.](media/unify-ecommerce-loyalty.png)
-
-1. Seleziona **ContactId** come chiave primaria per **eCommerceContacts** e **LoyaltyID** come chiave primaria per **loyCustomers**.
-
-   ![Unifica LoyaltyId come chiave primaria.](media/unify-loyaltyid.png)
-
-1. Seleziona **Salva**.
-
-### <a name="match"></a>Corrispondenza
-
-1. Passa alla scheda **Corrispondenza** e seleziona **Imposta ordine**.
-
-1. Nell'elenco a discesa **Principale** scegli **eCommerceContacts : eCommerce** come fonte primaria e includi tutti i record.
-
-1. Nell'elenco a discesa **Entità 2** scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
-
-   ![Unificare la corrispondenza di eCommerce e Fedeltà.](media/unify-match-order.png)
-
-1. Seleziona **Aggiungi regola**
-
-1. Aggiungi la prima condizione utilizzando FullName.
-
-   - Per eCommerceContacts seleziona **FullName** nel menu a discesa.
-   - Per loyCustomers seleziona **FullName** nel menu a discesa.
-   - Seleziona il menu a discesa **Normalizza** e scegli **Tipo (telefono, nome, indirizzo, ...)**.
-   - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
-
-1. Immetti il nome **FullName, Email** per la nuova regola.
-
-   - Aggiungi una seconda condizione per l'indirizzo e-mail selezionado **Aggiungi condizione**
-   - Per l'entità eCommerceContacts, scegli **E-mail** nell'elenco a discesa.
-   - Per l'entità loyCustomers, scegli **E-mail** nell'elenco a discesa.
-   - Lascia vuoto il campo Normalizza.
-   - Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
-
-   ![Unificare la regola di corrispondenza per nome ed e-mail.](media/unify-match-rule.png)
-
-1. Seleziona **Fatto**.
-
-1. Seleziona **Salva** ed **Esegui**.
-
-### <a name="merge"></a>Unione
-
-1. Vai alla scheda **Unione**.
-
-1. In **ContactId** per l'entità **loyCustomers**, cambia il nome visualizzato in **ContactIdLOYALTY** per differenziarlo dagli altri ID inseriti.
-
-   ![Rinominare contactid dall'ID del programma di fedeltà.](media/unify-merge-contactid.png)
-
-1. Seleziona **Salva** ed **Esegui processi di unione e downstream**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Attività 3 - Configurare la previsione di Customer Lifetime Value
 

@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646614"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755641"
 ---
 # <a name="customer-card-add-in-preview"></a>Componente aggiuntivo Scheda cliente (anteprima)
-
-
 
 Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics 365. Con il Customer Card Add-in installato in un'applicazione Dynamics 365 supportata, è possibile scegliere di visualizzare i campi del profilo del cliente, gli approfondimenti e la timeline delle attività. Il componente aggiuntivo recupera i dati da Customer Insights senza influire sui dati nell'app Dynamics 365 connessa.
 
@@ -31,10 +29,10 @@ Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Il componente aggiuntivo funziona solo con le app Dynamics 365 basate su modello, come Sales o Customer Service, versione 9.0 e successive.
-- Affinché i dati di Dynamics 365 vengano mappati ai profili del cliente Customer Insights, consigliamo di [importarli dall'app Dynamics 365 utilizzando il connettore Microsoft Dataverse](connect-power-query.md). Se utilizzi un metodo diverso per importare i contatti (o gli account) di Dynamics 365, devi assicurarti che il campo `contactid` (o `accountid`) sia impostato come [chiave primaria per l'origine dati nel passaggio della mappa del processo di unificazione dei dati](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Affinché i dati di Dynamics 365 vengano mappati ai profili del cliente Customer Insights, consigliamo di [importarli dall'app Dynamics 365 utilizzando il connettore Microsoft Dataverse](connect-power-query.md). Se utilizzi un metodo diverso per importare i contatti (o gli account) di Dynamics 365, devi assicurarti che il campo `contactid` (o `accountid`) sia impostato come [chiave primaria per l'origine dati nel passaggio della mappa del processo di unificazione dei dati](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Tutti gli utenti Dynamics 365 del componente aggiuntivo scheda cliente devono essere [aggiunti come utenti](permissions.md) in Customer Insights per vedere i dati.
 - [Funzionalità di ricerca e filtro configurate](search-filter-index.md) in Customer Insights sono necessarie affinché la ricerca dei dati funzioni.
-- Ogni controllo del componente aggiuntivo si basa su dati specifici in Customer Insights. Alcuni dati e controlli sono disponibili solo in ambienti di tipo specifico. La configurazione dell'add-in vi informerà se un controllo non è disponibile a causa del tipo di ambiente selezionato. Per saperne di più sui [casi d'uso dell'ambiente](work-with-business-accounts.md).
+- Ogni controllo del componente aggiuntivo si basa su dati specifici in Customer Insights. Alcuni dati e controlli sono disponibili solo in ambienti di tipo specifico. La configurazione del componente aggiuntivo ti informerà se un controllo non è disponibile a causa del tipo di ambiente selezionato. Per saperne di più sui [casi d'uso dell'ambiente](work-with-business-accounts.md).
   - **Controllo delle misure**: Richiede [misure configurate](measures.md) di attributi del cliente tipo.
   - **Controllo intelligente**: richiede dati generati utilizzando [previsioni o modelli personalizzati](predictions-overview.md).
   - **Controllo dei dettagli del cliente**: Tutti i campi del profilo sono disponibili nel profilo cliente unificato.
@@ -132,16 +130,16 @@ Anche con i campi ID correttamente configurati, i controlli non riescono a trova
 
 **Risoluzione:**
 
-1. Assicurati di aver configurato il componente aggiuntivo Scheda secondo le istruzioni: [Configurare il componente aggiuntivo della scheda cliente](#configure-the-customer-card-add-in) 
+1. Assicurati di aver configurato il componente aggiuntivo Scheda secondo le istruzioni: [Configurare il componente aggiuntivo della scheda cliente](#configure-the-customer-card-add-in)
 
-1. Esamina la configurazione dell'importazione dei dati. Modifica l'origine dati per il sistema Dynamics 365 che contiene il GUID dell'ID contatto. Se il GUID dell'ID contatto viene visualizzato con caratteri maiuscoli nell'editor Power Query, prova quanto segue: 
+1. Esamina la configurazione dell'importazione dei dati. Modifica l'origine dati per il sistema Dynamics 365 che contiene il GUID dell'ID contatto. Se il GUID dell'ID contatto viene visualizzato con caratteri maiuscoli nell'editor Power Query, prova le operazioni seguenti:
     1. Modifica l'origine dati per aprirla nell'editor Power Query.
     1. Selezionare la colonna ID contatto.
     1. Seleziona **Trasforma** nella barra dell'intestazione per vedere le azioni disponibili.
     1. Seleziona **minuscolo**. Convalida se i GUID nella tabella ora sono in minuscolo.
     1. Salva l'origine dati.
-    1. Esegui i processi di inserimento, unificazione e downstream dei dati per propagare le modifiche al GUID. 
+    1. Esegui i processi di inserimento, unificazione e downstream dei dati per propagare le modifiche al GUID.
 
-Dopo aver completato l'aggiornamento completo, i controlli del componente aggiuntivo della scheda cliente dovrebbero mostrare i dati previsti. 
+Dopo che il sistema ha terminato l'aggiornamento completo, i controlli del componente aggiuntivo della scheda cliente dovrebbero mostrare i dati previsti.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

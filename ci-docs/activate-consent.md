@@ -1,23 +1,22 @@
 ---
 title: Attivare le regole di consenso per i segmenti
 description: Segui questi passaggi per collegare i dati del consenso e attivare le verifiche del consenso in Dynamics 365 Customer Insights. Un amministratore può anche disabilitare le verifiche del consenso.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646637"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755175"
 ---
 # <a name="activate-consent-rules"></a>Attiva regole di consenso
 
-Il [Centro consenso (anteprima)](consent-management/overview.md) ti aiuta ad armonizzare i dati del consenso da varie origini. Usa l'entità *Consenso* per applicare verifiche del consenso predefinite. Dopo aver importato i dati del consenso nel Centro consenso e configurato le regole per i dati, l'entità *Consenso* viene sincronizzata automaticamente con Dynamics 365 Customer Insights.
+Il [Centro consenso (anteprima)](consent-management/overview.md) ti aiuta ad armonizzare i dati del consenso da varie origini. Usa l'entità *Consenso* per applicare verifiche del consenso predefinite. Dopo aver importato i dati del consenso le regole di mapping, l'entità *Consenso* viene sincronizzata automaticamente con Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Abilita verifiche del consenso
 

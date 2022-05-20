@@ -3,16 +3,16 @@ title: Gestire le regole di consenso predefinite sui segmenti
 description: Con la funzionalità di gestione del consenso, puoi disabilitare o modificare le regole del consenso predefinite se le sostituzioni sono abilitate.
 ms.date: 12/01/2021
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 43f03ea97765e112a8ea2a7da97cc548c8c84dfc
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 764eeca9d99c95a34d9bd4c11d79f8b8e90701e2
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646727"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755221"
 ---
 # <a name="disable-or-change-default-consent-rules"></a>Disabilita o modifica le regole di consenso predefinite
 

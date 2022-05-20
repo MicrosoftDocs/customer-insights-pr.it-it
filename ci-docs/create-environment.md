@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646619"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712907"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Creare un ambiente in Customer Insights
 
@@ -63,8 +63,7 @@ Avrai due opzioni: **Archiviazione di Customer Insights** (un Azure Data Lake ge
 Salvando i dati su Azure Data Lake Storage, l'utente accetta che i dati vengano trasferiti e conservati nella posizione geografica appropriata per quell'account di archiviazione Azure. Questa posizione può essere diversa da quella in cui i dati sono memorizzati in Dynamics 365 Customer Insights. Per saperne di più, visita il [Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights attualmente supporta quanto segue:
-> - Entità ingerite da Power BI flussi di dati che sono memorizzati in un Data Lake gestito da Microsoft Dataverse.  
+> Customer Insights attualmente supporta quanto segue:  
 > - Azure Data Lake Storage dalla stessa regione di Azure che hai selezionato quando hai creato l'ambiente.
 > - Gli account Azure Data Lake Storage che sono Gen2 e hanno lo *spazio dei nomi gerarchico* abilitato. Gli account di archiviazione Azure Data Lake Gen1 non sono supportati.
 
@@ -80,7 +79,7 @@ Il passo **Microsoft Dataverse** permette di collegare Customer Insights con il 
 
 Fornisci l'ambiente Microsoft Dataverse per condividere dati (profili e informazioni dettagliate) con applicazioni aziendali basate su Dataverse, come Dynamics 365 Marketing o applicazioni basate su modello in Power Apps. Lascia vuoto questo campo se non hai un tuo ambiente Dataverse e te ne forniremo uno.
 
-La connessione al tuo ambiente Dataverse ti consente anche di [inserire i dati dalle origini dati locali utilizzando flussi di dati e gateway Power Platform](data-sources.md#add-data-from-on-premises-data-sources). Puoi anche usare i [modelli di previsione predefiniti](predictions-overview.md?tabs=b2c#out-of-box-models) collegando un ambiente Dataverse.
+La connessione al tuo ambiente Dataverse ti consente anche di [inserire i dati dalle origini dati locali utilizzando flussi di dati e gateway Power Platform](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Customer Insights e Dataverse devono trovarsi nella stessa regione per consentire la condivisione dei dati.

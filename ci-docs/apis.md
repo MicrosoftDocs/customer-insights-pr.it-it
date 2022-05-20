@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646794"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755455"
 ---
 # <a name="work-with-customer-insights-apis"></a>Utilizzare le API di Customer Insights
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights fornisce API per creare le tue applicazioni in ba
 > [!IMPORTANT]
 > I dettagli di queste API sono elencati nel [Riferimento API di Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Includono informazioni aggiuntive su operazioni, parametri e risposte.
 
-Questo articolo descrive come accedere alle API di Customer Insights, creare una registrazione dell'app di Azure e iniziare a utilizzare le librerie client disponibili.
+Questo articolo descrive come accedere alle API di Customer Insights, come creare una registrazione di app Azure e come iniziare a utilizzare le librerie client.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Iniziare a utilizzare le API di Customer Insights
 
@@ -83,13 +83,13 @@ Puoi utilizzare l'ID applicazione/client per questa registrazione con la libreri
 
 Per ulteriori informazioni sulla libreria MSAL, vedi [Panoramica della libreria MSAL](/azure/active-directory/develop/msal-overview).
 
-Per ulteriori informazioni sulla registrazione dell'app in Azure, vedi [Registrare un'applicazione](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Per ulteriori informazioni sulla registrazione dell'app in Azure, vedi [Registrare un'applicazione](/graph/auth-register-app-v2).
 
 Per informazioni sull'utilizzo delle API nelle librerie client, vedi [Librerie client di Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Autorizzazioni delle applicazioni da server a server
 
-La [sezione sulla registrazione di app](#create-a-new-app-registration-in-the-azure-portal) descrive come registrare un'app che richiede l'accesso di un utente per l'autenticazione. Scopri come creare una registrazione di app che non richiede l'interazione dell'utente e può essere eseguita su un server.
+La [sezione sulla registrazione di app](#create-a-new-app-registration-in-the-azure-portal) descrive come registrare un'app che richiede l'accesso di un utente per l'autenticazione. Scopri come creare una registrazione di un'app che non richiede l'interazione dell'utente e che può essere eseguita su un server.
 
 1. Nella registrazione dell'app nel portale di Azure, seleziona **Autorizzazioni API**.
 
@@ -112,6 +112,10 @@ La [sezione sulla registrazione di app](#create-a-new-app-registration-in-the-az
    Apri Customer Insights, seleziona **Amministratore** > **Autorizzazioni** e **Aggiungi utente**.
 
 1. Cerca il nome della registrazione dell'app, selezionalo nei risultati della ricerca e seleziona **Salva**.
+
+## <a name="sample-queries"></a>Query di esempio
+
+Abbiamo compilato un breve elenco di query di esempio OData per usare le API :[Esempi di query OData](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Librerie client di Customer Insights
 
@@ -137,7 +141,7 @@ Scopri come iniziare a utilizzare le librerie client C# in NuGet.org. Per ulteri
 
 1. Utilizza la [libreria MSAL](/azure/active-directory/develop/msal-overview) per ottenere un `AccessToken` usando la [registrazione dell'app Azure](#create-a-new-app-registration-in-the-azure-portal) esistente.
 
-1. Dopo aver eseguito correttamente l'autenticazione e l'acquisizione di un token, costruisci un nuovo `HttpClient` o utilizzane uno esistente con l'aggiuntiva **"Autorizzazione" DefaultRequestHeaders** impostata su **"Token di accesso" portante** e **Ocp-Apim-Subscription-Key** impostato sulla [**chiave di sottoscrizione** del tuo ambiente Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Dopo aver eseguito correttamente l'autenticazione e l'acquisizione di un token, costruisci un nuovo `HttpClient` o utilizzane uno esistente con l'**"Autorizzazione" DefaultRequestHeaders** impostata su **"Token di accesso" portante** e **Ocp-Apim-Subscription-Key** impostato sulla [**chiave di sottoscrizione** del tuo ambiente Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Reimposta l'intestazione **Autorizzazione** quando appropriato. Ad esempio, alla scadenza del token.
 
@@ -147,7 +151,7 @@ Scopri come iniziare a utilizzare le librerie client C# in NuGet.org. Per ulteri
 
 1. Effettua chiamate con il client ai "metodi di estensione", ad esempio `GetAllInstancesAsync`. Se l'accesso al `Microsoft.Rest.HttpOperationResponse` sottostante è preferibile, utilizza i "metodi di messaggio http", ad esempio `GetAllInstancesWithHttpMessagesAsync`.
 
-1. La risposta sarà probabilmente di tipo `object` poiché il metodo può restituire più tipi (ad esempio, `IList<InstanceInfo>` e `ApiErrorResult`). Per controllare il tipo restituito, puoi eseguire il cast degli oggetti in modo sicuro nei tipi di risposta specificati nella [pagina dei dettagli dell'API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) per quell'operazione.    
+1. La risposta sarà probabilmente di tipo `object` poiché il metodo può restituire più tipi (ad esempio, `IList<InstanceInfo>` e `ApiErrorResult`). Per controllare il tipo restituito, utilizza gli oggetti nei tipi di risposta specificati in [Pagina dei dettagli dell'API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) per quell'operazione.    
    
    Se sono necessarie ulteriori informazioni sulla richiesta, utilizza i **metodi di messaggio http** per accedere all'oggetto risposta non elaborato.
 

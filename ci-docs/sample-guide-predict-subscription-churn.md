@@ -1,8 +1,8 @@
 ---
 title: Guida di esempio per una previsione di abbandono dell'abbonamento
 description: Usa questa guida di esempio per provare il modello di previsione di abbandono dell'abbonamento predefinito.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647094"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741416"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Guida di esempio per una previsione di abbandono dell'abbonamento
 
@@ -112,61 +112,7 @@ Rivedi gli articoli [sull'inserimento di dati](data-sources.md) e sull'[importaz
 
 ## <a name="task-2---data-unification"></a>Attività 2: unificare i dati
 
-Dopo aver inserito i dati, iniziamo il processo di **Mapping, corrispondenza, unione** per creare un profilo cliente unificato. Per ulteriori informazioni, vedi [Unificazione dei dati](data-unification.md).
-
-### <a name="map"></a>Mapping
-
-1. Dopo l'inserimento dei dati, esegui il mapping dei dati di eCommerce e Fedeltà ai tipi di dati comuni. Vai a **Dati** > **Unifica** > **Mapping**.
-
-1. Seleziona le entità che rappresentano il profilo cliente, ovvero **eCommerceContacts** e **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Unificare le origini dati di e-commerce e fedeltà.":::
-
-1. Seleziona **ContactId** come chiave primaria per **eCommerceContacts** e **LoyaltyID** come chiave primaria per **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unifica LoyaltyId come chiave primaria.":::
-
-### <a name="match"></a>Corrispondenza
-
-1. Passa alla scheda **Corrispondenza** e seleziona **Imposta ordine**.
-
-1. Nell'elenco a discesa **Principale** scegli **eCommerceContacts : eCommerce** come fonte primaria e includi tutti i record.
-
-1. Nell'elenco a discesa **Entità 2** scegli **loyCustomers : LoyaltyScheme** e includi tutti i record.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Unificare la corrispondenza di eCommerce e Fedeltà.":::
-
-1. Seleziona **Crea una nuova regola**
-
-1. Aggiungi la prima condizione utilizzando FullName.
-
-   * Per eCommerceContacts seleziona **FullName** nel menu a discesa.
-   * Per loyCustomers seleziona **FullName** nel menu a discesa.
-   * Seleziona l'elenco a discesa **Normalizza** e scegli **Tipo (telefono, nome, indirizzo...)**.
-   * Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
-
-1. Immetti il nome **FullName, Email** per la nuova regola.
-
-   * Aggiungi una seconda condizione per l'indirizzo e-mail selezionado **Aggiungi condizione**
-   * Per l'entità eCommerceContacts, scegli **E-mail** nell'elenco a discesa.
-   * Per l'entità loyCustomers, scegli **E-mail** nell'elenco a discesa. 
-   * Lascia vuoto il campo Normalizza. 
-   * Imposta **Livello di precisione** su **Di base** e **Valore** su **Alto**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Unificare la regola di corrispondenza per nome ed e-mail.":::
-
-7. Seleziona **Salva** ed **Esegui**.
-
-### <a name="merge"></a>Unione
-
-1. Vai alla scheda **Unione**.
-
-1. In **ContactId** per l'entità **loyCustomers**, cambia il nome visualizzato in **ContactIdLOYALTY** per differenziarlo dagli altri ID inseriti.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="Rinominare contactid dall'ID del programma di fedeltà.":::
-
-1. Seleziona **Salva** ed **Esegui** per avviare il processo di unione.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Attività 3: configurare la previsione di abbandono dell'abbonamento
 
