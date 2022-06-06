@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647074"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800101"
 ---
 # <a name="create-segments"></a>Creare segmenti
 
@@ -134,8 +134,9 @@ Durante la creazione di un segmento, puoi salvare una bozza. Nella fase di bozza
 > - Il generatore di segmenti non suggerirà valori validi dalle entità durante l'impostazione degli operatori per le condizioni. Puoi andare a **Dati** > **Entità** e scaricare i dati dell'entità per vedere quali valori sono disponibili.
 > - Le condizioni basate sulle date ti consentono di passare da date fisse a un intervallo di date mobile.
 > - Se hai più regole per il tuo segmento, la regola che stai modificando ha una linea blu verticale accanto.
-> - È possibile spostare regole e condizioni in altri punti della definizione del segmento. Seleziona [...] accanto a una regola o condizione e scegli come e dove spostarla.
+> - È possibile spostare regole e condizioni in altri punti della definizione del segmento. Seleziona i puntini di sospensione verticali (&vellip;) accanto a una regola o una condizione e scegli come e dove spostarla.
 > - I controlli **Undo** e **Redo** nella barra dei comandi ti permettono di annullare le modifiche.
+> - Dopo aver creato un segmento, alcuni segmenti ti consentono di [monitorare l'utilizzo del segmento](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Segmenti rapidi
 

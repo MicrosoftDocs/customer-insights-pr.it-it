@@ -1,7 +1,7 @@
 ---
 title: Connettersi a un account Azure Data Lake Storage utilizzando un'entità servizio
 description: Utilizza un'entità servizio di Azure per connetterti al data lake.
-ms.date: 04/26/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,22 +11,23 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739167"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833390"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connettersi a un account Azure Data Lake Storage utilizzando un'entità servizio di Azure
 
-Questo articolo spiega come connettersi a Dynamics 365 Customer Insights con un account Azure Data Lake Storage usando un'entità servizio di Azure anziché le chiavi dell'account di archiviazione. 
+Questo articolo spiega come connettersi a Dynamics 365 Customer Insights con un account Azure Data Lake Storage usando un'entità servizio di Azure anziché le chiavi dell'account di archiviazione.
 
 Gli strumenti automatizzati che usano i servizi di Azure deve avere sempre autorizzazioni limitate. Anziché avere applicazioni che accedono come utente con privilegi completi, Azure fornisce entità servizio. È possibile utilizzare entità servizio per [aggiungere o modificare una cartella Common Data Model come origine dati](connect-common-data-model.md) in modo sicuro o [creare o aggiornare un ambiente](create-environment.md).
 
 > [!IMPORTANT]
+>
 > - L'account Data Lake Storage che utilizzerà l'entità servizio deve essere Gen2 e avere lo [spazio dei nomi gerarchico abilitato](/azure/storage/blobs/data-lake-storage-namespace). Gli account di archiviazione Azure Data Lake Gen1 non sono supportati.
-> - Sono necessarie le autorizzazioni di amministratore per la sottoscrizione di Azure per creare un'entità servizio.
+> - Sono necessarie le autorizzazioni di amministratore per il tenant di Azure per creare un'entità servizio.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Creare un'entità servizio di Azure per Customer Insights
 
@@ -38,29 +39,15 @@ Prima di creare una nuova entità servizio per Customer Insights, verifica se es
 
 2. In **Servizi di Azure**, seleziona **Azure Active Directory**.
 
-3. Sotto **Gestisci**, seleziona **Applicazioni aziendali**.
+3. Sotto **Gestisci**, seleziona **Applicazione Microsoft**.
 
 4. Aggiungi un filtro per **L'ID applicazione inizia con** `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` oppure cerca il nome `Dynamics 365 AI for Customer Insights`.
 
-5. Se trovi un record corrispondente, significa che l'entità servizio esiste già. 
-   
+5. Se trovi un record corrispondente, significa che l'entità servizio esiste già.
+
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Screenshot che mostra un'entità servizio esistente.":::
-   
-6. Se non vengono restituiti risultati, crea una entità servizio.
 
-### <a name="create-a-new-service-principal"></a>Creare un'entità servizio
-
-1. Installa l'ultima versione di Azure Active Directory PowerShell for Graph. Per maggiori informazioni, vedi [Installare Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
-
-   1. Nel PC, seleziona il tasto WINDOWS della tastiera e cerca **Windows PowerShell** e seleziona **Esegui come amministratore**.
-   
-   1. Nella finestra di PowerShell che si apre, immetti `Install-Module AzureAD`.
-
-2. Creare l'entità servizio per Customer Insights con il modulo Azure AD PowerShell.
-
-   1. Nella finestra di PowerShell, immetti `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Sostituisci *[il tuo ID directory]* con l'ID directory effettivo della sottoscrizione di Azure in cui vuoi creare l'entità servizio. Il parametro del nome dell'ambiente `AzureEnvironmentName` è facoltativo.
-  
-   1. Immetti `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Questo comando crea l'entità servizio per Customer Insights nella sottoscrizione di Azure selezionata. 
+6. Se non vengono restituiti risultati, è possibile [creare una nuova entità servizio](#create-a-new-service-principal). Nella maggior parte dei casi, esiste già ed è sufficiente concedere le autorizzazioni all'entità servizio per accedere all'account di archiviazione.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Concedere autorizzazioni all'entità servizio per accedere all'account di archiviazione
 
@@ -77,9 +64,9 @@ Passa al portale di Azure per concedere le autorizzazioni all'entità servizio p
 1. Nel riquadro **Aggiungi un'assegnazione di ruolo**, imposta le seguenti proprietà:
    - Ruolo: **Collaboratore dati BLOB di archiviazione**
    - Assegna accesso a: **Utente, gruppo o entità servizio**
-   - Seleziona i membri: **Dynamics 365 AI per Customer Insights** ([l'entità servizio](#create-a-new-service-principal) che hai creato in precedenza in questa procedura)
+   - Seleziona i membri: **Dynamics 365 AI per Customer Insights** ([l'entità servizio](#create-a-new-service-principal) che hai cercato in precedenza in questa procedura)
 
-1.  Seleziona **Rivedi + assegna**.
+1. Seleziona **Rivedi + assegna**.
 
 La propagazione delle modifiche può durare fino a 15 minuti.
 
@@ -91,7 +78,7 @@ Puoi collegare un account Data Lake Storage in Customer Insights per [memorizzar
 
 1. Vai al [portale di amministrazione di Azure](https://portal.azure.com), accedi alla tua sottoscrizione e apri l'account di archiviazione.
 
-1. Nel riquadro a sinistra, seleziona **Impostazioni** > **Proprietà**.
+1. Nel riquadro sinistro, vai a **Impostazioni** > **Endpoint**.
 
 1. Copia il valore dell'ID risorsa dell'account di archiviazione.
 
@@ -115,5 +102,18 @@ Puoi collegare un account Data Lake Storage in Customer Insights per [memorizzar
 
 1. Continua con i passaggi rimanenti in Customer Insights per collegare l'account di archiviazione.
 
+### <a name="create-a-new-service-principal"></a>Creare un'entità servizio
+
+1. Installa l'ultima versione di Azure Active Directory PowerShell for Graph. Per maggiori informazioni, vedi [Installare Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
+
+   1. Sul PC, premi il tasto Windows sulla tastiera e cerca **Windows PowerShell** e seleziona **Esegui come amministratore**.
+
+   1. Nella finestra di PowerShell che si apre, immetti `Install-Module AzureAD`.
+
+2. Creare l'entità servizio per Customer Insights con il modulo Azure AD PowerShell.
+
+   1. Nella finestra di PowerShell, immetti `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Sostituisci *[il tuo ID directory]* con l'ID directory effettivo della sottoscrizione di Azure in cui vuoi creare l'entità servizio. Il parametro del nome dell'ambiente `AzureEnvironmentName` è facoltativo.
+  
+   1. Immetti `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Questo comando crea l'entità servizio per Customer Insights nella sottoscrizione di Azure selezionata.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

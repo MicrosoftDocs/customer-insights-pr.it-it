@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646722"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800425"
 ---
 # <a name="custom-machine-learning-models"></a>Modelli di Machine Learning personalizzati
 
@@ -92,7 +92,7 @@ Le previsioni offrono funzionalità per creare migliori esperienze cliente nonch
 
 ## <a name="edit-a-workflow"></a>Modificare un flusso di lavoro
 
-1. Nella pagina **Modelli personalizzati**, seleziona i puntini di sospensione verticali nella colonna **Azioni** accanto a un flusso di lavoro precedentemente creato e seleziona **Modifica**.
+1. Nella pagina **Modelli personalizzati**, seleziona i puntini di sospensione verticali (&vellip;) nella colonna **Azioni** accanto a un flusso di lavoro precedentemente creato e seleziona **Modifica**.
 
 1. Puoi aggiornare il nome riconoscibile del flusso di lavoro nel campo **Nome visualizzato**, ma non puoi modificare il servizio Web o la pipeline configurato. Seleziona **Avanti**.
 
@@ -108,7 +108,7 @@ Le previsioni offrono funzionalità per creare migliori esperienze cliente nonch
 
 ## <a name="run-a-workflow"></a>Eseguire un flusso di lavoro
 
-1. Nella pagina **Modelli personalizzati**, seleziona i puntini di sospensione verticali nella colonna **Azioni** accanto a un flusso di lavoro precedentemente creato.
+1. Nella pagina **Modelli personalizzati**, seleziona i puntini di sospensione verticali (&vellip;) nella colonna **Azioni** accanto a un flusso di lavoro precedentemente creato.
 
 1. Seleziona **Esegui**.
 
@@ -116,7 +116,7 @@ Il flusso di lavoro viene inoltre eseguito automaticamente con ogni aggiornament
 
 ## <a name="delete-a-workflow"></a>Eliminare un flusso di lavoro
 
-1. Nella pagina **Modelli personalizzati**, seleziona i puntini di sospensione verticali nella colonna **Azioni** accanto a un flusso di lavoro precedentemente creato.
+1. Nella pagina **Modelli personalizzati**, seleziona i puntini di sospensione verticali (&vellip;) nella colonna **Azioni** accanto a un flusso di lavoro precedentemente creato.
 
 1. Seleziona **Elimina** e conferma l'operazione.
 

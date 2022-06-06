@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740724"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800655"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completa dati parziali con le previsioni (deprecata)
 
@@ -95,7 +95,7 @@ Come parte di questo flusso scegli un attributo specifico su cui basare il segme
 
 2. Seleziona la previsione da rivedere.
 
-3. Seleziona i puntini di sospensione nella colonna **Azioni** e scegli **Visualizza**.
+3. Seleziona i puntini di sospensione verticali (&vellip;) nella colonna **Azioni** e scegli **Visualizza**.
 
 4. Vedrai una serie di punti dati nella visualizzazione della previsione.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Dopo aver creato un previsione, puoi personalizzare il modello in AI Builder per
 
 2. Seleziona la previsione che desideri modificare.
 
-3. Seleziona i puntini di sospensione nella colonna **Azioni** e scegli **Visualizza**.
+3. Seleziona i puntini di sospensione verticali (&vellip;) nella colonna **Azioni** e scegli **Visualizza**.
 
 4. Seleziona **Personalizza in AI Builder**.
 
@@ -139,7 +139,7 @@ La successiva esecuzione della previsione utilizzerà il modello aggiornato crea
 
 2. Seleziona la previsione che desideri eliminare.
 
-3. Seleziona i puntini di sospensione nella colonna **Azioni** e scegli **Elimina**.
+3. Seleziona i puntini di sospensione verticali (&vellip;) nella colonna **Azioni** e scegli **Elimina**.
 
 4. Conferma l'eliminazione.
 
@@ -153,7 +153,7 @@ Se non riesci a completare il processo di Dataverse associato a causa di un erro
 - Le autorizzazioni dell'app non sono concesse.
     1. Passare a [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Seleziona **Ambienti**.
-    1. Seleziona i puntini di sospensione accanto all'ambiente a cui desideri aggiungere l'autorizzazione e seleziona **Impostazioni**.
+    1. Seleziona i puntini di sospensione verticali (&vellip;) accanto all'ambiente a cui vuoi aggiungere l'autorizzazione e seleziona **Impostazioni**.
     1. Espandi **Utenti + autorizzazioni** e seleziona **Utenti**.
     1. Seleziona **+ Nuovo** e seleziona **Utente**.
     1. Seleziona **Utente dell'applicazione** se non è già selezionato e immetti le seguenti informazioni:

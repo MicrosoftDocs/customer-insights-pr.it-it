@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646632"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800178"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Connessione ai dati in un Data Lake gestito di Microsoft Dataverse
 
@@ -62,7 +62,7 @@ Per connettersi a un altro data lake Dataverse, [crea una nuova origine dati](#c
 
 1. Vai a **Dati** > **Origini dati**.
 
-2. Accanto all'origine dati che vuoi aggiornare, seleziona i puntini di sospensione.
+2. Accanto all'origine dati che desideri aggiornare, seleziona i puntini di sospensione verticali (&vellip;).
 
 3. Seleziona l'opzione **Modifica** nell'elenco.
 

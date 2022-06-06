@@ -1,7 +1,7 @@
 ---
 title: Connettere i dati di Common Data Model a un account Azure Data Lake
 description: Utilizza i dati di Common Data Model con Azure Data Lake Storage.
-ms.date: 01/25/2022
+ms.date: 05/24/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -13,12 +13,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: eeb6b9d97be5f9c0b9f6cbd6dbc6985559a1cd9d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646848"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833365"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Connettere a una cartella Common Data Model usando un account Azure Data Lake
 
@@ -46,16 +46,16 @@ Questo articolo fornisce informazioni su come importare i dati in Dynamics 365 C
 
 1. Seleziona **Azure Data Lake Storage**, immetti un **Nome** per l'origine dati, quindi seleziona **Avanti**.
 
-   - Se richiesto, seleziona uno dei set di dati di esempio relativi al tuo settore, quindi seleziona **Avanti**. 
+   - Se richiesto, seleziona uno dei set di dati di esempio relativi al tuo settore, quindi seleziona **Avanti**.
 
 1. Puoi scegliere tra l'utilizzo di un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connessione a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Inserisci l'**indirizzo del server**, seleziona **Accedi**, quindi seleziona **Avanti**.
    > [!div class="mx-imgBorder"]
    > ![Finestra di dialogo di immissione dei dettagli della nuova connessione per Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
-   > È necessario uno dei seguenti ruoli per il contenitore o l'account di archiviazione di cui sopra per essere in grado di connettersi e creare un'origine dati:
-   >  - Lettore dati BLOB di archiviazione
-   >  - Proprietario dati BLOB di archiviazione
-   >  - Collaboratore dati BLOB di archiviazione
+   > È necessario uno dei seguenti ruoli per il contenitore nell'account di archiviazione e per creare l'origine dati:
+   >
+   >  - Lettore dati del BLOB di archiviazione è sufficiente per leggere da un account di archiviazione e importare i dati in Customer Insights. 
+   >  - Collaboratore dati BLOB di archiviazione o Proprietario è necessario per modificare i file manifesto direttamente in Customer Insights.
 
 1. Nella finestra di dialogo **Seleziona una cartella di Common Data Model** , seleziona il file model.json o manifest.json da cui importare i dati e seleziona **Avanti**.
    > [!NOTE]
@@ -65,11 +65,11 @@ Questo articolo fornisce informazioni su come importare i dati in Dynamics 365 C
    > [!div class="mx-imgBorder"]
    > ![Finestra di dialogo che mostra un elenco di entità da un file model.json.](media/review-entities.png)
 
-8. Specifica le entità di dati per cui vuoi abilitare il profiling dei dati, quindi seleziona **Salva**. Il profiling dei dati consente l'analisi e altre funzionalità. Puoi selezionare l'intera entità, che seleziona tutti gli attributi dall'entità, o selezionare alcuni attributi di tua scelta. Per impostazione predefinita, nessuna entità è abilitata per il profiling dei dati.
+1. Specifica le entità di dati per cui vuoi abilitare il profiling dei dati, quindi seleziona **Salva**. Il profiling dei dati consente l'analisi e altre funzionalità. Puoi selezionare l'intera entità, che seleziona tutti gli attributi dall'entità, o selezionare alcuni attributi di tua scelta. Per impostazione predefinita, nessuna entità è abilitata per il profiling dei dati.
    > [!div class="mx-imgBorder"]
    > ![Finestra di dialogo che mostra un profiling dei dati.](media/dataprofiling-entities.png)
 
-9. Dopo aver salvato le selezioni, viene visualizzata la pagina **Origini dati**. Ora la connessione alla cartella Common Data Model viene visualizzata come origine dati.
+1. Dopo aver salvato le selezioni, viene visualizzata la pagina **Origini dati**. Ora la connessione alla cartella Common Data Model viene visualizzata come origine dati.
 
 > [!NOTE]
 > Un file model.json o manifest.json può essere associato solo a un'origine dati nello stesso ambiente. Tuttavia, lo stesso file model.json o manifest.json può essere utilizzato per origini dati in più ambienti.
@@ -80,7 +80,7 @@ Puoi aggiornare la chiave di accesso per l'account di archiviazione contenente l
 
 1. Vai a **Dati** > **Origini dati**.
 
-2. Accanto all'origine dati che vuoi aggiornare, seleziona i puntini di sospensione.
+2. Accanto all'origine dati che desideri aggiornare, seleziona i puntini di sospensione verticali (&vellip;).
 
 3. Seleziona l'opzione **Modifica** nell'elenco.
 
@@ -93,13 +93,6 @@ Puoi aggiornare la chiave di accesso per l'account di archiviazione contenente l
 
    > ![Finestra di dialogo per immettere i dettagli di connessione per Azure Data Lake a un account di archiviazione esistente.](media/enter-existing-storage-details.png)
 
-   > [!NOTE]
-   > È necessario uno dei seguenti ruoli per il contenitore o l'account di archiviazione di cui sopra per essere in grado di connettersi e creare un'origine dati:
-   >  - Lettore dati BLOB di archiviazione
-   >  - Proprietario dati BLOB di archiviazione
-   >  - Collaboratore dati BLOB di archiviazione
-
-
 6. Facoltativamente, scegli un file model.json o manifest.json diverso con un set di entità diverso dal contenitore.
 
 7. Facoltativamente, puoi selezionare entità aggiuntive da inserire. Puoi anche rimuovere qualsiasi entità già selezionata se non ci sono dipendenze.
@@ -107,7 +100,6 @@ Puoi aggiornare la chiave di accesso per l'account di archiviazione contenente l
    > [!IMPORTANT]
    > Se sono presenti dipendenze dal file model.json o manifest.json esistente e dal set di entità, verrà visualizzato un messaggio di errore e non sarà possibile selezionare un file model.json o manifest.json diverso. Rimuovi queste dipendenze prima di cambiare il file model.json o manifest.json o crea un nuovo origine dati con il file model.json o manifest.json che vuoi utilizzare per evitare di rimuovere le dipendenze.
 
-8. Facoltativamente, puoi selezionare attributi o entità aggiuntivi per abilitare il profilng dei dati o disabilitare quelli già selezionati.   
-
+8. Facoltativamente, puoi selezionare attributi o entità aggiuntivi per abilitare il profilng dei dati o disabilitare quelli già selezionati.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

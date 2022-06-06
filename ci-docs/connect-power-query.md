@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646884"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800154"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connessione a un'origine dati Power Query
 
@@ -76,7 +76,7 @@ I connettori con un segno di spunta nella colonna **Informazioni dettagliate sui
 
 1. Vai a **Dati** > **Origini dati**.
 
-2. Seleziona i puntini di sospensione verticali accanto all'origine dati che desideri modificare e seleziona **Modifica** dal menu a tendina.
+2. Seleziona i puntini di sospensione verticali (&vellip;) accanto all'origine dati che desideri modificare e seleziona **Modifica** dal menu a tendina.
 
    > [!div class="mx-imgBorder"]
    > ![Opzione Modifica.](media/edit-option-data-sources.png "Modifica opzione")

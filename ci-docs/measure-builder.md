@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647289"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800331"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Usare il generatore di misure per creare misure da zero
 
@@ -88,7 +88,7 @@ La creazione di misure negli ambienti B2C e B2B funziona allo stesso modo. Tutta
 
 1. Per aggiungere altri calcoli per la misura, seleziona **Nuovo calcolo**. È possibile utilizzare solo entità nello stesso percorso entità per nuovi calcoli. Gli altri calcoli verranno visualizzati come nuove colonne nell'entità di output della misura.
 
-1. Seleziona **...** sul calcolo per **duplicare**, **rinominare** o **rimuovere** un calcolo da una misura.
+1. Seleziona i puntini di sospensione verticali (&vellip;) sul calcolo per **Duplicare**, **Rinominare**, o **Rimuovere** un calcolo da una misura.
 
 1. Nell'area **Anteprima** vedrai lo schema dei dati dell'entità di output della misura, inclusi filtri e dimensioni. L'anteprima reagisce dinamicamente alle modifiche nella configurazione.
 
@@ -158,7 +158,7 @@ La creazione di misure negli ambienti B2C e B2B funziona allo stesso modo. Tutta
    1. Seleziona **Percorso di relazione** e scegli il percorso dell'entità che dovrebbe essere usato per identificare la tua misura. Se esiste un solo percorso per l'entità *Cliente*, questo controllo non verrà visualizzato.
    1. Seleziona **Fatto** per applicare la selezione.
 
-1. Seleziona **...** sul calcolo per **duplicare**, **rinominare** o **rimuovere** un calcolo da una misura.
+1. Seleziona i puntini di sospensione verticali (&vellip;) sul calcolo per **Duplicare**, **Rinominare**, o **Rimuovere** un calcolo da una misura.
 
 1. Nell'area **Anteprima** vedrai lo schema dei dati dell'entità di output della misura, inclusi filtri e dimensioni. L'anteprima reagisce dinamicamente alle modifiche nella configurazione.
 

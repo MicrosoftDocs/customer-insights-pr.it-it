@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755267"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807586"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Inoltro del log in Dynamics 365 Customer Insights con Monitoraggio di Azure (anteprima)
 
@@ -38,7 +38,7 @@ Per configurare la diagnostica in Customer Insights, devono essere soddisfatti i
 
 - Hai un [abbonamento di Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) attivo.
 - Hai diritti di [amministratore](permissions.md#admin) in Customer Insights.
-- Hai il ruolo **Collaboratore** e **Amministratore accessi utente** nella risorsa di destinazione in Azure. La risorsa può essere un account di archiviazione di Azure, un hub eventi di Azure o un'area di lavoro Log Analytics di Azure. Per ulteriori informazioni, vedi [Aggiungere o rimuovere le assegnazioni dei ruoli di Azure tramite il portale di Azure](/azure/role-based-access-control/role-assignments-portal).
+- Hai il ruolo **Collaboratore** e **Amministratore accessi utente** nella risorsa di destinazione in Azure. La risorsa può essere un account Azure Data Lake Storage, un hub eventi di Azure o un'area di lavoro Log Analytics di Azure. Per ulteriori informazioni, vedi [Aggiungere o rimuovere le assegnazioni dei ruoli di Azure tramite il portale di Azure](/azure/role-based-access-control/role-assignments-portal). Questa autorizzazione è necessaria durante la configurazione delle impostazioni diagnostiche in Customer Insights, può essere modificata dopo la configurazione.
 - [Requisiti della destinazione](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) per Archiviazione di Azure, Hub eventi di Azure o Log Analytics di Azure soddisfatti.
 - Hai almeno il ruolo **Lettore** nel gruppo di risorse a cui appartiene la risorsa.
 

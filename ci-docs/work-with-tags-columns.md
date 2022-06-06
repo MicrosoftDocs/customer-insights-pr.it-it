@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 04ae4ffd303a47add15044f313c96a23e5efcd76
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0d23a74b5ca68162ee21307705b1f781a7eb97e
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647234"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800564"
 ---
 # <a name="work-with-tags-and-columns"></a>Utilizzare tag e colonne
 
@@ -37,7 +37,7 @@ Puoi visualizzare, aggiungere e rimuovere tag da un elemento. Aggiungi tag mentr
 
 1. Seleziona l'elemento da gestire.
 
-1. Seleziona **Mostra altro (...)**, quindi seleziona **Tag**.
+1. Seleziona i puntini di sospensione verticali (&vellip;), quindi scegli **Tag**.
 
    :::image type="content" source="media/segments_list_tag.png" alt-text="Segmento selezionato con elenco a discesa delle opzioni e opzioni disponibili."lightbox="media/segments_list_tag.png":::
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739213"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800471"
 ---
 # <a name="data-sources-overview"></a>Panoramica delle origini dati
 
@@ -76,7 +76,7 @@ Per aggiornare un origine dati su richiesta, segui questi passaggi:
 
 1. Vai a **Dati** > **Origini dati**.
 
-2. Seleziona i puntini di sospensione verticali accanto all'origine dati che desideri aggiornare e seleziona **Aggiorna** dall'elenco a discesa.
+2. Seleziona i puntini di sospensione verticali (&vellip;) accanto all'origine dati che desideri aggiornare e seleziona **Aggiorna** dall'elenco a discesa.
 
 3. L'origine dati è ora attivata per un aggiornamento manuale. L'aggiornamento di un'origine dati aggiornerà sia lo schema dell'entità che i dati per tutte le entità specificate nell'origine dati.
 
@@ -86,7 +86,7 @@ Per aggiornare un origine dati su richiesta, segui questi passaggi:
 
 1. Vai a **Dati** > **Origini dati**.
 
-2. Seleziona i puntini di sospensione verticali accanto all'origine dati che desideri rimuovere e seleziona **Elimina** dal menu a tendina.
+2. Seleziona i puntini di sospensione verticali (&vellip;) accanto all'origine dati che desideri rimuovere e seleziona **Elimina** dal menu a tendina.
 
 3. Conferma l'eliminazione.
 

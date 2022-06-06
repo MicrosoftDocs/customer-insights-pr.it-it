@@ -1,19 +1,19 @@
 ---
 title: Arricchimento per le origini dati
 description: Arricchisci le origini dati prima di passare al processo di unificazione dei dati.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755691"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800286"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Arricchimento per le origini dati (anteprima)
 
@@ -27,7 +27,7 @@ Devi disporre delle autorizzazioni collaboratore o amministratore per creare o m
 
 1. Vai a **Dati** > **Origini dati**.
 
-1. Seleziona i puntini verticali accanto all'origine dati che vuoi arricchire e seleziona **Arricchisci**.
+1. Seleziona i puntini verticali (&vellip;) accanto all'origine dati che vuoi arricchire e seleziona **Arricchisci**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Pagina Arricchimento delle origini dati,":::
 
@@ -41,11 +41,12 @@ I seguenti arricchimenti sono attualmente disponibili per le origini dati. Esami
 
 - [Indirizzi ottimizzati](enrichment-enhanced-addresses.md)
 - [Dati aziendali ottimizzati](enrichment-enhanced-company-data.md)
+- [Dati di identità da LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gestire gli arricchimenti per le origini dati esistenti
 
 Vai alla scheda **I miei arricchimenti** per vedere tutti gli arricchimenti configurati.
 
-Seleziona l'arricchimento per vedere le opzioni disponibili. È inoltre possibile selezionare i puntini di sospensione (...) di un elemento dell'elenco per visualizzare le opzioni. Se hai configurato diversi arricchimenti, puoi utilizzare la casella di ricerca per trovarli rapidamente.
+Seleziona l'arricchimento per vedere le opzioni disponibili. Puoi anche selezionare i puntini di sospensione verticali (&vellip;) su un elemento dell'elenco per visualizzare le opzioni. Se hai configurato diversi arricchimenti, puoi utilizzare la casella di ricerca per trovarli rapidamente.
 
 Puoi visualizzare, modificare, eseguire o eliminare un arricchimento dell'origine dati. Per altre informazioni, consulta [Gestire gli arricchimenti esistenti](enrichment-hub.md).
