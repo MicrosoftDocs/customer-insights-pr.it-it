@@ -1,19 +1,19 @@
 ---
 title: Richieste diritti dell'interessato (DSR) ai sensi del GDPR | Microsoft Docs
 description: Rispondere alle richieste diritti dell'interessato per Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808566"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947373"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Richieste diritti dell'interessato ai sensi del GDPR
 
@@ -77,11 +77,5 @@ L'amministratore di un tenant può seguire questa procedura per esportare i dati
 1. Invia un messaggio e-mail a D365CI@microsoft.com specificando l'indirizzo e-mail dell'utente nella richiesta. Il team di Customer Insights invierà un messaggio e-mail all'indirizzo di posta elettronica dell'amministratore del tenant registrato, chiedendo la conferma per esportare i dati.
 2. Accetta la conferma di esportazione dei dati per l'utente che ha effettuato la richiesta.
 3. Ricevi i dati esportati tramite l'indirizzo e-mail dell'amministratore del tenant.
-
-## <a name="consent-management-preview"></a>Gestione del consenso (anteprima)
-
-La funzionalità di gestione del consenso non raccoglie direttamente i dati dell'utente. Importa ed elabora solo i dati del consenso forniti dagli utenti in altre applicazioni.
-
-Per rimuovere i dati del consenso su utenti specifici, rimuovili nelle origini dati inserite nella funzionalità di gestione del consenso. Dopo aver aggiornato l'origine dati, i dati rimossi verranno eliminati anche nel Centro consenso. Le applicazioni che usano l'entità consenso elimineranno anche i dati che sono stati rimossi dall'origine dopo un [aggiornamento](system.md#refresh-processes). Ti consigliamo di aggiornare rapidamente le origini dati dopo aver risposto a una richiesta dell'interessato per la rimozione dei dati dell'utente da tutti gli altri processi e le altre applicazioni.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

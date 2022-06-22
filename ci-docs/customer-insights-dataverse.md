@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833681"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011525"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Utilizzare i dati di Customer Insights in Microsoft Dataverse
 
 Customer Insights offre la possibilità di rendere disponibili le entità di output come [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Questa integrazione consente una facile condivisione dei dati e sviluppo personalizzato con un approccio a uso limitato di codice/senza codice. Le [entità di output](#output-entities) sono disponibili come tabelle in un ambiente Dataverse. È possibile utilizzare i dati per qualsiasi altra applicazione basata su tabelle Dataverse. Queste tabelle consentono scenari come flussi di lavoro automatizzati tramite Power Automate o di creare app con Power Apps.
 
-La connessione al tuo ambiente Dataverse ti consente anche di [inserire i dati dalle origini dati locali utilizzando flussi di dati e gateway Power Platform](data-sources.md#add-data-from-on-premises-data-sources).
+La connessione al tuo ambiente Dataverse ti consente anche di [inserire i dati dalle origini dati locali utilizzando flussi di dati e gateway Power Platform](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Prerequisiti
 

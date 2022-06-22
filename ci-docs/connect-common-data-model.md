@@ -1,105 +1,186 @@
 ---
 title: Connettere i dati di Common Data Model a un account Azure Data Lake
 description: Utilizza i dati di Common Data Model con Azure Data Lake Storage.
-ms.date: 05/24/2022
-ms.subservice: audience-insights
+ms.date: 05/30/2022
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: mukeshpo
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833365"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011567"
 ---
-# <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Connettere a una cartella Common Data Model usando un account Azure Data Lake
+# <a name="connect-to-data-in-azure-data-lake-storage"></a>Connettersi ai dati in Azure Data Lake Storage
 
-Questo articolo fornisce informazioni su come importare i dati in Dynamics 365 Customer Insights da una cartella Common Data Model utilizzando il tuo account Azure Data Lake Storage Gen2.
+Inserisci dati in Dynamics 365 Customer Insights usando il tuo account Azure Data Lake Storage Gen2. L'inserimento dati può essere completo o incrementale.
 
-## <a name="important-considerations"></a>Considerazioni importanti
+## <a name="prerequisites"></a>Prerequisiti
 
-- I dati in Azure Data Lake devono seguire lo standard Common Data Model. Altri formati non sono supportati al momento.
+- L'inserimento dati supporta solo account Azure Data Lake Storage *Gen2*. Non puoi usare account Data Lake Storage Gen1 per inserire i dati.
 
-- L'inserimento dati supporta esclusivamente gli account di archiviazione di Azure Data Lake *Gen2*. Non puoi usare account di archiviazione di Azure Data Lake Gen1 per inserire i dati.
-
-- L'account di Azure Data Lake Storage deve avere lo [spazio dei nomi gerarchico](/azure/storage/blobs/data-lake-storage-namespace) abilitato.
+- L'account Azure Data Lake Storage deve avere lo [spazio dei nomi gerarchico abilitato](/azure/storage/blobs/data-lake-storage-namespace). I dati devono essere archiviati in un formato di cartella gerarchica che definisce la cartella radice e dispone di sottocartelle per ciascuna entità. Le sottocartelle possono contenere cartelle di dati completi o di dati incrementali.
 
 - Per eseguire l'autenticazione con un'entità servizio di Azure, assicurati che sia configurata nel tenant. Per ulteriori informazioni, vedi [Connessione a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md).
 
-- L'Azure Data Lake da cui intendi eseguire la connessione e inserire i dati deve trovarsi nella stessa area di Azure dell'ambiente Dynamics 365 Customer Insights. Le connessioni a una cartella di Common Data Model da un data lake in un'area diversa di Azure non sono supportate. Per conoscere l'area di Azure dell'ambiente, vai a **Amministratore** > **Sistema** > **Informazioni** in Customer Insights.
+- L'istanza di Azure Data Lake Storage a cui desideri connetterti e usare per l'inserimento di dati deve trovarsi nella stessa area di Azure dell'ambiente Dynamics 365 Customer Insights. Le connessioni a una cartella di Common Data Model da un data lake in un'area diversa di Azure non sono supportate. Per conoscere l'area di Azure dell'ambiente, vai a **Amministratore** > **Sistema** > **Informazioni** in Customer Insights.
 
 - I dati memorizzati nei servizi online possono essere archiviati in una posizione diversa da quella in cui i dati vengono elaborati o archiviati in Dynamics 365 Customer Insights.Importando o connettendoti a dati archiviati nei servizi online, accetti che i dati possano essere trasferiti e archiviati con Dynamics 365 Customer Insights. [Altre informazioni sono disponibili nel Microsoft Trust Center.](https://www.microsoft.com/trust-center).
 
-## <a name="connect-to-a-common-data-model-folder"></a>Connetti a cartella di Common Data Model
+- L'entità servizio Customer Insights deve avere uno dei ruoli seguenti per accedere all'account di archiviazione. Per altre informazioni, vedi [Concedere le autorizzazioni all'entità servizio per accedere all'account di archiviazione](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
+  - Lettore dati BLOB di archiviazione
+  - Proprietario dati BLOB di archiviazione
+  - Collaboratore dati BLOB di archiviazione
+
+- I dati in Data Lake Storage devono seguire lo standard Common Data Model per l'archiviazione dei dati e avere il manifesto Common Data Model per rappresentare lo schema dei file di dati (*.csv o *.parquet). Il manifesto deve fornire i dettagli delle entità come colonne di entità e tipi di dati, nonché la posizione del file di dati e il tipo di file. Per altre informazioni, vedi [Manifesto Common Data Model](/common-data-model/sdk/manifest). Se il manifesto non è presente, gli utenti amministratori con accesso Proprietario dati BLOB di archiviazione o Collaboratore dati BLOB di archiviazione possono definire lo schema durante l'inserimento dei dati.
+
+## <a name="connect-to-azure-data-lake-storage"></a>Connettersi a Azure Data Lake Storage
 
 1. Vai a **Dati** > **Origini dati**.
 
 1. Seleziona **Aggiungi origine dati**.
 
-1. Seleziona **Azure Data Lake Storage**, immetti un **Nome** per l'origine dati, quindi seleziona **Avanti**.
+1. Seleziona **Azure Data Lake Storage**.
 
-   - Se richiesto, seleziona uno dei set di dati di esempio relativi al tuo settore, quindi seleziona **Avanti**.
+   :::image type="content" source="media/data_sources_ADLS.png" alt-text="Finestra di dialogo per immettere i dettagli di connessione per Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
-1. Puoi scegliere tra l'utilizzo di un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connessione a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Inserisci l'**indirizzo del server**, seleziona **Accedi**, quindi seleziona **Avanti**.
-   > [!div class="mx-imgBorder"]
-   > ![Finestra di dialogo di immissione dei dettagli della nuova connessione per Azure Data Lake.](media/enter-new-storage-details.png)
+1. Immetti un **Nome** per l'origine dati e una **Descrizione** opzionale. Il nome identifica in modo univoco l'origine dati. Viene inoltre fatto riferimento a esso nei processi downstream e non può essere modificato.
+
+1. Scegli una delle seguenti opzioni per **Connetti lo spazio di archiviazione tramite**. Per altre informazioni, vedi [Connessione a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md).
+
+   - **Risorsa di Azure**: immetti un valore in **ID risorsa**. Facoltativamente, se desideri inserire i dati da un account di archiviazione tramite un collegamento privato di Azure, seleziona **Abilita collegamento privato**. Per altre informazioni, vedi [Collegamenti privati](security-overview.md#private-links-tab).
+   - **Sottoscrizione di Azure**: seleziona **Sottoscrizione** e quindi **Gruppo di risorse** e **Account di archiviazione**. Facoltativamente, se desideri inserire i dati da un account di archiviazione tramite un collegamento privato di Azure, seleziona **Abilita collegamento privato**. Per altre informazioni, vedi [Collegamenti privati](security-overview.md#private-links-tab).
+  
    > [!NOTE]
-   > È necessario uno dei seguenti ruoli per il contenitore nell'account di archiviazione e per creare l'origine dati:
+   > È necessario uno dei seguenti ruoli per il contenitore o l'account di archiviazione per creare l'origine dati:
    >
    >  - Lettore dati del BLOB di archiviazione è sufficiente per leggere da un account di archiviazione e importare i dati in Customer Insights. 
-   >  - Collaboratore dati BLOB di archiviazione o Proprietario è necessario per modificare i file manifesto direttamente in Customer Insights.
-
-1. Nella finestra di dialogo **Seleziona una cartella di Common Data Model** , seleziona il file model.json o manifest.json da cui importare i dati e seleziona **Avanti**.
+   >  - Collaboratore dati BLOB di archiviazione o Proprietario è necessario per modificare i file manifesto direttamente in Customer Insights.  
+  
+1. Scegli il nome del **Contenitore** che contiene i dati e lo schema (file model.json o manifest.json) da cui importare i dati e seleziona **Avanti**.
    > [!NOTE]
-   > Qualsiasi file model.json o manifest.json associato a un'altra origine dati nell'ambiente non verrà visualizzato nell'elenco.
+   > Qualsiasi file model.json o manifest.json associato a un'altra origine dati nell'ambiente non verrà visualizzato nell'elenco. Tuttavia, lo stesso file model.json o manifest.json può essere utilizzato per origini dati in più ambienti.
 
-1. Vedrai un elenco di entità disponibili nel file model.json o manifest.json selezionato. Rivedi e seleziona dall'elenco delle entità disponibili, quindi seleziona **Salva**. Tutte le entità selezionate verranno inserite dalla nuova origine dati.
-   > [!div class="mx-imgBorder"]
-   > ![Finestra di dialogo che mostra un elenco di entità da un file model.json.](media/review-entities.png)
+1. Per creare un nuovo schema, vai a [Creare un nuovo file di schema](#create-a-new-schema-file).
 
-1. Specifica le entità di dati per cui vuoi abilitare il profiling dei dati, quindi seleziona **Salva**. Il profiling dei dati consente l'analisi e altre funzionalità. Puoi selezionare l'intera entità, che seleziona tutti gli attributi dall'entità, o selezionare alcuni attributi di tua scelta. Per impostazione predefinita, nessuna entità è abilitata per il profiling dei dati.
-   > [!div class="mx-imgBorder"]
-   > ![Finestra di dialogo che mostra un profiling dei dati.](media/dataprofiling-entities.png)
+1. Per usare uno schema esistente, vai alla cartella contenente il file model.json o manifest.cdm.json. Puoi eseguire la ricerca in una directory per trovare il file.
 
-1. Dopo aver salvato le selezioni, viene visualizzata la pagina **Origini dati**. Ora la connessione alla cartella Common Data Model viene visualizzata come origine dati.
+1. Seleziona il file json, quindi **Avanti**. Viene visualizzato un elenco delle entità disponibili.
 
-> [!NOTE]
-> Un file model.json o manifest.json può essere associato solo a un'origine dati nello stesso ambiente. Tuttavia, lo stesso file model.json o manifest.json può essere utilizzato per origini dati in più ambienti.
+   :::image type="content" source="media/review-entities.png" alt-text="Finestra di dialogo di un elenco di entità da selezionare":::
 
-## <a name="edit-a-common-data-model-folder-data-source"></a>Modificare un'origine dati della cartella Common Data Model
+1. Seleziona le entità che desideri includere.
 
-Puoi aggiornare la chiave di accesso per l'account di archiviazione contenente la cartella di Common Data Model. Puoi anche modificare il file model.json o manifest.json. Per connetterti a un contenitore diverso dal tuo account di archiviazione o modificare il nome dell'account, [crea una nuova connessione all'origine dati](#connect-to-a-common-data-model-folder).
+   :::image type="content" source="media/ADLS_required.png" alt-text="Finestra di dialogo che mostra Richiesto per la chiave primaria":::
+
+   > [!TIP]
+   > Per modificare le entità in un'interfaccia di modifica JSON, seleziona **Mostra altro** > **Modifica file schema**. Apporta le modifiche e seleziona **Salva**.
+
+1. Per le entità selezionate che richiedono l'inserimento incrementale, **Obbligatoria** viene visualizzato in **Aggiornamento incrementale**. Per ciascuna di queste entità, vedi [Configurare un aggiornamento incrementale per le origini dati di Azure Data Lake](incremental-refresh-data-sources.md).
+
+1. Per le entità selezionate in cui non è stata definita una chiave primaria, **Obbligatoria** viene visualizzato in **Chiave primaria**. Per ciascuna di queste entità:
+   1. Seleziona **Obbligatoria**. Viene visualizzato il pannello **Modifica entità**.
+   1. Scegli la **chiave primaria**. La chiave primaria è un attributo univoco per l'entità. Affinché un attributo sia una chiave primaria valida, non deve includere valori duplicati, valori mancanti o valori null. Gli attributi del tipo di dati String, Integer e GUID sono supportati come chiavi primarie.
+   1. Facoltativamente, modifica il modello di partizione.
+   1. Seleziona **Chiudi** per salvare e chiudere il pannello.
+
+1. Seleziona il numero di **Attributi** per ciascuna entità inclusa. Visualizzata la pagina **Gestisci gli attributi**.
+
+   :::image type="content" source="media/dataprofiling-entities.png" alt-text="Finestra di dialogo per selezionare il profiling dei dati.":::
+
+   1. Crea nuovi attributi, modifica o elimina gli attributi esistenti. È possibile modificare il nome, il formato dei dati o aggiungere un tipo semantico.
+   1. Per abilitare l'analisi e altre funzionalità, seleziona **Profiling dei dati** per l'intera entità o per attributi specifici. Per impostazione predefinita, nessuna entità è abilitata per il profiling dei dati.
+   1. Seleziona **Fatto**.
+
+1. Seleziona **Salva**. Verrà aperta la pagina **Origine dati** che mostra la nuova origine dati con stato **Aggiornamento in corso**.
+
+### <a name="create-a-new-schema-file"></a>Creare un nuovo file di schema
+
+1. Seleziona **Nuovo file di schema**.
+
+1. Immetti un nome per il file e seleziona **Salva**.
+
+1. Seleziona **Nuova entità**. Viene visualizzato il pannello **Nuova entità**.
+
+1. Immetti il nome dell'entità e scegli il **Percorso file di dati**.
+   - **Più file csv o parquet**: accedi alla cartella radice, seleziona il tipo di modello e immetti l'espressione.
+   - **File csv o parquet singolo**: passa al file csv o parquet e selezionalo.
+
+   :::image type="content" source="media/ADLS_new_entity_location.png" alt-text="Finestra di dialogo per creare una nuova entità con il percorso file di dati evidenziato.":::
+
+1. Seleziona **Salva**.
+
+   :::image type="content" source="media/ADLS_new_entity_define_attributes.png" alt-text="Finestra di dialogo per definire o generare automaticamente attributi.":::
+
+1. Seleziona **definisci gli attributi** per aggiungere manualmente gli attributi o seleziona **generali automaticamente**. Per definire gli attributi, immetti un nome, seleziona il formato dei dati e il tipo semantico opzionale. Per gli attributi generati automaticamente:
+
+   1. Dopo che gli attributi sono stati generati automaticamente, seleziona **Rivedi gli attributi**. Visualizzata la pagina **Gestisci gli attributi**.
+
+   1. Assicurati che il formato dei dati sia corretto per ogni attributo.
+
+   1. Per abilitare l'analisi e altre funzionalità, seleziona **Profiling dei dati** per l'intera entità o per attributi specifici. Per impostazione predefinita, nessuna entità è abilitata per il profiling dei dati.
+
+      :::image type="content" source="media/dataprofiling-entities.png" alt-text="Finestra di dialogo per selezionare il profiling dei dati.":::
+
+   1. Seleziona **Fatto**. Viene visualizzata la pagina **Seleziona entità**.
+
+1. Continua ad aggiungere entità e attributi, se applicabile.
+
+1. Dopo aver aggiunto tutte le entità, seleziona **Includi** per includere le entità nell'inserimento dell'origine dati.
+
+   :::image type="content" source="media/ADLS_required.png" alt-text="Finestra di dialogo che mostra Richiesto per la chiave primaria":::
+
+1. Per le entità selezionate che richiedono l'inserimento incrementale, **Obbligatoria** viene visualizzato in **Aggiornamento incrementale**. Per ciascuna di queste entità, vedi [Configurare un aggiornamento incrementale per le origini dati di Azure Data Lake](incremental-refresh-data-sources.md).
+
+1. Per le entità selezionate in cui non è stata definita una chiave primaria, **Obbligatoria** viene visualizzato in **Chiave primaria**. Per ciascuna di queste entità:
+   1. Seleziona **Obbligatoria**. Viene visualizzato il pannello **Modifica entità**.
+   1. Scegli la **chiave primaria**. La chiave primaria è un attributo univoco per l'entità. Affinché un attributo sia una chiave primaria valida, non deve includere valori duplicati, valori mancanti o valori null. Gli attributi del tipo di dati String, Integer e GUID sono supportati come chiavi primarie.
+   1. Facoltativamente, modifica il modello di partizione.
+   1. Seleziona **Chiudi** per salvare e chiudere il pannello.
+
+1. Seleziona **Salva**. Verrà aperta la pagina **Origine dati** che mostra la nuova origine dati con stato **Aggiornamento in corso**.
+
+
+## <a name="edit-an-azure-data-lake-storage-data-source"></a>Modificare un'origine dati Azure Data Lake Storage
+
+Puoi aggiornare l'opzione *Connettiti a un account di archiviazione usando*. Per altre informazioni, vedi [Connessione a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Per connetterti a un contenitore diverso dal tuo account di archiviazione o modificare il nome dell'account, [crea una nuova connessione all'origine dati](#connect-to-azure-data-lake-storage).
 
 1. Vai a **Dati** > **Origini dati**.
 
-2. Accanto all'origine dati che desideri aggiornare, seleziona i puntini di sospensione verticali (&vellip;).
+1. Accanto all'origine dati che desideri aggiornare, seleziona **Modifica**.
 
-3. Seleziona l'opzione **Modifica** nell'elenco.
+   :::image type="content" source="media/data_sources_edit_ADLS.png" alt-text="Finestra di dialogo per modificare l'origine dati Azure Data Lake.":::
 
-4. Facoltativamente, aggiorna il valore di **Chiave di accesso** e seleziona **Avanti**.
+1. Modifica una delle seguenti informazioni:
 
-   ![Finestra di dialogo per modificare e aggiornare una chiave di accesso per un'origine dati esistente.](media/edit-access-key.png)
+   - **Description**
+   - **Connetti lo spazio di archiviazione tramite** e informazioni sulla connessione. Non puoi modificare le informazioni sul **Contenitore** durante l'aggiornamento della connessione.
+      > [!NOTE]
+      > Uno dei seguenti ruoli deve essere assegnato all'account di archiviazione o al contenitore:
+        > - Lettore dati BLOB di archiviazione
+        > - Proprietario dati BLOB di archiviazione
+        > - Collaboratore dati BLOB di archiviazione
 
-5. Facoltativamente, puoi eseguire l'aggiornamento da una connessione con chiave dell'account a una connessione basata su risorse o sottoscrizione. Per ulteriori informazioni, vedi [Connessione a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md). Non puoi modificare le informazioni sul **Contenitore** durante l'aggiornamento della connessione.
-   > [!div class="mx-imgBorder"]
+   - **Abilita collegamento privato** se desideri inserire i dati da un account di archiviazione tramite un collegamento privato di Azure. Per altre informazioni, vedi [Collegamenti privati](security-overview.md#private-links-tab).
 
-   > ![Finestra di dialogo per immettere i dettagli di connessione per Azure Data Lake a un account di archiviazione esistente.](media/enter-existing-storage-details.png)
+1. Selezionare **Avanti**.
+1. Esegui una delle modifiche seguenti:
+   - Passa a un altro file model.json o manifest.json con un set di entità diverso dal contenitore.
+   - Per aggiungere altre entità da inserire, seleziona **Nuova entità**.
+   - Per rimuovere eventuali entità già selezionate se non ci sono dipendenze, seleziona l'entità, quindi **Elimina**.
+      > [!IMPORTANT]
+      > Se sono presenti dipendenze dal file model.json o manifest.json esistente e dal set di entità, verrà visualizzato un messaggio di errore e non sarà possibile selezionare un file model.json o manifest.json diverso. Rimuovi queste dipendenze prima di cambiare il file model.json o manifest.json o crea un nuovo origine dati con il file model.json o manifest.json che vuoi utilizzare per evitare di rimuovere le dipendenze.
+   - Per modificare il percorso dei file di dati o la chiave primaria, seleziona **Modifica**.
+   - Per modificare i dati di inserimento incrementale, vedi [Configurare un aggiornamento incrementale per le origini dati di Azure Data Lake](incremental-refresh-data-sources.md)
 
-6. Facoltativamente, scegli un file model.json o manifest.json diverso con un set di entità diverso dal contenitore.
+1. Seleziona **Attributi** per aggiungere o modificare attributi o per abilitare la profiling dei dati. Quindi seleziona **Fatto**.
 
-7. Facoltativamente, puoi selezionare entità aggiuntive da inserire. Puoi anche rimuovere qualsiasi entità già selezionata se non ci sono dipendenze.
-
-   > [!IMPORTANT]
-   > Se sono presenti dipendenze dal file model.json o manifest.json esistente e dal set di entità, verrà visualizzato un messaggio di errore e non sarà possibile selezionare un file model.json o manifest.json diverso. Rimuovi queste dipendenze prima di cambiare il file model.json o manifest.json o crea un nuovo origine dati con il file model.json o manifest.json che vuoi utilizzare per evitare di rimuovere le dipendenze.
-
-8. Facoltativamente, puoi selezionare attributi o entità aggiuntivi per abilitare il profilng dei dati o disabilitare quelli già selezionati.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Fai clic su **Salva** per applicare le modifiche e tornare alla pagina **Origine dati**.

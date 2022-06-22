@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833390"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011846"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Connettersi a un account Azure Data Lake Storage utilizzando un'entità servizio di Azure
 
@@ -51,7 +51,13 @@ Prima di creare una nuova entità servizio per Customer Insights, verifica se es
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Concedere autorizzazioni all'entità servizio per accedere all'account di archiviazione
 
-Passa al portale di Azure per concedere le autorizzazioni all'entità servizio per l'account di archiviazione che vuoi usare in Customer Insights.
+Passa al portale di Azure per concedere le autorizzazioni all'entità servizio per l'account di archiviazione che vuoi usare in Customer Insights. Uno dei seguenti ruoli deve essere assegnato all'account di archiviazione o al contenitore:
+
+|Credenziali|Requisiti|
+|----------|------------|
+|Utente attualmente connesso|**Ruolo**: Lettore dati del BLOB di archiviazione, Collaboratore BLOB di archiviazione o Proprietario BLOB di archiviazione.<br>**Livello**: le autorizzazioni possono essere concesse per l'account di archiviazione o il contenitore.</br>|
+|Entità servizio Customer Insights -<br>Utilizzo di Azure Data Lake Storage come origine dati</br>|Opzione 1<ul><li>**Ruolo**: Lettore dati del BLOB di archiviazione, Collaboratore dati BLOB di archiviazione o Proprietario dati BLOB di archiviazione.</li><li>**Livello**: le autorizzazioni devono essere concesse per l'account di archiviazione.</li></ul>Opzione 2 *(senza condividere l'accesso dell'entità servizio all'account di archiviazione)*<ul><li>**Ruolo1**: Lettore dati del BLOB di archiviazione, Collaboratore dati BLOB di archiviazione o Proprietario dati BLOB di archiviazione.</li><li>**Livello**: le autorizzazioni devono essere concesse per il contenitore.</li><li>**Ruolo 2**: Delegante dati BLOB di archiviazione.</li><li>**Livello**: le autorizzazioni devono essere concesse per l'account di archiviazione.</li></ul>|
+|Entità servizio Customer Insights - <br>Utilizzo di Azure Data Lake Storage come output o destinazione</br>|Opzione 1<ul><li>**Ruolo**: Collaboratore dati BLOB di archiviazione o Proprietario BLOB di archiviazione.</li><li>**Livello**: le autorizzazioni devono essere concesse per l'account di archiviazione.</li></ul>Opzione 2 *(senza condividere l'accesso dell'entità servizio all'account di archiviazione)*<ul><li>**Ruolo**: Collaboratore dati BLOB di archiviazione o Proprietario BLOB di archiviazione.</li><li>**Livello**: le autorizzazioni devono essere concesse per il contenitore.</li><li>**Ruolo 2**: Delegante BLOB di archiviazione.</li><li>**Livello**: le autorizzazioni devono essere concesse per l'account di archiviazione.</li></ul>|
 
 1. Vai al [portale di amministrazione di Azure](https://portal.azure.com) e accedi alla tua organizzazione.
 
@@ -62,7 +68,7 @@ Passa al portale di Azure per concedere le autorizzazioni all'entità servizio p
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Screenshot che mostra il portale di Azure durante l'aggiunta di un'assegnazione di ruolo.":::
 
 1. Nel riquadro **Aggiungi un'assegnazione di ruolo**, imposta le seguenti proprietà:
-   - Ruolo: **Collaboratore dati BLOB di archiviazione**
+   - Ruolo: Lettore dati del BLOB di archiviazione, Collaboratore BLOB di archiviazione o Proprietario BLOB di archiviazione in base alle credenziali elencate sopra.
    - Assegna accesso a: **Utente, gruppo o entità servizio**
    - Seleziona i membri: **Dynamics 365 AI per Customer Insights** ([l'entità servizio](#create-a-new-service-principal) che hai cercato in precedenza in questa procedura)
 

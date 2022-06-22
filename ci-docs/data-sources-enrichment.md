@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800286"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011478"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Arricchimento per le origini dati (anteprima)
 
@@ -29,9 +29,11 @@ Devi disporre delle autorizzazioni collaboratore o amministratore per creare o m
 
 1. Seleziona i puntini verticali (&vellip;) accanto all'origine dati che vuoi arricchire e seleziona **Arricchisci**.
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Pagina Arricchimento delle origini dati,":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Pagina delle origini dati con Arricchisci evidenziato":::
 
    La scheda **Individua** mostra le [opzioni di arricchimento supportate per le origini dati](#supported-data-source-enrichments).
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Pagina Arricchimento delle origini dati,":::
 
 1. Seleziona **Arricchisci i miei dati** per configurare un arricchimento dell'origine dati. Il nome dell'entità di output viene popolato automaticamente.
 

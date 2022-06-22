@@ -1,7 +1,7 @@
 ---
 title: Visualizzare profili cliente
 description: Ottieni una visualizzazione combinata dei dati cliente unificati.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755787"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947051"
 ---
 # <a name="customer-profiles"></a>Profili cliente
 
@@ -55,9 +55,9 @@ Puoi filtrare i clienti per i campi dell'entità *Cliente* . Simile alla ricerca
 
 Seleziona uno dei riquadri del cliente per aprire la **pagina Dettagli cliente**. Questa visualizzazione contiene informazioni unificate per il cliente selezionato. I dettagli del cliente includono il seguente contenuto:
 
-**Mattonella del profilo del cliente**: Questo riquadro mostra i diversi valori dell'entità *Customer* unificata. Se un campo non ha un valore per il profilo cliente selezionato, non verrà mostrato. La piastrella è strutturata in sezioni:
+**Mattonella del profilo del cliente**: Questo riquadro mostra i diversi valori dell'entità *Customer* unificata. Fatta eccezione per il campo dell'indirizzo, un campo non verrà visualizzato qualora non contenga alcun valore per il profilo cliente selezionato. La piastrella è strutturata in sezioni:
 
-- La prima sezione mostra un insieme predefinito di campi seguito da tutti i campi che fanno parte dell'indice di ricerca e filtro. Tutti i campi relativi all'indirizzo sono combinati in una sola riga se il profilo contiene tali campi.
+- La prima sezione mostra un insieme predefinito di campi seguito da tutti i campi che fanno parte dell'indice di ricerca e filtro. Tutti i campi relativi all'indirizzo sono combinati in un'unica riga, che viene mostrata anche se il profilo non contiene informazioni sull'indirizzo.
 - **Contatti per questo cliente**: Negli ambienti per i conti commerciali, vedrai tutti i contatti correlati per questo cliente come seconda sezione. Ogni contatto è mostrato con i suoi campi. I campi vuoti sono nascosti.
 - **Campi aggiuntivi**: Mostra i restanti campi del cliente selezionato, eccetto gli ID.
 - **ID**: Elenca tutti gli ID sotto il nome dell'entità corrispondente. I campi sono identificati come ID dalla loro semantica, che li categorizza come tali.

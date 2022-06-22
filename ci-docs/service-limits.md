@@ -1,23 +1,23 @@
 ---
-title: Limiti del servizio in Dynamics 365 Customer Insights
-description: Informazioni su limiti e restrizioni.
-ms.date: 09/03/2021
+title: Limiti del servizio in Customer Insights
+description: Conosci i limiti e le restrizioni nell'ambito del servizio SaaS Customer Insights.
+ms.date: 05/28/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e2e7fc3033c25646693831d4c4c800d84ae6d6da
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d1b761a5c9f67bfdc7c5b152132c618db3ea36a
+ms.sourcegitcommit: 78ef22cd39a1ebd7525f96829cd79d95f34438b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641767"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "8940673"
 ---
 # <a name="service-limits-in-customer-insights"></a>Limiti del servizio in Customer Insights
 
-In questo articolo vengono descritti i limiti predefiniti del servizio Customer Insights, che sono progettati per assicurare l'affidabilità e la stabilità del servizio. Tutte le richieste di modifiche possono essere effettuate tramite il [forum Idee](https://go.microsoft.com/fwlink/?linkid=2074172). 
+In questo articolo vengono descritti i limiti predefiniti del servizio Customer Insights, che sono progettati per assicurare l'affidabilità e la stabilità del servizio. Tutte le richieste di modifiche possono essere effettuate tramite il [forum Idee](https://go.microsoft.com/fwlink/?linkid=2074172).
 
 ## <a name="customer-insights"></a>Customer Insights
 
@@ -26,5 +26,8 @@ In questo articolo vengono descritti i limiti predefiniti del servizio Customer 
 | Segmenti, misure e previsioni | 300  | Il numero totale di [segmenti](segments.md), [misure](measures.md) e [previsioni](predictions.md) combinati non può superare 300.  |
 | Relazioni | 20 livelli di profondità sulle relazioni nei percorsi delle entità. | Quando si creano [segmenti](segments.md) o [misure](measures.md) utilizzando l'interfaccia del generatore, i percorsi delle entità possono avere fino a 20 hop di relazione tra l'entità di inizio e l'entità di destinazione.  |
 
+## <a name="fair-scheduling-of-jobs"></a>Pianificazione equa dei processi
+
+Customer Insights è un servizio SaaS che usa risorse di Azure condivise. I clienti tendono ad avere carichi di lavoro di intensità variabile e con piani diversi. Per garantire un accesso equo alle risorse sottostanti, ci assicuriamo che i processi di sistema vengano eseguiti in modo equo. Esempi di processi di sistema sono i processi relativi all'unificazione dei dati, agli aggiornamenti dei segmenti o al calcolo delle misure. La pianificazione equa ti protegge dalla messa in coda delle risorse qualora si verifichi è un picco di processi richiesti. Allo stesso tempo, Customer Insights non garantisce che tutti i processi in coda vengano elaborati in parallelo.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,95 +1,95 @@
 ---
 title: Arricchisci i profili dei clienti con dati località di Mappe di Azure
 description: Informazioni generali sull'arricchimento di prima parte di Mappe di Azure.
-ms.date: 08/31/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755359"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953633"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Arricchimento dei profili dei clienti con Mappe di Azure (anteprima)
 
-Mappe di Azure fornisce dati e servizi incentrati sulla località per offrire esperienze basate su dati geospaziali con informazioni sulla posizione integrate. I servizi di arricchimento dei dati di Mappe di Azure migliorano la precisione delle informazioni sulla posizione dei clienti. Offre funzionalità come la normalizzazione degli indirizzi e l'estrazione di latitudine e longitudine in Dynamics 365 Customer Insights.
+Mappe di Azure fornisce dati e servizi incentrati sulla posizione per offrire esperienze basate su dati geospaziali con informazioni sulla posizione integrate. I servizi di arricchimento dei dati di Mappe di Azure migliorano la precisione delle informazioni sulla posizione dei clienti. Offre funzionalità come la normalizzazione degli indirizzi e l'estrazione di latitudine e longitudine in Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per configurare l'arricchimento dei dati di Mappe di Azure, devono essere soddisfatti i seguenti prerequisiti:
+- Una sottoscrizione di Mappe di Azure attiva. Per ottenere una sottoscrizione, [iscriviti o ottieni una versione di prova gratuita](https://azure.microsoft.com/services/azure-maps/).
 
-- Devi disporre di una sottoscrizione attiva di Mappe di Azure. Per ottenere una sottoscrizione, puoi [iscriverti o ottenere una versione di prova gratuita](https://azure.microsoft.com/services/azure-maps/).
-
-- È disponibile una [connessione](connections.md) a Mappe di Azure *oppure* disponi di autorizzazioni di [amministratore](permissions.md#admin) e una chiave API di Mappe di Azure attiva.
-
-## <a name="configure-the-enrichment"></a>Configurare l'arricchimento
-
-1. Vai a **Dati** > **Arricchimento**. 
-
-1. Nel riquadro **Posizione** seleziona **Arricchisci i miei dati**.
-
-   :::image type="content" source="media/azure-maps-tile.png" alt-text="Riquadro Mappe di Azure.":::
-
-1. Seleziona una [connessione](connections.md) dall'elenco a discesa. Contatta un amministratore se non è disponibile alcuna connessione a Mappe di Azure. Se sei un amministratore, puoi [configurare la connessione per Mappe di Azure](#configure-the-connection-for-azure-maps). 
-
-1. Seleziona **Avanti** per confermare la selezione.
-
-1. Scegli il **set di dati del cliente** da arricchire con dati località di Mappe di Azure. Puoi selezionare l'entità **Cliente** per arricchire tutti i profili cliente unificati. In alternativa è possibile selezionare un'entità segmento per migliorare l'indirizzo solo nei profili cliente contenuti nel segmento.
-
-    :::image type="content" source="media/enrichment-azure-maps-configuration-customer-data-set.png" alt-text="Screenshot della scelta del set di dati cliente.":::
-
-1. Scegli se desideri mappare i campi all'indirizzo primario e/o secondario. È possibile specificare un mapping di campi per entrambi gli indirizzi e arricchire i profili per entrambi gli indirizzi separatamente, ad esempio un indirizzo dell'abitazione e uno dell'ufficio. Selezionare **Avanti**.
-
-1. Definisci quali campi dei tuoi profili unificati utilizzare per cercare i dati località corrispondenti in Mappe di Azure. I campi **Via 1** e **CAP** sono obbligatori per gli indirizzi primario e secondario selezionati. Per un'accuratezza della corrispondenza migliore, puoi aggiungere altri campi.
-
-   :::image type="content" source="media/enrichment-azure-maps-configuration.png" alt-text="Pagina di configurazione dell'arricchimento di Mappe di Azure.":::
-
-1. Seleziona **Avanti** per completare il mapping del campo.
-
-1. Valuta se vuoi modificare **Impostazioni avanzate**. Queste impostazioni vengono fornite per offrire la massima flessibilità per gestire casi d'uso avanzati, ma i valori predefiniti saranno adeguati nella maggior parte dei casi:
-   - **Tipo di indirizzi**: in base al comportamento predefinito, l'arricchimento restituirà la migliore corrispondenza di indirizzo anche se incompleto. Per ottenere solo indirizzi completi, ad esempio indirizzi che includono il numero civico, deseleziona tutte le caselle di controllo tranne **Indirizzi punti**. 
-   - **Lingua**: per impostazione predefinita, gli indirizzi vengono restituiti nella lingua dell'area geografica a cui l'indirizzo risulta associato. Per applicare una lingua di indirizzo standard, seleziona la lingua dal menu a discesa. Ad esempio, selezionando **Inglese** verrà restituito **Copenhagen, Denmark** anziché **København, Danmark**.
-
-1. Immetti un nome per l'arricchimento.
-
-1. Esamina le scelte effettuate e quindi seleziona **Salva arricchimento**.
+- Una [connessione](connections.md) di Mappe di Azure è [configurata](#configure-the-connection-for-azure-maps) da un amministratore.
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Configurare la connessione per Mappe di Azure
 
-Devi essere un amministratore in Customer Insights per configurare le connessioni. Seleziona **Aggiungi connessione** quando configuri un arricchimento o vai ad **Amministratore** > **Connessioni** e seleziona **Imposta** nel riquadro Mappe di Azure.
+Devi essere un [amministratore](permissions.md#admin) in Customer Insights e avere una chiave API di Mappe di Azure attiva.
 
-1. Nella casella **Nome visualizzato** immetti un nome per la connessione.
+1. Seleziona **Aggiungi connessione** quando configuri un arricchimento o vai ad **Amministratore** > **Connessioni** e seleziona **Imposta** nel riquadro Mappe di Azure.
 
-1. Fornisci una chiave API di Mappe di Azure valida.
+   :::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Pagina di configurazione della connessione di Mappe di Azure.":::
 
-1. Rivedi e fornisci il tuo consenso per **Conformità e privacy dei dati** selezionando la casella di controllo **Accetto**
+1. Immetti un nome per la connessione e una chiave API di Mappe di Azure valida.
 
-1. Seleziona **Verifica** per convalidare la configurazione.
+1. Rivedi e fornisci il tuo consenso per [Conformità e privacy dei dati](#data-privacy-and-compliance) selezionando **Accetto**.
 
-1. Dopo aver completato la verifica, seleziona **Salva**.
+1. Seleziona **Verifica** per convalidare la configurazione e quindi seleziona **Salva**.
 
-:::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Pagina di configurazione della connessione di Mappe di Azure.":::
+### <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
+
+Quando abiliti Dynamics 365 Customer Insights per trasmettere i dati a Mappe di Azure, consenti il trasferimento di dati al di fuori del limite di conformità per Dynamics 365 Customer Insights, inclusi i dati potenzialmente sensibili come i Dati Personali. Microsoft trasferirà tali dati su tua istruzione, ma sei tenuto a garantire che Mappe di Azure soddisfi qualsiasi obbligo di privacy o sicurezza che potresti avere. Per maggiori informazioni, vai a [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+L'amministratore di Dynamics 365 Customer Insights può rimuovere questo arricchimento in qualsiasi momento per interrompere l'utilizzo di questa funzionalità.
+
+## <a name="configure-the-enrichment"></a>Configurare l'arricchimento
+
+1. Vai a **Dati** > **Arricchimento** e selezionala scheda **Individua**.
+
+1. Seleziona **Arricchisci i miei dati** in **Posizione** nel riquadro Mappe di Microsoft Azure.
+
+   :::image type="content" source="media/azure-maps-tile.png" alt-text="Riquadro Mappe di Azure.":::
+
+1. Esamina la panoramica e quindi seleziona **Avanti**.
+
+1. Seleziona la connessione. Contatta un amministratore se non è disponibile alcuna connessione.
+
+1. Selezionare **Avanti**.
+
+1. Seleziona **Set di dati cliente** e scegli il profilo o il segmento che vuoi arricchire con i dati di Microsoft. L'entità *Cliente* arricchisce tutti i tuoi profili cliente se un segmento arricchisce solo i profili cliente contenuti in quel segmento.
+
+1. Definisci quale tipo di campi dei tuoi profili unificati usare per la corrispondenza: l'indirizzo primario e/o secondario. Puoi specificare un mapping del campo per entrambi gli indirizzi e arricchire i profili per entrambi gli indirizzi separatamente. Ad esempio, per un indirizzo di casa e un indirizzo di lavoro. Selezionare **Avanti**.
+
+1. Mappa i tuoi campi su dati località da Mappe di Azure. I campi **Via 1** e **Codice postale** sono obbligatori per l'indirizzo principale e/o secondario selezionato. Per una maggiore accuratezza di corrispondenza, aggiungi più campi.
+
+   :::image type="content" source="media/enrichment-azure-maps-attributes.png" alt-text="Mapping degli attributi di Mappe di Azure.":::
+
+1. Seleziona **Avanti** per completare il mapping del campo.
+
+1. Rivedi **Impostazioni avanzate** che offrono la massima flessibilità per gestire casi d'uso avanzati. Tuttavia, i seguenti valori predefiniti in genere non devono essere modificati.
+
+   - **Tipo di indirizzi**: la migliore corrispondenza per gli indirizzi viene restituita anche se è incompleta. Per ottenere solo indirizzi completi, ad esempio indirizzi che includono il numero civico, deseleziona tutte le caselle di controllo tranne **Indirizzi punti**.
+   - **Lingua** gli indirizzi vengono restituiti nella lingua in base all'area geografica dell'indirizzo. Per applicare una lingua di indirizzo standard, seleziona la lingua dal menu a discesa. Ad esempio, selezionando **Inglese** viene restituito **Copenhagen, Danimarca** anziché **København, Danmark**.
+   - **Numero massimo di risultati**: numero di risultati per indirizzo.
+
+1. Selezionare **Avanti**.
+
+1. Specifica un **Nome** per l'arricchimento e il **Nome entità di output**.
+
+1. Seleziona **Salva arricchimento** dopo aver esaminato le tue scelte.
+
+1. Seleziona **Esegui** per avviare il processo di arricchimento o chiudere per tornare alla pagina **Arricchimenti**.
 
 ## <a name="enrichment-results"></a>Risultati dell'arricchimento
 
-Per avviare il processo di arricchimento, seleziona **Esegui** dalla barra dei comandi. Puoi anche lasciare che il sistema esegua l'arricchimento automaticamente come parte di un [aggiornamento pianificato](system.md#schedule-tab). Il tempo di elaborazione dipenderà dalla dimensione dei dati del cliente e dai tempi di risposta dell'API.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Al termine del processo di arricchimento, potrai esaminare i dati dei profili dei clienti appena arricchiti in **I miei arricchimenti**. Inoltre, troverai l'ora dell'ultimo aggiornamento e il numero di profili arricchiti.
-
-Puoi accedere a una visualizzazione dettagliata di ciascun profilo arricchito selezionando **Visualizza dati arricchiti**.
+Il campo **Numero di clienti arricchiti per campo** fornisce un'analisi dettagliata della copertura di ciascun campo arricchito.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
-
-Quando abiliti Dynamics 365 Customer Insights per trasmettere i dati a Mappe di Azure, consenti il trasferimento di dati al di fuori del limite di conformità per Dynamics 365 Customer Insights, inclusi i dati potenzialmente sensibili come i Dati Personali. Microsoft trasferirà tali dati su tua istruzione, ma sei tenuto a garantire che Mappe di Azure soddisfi qualsiasi obbligo di privacy o sicurezza che potresti avere. Per maggiori informazioni, vai a [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-L'amministratore di Dynamics 365 Customer Insights può rimuovere questo arricchimento in qualsiasi momento per interrompere l'utilizzo di questa funzionalità.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

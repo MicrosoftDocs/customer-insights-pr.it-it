@@ -1,7 +1,7 @@
 ---
 title: Aggiornare le impostazioni di unificazione
 description: Aggiornare le regole duplicate, le regole di corrispondenza o i campi unificati nelle impostazioni di unificazione.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755595"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844045"
 ---
 # <a name="update-the-unification-settings"></a>Aggiornare le impostazioni di unificazione
 
@@ -43,8 +43,9 @@ Per rivedere o modificare le impostazioni di unificazione una volta creato un pr
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Screenshot della pagina Unifica dati con le opzioni Unifica evidenziate.":::
 
-   - Per aggiornare il profilo cliente unificato (con o senza dipendenze), vedi [Eseguire gli aggiornamenti al profilo del cliente](#run-updates-to-the-unified-customer-profile).
-   - Per valutare la qualità delle condizioni di corrispondenza senza aggiornare il profilo unificato, vedi [Esegui condizioni corrispondenti](#run-matching-conditions). L'opzione **Esegui solo condizioni corrispondenti** non viene visualizzata per una singola entità.
+   - [Esegui solo condizioni corrispondenti](#run-matching-conditions) per valutare rapidamente la qualità delle condizioni corrispondenti (regole di deduplicazione e di corrispondenza) senza aggiornare il profilo unificato. L'opzione **Esegui solo condizioni corrispondenti** non viene visualizzata per una singola entità.
+   - [Unifica profili cliente](#run-updates-to-the-unified-customer-profile) per eseguire condizioni corrispondenti e aggiornare l'entità dei profili cliente unificati senza influire sulle dipendenze (come arricchimenti, segmenti o misure). I processi dipendenti non vengono eseguiti, ma verranno aggiornati come [definito nel programma di aggiornamento](system.md#schedule-tab).
+   - [Unifica profili cliente e dipendenze](#run-updates-to-the-unified-customer-profile) per eseguire condizioni corrispondenti e aggiornare l'entità dei profili cliente unificati e tutte le dipendenze (come arricchimenti, segmenti o misure). Tutti i processi vengono rieseguiti automaticamente.
 
 ## <a name="edit-source-fields"></a>Modifica i campi di origine
 
@@ -135,11 +136,13 @@ Puoi riconfigurare e ottimizzare la maggior parte dei parametri di corrispondenz
 
 ## <a name="run-matching-conditions"></a>Esegui le condizioni corrispondenti
 
+Esegui solo condizioni corrispondenti esegue solo le regole di deduplicazione e di corrispondenza e aggiorna le entità *Deduplication_* e *ConflationMatchPair*.
+
 1. Nella pagina **Dati** > **Unifica** seleziona **Esegui solo condizioni corrispondenti**.
 
-   I riquadri **Record duplicati** e **Condizioni corrispondenti** mostrano **In coda** o **Aggiornamento**.
+   I riquadri **Record duplicati** e **Condizioni corrispondenti** mostrano lo stato **In coda** o **Aggiornamento**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Al termine del processo di abbinamento, seleziona **Modifica** nel riquadro **Condizioni corrispondenti**.
 
@@ -153,10 +156,12 @@ Puoi riconfigurare e ottimizzare la maggior parte dei parametri di corrispondenz
 
 1. Nella pagina **Dati** > **Unifica** seleziona:
 
-   - **Unifica profili cliente**: aggiorna l'entità del profilo cliente unificato senza influire sulle dipendenze (come arricchimenti, segmenti o misure). I processi dipendenti non vengono eseguiti, ma verranno aggiornati come [definito nel programma di aggiornamento](system.md#schedule-tab).
+   - **Unifica profili cliente**: esegue condizioni corrispondenti e aggiorna l'entità dei profili cliente unificati senza influire sulle dipendenze (come arricchimenti, segmenti o misure). I processi dipendenti non vengono eseguiti, ma verranno aggiornati come [definito nel programma di aggiornamento](system.md#schedule-tab).
 
-   - **Unifica profili cliente e dipendenze**: aggiorna il profilo unificato e tutte le dipendenze. Tutti i processi vengono rieseguiti automaticamente. Dopo che tutti i processi a valle sono stati completati, il profilo del cliente riflette i dati aggiornati.
+   - **Unifica profili cliente e dipendenze**: esegue condizioni corrispondenti e aggiorna l'entità dei profili cliente unificati e tutte le dipendenze. Tutti i processi vengono rieseguiti automaticamente. Dopo che tutti i processi a valle sono stati completati, il profilo del cliente riflette i dati aggiornati.
 
-   I riquadri **Record duplicati**, **Condizioni corrispondenti** e **Campi clienti unificati** mostrano **In coda** o **Aggiornamento**.
+   I riquadri **Record duplicati**, **Condizioni corrispondenti** e **Campi clienti unificati** mostrano lo stato **In coda** o **Aggiornamento**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+I risultati di un'esecuzione riuscita vengono visualizzati nella pagina **Unifica** che mostra il numero di profili cliente unificati.

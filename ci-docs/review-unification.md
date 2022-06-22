@@ -1,7 +1,7 @@
 ---
 title: Rivedere l'unificazione dei dati
 description: Rivedi i passaggi di unificazione dei dati, crea profili cliente unificati ed esamina i risultati
-ms.date: 05/04/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4c709dfb55bf079dd2fe99e41adb4c77c2bece4b
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741722"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844091"
 ---
 # <a name="review-data-unification"></a>Rivedere l'unificazione dei dati
 
@@ -32,11 +32,13 @@ Quest'ultimo passaggio del processo di unificazione mostra un riepilogo dei pass
 
 1. Seleziona **Modifica** per una qualsiasi delle fasi di unificazione dei dati per rivedere e apportare modifiche.
 
-1. Al termine dell'operazione, seleziona **Crea profili cliente**. Durante la creazione del profilo cliente unificato viene visualizzata la pagina **Unifica**. L'algoritmo di unificazione richiede tempo per essere completato e non è possibile modificare la configurazione fino al completamento.
+1. Al termine dell'operazione, seleziona **Crea profili cliente**. Durante la creazione del profilo cliente unificato viene visualizzata la pagina **Unifica**. Tutti i riquadri tranne **Campi di origine** mostrano lo stato **In coda** o **In aggiornamento**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Screenshot della pagina Unifica con i riquadri che mostrano lo stato In coda o In aggiornamento.":::
 
-Al termine del processo di unificazione, l'entità del profilo cliente unificato denominata *Cliente* viene elencata nella pagina **Entità** nella sezione **Profili**. La prima esecuzione di unificazione crea l'entità unificata *Cliente*. Tutte le esecuzioni successive espandono quell'entità.
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+L'algoritmo di unificazione richiede tempo per essere completato e non è possibile modificare la configurazione fino al completamento. Al termine del processo di unificazione, l'entità del profilo cliente unificato denominata *Cliente* viene elencata nella pagina **Entità** nella sezione **Profili**. La prima esecuzione di unificazione crea l'entità unificata *Cliente*. Tutte le esecuzioni successive espandono quell'entità.
 
 ## <a name="review-the-results-of-data-unification"></a>Esamina i risultati dell'unificazione dei dati
 

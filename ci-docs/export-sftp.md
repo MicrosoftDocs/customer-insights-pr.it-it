@@ -1,19 +1,19 @@
 ---
 title: Esportare i dati di Customer Insights in host SFTP (video)
 description: Scopri come configurare la connessione ed esportare in una posizione SFTP.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646758"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947189"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Esportare segmenti e altri dati su SFTP (anteprima)
 
@@ -28,8 +28,8 @@ Utilizza i dati dei tuoi clienti in applicazioni di terze parti esportandoli in 
 ## <a name="known-limitations"></a>Limitazioni note
 
 - Le destinazioni SFTP dietro i firewall non sono attualmente supportate. 
-- Il tempo di esecuzione di un'esportazione dipende dalle prestazioni del sistema. Consigliamo due core CPU e 1 GB di memoria come configurazione minima del server. 
-- L'esportazione di entità con un massimo di 100 milioni di profili cliente può richiedere 90 minuti se si utilizza la configurazione minima consigliata di due core CPU e 1 GB di memoria. 
+- Il tempo di esecuzione di un'esportazione dipende dalle prestazioni del sistema. Consigliamo due core CPU e 1 GB di memoria come configurazione minima del server.
+- L'esportazione di entità con un massimo di 100 milioni di profili cliente può richiedere 90 minuti se si utilizza la configurazione minima consigliata di due core CPU e 1 GB di memoria.
 
 ## <a name="set-up-connection-to-sftp"></a>Configurare la connessione a SFTP
 
@@ -64,13 +64,17 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 1. Seleziona le entità, ad esempio i segmenti, che vuoi esportare.
 
    > [!NOTE]
-   > Ogni entità selezionata verrà suddivisa in un massimo di cinque file di output quando esportata. 
+   > Ogni entità selezionata verrà suddivisa in un massimo di cinque file di output quando esportata.
 
 1. Seleziona **Salva**.
 
 Il salvataggio di un'esportazione non esegue l'esportazione immediatamente.
 
-L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab). Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand). 
+L'esportazione viene eseguita con ogni [aggiornamento pianificato](system.md#schedule-tab).
+Puoi anche [esportare i dati su richiesta](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> L'esportazione di entità che contengono una grande quantità di dati può portare a più file CSV nella stessa cartella per ogni esportazione. La suddivisione delle esportazioni avviene per motivi di prestazioni, al fine di ridurre al minimo il tempo necessario per il completamento di un'esportazione.
 
 ## <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
 

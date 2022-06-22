@@ -1,19 +1,19 @@
 ---
-title: Funzionalità nuove e future
+title: Funzionalità nuove e aggiornate
 description: Informazioni su nuove funzionalità, miglioramenti e correzioni di bug.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833635"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843352"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novità di Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Gli aggiornamenti vengono implementati in base all'area geografica. Quindi alcun
 > [!TIP]
 > Per inviare e votare funzionalità richieste e suggerimenti di prodotto, vai al [portale Ideas dell'applicazione Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Aggiornamenti di maggio 2022
+
+Gli aggiornamenti di maggio 2022 includono nuove funzionalità, aggiornamenti delle prestazioni e correzioni di bug.
+
+### <a name="updated-data-unification-experience"></a>Esperienza di unificazione dei dati aggiornata
+
+ L'unificazione dei dati ti consente di unificare origini dati un tempo disparate in un unico set di dati principali che fornisce una vista unificata di tali dati. I dati possono essere unificati in una singola entità o in più entità. In primo luogo, [seleziona entità e campi di origine](map-entities.md), [rimuovi record duplicati](remove-duplicates.md), specifica regole per le [condizioni corrispondenti](match-entities.md) e definisci quali [campi includere nei profili cliente unificati](merge-entities.md).
+
+Per altre informazioni, vedi [Panoramica dell'unificazione dei dati](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Home page aggiornata in Customer Insights
+
+La pagina **Home** ti guida nel processo di configurazione delle funzioni chiave e fornisce una panoramica di segmenti, misure e dati di arricchimento. Abbiamo aggiornato l'esperienza per fornire immediatamente informazioni più pertinenti.
+
+Per altre informazioni, vedi [Scopri Customer Insights](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Tenere traccia dell'utilizzo di un segmento
+
+Puoi ora [tenere traccia dell'utilizzo di un segmento](segments.md#track-usage-of-a-segment) nelle app basate sull'organizzazione Dataverse connessa a Customer Insights. Per i [Segmenti di Customer Insights utilizzati nei percorsi del cliente di Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), il sistema ti informa sull'utilizzo di quel segmento.
+
+### <a name="export-to-criteo"></a>Esportazione in Criteo
+
+Criteo è una piattaforma online che aiuta gli utenti a gestire il digital advertising. Puoi esportare segmenti di profili cliente unificati per generare campagne, fornire e-mail marketing e utilizzare gruppi specifici di clienti con Criteo.
+
+Per altre informazioni, vedi [Esportazione di segmenti in Criteo (anteprima)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Struttura della documentazione migliorata per la creazione dell'ambiente
+
+Abbiamo aggiornato i documenti della Guida relativi alla creazione e alla gestione degli ambienti in Customer Insights. Gli articoli sono ora raggruppati nel nodo Ambienti nel sommario. Gli articoli di cui è stata modificata la struttura forniscono maggiori indicazioni sui diversi modi per configurare gli ambienti e ottenere una struttura più chiara. Se hai commenti da condividere, informaci tramite i controlli presenti verso la fine degli articoli della Guida.
+
+Per altre informazioni, vedi [Come creare un nuovo ambiente](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Aggiornamenti di aprile 2022
 

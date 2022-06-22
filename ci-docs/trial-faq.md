@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833773"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011892"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Domande frequenti sulla versione di valutazione di Dynamics 365 Customer Insights
 
@@ -68,7 +68,7 @@ Dopo aver effettuato l'accesso alla tua istanza a pagamento di Customer Insights
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Quali sono i limiti e le quote della versione di valutazione?
 
-- Non è possibile usare il proprio account Azure Data Lake Storage per archiviare i dati di output in una versione di prova di Customer Insights. Tuttavia, puoi inserire dati da un account di archiviazione di Data Lake.
+- Non puoi usare il tuo account Azure Data Lake Storage per archiviare i dati di output in una versione di prova di Customer Insights. Tuttavia, puoi inserire dati da un account di archiviazione di Data Lake Storage.
 - È possibile memorizzare fino a 3 GB di dati nell'ambiente Dataverse che viene fornito automaticamente quando si avvia una prova di Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Domande specifiche di Customer Insights
@@ -83,7 +83,7 @@ La maggior parte delle funzionalità di Customer Insights sono disponibili nella
 
 Le funzionalità seguenti **non sono disponibili**:
 
-- Non puoi creare nuovi ambienti che utilizzano il tuo account di storage Azure Data Lake.
+- Non puoi creare nuovi ambienti che usano il tuo account Azure Data Lake Storage.
 - Non puoi eliminare l'ambiente di valutazione.
 
 ### <a name="how-long-does-the-trial-last"></a>Quanto dura il processo?

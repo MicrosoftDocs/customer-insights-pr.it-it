@@ -1,19 +1,19 @@
 ---
 title: Esportare i dati di Customer Insights in Snapchat
 description: Scopri come configurare la connessione ed esportare in Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647149"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947281"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Esportare segmenti in Snapchat (anteprima)
 
@@ -21,7 +21,8 @@ Esporta segmenti di profili cliente unificati in Snapchat e utilizzali per la pu
 
 ## <a name="prerequisites-for-a-connection"></a>Prerequisiti per una connessione
 
--   Hai un [account Snapchat Business](https://business.snapchat.com/), un [account Snapchat Ads](https://ads.snapchat.com/) e le corrispondenti credenziali di amministratore.
+-   Hai un [account Snapchat Business](https://business.snapchat.com/), un [account Snapchat Ads](https://ads.snapchat.com/) e le corrispondenti credenziali di amministratore. Devi essere almeno un membro di un account organizzazione e un gestore dati di uno specifico account di annunci. 
+-   Hai almeno un destinatario in Snapchat Audience Manager del tipo SAM (Snap Audience Match). 
 -   Hai [segmenti configurati](segments.md) in Customer Insights.
 -   I profili cliente unificati nei segmenti esportati contengono un campo che rappresenta un indirizzo e-mail.
 
@@ -60,7 +61,7 @@ Puoi configurare questa esportazione se hai accesso a una connessione di questo 
 
 1. Nel campo **Connessione per esportazione** seleziona una connessione dalla sezione Snapchat. Se non vedi il nome di questa sezione, non sono disponibili connessioni di questo tipo.
 
-1. Inserisci l'[**ID gruppo di destinatari Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. Immetti [**ID segmento/destinatario Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences). L'ID del destinatario può essere trovato nell'URL dopo aver selezionato il destinatario in Snapchat Audience Manager. 
 
 1. Nella sezione **Corrispondenza dati** , nel campo **Email** , seleziona il campo che rappresenta l'indirizzo e-mail del cliente. È necessario per esportare i segmenti in Snapchat.
 

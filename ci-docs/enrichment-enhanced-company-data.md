@@ -1,32 +1,31 @@
 ---
 title: Ottimizzazione dei dati aziendali
 description: Arricchisci e normalizza i dati aziendali con i modelli Microsoft.
-ms.date: 04/22/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6aa38afa7f92b512d19b4967fc1652b5e43ad094
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4247d59806468907d93fc7848231ec5a2985580e
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646515"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953954"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Arricchimento dei profili aziendali con dati aziendali ottimizzati
 
 Usa i modelli Microsoft e i dati aziendali compilati per correggere, integrare e standardizzare i profili aziendali. Useremo il [formato Common Data Model](/common-data-model/schema/core/applicationcommon/account) per una migliore precisione e informazioni dettagliate.
 
-Puoi anche [migliorare i dati aziendali sulle origini dati](data-sources-enrichment.md) per migliorare l'accuratezza della corrispondenza nel processo di unificazione dei dati. 
+Puoi anche [migliorare i dati aziendali sulle origini dati](data-sources-enrichment.md) per migliorare l'accuratezza della corrispondenza nel processo di unificazione dei dati.
 
 Per le società pubbliche negli Stati Uniti sono disponibili informazioni come ricavi, titoli azionari, settore e altro ancora.  
 
 ## <a name="how-we-enhance-company-data"></a>Come ottimizziamo i dati aziendali
 
 Il nostro modello prevede un processo in due fasi per l'ottimizzazione del profilo aziendale. Innanzitutto, normalizza il nome dell'azienda. Ad esempio, *Microsoft Corp* sarà corretto e standardizzato in *Microsoft Corporation*. Cerca di trovare una corrispondenza nei dati aziendali compilati da Microsoft. Se viene trovata una corrispondenza, arricchiamo il profilo aziendale con le informazioni dei nostri dati aziendali compilati, incluso il nome dell'azienda.
-
 
 ### <a name="example"></a>Esempio
 
@@ -50,52 +49,52 @@ Microsft
 
 ## <a name="limitations"></a>Limiti
 
-Esistono alcune limitazioni con i dati ottimizzati. Gli elementi nell'elenco di seguito non sono supportati dal modello.
+Il modello non:
 
-1.  Conferma l'identità dell'azienda. Non verifichiamo se l'input è un'organizzazione esistente né che un'azienda utilizza l'output come nome standard.
-2.  Copri nel complesso le aziende a livello globale. I dati aziendali compilati di Microsoft hanno una copertura globale, ma offrono la maggior parte della copertura in Australia, Canada, Regno Unito e Stati Uniti.
-3.  Standardizza gli indirizzi aziendali a livello globale. Attualmente è supportata la standardizzazione degli indirizzi nei paesi o nelle aree geografiche seguenti: Australia, Canada, Francia, Germania, Italia, Giappone, Regno Unito e Stati Uniti.
-4.  Garantisci l'accuratezza o l'aggiornamento dei dati. Poiché le informazioni aziendali cambiano spesso, non possiamo garantire che i dati aziendali ottimizzati forniti siano sempre esatti o aggiornati.
+- Conferma l'identità dell'azienda. Non verifichiamo se l'input è un'organizzazione esistente né che un'azienda utilizza l'output come nome standard.
+- Copri nel complesso le aziende a livello globale. I dati aziendali compilati di Microsoft hanno una copertura globale, ma offrono la maggior parte della copertura in Australia, Canada, Regno Unito e Stati Uniti.
+- Standardizza gli indirizzi aziendali a livello globale. Attualmente è supportata la standardizzazione degli indirizzi nei paesi o nelle aree geografiche seguenti: Australia, Canada, Francia, Germania, Italia, Giappone, Regno Unito e Stati Uniti.
+- Garantisci l'accuratezza o l'aggiornamento dei dati. Poiché le informazioni aziendali cambiano spesso, non possiamo garantire che i dati aziendali ottimizzati forniti siano sempre esatti o aggiornati.
 
 ## <a name="configure-the-enrichment"></a>Configurare l'arricchimento
 
-1. Vai a **Dati** > **Arricchimento**.
+1. Vai a **Dati** > **Arricchimento** e selezionala scheda **Individua**.
 
 1. Seleziona **Arricchisci i miei dati** sul riquadro **Dati aziendali ottimizzati**.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Riquadro di arricchimento nell'hub di arricchimento per i dati aziendali.":::
 
-1. Seleziona il **set di dati del cliente** e scegli l'entità contenente gli indirizzi che vuoi arricchire. Puoi selezionare l'entità *Cliente* per arricchire gli indirizzi in tutti i profili dei clienti o selezionare un'entità segmento per arricchire gli indirizzi solo nei profili dei clienti contenuti in quel segmento.
+1. Esamina la panoramica e quindi seleziona **Avanti**.
+
+1. Seleziona **Set di dati cliente** e scegli il profilo o il segmento che vuoi arricchire. L'entità *Cliente* arricchisce tutti i tuoi profili cliente se un segmento arricchisce solo i profili cliente contenuti in quel segmento.
 
 1. Seleziona il tipo di campi dei tuoi profili aziendali da usare per la corrispondenza con i dati aziendali compilati di Microsoft. Questa selezione influenzerà i campi di mapping a cui hai accesso nel passaggio successivo.
 
-1.  Mappa i campi aziendali dalla tua entità cliente unificata. Maggiore è il numero di identificatori chiave e campi mappati, maggiore è la probabilità di ottenere corrispondenze migliori.
+1. Selezionare **Avanti**.
+
+1. Mappa i tuoi campi società ai dati società di Microsoft. Per una maggiore accuratezza di corrispondenza, aggiungi più campi.
 
     :::image type="content" source="media/enhanced-company-data-mapping.png" alt-text="Fase di mapping dei dati durante la configurazione di un miglioramento aziendale.":::
 
 1. Seleziona **Avanti** per completare il mapping del campo.
 
-1. Fornisci un nome per l'arricchimento e l'entità di output.
+1. Fornisci un **nome** per l'arricchimento e l' **entità di output**.
 
 1. Seleziona **Salva arricchimento** dopo aver esaminato le tue scelte.
 
+1. Seleziona **Esegui** per avviare il processo di arricchimento o chiudere per tornare alla pagina **Arricchimenti**.
+
 ## <a name="enrichment-results"></a>Risultati dell'arricchimento
 
-Per avviare il processo di arricchimento, seleziona **Esegui** dalla barra dei comandi. Puoi anche lasciare che il sistema esegua l'arricchimento automaticamente come parte di un [aggiornamento pianificato](system.md#schedule-tab). Il tempo di elaborazione dipende dalle dimensioni dei dati del cliente.
-
-Al termine del processo di arricchimento, puoi rivedere i dati dei profili cliente appena arricchiti in **I miei arricchimenti**. Inoltre, troverai l'ora dell'ultimo aggiornamento e il numero di profili arricchiti.
-
-Puoi vedere un esempio dei dati arricchiti nel riquadro **Anteprima clienti arricchita**. Seleziona **Visualizza altro** e seleziona la scheda **Dati** per accedere a una visualizzazione dettagliata di ciascun profilo arricchito.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ### <a name="overview-card"></a>Scheda panoramica
 
-La scheda panoramica mostra i dettagli sulla copertura dell'arricchimento. 
+Il riquadro **Panoramica modifiche clienti** mostra i dettagli sulla copertura dell'arricchimento
 
-* **Società elaborate e modificate**: il numero di profili società che sono stati arricchiti.
-
-* **Società elaborate e non modificate**: il numero di profili società che sono stati riconosciuti ma non modificati. In genere si verifica quando i dati di input sono validi e non possono essere migliorati dall'arricchimento.
-
-* **Società non elaborate e non modificate**: il numero di profili società che sono stati riconosciuti ma non riconosciuti. Solitamente si verifica per dati di input non validi o non supportati dall'arricchimento.
+- **Società elaborate e modificate**: il numero di profili società che sono stati arricchiti.
+- **Società elaborate e non modificate**: il numero di profili società che sono stati riconosciuti ma non modificati. In genere si verifica quando i dati di input sono validi e non possono essere migliorati dall'arricchimento.
+- **Società non elaborate e non modificate**: il numero di profili società che non sono stati riconosciuti. Solitamente si verifica per dati di input non validi o non supportati dall'arricchimento.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

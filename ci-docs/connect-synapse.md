@@ -1,7 +1,7 @@
 ---
 title: Inserire dati da Azure Synapse Analytics
 description: Usa un database in Azure Synapse come origine dati in Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7c758dccf7ea34dd7b8f80d05eff1ed12030526f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646866"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011432"
 ---
-# <a name="connect-an-azure-synapse-data-source-preview"></a>Collegare un'origine dati Azure Synapse (anteprima)
+# <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Collegare un'origine dati Azure Synapse Analytics (anteprima)
 
 Azure Synapse Analytics è un servizio di analisi aziendale che accelera il tempo per ottenere informazioni dettagliate tra i data warehouse e i sistemi di big data. Azure Synapse Analytics riunisce il meglio delle tecnologie SQL utilizzate nel data warehousing aziendale, le tecnologie Spark utilizzate per i big data, Esplora dati per l'analisi di log e serie temporali, Pipeline per l'integrazione dei dati e ETL/ELT e una profonda integrazione con altri servizi di Azure come Power BI, Cosmos DB e AzureML.
 
@@ -24,16 +24,14 @@ Per ulteriori informazioni, vedi [Panoramica di Azure Synapse](/azure/synapse-an
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-I seguenti prerequisiti devono essere soddisfatti per configurare la connessione da Dynamics 365 Customer Insights ad Azure Synapse.
-
 > [!IMPORTANT]
 > Assicurati di impostare tutte le **assegnazioni di ruoli** come descritto.  
 
-## <a name="prerequisites-in-customer-insights"></a>Prerequisiti in Customer Insights
+**In Customer Insights**:
 
 * Hai un ruolo di **amministratore** in Customer Insights. Scopri di più sulle [autorizzazioni utente in Customer Insights](permissions.md#assign-roles-and-permissions).
 
-In Azure: 
+**In Azure**:
 
 - Una sottoscrizione di Azure attiva.
 
@@ -47,7 +45,7 @@ In Azure:
 
 - In Azure Synapse workspace, all'*entità servizio per Customer Insights* deve essere assegnato il ruolo di **amministratore di Synapse**. Per ulteriori informazioni, vedi [Come impostare il controllo degli accessi per l'area di lavoro Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="connect-to-data-lake-databases-in-azure-synapse-analytics"></a>Connettersi ai database data lake in Azure Synapse Analytics
+## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Connettersi ai database data lake in Azure Synapse Analytics
 
 1. Vai a **Dati** > **Origini dati**.
 
@@ -55,14 +53,16 @@ In Azure:
 
 1. Scegli il metodo **Azure Synapse Analytics (Anteprima)**.
 
-1. Fornisci un **Nome** per l'origine dati e seleziona **Avanti** per creare l'origine dati. 
+   :::image type="content" source="media/data_sources_synapse.png" alt-text="Finestra di dialogo per la connessione ai dati di Synapse Analytics":::
+  
+1. Immetti un **Nome** per l'origine dati e una **Descrizione** opzionale.
 
 1. Scegli una [connessione disponibile](connections.md) ad Azure Synapse Analytics o creane una nuova.
 
-1. Scegli un **Lake Database** dall'area di lavoro connessa nella connessione Azure Synapse Analytics selezionata e selezionaa **Avanti**.
+1. Scegli un **Database** dall'area di lavoro connessa nella connessione Azure Synapse Analytics selezionata e seleziona **Avanti**.
 
-1. Seleziona le entità da inserire dal database connesso. 
+1. Seleziona le entità da inserire dal database connesso, quindi **Aventi**.
 
-1. Facoltativamente, scegli le entità di dati su cui consentire la profilazione dei dati. 
+1. Facoltativamente, scegli le entità di dati su cui consentire la profilazione dei dati.
 
-1. Seleziona **Salva** per applicare la selezione e avviare l'inserimento dei dati dalla tua origine dati appena creata e collegata alle tabelle del Lake database in Azure Synapse Analytics.
+1. Seleziona **Salva** per applicare la selezione e avviare l'inserimento dei dati dalla tua origine dati appena creata e collegata alle tabelle del Lake database in Azure Synapse Analytics. Verrà aperta la pagina **Origine dati** che mostra la nuova origine dati con stato **Aggiornamento in corso**.

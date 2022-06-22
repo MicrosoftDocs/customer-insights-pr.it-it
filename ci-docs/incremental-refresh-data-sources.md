@@ -1,26 +1,26 @@
 ---
-title: Aggiornamento incrementale per le origini dati basate su Power Query
-description: Aggiorna dati nuovi e aggiornati per origini dati di grandi dimensioni basate su Power Query.
-ms.date: 12/06/2021
-ms.reviewer: mhart
+title: Aggiornamento incrementale per le origini dati di Power Query e Azure Data Lake
+description: Aggiorna dati nuovi e aggiornati per origini dati di grandi dimensioni in base alle origini dati di Power Query o Azure Data Lake.
+ms.date: 05/30/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 3d21baf9804f300802b066df0183fc8f01abba9a
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647189"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9012030"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Aggiornamento incrementale per le origini dati basate su Power Query
+# <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Aggiornamento incrementale per le origini dati di Power Query e Azure Data Lake
 
-Questo articolo illustra come configurare l'aggiornamento incrementale per le origini dati basate su Power Query.
+Questo articolo illustra come configurare l'aggiornamento incrementale per le origini dati in base a Power Query o Azure Data Lake.
 
 L'aggiornamento incrementale per le origini dati offre i seguenti vantaggi:
 
@@ -28,13 +28,11 @@ L'aggiornamento incrementale per le origini dati offre i seguenti vantaggi:
 - **Maggiore affidabilità** - Con aggiornamenti più piccoli, non è necessario mantenere le connessioni a sistemi di origine volatili per lungo tempo, riducendo il rischio di problemi di connessione.
 - **Utilizzo ridotto delle risorse** - L'aggiornamento di un solo sottoinsieme dei dati totali comporta un uso più efficiente delle risorse di elaborazione e riduce l'impatto ambientale.
 
-## <a name="configure-incremental-refresh"></a>Configurare l'aggiornamento incrementale
+## <a name="configure-incremental-refresh-for-data-sources-based-on-power-query"></a>Configurare l'aggiornamento incrementale per le origini dati in base a Power Query
 
 Customer Insights consente l'aggiornamento incrementale per le origini dati importate tramite Power Query che supportano l'inserimento incrementale. Ad esempio, i database SQL di Azure con campi di data e ora, che indicano quando è stato effettuato l'ultimo aggiornamento dei record di dati.
 
 1. [Crea una nuova origine dati basata su Power Query](connect-power-query.md).
-
-1. Immetti un **Nome** per l'origine dati.
 
 1. Seleziona un'origine dati che supporta l'aggiornamento incrementale, come il [database SQL di Azure](/power-query/connectors/azuresqldatabase).
 
@@ -48,7 +46,7 @@ Customer Insights consente l'aggiornamento incrementale per le origini dati impo
 
 1. In **Impostazioni aggiornamento incrementale**, configurerai l'aggiornamento incrementale di tutte le entità selezionate durante la creazione dell'origine dati.
 
-   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurare le entità in un origine dati per l'aggiornamento incrementale.":::
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurare le impostazioni di aggiornamento incrementale.":::
 
 1. Seleziona un'entità e fornisci i seguenti dettagli:
 
@@ -58,5 +56,31 @@ Customer Insights consente l'aggiornamento incrementale per le origini dati impo
 
 1. Seleziona **Salva** per completare la creazione dell'origine dati. L'aggiornamento iniziale dei dati sarà un aggiornamento completo. Successivamente, l'aggiornamento incrementale dei dati avviene come configurato nel passaggio precedente.
 
+## <a name="configure-incremental-refresh-for-azure-data-lake-data-sources"></a>Configurare l'aggiornamento incrementale per le origini dati di Azure Data Lake
+
+Customer Insights consente l'aggiornamento incrementale per le origini dati collegate a Azure Data Lake Storage. Per usare l'inserimento e l'aggiornamento incrementali per un'entità, configura tale entità quando aggiungi l'origine dati Azure Data Lake o versioni successive durante la modifica dell'origine dati. La cartella dei dati entità deve contenere le seguenti cartelle:
+
+- **FullData**: cartella con file di dati contenenti record iniziali
+- **IncrementalData**: cartella con le cartelle della gerarchia di data/ora in formato **aaaa/mm/gg/hh** contenente gli aggiornamenti incrementali. **Hhh** rappresenta l'ora UTC degli aggiornamenti e contiene le cartelle **Upserts** e **Deletes**. **Upserts** contiene file di dati con aggiornamenti di record esistenti o nuovi record. **Deletes** contiene file di dati con i record da rimuovere.
+
+1. Quando aggiungi o modifichi un'origine dati, vai al riquadro **Attributi** per l'entità.
+
+1. Rivedi gli attributi. Assicurati che un attributo della data di creazione o dell'ultimo aggiornamento sia impostato con *dateTime* per **Formato dati** e *Calendari.Date* per **Tipo semantico**. Modifica l'attributo se necessario e seleziona **Fatto**.
+
+1. Nel riquadro **Seleziona entità** modifica l'entità. La casella di controllo **Inserimento incrementale** è selezionata.
+
+   :::image type="content" source="media/ADLS_inc_refresh.png" alt-text="Configurare le entità in un origine dati per l'aggiornamento incrementale.":::
+
+   1. Passa alla cartella radice che contiene file csv o parquet per i dati completi, upsert dei dati incrementali ed eliminazioni di dati incrementali.
+   1. Immetti l'estensione per i dati completi e per entrambi i file (\.csv o \.parquet) incrementali.
+   1. Seleziona **Salva**.
+
+1. In **Ultimo aggiornamento** seleziona l'attributo timestamp.
+
+1. Se **Chiave primaria** non è selezionato, seleziona la chiave primaria. La chiave primaria è un attributo univoco per l'entità. Affinché un attributo sia una chiave primaria valida, non deve includere valori duplicati, valori mancanti o valori null. Gli attributi del tipo di dati String, Integer e GUID sono supportati come chiavi primarie.
+
+1. Seleziona **Chiudi** per salvare e chiudere il riquadro.
+
+1. Continua con l'aggiunta o la modifica dell'origine dati.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
