@@ -1,5 +1,5 @@
 ---
-title: Arricchisci i profili dei clienti con i dati di Microsoft Office 365
+title: Arricchire i profili dei clienti con i dati di Microsoft Office 365 (anteprima)
 description: Utilizza i dati proprietari di Microsoft Office per arricchire i profili dei tuoi clienti con dati di coinvolgimento.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954138"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055679"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Arricchisci i profili dei clienti con i dati di coinvolgimento (anteprima)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Arricchire i profili dei clienti con i dati di Microsoft Office 365 (anteprima)
 
 Usa i dati di Microsoft Office 365 per arricchire i profili del tuo account cliente con approfondimenti sul coinvolgimento attraverso app di Office 365. I dati di coinvolgimento sono costituiti da e-mail e attività di riunione, che vengono aggregati a livello di account. Ad esempio, il numero di e-mail da un account aziendale o il numero di riunioni con l'account. Non sono disponibili dati sui singoli utenti.
 
@@ -75,7 +75,7 @@ Seleziona **Esegui** per avviare il processo di arricchimento.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Risultati dell'arricchimento
+## <a name="view-enrichment-results"></a>Visualizzare i risultati dell'arricchimento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Questa è l'entità *Office*. L'entità *Office_UserEntity* contiene gli ID di Active Directory per gli indirizzi e-mail scelti durante la configurazione dell'arricchimento.
 

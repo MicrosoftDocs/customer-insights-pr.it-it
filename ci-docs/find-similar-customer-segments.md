@@ -1,5 +1,5 @@
 ---
-title: Trovare clienti simili con l'intelligenza artificiale (video)
+title: Trovare clienti simili con l'intelligenza artificiale (anteprima) (video)
 description: Trova segmenti di clienti simili con l'intelligenza artificiale.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
@@ -12,14 +12,14 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 7877349817829f7486a63a1355a81361e1cb2c13
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646907"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054806"
 ---
-# <a name="similar-customers-preview"></a>Clienti simili (anteprima)
+# <a name="find-similar-customers-with-ai-preview"></a>Trovare clienti simili con IA (anteprima)
 
 Questa funzione ti consente di trovare clienti simili nella tua base di clienti usando l'intelligenza artificiale. Devi avere almeno un segmento creato per utilizzare questa funzione. L'espansione dei criteri di un segmento esistente consente di trovare clienti simili a quel segmento.
 

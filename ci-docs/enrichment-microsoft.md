@@ -1,5 +1,5 @@
 ---
-title: Arricchire i profili dei clienti con i dati su marchi e interessi di Microsoft
+title: Arricchire i profili dei clienti con i dati su marchi e interessi di Microsoft (anteprima)
 description: Usa i dati proprietari di Microsoft per arricchire i dati dei tuoi clienti con affinità e share of voice.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953770"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081501"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Arricchisci i profili dei clienti con affinità e share of voice (anteprima)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Arricchire i profili dei clienti con i dati su marchi e interessi di Microsoft (anteprima)
 
 Usa i dati proprietari di Microsoft per arricchire i dati dei tuoi clienti con affinità di marchio, affinità di interessi e share of voice (SoV). Queste affinità e SoV si basano sui dati di persone i cui dati demografici sono simili a quelli dei tuoi clienti. Queste informazioni ti aiutano a comprendere e segmentare meglio i tuoi clienti in base alle loro affinità o SoV a marchi e interessi specifici.
 
@@ -104,7 +104,7 @@ Attualmente supportiamo le seguenti opzioni di paese/area geografica: Australia,
 
    Arricchendo i profili, arricchiremo tutti i profili dei clienti per i quali otteniamo dati per i marchi e gli interessi selezionati, inclusi i profili che non si trovano nel paese o nell'area geografica selezionata. Ad esempio, se hai selezionato la Germania, arricchiremo i profili situati negli Stati Uniti se abbiamo dati disponibili per i marchi e gli interessi selezionati negli Stati Uniti.
 
-## <a name="enrichment-results"></a>Risultati dell'arricchimento
+## <a name="view-enrichment-results"></a>Visualizzare i risultati dell'arricchimento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Arricchimento per l'ottimizzazione degli indirizzi (video)
+title: Arricchire i profili dei clienti con indirizzi avanzati (video)
 description: Arricchisci e normalizza le informazioni sugli indirizzi dei profili dei clienti con i modelli Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,14 +14,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953816"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081225"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Arricchimento dei profili dei clienti con indirizzi avanzati
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>Arricchire i profili dei clienti con indirizzi avanzati
 
 Gli indirizzi nei tuoi dati possono essere non strutturati, incompleti o errati. Usa i modelli di Microsoft per normalizzare e arricchire i tuoi indirizzi nel [formato Common Data Model](/common-data-model/schema/core/applicationcommon/address) per una migliore precisione e informazioni dettagliate.
 
@@ -101,7 +101,7 @@ Attualmente supportiamo indirizzi di arricchimento in questi paesi o aree geogra
 
 1. Seleziona **Salva arricchimento** dopo aver esaminato le tue scelte.
 
-## <a name="enrichment-results"></a>Risultati dell'arricchimento
+## <a name="view-enrichment-results"></a>Visualizzare i risultati dell'arricchimento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

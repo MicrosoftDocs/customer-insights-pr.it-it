@@ -1,5 +1,5 @@
 ---
-title: Utilizzare le API
+title: Utilizzare le API di Customer Insights
 description: Utilizzare le API e comprendere le limitazioni
 ms.date: 05/10/2021
 ms.reviewer: wimohabb
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 8e8bd590d3bba9dc7b1644b6ff42b9fc53237ca9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808511"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054069"
 ---
 # <a name="work-with-customer-insights-apis"></a>Utilizzare le API di Customer Insights
 

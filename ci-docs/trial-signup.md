@@ -1,5 +1,5 @@
 ---
-title: Iscriviti per una prova gratuita - Dynamics 365 Customer Insights
+title: Iscrizione per una valutazione gratuita di Dynamics 365 Customer Insights
 description: Scopri come registrarti rapidamente e iniziare una prova gratuita di Customer Insights. Esplora l'app e trova ulteriori risorse di apprendimento.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641721"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081405"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Iscrizione per una valutazione gratuita di Dynamics 365 Customer Insights
 

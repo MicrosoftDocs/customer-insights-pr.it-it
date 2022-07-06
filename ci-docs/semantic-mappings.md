@@ -1,5 +1,5 @@
 ---
-title: Mappature semantiche (Anteprima)
+title: Mappature semantiche (anteprima)
 description: Panoramica delle mappature semantiche e come usarle.
 ms.date: 12/01/2021
 ms.subservice: audience-insights
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647054"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081714"
 ---
-# <a name="semantic-mappings-preview"></a>Mappature semantiche (Anteprima)
+# <a name="semantic-mappings-preview"></a>Mappature semantiche (anteprima)
 
 Le mappature semantiche ti permettono di mappare i tuoi dati non-attività a schemi predefiniti. Questi schemi aiutano Customer Insights a comprendere meglio gli attributi dei dati. La mappatura semantica e i dati forniti consentono nuove informazioni dettagliate e funzionalità in Customer Insights. Per mappare i dati delle vostre attività agli schemi, rivedete la documentazione delle [attività](activities.md) .
 

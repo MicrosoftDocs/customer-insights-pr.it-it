@@ -1,5 +1,5 @@
 ---
-title: Esportare i dati di Customer Insights in host SFTP (video)
+title: Esportare i dati in host SFTP (anteprima) (video)
 description: Scopri come configurare la connessione ed esportare in una posizione SFTP.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947189"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081536"
 ---
-# <a name="export-segments-and-other-data-to-sftp-preview"></a>Esportare segmenti e altri dati su SFTP (anteprima)
+# <a name="export-data-to-sftp-preview"></a>Esportare i dati in SFTP (anteprima)
 
 Utilizza i dati dei tuoi clienti in applicazioni di terze parti esportandoli in una posizione SFTP (Secure File Transfer Protocol).
 

@@ -1,5 +1,5 @@
 ---
-title: Arricchimento con l'importazione personalizzata SFTP
+title: Arricchire i profili dei clienti con l'importazione personalizzata SFTP (anteprima)
 description: Informazioni generali sull'arricchimento con l'importazione personalizzata SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953724"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081333"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Arricchimento di profili cliente con dati personalizzati (anteprima)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Arricchire i profili dei clienti con l'importazione personalizzata SFTP (anteprima)
 
 L'importazione personalizzata SFTP (Secure File Transfer Protocol) consente di importare dati che non devono essere sottoposti al processo di unificazione dei dati. È un modo flessibile, sicuro e facile di importare i dati. L'importazione personalizzata SFTP può essere utilizzata in combinazione con l'[esportazione SFTP](export-sftp.md) che consente di esportare i dati del profilo cliente necessari per l'arricchimento. I dati possono quindi essere elaborati e arricchiti e l'importazione personalizzata SFTP può essere utilizzata per riportare i dati arricchiti in Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ L'amministratore di Dynamics 365 Customer Insights può rimuovere questo arricch
 
 1. Seleziona **Esegui** per avviare il processo di arricchimento o chiudere per tornare alla pagina **Arricchimenti**.
 
-## <a name="enrichment-results"></a>Risultati dell'arricchimento
+## <a name="view-enrichment-results"></a>Visualizzare i risultati dell'arricchimento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

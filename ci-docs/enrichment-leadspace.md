@@ -1,5 +1,5 @@
 ---
-title: Arricchimento dei profili aziendali con l'arricchimento di terze parti Leadspace
+title: Arricchire i profili aziendali con Leadspace (anteprima)
 description: Informazioni generali sull'arricchimento di terze parti Leadspace.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954184"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081351"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Arricchimento dei profili aziendali con Leadspace (anteprima)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Arricchire i profili aziendali con Leadspace (anteprima)
 
 Leadspace è una società di servizi di data science che fornisce una piattaforma per i dati dei clienti B2B. Permette agli ambienti con profili di clienti unificati basati su conti di arricchire i loro dati. Arricchisci *i profili dei clienti* con attributi come le dimensioni dell'azienda, la posizione o il settore. Arricchisci *i profili dei contatti* con attributi come il titolo, la persona o la verifica dell'e-mail.
 
@@ -82,7 +82,7 @@ L'amministratore di Dynamics 365 Customer Insights può rimuovere questo arricch
 
 1. Seleziona **Esegui** per avviare il processo di arricchimento o chiudere per tornare alla pagina **Arricchimenti**.
 
-## <a name="enrichment-results"></a>Risultati dell'arricchimento
+## <a name="view-enrichment-results"></a>Visualizzare i risultati dell'arricchimento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

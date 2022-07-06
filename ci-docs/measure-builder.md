@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: f3ec86806074a12c1107648303ed2d65e97ebc69
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800331"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081656"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Usare il generatore di misure per creare misure da zero
+# <a name="create-new-measures-with-the-measure-builder"></a>Creare nuove misure con il generatore di misure
 
 Questo articolo spiega come creare una nuova [misura](measures.md) da zero. Il generatore di misure consente di definire i calcoli utilizzando operatori matematici, funzioni di aggregazione e filtri. È possibile creare una misura con attributi di entità correlate all'entità *Cliente* unificata.
 

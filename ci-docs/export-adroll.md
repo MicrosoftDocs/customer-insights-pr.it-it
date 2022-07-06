@@ -1,5 +1,5 @@
 ---
-title: Esportare dati di Customer Insights in AdRoll
+title: Esportare segmenti in AdRoll (anteprima)
 description: Scopri come configurare la connessione ed esportare in AdRoll.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec7d2d4d137f2f0e3e1ff2ec0d09bff8ac4f28ea
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 13c7dd3b8556ad807fba6c537525b463480e860b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646704"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081561"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Esportare segmenti in AdRoll (anteprima)
 
@@ -21,9 +21,9 @@ Esporta i segmenti dei profili cliente unificati in AdRoll e utilizzali per la p
 
 ## <a name="prerequisites-for-a-connection"></a>Prerequisiti per una connessione
 
--   Devi disporre di un [account AdRoll](https://www.adroll.com/) e delle credenziali di amministratore corrispondenti.
--   Hai [segmenti configurati](segments.md) in Customer Insights.
--   I profili cliente unificati nei segmenti esportati contengono un campo che rappresenta un indirizzo e-mail.
+- Devi disporre di un [account AdRoll](https://www.adroll.com/) e delle credenziali di amministratore corrispondenti.
+- Hai [segmenti configurati](segments.md) in Customer Insights.
+- I profili cliente unificati nei segmenti esportati contengono un campo che rappresenta un indirizzo e-mail.
 
 ## <a name="known-limitations"></a>Limitazioni note
 

@@ -1,5 +1,5 @@
 ---
-title: Inserire dati da Azure Synapse Analytics
+title: Collegare un'origine dati Azure Synapse (anteprima)
 description: Usa un database in Azure Synapse come origine dati in Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011432"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052704"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Collegare un'origine dati Azure Synapse Analytics (anteprima)
 
@@ -59,7 +59,7 @@ Per ulteriori informazioni, vedi [Panoramica di Azure Synapse](/azure/synapse-an
 
 1. Scegli una [connessione disponibile](connections.md) ad Azure Synapse Analytics o creane una nuova.
 
-1. Scegli un **Database** dall'area di lavoro connessa nella connessione Azure Synapse Analytics selezionata e seleziona **Avanti**.
+1. Scegli un **Database** dall'area di lavoro connessa nella connessione Azure Synapse Analytics selezionata e seleziona **Avanti**. Attualmente, supportiamo solo il tipo di database *Lake database*.
 
 1. Seleziona le entità da inserire dal database connesso, quindi **Aventi**.
 
