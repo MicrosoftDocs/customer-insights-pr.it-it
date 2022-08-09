@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 62969527ceed906ff06fb9be90b972496323ce0a
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
+ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052750"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9142824"
 ---
 # <a name="how-to-create-a-new-environment"></a>Come creare un nuovo ambiente
 
@@ -68,7 +68,6 @@ Nel passaggio **Archivio dati** scegli dove archiviare i dati di Customer Insigh
 
 Il passo **Microsoft Dataverse** permette di collegare Customer Insights con il vostro ambiente Dataverse. Condividi i dati con Dataverse per utilizzarli con applicazioni aziendali basate su Dataverse, come Dynamics 365 Marketing o applicazioni basate su modello in Power Apps.
 
-
 Lascia vuoto questo campo se non hai un tuo ambiente Dataverse e te ne creeremo uno.
 
 Per altre informazioni, consulta [Utilizzare i dati di Customer Insights in Microsoft Dataverse](customer-insights-dataverse.md).
@@ -107,7 +106,7 @@ Le impostazioni di configurazione seguenti vengono copiate:
 - Misure
 - Relazioni
 - Attività
-- Indicizzazione ricerca e filtro
+- Indicizzazione di ricerca e filtro
 - Esportazioni
 - Aggiorna pianificazione
 - Arricchimenti

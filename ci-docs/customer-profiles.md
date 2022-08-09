@@ -1,5 +1,5 @@
 ---
-title: Profili cliente
+title: Visualizzare profili cliente
 description: Visualizzare i dati unificati dei clienti, anche tramite ricerca e filtro
 ms.date: 06/08/2022
 ms.reviewer: mhart
@@ -14,63 +14,83 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 279c8e1291c6449005d593244f1979e871610a77
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052194"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188098"
 ---
-# <a name="customer-profiles"></a>Profili cliente
+# <a name="view-customer-profiles"></a>Visualizzare profili cliente
 
-La pagina **Clienti** mostra una vista combinata dei tuoi profili cliente unificati. I profili dei clienti sono disponibili una volta [creata l'entità Customer unificata](data-unification.md). La pagina permette di cercare i clienti e di definire l'indice per questa ricerca.
+I profili cliente sono disponibili dopo che hai [creato l'entità *Cliente* unificata](data-unification.md). La vista combinata dei tuoi profili cliente unificati è visualizzata nella pagina **Clienti**. I clienti possono essere individui oppure organizzazioni.
 
-I clienti possono essere individui oppure organizzazioni. Ogni profilo di cliente è rappresentato da una piastrella. Usa i controlli di paginazione per ottenere più record. La scheda visualizza i campi dell'entità *Cliente* come definiti nell' **indice di ricerca e filtro**. L'ordine dei campi all'interno di ciascuna scheda viene selezionato dal sistema.
-
-Seleziona un riquadro per vedere i dati per il cliente selezionato in una pagina dedicata chiamata [Pagina dei dettagli del cliente](customer-profiles.md#customer-details-page).
-
-> [!div class="mx-imgBorder"]
-> ![Pagina dei clienti che mostra le piastrelle dei risultati](media/customers-page-result-tiles-B2C.png "Pagina dei clienti che mostra le piastrelle dei risultati")
+Vai alla pagina **Clienti** per visualizzare i tuoi clienti e i relativi profili. Ogni profilo di cliente è rappresentato da una piastrella. Usa i controlli di paginazione per ottenere più record. La scheda visualizza i campi dell'entità *Cliente* come definiti nell'**indicizzazione di ricerca e filtro**. L'ordine dei campi all'interno di ciascuna scheda viene selezionato dal sistema.
 
 > [!NOTE]
-> Se non riesci a vedere le tessere quando selezioni **Clienti** nella navigazione, il tuo amministratore ha bisogno di [definire almeno un attributo ricercabile](search-filter-index.md) nell' **indice di Ricerca & filtro**.
+> Se non riesci a vedere i riquadri quando selezioni **Clienti**, il tuo amministratore deve [definire almeno un attributo ricercabile](search-filter-index.md) nell'**indicizzazione di ricerca & filtro**.
 
-## <a name="search-for-customers"></a>Ricerca di clienti
+:::image type="content" source="media/customers-page-result-tiles-B2C.png" alt-text="Pagina dei clienti che mostra i riquadri dei risultati.":::
 
-Cerca i clienti inserendo un nome o un altro attributo nella casella di ricerca. La ricerca funziona solo all'interno dell'entità *Cliente* creata durante il processo di unificazione dei dati.
+Seleziona una qualsiasi delle seguenti azioni:
+- [Visualizzare i dettagli dei clienti](#view-customer-details)
+- [Gestire l'indicizzazione di ricerca e filtro](search-filter-index.md) (solo amministratori)
+- [Filtrare i clienti](#filter-customers)
+- **Espandere le schede** o **comprimere le schede** per espandere o comprimere le informazioni visualizzate nel riquadro del cliente
+- **Ordinare in base** a un particolare attributo
+- [Cercare clienti](#search-for-customers)
 
-Come amministratore, puoi configurare gli attributi ricercabili mediante la pagina **Indicizzazione ricerca e filtro**. Per maggiori informazioni, vai a [Gestire la ricerca e il filtro dell'indice](search-filter-index.md).
+  > [!NOTE]
+  > Per utilizzare la ricerca e il filtro, un amministratore deve configurare gli attributi ricercabili e definire i campi filtrabili utilizzando l'indicizzazione di ricerca e filtro.
 
-## <a name="filter-customers"></a>Applicazione di filtri ai clienti
+## <a name="search-for-customers"></a>Cercare clienti
 
-Puoi filtrare i clienti per i campi dell'entità *Cliente* . Simile alla ricerca, l'amministratore dovrà prima definire i campi come filtrabili utilizzando la pagina **Indicizzazione ricerca e filtro**.
+Cerca i clienti inserendo un nome o un altro attributo in **Ricerca clienti**. Gli attributi ricercabili sono definiti dall'amministratore e provengono dall'entità *Cliente* unificata.
 
-1. Seleziona **Mostra filtri** nella pagina **Clienti** .
+> [!NOTE]
+> **Stringa** è l'unico tipo di dati incluso nella ricerca. Usalo nel campo **Ricerca clienti** della pagina Clienti per cercare i clienti.
+
+## <a name="filter-customers"></a>Filtrare i clienti
+
+Filtra i clienti in base ai campi dell'entità *Cliente*. I campi filtrabili sono definiti dall'amministratore.
+
+1. Seleziona **Mostra filtri** nella pagina **Clienti**. Viene visualizzato il riquadro dei filtri.
 
 1. Seleziona le caselle di controllo accanto agli attributi in base a cui vuoi filtrare i clienti.
 
-1. Rimuovi i filtri selezionando **Cancella filtri** nella pagina **Clienti**.
+1. Rimuovi tutti i filtri selezionando **Cancella filtri** o deseleziona una casella di controllo accanto a un attributo selezionato.
 
-## <a name="customer-details-page"></a>Pagina Dettagli cliente
+1. Seleziona **Nascondi filtri** per chiudere il riquadro dei filtri.
 
-Seleziona uno dei riquadri del cliente per aprire la **pagina Dettagli cliente**. Questa visualizzazione contiene informazioni unificate per il cliente selezionato. I dettagli del cliente includono il seguente contenuto:
+1. Per salvare i risultati dei filtri come [segmento](segments.md), seleziona **Salva filtri come segmento**.
+   1. Immetti un nome per il segmento.
+   1. Seleziona **Salva** per salvare il segmento.
+   1. Scegli **Attiva** per eseguire il segmento ora o **In seguito** per eseguirlo successivamente.
 
-**Mattonella del profilo del cliente**: Questo riquadro mostra i diversi valori dell'entità *Customer* unificata. Fatta eccezione per il campo dell'indirizzo, un campo non verrà visualizzato qualora non contenga alcun valore per il profilo cliente selezionato. La piastrella è strutturata in sezioni:
+## <a name="view-customer-details"></a>Visualizzare i dettagli dei clienti
 
-- La prima sezione mostra un insieme predefinito di campi seguito da tutti i campi che fanno parte dell'indice di ricerca e filtro. Tutti i campi relativi all'indirizzo sono combinati in un'unica riga, che viene mostrata anche se il profilo non contiene informazioni sull'indirizzo.
-- **Contatti per questo cliente**: Negli ambienti per i conti commerciali, vedrai tutti i contatti correlati per questo cliente come seconda sezione. Ogni contatto è mostrato con i suoi campi. I campi vuoti sono nascosti.
-- **Campi aggiuntivi**: Mostra i restanti campi del cliente selezionato, eccetto gli ID.
-- **ID**: Elenca tutti gli ID sotto il nome dell'entità corrispondente. I campi sono identificati come ID dalla loro semantica, che li categorizza come tali.
+Nella pagina **Clienti**, seleziona un riquadro per visualizzare i dettagli del cliente selezionato.
 
-**Cronologia delle attività**: Mostra i dati se hai configurato delle attività. La vista timeline contiene attività ordinate cronologicamente del cliente selezionato, a partire dall'attività più recente. Per maggiori informazioni, andate su [Attività del cliente](activities.md).
+:::image type="content" source="media/customers-details-B2C.png" alt-text="Pagina dei dettagli del cliente.":::
+
+I dettagli del cliente includono:
+
+Il **riquadro del profilo cliente** mostra i differenti valori dell'entità *Customer* unificata. Fatta eccezione per il campo dell'indirizzo, un campo non verrà visualizzato qualora non contenga alcun valore per il profilo cliente selezionato. La piastrella è strutturata in sezioni:
+
+- La prima sezione mostra un insieme predefinito di campi seguito da tutti i campi che fanno parte dell'indicizzazione di ricerca e filtro. Tutti i campi relativi all'indirizzo sono combinati in un'unica riga, che viene mostrata anche se il profilo non contiene informazioni sull'indirizzo.
+- I **contatti di questo cliente** sono visualizzati in ambienti per account aziendali. Ogni contatto è mostrato con i suoi campi. I campi vuoti sono nascosti.
+- **Campi aggiuntivi** mostra i restanti campi del cliente selezionato, eccetto gli ID.
+- **ID** elenca tutti gli ID sotto il nome dell'entità corrispondente. I campi sono identificati come ID in base alla relativa semantica.
+
+**Sequenza temporale attività** mostra i dati se hai configurato le [attività](activities.md). La vista timeline contiene attività ordinate cronologicamente del cliente selezionato, a partire dall'attività più recente.
 
 **Approfondimenti**:
 
-- **Misure**: Mostra se hai configurato una o più misure di attributi del cliente. Includono KPI calcolati relativi ai clienti a livello di singolo cliente. Per maggiori informazioni, vai a [Definire e gestire le misure](measures.md).
+- **Misure** mostra se hai configurato una o più [misure di attributi del cliente](measures.md). Includono KPI calcolati relativi ai clienti a livello di singolo cliente.
 
-- **Potenziali interessi, potenziali marche**: Mostra se hai configurato un arricchimento di affinità di marca o di interesse. Rappresenta i potenziali interessi e affinità per i marchi basati su altri clienti il cui profilo è simile a quello del cliente selezionato. Per maggiori informazioni, vai a [Arricchire i profili dei clienti con le affinità di marca e di interesse](enrichment-microsoft.md).
+- **Potenziali interessi, marchi potenziali** mostra se hai configurato un [arricchimento di affinità di marca o di interesse](enrichment-microsoft.md). Rappresenta i potenziali interessi e affinità per i marchi basati su altri clienti il cui profilo è simile a quello del cliente selezionato.
 
-Per tornare alla pagina di ricerca dei clienti, seleziona **Torna ai clienti**.
+Seleziona **Torna a Clienti** per tornare alla pagina **Clienti**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

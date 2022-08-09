@@ -13,16 +13,14 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: a75218c996b277e00924f2b7b38ea686a1f4dc38
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741000"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139787"
 ---
 # <a name="select-source-fields-for-data-unification"></a>Selezionare i campi di origine per l'unificazione dei dati
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Il primo passaggio nell'unificazione è quello di selezionare le entità e i campi all'interno dei set di dati che desideri unificare. Seleziona le entità che contengono dettagli relativi al cliente come nome, indirizzo, numero di telefono e indirizzo e-mail. È possibile selezionare uno o più entità.
 
@@ -54,7 +52,7 @@ Per ogni entità, esegui i passaggi seguenti.
 
 1. Scegli la **chiave primaria**. La chiave primaria è un attributo univoco per l'entità. Affinché un attributo sia una chiave primaria valida, non deve includere valori duplicati, valori mancanti o valori null. Gli attributi del tipo di dati String, Integer e GUID sono supportati come chiavi primarie.
 
-1. Per utilizzare i modelli di intelligenza artificiale per previsione intelligenti della semantica, risparmiare tempo e migliorare la precisione, verifica che l'opzione **Mapping intelligente** sia selezionata. La mappatura intelligente evidenzia l'elemento consigliato semantico basato su AI nel campo **Tipo**. È possibile ignorare la selezione suggerita scegliendo qualsiasi tipo semantico dall'elenco di opzioni disponibile.
+1. Per utilizzare i modelli di intelligenza artificiale per previsione intelligenti della semantica, risparmiare tempo e migliorare la precisione, verifica che l'opzione **Mapping intelligente** sia selezionata. Il mapping intelligente evidenzia l'elemento consigliato semantico basato su AI nel campo **Tipo**. È possibile ignorare la selezione suggerita scegliendo qualsiasi tipo semantico dall'elenco di opzioni disponibile.
 
 1. Per ogni attributo, scegli un **Tipo** semantico che meglio descrive quell'attributo, come nome, città o indirizzo e-mail.
 

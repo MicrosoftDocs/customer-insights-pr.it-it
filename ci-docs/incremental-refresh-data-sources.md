@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012030"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207142"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Aggiornamento incrementale per le origini dati di Power Query e Azure Data Lake
 
-Questo articolo illustra come configurare l'aggiornamento incrementale per le origini dati in base a Power Query o Azure Data Lake.
-
-L'aggiornamento incrementale per le origini dati offre i seguenti vantaggi:
+L'aggiornamento incrementale di origini dati basato su Power Query o Azure Data Lake fornisce i seguenti vantaggi:
 
 - **Aggiornamenti più rapidi** - Vengono aggiornati solo i dati che sono stati modificati. Ad esempio, potresti aggiornare solo gli ultimi cinque giorni di uno set di dati storici.
 - **Maggiore affidabilità** - Con aggiornamenti più piccoli, non è necessario mantenere le connessioni a sistemi di origine volatili per lungo tempo, riducendo il rischio di problemi di connessione.
@@ -73,6 +71,7 @@ Customer Insights consente l'aggiornamento incrementale per le origini dati coll
 
    1. Passa alla cartella radice che contiene file csv o parquet per i dati completi, upsert dei dati incrementali ed eliminazioni di dati incrementali.
    1. Immetti l'estensione per i dati completi e per entrambi i file (\.csv o \.parquet) incrementali.
+   1. Per i file .csv, seleziona il delimitatore di colonna e, se vuoi, la prima riga del file come intestazione di colonna.
    1. Seleziona **Salva**.
 
 1. In **Ultimo aggiornamento** seleziona l'attributo timestamp.

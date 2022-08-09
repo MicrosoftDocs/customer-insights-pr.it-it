@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947501"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188052"
 ---
 # <a name="use-customer-consent"></a>Usare il consenso cliente
 
@@ -50,13 +50,13 @@ Tabella di esempio di un semplice database di consenso con più opzioni di conse
 
 ## <a name="import-and-unify-consent-data"></a>Importare e unificare i dati del consenso
 
-Puoi importare i dati di consenso nello stesso modo in cui inserisci altre origini dati in Customer Insights. Per altre informazioni sulle origini dati supportate e su come importarle, vedi [Panoramica delle origini dati](data-sources.md).
+Importa dati di consenso nello stesso modo in cui inserisci altre origini dati in Customer Insights. Per altre informazioni sulle origini dati supportate e su come importarle, vedi [Panoramica delle origini dati](data-sources.md).
 
 Per altre informazioni sull'unificazione delle origini dati, vedi [Panoramica dell'unificazione dei dati](data-unification.md).
 
 ## <a name="use-consent-data"></a>Usare dati del consenso
 
-Dopo che i dati di consenso fanno parte dei profili cliente unificati, puoi usarli in Customer Insights. Ad esempio, crea un segmento con una regola per assicurarti di rispettare le preferenze sulla privacy e sulla protezione dei dati dei tuoi clienti. Le regole che supportano le preferenze di consenso vengono usate per escludere gli utenti da un segmento in base agli attributi del profilo. Aggiunta di una regola a un segmento che esclude i profili dei clienti che non hanno fornito il consenso al contatto.
+Dopo che i dati di consenso fanno parte dei profili cliente unificati, puoi usarli in Customer Insights. Ad esempio, crea un segmento con una regola per assicurarti di rispettare le preferenze sulla privacy e sulla protezione dei dati dei tuoi clienti. Le regole che supportano le preferenze di consenso vengono usate per escludere gli utenti da un segmento in base agli attributi del profilo. Aggiungi una regola a un segmento che esclude i profili dei clienti che non hanno fornito il consenso al contatto.
 
 Facendo riferimento alla tabella di esempio sopra, un segmento potrebbe contenere questa regola: `Consent option=Newsletter & Consent value=True`. Questa configurazione restituisce un segmento che rispetta le preferenze di contatto per inviare una newsletter.
 
@@ -71,3 +71,5 @@ Dopo aver creato il segmento, puoi usare una delle tante [opzioni di esportazion
 In altre parole, assicurati che i dati di origine che vengono importati in Customer Insights contengano sempre le informazioni più recenti.
 
 Per altre informazioni, vedi [Aggiornare i segmenti manualmente](segments.md#refresh-segments) o [Configurare un aggiornamento pianificato](system.md#schedule-tab).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081701"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170825"
 ---
 # <a name="measures-overview"></a>Panoramica delle misure
 
-Le misure ti aiutano a comprendere meglio i comportamenti dei clienti e le prestazioni aziendali. Tengono in considerazione i valori rilevanti dei [profili unificati](data-unification.md). Ad esempio, un'azienda vuole vedere la *spesa totale per cliente* per comprendere la cronologia degli acquisti di un singolo cliente oppure misurare le *vendite totali dell'azienda* per comprendere le entrate a livello aggregato nell'intera attività.  
+Le misure ti aiutano a comprendere meglio i comportamenti dei clienti e le prestazioni aziendali. Tengono in considerazione i valori rilevanti dei [profili unificati](data-unification.md). Ad esempio, un'azienda vuole vedere la *spesa totale per cliente* per comprendere la cronologia degli acquisti di un singolo cliente oppure misurare le *vendite totali dell'azienda* per comprendere le entrate a livello aggregato nell'intera attività.
 
-Le misure vengono create [utilizzando il generatore di misure](measure-builder.md), una piattaforma di query di dati con vari operatori e semplici opzioni di mapping. Ti consente di filtrare i dati, raggruppare i risultati, rilevare [percorsi di relazione tra entità](relationships.md) e visualizzare in anteprima l'output. Puoi [utilizzare modelli predefiniti](measure-templates.md) per configurare in modo efficiente le misure di uso comune.
+Crea misure per pianificare le attività aziendali eseguendo query sui dati dei clienti ed estrarre informazioni dettagliate. Ad esempio, crea una misura di *spesa totale per cliente* e *reso totale per cliente* per identificare un gruppo di clienti con una spesa elevata ma un reso elevato. Quindi, [crea un segmento](segments.md) sulla base di queste misure per determinare quali sono le migliori azioni da intraprendere in seguito.
 
-Utilizza il generatore di misure per pianificare le attività aziendali eseguendo query sui dati dei clienti ed estrai informazioni dettagliate. Ad esempio, creare una misura di *spesa totale per cliente* e *rendimento totale per cliente* aiuta a identificare un gruppo di clienti con una spesa elevata ma un ritorno elevato. Puoi [creare un segmento](segments.md) sulla base di queste misure per guidare le prossime azioni migliori.
+## <a name="create-a-measure"></a>Creare una misura
 
-## <a name="manage-your-measures"></a>Gestire le misure
+Scegli come creare una misura in base al gruppo di destinatari di riferimento.
 
-Puoi trovare l'elenco delle misure nella pagina **Misure**.
+# <a name="individual-consumers-b-to-c"></a>[Singoli utenti (B2C)](#tab/b2c)
 
-Troverai informazioni sul tipo di misura, l'autore, la data di creazione e lo stato. Quando selezioni una misura dall'elenco, puoi visualizzare in anteprima l'output e scaricare un file CSV.
+- Da zero con il generatore di misure: [genera le tue misure](measure-builder.md).
+- A partire da misure di uso comune: [usa modelli predefiniti](measure-templates.md).
+
+# <a name="business-accounts-b-to-b"></a>[Account aziendali (B2B)](#tab/b2b)
+
+Da zero con il generatore di misure: [genera le tue misure](measure-builder.md).
+
+---
+
+## <a name="manage-existing-measures"></a>Gestire misure esistenti
+
+Vai alla pagina **Misure** per visualizzare le misure create, il relativo stato, il tipo di misura e l'ultimo aggiornamento dei dati. Puoi ordinare l'elenco delle misure in base a qualsiasi colonna o utilizzare la casella di ricerca per trovare la misura che vuoi gestire.
+
+Seleziona accanto a una misura per visualizzare le azioni disponibili. Seleziona il nome della misura per visualizzare in anteprima l'output e scaricare un file CSV.
 
 :::image type="content" source="media/measures-actions.png" alt-text="Azioni per gestire singole misure."lightbox="media/measures-actions.png":::
 
-Quando si seleziona una misura sono disponibili le seguenti azioni:
-
-- **Modifica** la configurazione della misura.
-- **Duplica** una misura. Puoi scegliere di modificare subito le proprietà o semplicemente salvare il duplicato.
-- **Aggiorna** la misura in base ai dati più recenti. Per aggiornare tutte le misure contemporaneamente, seleziona tutte le misure e quindi **Aggiorna**.
+- **Modifica** la misura per modificarne le proprietà.
+- **Aggiorna** la misura per includere gli ultimi dati.
 - **Rinomina** la misura.
-- **Attiva** o **Disattiva**. Le misure inattive non verranno aggiornate durante un [aggiornamento pianificato](system.md#schedule-tab).
-- **Tag** per [gestire i tag](work-with-tags-columns.md#manage-tags) per il segmento.
+- **Attiva** o **Disattiva** la misura. Le misure non attive non verranno aggiornate durante un [aggiornamento pianificato](system.md#schedule-tab) e il relativo **stato** sarà **Ignorato**, a indicare che non è stato nemmeno tentato un aggiornamento.
+- Scegli **Tag** per [gestire i tag](work-with-tags-columns.md#manage-tags) per la misura.
 - **Elimina** la misura.
+- **Colonne** per [personalizzare le colonne](work-with-tags-columns.md#customize-columns) visualizzate.
+- **Filtro** per [filtrare in base ai tag](work-with-tags-columns.md#filter-on-tags).
+- Scegli **Cerca nome** per eseguire la ricerca in base al nome della misura.
+
+## <a name="refresh-measures"></a>Aggiornare le misure
+
+Le misure possono essere aggiornate in base a una pianificazione automatica o manualmente su richiesta. Per aggiornare manualmente uno o più misure, selezionale e scegli **Aggiorna**. Per [pianificare un aggiornamento automatico](system.md#schedule-tab), vai ad **Amministratore** > **Sistema** > **Pianifica**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>Passaggio successivo
-
-Puoi utilizzare le misure esistenti per creare [un segmento di clientela](segments.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Panoramica delle origini dati
 description: Scopri come importare o inserire i dati da varie origini.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051458"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207096"
 ---
 # <a name="data-sources-overview"></a>Panoramica delle origini dati
 
 Dynamics 365 Customer Insights fornisce connessioni per portare dati da un'ampia serie di origini. La connessione a un'origine dati viene spesso definita processo di *inserimento dati*. Dopo aver inserito i dati, puoi [unificare](data-unification.md), generare informazioni dettagliate e attivare i dati per la creazione di esperienze personalizzate.
 
-## <a name="add-data-sources"></a>Aggiungere origini dati
+## <a name="add-or-edit-data-sources"></a>Aggiungere o modificare origini dati
 
-Puoi collegare o importare origini dati in Customer Insights. I collegamenti seguenti forniscono istruzioni sull'aggiunta di origini dati.
+Puoi collegare o importare origini dati in Customer Insights. I collegamenti seguenti forniscono istruzioni sull'aggiunta e sulla modifica di origini dati.
 
 **Collega un'origine dati**
 
@@ -50,13 +50,18 @@ Se l'ambiente è stato configurato per usare l'archiviazione di Customer Insight
 
 Se il tuo ambiente non usa i flussi d dati di Power Platform, la pagina **Origini dati** contiene solo un elenco di tutte le origini dati. Nessuna sezione visualizzata.
 
-Vai a **Dati** > **Origini dati** per visualizzare il nome di ogni origine dati inserita, il relativo stato e la data dell'ultimo aggiornamento dei dati per tale origine. Puoi ordinare l'elenco delle origini dati per colonna.
+## <a name="manage-existing-data-sources"></a>Gestire origini dati esistenti
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Origine dati aggiunta.":::
+Vai a **Dati** > **Origini dati** per visualizzare il nome di ogni origine dati inserita, il relativo stato e la data dell'ultimo aggiornamento dei dati per tale origine. Puoi ordinare l'elenco delle origini dati in base a qualsiasi colonna o utilizzare la casella di ricerca per trovare l'origine dati che vuoi gestire.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Seleziona un'origine dati per visualizzare le azioni disponibili.
 
-Il caricamento dei dati può richiedere tempo. Al termine del completamento dell'aggiornamento, i dati inseriti possono essere rivisti dalla pagina **Entità**. Per ulteriori informazioni, vedi [Entità](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Origine dati aggiunta.":::
+
+- [**Modifica**](#add-or-edit-data-sources) l'origine dati per modificarne le proprietà.
+- [**Aggiorna**](#refresh-data-sources) l'origine dati per includere i dati più recenti.
+- [**Arricchisci**](data-sources-enrichment.md) l'origine dati prima dell'unificazione.
+- **Elimina** l'origine dati. Un'origine dati può essere eliminata solo se i dati non vengono usati in alcuna elaborazione come unificazione, informazioni dettagliate, attivazioni o esportazioni.
 
 ## <a name="refresh-data-sources"></a>Aggiornare le origini dati
 
@@ -64,23 +69,12 @@ Le origini dati possono essere aggiornate in base a una pianificazione automatic
 
 Vai ad **Amministratore** > **Sistema** > [**Pianifica**](system.md#schedule-tab) per configurare gli aggiornamenti pianificati dal sistema delle origini dati inserite.
 
-Per aggiornare un origine dati su richiesta, segui questi passaggi:
+Per aggiornare un'origine dati su richiesta:
 
 1. Vai a **Dati** > **Origini dati**.
 
-1. Seleziona i puntini di sospensione verticali (&vellip;) accanto all'origine dati che desideri aggiornare e seleziona **Aggiorna** dall'elenco a discesa. L'origine dati è ora attivata per un aggiornamento manuale. L'aggiornamento di un'origine dati aggiornerà sia lo schema dell'entità che i dati per tutte le entità specificate nell'origine dati.
+1. Seleziona l'origine dati che vuoi aggiornare e seleziona **Aggiorna**. L'origine dati è ora attivata per un aggiornamento manuale. L'aggiornamento di un'origine dati aggiornerà sia lo schema dell'entità che i dati per tutte le entità specificate nell'origine dati.
 
-1. Seleziona **Arresta aggiornamento** se desideri annullare un aggiornamento esistente e riportare l'origine dati allo stato dell'ultimo aggiornamento.
-
-## <a name="delete-a-data-source"></a>Eliminare un'origine dati
-
-Un'origine dati può essere eliminata solo se i dati non vengono usati in alcuna elaborazione come unificazione, informazioni dettagliate, attivazioni o esportazioni.
-
-1. Vai a **Dati** > **Origini dati**.
-
-2. Seleziona i puntini di sospensione verticali (&vellip;) accanto all'origine dati che desideri rimuovere e seleziona **Elimina** dal menu a tendina.
-
-3. Conferma l'eliminazione.
-
+1. Seleziona lo stato per aprire il riquadro **Dettagli stato** e visualizzare l'avanzamento del processo. Per annullare il processo, seleziona **Annulla processo** nella parte inferiore del riquadro.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081351"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196215"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Arricchire i profili aziendali con Leadspace (anteprima)
 
@@ -54,7 +54,7 @@ L'amministratore di Dynamics 365 Customer Insights può rimuovere questo arricch
 
 1. Esamina la panoramica e quindi seleziona **Avanti**.
 
-1. Seleziona la connessione. Contatta un amministratore se uno non è disponibile.
+1. Seleziona la connessione. Contatta un amministratore se non è disponibile alcuna connessione.
 
 1. Selezionare **Avanti**.
 
@@ -66,7 +66,7 @@ L'amministratore di Dynamics 365 Customer Insights può rimuovere questo arricch
 
 1. Mappa i tuoi campi ai dati società di Leadspace. Il campo **Nome della società** è obbligatorio. Per una maggiore precisione della corrispondenza, fino a due altri campi, **Sito web della società** e **Sede della società**, possono essere aggiunti.
 
-   :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Riquadro di mappatura dei campi di Leadspace.":::
+   :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Riquadro di mapping dei campi di Leadspace.":::
 
 1. Seleziona **Avanti** per completare il mapping del campo.
 

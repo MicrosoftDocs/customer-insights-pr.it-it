@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647494"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171100"
 ---
 # <a name="transaction-churn-prediction"></a>Previsione del churn delle transazioni
 
@@ -240,7 +240,7 @@ Aggiungi una lista dei tuoi clienti aziendali e degli account che vuoi usare com
    - **Nome previsione:** il nome del previsione fornito durante la creazione.
    - **Tipo di previsione:** il tipo di modello utilizzato per la previsione
    - **Entità di output:** nome dell'entità per memorizzare l'output della previsione. Puoi trovare un'entità con questo nome su **Dati** > **Entità**.
-     Nell'entità di output, *ChurnScore* è la probabilità prevista di abbandono e *IsChurn* è un'etichetta binaria basata su *ChurnScore* con soglia di 0,5. La soglia predefinita potrebbe non funzionare per il tuo scenario. [Crea un nuovo segmento](segments.md#create-a-new-segment) con la tua soglia preferita.
+     Nell'entità di output, *ChurnScore* è la probabilità prevista di abbandono e *IsChurn* è un'etichetta binaria basata su *ChurnScore* con soglia di 0,5. La soglia predefinita potrebbe non funzionare per il tuo scenario. [Crea un nuovo segmento](segments.md#create-a-segment) con la tua soglia preferita.
      Non tutti i clienti sono necessariamente clienti attivi. Alcuni di loro potrebbero non aver avuto alcun impegno per molto tempo e sono già considerati come abbandonati, in base alla tua definizione di abbandono. Prevedere il rischio di abbandono per i clienti che hanno già abbandonato non è utile perché non sono il pubblico di interesse.
    - **Campo previsto**: Questo campo è popolato solo per alcuni tipi di previsioni, e non è usato nella previsione di churn.
    - **Stato:** lo stato dell'esecuzione della previsione.

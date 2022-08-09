@@ -1,7 +1,7 @@
 ---
 title: Previsione della durata del cliente (CLV)
 description: Prevedi i futuri ricavi potenziali dai clienti attivi.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055219"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186445"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Previsione della durata del cliente (CLV)
 
 Prevedi il valore potenziale (ricavi) che i singoli clienti attivi porteranno nella tua attività in un periodo di tempo futuro definito. Questa funzionalità può aiutarti a raggiungere vari obiettivi:
+
 - Identificare i clienti di alto valore ed elaborare queste informazioni
 - Creare segmenti di clienti strategici in base al loro valore potenziale per eseguire campagne personalizzate con vendite, marketing e supporto mirati
 - Guidare lo sviluppo dei prodotti concentrandoti sulle funzionalità che aumentano il valore per il cliente
 - Ottimizzare la strategia di vendita o di marketing e allocare il budget in modo più accurato per la sensibilizzazione dei clienti
-- Riconoscere e premiare i clienti di alto valore attraverso programmi di fidelizzazione o premi 
+- Riconoscere e premiare i clienti di alto valore attraverso programmi di fidelizzazione o premi
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -35,7 +36,7 @@ Prima di iniziare, rifletti su cosa significa il CLV per la tua azienda. Attualm
 
 Poiché la configurazione e l'esecuzione di un modello CLV non richiede molto tempo, prendi in considerazione la creazione di diversi modelli con diverse preferenze di input e confronta i risultati dei modelli per vedere quale scenario di modello si adatta meglio alle tue esigenze aziendali.
 
-###  <a name="data-requirements"></a>Requisiti dei dati
+### <a name="data-requirements"></a>Requisiti dei dati
 
 I seguenti dati sono obbligatori e, se contrassegnati come facoltativi, consigliati per aumentare le prestazioni del modello. Più dati può elaborare il modello, più accurato sarà il previsione. Pertanto, ti invitiamo a inserire più dati sugli impegni dei clienti, se disponibili.
 
@@ -52,11 +53,12 @@ I seguenti dati sono obbligatori e, se contrassegnati come facoltativi, consigli
     - Attività Web: cronologia delle visite al sito Web, cronologia delle e-mail
     - Attività di fidelizzazione: accumulo di punti fedeltà e cronologia dei riscatti
     - Registro servizio clienti, cronologia delle chiamate di servizio, dei reclami o dei resi
+    - Informazioni sul profilo cliente
 - Dati sugli impegni del cliente (facoltativo):
     - Identificatori di impegni per distinguere gli impegni dello stesso tipo.
     - Identificatori cliente per mappare gli impegni ai clienti.
     - Informazioni sull'impegno contenenti il nome e la data dell'impegno.
-    - Lo schema dei dati semantici per gli impegni include: 
+    - Lo schema dei dati semantici per gli impegni include:
         - **Chiave primaria**: l'identificatore univoco per un impegno
         - **Timestamp**: la data e l'ora dell'evento identificato dalla chiave primaria
         - **Evento (nome impegno)** il nome dell'evento che desideri utilizzare
@@ -66,7 +68,7 @@ I seguenti dati sono obbligatori e, se contrassegnati come facoltativi, consigli
     - Dati storici sufficienti: almeno un anno di dati transazionali. Preferibilmente da due a tre anni di dati transazionali per prevedere il CLV per un anno.
     - Acquisti multipli per cliente: idealmente, almeno due o tre transazioni per ID cliente, preferibilmente in più date.
     - Numero di clienti: almeno 100 clienti univoci, preferibilmente più di 10.000 clienti. Il modello non riesce con meno di 100 clienti e dati storici insufficienti
-    - Completezza dei dati: meno del 20% di valori mancanti nei campi obbligatori nei dati di input   
+    - Completezza dei dati: meno del 20% di valori mancanti nei campi obbligatori nei dati di input
 
 > [!NOTE]
 > - Il modello richiede la cronologia delle transazioni dei tuoi clienti. Al momento è possibile configurare solo un'entità della cronologia delle transazioni. Se sono presenti più entità di acquisto/transazione, puoi unirle in Power Query prima che inizi l'importazione dei dati.
@@ -120,13 +122,13 @@ I seguenti dati sono obbligatori e, se contrassegnati come facoltativi, consigli
 
       :::image type="content" source="media/clv-add-customer-data-relationship.png" alt-text="Immagine del passaggio di configurazione per definire la relazione con l'entità cliente.":::
 
-1. Seleziona **Avanti**.
+1. Selezionare **Avanti**.
 
-### <a name="add-optional-data"></a>Aggiungi dati facoltativi
+### <a name="add-optional-activity-data"></a>Aggiungere dati sugli impegni facoltativi
 
-I dati che riflettono le interazioni chiave dei clienti (come web, servizio clienti e registri eventi) aggiungono contesto ai record delle transazioni. Altri modelli trovati nei dati degli impegni del cliente possono migliorare l'accuratezza delle previsioni. 
+I dati che riflettono le interazioni chiave dei clienti (come web, servizio clienti e registri eventi) aggiungono contesto ai record delle transazioni. Altri modelli trovati nei dati degli impegni del cliente possono migliorare l'accuratezza delle previsioni.
 
-1. Nel passaggio **Dati aggiuntivi (facoltativi)** seleziona **Aggiungi dati**. Scegli l'entità degli impegni cliente che fornisce le informazioni sugli impegni del cliente come descritto nei [prerequisiti](#prerequisites).
+1. Nel passaggio **Dati aggiuntivi (facoltativi)**, seleziona **Aggiungi dati** sotto **Incrementa le informazioni dettagliate sul modello con dati aggiuntivi sul cliente**. Scegli l'entità degli impegni cliente che fornisce le informazioni sugli impegni del cliente come descritto nei [prerequisiti](#prerequisites).
 
 1. Esegui il mapping dei campi semantici agli attributi nell'entità degli impegni del cliente e seleziona **Avanti**.
 
@@ -135,17 +137,36 @@ I dati che riflettono le interazioni chiave dei clienti (come web, servizio clie
 1. Seleziona un tipo di impegno che corrisponda al tipo di impegno del cliente che stai aggiungendo. Scegli tra i tipi di impegno esistenti o aggiungi un nuovo tipo di impegno.
 
 1. Configura la relazione dall'entità degli impegni cliente all'entità *Cliente*.
-    
+
     1. Seleziona il campo che identifica il cliente nella tabella degli impegni del cliente. Può essere correlato direttamente all'ID cliente primario dell'entità *Cliente*.
     1. Seleziona l'entità *Cliente* che corrisponde all'entità *Cliente* primaria.
     1. Immetti un nome che descrive la relazione.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Immagine del passaggio nel flusso di configurazione per aggiungere dati aggiuntivi e configurare l'impegno con esempi compilati.":::
 
-1. Seleziona **Salva**.    
+1. Seleziona **Salva**.
     Aggiungi altri dati se ci sono altre impegni del cliente che desideri includere.
 
-1. Seleziona **Avanti**.
+1. Aggiungi dati sul cliente facoltativi o seleziona **Avanti**.
+
+### <a name="add-optional-customer-data"></a>Aggiungere dati sul cliente facoltativi
+
+Seleziona tra 18 attributi del profilo cliente di uso comune da includere come input nel modello. Questi attributi possono portare a risultati del modello più personalizzati, pertinenti e utilizzabili per i casi d'uso aziendali.
+
+Ad esempio: Contoso Coffee vuole prevedere il valore di durata del cliente per presentare ai clienti di alto valore un'offerta personalizzata correlata al lancio della sua nuova macchina per caffè espresso. Contoso usa il modello CLV e aggiunge tutti i 18 attributi del profilo cliente per stabilire quali fattori influenzano i clienti di maggior valore. Contoso determina che la posizione del cliente è il fattore più influente per tali clienti.
+Sulla base di queste informazioni, organizza quindi un evento locale per il lancio della macchina per caffè espresso e collabora con i fornitori locali per offerte personalizzate e un'esperienza speciale all'evento. Senza tali informazioni, Contoso potrebbe inviare solo email di marketing generiche e perdere l'opportunità di personalizzare questo segmento locale di clienti di alto valore.
+
+1. Nel passaggio **Dati aggiuntivi (facoltativi)**, seleziona **Aggiungi dati** sotto **Incrementa ulteriormente le informazioni dettagliate sul modello con dati aggiuntivi sul cliente**.
+
+1. In **Entità**, scegli **Cliente: CustomerInsights** per selezionare la tabella del profilo cliente unificato che esegue il mapping ai dati degli attributi del cliente. In **ID cliente**, scegli **System.Customer.CustomerId**.
+
+1. Mappa più campi se i dati sono disponibili nei tuoi profili cliente unificati.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Esempio di campi mappati per i dati del profilo cliente.":::
+
+1. Seleziona **Salva** dopo aver mappato gli attributi che il modello deve utilizzare per consentire di predirre il valore della durata del cliente.
+
+1. Selezionare **Avanti**.
 
 ### <a name="set-update-schedule"></a>Impostare la pianificazione di aggiornamento
 

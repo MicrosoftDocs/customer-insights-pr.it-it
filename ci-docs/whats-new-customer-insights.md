@@ -1,28 +1,56 @@
 ---
 title: Novità di Dynamics 365 Customer Insights
 description: Informazioni su nuove funzionalità, miglioramenti e correzioni di bug.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054023"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114251"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novità di Dynamics 365 Customer Insights
 
 Siamo lieti di annunciare i nuovissimi aggiornamenti. Questo articolo riassume le funzionalità con anteprima pubblica, i miglioramenti della disponibilità generale e gli aggiornamenti delle funzionalità. Per vedere i piani delle funzionalità a lungo termine, dai un'occhiata ai [piani di rilascio di Dynamics 365 e Power Platform](/dynamics365/release-plans/).
 
-Gli aggiornamenti vengono implementati in base all'area geografica. Quindi alcune aree geografiche potrebbero vedere le funzionalità prima di altre. Se non diversamente specificato, non è necessario intraprendere alcuna azione e l'app viene aggiornata automaticamente senza tempi di inattività.
+Gli aggiornamenti vengono implementati in base all'area geografica. Quindi alcune aree geografiche potrebbero vedere le funzionalità prima di altre. Se non diversamente specificato, non devi intraprendere alcuna azione; l'app viene aggiornata automaticamente senza tempi di inattività.
 
 > [!TIP]
 > Per inviare e votare funzionalità richieste e suggerimenti di prodotto, vai al [portale Ideas dell'applicazione Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>Aggiornamenti di giugno 2022
+
+Gli aggiornamenti di giugno 2022 includono nuove funzionalità, aggiornamenti delle prestazioni e correzioni di bug.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Esperienza utente aggiornata per origini dati e inserimento dati
+
+L'importazione di dati da un'ampia gamma di origini dati consente di consolidare i dati dei clienti in Dynamics 365 Customer Insights. Abbiamo rivisitato l'esperienza utente per l'importazione e la connessione delle origini dati. Questo aggiornamento ha lo scopo di semplificare l'inserimento di dati in Customer Insights.
+
+Per altre informazioni, vedi [Panoramica delle origini dati](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Esportazione in InMobi
+
+InMobi aiuta i marchi a comprendere, identificare, coinvolgere e acquisire consumatori. Puoi esportare segmenti e altri dati nel servizio InMobi tramite gli account di archiviazione BLOB di Azure.
+
+Per altre informazioni, vedi [Esportazione in InMobi (anteprima)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Supporto Lockbox in Customer Insights
+
+Customer Lockbox fornisce un'interfaccia per rivedere e approvare (o rifiutare) le richieste di accesso ai dati. Queste richieste si verificano quando è necessario l'accesso ai dati dei clienti per risolvere un caso di supporto.
+
+Per ulteriori informazioni, vedi [Accedere in modo sicuro ai dati dei clienti usando Customer Lockbox (anteprima)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview)
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Connettersi ai dati usando il collegamento privato di Azure
+
+Il collegamento privato di Azure consente a Customer Insights di connettersi al tuo account Azure Data Lake Storage su un endpoint privato nella tua rete virtuale. Per i dati in un account di archiviazione non esposto a Internet pubblico, Collegamento privato consente la connessione alla rete con restrizioni.
+
+Per altre informazioni, vedi [Utilizzare il collegamento privato in Customer Insights](security-overview.md#private-links-tab).
 
 ## <a name="may-2022-updates"></a>Aggiornamenti di maggio 2022
 
@@ -169,7 +197,7 @@ Per un periodo di transizione, i partecipanti all'anteprima hanno ancora accesso
 - Visualizza gli eventi e le proprietà degli eventi 
 - Migliora i profili unificati con eventi inseriti e perfezionati per beneficiare di tutto il valore dei dati dei clienti
   
-Durante il periodo di transizione, gli eventi acquisiti vengono comunque trasmessi in streaming al Data Lake connesso. Una volta disattivata questa funzionalità, la condivisione dei dati verrà interrotta e nessun nuovo evento verrà inviato all'archiviazione connessa.
+Durante il periodo di transizione, gli eventi acquisiti vengono comunque trasmessi in streaming al Data Lake connesso. Una volta disattivata questa funzionalità, la condivisione dei dati verrà interrotta e nessun nuovo evento verrà inviato allo spazio di archiviazione connesso.
 Contatta direttamente il team dell'account Microsoft in caso di domande sulla fine dell'anteprima delle funzionalità. Il team del tuo account ti terrà aggiornato sui prossimi lanci. 
 
 ## <a name="january-2022-updates"></a>Aggiornamenti di gennaio 2022

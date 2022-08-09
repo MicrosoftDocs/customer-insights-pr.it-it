@@ -1,7 +1,7 @@
 ---
 title: Connessione ai dati in un Data Lake gestito di Microsoft Dataverse
 description: Importa dati da un data lake Microsoft Dataverse gestito.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,24 +11,25 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 9ae0b964d8d39835715b7ddadc712e2338b855af
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081261"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206958"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Connessione ai dati in un Data Lake gestito di Microsoft Dataverse
 
-Gli utenti di Microsoft Dataverse possono connettersi rapidamente alle entità analitiche in un data lake gestito da Microsoft Dataverse.
+Gli utenti di Microsoft Dataverse possono connettersi rapidamente alle entità analitiche in un data lake gestito da Microsoft Dataverse. Solo un'origine dati di un ambiente può utilizzare contemporaneamente lo stesso data lake gestito di Dataverse.
 
 > [!NOTE]
 > Devi essere un amministratore nell'organizzazione Dataverse per procedere e visualizzare l'elenco delle entità disponibili nel lake gestito.
 
-## <a name="important-considerations"></a>Considerazioni importanti
+## <a name="prerequisites"></a>Prerequisiti
 
-1. I dati archiviati nei servizi online come Azure Data Lake Storage possono essere archiviati in una posizione diversa rispetto a quella in cui i dati vengono elaborati o archiviati in Dynamics 365 Customer Insights.Importando o connettendoti a dati archiviati nei servizi online, accetti che i dati possano essere trasferiti e archiviati con Dynamics 365 Customer Insights. [Altre informazioni sono disponibili nel Microsoft Trust Center.](https://www.microsoft.com/trust-center).
-2. Sono visibili solo entità Dataverse con il [rilevamento modifiche](/power-platform/admin/enable-change-tracking-control-data-synchronization) abilitato. Queste entità possono essere esportate in un data lake gestito da Dataverse e utilizzato in Customer Insights. Le tabelle predefinite di Dataverse hanno il rilevamento modifiche abilitato per impostazione predefinita. Devi attivare il rilevamento modifiche per le tabelle personalizzate. Per verificare se una tabella di Dataverse è abilitata per il rilevamento modifiche, vai a [Power Apps](https://make.powerapps.com) > **Dati** > **Tabelle**. Trova la tabella desiderata e selezionala. Vai a **Impostazioni** > **Opzioni avanzate** ed esamina l'impostazione **Rilevamento modifiche**.
+- I dati archiviati nei servizi online come Azure Data Lake Storage possono essere archiviati in una posizione diversa rispetto a quella in cui i dati vengono elaborati o archiviati in Dynamics 365 Customer Insights.Importando o connettendoti a dati archiviati nei servizi online, accetti che i dati possano essere trasferiti e archiviati con Dynamics 365 Customer Insights. [Altre informazioni sono disponibili nel Microsoft Trust Center.](https://www.microsoft.com/trust-center).
+
+- Sono visibili solo entità Dataverse con il [rilevamento modifiche](/power-platform/admin/enable-change-tracking-control-data-synchronization) abilitato. Queste entità possono essere esportate in un data lake gestito da Dataverse e utilizzato in Customer Insights. Le tabelle predefinite di Dataverse hanno il rilevamento modifiche abilitato per impostazione predefinita. Devi attivare il rilevamento modifiche per le tabelle personalizzate. Per verificare se una tabella di Dataverse è abilitata per il rilevamento modifiche, vai a [Power Apps](https://make.powerapps.com) > **Dati** > **Tabelle**. Trova la tabella desiderata e selezionala. Vai a **Impostazioni** > **Opzioni avanzate** ed esamina l'impostazione **Rilevamento modifiche**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Connettersi a un data lake gestito Dataverse
 
@@ -51,7 +52,9 @@ Gli utenti di Microsoft Dataverse possono connettersi rapidamente alle entità a
 
 1. Salva la tua selezione per iniziare a sincronizzare le tabelle selezionate da Dataverse. Troverai la connessione appena aggiunta nella pagina **Origine dati**. Verrà messo in coda per l'aggiornamento e visualizzerà il conteggio delle entità su 0 fino a quando tutte le tabelle selezionate non saranno sincronizzate.
 
-Solo un'origine dati di un ambiente può utilizzare contemporaneamente lo stesso data lake gestito di Dataverse.
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Il caricamento dei dati può richiedere tempo. Al termine dell'aggiornamento, i dati inseriti possono essere esaminati nella pagina [**Entità**](entities.md).
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Modificare l'origine dati di un data lake gestito Dataverse
 
@@ -62,4 +65,10 @@ Per connettersi a un altro data lake Dataverse, [crea una nuova origine dati](#c
 
 1. Accanto all'origine dati che desideri aggiornare, seleziona **Modifica**.
 
-1. Seleziona le entità aggiuntive dall'elenco disponibile di entità e seleziona **Salva**.
+1. Seleziona le entità aggiuntive dall'elenco disponibile di entità.
+
+1. Fai clic su **Salva** per applicare le modifiche e tornare alla pagina **Origine dati**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

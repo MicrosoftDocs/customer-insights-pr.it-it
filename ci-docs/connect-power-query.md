@@ -1,7 +1,7 @@
 ---
 title: Connessione a un'origine dati Power Query (video)
 description: Inserisci i dati tramite un connettore Power Query (video).
-ms.date: 06/13/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081274"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207050"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connessione a un'origine dati Power Query
 
@@ -41,22 +41,29 @@ L'aggiunta di origini dati basate sui connettori Power Query generalmente segue 
 
 1. Immetti i dettagli richiesti in **Impostazioni di connessione** per il connettore selezionato e seleziona **Avanti** per visualizzare un'anteprima dei dati.
 
-1. Seleziona **Trasforma dati**. In questo passaggio, aggiungerai entità alla tua origine dati. Le entità sono set di dati. Se disponi di un database che include più set di dati, ogni set di dati è la propria entità.
+1. Seleziona **Trasforma dati**.
 
 1. La finestra di dialogo **Power Query - Modifica query** consente di rivedere e perfezionare i dati. Le entità identificate dai sistemi nell'origine dati selezionata vengono visualizzate nel riquadro di sinistra.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Finestra di dialogo Modifica query":::
 
-1. Puoi anche trasformare i dati. Seleziona un'entità da modificare o trasformare. Usa le opzioni nella finestra Power Query per applicare le trasformazioni. Ogni trasformazione è elencata in **Passaggi applicati**. Power Query fornisce numerose opzioni di trasformazione predefinite. Per ulteriori informazioni, vedi [Trasformazioni di Power Query](/power-query/power-query-what-is-power-query#transformations).
+1. Puoi anche trasformare i dati. Seleziona un'entità da modificare o trasformare. Usa le opzioni nella finestra Power Query per applicare le trasformazioni. Ogni trasformazione è elencata in **Passaggi applicati**. Power Query fornisce numerose opzioni di [trasformazione predefinite](/power-query/power-query-what-is-power-query#transformations).
 
    Si consiglia di utilizzare le seguenti trasformazioni:
 
    - Se stai inserendo dati da un file CSV, la prima riga spesso contiene intestazioni. Vai a **Trasforma**, quindi seleziona **Usa la prima riga come intestazione**.
    - Assicurati che il tipo di dati sia impostato in modo appropriato. Ad esempio, per i campi data, seleziona un tipo di data.
 
-1. Per aggiungere ulteriori entità all'origine dati nella finestra **Modifica query** vai a **Home** e seleziona **Ottieni dati**. Ripeti i passaggi da 6 a 10 finché non avrai aggiunto tutte le entità per questa origine dati.
+1. Per aggiungere ulteriori entità all'origine dati nella finestra **Modifica query** vai a **Home** e seleziona **Ottieni dati**. Ripeti i passaggi da 5 a 10 finché non avrai aggiunto tutte le entità per questa origine dati. Se disponi di un database che include più set di dati, ogni set di dati è la propria entità.
 
 1. Seleziona **Salva**. Verrà aperta la pagina **Origine dati** che mostra la nuova origine dati con stato **Aggiornamento in corso**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Il caricamento dei dati può richiedere tempo. Al termine dell'aggiornamento, i dati inseriti possono essere esaminati nella pagina [**Entità**](entities.md).
+
+> [!CAUTION]
+> Un'origine dati basata su Power Query crea un [flusso di dati in Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Non modificare il nome di un flusso di dati utilizzato in Customer Insights nell'interfaccia di amministrazione di Power Platform. La ridenominazione di un flusso di dati causa problemi con i riferimenti tra l'origine dati di Customer Insights e il flusso di dati di Dataverse.
 
 ### <a name="available-power-query-data-sources"></a>Origini dati di Power Query disponibili
 
@@ -70,15 +77,17 @@ L'inserimento di dati da origini dati locali è supportata in base ai flussi di 
 
 Le origini dati che vengono create dopo aver associato un ambiente Dataverse con Customer Insights usano [flussi di dati Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per impostazione predefinita. I flussi di dati supportano la connettività locale utilizzando il gateway di dati. Puoi rimuovere e ricreare origini dati che esistevano prima dell'associazione dell'ambiente Dataverse [utilizzando i gateway dati locali](/data-integration/gateway/service-gateway-app).
 
-I gateway dati di un ambiente esistente Power BI o Power Apps saranno visibili e potrai riutilizzarli in Customer Insights. La pagina delle origini dati mostra i collegamenti per andare all'ambiente Microsoft Power Platform in cui è possibile visualizzare e configurare i gateway dati locale.
+I gateway dati di un ambiente Power BI o Power Apps esistente saranno visibili e potrai riutilizzarli in Customer Insights. La pagina delle origini dati mostra i collegamenti per andare all'ambiente Microsoft Power Platform in cui è possibile visualizzare e configurare i gateway dati locale.
 
 > [!IMPORTANT]
 > Assicurati che i gateway siano aggiornati all'ultima versione. È possibile installare un aggiornamento e riconfigurare un gateway direttamente da un prompt visualizzato sullo schermo del gateway oppure [scaricare l'ultima versione](https://powerapps.microsoft.com/downloads/). Se non si utilizza l'ultima versione del gateway, l'aggiornamento del flusso di dati non viene eseguito e viene visualizzato un messaggio di errore come **La parola chiave non è supportata: proprietà di configurazione. Nome parametro: parola chiave**.
+>
+> Gli errori con gateway dati locale in Customer Insights sono spesso causati da problemi di configurazione. Per ulteriori informazioni sulla risoluzione dei problemi con i gateway dati, vedi [Risolvere i problemi del gateway dati locale](/data-integration/gateway/service-gateway-tshoot).
 
 ## <a name="edit-power-query-data-sources"></a>Modifica origine dati Power Query
 
 > [!NOTE]
-> Potrebbe non essere possibile apportare modifiche alle origini dati attualmente utilizzate in uno dei processi dell'app (*segmentazione*, *corrispondenza* o *unione*, ad esempio).
+> Potrebbe non essere possibile apportare modifiche alle origini dati attualmente utilizzate in uno dei processi dell'app (ad esempio, segmentazione o unificazione dei dati).
 >
 > Nella pagina **Impostazioni**, puoi tener traccia dell'avanzamento di ciascuno dei processi attivi. Al termine di un processo, puoi tornare alla pagina **Origine dei dati** e apportare le tue modifiche.
 
@@ -86,8 +95,10 @@ I gateway dati di un ambiente esistente Power BI o Power Apps saranno visibili e
 
 1. Accanto all'origine dati che desideri aggiornare, seleziona **Modifica**.
 
-   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
 1. Applica le modifiche e le trasformazioni nella finestra di dialogo **Power Query - Modifica query** come descritto in [Creare una nuova origine dati](#create-a-new-data-source) sezione.
 
-1. Seleziona **Salva** in Power Query dopo aver completato le modifiche, per salvare le modifiche.
+1. Seleziona **Salva** per applicare le modifiche e tornare alla pagina **Origine dati**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

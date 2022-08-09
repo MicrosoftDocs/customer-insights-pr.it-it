@@ -21,12 +21,12 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e622e5fa0b5738e31db1c668d95312adbc4f7d36
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081441"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183568"
 ---
 # <a name="relationships-between-entities-and-entity-paths"></a>Relazioni tra entità e percorsi di entità
 
@@ -34,7 +34,7 @@ Relazioni collega le entità e definisce un grafico dei tuoi dati quando le enti
 
 Esistono tre tipi di Relazioni: 
 - Relazioni di sistema non modificabili, create dal sistema come parte del processo di unificazione dei dati
-- Relazioni ereditate non modificabili, create automaticamente dall'importazione di origini dati 
+- Relazioni ereditate non modificabili, create automaticamente dall'importazione di origini dati
 - Relazioni personalizzate modificabili, create e configurate dagli utenti
 
 ## <a name="non-editable-system-relationships"></a>Relazioni di sistema non modificabili
@@ -67,69 +67,66 @@ La relazione consiste in una *entità di origine* contenente la chiave esterna e
    - **Descrizione**: descrizione della relazione.
    - **Entità di origine**: Entità utilizzata come origine nella relazione. Esempio: SupportCase.
    - **Entità di destinazione**: Entità utilizzata come destinazione nella relazione. Esempio: cliente.
-   - **Cardinalità di origine**: specificare la cardinalità dell'entità di origine. La cardinalità descrive il numero di possibili elementi in un insieme. Si riferisce sempre alla cardinalità di destinazione. Puoi scegliere tra **Uno** e **Molti**. Sono supportate solo le relazioni molti-a-uno e uno-a-uno.  
+   - **Cardinalità di origine**: la cardinalità dell'entità di origine. La cardinalità descrive il numero di possibili elementi in un insieme. Si riferisce sempre alla cardinalità di destinazione. Puoi scegliere tra **Uno** e **Molti**. Sono supportate solo le relazioni molti-a-uno e uno-a-uno.  
      - Molti a uno: più record di origine possono essere correlati a un record di destinazione. Esempio: più casi di supporto da un singolo cliente.
      - Uno a uno: un singolo record di origine è correlato a un record di destinazione. Esempio: un ID fedeltà per un singolo cliente.
 
      > [!NOTE]
      > Relazioni Molti a molti possono essere create utilizzando due relazioni molti a uno e un'entità di collegamento, che collega l'entità di origine e l'entità di destinazione.
 
-   - **Cardinalità destinazione**: seleziona la cardinalità dei record dell'entità di destinazione. 
-   - **Campo chiave di origine**: il campo della chiave esterna nell'entità di origine. Esempio: SupportCase potrebbe utilizzare CaseID come campo chiave esterna.
-   - **Campo chiave di destinazione**: il campo chiave dell'entità di destinazione. Esempio Il cliente potrebbe utilizzare il campo chiave **CustomerID**.
+   - **Cardinalità destinazione**:la cardinalità dei record dell'entità di destinazione.
+   - **Campo chiave di origine**: il campo della chiave esterna nell'entità di origine. Esempio: SupportCase usa **CaseID** come campo chiave esterna.
+   - **Campo chiave di destinazione**: il campo chiave dell'entità di destinazione. Esempio Il cliente usa **CustomerID** come campo chiave.
 
 4. Seleziona **Salva** per creare la relazione personalizzata.
 
 ## <a name="set-up-account-hierarchies"></a>Impostare le gerarchie degli account
 
-Gli ambienti che sono configurati per utilizzare gli account aziendali come target primario possono configurare gerarchie di account per gli account aziendali correlati. Per esempio, un'azienda che ha unità di business separate. 
+Gli ambienti che sono configurati per utilizzare gli account aziendali come target primario possono configurare gerarchie di account per gli account aziendali correlati. Per esempio, un'azienda che ha unità di business separate.
 
 Le organizzazioni creano gerarchie di account per gestire meglio gli account e le loro relazioni reciproche. Customer Insights supporta le gerarchie di account padre-figlio già esistenti nei dati dei clienti inseriti. Per esempio, conti da Dynamics 365 Sales. Queste gerarchie possono essere configurate nella pagina **Relazioni**.
 
 1. Vai a **Data** > **Relationships**.
 1. Seleziona la scheda **Gerarchia dell'account** .
-1. Selezionare **Nuova gerarchia di conti**. 
-1. Nel riquadro della **gerarchia dell'account** , fornisci un nome per la gerarchia. Il sistema crea un nome per l'entità di uscita. È possibile cambiare il nome dell'entità del nome di uscita.
+1. Selezionare **Nuova gerarchia di conti**.
+1. Nel riquadro della **gerarchia dell'account** , fornisci un nome per la gerarchia. Il sistema crea un nome per l'entità di output, ma puoi modificarlo.
 1. Seleziona l'entità che contiene la tua gerarchia di conti. Di solito è nella stessa entità che contiene i conti.
-1. Seleziona l' **ID del conto** e l' **ID del genitore del conto** dall'entità selezionata 
-1. Seleziona **Salva** per applicare le impostazioni e finalizzare la gerarchia dell'account.
+1. Seleziona l'**UID account** e l'**UID padre** dell'entità selezionata.
+1. Seleziona **Salva** per finalizzare la gerarchia degli account.
 
-## <a name="view-relationships"></a>Visualizza Relazioni
+## <a name="manage-existing-relationships"></a>Gestisci relazioni esistenti
 
-La pagina Relazioni elenca tutte le Relazioni che sono state create. Ogni riga rappresenta una relazione, che include anche dettagli sull'entità di origine, sull'entità di destinazione e sulla cardinalità. 
+Vai alla pagina **Relazioni** per visualizzare tutte le relazioni create, la relativa entità di origine, l'entità di destinazione e la cardinalità.
 
 :::image type="content" source="media/relationships-list.png" alt-text="Elenco di relazioni e opzioni nella barra delle azioni della pagina Relazioni.":::
 
-Questa pagina offre una serie di opzioni per relazioni esistenti e nuove: 
-- **Nuova relazione**: [Crea una relazione personalizzata](#create-a-custom-relationship).
-- **Visualizzatore**: [Esplora il visualizzatore di relazioni](#explore-the-relationship-visualizer) per visualizzare un diagramma di rete delle relazioni esistenti e della relativa cardinalità.
-- **Filtra per**: Scegli il tipo di relazioni da mostrare nell'elenco.
-- **Cerca relazioni**: utilizza una ricerca basata sul testo nelle proprietà delle relazioni.
+Utilizza le opzioni **Filtra per** o **Cerca relazioni** per individuare una particolare relazione. Per visualizzare un diagramma di rete delle relazioni esistenti e la relativa cardinalità, seleziona [**Visualizzatore**](#explore-the-relationship-visualizer).
+
+Seleziona una relazione per visualizzare le azioni disponibili:
+- **Modifica**: aggiorna le proprietà delle relazioni personalizzate nel riquadro di modifica e salva le modifiche.
+- **Elimina**: elimina le relazioni personalizzate.
+- **Visualizza**: visualizza le relazioni create ed ereditate dal sistema.
 
 ### <a name="explore-the-relationship-visualizer"></a>Esplora il visualizzatore di relazioni
 
 Il visualizzatore delle relazioni consente di visualizzare un diagramma di rete delle relazioni esistenti tra le entità connesse e la relativa cardinalità. Visualizza anche il percorso relazione.
 
-Per personalizzare la visualizzazione, puoi modificare la posizione delle caselle trascinandole sulla canvas.
-
 :::image type="content" source="media/relationship-visualizer.png" alt-text="Screenshot del diagramma di rete del visualizzatore delle relazioni con le connessioni tra entità correlate.":::
 
-Opzioni disponibili: 
+Per personalizzare la visualizzazione, puoi modificare la posizione delle caselle trascinandole sulla canvas. Altre opzioni includono: 
 - **Esporta come immagine**: salva la vista corrente come file immagine.
 - **Passa al layout orizzontale/verticale**: modifica l'allineamento delle entità e delle relazioni.
 - **Modifica**: aggiorna le proprietà delle relazioni personalizzate nel riquadro di modifica e salva le modifiche.
 
 ## <a name="relationship-paths"></a>Percorsi delle relazioni
 
-Un percorso di relazione descrive le entità connesse con relazioni tra un'entità di origine e un'entità di destinazione. È utilizzato quando si crea un segmento o una misura che include altre entità oltre all'entità del profilo unificato e sono disponibili più opzioni per raggiungere l'entità del profilo unificato. 
-
-Un percorso di relazione indica al sistema tramite quali relazioni accedere all'entità del profilo unificato. Percorsi relazione differenti possono produrre risultati differenti.
+Un percorso di relazione descrive le entità connesse con relazioni tra un'entità di origine e un'entità di destinazione. È utilizzato quando si crea un segmento o una misura che include altre entità oltre all'entità del profilo unificato e sono disponibili più opzioni per raggiungere l'entità del profilo unificato. Percorsi relazione differenti possono produrre risultati differenti.
 
 Ad esempio, l'entità *eCommerce_eCommercePurchases* ha le seguenti relazioni con l'entità *Cliente* del profilo unificato:
 
 - eCommerce_eCommercePurchases > Customer
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Customer
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Customer 
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Customer
 
 Un percorso di relazione determina quali entità è possibile utilizzare durante la creazione di regole per misure o segmenti. La scelta dell'opzione con il percorso relazione più lungo produrrà probabilmente meno risultati poiché i record corrispondenti devono essere parte di tutte le entità. In questo esempio, un cliente deve aver acquistato della merce tramite e-commerce (eCommerce_eCommercePurchases) in un punto vendita (POS_posPurchases) e partecipare al nostro programma di fedeltà (loyaltyScheme_loyCustomers). Quando si sceglie la prima opzione, è probabile che si ottengano più risultati perché i clienti devono esistere solo in un'entità aggiuntiva.
 
@@ -155,7 +152,7 @@ Una relazione è classificata come **relazione indiretta** quando un'entità di 
 
 #### <a name="multi-hop-relationship"></a>Relazione multi-hop
 
-Una *relazione multi-hop* è una *relazione indiretta* che consente di connettere un'entità di origine a un'entità di destinazione tramite una o più entità intermedie.
+Una **relazione multi-hop** è una *relazione indiretta* che consente di connettere un'entità di origine a un'entità di destinazione tramite una o più entità intermedie.
 
 Ad esempio, se un'entità di attività denominata *eCommerce_eCommercePurchasesWest* si connette a un'entità intermedia denominata *eCommerce_eCommercePurchasesEast* e quindi si connette a un'entità di destinazione denominata *eCommerce_eCommerceContacts*, si tratta di una relazione multi-hop.
 
@@ -168,16 +165,6 @@ Le relazioni multi-hop e le relazioni con percorsi multipli possono essere usate
 Ad esempio, se un'entità di attività denominata *eCommerce_eCommercePurchasesWest* si connette a un'entità intermedia denominata *eCommerce_eCommercePurchasesEast* e quindi si connette a due entità di destinazione *eCommerce_eCommerceContacts* e *loyaltyScheme_loyCustomers*, si tratta di una relazione multi-hop con percorsi multipli.
 
 :::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="L'entità di origine si connette direttamente a un'entità di destinazione e si connette a un'altra entità di destinazione tramite un'entità intermedia.":::
-
-## <a name="manage-existing-relationships"></a>Gestisci relazioni esistenti 
-
-Nella pagina Relazioni, ogni relazione è rappresentata da una riga. 
-
-Seleziona una relazione e scegli una delle seguenti opzioni: 
- 
-- **Modifica**: aggiorna le proprietà delle relazioni personalizzate nel riquadro di modifica e salva le modifiche.
-- **Elimina**: elimina le relazioni personalizzate.
-- **Visualizza**: visualizza le relazioni create ed ereditate dal sistema. 
 
 ## <a name="next-step"></a>Passaggio successivo
 

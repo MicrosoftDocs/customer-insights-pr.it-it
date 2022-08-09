@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081256"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194928"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Componente aggiuntivo scheda cliente per Dynamics 365 (anteprima)
 
@@ -28,21 +28,25 @@ Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Il componente aggiuntivo funziona solo con le app Dynamics 365 basate su modello, come Sales o Customer Service, versione 9.0 e successive.
-- Affinché i dati di Dynamics 365 vengano mappati ai profili del cliente Customer Insights, consigliamo di [importarli dall'app Dynamics 365 utilizzando il connettore Microsoft Dataverse](connect-power-query.md). Se utilizzi un metodo diverso per importare i contatti (o gli account) di Dynamics 365, devi assicurarti che il campo `contactid` (o `accountid`) sia impostato come [chiave primaria per l'origine dati nel passaggio della mappa del processo di unificazione dei dati](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- App Dynamics 365 basate su modello, come Sales o Customer Service, versione 9.0 e successive.
+- Affinché i dati di Dynamics 365 vengano mappati ai profili del cliente Customer Insights, consigliamo di [importarli dall'app Dynamics 365 utilizzando il connettore Microsoft Dataverse](connect-power-query.md). Se utilizzi un metodo diverso per importare i contatti (o gli account) di Dynamics 365, devi assicurarti che il campo `contactid` (o `accountid`) sia impostato come [chiave primaria per l'origine dati durante il processo di unificazione dei dati](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Tutti gli utenti Dynamics 365 del componente aggiuntivo scheda cliente devono essere [aggiunti come utenti](permissions.md) in Customer Insights per vedere i dati.
-- [Funzionalità di ricerca e filtro configurate](search-filter-index.md) in Customer Insights sono necessarie affinché la ricerca dei dati funzioni.
+- [Funzionalità di ricerca e filtro configurate](search-filter-index.md) in Customer Insights.
 - Ogni controllo del componente aggiuntivo si basa su dati specifici in Customer Insights. Alcuni dati e controlli sono disponibili solo in ambienti di tipo specifico. La configurazione del componente aggiuntivo ti informerà se un controllo non è disponibile a causa del tipo di ambiente selezionato. Per saperne di più sui [casi d'uso dell'ambiente](work-with-business-accounts.md).
-  - **Controllo delle misure**: Richiede [misure configurate](measures.md) di attributi del cliente tipo.
-  - **Controllo intelligente**: richiede dati generati utilizzando [previsioni o modelli personalizzati](predictions-overview.md).
-  - **Controllo dei dettagli del cliente**: Tutti i campi del profilo sono disponibili nel profilo cliente unificato.
-  - **Controllo dell'arricchimento**: Richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili dei clienti. Il componente aggiuntivo della scheda supporta questi arricchimenti: [Marchi](enrichment-microsoft.md) fornito da Microsoft, [Interessi](enrichment-microsoft.md) fornito da Microsoft e [Dati sull'engagement di Office](enrichment-office.md) fornito da Microsoft.
-  - **Controllo dei contatti**: Richiede la definizione di un'entità semantica di tipo contacts.
-  - **Controllo della timeline**: Richiede [attività configurate](activities.md).
+  - **Controllo delle misure** richiede [misure configurate di attributi del cliente](measures.md).
+  - **Controllo intelligente** richiede dati generati utilizzando [previsioni o modelli personalizzati](predictions-overview.md).
+  - **Controllo dei dettagli del cliente** mostra tutti i campi del profilo disponibili nel profilo cliente unificato.
+  - **Controllo dell'arricchimento** richiede [arricchimenti](enrichment-hub.md) attivi applicati ai profili dei clienti. Il componente aggiuntivo della scheda supporta questi arricchimenti: [Marchi](enrichment-microsoft.md) fornito da Microsoft, [Interessi](enrichment-microsoft.md) fornito da Microsoft e [Dati sull'engagement di Office](enrichment-office.md) fornito da Microsoft.
+  - **Controllo dei contatti** richiede un tipo di entità semantica per i contatti.
+  - **Controllo della timeline** richiede [attività configurate](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Installare il componente aggiuntivo Scheda cliente
 
-Il componente aggiuntivo Scheda cliente è una soluzione per le app di interazione con i clienti in Dynamics 365. Per installare la soluzione, vai a AppSource e cerca **Scheda cliente Dynamics**. Seleziona il [componente aggiuntivo Scheda cliente su AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) e seleziona **Prova adesso**.
+Il componente aggiuntivo Scheda cliente è una soluzione per le app di interazione con i clienti in Dynamics 365. Per installare la soluzione:
+
+1. Vai a AppSource e cerca **Scheda cliente Dynamics**.
+
+1. Seleziona il [componente aggiuntivo Scheda cliente su AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) e seleziona **Prova adesso**.
 
 Potrebbe essere necessario accedere con le credenziali di amministratore per l'app Dynamics 365 per installare la soluzione. L'installazione della soluzione nell'ambiente potrebbe richiedere del tempo.
 
@@ -62,7 +66,7 @@ Potrebbe essere necessario accedere con le credenziali di amministratore per l'a
 
 1. Seleziona l'ambiente di Customer Insights da cui vuoi recuperare i dati.
 
-1. Definisci la mappatura dei campi ai record nell'app Dynamics 365. A seconda dei vostri dati in Customer Insights, potete scegliere di mappare le seguenti opzioni:
+1. Definisci il mapping dei campi ai record nell'app Dynamics 365. A seconda dei vostri dati in Customer Insights, potete scegliere di mappare le seguenti opzioni:
    - Per eseguire il mapping con un contatto, seleziona il campo nell'entità Cliente che corrisponde all'ID dell'entità di contatto.
    - Per eseguire il mapping con un account, seleziona il campo nell'entità Cliente che corrisponde all'ID dell'entità account.
 

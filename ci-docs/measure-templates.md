@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051688"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170778"
 ---
 # <a name="create-measures-from-templates"></a>Creare misure dai modelli
 
-È possibile utilizzare modelli predefiniti di [misure](measures.md) di uso comune per crearli. Descrizioni dettagliate dei modelli e un'esperienza guidata ti aiutano a creare misure efficienti. I modelli si basano sui dati mappati dall'entità *Impegno unificato*. Quindi assicurati di aver configurato [impegni del cliente](activities.md) prima di creare una misura da un modello.
+Usa modelli predefiniti di [misure](measures.md) di uso comune per creare le misure. I modelli si basano sui dati mappati dall'entità *Impegno unificato*. Quindi assicurati di aver configurato [impegni del cliente](activities.md) prima di creare una misura da un modello.
 
-Per creare misure personalizzate, vedi [Usare il generatore di misure per creare misure da zero](measure-builder.md).
+I modelli per misure sono supportati solo in ambienti per **clienti individuali**. Per creare misure personalizzate o misure per B2B, vedi [Usare il generatore di misure](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Singoli utenti (da B a C)](#tab/b2c)
-
-Modelli di misura disponibili: 
+Modelli di misura disponibili:
 - Valore medio transazione
 - Valore transazione totale
 - Ricavi medi giornalieri
+- Ricavi medi mensili
 - Ricavi medi annuali
 - Numero di transazioni
 - Punti programma fedeltà ottenuti
@@ -57,21 +56,22 @@ Modelli di misura disponibili:
 
 1. Seleziona **Fatto**.
 
-1. Nella sezione **Imposta periodo di tempo** definisci l'intervallo di tempo dei dati da utilizzare. Scegli se vuoi che la nuova misura copra l'intero set di dati selezionando **Sempre** o se vuoi che la misura si concentri su un **Periodo di tempo specifico**.
+1. Nella sezione **Imposta periodo di tempo** definisci l'intervallo di tempo dei dati. Scegli se vuoi che la nuova misura copra l'intero set di dati selezionando **Sempre** o se vuoi che la misura si concentri su un **Periodo di tempo specifico**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Screenshot che mostra la sezione del periodo di tempo durante la configurazione di una misura da un modello.":::
 
 1. Nella sezione successiva, seleziona **Aggiungi dati** per scegliere gli impegni e mappare i dati corrispondenti dalla entità *Impegno unificato*.
 
-    1. Passaggio 1 di 2: sotto **Tipo di impegno**, scegli il tipo di entità che desideri utilizzare. Per **Impegni**, seleziona le entità che desideri mappare.
-    1. Passaggio 2 di 2: scegli l'attributo dall'entità *Impegno unificato* per il componente richiesto dalla formula. Ad esempio, per valore medio della transazione, è l'attributo che rappresenta il valore della transazione. Per **Timestamp impegno**, scegli l'attributo dall'entità Impegno unificato che rappresenta la data e l'ora dell'impegno.
-   
-1. Una volta completata la mappatura dei dati, puoi vedere lo stato come **Completato** e il nome degli impegni e degli attributi mappati.
+    1. Passaggio 1 di 2: sotto **Tipo di impegno**, scegli il tipo di entità che desideri utilizzare. Per **Impegni**, seleziona le entità che desideri mappare e quindi seleziona **Avanti**.
+    1. Passaggio 2 di 2: scegli l'attributo dall'entità *Impegno unificato* per il componente richiesto dalla formula. Ad esempio, per valore medio della transazione, è l'attributo che rappresenta il valore della transazione. Per **Timestamp impegno**, scegli l'attributo dall'entità *Impegno unificato* che rappresenta la data e l'ora dell'impegno.
+    1. Seleziona **Salva**.
 
-1. Ora puoi selezionare **Esegui** per calcolare i risultati della misura. Per perfezionarlo in un secondo momento, seleziona **Salva bozza**.
+    Una volta completato il mapping dei dati, lo stato è **Completato** e viene visualizzato il nome degli impegni e degli attributi mappati.
 
-# <a name="business-accounts-b-to-b"></a>[Account aziendali (da B a B)](#tab/b2b)
+1. Seleziona **Esegui** per calcolare i risultati della misura. Seleziona **Salva bozza** se vuoi mantenere la configurazione corrente ed eseguire la misura in un secondo momento. Viene visualizzata la pagina **Misure**.
 
-Questa funzione è disponibile solo per le misure create in ambienti con clienti individuali come target primario.
+## <a name="next-step"></a>Passaggio successivo
 
----
+Usa le misure esistenti per creare [un segmento di clienti](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

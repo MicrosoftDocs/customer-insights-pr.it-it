@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647334"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171054"
 ---
 # <a name="subscription-churn-prediction"></a>Previsione sull'annullamento degli abbonamenti
 
@@ -121,7 +121,7 @@ La previsione di abbandono dell'abbonamento consente di prevedere se esiste il r
    - **Nome della previsione:** il nome della previsione specificato durante la creazione.
    - **Tipo di previsione:** il tipo di modello utilizzato per la previsione
    - **Entità di output:** nome dell'entità per memorizzare l'output della previsione. Puoi trovare un'entità con questo nome su **Dati** > **Entità**.    
-     Nell'entità di output, *ChurnScore* è la probabilità prevista di abbandono e *IsChurn* è un'etichetta binaria basata su *ChurnScore* con soglia di 0,5. La soglia predefinita potrebbe non funzionare per il tuo scenario. [Crea un nuovo segmento](segments.md#create-a-new-segment) con la tua soglia preferita.
+     Nell'entità di output, *ChurnScore* è la probabilità prevista di abbandono e *IsChurn* è un'etichetta binaria basata su *ChurnScore* con soglia di 0,5. La soglia predefinita potrebbe non funzionare per il tuo scenario. [Crea un nuovo segmento](segments.md#create-a-segment) con la tua soglia preferita.
    - **Campo previsione:** questo campo è popolato solo per alcuni tipi di previsioni e non viene utilizzato nella previsione di abbandono dell'abbonamento.
    - **Stato:** lo stato corrente dell'esecuzione della previsione.
         - **In coda:** la previsione è attualmente in attesa dell'esecuzione di altri processi.

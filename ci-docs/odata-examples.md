@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
+ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081719"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "9121567"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Esempi di query OData per le API di Customer Insights
 
@@ -23,7 +23,7 @@ Questo articolo elenca alcune query di esempio eseguite di frequente per aiutart
 
 È necessario modificare gli esempi di query perché funzionino negli ambienti di destinazione: 
 
-- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` dove {instanceId} è il GUID dell'ambiente Customer Insights su cui eseguire le query. L'[operazione ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) consente di trovare gli elementi {InstanceId} a cui hai accesso.
+- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` dove {instanceId} è il GUID dell'ambiente Customer Insights su cui eseguire le query. L'[operazione ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) consente di trovare gli elementi {InstanceId} a cui hai accesso.
 - {CID}: GUID di un record cliente unificato. Esempio: `ce759201f786d590bf2134bff576c369`.
 - {AlternateKey}: identificatore della chiave primaria di un record cliente in un origine dati. Esempio: `CNTID_1002`
 - {DSname}: stringa con il nome dell'entità di un origine dati che viene inserito in Customer Insights. Esempio: `Website_contacts`.
@@ -39,9 +39,10 @@ La tabella seguente contiene una serie di query di esempio per l'entità *Client
 |Chiave alternativa    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Le chiavi alternative persistono nell'entità cliente unificata       |
 |Seleziona   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Tra    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Chiave alternativa + In   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|Chiave alternativa + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Ricerca  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Restituisce i primi 10 risultati per una stringa di ricerca      |
 |Appartenenza al segmento  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Restituisce un numero predefinito di righe dall'entità di segmentazione.      |
+|Membro del segmento per un cliente | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Restituisce il profilo del cliente se è un membro del segmento specificato     |
 
 ## <a name="unified-activity"></a>Impegno unificato
 

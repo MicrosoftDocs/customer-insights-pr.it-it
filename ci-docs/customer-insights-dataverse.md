@@ -1,7 +1,7 @@
 ---
 title: Utilizzare i dati di Customer Insights in Microsoft Dataverse
 description: Scopri come collegare Customer Insights e Microsoft Dataverse e comprendi le entità di output che vengono esportate in Dataverse.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011525"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153409"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Utilizzare i dati di Customer Insights in Microsoft Dataverse
 
@@ -31,13 +31,25 @@ La connessione al tuo ambiente Dataverse ti consente anche di [inserire i dati d
 - Nessun altro ambiente Customer Insights è già associato all'ambiente Dataverse che vuoi connettere. Scopri come [rimuovere una connessione esistente in un ambiente Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
 - Un ambiente Microsoft Dataverse può connettersi solo a un singolo account di archiviazione. Si applica solo se si configura l'ambiente per [usare il tuo Azure Data Lake Storage](own-data-lake-storage.md).
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Diritto per capacità di archiviazione di Dataverse
+
+Un abbonamento a Customer Insights ti dà diritto di disporre di capacità extra oltre alla [capacità di archiviazione di Dataverse](/power-platform/admin/capacity-storage) esistente della tua organizzazione. La capacità aggiunta dipende dal numero di profili utilizzati dall'abbonamento.
+
+**Esempio:**
+
+Supponiamo che hai a disposizione 15 GB di spazio di archiviazione per database e 20 GB di spazio di archiviazione per file ogni 100.000 profili cliente. Se l'abbonamento include 300.000 profili cliente, la capacità di archiviazione totale sarebbe di 45 GB (3 x 15 GB) di spazio di archiviazione per database e 60 GB di spazio di archiviazione per file (3 x 20 GB). Allo stesso modo, se hai un abbonamento B2B con 30.000 account, la tua capacità di archiviazione totale sarebbe di 45 GB (3 x 15 GB) di spazio di archiviazione per database e 60 GB di spazio archiviazione per file (3 x 20 GB).
+
+La capacità del registro non è incrementale e fissa per la tua organizzazione.
+
+Per ulteriori informazioni sui diritti per capacità di archiviazione, vedi [Guida alle licenze di Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Connessione di un ambiente Dataverse a Customer Insights
 
 Il passaggio **Microsoft Dataverse** ti consente di connettere Customer Insights con il tuo ambiente Dataverse mentre [crei un ambiente Customer Insights](create-environment.md).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="condivisione dei dati con Microsoft Dataverse abilitata automaticamente per nuovi ambienti.":::
 
-Gli amministratori possono configurare Customer Insights per connettere un ambiente Dataverse esistente. Fornendo l'URL all'ambiente Dataverse, si collega il nuovo ambiente Customer Insights.
+Gli amministratori possono configurare Customer Insights per connettere un ambiente Dataverse esistente. Fornendo l'URL all'ambiente Dataverse, si esegue la connessione al nuovo ambiente Customer Insights. Dopo aver stabilito la connessione tra Customer Insights e Dataverse, non modificare il nome dell'organizzazione per l'ambiente Dataverse. Il nome dell'organizzazione è utilizzato nell'URL Dataverse e un nome modificato interrompe la connessione con Customer Insights.
 
 Se non si desidera usare un ambiente Dataverse esistente, il sistema crea un nuovo ambiente per i dati di Customer Insights nel tenant in uso. [Gli amministratori Power Platform possono controllare chi può creare gli ambienti](/power-platform/admin/control-environment-creation). Quando stai configurando un nuovo ambiente Customer Insights e l'amministratore ha disabilitato la creazione di ambienti Dataverse per tutti tranne gli amministratori, potresti non essere in grado di creare un nuovo ambiente.
 
@@ -154,7 +166,7 @@ Questa tabella contiene le attività degli utenti disponibili in Customer Insigh
 | Posizione             | Stringa      | Titolo o nome dell'impegno                                                               |
 | Description       | Stringa      | Descrizione impegno                                                                     |
 | URL               | Stringa      | Collegamento a un URL esterno specifico per l'impegno                                         |
-| SemanticData      | Stringa JSON | Include un elenco di coppie chiave-valore per campi di mappatura semantica specifici per il tipo di attività |
+| SemanticData      | Stringa JSON | Include un elenco di coppie chiave-valore per campi di mapping semantico specifici per il tipo di attività |
 | RangeIndex        | Stringa      | Timestamp Unix utilizzato per ordinare la sequenza temporale dell'attività e le query sull'intervallo effettivo |
 | mydynci_unifiedactivityid   | GUID | ID interno dell'attività del cliente (ActivityId) |
 

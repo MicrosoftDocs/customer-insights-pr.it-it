@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081333"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195801"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Arricchire i profili dei clienti con l'importazione personalizzata SFTP (anteprima)
 
@@ -29,7 +29,7 @@ L'importazione personalizzata SFTP (Secure File Transfer Protocol) consente di i
 
 ## <a name="file-schema-example"></a>Esempio di schema di file
 
-La directory che contiene il file da importare nel server SFTP deve contenere anche un file *model.json*. Questo file definisce lo schema da utilizzare per importare i dati. Lo schema deve usare [Common Data Model](/common-data-model/) per specificare la mappatura del campo. Un esempio semplice di un file model.json è simile a quanto segue:
+La directory che contiene il file da importare nel server SFTP deve contenere anche un file *model.json*. Questo file definisce lo schema da utilizzare per importare i dati. Lo schema deve usare [Common Data Model](/common-data-model/) per specificare il mapping del campo. Un esempio semplice di un file model.json è simile a quanto segue:
 
 ```
 {
@@ -104,7 +104,7 @@ L'amministratore di Dynamics 365 Customer Insights può rimuovere questo arricch
 
 1. Esamina la panoramica e quindi seleziona **Avanti**.
 
-1. Seleziona la connessione. Contatta un amministratore se uno non è disponibile.
+1. Seleziona la connessione. Contatta un amministratore se non è disponibile alcuna connessione.
 
 1. Seleziona **Set di dati cliente** e scegli il profilo o il segmento che vuoi arricchire. L'entità *Cliente* arricchisce tutti i tuoi profili cliente se un segmento arricchisce solo i profili cliente contenuti in quel segmento.
 

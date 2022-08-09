@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081243"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207188"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Arricchimento per le origini dati (anteprima)
 
@@ -21,9 +21,9 @@ Usa i dati provenienti da origini come Microsoft e altri partner per arricchire 
 
 ## <a name="enrich-a-data-source"></a>Arricchire un'origine dati
 
-Devi disporre delle autorizzazioni collaboratore o amministratore per creare o modificare gli arricchimenti. Per ulteriori informazioni, vedi [Autorizzazioni](permissions.md).  
+Devi disporre delle [autorizzazioni](permissions.md) di collaboratore o amministratore per creare o modificare gli arricchimenti.  
 
-1. Vai a **Dati** > **Unifica**. Seleziona l'entità che desideri arricchire e seleziona un attributo come chiave primaria per l'entità. Per ulteriori informazioni, vedi [Selezionare la chiave primaria](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Vai a **Dati** > **Unifica**. Seleziona l'entità che vuoi arricchire e quindi un attributo come [chiave primaria](map-entities.md#select-primary-key-and-semantic-type-for-attributes) per l'entità.
 
 1. Vai a **Dati** > **Origini dati**.
 
@@ -47,8 +47,8 @@ I seguenti arricchimenti sono attualmente disponibili per le origini dati. Esami
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gestire gli arricchimenti per le origini dati esistenti
 
-Vai alla scheda **I miei arricchimenti** per vedere tutti gli arricchimenti configurati.
+Vai a **Dati** > **Arricchimento**. Sulla scheda **Arricchimenti personali** sono visualizzati gli arricchimenti configurati, il loro stato, il numero di clienti arricchiti e l'ultimo aggiornamento dei dati. Puoi ordinare l'elenco degli arricchimenti in base a qualsiasi colonna o utilizzare la casella di ricerca per trovare l'arricchimento che desideri gestire.
 
-Seleziona l'arricchimento per vedere le opzioni disponibili. Puoi anche selezionare i puntini di sospensione verticali (&vellip;) su un elemento dell'elenco per visualizzare le opzioni. Se hai configurato diversi arricchimenti, puoi utilizzare la casella di ricerca per trovarli rapidamente.
+Seleziona l'arricchimento per vedere le opzioni disponibili. Puoi anche selezionare i puntini di sospensione verticali (&vellip;) su un elemento dell'elenco per visualizzare le opzioni.
 
-Puoi visualizzare, modificare, eseguire o eliminare un arricchimento dell'origine dati. Per altre informazioni, consulta [Gestire gli arricchimenti esistenti](enrichment-hub.md).
+Puoi visualizzare, modificare, eseguire o eliminare un arricchimento dell'origine dati. Per altre informazioni, consulta [Gestire gli arricchimenti esistenti](enrichment-hub.md#manage-existing-enrichments).
