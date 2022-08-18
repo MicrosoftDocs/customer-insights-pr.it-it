@@ -1,7 +1,7 @@
 ---
-title: Gestire le autorizzazioni utente
+title: Assegna le autorizzazioni utente
 description: Informazioni su autorizzazioni e ruoli utente.
-ms.date: 02/09/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,20 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: a59a672b6f7e1e67c2162ea14bb9860df0d551aa
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054875"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245424"
 ---
-# <a name="manage-user-permissions"></a>Gestire le autorizzazioni utente
+# <a name="assign-user-permissions"></a>Assegna le autorizzazioni utente
 
-La pagina **Autorizzazioni** è dove imposterai ruoli e autorizzazioni per l'utilizzo di Customer Insights.
-
-Devi disporre delle autorizzazioni di amministratore per visualizzare la pagina. Per accedere alla pagina delle autorizzazioni, vai in **Amministratore** > **Sicurezza** > **Utenti**.
-
-Esistono tre tipi di ruoli:
+L'accesso a Customer Insights è limitato agli utenti della tua organizzazione che vengono aggiunti all'applicazione da un amministratore. Un amministratore può aggiungere, modificare o rimuovere utenti. Un utente può essere un singolo utente, gruppo o applicazione. Esistono tre tipi di ruoli che un utente può avere:
 
 ## <a name="viewer"></a>Visualizzatore
 
@@ -41,24 +37,24 @@ Esistono tre tipi di ruoli:
 
 - Tutte le autorizzazioni disponibili per il visualizzatore.
 - Carica e trasforma i dati utilizzando la pagina **Origini dati**.
-- Completa le operazioni di **Unificazione dei dati** che generano l'entità del profilo cliente unificato.
-- Definisci **Relazioni** e **Impegni**.
+- Completa l'**unificazione dei dati** che genera l'entità del profilo cliente unificato.
+- Definisce **Relazioni** e **Impegni**.
 - Crea segmenti usando la pagina **Segmenti**.
 - Crea misure utilizzando la pagina **Misure**.
-- Gestisci la configurazione e arricchisci i profili cliente dalla pagina **Arricchimento** (solo per arricchimenti del produttore).
-- Gestisci e crea esportazioni in base alle connessioni condivise con i collaboratori. [Ulteriori informazioni su come gli amministratori consentono ai collaboratori di utilizzare una connessione per le esportazioni](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Gestisce la configurazione e arricchisce i profili cliente dalla pagina **Arricchimento** (solo per arricchimenti del produttore).
+- Gestisce e crea esportazioni in base alle [connessioni condivise con i collaboratori](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="admin"></a>Amministratore
 
 - Tutte le autorizzazioni disponibili per il contributore.
-- Modifica le impostazioni nella pagina **Sistema**, inclusa la lingua di lavoro e gli orari di aggiornamento per i processi di sistema.
-- Visualizza e aggiungi le autorizzazioni usando la pagina **Autorizzazioni**.
+- Modifica le impostazioni nella pagina **Sistema**, inclusa la lingua di lavoro, le pianificazioni di aggiornamento per i processi di sistema e i log di diagnostica di esportazione.
+- Modifica le impostazioni nella pagina **Sicurezza**, inclusi utenti, chiavi API, collegamenti privati e insieme di credenziali delle chiavi.
 - Imposta le definizioni di ricerca e filtro per la pagina Clienti utilizzando la pagina **Indicizzazione ricerca e filtro** (accessibile tramite la pagina **Clienti**).
-- Gestisci le connessioni e consenti loro altri ruoli utente nella pagina **Connessioni**.
-- Gestisci la configurazione e arricchisci i profili cliente dalla pagina **Arricchimento** (per tutti gli arricchimenti).
-- Gestisci e crea esportazioni nella pagina **Esportazioni**.
+- Gestisce le connessioni e consente loro altri ruoli utente nella pagina **Connessioni**.
+- Gestisce la configurazione e arricchisce i profili cliente dalla pagina **Arricchimento** (per tutti gli arricchimenti).
+- Gestisce e crea esportazioni nella pagina **Esportazioni**.
 - Installa e utilizza il **componente aggiuntivo Scheda cliente**.
-- Aggiungi e usa il **connettore Power Apps**.
+- Aggiunge e usa il **connettore Power Apps**.
 - Abilita l'utilizzo delle [API di Customer Insights](apis.md).
 - [Assegna la proprietà dell'ambiente](manage-environments.md#change-the-owner-of-an-environment) ad un altro amministratore.
 
@@ -67,24 +63,27 @@ Esistono tre tipi di ruoli:
 - Tutte le autorizzazioni disponibili per l'amministratore.
 - [Reimposta ed elimina](manage-environments.md#reset-an-existing-environment-preview) l'ambiente.
 
-## <a name="assign-roles-and-permissions"></a>Assegnare ruoli e autorizzazioni
+## <a name="add-users"></a>Aggiungere utenti
 
-1. Vai in **Amministratore** > **Sicurezza** > **Utenti**.
+1. Vai ad **Amministratore** > **Sicurezza** e seleziona la scheda **Utenti**.
 
 1. Seleziona **Aggiungi utenti** per aprire il riquadro **Aggiungi/Modifica autorizzazioni**.
 
-1. Utilizza il campo **Cerca** per trovare il gruppo o l'utente Azure Active Directory di cui si desidera modificare le autorizzazioni. Seleziona un **Ruolo** da assegnare a quell'utente o gruppo.
+1. Utilizza il campo **Cerca** per trovare il gruppo o l'utente Azure Active Directory che vuoi aggiungere. Seleziona un **Ruolo** da assegnare a quell'utente o gruppo.
 
-1. Seleziona **Salva**. L'ambiente corrente verrà automaticamente condiviso con l'utente o i membri del gruppo di cui hai modificato le autorizzazioni. Gli utenti possono accedere all'app Customer Insights e utilizzarla in base al ruolo specificato.
+1. Seleziona **Salva**. L'ambiente corrente viene automaticamente condiviso con l'utente o i membri del gruppo. Gli utenti possono accedere all'app Customer Insights e utilizzarla in base al ruolo specificato.
 
 ## <a name="view-current-permissions"></a>Visualizzare le autorizzazioni correnti
 
-Vai in **Amministratore** > **Sicurezza** > **Utenti** per vedere quali assegnazioni di ruolo sono attualmente attive.
+Vai ad **Amministratore** > **Sicurezza** e seleziona la scheda **Utenti** per visualizzare l'elenco di utenti attivi e le relative assegnazioni di ruolo. Puoi ordinare l'elenco degli utenti in base a qualsiasi colonna o utilizzare la casella di ricerca per trovare un determinato utente.
 
-- La colonna **Tipo** specifica un singolo utente, gruppo o applicazione. Il sistema supporta singoli utenti e gruppi.
-- I ruoli sono specificati nella colonna **Ruolo**.
-- Seleziona qualsiasi titolo di colonna per ordinare i risultati in base al valore di quella colonna.
-- Utilizza il campo **Cerca** nella parte superiore della pagina per individuare utenti specifici.
+## <a name="manage-current-users"></a>Gestire gli utenti correnti
 
+Vai ad **Amministratore** > **Sicurezza** e seleziona la scheda **Utenti**. Puoi ordinare l'elenco degli utenti in base a qualsiasi colonna o utilizzare la casella di ricerca per trovare l'utente che vuoi gestire.
+
+Seleziona un utente per visualizzare le azioni disponibili.
+
+- Seleziona **Modifica** per modificare il ruolo dell'utente in Customer Insights. Seleziona **Salva** per confermare la modifica.
+- Seleziona **Rimuovi** per impedire all'utente di accedere a Customer Insights. Per confermare l'eliminazione seleziona **Elimina**.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

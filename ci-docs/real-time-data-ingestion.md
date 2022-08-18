@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195663"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246113"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Inserimento dati in tempo reale (anteprima)
 
 La funzionalità quasi in tempo reale consente di visualizzare, in pochi secondi, le interazioni più recenti che i tuoi clienti hanno effettuato con i tuoi prodotti o servizi.
 
-Gli [aggiornamenti pianificati](system.md#schedule-tab) includono un gran numero di record e diverse operazioni complesse. Innanzitutto, i dati vengono estratti dall'origine dati. Successivamente, i dati vengono unificati e quindi arricchiti con ulteriori informazioni. Ogni esecuzione di questo processo può richiedere da minuti a ore.
+Gli [aggiornamenti pianificati](schedule-refresh.md) includono un gran numero di record e diverse operazioni complesse. Innanzitutto, i dati vengono estratti dall'origine dati. Successivamente, i dati vengono unificati e quindi arricchiti con ulteriori informazioni. Ogni esecuzione di questo processo può richiedere da minuti a ore.
 
 La funzionalità in tempo reale fornisce dei dati immediatamente per il consumo, fino a quando il successivo aggiornamento pianificato non estrae questi dati dall'origine dati.
 
@@ -85,7 +85,7 @@ I dettagli di questa API, inclusi parametri e risposte, sono disponibili nella s
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Comprendi il tuo utilizzo in tempo reale con i dati di telemetria
 
-Ottieni una panoramica del volume di richieste all'API in tempo reale e informazioni sui problemi che il sistema può incontrare. Puoi [accedere alla telemetria in tempo reale](system.md#api-usage-tab). 
+Ottieni una panoramica del volume di richieste all'API in tempo reale e informazioni sui problemi che il sistema può incontrare. Puoi [accedere alla telemetria in tempo reale](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

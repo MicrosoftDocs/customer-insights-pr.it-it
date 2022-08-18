@@ -1,8 +1,8 @@
 ---
 title: Rimuovere i duplicati prima di unificare i dati
-description: Il secondo passaggio nel processo di unificazione consente nel selezionare il record da conservare quando vengono trovati duplicati.
+description: Il secondo passaggio nel processo di unificazione consiste nel selezionare il record da conservare quando vengono trovati duplicati.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139434"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213632"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Rimuovere i duplicati prima di unificare i dati
 
-Questo passaggio nell'unificazione consente facoltativamente di impostare regole per la gestione dei record duplicati all'interno di un'entità. La *deduplicazione* consente di identificare i record e di unirli in un unico record. I record di origine vengono collegati al record unito con ID alternativi. Se le regole non vengono configurate, verranno applicate le regole definite dal sistema.
+Questo passaggio facoltativo del processo di unificazione consente di impostare regole per l'eliminazione di record duplicati **all'interno** di un'entità. La deduplicazione identifica più record per un cliente e seleziona il record migliore da conservare (in base alle preferenze di unione di base) o unisce i record in uno solo record (in base alle preferenze di unione avanzate). I record di origine vengono collegati al record unito con ID alternativi. Se le regole non vengono configurate, verranno applicate le regole definite dal sistema.
+
+## <a name="default-deduplication"></a>Deduplicazione predefinita
+
+Le regole definite dal sistema vengono applicate se non vengono aggiunte regole di deduplicazione.
+
+- La chiave primaria viene deduplicata.
+  Per tutti i record con la stessa chiave primaria, il record **Con più dati** (quello con il minor numero di valori nulli) è il vincitore.
+- Eventuali regole per la corrispondenza tra entità vengono applicate all'entità.
+  Ad esempio, nel passaggio relativo alla corrispondenza, se l'entità A viene confrontata all'entità B in *FullName* e *DateofBirth*, anche l'entità A viene deduplicata da *FullName* e *DateofBirth*. Poiché *FullName* e *DateofBirth* sono chiavi valide per identificare un cliente nell'entità A, queste chiavi sono valide anche per identificare clienti duplicati nell'entità A.
 
 ## <a name="include-enriched-entities-preview"></a>Includere entità arricchite (anteprima)
 

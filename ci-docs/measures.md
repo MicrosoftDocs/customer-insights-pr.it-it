@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170825"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245378"
 ---
 # <a name="measures-overview"></a>Panoramica delle misure
 
@@ -53,7 +53,7 @@ Seleziona accanto a una misura per visualizzare le azioni disponibili. Seleziona
 - **Modifica** la misura per modificarne le proprietà.
 - **Aggiorna** la misura per includere gli ultimi dati.
 - **Rinomina** la misura.
-- **Attiva** o **Disattiva** la misura. Le misure non attive non verranno aggiornate durante un [aggiornamento pianificato](system.md#schedule-tab) e il relativo **stato** sarà **Ignorato**, a indicare che non è stato nemmeno tentato un aggiornamento.
+- **Attiva** o **Disattiva** la misura. Le misure non attive non verranno aggiornate durante un [aggiornamento pianificato](schedule-refresh.md) e il relativo **stato** sarà **Ignorato**, a indicare che non è stato nemmeno tentato un aggiornamento.
 - Scegli **Tag** per [gestire i tag](work-with-tags-columns.md#manage-tags) per la misura.
 - **Elimina** la misura.
 - **Colonne** per [personalizzare le colonne](work-with-tags-columns.md#customize-columns) visualizzate.
@@ -62,7 +62,7 @@ Seleziona accanto a una misura per visualizzare le azioni disponibili. Seleziona
 
 ## <a name="refresh-measures"></a>Aggiornare le misure
 
-Le misure possono essere aggiornate in base a una pianificazione automatica o manualmente su richiesta. Per aggiornare manualmente uno o più misure, selezionale e scegli **Aggiorna**. Per [pianificare un aggiornamento automatico](system.md#schedule-tab), vai ad **Amministratore** > **Sistema** > **Pianifica**.
+Le misure possono essere aggiornate in base a una pianificazione automatica o manualmente su richiesta. Per aggiornare manualmente uno o più misure, selezionale e scegli **Aggiorna**. Per [pianificare un aggiornamento automatico](schedule-refresh.md), vai ad **Amministratore** > **Sistema** > **Pianifica**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

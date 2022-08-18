@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206912"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259803"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Collegare un'origine dati Azure Synapse Analytics (anteprima)
 
@@ -24,26 +24,30 @@ Per ulteriori informazioni, vedi [Panoramica di Azure Synapse](/azure/synapse-an
 
 ## <a name="prerequisites"></a>Prerequisiti
 
+> [!NOTE]
+> Le Synapse workspace con [firewall abilitato](/azure/synapse-analytics/security/synapse-workspace-ip-firewall) non sono al momento supportate.
 > [!IMPORTANT]
 > Assicurati di impostare tutte le **assegnazioni di ruoli** come descritto.  
 
 **In Customer Insights**:
 
-* Hai un ruolo di **amministratore** in Customer Insights. Scopri di più sulle [autorizzazioni utente in Customer Insights](permissions.md#assign-roles-and-permissions).
+* Hai un ruolo di **amministratore** in Customer Insights. Scopri di più sulle [autorizzazioni utente in Customer Insights](permissions.md#add-users).
 
 **In Azure**:
 
 - Una sottoscrizione di Azure attiva.
 
-- Se si usa un nuovo account Azure Data Lake Storage Gen2, per l'*entità servizio per Customer Insights* sono necessarie autorizzazioni di **collaboratore dati BLOB di archiviazione**. Scopri di più sul [collegamento ad un Azure Data Lake Storage con un'entità servizio per Customer Insights](connect-service-principal.md). Il Data Lake Storage Gen2 **deve avere** lo [spazio dei nomi gerarchico](/azure/storage/blobs/data-lake-storage-namespace) abilitato.
+- Se si usa un nuovo account Azure Data Lake Storage Gen2, per l'*entità servizio per Customer Insights*, ovvero "Dynamics 365 AI for Customer Insights", sono necessarie autorizzazioni di **collaboratore dati BLOB di archiviazione**. Scopri di più sul [collegamento ad un Azure Data Lake Storage con un'entità servizio per Customer Insights](connect-service-principal.md). Il Data Lake Storage Gen2 **deve avere** lo [spazio dei nomi gerarchico](/azure/storage/blobs/data-lake-storage-namespace) abilitato.
 
-- Nel gruppo di risorse in cui si trova Azure Synapse workspace, all'*entità servizio* e l'*utente per Customer Insights* devono essere assegnate almeno le autorizzazioni di **lettore**. Per ulteriori informazioni, vedi [Assegnare ruoli di Azure usando il portale di Azure](/azure/role-based-access-control/role-assignments-portal).
+- Nel gruppo di risorse in cui si trova Azure Synapse workspace, all'*entità servizio*, ovvero "Dynamics 365 AI for Customer Insights", e all'*utente per Customer Insights* devono essere assegnate almeno le autorizzazioni di **lettore**. Per ulteriori informazioni, vedi [Assegnare ruoli di Azure usando il portale di Azure](/azure/role-based-access-control/role-assignments-portal).
 
 - L'*utente* deve avere le autorizzazioni del **collaboratore ai dati BLOB del servizio di archiviazione** per l'account Azure Data Lake Storage Gen2 in cui si trovano i dati e deve essere collegato ad Azure Synapse workspace. Scopri di più sull'[utilizzo del portale di Azure per assegnare un ruolo di Azure per l'accesso ai dati di BLOB e coda](/azure/storage/common/storage-auth-aad-rbac-portal) e sulle [autorizzazioni del collaboratore ai dati BLOB del servizio di archiviazione](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - L'*[identità gestita di Azure Synapse workspace](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* deve avere le autorizzazioni del **collaboratore ai dati BLOB del servizio di archiviazione** per l'account Azure Data Lake Storage Gen2 in cui si trovano i dati e deve essere collegato all'area di lavoro Azure Synapse. Scopri di più sull'[utilizzo del portale di Azure per assegnare un ruolo di Azure per l'accesso ai dati di BLOB e coda](/azure/storage/common/storage-auth-aad-rbac-portal) e sulle [autorizzazioni del collaboratore ai dati BLOB del servizio di archiviazione](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- In Azure Synapse workspace, all'*entità servizio per Customer Insights* deve essere assegnato il ruolo di **amministratore di Synapse**. Per ulteriori informazioni, vedi [Come impostare il controllo degli accessi per l'area di lavoro Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- In Azure Synapse workspace, all'*entità servizio per Customer Insights*, ovvero "Dynamics 365 AI for Customer Insights", deve essere assegnato il ruolo di **amministratore di Synapse**. Per ulteriori informazioni, vedi [Come impostare il controllo degli accessi per l'area di lavoro Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Se il tuo ambiente Customer Insights archivia i dati nel tuo [Azure Data Lake Storage](own-data-lake-storage.md), l'utente che imposta la connessione a Azure Synapse Analytics ha bisogno di almeno il ruolo **Lettore** predefinito nell'account Data Lake Storage. Per ulteriori informazioni, vedi [Assegnare ruoli di Azure usando il portale di Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Connettersi ai database data lake in Azure Synapse Analytics
 
@@ -57,7 +61,7 @@ Per ulteriori informazioni, vedi [Panoramica di Azure Synapse](/azure/synapse-an
   
 1. Immetti un **Nome** per l'origine dati e una **Descrizione** opzionale.
 
-1. Scegli una [connessione disponibile](connections.md) ad Azure Synapse Analytics o creane una nuova.
+1. Scegli una [connessione disponibile](connections.md) ad Azure Synapse Analytics o [creane una nuova](export-azure-synapse-analytics.md#set-up-connection-to-azure-synapse).
 
 1. Scegli un **Database** dall'area di lavoro connessa nella connessione Azure Synapse Analytics selezionata e seleziona **Avanti**. Attualmente, supportiamo solo il tipo di database *Lake database*.
 

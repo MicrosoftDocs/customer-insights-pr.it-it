@@ -1,7 +1,7 @@
 ---
-title: Configurazione di sistema
+title: Visualizzare la configurazione di sistema
 description: Scopri le impostazioni di sistema in Dynamics 365 Customer Insights.
-ms.date: 04/21/2022
+ms.date: 08/09/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -10,60 +10,98 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-system-status
-- ci-system-schedule
 - ci-system-about
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050676"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246252"
 ---
-# <a name="system-configuration"></a>Configurazione di sistema
+# <a name="view-system-configuration"></a>Visualizzare la configurazione di sistema
 
-Per accedere alle configurazioni di sistema, vai in **Amministratore** > **Sistema** per visualizzare un elenco di attività e processi di sistema.
+Visualizza le informazioni sul sistema, lo stato del sistema e l'utilizzo dell'API.
 
-La pagina **Sistema** include le seguenti schede:
-- [Condizione](#status-tab)
-- [Pianificazione](#schedule-tab)
-- [Utilizzo API](#api-usage-tab)
-- [Informazioni su](#about-tab)
-- [GeneralE](#general-tab)
+## <a name="view-api-usage"></a>Visualizzare l'utilizzo dell'API
 
-:::image type="content" source="media/system-tabs.png" alt-text="Schede Impostazioni nella pagina del sistema.":::
+Visualizza i dettagli sull'utilizzo dell'API in tempo reale e scopri quali eventi si sono verificati in un determinato intervallo di tempo.
 
-## <a name="status-tab"></a>Scheda Stato
+1. Vai ad **Amministratore** > **Sistema** e seleziona la scheda **Utilizzo API**.
 
-La **scheda Stato** consente di tenere traccia dello stato delle attività, dell'inserimento dati, delle esportazioni dei dati e di molti altri importanti processi del prodotto. Rivedi le informazioni in questa scheda per garantire la completezza delle attività e dei processi attivi.
+1. **Seleziona un intervallo di tempo** da visualizzare.
 
-Questa scheda include tabelle con informazioni sullo stato e sull'elaborazione per vari processi. Ogni tabella tiene traccia del **Nome** dell'attività e dell'entità corrispondente, dello **Stato** dell'esecuzione più recente e di quando è stato eseguito l'**Ultimo aggiornamento**. Puoi visualizzare i dettagli delle ultime esecuzioni selezionando il nome dell'attività o del processo. 
+   La pagina **Utilizzo API** contiene tre sezioni:
 
-Seleziona lo stato accanto all'attività o al processo nella colonna **Stato** per aprire il riquadro **Dettagli stato**.
+   - **Chiamate API** - un grafico che visualizza il numero aggregato di chiamate all'API nel intervallo di tempo selezionato.
+   - **Trasferimento dati** - un grafico che mostra la quantità di dati trasferiti tramite l'API nella intervallo di tempo selezionata.
+   - **Operazioni** - una tabella con righe per ogni operazione API disponibile e dettagli sull'utilizzo delle operazioni. Seleziona il nome di un'operazione per accedere al [riferimento API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Le operazioni che usano l'[inserimento dati in tempo reale](real-time-data-ingestion.md) contengono il simbolo di binocolo per visualizzare l'uso dell'API in tempo reale.
+
+   1. Seleziona il binocolo per aprire il riquadro **Utilizzo API in tempo reale** contenente dettagli sull'utilizzo per l'operazione.
+   1. **Seleziona un intervallo di tempo** da visualizzare.
+   1. Usa la casella **Raggruppa per** per scegliere come presentare al meglio le tue interazioni in tempo reale. Raggruppa i dati in base alle opzioni **Metodo** API, **Nome qualificato entità** (entità inserita), **Creato da** (origine dell'evento), **Risultato** (esito positivo o negativo) o **Codici errore**. I dati sono disponibili come grafico cronologico e come tabella.
+
+## <a name="view-system-information"></a>Visualizzare informazioni sul sistema
+
+Visualizza nome visualizzato, ID, area geografica, tipo e ID sessione dell'ambiente.
+
+1. Vai ad **Amministratore** > **Sistema** e seleziona la scheda **Informazioni**.
+
+1. Per visualizzare la lingua e il paese/l'area geografica, seleziona la scheda **Generale**.
+
+### <a name="update-preferred-language-or-countryregion"></a>Aggiornare la lingua preferita o il paese/l'area geografica
+
+Customer Insights [supporta molte lingue](/dynamics365/get-started/availability). L'app utilizza la preferenza di lingua per visualizzare elementi come il menu, il testo delle etichette e i messaggi di sistema nella lingua preferita.
+
+I dati e le informazioni importati inseriti manualmente non vengono tradotti.
+
+1. Vai ad **Amministratore** > **Sistema** e seleziona la scheda **Generale**.
+
+1. Per cambiare la lingua preferita, seleziona una **lingua** dal menu a discesa.
+
+1. Per modificare la formattazione preferita per date, ora e numeri, utilizza il menu a discesa **Formato paese/area geografica**. Viene visualizzata un'anteprima della formattazione. Il sistema suggerisce automaticamente una selezione quando scegli una nuova lingua.
+
+1. Seleziona **Salva**.
+
+## <a name="view-system-status"></a>Visualizza stato del sistema
+
+Tieni traccia dello stato delle attività, dell'inserimento dati, delle esportazioni dei dati e di molti altri importanti processi del prodotto. Esamina le informazioni per garantire la completezza delle attività e dei processi attivi.
+
+1. Vai ad **Amministratore** > **Sistema** e seleziona la scheda **Stato**.
+
+   Vengono visualizzate le informazioni sullo stato e sull'elaborazione per vari processi. Visualizza il **nome** dell'attività, lo **stato** dell'esecuzione più recente e quando è stato eseguito l'**ultimo aggiornamento**.
+
+1. Per visualizzare i dettagli delle ultime esecuzioni, seleziona il nome dell'attività o del processo.
+
+1. Per visualizzare i dettagli sullo stato di un'attività, seleziona lo stato. Viene visualizzato il riquadro **Dettagli stato**.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Riquadro dei dettagli dello stato del sistema":::
+
+1. Per visualizzare i dettagli sullo stato per tutte le attività, seleziona **Intero flusso di lavoro**.
 
 ### <a name="status-definitions"></a>Definizioni stato
 
 Il sistema usa i seguenti stati per attività e processi:
 
-|Condizione  |Definizione  |
+|Status  |Definizione  |
 |---------|---------|
-|Operazione annullata |L'elaborazione è stata annullata dall'utente prima del completamento.   |
-|Non inviata   |Si sono verificati errori durante l'inserimento dati.         |
-|Errore  |Elaborazione non riuscita.  |
-|Non avviato   |L'origine dati non è ancora stata inserita o è ancora in modalità bozza.         |
+|Annullati |L'attività o il processo è stato annullato dall'utente prima del completamento.   |
+|Non inviata   |Sono stati rilevati errori nell'attività o nel processo.         |
+|Errore  |L'attività o il processo non è riuscito.  |
+|Non avviato   |L'origine dati non ha ancora dati inseriti o l'attività è ancora in modalità bozza.         |
 |In elaborazione  |L'attività o il processo è in corso.  |
-|Aggiornamento in corso    |L'inserimento dati è in corso. Puoi annullare questa operazione selezionando **Arresta aggiornamento** nella colonna **Azioni**. L'interruzione dell'aggiornamento di un'origine dati ripristinerà l'ultimo stato di aggiornamento.       |
+|Aggiornamento in corso    |L'attività o il processo è in corso. Per annullare questa operazione, seleziona **Aggiornamento** e **Annulla processo**. L'interruzione dell'aggiornamento di un'attività o di un processo ripristinerà l'ultimo stato di aggiornamento.       |
 |Ignorato  |L'attività o il processo è stato ignorato. Uno o più dei processi downstream da cui dipende questa attività non riescono o vengono ignorati.|
 |Operazione riuscita  |L'attività o il processo è stato completato. Per le origini dati, indica che i dati sono stati inseriti correttamente se un'ora è menzionata nella colonna **Aggiornato**.|
 |In coda | L'elaborazione viene messa in coda e inizierà quando tutte le attività e i processi upstream saranno completati. Per altre informazioni, vedi [Aggiorna processi](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Aggiorna processi
 
-L'aggiornamento di attività e processi viene eseguito in base alla [pianificazione configurata](#schedule-tab). 
+L'aggiornamento di attività e processi viene eseguito in base alla [pianificazione configurata](schedule-refresh.md).
 
 |Processo  |Descrizione  |
 |---------|---------|
@@ -86,58 +124,6 @@ L'aggiornamento di attività e processi viene eseguito in base alla [pianificazi
 |Utente  |Viene eseguito manualmente (aggiornamento singolo). Dipende dalle entità.  |
 
 Seleziona lo stato di un processo per vedere i dettagli dello stato dell'intero processo in si trova. I processi di aggiornamento precedenti possono consentirti di individuare le operazioni da eseguire per affrontare un'attività o un processo **Ignorato** o **In coda**.
-
-## <a name="schedule-tab"></a>Scheda Pianifica
-
-Utilizza la scheda **Pianifica** per pianificare gli aggiornamenti automatici di tutte le [origini dati inserite](data-sources.md). Gli aggiornamenti automatici aiutano a garantire che gli aggiornamenti delle tue origini dati si riflettano nei profili cliente unificati.
-
-> [!NOTE]
-> Le origini dati gestite dall'utente si aggiornano in base alle proprie pianificazioni. Per pianificare l'aggiornamento delle origini dati gestite dall'utente, configura le impostazioni di aggiornamento su una specifica origine dati dalla pagina **Origine dati**.
-> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Impostazioni dell'aggiornamento di un flusso di dati.":::
-
-1. Vai in **Amministratore** > **Sistema** e seleziona la scheda **Pianifica**.
-
-2. Lo stato predefinito per l'aggiornamento pianificato è **Disattivato**. Per abilitare gli aggiornamenti pianificati, imposta l'interruttore nella parte superiore dello schermo su **Attivato**.
-
-3. Scegli tra aggiornamenti **settimanali** (impostazione predefinita) e **giornalieri**. Se vuoi pianificare gli aggiornamenti settimanali, seleziona uno o più giorni in cui desideri eseguire l'aggiornamento.
-
-4. Imposta il tuo **Fuso orario**, quindi utilizza il menu a discesa **Ora** per impostare i tempi di aggiornamento. Al termine, seleziona **Imposta**. Se desideri pianificare più aggiornamenti in un solo giorno, seleziona **Aggiungi un altro orario**.
-
-5. Seleziona **Salva** per applicare le modifiche.
-
-## <a name="about-tab"></a>Scheda Informazioni
-
-La scheda **Informazioni** contiene il **nome visualizzato** della tua organizzazione, l'**ID ambiente** attivo, l'**area geografica** e il tuo **ID sessione**. Se hai più di un ambiente di lavoro, devi assegnare a ognuno un nome visualizzato facilmente identificabile.
-
-## <a name="general-tab"></a>Scheda Generale
-
-È possibile modificare la lingua e il formato del paese/area geografica nella scheda **Generale**.
-
-Customer Insights [supporta molte lingue](/dynamics365/get-started/availability). L'app utilizza la preferenza di lingua per visualizzare elementi come il menu, il testo delle etichette e i messaggi di sistema nella lingua preferita.
-
-I dati e le informazioni importati inseriti manualmente non vengono tradotti.
-
-### <a name="update-the-settings"></a>Aggiorna le impostazioni
-
-Per cambiare la lingua preferita, seleziona una **lingua** dal menu a discesa.
-
-Per modificare la formattazione preferita per date, ora e numeri, utilizza il menu a discesa **Formato paese/area geografica**. Un'anteprima della formattazione viene visualizzata in questo campo. Il sistema suggerirà automaticamente una selezione quando scegli una nuova lingua.
-
-Seleziona **Salva** per confermare le selezioni.
-
-## <a name="api-usage-tab"></a>Scheda utilizzo API
-
-Trova i dettagli sull'utilizzo dell'API in tempo reale e guarda quali eventi si sono verificati in un determinato intervallo di tempo. Scegli l'intervallo di tempo nel menu a discesa **Seleziona un intervallo di tempo**. 
-
-**Utilizzo API** contiene tre sezioni: 
-- **Chiamate API** - un grafico che visualizza il numero aggregato di chiamate all'API nel intervallo di tempo selezionato.
-
-- **Trasferimento dati** - un grafico che mostra la quantità di dati trasferiti tramite l'API nella intervallo di tempo selezionata.
-
--  **Operazioni** - una tabella con righe per ogni operazione API disponibile e dettagli sull'utilizzo delle operazioni. È possibile selezionare il nome di un'operazione per andare al [riferimento API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operazioni che usano l'[inserimento dati in tempo reale](real-time-data-ingestion.md) contengono un pulsante con un simbolo di binocolo per visualizzare l'uso dell'API in tempo reale. Seleziona il pulsante per aprire un riquadro laterale contenente dettagli sull'utilizzo dell'API in tempo reale nell'ambiente corrente.   
-   Usa la casella **Raggruppa per** nel riquadro **Utilizzo API in tempo reale** per scegliere come presentare al meglio le tue interazioni in tempo reale. Puoi raggruppare i dati per metodo API, nome qualificato dell'entità (entità inserita), autore creazione (origine dell'evento), risultato (esito positivo o negativo) o codici di errore. I dati sono disponibili come grafico cronologico e come tabella.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

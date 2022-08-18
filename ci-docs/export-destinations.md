@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194973"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245332"
 ---
 # <a name="exports-preview-overview"></a>Panoramica delle esportazioni (anteprima)
 
@@ -79,7 +79,7 @@ Seleziona un'esportazione per visualizzare le azioni disponibili.
 
 ## <a name="schedule-and-run-exports"></a>Pianifica ed esegui le esportazioni
 
-Ogni esportazione configurata ha una pianificazione di aggiornamento. Durante un aggiornamento, il sistema cerca dati nuovi o aggiornati per includerli in un'esportazione. Per impostazione predefinita, le esportazioni vengono eseguite come parte di ogni [aggiornamento del sistema programmato](system.md#schedule-tab). Puoi personalizzare la pianificazione dell'aggiornamento o disattivarla per eseguire le esportazioni manualmente.
+Ogni esportazione configurata ha una pianificazione di aggiornamento. Durante un aggiornamento, il sistema cerca dati nuovi o aggiornati per includerli in un'esportazione. Per impostazione predefinita, le esportazioni vengono eseguite come parte di ogni [aggiornamento del sistema programmato](schedule-refresh.md). Puoi personalizzare la pianificazione dell'aggiornamento o disattivarla per eseguire le esportazioni manualmente.
 
 Le pianificazioni delle esportazioni dipendono dallo stato dell'ambiente. Se vi sono aggiornamenti in corso su [dipendenze](system.md#refresh-processes) quando dovrebbe iniziare un'esportazione pianificata, il sistema completerà prima gli aggiornamenti, quindi eseguirà l'esportazione. La colonna **Aggiornata** mostra quando un'esportazione è stata aggiornata l'ultima volta.
 

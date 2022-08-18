@@ -1,7 +1,7 @@
 ---
 title: Porta il tuo key vault Azure (anteprima)
 description: Scopri come configurare Customer Insights per usare il tuo key vault Azure per gestire i segreti.
-ms.date: 10/06/2021
+ms.date: 08/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -11,58 +11,63 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 229fb5698a02d1d73c30442f61c7b1b5fce918bf
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081476"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246160"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Porta il tuo key vault Azure (anteprima)
 
-Il collegamento di un [Azure Key Vault](/azure/key-vault/general/basic-concepts) dedicato a un ambiente Customer Insights aiuta le organizzazioni a soddisfare i requisiti di conformità.
-Il key vault dedicato può essere utilizzato per mettere in scena e utilizzare i segreti nel confine di conformità di un'organizzazione. Customer Insights può usare i segreti in Azure Key Vault per [stabilire le connessioni](connections.md) a sistemi di terze parti.
+Il collegamento di un [key vault Azure](/azure/key-vault/general/basic-concepts) dedicato a un ambiente Customer Insights aiuta le organizzazioni a soddisfare i requisiti di conformità.
 
 ## <a name="link-the-key-vault-to-the-customer-insights-environment"></a>Collegare il Key Vault all'ambiente Customer Insights
 
+Configura il key vault dedicato per preparare e utilizzare i segreti nei limiti di conformità di un'organizzazione.
+
 ### <a name="prerequisites"></a>Prerequisiti
 
-Per configurare il key vault in Customer Insights, devono essere soddisfatti i seguenti prerequisiti:
+- Una sottoscrizione di Azure attiva.
 
-- Hai un abbonamento attivo ad Azure.
+- Un ruolo di [amministratore](permissions.md#admin) [assegnato](permissions.md#add-users) in Customer Insights.
 
-- Hai un ruolo di [amministratore](permissions.md#admin) in Customer Insights. Scopri di più sulle [autorizzazioni utente in Customer Insights](permissions.md#assign-roles-and-permissions).
+- Ruoli [Collaboratore](/azure/role-based-access-control/built-in-roles#contributor) e [Amministratore accessi utente](/azure/role-based-access-control/built-in-roles#user-access-administrator) per il key vault o il gruppo di risorse a cui il key vault appartiene. Per ulteriori informazioni, vai a [Aggiungere o rimuovere le assegnazioni dei ruoli Azure utilizzando il portale Azure](/azure/role-based-access-control/role-assignments-portal). Se non disponi del ruolo Amministratore accessi utente per il key vault, imposta separatamente le autorizzazioni di controllo degli accessi in base al ruolo per l'entità servizio di Azure per Dynamics 365 Customer Insights. Seguire i passaggi per [utilizzare un service principal di Azure](connect-service-principal.md) per il key vault che deve essere collegato.
 
-- Hai i ruoli [Contribuente](/azure/role-based-access-control/built-in-roles#contributor) e [Amministratore accesso utente](/azure/role-based-access-control/built-in-roles#user-access-administrator) sul key vault o sul gruppo di risorse a cui il key vault appartiene. Per ulteriori informazioni, vai a [Aggiungere o rimuovere le assegnazioni dei ruoli Azure utilizzando il portale Azure](/azure/role-based-access-control/role-assignments-portal). Se non si dispone del ruolo User Access Administrator sul key vault, è necessario impostare separatamente le autorizzazioni di controllo dell'accesso basate sui ruoli per il principal del servizio Azure per Dynamics 365 Customer Insights . Seguire i passaggi per [utilizzare un service principal di Azure](connect-service-principal.md) per il key vault che deve essere collegato.
+- Il key vault deve avere il firewall Key Vault **disabilitato**.
 
-- Il key vault deve avere il Key Vault firewall **disabilitato**.
+- Il key vault si trova nella stessa [posizione Azure](https://azure.microsoft.com/global-infrastructure/geographies/#overview) dell'ambiente di Customer Insights. In Customer Insights, vai ad **Amministratore** > **Sistema** e accedi alla scheda **Informazioni** per visualizzare l'area dell'ambiente.
 
-- Il key vault è nella stessa [posizione di Azure](https://azure.microsoft.com/global-infrastructure/geographies/#overview) dell'ambiente di Customer Insights. L'area dell'ambiente in Customer Insights è elencata sotto **Amministratore** > **Sistema** > **Informazioni** > **Area**.
+### <a name="recommendations"></a>Elementi consigliati
+
+- [Utilizza un key vault separato o dedicato](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults) che contiene solo i segreti richiesti per Customer Insights.
+
+- Seguite le [migliori pratiche per utilizzare Key Vault](/azure/key-vault/general/best-practices#turn-on-logging) per controllare l'accesso, il backup, l'audit e le opzioni di recupero.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Collegare un key vault all'ambiente
 
 1. Passa ad **Amministratore** > **Sicurezza**, e seleziona la scheda **Key Vault**.
 1. Nel riquadro **Key Vault** , seleziona **Configurazione**.
 1. Scegliere un **abbonamento**.
-1. Scegli un key vault dall'elenco a discesa **Key Vault** . Se vengono visualizzati troppi key vault, seleziona un gruppo di risorse per limitare i risultati della ricerca.
-1. Accettare la dichiarazione sulla **privacy e la conformità dei dati** .
+1. Scegli un key vault dall'elenco a discesa **Key Vault** . Se sono disponibili troppi key vault, seleziona un gruppo di risorse per limitare i risultati della ricerca.
+1. Rivedi [Privacy e conformità dei dati](connections.md#data-privacy-and-compliance) e seleziona **Accetto**.
 1. Seleziona **Salva**.
 
-:::image type="content" source="media/set-up-azure-key-vault.png" alt-text="Passaggi per configurare un key vault collegato in Customer Insights.":::
-
-Il riquadro del **Key Vault** ora mostra il nome del key vault collegato, il gruppo di risorse e la sottoscrizione. È pronto per essere usato nella configurazione della connessione.
-Per i dettagli su quali autorizzazioni per il key vault sono concesse a Customer Insights, vai a [Autorizzazioni concesse nel key vault](#permissions-granted-on-the-key-vault), più avanti in questo articolo.
+Il riquadro **Key Vault** mostra il nome del key vault collegato, il gruppo di risorse e la sottoscrizione. È pronto per essere usato nella configurazione della connessione.
+Per dettagli su quali autorizzazioni nel key vault sono concesse a Customer Insights, vai a [Autorizzazioni concesse nel key vault](#permissions-granted-on-the-key-vault).
 
 ## <a name="use-the-key-vault-in-the-connection-setup"></a>Utilizzare il key vault nella configurazione della connessione
 
-Quando si [impostano](connections.md) le connessioni a sistemi di terze parti, i segreti del Key Vault collegato possono essere usati per configurare le connessioni.
+Quando [imposti le connessioni](connections.md) per sistemi di [terze parti supportati](#supported-connection-types), usa i segreti del key vault collegato per configurare le connessioni.
 
 1. Vai ad **Amministratore** > **Connessioni**.
 1. Selezionare **Aggiungi connessione**.
 1. Per i tipi di connessione supportati, un toggle **Usa Key Vault** è disponibile se hai collegato un key vault.
-1. Invece di inserire il segreto manualmente, puoi scegliere il nome del segreto che punta al valore segreto nel key vault.
+1. Anziché inserire il segreto manualmente, scegli il nome del segreto che punta al valore segreto nel key vault.
 
-:::image type="content" source="media/use-key-vault-secret.png" alt-text="Riquadro di connessione con una connessione SFTP che usa un segreto di Key Vault.":::
+   :::image type="content" source="media/use-key-vault-secret.png" alt-text="Riquadro di connessione con una connessione SFTP che usa un segreto di Key Vault.":::
+
+1. Per creare la connessione seleziona **Salva**.
 
 ## <a name="supported-connection-types"></a>Tipi di connessione supportati
 
@@ -97,19 +102,13 @@ I valori precedenti sono il minimo da elencare e leggere durante l'esecuzione.
 
 ### <a name="azure-role-based-access-control"></a>Controllo dell'accesso basato sui ruoli di Azure
 
-I ruoli utente Lettore Key Vault e Segreti Key Vault verranno aggiunti per Customer Insights. Per i dettagli su questi ruoli, vai a [Azure built-in roles for Key Vault data plane operations](/azure/key-vault/general/rbac-guide?tabs=azure-cli).
-
-## <a name="recommendations"></a>Elementi consigliati
-
-- Utilizza un Key Vault separato o dedicato che contenga solo i segreti richiesti per Customer Insights. Leggi di più sul perché [si raccomandano key vault separati per le chiavi](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults).
-
-- Seguite le [migliori pratiche per utilizzare Key Vault](/azure/key-vault/general/best-practices#turn-on-logging) per controllare l'accesso, il backup, l'audit e le opzioni di recupero.
+I [ruoli utente Lettore Key Vault e Segreti Key Vault](/azure/key-vault/general/rbac-guide?tabs=azure-cli) verranno aggiunti per Customer Insights.
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
 ### <a name="can-customer-insights-write-secrets-or-overwrite-secrets-into-the-key-vault"></a>Customer Insights può scrivere segreti o sovrascrivere segreti nel Key Vault?
 
-Nr. Solo le autorizzazioni di lettura ed elenco delineate nella sezione [autorizzazioni concesse](#permissions-granted-on-the-key-vault) precedente in questo articolo sono concesse a Customer Insights. Il sistema non può aggiungere, cancellare o sovrascrivere segreti nel key vault. Questo è anche il motivo per cui non si possono inserire le credenziali quando una connessione usa Key Vault.
+Nr. Solo le autorizzazioni di lettura ed elenco descritte in [Autorizzazioni concesse](#permissions-granted-on-the-key-vault) sono concesse a Customer Insights. Il sistema non può aggiungere, cancellare o sovrascrivere segreti nel key vault. Questo è anche il motivo per cui non si possono inserire le credenziali quando una connessione usa Key Vault.
 
 ### <a name="can-i-change-a-connection-from-using-key-vault-secrets-to-default-authentication"></a>Posso cambiare una connessione dall'uso dei segreti del Key Vault all'autenticazione predefinita?
 
@@ -117,7 +116,7 @@ Nr. Non si può tornare a una connessione predefinita dopo averla configurata us
 
 ### <a name="how-can-i-revoke-access-to-a-key-vault-for-customer-insights"></a>Come posso revocare l'accesso a un key vault per Customer Insights?
 
-A seconda che sia abilitato il [criterio di accesso a Key Vault](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) o il [controllo di accesso basato sui ruoli di Azure](/azure/key-vault/general/rbac-guide?tabs=azure-cli) , è necessario rimuovere i permessi per il principal del servizio `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` con il nome `Dynamics 365 AI for Customer Insights`. Tutte le connessioni che usano il key vault smetteranno di funzionare.
+Se il [criterio di accesso a Key Vault](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) o il [controllo degli accessi in base al ruolo di Azure](/azure/key-vault/general/rbac-guide?tabs=azure-cli) è abilitato, rimuovi i permessi per l'entità servizio `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` con il nome `Dynamics 365 AI for Customer Insights`. Tutte le connessioni che usano il key vault smetteranno di funzionare.
 
 ### <a name="a-secret-thats-used-in-a-connection-got-removed-from-the-key-vault-what-can-i-do"></a>Un segreto usato in una connessione è stato rimosso dal key vault. Cosa posso fare?
 

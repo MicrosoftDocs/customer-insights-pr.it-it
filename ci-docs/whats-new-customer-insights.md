@@ -1,19 +1,19 @@
 ---
 title: Novità di Dynamics 365 Customer Insights
 description: Informazioni su nuove funzionalità, miglioramenti e correzioni di bug.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114251"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246016"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novità di Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Gli aggiornamenti vengono implementati in base all'area geografica. Quindi alcun
 
 > [!TIP]
 > Per inviare e votare funzionalità richieste e suggerimenti di prodotto, vai al [portale Ideas dell'applicazione Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>Aggiornamenti di luglio 2022
+
+Gli aggiornamenti di luglio 2022 includono nuove funzionalità, aggiornamenti delle prestazioni e correzioni di bug.
+
+### <a name="export-to-moengage"></a>Esportazione in MoEngage
+
+Esporta segmenti di profili cliente unificati in MoEngage e usali per l'e-mail marketing in MoEngage.
+
+Per ulteriori informazioni, vedi [Esportare segmenti in MoEngage](export-moengage.md)
+
+### <a name="ssh-support-for-sftp-based-exports"></a>Supporto SSH per esportazioni basate su FTP sicuro
+
+Scegli se vuoi autenticarti tramite SSH o nome utente/password per le connessioni alle destinazioni di esportazione basate su FTP sicuro.
+
+Per ulteriori informazioni, vedi [Esportare dati negli host FTP sicuro](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalizzare le esperienze con dati relativi a utenti noti e sconosciuti
+
+La gestione dei dati dei clienti non è una nuova sfida, ma sta diventando sempre più complessa a mano a mano che gli utenti navigano tra i vari canali digitali che offrono i marchi. Un utente noto (autenticato) in un canale diventa sconosciuto (non autenticato) in un altro canale se non ha effettuato l'accesso. Il problema in genere è che gli utenti non autenticati (sconosciuti) non hanno un ID comune. Potrebbe essere utilizzato per associare attributi di profili significativi e generare profili cliente unificati. Customer Insights consente di risolvere questo problema inserendo i dati dei metodi di tracciamento nei tuoi sistemi di origine.
+
+Per ulteriori informazioni, vedi [ Personalizzare le esperienze con dati relativi a utenti noti e sconosciuti](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>Aggiornamenti di giugno 2022
 
@@ -50,7 +72,7 @@ Per ulteriori informazioni, vedi [Accedere in modo sicuro ai dati dei clienti us
 
 Il collegamento privato di Azure consente a Customer Insights di connettersi al tuo account Azure Data Lake Storage su un endpoint privato nella tua rete virtuale. Per i dati in un account di archiviazione non esposto a Internet pubblico, Collegamento privato consente la connessione alla rete con restrizioni.
 
-Per altre informazioni, vedi [Utilizzare il collegamento privato in Customer Insights](security-overview.md#private-links-tab).
+Per altre informazioni, vedi [Utilizzare il collegamento privato in Customer Insights](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Aggiornamenti di maggio 2022
 

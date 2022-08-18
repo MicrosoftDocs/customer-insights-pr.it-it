@@ -1,19 +1,19 @@
 ---
 title: Arricchire i profili dei clienti con i dati di posizione di Mappe di Azure (anteprima)
 description: Informazioni generali sull'arricchimento di prima parte di Mappe di Azure.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f14b4fc20a9a1d8842f42f9e0e656b3d8dcddcf4
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052612"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238047"
 ---
 # <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Arricchire i profili dei clienti con i dati di posizione di Mappe di Azure (anteprima)
 
@@ -35,14 +35,9 @@ Devi essere un [amministratore](permissions.md#admin) in Customer Insights e ave
 
 1. Immetti un nome per la connessione e una chiave API di Mappe di Azure valida.
 
-1. Rivedi e fornisci il tuo consenso per [Conformità e privacy dei dati](#data-privacy-and-compliance) selezionando **Accetto**.
+1. Leggi [Privacy e conformità dei dati](connections.md#data-privacy-and-compliance) e seleziona **Accetto**.
 
 1. Seleziona **Verifica** per convalidare la configurazione e quindi seleziona **Salva**.
-
-### <a name="data-privacy-and-compliance"></a>Conformità e privacy dei dati
-
-Quando abiliti Dynamics 365 Customer Insights per trasmettere i dati a Mappe di Azure, consenti il trasferimento di dati al di fuori del limite di conformità per Dynamics 365 Customer Insights, inclusi i dati potenzialmente sensibili come i Dati Personali. Microsoft trasferirà tali dati su tua istruzione, ma sei tenuto a garantire che Mappe di Azure soddisfi qualsiasi obbligo di privacy o sicurezza che potresti avere. Per maggiori informazioni, vai a [Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-L'amministratore di Dynamics 365 Customer Insights può rimuovere questo arricchimento in qualsiasi momento per interrompere l'utilizzo di questa funzionalità.
 
 ## <a name="configure-the-enrichment"></a>Configurare l'arricchimento
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207004"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245838"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Connettersi ai dati in Azure Data Lake Storage
 
@@ -56,8 +56,8 @@ Inserisci dati in Dynamics 365 Customer Insights usando il tuo account Azure Dat
 
 1. Scegli una delle seguenti opzioni per **Connetti lo spazio di archiviazione tramite**. Per altre informazioni, vedi [Connessione a un account Azure Data Lake Storage Gen2 con un'entità servizio di Azure](connect-service-principal.md).
 
-   - **Risorsa di Azure**: immetti un valore in **ID risorsa**. Facoltativamente, se desideri inserire i dati da un account di archiviazione tramite un collegamento privato di Azure, seleziona **Abilita collegamento privato**. Per altre informazioni, vedi [Collegamenti privati](security-overview.md#private-links-tab).
-   - **Sottoscrizione di Azure**: seleziona **Sottoscrizione** e quindi **Gruppo di risorse** e **Account di archiviazione**. Facoltativamente, se desideri inserire i dati da un account di archiviazione tramite un collegamento privato di Azure, seleziona **Abilita collegamento privato**. Per altre informazioni, vedi [Collegamenti privati](security-overview.md#private-links-tab).
+   - **Risorsa di Azure**: immetti un valore in **ID risorsa**. Facoltativamente, se desideri inserire i dati da un account di archiviazione tramite un collegamento privato di Azure, seleziona **Abilita collegamento privato**. Per altre informazioni, vedi [Collegamenti privati](security-overview.md#set-up-an-azure-private-link).
+   - **Sottoscrizione di Azure**: seleziona **Sottoscrizione** e quindi **Gruppo di risorse** e **Account di archiviazione**. Facoltativamente, se desideri inserire i dati da un account di archiviazione tramite un collegamento privato di Azure, seleziona **Abilita collegamento privato**. Per altre informazioni, vedi [Collegamenti privati](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > È necessario uno dei seguenti ruoli per il contenitore o l'account di archiviazione per creare l'origine dati:
@@ -176,7 +176,7 @@ Puoi aggiornare l'opzione *Connettiti a un account di archiviazione usando*. Per
         > - Proprietario dati BLOB di archiviazione
         > - Collaboratore dati BLOB di archiviazione
 
-   - **Abilita collegamento privato** se desideri inserire i dati da un account di archiviazione tramite un collegamento privato di Azure. Per altre informazioni, vedi [Collegamenti privati](security-overview.md#private-links-tab).
+   - **Abilita collegamento privato** se desideri inserire i dati da un account di archiviazione tramite un collegamento privato di Azure. Per altre informazioni, vedi [Collegamenti privati](security-overview.md#set-up-an-azure-private-link).
 
 1. Selezionare **Avanti**.
 1. Esegui una delle modifiche seguenti:

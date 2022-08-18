@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142824"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245562"
 ---
 # <a name="how-to-create-a-new-environment"></a>Come creare un nuovo ambiente
 
@@ -48,7 +48,7 @@ Nel passo **Informazioni di base** , scegli se vuoi creare un ambiente da zero o
 
 Fornisci i seguenti dettagli:
 
-- **Nome**: il nome dell'ambiente. Questo campo è già compilato se hai copiato da un ambiente esistente, ma è possibile modificarlo.
+- **Nome**: il nome dell'ambiente. Questo campo è già compilato se hai copiato da un ambiente esistente, ma è possibile modificarlo. Se hai più di un ambiente di lavoro, assegna a ognuno un nome facilmente identificabile.
 - **Scegli la tua attività**: scegli il gruppo di destinatari principale per il nuovo ambiente. Puoi scegliere consumatori singoli (B2C) oppure [account aziendali](work-with-business-accounts.md) (B2B). Se la tua organizzazione fa affari principalmente con individui, come un rivenditore o una caffetteria, scegli i singoli consumatori. Nel caso in cui il tuo gruppo di destinatari principale sia costituito da altre società, come una casa automobilistica o una società di carta, scegli gli account aziendali.
 - **Tipo**: scegli se vuoi creare un ambiente di produzione o sandbox. Gli ambienti sandbox non consentono l'aggiornamento pianificato dei dati e sono destinati alla pre-implementazione e al test. Gli ambienti sandbox usano lo stesso pubblico primario dell'ambiente di produzione attualmente selezionato.
 - **Area geografica**: l'area geografica in cui il servizio viene distribuito e ospitato. Per [usare il tuo account Azure Data Lake Storage](own-data-lake-storage.md) o [connetterti a un'organizzazione Microsoft Dataverse esistente](customer-insights-dataverse.md), l'ambiente Customer Insights deve trovarsi nella stessa area geografica.

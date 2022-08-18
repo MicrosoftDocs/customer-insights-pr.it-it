@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: d2ff49c324c5c5c28213f362ff330d441fcb6052
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011938"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246206"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Usare l'account Azure Data Lake Storage Gen2
 
@@ -37,7 +37,7 @@ Quando crei un nuovo ambiente, assicurati che l'account Data Lake Storage esista
 1. Scegli come **collegare l'archiviazione**. È possibile scegliere tra un'opzione basata su risorse e un'opzione basata su sottoscrizione per l'autenticazione. Per ulteriori informazioni, vedi [Connessione a un account Azure Data Lake Storage tramite un'entità servizio di Azure](connect-service-principal.md).
    - Per **Sottoscrizione di Azure**, scegli **Sottoscrizione**, **Gruppo di risorse**, e **Account di archiviazione** che contiene il contenitore `customerinsights`.
    - Per **Chiave dell'account**, fornisci il **Nome utente** e la **Chiave dell'account** per l'account Data Lake Storage. L'utilizzo di questo metodo di autenticazione implica che sei informato se la tua organizzazione ruota le chiavi. Devi [aggiornare la configurazione dell'ambiente](manage-environments.md#edit-an-existing-environment) con la nuova chiave quando viene ruotata.
-1. Scegli se vuoi usare il collegamento privato di Azure per connetterti all'account di archiviazione e [creare la connessione al collegamento privato](security-overview.md#private-links-tab) con un processo in due passaggi.
+1. Scegli se vuoi usare il collegamento privato di Azure per connetterti all'account di archiviazione e [creare la connessione al collegamento privato](security-overview.md#set-up-an-azure-private-link) con un processo in due passaggi.
 
 Quando il sistema elabora l'inserimento dati come completato, il sistema crea le cartelle corrispondenti nell'account di archiviazione. I file di dati e i file *model.json* sono creati e aggiunti alle cartelle in base al nome del processo.
 

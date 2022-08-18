@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053882"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245884"
 ---
 # <a name="data-enrichment-preview-overview"></a>Panoramica dell'arricchimento dei dati (anteprima)
 
@@ -76,7 +76,7 @@ Seleziona l'arricchimento per visualizzare le azioni disponibili.
 - **Visualizza** i dettagli dell'arricchimento con il numero di profili cliente arricchiti.
 - **Modifica** la configurazione dell'arricchimento.
 - [**Esegui**](#run-or-refresh-enrichments) l'arricchimento per aggiornare i profili cliente con i dati più recenti. Esegui più miglioramenti contemporaneamente selezionandoli dall'elenco.
-- **Attiva** o **Disattiva** un arricchimento. Gli arricchimenti inattivi non verranno aggiornati durante un [aggiornamento programmato](system.md#schedule-tab).
+- **Attiva** o **Disattiva** un arricchimento. Gli arricchimenti inattivi non verranno aggiornati durante un [aggiornamento programmato](schedule-refresh.md).
 - **Elimina** l'arricchimento.
 
 Puoi anche creare [segmenti](segments.md) o [misure](measures.md) dagli arricchimenti.
@@ -85,7 +85,7 @@ Puoi anche creare [segmenti](segments.md) o [misure](measures.md) dagli arricchi
 
 Una volta eseguiti, gli arricchimenti possono essere aggiornati in base a una pianificazione automatica o aggiornati manualmente su richiesta.
 
-1. Per aggiornare manualmente uno o più arricchimenti, selezionali e scegli **Esegui**. Per [pianificare un aggiornamento automatico](system.md#schedule-tab), vai ad **Amministratore** > **Sistema** > **Pianifica**. Il tempo di elaborazione dipende dalle dimensioni dei dati del cliente.
+1. Per aggiornare manualmente uno o più arricchimenti, selezionali e scegli **Esegui**. Per [pianificare un aggiornamento automatico](schedule-refresh.md), vai ad **Amministratore** > **Sistema** > **Pianifica**. Il tempo di elaborazione dipende dalle dimensioni dei dati del cliente.
 
 1. Se lo desideri, [vedi lo stato del processo di arricchimento](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ Puoi trovare dettagli sull'elaborazione di un arricchimento, inclusi lo stato e 
 1. Nel riquadro **Dettagli stato** espandi la sezione **Arricchimenti**.
 1. Per l'arricchimento di cui vuoi vedere i progressi, seleziona **Vedi dettagli**.
 1. Nel riquadro **Dettagli attività** seleziona **Mostra dettagli** per vedere i processi che sono coinvolti nell'aggiornamento dell'arricchimento e il relativo stato.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Visualizzare i risultati dell'arricchimento
 
