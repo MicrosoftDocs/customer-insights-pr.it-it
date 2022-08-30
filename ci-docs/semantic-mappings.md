@@ -1,9 +1,9 @@
 ---
 title: Mappature semantiche (anteprima)
 description: Panoramica delle mappature semantiche e come usarle.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183636"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303881"
 ---
 # <a name="semantic-mappings-preview"></a>Mappature semantiche (anteprima)
 
-Le mappature semantiche ti permettono di mappare i tuoi dati non-attività a schemi predefiniti. Questi schemi consentono a Customer Insights di comprendere meglio gli attributi dei dati. Il mapping semantico e i dati forniti consentono nuove informazioni dettagliate e funzionalità in Customer Insights. Per mappare i dati delle vostre attività agli schemi, rivedete la documentazione delle [attività](activities.md) .
+> [!NOTE]
+> La pagina **Mappature semantiche** è disponibile solo per gli ambienti aziendali (B2B) in cui i profili di contatto sono già stati creati utilizzando questa pagina. Puoi continuare a creare e gestire i singoli profili di contatto utilizzando la pagina **Mappature semantiche**. Oppure, [unifica i tuoi dati di contatto](data-unification-contacts.md) per rimuovere i duplicati, identificare corrispondenze tra entità e creare un profilo di contatto unificato. Puoi quindi usare un profilo di contatto unificato per creare attività a livello di contatto.
 
-Le **mappature semantiche sono attualmente abilitate per gli ambienti basati su conti commerciali**. *ContactProfile* è l'unico tipo di mapping semantico attualmente disponibile in Customer Insights.
+Le mappature semantiche ti permettono di mappare i tuoi dati non-attività a schemi predefiniti. Questi schemi aiutano Customer Insights a comprendere meglio gli attributi dei dati. La mappatura semantica e i dati forniti consentono nuove informazioni dettagliate e funzionalità in Customer Insights. Per mappare i dati delle vostre attività agli schemi, rivedete la documentazione delle [attività](activities.md) .
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Definire il mapping di un'entità semantica ContactProfile
 
@@ -87,41 +88,5 @@ Seleziona il mapping semantico per visualizzare le azioni disponibili.
 - **Aggiorna** il mapping semantico per includere i dati più recenti. L'aggiornamento di un dato mapping semantico aggiornerà tutti i mapping semantici dello stesso tipo.
 - **Rinomina** il mapping semantico. Seleziona **Salva**.
 - **Elimina** il mapping semantico. Per eliminare più di un mapping semantico alla volta, seleziona i mapping semantici e l'icona di eliminazione. Per confermare l'eliminazione seleziona **Elimina**.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utilizzare il mapping di un'entità semantica ContactProfile per creare attività a livello di contatto
-
-Dopo aver creato il mapping di un'entità semantica *ContactProfile*, puoi acquisire le attività dei contatti. Ti consente di vedere nella sequenza temporale  delle attività per un account quale contatto era responsabile di ciascuna attività. La maggior parte dei passaggi segue la configurazione tipica del mapping delle attività.
-
-   > [!NOTE]
-   > Affinché le attività a livello di contatto funzionino, è necessario disporre di entrambi gli attributi **AccountID** e **ContactID** per ogni record all'interno dei dati dell'attività.
-
-1. [Definisci il mapping di un'entità semantica *ContactProfile*](#define-a-contactprofile-semantic-entity-mapping) ed esegui il mapping semantico.
-
-1. Vai a **Dati** > **Impegni**.
-
-1. Seleziona **Aggiungi attività** per creare una nuova attività.
-
-1. Assegna un nome all'attività, seleziona l'entità dell'attività di origine e seleziona la chiave primaria dell'entità dell'attività.
-
-1. Nel passaggio **Relazioni** crea una relazione indiretta tra i dati di origine dell'attività e gli account, utilizzando i tuoi dati di contatto come entità intermediaria. Per ulteriori informazioni, vedi [percorsi di relazione diretti e indiretti](relationships.md#relationship-paths).
-   - Esempio di relazione per un'attività chiamata *Acquisti*:
-      - **Dati sull'attività di origine degli acquisti** > **Informazioni di contatto** sull'attributo **ContactID**
-      - **Informazioni di contatto** > **Dati dell'account** sull'attributo **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Esempio di configurazione della relazione.":::
-
-1. Dopo aver impostato le relazioni, seleziona **Avanti** e completa la configurazione del mapping delle attività. Per i passaggi dettagliati sulla creazione dell'attività, vedi [definire un'attività](activities.md).
-
-1. Esegui le mappature delle tue attività.
-
-1. Dopo l'esecuzione di un mapping delle attività a livello di contatto, seleziona **Clienti**. Le attività a livello di contatto sono visualizzate nella sequenza temporale dei clienti.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Risultato finale dopo la configurazione delle attività di contatto":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtraggio della sequenza temporale delle attività a livello di contatto
-
-La sequenza temporale delle attività per i tuoi clienti Include i loro ID o nomi, a seconda della configurazione *ContactProfile*, per le attività su cui hanno agito. Filtra le attività in base ai contatti nella sequenza temporale per visualizzare specifici contatti a cui sei interessato. Per visualizzare tutte le attività che non sono assegnate a uno specifico contatto, seleziona **Attività non mappate a un contatto**.
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="Opzioni di filtro disponibili per le attività a livello di contatto.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,9 +1,9 @@
 ---
-title: Attività dei clienti
-description: Definisci le attività dei clienti e visualizzale in una sequenza temporale sui profili dei clienti.
-ms.date: 07/22/2022
+title: Impegni del cliente o del contatto aziendale
+description: Definisci gli impegni dei clienti o dei contatti aziendali e visualizzali in una sequenza temporale sui profili dei clienti.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188144"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304110"
 ---
-# <a name="customer-activities"></a>Attività dei clienti
+# <a name="customer-or-business-contact-activities"></a>Impegni del cliente o del contatto aziendale
 
-Le attività dei clienti sono azioni o eventi eseguiti dai clienti. Ad esempio, transazioni, durata della chiamata di assistenza, recensioni sul sito Web, acquisti o resi. Queste attività sono contenute in una o più origini dati. Con Customers Insights, consolida le attività dei tuoi clienti a partire da queste [origini dati](data-sources.md) e associale ai profili cliente. Queste attività sono visualizzate cronologicamente in una sequenza temporale nel profilo cliente. Includi la sequenza temporale nelle app Dynamics 365 con la soluzione [Componente aggiuntivo Scheda cliente](customer-card-add-in.md) soluzione.
+Gli impegni dei clienti sono azioni o eventi eseguiti da clienti o dai contatti aziendali. Ad esempio, transazioni, durata della chiamata di assistenza, recensioni sul sito Web, acquisti o resi. Queste attività sono contenute in una o più origini dati. Con Customers Insights, consolida le attività dei tuoi clienti a partire da queste [origini dati](data-sources.md) e associale ai profili cliente. Queste attività sono visualizzate cronologicamente in una sequenza temporale nel profilo cliente. Includi la sequenza temporale nelle app Dynamics 365 con la soluzione [Componente aggiuntivo Scheda cliente](customer-card-add-in.md) soluzione.
 
-## <a name="define-an-activity"></a>Definire un'attività
+## <a name="define-a-customer-activity"></a>Definisci un impegno del cliente
 
 Un'entità deve avere almeno un attributo di tipo **Data** per essere incluso in una sequenza temporale del cliente. Il controllo **Aggiungi impegno** è disabilitato se non viene trovata tale entità.
 
@@ -38,9 +38,9 @@ Un'entità deve avere almeno un attributo di tipo **Data** per essere incluso in
 
 1. Nel passaggio **Dati attività** immetti le informazioni seguenti:
 
-   - **Nome attività**: il nome dell'attività.
-   - **Entità attività**: l'entità che include dati transazionali o dati sull'attività.
-   - **Chiave primaria**: campo che identifica in modo univoco un record. Non deve contenere valori duplicati, valori vuoti o valori mancanti.
+   - **Nome impegno**: Seleziona un nome per l'impegno.
+   - **Entità attività**: selezionare un'entità che include dati transazionali o di attività.
+   - **Chiave primaria**: seleziona il campo che identifica in modo univoco un record. Non deve contenere valori duplicati, valori vuoti o valori mancanti.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Imposta i dati dell'impegno con nome, entità e chiave primaria.":::
 
@@ -48,9 +48,9 @@ Un'entità deve avere almeno un attributo di tipo **Data** per essere incluso in
 
 1. Nel passaggio **Relazione**, seleziona **Aggiungi relazione** per connettere i dati dell'attività al relativo record cliente corrispondente. Questo passaggio visualizza la connessione tra le entità.  
 
-   - **Chiave esterna da entità**: campo nell'entità attività che verrà utilizzato per stabilire una relazione con un'altra entità.
+   - **Chiave esterna**: campo esterno nell'entità dell'impegno che verrà utilizzato per stabilire una relazione con un'altra entità.
    - **A nome entità**: entità cliente di origine corrispondente con la quale l'entità attività sarà in relazione. È possibile fare riferimento solo alle entità del cliente di origine utilizzate nel processo di unificazione dei dati.
-   - **Nome relazione**: il nome che identifica la relazione tra le entità. Se esiste già una relazione tra questa entità attività e l'entità cliente di origine selezionata, il nome della relazione sarà di sola lettura.
+   - **Nome relazione**: se esiste già una relazione tra questa entità impegno e l'entità cliente di origine selezionata, il nome della relazione sarà in sola lettura. Se non esiste tale relazione, verrà creata una nuova relazione con il nome fornito in questa casella.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definisci la relazione dell'entità.":::
 
@@ -90,7 +90,7 @@ Un'entità deve avere almeno un attributo di tipo **Data** per essere incluso in
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Gestire gli impegni esistenti
+## <a name="manage-existing-customer-activities"></a>Gestire gli impegni dei clienti esistenti
 
 Vai a **Dati** > **Attività** per visualizzare le attività salvate, la relativa entità di origine, il tipo di attività e se sono incluse nella sequenza temporale del cliente. Puoi ordinare l'elenco delle attività in base a qualsiasi colonna o utilizzare la casella di ricerca per trovare l'attività che desideri gestire.
 
@@ -116,9 +116,43 @@ Seleziona un'attività per visualizzare le azioni disponibili.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Usa il pannello dei filtri per configurare le condizioni del filtro.":::
 
-1. Per rimuovere i filtri, seleziona **Cancella filtri** o seleziona **Filtro** e deseleziona la casella di controllo del filtro.
-
 > [!NOTE]
 > I filtri di attività vengono rimossi quando si lascia un profilo cliente. Devi applicarli ogni volta che apri un profilo cliente.
+
+## <a name="define-a-contact-activity"></a>Definisci un impegno del contatto
+
+Per gli account aziendali (B2B), utilizzare un'entità *ContactProfile* per acquisire gli impegni dei contatti. Puoi visualizzare nella sequenza temporale degli impegni per un account quale contatto era responsabile di ciascuna attività. La maggior parte dei passaggi segue la configurazione del mapping degli impegni.
+
+   > [!NOTE]
+   > Per definire un impegno a livello di contatto, deve essere creata un'entità *ContactProfile*, sia come [profilo di contatto unificato](data-unification-contacts.md) o attraverso [mapping semantico](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > È necessario disporre di entrambi gli attributi **AccountID** e **ContactID** per ogni record all'interno dei dati sull'attività.
+  
+1. Vai a **Dati** > **Impegni**.
+
+1. Seleziona **Aggiungi impegno**.
+
+1. Assegna un nome all'attività, seleziona l'entità dell'attività di origine e seleziona la chiave primaria dell'entità dell'attività.
+
+1. Nel passaggio **Relazioni** crea una relazione indiretta tra i dati di origine dell'attività e gli account, utilizzando i tuoi dati di contatto come entità intermediaria. Per ulteriori informazioni, vedi [percorsi di relazione diretti e indiretti](relationships.md#relationship-paths).
+   - Esempio di relazione per un'attività chiamata *Acquisti*:
+      - **Dati sull'attività di origine degli acquisti** > **Informazioni di contatto** sull'attributo **ContactID**
+      - **Informazioni di contatto** > **Dati dell'account** sull'attributo **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Esempio di configurazione della relazione.":::
+
+1. Dopo aver impostato le relazioni, seleziona **Avanti** e completa la configurazione del mapping delle attività. Per i passaggi dettagliati sulla creazione dell'attività, vedi [definire un'attività personalizzata](#define-a-customer-activity).
+
+1. Esegui le mappature delle tue attività.
+
+1. Le tue attività a livello di contatto saranno ora visibili sulla cronologia dei tuoi clienti.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Risultato finale dopo la configurazione delle attività di contatto":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Filtraggio della sequenza temporale delle attività a livello di contatto
+
+Dopo aver configurato una mappatura delle attività a livello di contatto e averla eseguita, la cronologia delle attività per i tuoi clienti verrà aggiornata. Include i loro ID o nomi, a seconda della tua configurazione *ContactProfile*, per le attività su cui hanno agito. Puoi filtrare le attività in base ai contatti nella sequenza temporale per visualizzare i contatti specifici a cui sei interessato. Inoltre, puoi vedere tutte le attività che non sono assegnate a un contatto specifico selezionando **Attività non mappate a un contatto**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opzioni di filtro disponibili per le attività a livello di contatto.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

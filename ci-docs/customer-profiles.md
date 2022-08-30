@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188098"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303788"
 ---
 # <a name="view-customer-profiles"></a>Visualizzare profili cliente
 
@@ -78,7 +78,7 @@ I dettagli del cliente includono:
 Il **riquadro del profilo cliente** mostra i differenti valori dell'entità *Customer* unificata. Fatta eccezione per il campo dell'indirizzo, un campo non verrà visualizzato qualora non contenga alcun valore per il profilo cliente selezionato. La piastrella è strutturata in sezioni:
 
 - La prima sezione mostra un insieme predefinito di campi seguito da tutti i campi che fanno parte dell'indicizzazione di ricerca e filtro. Tutti i campi relativi all'indirizzo sono combinati in un'unica riga, che viene mostrata anche se il profilo non contiene informazioni sull'indirizzo.
-- I **contatti di questo cliente** sono visualizzati in ambienti per account aziendali. Ogni contatto è mostrato con i suoi campi. I campi vuoti sono nascosti.
+- Visualizzazione di **Contatti per questo cliente** in ambienti per account aziendali (B2B). Ogni contatto è mostrato con i suoi campi. I campi vuoti sono nascosti.
 - **Campi aggiuntivi** mostra i restanti campi del cliente selezionato, eccetto gli ID.
 - **ID** elenca tutti gli ID sotto il nome dell'entità corrispondente. I campi sono identificati come ID in base alla relativa semantica.
 

@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213632"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304478"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Rimuovere i duplicati prima di unificare i dati
 
@@ -47,7 +47,7 @@ Se hai arricchito le entità a livello di origine dati per migliorare i risultat
 
 1. Nella pagina **Record duplicati** seleziona un'entità e quindi **Aggiungi regola** per definire le regole di deduplicazione.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Screenshot delle pagine dei record duplicati con l'opzione Mostra altro evidenziata":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Screenshot della pagina Record duplicati con l'entità evidenziata e Aggiungi regola visualizzata"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. Nel riquadro **Aggiungi regola** immetti le informazioni seguenti:
       - **Seleziona campo**: scegli dall'elenco dei campi disponibili dell'entità di cui desideri verificare la presenza di duplicati. Scegli campi che sono probabilmente univoci per ogni singolo cliente. Ad esempio, un indirizzo e-mail o la combinazione di nome, città e numero di telefono.
@@ -80,9 +80,9 @@ Se hai arricchito le entità a livello di origine dati per migliorare i risultat
       - **Con più dati**: identifica il record con i campi di attributo con più dati come record vincitore. È l'opzione di unione predefinita.
       - **Piu recente**: il record vincitore è quello più recente. Richiede una data o un campo numerico per definire la recency.
       - **Meno recente**: il record vincitore è quello meno recente. Richiede una data o un campo numerico per definire la recency.
-      
+
       In caso di parità, il record vincitore è quello con il valore della chiave primaria MAX(PK) o maggiore.
-      
+
    1. Facoltativamente, per definire le preferenze di unione sui singoli attributi di un'entità, seleziona **Avanzate** nella parte inferiore del riquadro. Ad esempio, puoi scegliere di conservare il messaggio e-mail più recente E l'indirizzo più completo da record diversi. Espandi l'entità per vedere tutti i suoi attributi e definisci quale opzione utilizzare per i singoli attributi. Se scegli un'opzione basata sulla recency, devi anche specificare un campo data/ora che definisca la recency.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Riquadro delle preferenze di unione avanzate che mostrano l'indirizzo e-mail più recente e l'indirizzo più completo":::
@@ -96,18 +96,5 @@ Se hai arricchito le entità a livello di origine dati per migliorare i risultat
 
 > [!div class="nextstepaction"]
 > [Passaggio successivo per più entità: condizioni corrispondenti](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Output di deduplicazione come entità
-
-Il processo di deduplicazione crea una nuova entità deduplicata per ciascuna delle entità di origine. Queste entità possono essere trovate insieme a **ConflationMatchPairs:CustomerInsights** nella sezione **Sistema** della pagina **Entità**, con il nome **Deduplication_DataSource_Entity**.
-
-Un'entità di output della deduplicazione contiene le seguenti informazioni:
-
-- ID/chiavi
-  - Campi chiave primaria e ID alternativo. Il campo ID alternativo è costituito da tutti gli ID alternativi identificati per un record.
-  - Il campo Deduplication_GroupId mostra il gruppo o il cluster identificato all'interno di un'entità che raggruppa tutti i record simili in base ai campi di deduplicazione specificati. È utilizzato per scopi di elaborazione del sistema. Se non sono state specificate regole di deduplicazione manuale e si applicano regole di deduplicazione definite dal sistema, potresti non trovare questo campo nell'entità di output della deduplicazione.
-  - Deduplication_WinnerId: questo campo contiene l'ID vincitore dei gruppi o cluster identificati. Se Deduplication_WinnerId è uguale al valore della chiave primaria per un record, significa che il record è il record vincitore.
-- Campi utilizzati per definire le regole di deduplicazione.
-- I campi Regola e Punteggio per indicare quale delle regole di deduplicazione è stata applicata e il punteggio restituito dall'algoritmo di corrispondenza.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

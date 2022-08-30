@@ -2,7 +2,7 @@
 title: Corrispondere le condizioni per l'unificazione dei dati
 description: Metti in corrispondenza le entità per creare profili cliente unificati.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139708"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304662"
 ---
 # <a name="match-conditions-for-data-unification"></a>Corrispondere le condizioni per l'unificazione dei dati
 
@@ -27,6 +27,8 @@ Questo passaggio nell'unificazione definisce l'ordine di corrispondenza e le reg
 
 > [!NOTE]
 > Dopo aver creato le condizioni di corrispondenza e selezionato **Avanti**, non è possibile rimuovere un'entità o un attributo selezionato. Se necessario, seleziona **Indietro** per rivedere le entità e gli attributi selezionati prima di continuare.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Includere entità arricchite (anteprima)
 
@@ -43,14 +45,14 @@ Se hai arricchito le entità a livello di origine dati per migliorare i risultat
 Ogni corrispondenza unifica due o più entità in un'unica entità consolidata. Allo stesso tempo, conserva i record del cliente univoci. L'ordine di corrispondenza indica l'ordine in cui il sistema tenta di abbinare i record.
 
 > [!IMPORTANT]
-> La prima entità nell'elenco è chiamata entità primaria. L'entità primaria funge da base per il set di dati dei profili unificati. Ulteriori entità selezionate verranno aggiunte a questa entità.
+> La prima entità è chiamata entità primaria, che serve da base per i profili unificati. Ulteriori entità selezionate verranno aggiunte a questa entità.
 >
 > Considerazioni importanti:
 >
 > - Scegli l'entità con i dati del profilo più completi e affidabili sui tuoi clienti come entità primaria.
 > - Scegli l'entità che ha diversi attributi in comune con altre entità (ad esempio nome, numero di telefono o indirizzo e-mail) come entità primaria.
 
-1. Nella pagina **Condizioni corrispondenti** usa le frecce di spostamento su e giù per spostare le entità nell'ordine desiderato oppure trascinale nella posizione desiderata. Ad esempio, seleziona **Contacts:eCommerce** come entità primaria e **CustomerLoyalty:Loyalty** come seconda entità.
+1. Nella pagina **Condizioni corrispondenti** usa le frecce di spostamento su e giù per spostare le entità nell'ordine desiderato oppure trascinale nella posizione desiderata. Ad esempio, seleziona **eCommerceCustomers** come entità primaria e **loyCustomers** come seconda entità.
 
 1. Per avere ogni record nell'entità come un cliente univoco indipendentemente dal fatto che venga trovata una corrispondenza, seleziona **Includi tutti i record**. Tutti i record in questa entità che non corrispondono ai record in altre entità sono inclusi nel profilo unificato. I record che non hanno una corrispondenza sono chiamati singleton.
   
@@ -70,7 +72,7 @@ L'avviso accanto al nome di un'entità indica che non è stata definita alcuna r
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Screenshot del riquadro Aggiungi regola.":::
 
-   - **Seleziona Entità/Campo (prima riga)**: scegli un'entità correlata e un attributo per specificare una proprietà del record probabilmente univoca per un cliente. Ad esempio, un numero di telefono o un indirizzo e-mail. Evita la corrispondenza in base agli attributi del tipo di attività. Ad esempio, un ID acquisto probabilmente non troverà corrispondenze in altri tipi di record.
+   - **Seleziona Entità/Campo (prima riga)**: scegli un'entità e un attributo probabilmente univoci per un cliente. Ad esempio, un numero di telefono o un indirizzo e-mail. Evita la corrispondenza in base agli attributi del tipo di attività. Ad esempio, un ID acquisto probabilmente non troverà corrispondenze in altri tipi di record.
 
    - **Seleziona entità/campo (seconda riga)**: scegli un attributo correlato all'attributo dell'entità specificata nella prima riga.
 
@@ -116,7 +118,7 @@ Le regole di corrispondenza rappresentano set di condizioni. Per corrispondere l
 
 ### <a name="add-exceptions-to-a-rule"></a>Aggiungere eccezioni a una regola
 
-Nella maggior parte dei casi, la corrispondenza delle entità porta a profili cliente univoci con dati consolidati. Per affrontare in modo dinamico rari casi di falsi positivi e falsi negativi, puoi definire eccezioni per una regola di corrispondenza. Le eccezioni vengono applicate dopo l'elaborazione delle regole di corrispondenza ed evitano la corrispondenza di tutti i record, che soddisfano i criteri di eccezione.
+Nella maggior parte dei casi, la corrispondenza delle entità porta a profili cliente univoci con dati consolidati. Per affrontare rari casi di falsi positivi e falsi negativi, puoi definire eccezioni per una regola di corrispondenza. Le eccezioni vengono applicate dopo l'elaborazione delle regole di corrispondenza ed evitano la corrispondenza di tutti i record, che soddisfano i criteri di eccezione.
 
 Ad esempio, se la tua regola di corrispondenza combina cognome, città e data di nascita, il sistema identificherà i gemelli con lo stesso cognome che vivono nella stessa città con lo stesso profilo. Puoi specificare un'eccezione che non corrisponde ai profili se i nomi nelle entità combinate non sono gli stessi.
 
@@ -134,7 +136,7 @@ Ad esempio, se la tua regola di corrispondenza combina cognome, città e data di
 |---------|---------|---------|
 |Corrisponde sempre     | Definisce i valori che corrispondono sempre.         |  Abbina sempre *Mike* e *MikeR*.       |
 |Mai nessuna corrispondenza     | Definisce valori che non corrispondono mai.        | Non abbina mai *John* e *Jonathan*.        |
-|Ignora personalizzato     | Definisce i valori che il sistema deve sempre ignorare in fase di corrispondenza. |  Ignora i valori *11111* e *Sconosciuto* durante la corrispondenza.        |
+|Ignora            | Definisce i valori che il sistema deve sempre ignorare in fase di corrispondenza. |  Ignora i valori *11111* e *Sconosciuto* durante la corrispondenza.        |
 |Mapping alias    | Definisce i valori che il sistema deve considerare come lo stesso valore.         | Considera *Joe* uguale a *Joseph*.        |
 
 1. Seleziona **Personalizza**.

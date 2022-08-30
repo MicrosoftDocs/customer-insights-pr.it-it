@@ -2,7 +2,7 @@
 title: Unificare i campi dei clienti per l'unificazione dei dati
 description: Unisci entità per creare profili cliente unificati.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213587"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304018"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Unificare i campi dei clienti per l'unificazione dei dati
+# <a name="unify-customer-fields"></a>Unificare i campi cliente
 
-In questo passaggio del processo di unificazione, scegli ed escludi gli attributi da unire all'interno dell'entità del tuo profilo unificato. Ad esempio, se tre entità avevano dati e-mail, puoi mantenere tutti i tre i campi e-mail separati o puoi unirli in un unico campo e-mail per il profilo unificato. Alcuni attributi vengono combinati automaticamente dal sistema. Puoi creare ID cliente stabili e univoci e raggruppare profili correlati in un cluster.
+In questo passaggio del processo di unificazione, scegli ed escludi gli attributi da unire all'interno dell'entità del tuo profilo unificato. Ad esempio, se tre entità avevano dati e-mail, puoi mantenere tutti i tre i campi e-mail separati o puoi unirli in un unico campo e-mail per il profilo unificato. Alcuni attributi vengono combinati automaticamente dal sistema. Puoi creare ID cliente stabili e univoci. Per i clienti individuali, puoi raggruppare i profili in un cluster.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Pagina di unione nel processo di unificazione dei dati che mostra la tabella con i campi uniti che definiscono il profilo del cliente unificato.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Pagina Unifica campi personalizzati nel processo di unificazione dei dati che mostra la tabella con i campi uniti che definiscono il profilo del cliente unificato.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Rivedi e aggiorna i campi cliente
 
@@ -47,7 +47,7 @@ In questo passaggio del processo di unificazione, scegli ed escludi gli attribut
 
 1. Facoltativamente, [genera la configurazione dell'ID cliente](#configure-customer-id-generation).
 
-1. Facoltativamente, [raggruppa profili in famiglie o cluster](#group-profiles-into-households-or-clusters).
+1. Facoltativamente per B2C, [raggruppa profili in famiglie o cluster](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Passaggio successivo: rivedi l'unificazione](review-unification.md)
@@ -161,7 +161,7 @@ La configurazione di un ID cliente stabile permette di evitare questo comportame
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Raggruppa i profili in famiglie o cluster
 
-Puoi definire regole per raggruppare i profili correlati in un cluster. Ci sono attualmente due tipi di cluster disponibili - cluster domestici e cluster personalizzati. Il sistema sceglie automaticamente una famiglia con regole predefinite se l'entità *Customer* contiene i campi semantici *Person.LastName* e *Location.Address*. Potete anche creare un cluster con le vostre regole e condizioni, simili alle [regole di corrispondenza](match-entities.md#define-rules-for-match-pairs).
+Per i clienti individuali, puoi definire regole per raggruppare i profili correlati in un cluster. Ci sono attualmente due tipi di cluster disponibili - cluster domestici e cluster personalizzati. Il sistema sceglie automaticamente una famiglia con regole predefinite se l'entità *Customer* contiene i campi semantici *Person.LastName* e *Location.Address*. Potete anche creare un cluster con le vostre regole e condizioni, simili alle [regole di corrispondenza](match-entities.md#define-rules-for-match-pairs).
 
 1. Seleziona **Avanzate** > **Crea cluster**.
 
