@@ -1,27 +1,27 @@
 ---
 title: Esempi di query OData per le API di Customer Insights
 description: Esempi comunemente usati di Open Data Protocol (OData) per eseguire query sulle API Customer Insights al fine di esaminare i dati.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121567"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387207"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Esempi di query OData per le API di Customer Insights
 
 OData (Open Data Protocol) è un protocollo di accesso ai dati basato su protocolli di base come HTTP. Utilizza metodologie comunemente accettate come REST per il Web. Esistono vari tipi di librerie e strumenti che consentono di utilizzare i servizi OData.
 
-Questo articolo elenca alcune query di esempio eseguite di frequente per aiutarti a creare le implementazioni basate su [API Customer Insights](apis.md).
+Per consentirti di creare le tue implementazioni basate sulle [API di Customer Insights](apis.md), rivedi alcune delle query di esempio richieste frequentemente.
 
-È necessario modificare gli esempi di query perché funzionino negli ambienti di destinazione: 
+Modificare gli esempi di query perché funzionino negli ambienti di destinazione:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` dove {instanceId} è il GUID dell'ambiente Customer Insights su cui eseguire le query. L'[operazione ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) consente di trovare gli elementi {InstanceId} a cui hai accesso.
 - {CID}: GUID di un record cliente unificato. Esempio: `ce759201f786d590bf2134bff576c369`.
@@ -31,7 +31,7 @@ Questo articolo elenca alcune query di esempio eseguite di frequente per aiutart
 
 ## <a name="customer"></a>Cliente
 
-La tabella seguente contiene una serie di query di esempio per l'entità *Cliente*.
+Esempi di query per l'entità *Cliente*.
 
 |Tipo di query |Esempio  | Nota  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ La tabella seguente contiene una serie di query di esempio per l'entità *Client
 
 ## <a name="unified-activity"></a>Impegno unificato
 
-La tabella seguente contiene una serie di query di esempio per l'entità *UnifiedActivity*.
+Esempi di query per l'entità *UnifiedActivity*.
 
 |Tipo di query |Esempio  | Nota  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ La tabella seguente contiene una serie di query di esempio per l'entità *Unifie
 
 ## <a name="other-examples"></a>Altri esempi
 
-La tabella seguente contiene una serie di query di esempio per altre entità.
+Query di esempio per altre entità.
 
 |Tipo di query |Esempio  | Nota  |
 |---------|---------|---------|

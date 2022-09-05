@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245930"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352806"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Esportare log di diagnostica (anteprima)
 
@@ -36,8 +36,8 @@ Customer Insights invia i seguenti registri eventi:
 
 - Una [sottoscrizione di Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) attiva.
 - Autorizzazioni di [amministratore](permissions.md#admin) in Customer Insights.
+- Una risorsa valida in Azure che segue i [requisiti di destinazione](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) per Archiviazione di Azure, Hub eventi di Azure o Analisi dei log di Azure.
 - [Ruolo Collaboratore e Amministratore accessi utente](/azure/role-based-access-control/role-assignments-portal) nella risorsa di destinazione in Azure. La risorsa può essere un account Azure Data Lake Storage, un hub eventi di Azure o un'area di lavoro Log Analytics di Azure. Questa autorizzazione è necessaria durante la configurazione delle impostazioni diagnostiche in Customer Insights, ma può essere modificata dopo la configurazione.
-- [Requisiti della destinazione](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) per Archiviazione di Azure, Hub eventi di Azure o Log Analytics di Azure soddisfatti.
 - Almeno il ruolo **Lettore** nel gruppo di risorse a cui appartiene la risorsa.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Configurare la diagnostica con Monitoraggio di Azure
