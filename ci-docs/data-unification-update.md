@@ -1,7 +1,7 @@
 ---
 title: Aggiornare le impostazioni di unificazione per cliente, account o contatti
 description: Aggiornare le regole duplicate, le regole di corrispondenza o i campi unificati nelle impostazioni di unificazione dei clienti o degli account.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304340"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392476"
 ---
 # <a name="update-unification-settings"></a>Aggiornare le impostazioni di unificazione
 
@@ -38,7 +38,7 @@ Per rivedere o modificare le impostazioni di unificazione una volta creato un pr
    > Il riquadro **Condizioni corrispondenti** viene visualizzato solo se sono state selezionate più entità.
 
 1. Scegli gli elementi da aggiornare:
-   - [Campi di origine](#edit-source-fields) per aggiungere entità o attributi o modificare i tipi di attributi.
+   - [Campi di origine](#edit-source-fields) per aggiungere entità o attributi o modificare i tipi di attributi. Per rimuovere un attributo, vedi [Rimuovere un campo unificato](#remove-a-unified-field). Per rimuovere un'entità, vedi [Rimuovere un'entità unificata](#remove-a-unified-entity).
    - [Record duplicati](#manage-deduplication-rules) per gestire le regole di deduplicazione o unire le preferenze.
    - [Condizioni corrispondenti](#manage-match-rules) per aggiornare le regole di corrispondenza tra due o più entità.
    - [Campi cliente unificati](#manage-unified-fields) per combinare o escludere campi. Puoi anche raggruppare i profili correlati in cluster.
@@ -53,8 +53,6 @@ Per rivedere o modificare le impostazioni di unificazione una volta creato un pr
 
 ## <a name="edit-source-fields"></a>Modifica i campi di origine
 
-Non puoi rimuovere un attributo né un'entità se sono già stati unificati.
-
 1. Seleziona **Modifica** nel riquadro **Campi di origine**.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Screenshot della pagina Campi di origine che mostra il numero di chiavi primarie e di campi mappati e non mappati":::
@@ -66,6 +64,80 @@ Non puoi rimuovere un attributo né un'entità se sono già stati unificati.
 1. Facoltativamente, puoi modificare la chiave primaria per un'entità, i tipi di attributo e attivare/disattivare **Mapping intelligente**. Per altre informazioni, vedi [Seleziona campi di origine](map-entities.md).
 
 1. Seleziona **Avanti** per apportare modifiche alle regole di deduplicazione oppure seleziona **Salva e chiudi** e torna ad [Aggiornare le impostazioni di unificazione](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Rimuovere un campo unificato
+
+Per rimuovere un campo che è stato unificato, il campo deve essere rimosso da qualsiasi dipendenza come segmenti, misure, arricchimenti o relazioni.
+
+1. Una volta rimosse tutte le dipendenze per il campo, vai a **Dati** > **Unifica**.
+
+1. Seleziona **Modifica** nel riquadro **Campi clienti unificati**.
+
+1. Seleziona tutte le occorrenze del campo e quindi **Escludi**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Screenshot della pagina Campi unificati che mostra i campi selezionati e il pulsante Escludi":::
+
+1. Seleziona **Fine** per confermare e seleziona **Salva e chiudi**.
+
+   > [!TIP]
+   > Se viene visualizzato il messaggio "Impossibile salvare Unify. Impossibile modificare o eliminare la risorsa specificata a causa di dipendenze downstream", il campo viene ancora usato in una dipendenza downstream.
+
+1. Se il campo viene utilizzato in una regola per record duplicati o condizioni di corrispondenza, eseguire i passaggi seguenti. In caso contrario, vai al passaggio successivo.
+   1. Seleziona **Modifica** nel riquadro **Record duplicati**.
+   1. Rimuovi il campo da tutte le regole in cui viene utilizzato, se presenti, e quindi seleziona **Avanti**.
+   1. Nella pagina **Condizioni corrispondenti**, rimuovi il campo da tutte le regole in cui è utilizzato, se presenti, e quindi seleziona **Salva e chiudi**.
+   1. Seleziona **Unify** > **Unifica profili cliente e dipendenze**. Attendi il completamento dell'unificazione prima di andare al passaggio successivo.
+
+1. Seleziona **Modifica** nel riquadro **Campi di origine**.
+
+1. Seleziona **Seleziona entità e campi** e deseleziona la casella di controllo accanto a ciascuna occorrenza del campo.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Screenshot della finestra di dialogo Seleziona entità e campi che mostra le caselle di controllo deselezionate":::
+
+1. Seleziona **Applica**.
+
+1. Selezionare **Salva e chiudi**.
+
+1. Seleziona **Unifica** > **Unifica profili cliente e dipendenze** per aggiornare il profilo unificato.
+
+### <a name="remove-a-unified-entity"></a>Rimuovere un'entità unificata
+
+Per rimuovere un'entità che è stata unificata, l'entità deve essere rimossa da qualsiasi dipendenza come segmenti, misure, arricchimenti o relazioni.
+
+1. Una volta rimosse tutte le dipendenze per l'entità, vai a **Dati** > **Unifica**.
+
+1. Seleziona **Modifica** nel riquadro **Campi clienti unificati**.
+
+1. Seleziona tutti i campi per l'entità, quindi **Escludi**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Screenshot di Campi unificati con tutti i campi per un'entità selezionati e il pulsante Escludi":::
+
+1. Seleziona **Fine** per confermare e seleziona **Salva e chiudi**.
+
+   > [!TIP]
+   > Se viene visualizzato il messaggio "Impossibile salvare Unify. Impossibile modificare o eliminare la risorsa specificata a causa di dipendenze downstream", l'entità viene ancora usata in una dipendenza downstream.
+
+1. Seleziona **Modifica** nel riquadro **Record duplicati**.
+
+1. Rimuovi tutte le regole dall'entità, se presenti, quindi seleziona **Avanti**.
+
+1. Nella pagina **Condizioni corrispondenti**, seleziona l'entità e quindi **Elimina**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Screenshot delle condizioni di corrispondenza con l'entità selezionata e il pulsante Elimina":::
+
+1. Selezionare **Salva e chiudi**.
+
+1. Seleziona **Modifica** nel riquadro **Campi di origine**.
+
+1. Seleziona **Seleziona entità e campi** e deseleziona la casella di controllo accanto all'entità.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Screenshot della finestra di dialogo Seleziona entità e campi che mostra le caselle di controllo dell'entità deselezionate":::
+
+1. Seleziona **Applica**.
+
+1. Selezionare **Salva e chiudi**.
+
+1. Seleziona **Unifica** > **Unifica profili cliente e dipendenze** per aggiornare il profilo unificato.
 
 ## <a name="manage-deduplication-rules"></a>Gestire le regole di deduplicazione
 

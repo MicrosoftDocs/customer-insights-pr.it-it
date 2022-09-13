@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246252"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396006"
 ---
 # <a name="view-system-configuration"></a>Visualizzare la configurazione di sistema
 
@@ -38,12 +38,6 @@ Visualizza i dettagli sull'utilizzo dell'API in tempo reale e scopri quali event
    - **Chiamate API** - un grafico che visualizza il numero aggregato di chiamate all'API nel intervallo di tempo selezionato.
    - **Trasferimento dati** - un grafico che mostra la quantità di dati trasferiti tramite l'API nella intervallo di tempo selezionata.
    - **Operazioni** - una tabella con righe per ogni operazione API disponibile e dettagli sull'utilizzo delle operazioni. Seleziona il nome di un'operazione per accedere al [riferimento API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Le operazioni che usano l'[inserimento dati in tempo reale](real-time-data-ingestion.md) contengono il simbolo di binocolo per visualizzare l'uso dell'API in tempo reale.
-
-   1. Seleziona il binocolo per aprire il riquadro **Utilizzo API in tempo reale** contenente dettagli sull'utilizzo per l'operazione.
-   1. **Seleziona un intervallo di tempo** da visualizzare.
-   1. Usa la casella **Raggruppa per** per scegliere come presentare al meglio le tue interazioni in tempo reale. Raggruppa i dati in base alle opzioni **Metodo** API, **Nome qualificato entità** (entità inserita), **Creato da** (origine dell'evento), **Risultato** (esito positivo o negativo) o **Codici errore**. I dati sono disponibili come grafico cronologico e come tabella.
 
 ## <a name="view-system-information"></a>Visualizzare informazioni sul sistema
 

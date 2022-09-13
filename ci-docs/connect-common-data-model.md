@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245838"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396087"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Connettersi ai dati in Azure Data Lake Storage
 
@@ -39,6 +39,8 @@ Inserisci dati in Dynamics 365 Customer Insights usando il tuo account Azure Dat
   - Lettore dati BLOB di archiviazione
   - Proprietario dati BLOB di archiviazione
   - Collaboratore dati BLOB di archiviazione
+
+- L'utente che configura la connessione origine dati necessita di autorizzazioni minime per i dati del BLOB di archiviazione contributore nell'account di archiviazione.
 
 - I dati in Data Lake Storage devono seguire lo standard Common Data Model per l'archiviazione dei dati e avere il manifesto Common Data Model per rappresentare lo schema dei file di dati (*.csv o *.parquet). Il manifesto deve fornire i dettagli delle entità come colonne di entità e tipi di dati, nonché la posizione del file di dati e il tipo di file. Per altre informazioni, vedi [Manifesto Common Data Model](/common-data-model/sdk/manifest). Se il manifesto non è presente, gli utenti amministratori con accesso Proprietario dati BLOB di archiviazione o Collaboratore dati BLOB di archiviazione possono definire lo schema durante l'inserimento dei dati.
 
@@ -62,7 +64,7 @@ Inserisci dati in Dynamics 365 Customer Insights usando il tuo account Azure Dat
    > [!NOTE]
    > È necessario uno dei seguenti ruoli per il contenitore o l'account di archiviazione per creare l'origine dati:
    >
-   >  - Lettore dati del BLOB di archiviazione è sufficiente per leggere da un account di archiviazione e importare i dati in Customer Insights. 
+   >  - Lettore dati del BLOB di archiviazione è sufficiente per leggere da un account di archiviazione e importare i dati in Customer Insights.
    >  - Collaboratore dati BLOB di archiviazione o Proprietario è necessario per modificare i file manifesto direttamente in Customer Insights.  
   
 1. Scegli il nome del **Contenitore** che contiene i dati e lo schema (file model.json o manifest.json) da cui importare i dati e seleziona **Avanti**.

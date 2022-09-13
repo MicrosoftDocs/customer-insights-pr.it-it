@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246342"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395961"
 ---
 # <a name="schedule-system-refresh"></a>Pianificare gli aggiornamenti di sistema
 
@@ -36,7 +36,7 @@ Pianifica gli aggiornamenti automatici di tutte le [origini dati inserite](data-
 
 1. Scegli tra aggiornamenti **settimanali** (impostazione predefinita) e **giornalieri**. Se vuoi pianificare gli aggiornamenti settimanali, seleziona uno o più giorni in cui desideri eseguire l'aggiornamento.
 
-1. Imposta il tuo **Fuso orario**, quindi utilizza il menu a discesa **Ora** per impostare i tempi di aggiornamento. Se desideri pianificare più aggiornamenti in un solo giorno, seleziona **Aggiungi un altro orario**.
+1. Imposta il tuo **Fuso orario**, quindi utilizza il menu a discesa **Ora** per impostare i tempi di aggiornamento. Se desideri pianificare più aggiornamenti in un solo giorno, seleziona **Aggiungi un altro orario**. Puoi aggiungere fino a quattro aggiornamenti.
 
 1. Seleziona **Salva** per applicare le modifiche.
 
