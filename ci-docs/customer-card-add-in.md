@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194928"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473647"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Componente aggiuntivo scheda cliente per Dynamics 365 (anteprima)
 
@@ -32,7 +32,8 @@ Ottieni una panoramica completa dei tuoi clienti direttamente nelle app Dynamics
 - Affinché i dati di Dynamics 365 vengano mappati ai profili del cliente Customer Insights, consigliamo di [importarli dall'app Dynamics 365 utilizzando il connettore Microsoft Dataverse](connect-power-query.md). Se utilizzi un metodo diverso per importare i contatti (o gli account) di Dynamics 365, devi assicurarti che il campo `contactid` (o `accountid`) sia impostato come [chiave primaria per l'origine dati durante il processo di unificazione dei dati](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Tutti gli utenti Dynamics 365 del componente aggiuntivo scheda cliente devono essere [aggiunti come utenti](permissions.md) in Customer Insights per vedere i dati.
 - [Funzionalità di ricerca e filtro configurate](search-filter-index.md) in Customer Insights.
-- Ogni controllo del componente aggiuntivo si basa su dati specifici in Customer Insights. Alcuni dati e controlli sono disponibili solo in ambienti di tipo specifico. La configurazione del componente aggiuntivo ti informerà se un controllo non è disponibile a causa del tipo di ambiente selezionato. Per saperne di più sui [casi d'uso dell'ambiente](work-with-business-accounts.md).
+- Alcuni dati e controlli sono disponibili solo in ambienti di tipo specifico. La configurazione del componente aggiuntivo ti informerà se un controllo non è disponibile a causa del tipo di ambiente selezionato. Questo errore verrà visualizzato all'interno del controllo durante il rendering. Per saperne di più sui [casi d'uso dell'ambiente](work-with-business-accounts.md).
+- Ogni controllo del componente aggiuntivo si basa su dati specifici in Customer Insights.
   - **Controllo delle misure** richiede [misure configurate di attributi del cliente](measures.md).
   - **Controllo intelligente** richiede dati generati utilizzando [previsioni o modelli personalizzati](predictions-overview.md).
   - **Controllo dei dettagli del cliente** mostra tutti i campi del profilo disponibili nel profilo cliente unificato.

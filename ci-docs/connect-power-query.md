@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207050"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463270"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Connessione a un'origine dati Power Query
 
@@ -63,7 +63,9 @@ L'aggiunta di origini dati basate sui connettori Power Query generalmente segue 
 Il caricamento dei dati può richiedere tempo. Al termine dell'aggiornamento, i dati inseriti possono essere esaminati nella pagina [**Entità**](entities.md).
 
 > [!CAUTION]
-> Un'origine dati basata su Power Query crea un [flusso di dati in Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Non modificare il nome di un flusso di dati utilizzato in Customer Insights nell'interfaccia di amministrazione di Power Platform. La ridenominazione di un flusso di dati causa problemi con i riferimenti tra l'origine dati di Customer Insights e il flusso di dati di Dataverse.
+>
+> - Un'origine dati basata su Power Query crea un [flusso di dati in Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Non modificare il nome di un flusso di dati utilizzato in Customer Insights nell'interfaccia di amministrazione di Power Platform. La ridenominazione di un flusso di dati causa problemi con i riferimenti tra l'origine dati di Customer Insights e il flusso di dati di Dataverse.
+> - Valutazioni simultanee per origini dati Power Query in Customer Insights hanno gli stessi [limiti di aggiornamento dei Flussi di dati in PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Se un aggiornamento dei dati non riesce perché ha raggiunto il limite di valutazione, ti consigliamo di modificare la pianificazione dell'aggiornamento per ogni flusso di dati per garantire che le origini dati non vengano elaborate contemporaneamente.
 
 ### <a name="available-power-query-data-sources"></a>Origini dati di Power Query disponibili
 
@@ -77,7 +79,7 @@ L'inserimento di dati da origini dati locali è supportata in base ai flussi di 
 
 Le origini dati che vengono create dopo aver associato un ambiente Dataverse con Customer Insights usano [flussi di dati Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) per impostazione predefinita. I flussi di dati supportano la connettività locale utilizzando il gateway di dati. Puoi rimuovere e ricreare origini dati che esistevano prima dell'associazione dell'ambiente Dataverse [utilizzando i gateway dati locali](/data-integration/gateway/service-gateway-app).
 
-I gateway dati di un ambiente Power BI o Power Apps esistente saranno visibili e potrai riutilizzarli in Customer Insights. La pagina delle origini dati mostra i collegamenti per andare all'ambiente Microsoft Power Platform in cui è possibile visualizzare e configurare i gateway dati locale.
+Il gateway dati da un ambiente Power BI o Power Apps esistente sarà visibile e potrai riutilizzarlo in Customer Insights se il gateway dati e l'ambiente Customer Insights si trovano nella stessa regione di Azure. La pagina delle origini dati mostra i collegamenti per andare all'ambiente Microsoft Power Platform in cui è possibile visualizzare e configurare i gateway dati locale.
 
 > [!IMPORTANT]
 > Assicurati che i gateway siano aggiornati all'ultima versione. È possibile installare un aggiornamento e riconfigurare un gateway direttamente da un prompt visualizzato sullo schermo del gateway oppure [scaricare l'ultima versione](https://powerapps.microsoft.com/downloads/). Se non si utilizza l'ultima versione del gateway, l'aggiornamento del flusso di dati non viene eseguito e viene visualizzato un messaggio di errore come **La parola chiave non è supportata: proprietà di configurazione. Nome parametro: parola chiave**.
