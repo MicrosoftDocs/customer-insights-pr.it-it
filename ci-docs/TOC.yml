@@ -7,21 +7,21 @@
 - name: Catalogo delle risorse di apprendimento
   items:
     - name: Certificazione come Specialista della piattaforma per i dati dei clienti Microsoft
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Introduzione a Customer Insights
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: Inserire i dati
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: Crea un profilo cliente unificato
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Utilizzare Customer Insights
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: Arricchisci i dati e fai previsioni
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: Gestire le connessioni esterne
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Amministrare Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: Versione di valutazione gratuita
   items:
     - name: Iscrizione per una valutazione gratuita
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: Utilizzare dati web per la personalizzazione
       href: unknown-to-known.md
+    - name: Gestire profili cliente sconosciuti
+      href: manage-unknown-profiles.md
 - name: Segments
   items:
     - name: Panoramica dei segmenti
