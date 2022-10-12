@@ -1,7 +1,7 @@
 ---
 title: Panoramica delle origini dati
 description: Scopri come importare o inserire i dati da varie origini.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245654"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610057"
 ---
 # <a name="data-sources-overview"></a>Panoramica delle origini dati
 
@@ -65,7 +65,9 @@ Seleziona un'origine dati per visualizzare le azioni disponibili.
 
 ## <a name="refresh-data-sources"></a>Aggiornare le origini dati
 
-Le origini dati possono essere aggiornate in base a una pianificazione automatica o manualmente su richiesta. Le [origini dati locali](connect-power-query.md#add-data-from-on-premises-data-sources) aggiornano le relative pianificazioni che vengono configurate durante l'inserimento dati. Per le origini dati collegate, l'inserimento dati usa gli ultimi dati disponibili da tale origine dati.
+Le origini dati possono essere aggiornate in base a una pianificazione automatica o manualmente su richiesta. Le [origini dati locali](connect-power-query.md#add-data-from-on-premises-data-sources) aggiornano le relative pianificazioni che vengono configurate durante l'inserimento dati. Per suggerimenti sulla risoluzione dei problemi, vedi [Risoluzione dei problemi di aggiornamento delle origini dati PPDF basate su Power Query](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
+
+Per le origini dati collegate, l'inserimento dati usa gli ultimi dati disponibili da tale origine dati.
 
 Vai ad **Amministratore** > **Sistema** > [**Pianifica**](schedule-refresh.md) per configurare gli aggiornamenti pianificati dal sistema delle origini dati inserite.
 
@@ -76,5 +78,37 @@ Per aggiornare un'origine dati su richiesta:
 1. Seleziona l'origine dati che vuoi aggiornare e seleziona **Aggiorna**. L'origine dati è ora attivata per un aggiornamento manuale. L'aggiornamento di un'origine dati aggiornerà sia lo schema dell'entità che i dati per tutte le entità specificate nell'origine dati.
 
 1. Seleziona lo stato per aprire il riquadro **Dettagli stato** e visualizzare l'avanzamento del processo. Per annullare il processo, seleziona **Annulla processo** nella parte inferiore del riquadro.
+
+## <a name="corrupt-data-sources"></a>Origini dati danneggiate
+
+I dati inseriti potrebbero contenere record danneggiati che possono causare il completamento del processo di inserimento dati con errori o avvisi.
+
+> [!NOTE]
+> Se l'inserimento dati viene completato con errori, l'elaborazione successiva (come l'unificazione o la creazione di attività) che sfrutta questa origine dati verrà ignorata. Se l'inserimento viene completato con avvisi, l'elaborazione successiva continua ma alcuni record potrebbero non essere inclusi.
+
+Questi errori possono essere visualizzati nei dettagli dell'attività.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Dettagli dell'attività che mostrano un errore di dati danneggiati.":::
+
+I record danneggiati vengono visualizzati nelle entità create dal sistema.
+
+### <a name="fix-corrupt-data"></a>Correggere i dati danneggiati
+
+1. Per visualizzare i dati danneggiati, vai a **Dati** > **Entità** e cerca le entità danneggiate nella sezione **Sistema**. Lo schema di denominazione delle entità danneggiate: "DataSourceName_EntityName_corrupt".
+
+1. Seleziona un'entità danneggiata, quindi la scheda **Dati**.
+
+1. Identifica i campi danneggiati in un record e il motivo.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Motivo di danneggiamento." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Dati** > **Entità** mostra solo una parte dei record danneggiati. Per visualizzare tutti i record danneggiati, esporta i file in un contenitore nell'account di archiviazione mediante l'estensione [Processo di esportazione di Customer Insights](export-destinations.md). Se hai usato il tuo account di archiviazione, puoi anche esaminare la cartella Customer Insights nel tuo account di archiviazione.
+
+1. Correggi i dati danneggiati. Ad esempio, per le origini dati Azure Data Lake, [correggi i dati in Data Lake Storage oppure aggiorna i tipi di dati nel file manifest/model.json](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data). Per le origini dati Power Query, correggi i dati nel file di origine e [correggi il tipo di dati nel passaggio di trasformazione](connect-power-query.md#data-type-does-not-match-data) nella pagina **Power Query - Modifica query**.
+
+Dopo il successivo aggiornamento dell'origine dati, i record corretti vengono inseriti in Customer Insights e passati ai processi downstream.
+
+Ad esempio, una colonna "compleanno" ha il tipo di dati impostato su "data". Il record del cliente ha la data di nascita inserita in formato "01/01/19777". Il sistema contrassegna questo record come danneggiato. Modifica la data di nascita nel sistema di origine in "1977". Dopo un aggiornamento automatico delle origini dati, il campo ora ha un formato valido e il record verrà rimosso dall'entità danneggiata.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

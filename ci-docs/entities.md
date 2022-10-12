@@ -1,7 +1,7 @@
 ---
 title: Entità in Customer Insights
 description: Visualizza i dati nella pagina Entità.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183565"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610103"
 ---
 # <a name="entities-in-customer-insights"></a>Entità in Customer Insights
 
@@ -61,27 +61,5 @@ Vai a **Dati** > **Entità** per visualizzare un elenco di entità. Le seguenti 
   - **Data di creazione**: data e ora di creazione dell'entità.
   - **Modificato da**: nome della persona che ha modificato l'entità.
   - **Modificato**: data e ora di modifica dell'entità.
-
-## <a name="entity-specific-information"></a>Informazioni specifiche dell'entità
-
-La sezione seguente fornisce informazioni su alcune entità create dal sistema.
-
-### <a name="corrupted-data-sources"></a>Origini dati danneggiate
-
-I campi di un'origine dati inserita possono contenere dati danneggiati. I record con campi danneggiati vengono esposti nelle entità create dal sistema. La conoscenza dei record danneggiati consente di identificare quali dati rivedere e aggiornare nel sistema di origine. Dopo il successivo aggiornamento dell'origine dati, i record corretti vengono inseriti in Customer Insights e passati ai processi downstream. 
-
-Ad esempio, una colonna "compleanno" ha il tipo di dati impostato su "data". Il record del cliente ha la data di nascita inserita in formato "01/01/19777". Il sistema contrassegnerà questo record come danneggiato. Qualcuno può ora modificare la data di nascita nel sistema di origine in "1977". Dopo un aggiornamento automatico delle origini dati, il campo ora ha un formato valido e il record verrà rimosso dall'entità danneggiata.
-
-Vai a **Dati** > **Entità** e cerca le entità corrotte nella sezione **Sistema**. Schema di denominazione delle entità danneggiate: "DataSourceName_EntityName_corrupt". Seleziona un'entità danneggiata per identificare i campi danneggiati e il motivo a livello di singolo record.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Motivo di danneggiamento.":::
-
-Customer Insights elabora ancora i record danneggiati. Tuttavia, potrebbero causare problemi quando si lavora con i dati unificati.
-
-I seguenti controlli vengono eseguiti sui dati importati per esporre i record danneggiati:
-
-- Il valore di un campo non corrisponde al tipo di dati della sua colonna.
-- I campi contengono caratteri che fanno sì che le colonne non corrispondano allo schema previsto. Ad esempio: virgolette formattate in modo errato, virgolette senza caratteri di escape o caratteri di nuova riga.
-- Se sono presenti colonne datetime/date/datetimeoffset, il loro formato deve essere specificato nel modello se non segue il formato ISO standard.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

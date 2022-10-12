@@ -156,28 +156,26 @@
           href: predict-product-recommendation.md
         - name: Previsione dell'abbandono dell'abbonamento
           href: predict-subscription-churn.md
-        - name: Prevedere il churn delle transazioni
+        - name: Prevedere l'abbandono delle transazioni
           href: predict-transactional-churn.md
         - name: Analizzare la valutazione nel feedback dei clienti
           href: sentiment-analysis.md
         - name: Usa modelli personalizzati da Azure Machine Learning
           href: custom-models.md
+        - name: Creare segmenti in base alle previsioni
+          href: prediction-based-segment.md
     - name: Guide di esempio
       items:
         - name: Guida di esempio per previsione CLV
           href: sample-guide-predict-clv.md
         - name: Guida di esempio per una previsione di abbandono dell'abbonamento
           href: sample-guide-predict-subscription-churn.md
-        - name: Esempio di guida per la previsione del churn delle transazioni
+        - name: Esempio di guida per la previsione di abbandono delle transazioni
           href: sample-guide-predict-transactional-churn.md
         - name: Guida di esempio per la previsione di raccomandazioni sui prodotti
           href: sample-guide-predict-product-recommendation.md
         - name: Esperimenti con Azure Machine Learning
           href: azure-machine-learning-experiments.md
-    - name: Gestisci previsioni
-      href: manage-predictions.md
-    - name: Creare segmenti in base alle previsioni
-      href: prediction-based-segment.md
 - name: Esportare opzioni
   items:
     - name: Esportazioni
