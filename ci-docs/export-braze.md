@@ -1,19 +1,19 @@
 ---
 title: Esportare segmenti in Braze (anteprima)
 description: Informazioni su come configurare la connessione e l'esportazione in Braze.
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195112"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655276"
 ---
 # <a name="export-segments-to-braze-preview"></a>Esportare segmenti in Braze (anteprima)
 
@@ -23,6 +23,7 @@ Esportare segmenti di profili cliente unificati in Braze e utilizzarli per attiv
 
 - Un [account Braze](https://www.braze.com/) e le credenziali di amministratore corrispondenti.
 - Una [chiave API Braze](https://www.braze.com/docs/api/basics/)
+- L'[endpoint REST Braze](https://www.braze.com/docs/api/basics/#api-definitions) 
 - [Segmenti configurati](segments.md) in Customer Insights.
 - I profili cliente unificati nei segmenti esportati contengono un campo che rappresenta un indirizzo e-mail e un ID cliente Braze.
 
@@ -30,6 +31,7 @@ Esportare segmenti di profili cliente unificati in Braze e utilizzarli per attiv
 
 - È possibile esportare fino a 1 milione di profili cliente per esportazione in Braze e il completamento di questa operazione può richiedere fino a 40 minuti. Il numero di profili cliente che puoi esportare in Braze dipende dal tuo contratto con Braze.
 - Solo segmenti.
+- Il collegamento privato di Azure non è supportato per l'esportazione Braze.
 
 ## <a name="set-up-connection-to-braze"></a>Configurare la connessione a Braze
 
@@ -62,6 +64,8 @@ Esportare segmenti di profili cliente unificati in Braze e utilizzarli per attiv
 1. Seleziona **Aggiungi esportazione**.
 
 1. Nel campo **Connessione per esportazione** scegli una connessione nella sezione Braze. Contatta un amministratore se non è disponibile alcuna connessione.
+
+1. Inserisci il tuo endpoint REST nel campo **Nome host** nel formato seguente: `rest.iad-03.braze.com`.
 
 1. Immetti un nome per l'esportazione.
 
