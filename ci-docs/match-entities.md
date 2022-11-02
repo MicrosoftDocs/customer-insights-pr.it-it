@@ -2,7 +2,7 @@
 title: Corrispondere le condizioni per l'unificazione dei dati
 description: Metti in corrispondenza le entità per creare profili cliente unificati.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304662"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721526"
 ---
 # <a name="match-conditions-for-data-unification"></a>Corrispondere le condizioni per l'unificazione dei dati
 
@@ -126,16 +126,16 @@ Ad esempio, se la tua regola di corrispondenza combina cognome, città e data di
 
 1. Specifica i criteri di eccezione.
 
-1. Seleziona **Fatto** in modo da salvare la regola.
+1. Seleziona **Fatto** per salvare la regola.
 
 ### <a name="specify-custom-match-conditions"></a>Specificare le condizioni di corrispondenza personalizzate
 
-È possibile specificare condizioni che sovrascrivono la logica di corrispondenza predefinita. Le opzioni disponibili sono quattro:
+Specifica le condizioni che sovrascrivono la logica di corrispondenza predefinita. Le opzioni disponibili sono quattro:
 
 |Opzione  |Description |Esempio  |
 |---------|---------|---------|
-|Corrisponde sempre     | Definisce i valori che corrispondono sempre.         |  Abbina sempre *Mike* e *MikeR*.       |
-|Mai nessuna corrispondenza     | Definisce valori che non corrispondono mai.        | Non abbina mai *John* e *Jonathan*.        |
+|Corrisponde sempre     | Definisce i valori per le chiavi primarie che corrispondono sempre.         |  Abbina sempre la riga con chiave primaria *12345* alla riga con chiave primaria *54321*.       |
+|Mai nessuna corrispondenza     | Definisce i valori per le chiavi primarie che non corrispondono mai.        | Non abbinare mai la riga con chiave primaria *12345* alla riga con chiave primaria *54321*.        |
 |Ignora            | Definisce i valori che il sistema deve sempre ignorare in fase di corrispondenza. |  Ignora i valori *11111* e *Sconosciuto* durante la corrispondenza.        |
 |Mapping alias    | Definisce i valori che il sistema deve considerare come lo stesso valore.         | Considera *Joe* uguale a *Joseph*.        |
 
@@ -143,17 +143,18 @@ Ad esempio, se la tua regola di corrispondenza combina cognome, città e data di
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Pulsante Personalizza":::
 
-1. Scegli il **Tipo personalizzato** e seleziona **Scarica modello**. Hai bisogno di un modello separato per ogni opzione di corrispondenza.
+1. Scegli il **Tipo personalizzato** e seleziona **Scarica modello**. Rinomina il modello senza utilizzare spazi. Usa un modello separato per ogni opzione di corrispondenza.
 
-1. Apri il file modello scaricato e inserisci i dettagli. Il modello contiene campi per specificare l'entità e i valori della chiave primaria dell'entità da utilizzare nella corrispondenza personalizzata. Ad esempio, se desideri la chiave primaria *12345* dall'entità *Vendite* in modo che corrisponda sempre alla chiave primaria *34567* dall'entità *Contatto*, compila il modello:
-    - Entity1: Vendite
-    - Entity1Key: 12345
-    - Entity2: Contatto
-    - Entity2Key: 34567
+1. Apri il file modello scaricato e inserisci i dettagli. Il modello contiene campi per specificare l'entità e i valori della chiave primaria dell'entità da utilizzare nella corrispondenza personalizzata. I nomi delle entità sono sensibili alla distinzione tra maiuscole e minuscole. Ad esempio, se desideri la chiave primaria *12345* dall'entità *Vendite* in modo che corrisponda sempre alla chiave primaria *34567* dall'entità *Contatto*, compila il modello:
+   - Entity1: Vendite
+   - Entity1Key: 12345
+   - Entity2: Contatto
+   - Entity2Key: 34567
 
    Lo stesso file di modello può specificare record di corrispondenza personalizzati da più entità.
 
-   Se desideri specificare la corrispondenza personalizzata per la deduplicazione in un'entità, fornisci la stessa entità sia come Entità1 che Entità2 e imposta i diversi valori di chiave primaria.
+   > [!NOTE]
+   > Se desideri specificare la corrispondenza personalizzata per la deduplicazione in un'entità, fornisci la stessa entità sia come Entità1 che Entità2 e imposta i diversi valori di chiave primaria. È necessario definire almeno una regola di deduplicazione per l'entità per utilizzare la corrispondenza personalizzata.
 
 1. Dopo aver aggiunto tutte le sostituzioni, salva il file di modello.
 
@@ -169,6 +170,8 @@ Ad esempio, se la tua regola di corrispondenza combina cognome, città e data di
    - Per **Ignora** o **Mapping alias**, seleziona **Modifica** su una regola di corrispondenza esistente o crea una nuova regola. Nel menu a discesa Normalizzazione scegli l'opzione **Ignora personalizzato** o **Mapping alias** e seleziona **Fatto**.
 
 1. Seleziona **Fine** nel riquadro **Personalizza** per applicare la configurazione di corrispondenza personalizzata.
+
+   Ogni file modello inserito è la propria origine dati. Se vengono rilevati record che richiedono un trattamento di corrispondenza speciale, aggiorna l'origine dati appropriata. L'aggiornamento verrà utilizzato durante il successivo processo di unificazione. Ad esempio, identifichi gemelli quasi con lo stesso nome che vivono allo stesso indirizzo che erano stati uniti in una sola persona. Aggiorna l'origine dati per identificare i gemelli come record separati e univoci.
 
 > [!div class="nextstepaction"]
 > [Passaggio successivo: unifica i campi](merge-entities.md)
