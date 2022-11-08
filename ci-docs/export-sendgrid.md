@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f2990ad410dda0cbf952f82f3fc30b3a53a7bcd4
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 855e77055eeb24a2c6cff0d45cd23edf93cc0581
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196997"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724853"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Esportare segmenti in SendGrid (anteprima)
 
@@ -29,6 +29,7 @@ Esporta segmenti di profili cliente unificati nell'elenco di contatti SendGrid e
 
 ## <a name="known-limitations"></a>Limitazioni note
 
+- Il collegamento privato in combinazione con Bring your own storage (BYOS) non è supportato.
 - È possibile esportare fino a 100.000 profili cliente in totale in SendGrid e il completamento di questa operazione può richiedere alcune ore. Il numero di profili cliente che puoi esportare in SendGrid dipende dal tuo contratto con SendGrid.
 - Solo segmenti.
 

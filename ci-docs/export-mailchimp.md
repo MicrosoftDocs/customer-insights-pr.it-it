@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 54aec10e24b6356e2e4317cf33e740a1a086a2dd
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d74672768afec94e899ff0aec8c118c2afcde368
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196859"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725037"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Esportare segmenti in Mailchimp (anteprima)
 
@@ -28,6 +28,7 @@ Esporta segmenti di profili cliente unificati in Mailchimp per creare newsletter
 
 ## <a name="known-limitations"></a>Limitazioni note
 
+- Il collegamento privato in combinazione con Bring your own storage (BYOS) non è supportato.
 - È possibile esportare fino a 1 milione di profili cliente per esportazione in Mailchimp e il completamento di tale operazione può richiedere fino a tre ore. Il numero di profili cliente che puoi esportare in Mailchimp dipende dal tuo contratto con Mailchimp.
 - Solo segmenti.
 

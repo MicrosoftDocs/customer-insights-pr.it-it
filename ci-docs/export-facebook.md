@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195019"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724605"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Esportare segmenti in Facebook Ads Manager (anteprima)
 
@@ -25,11 +25,13 @@ Esporta segmenti di profili cliente unificati in Gestione inserzioni di Facebook
 
 - Un [account inserzioni Facebook](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) che includa un [account aziendale Facebook](https://business.facebook.com/).
 - Un [account inserzioni Facebook con privilegi di amministratore](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- I termini Gruppo di destinatari personalizzato devono essere accettati dall'utente che imposta la connessione in Customer Insights.
 
 ## <a name="known-limitations"></a>Limitazioni note
 
 - È possibile esportare fino a 10 milioni di profili cliente per esportazione in Gestione inserzioni di Facebook e il completamento di tale operazione può richiedere fino a 90 minuti.
 - Solo segmenti.
+- L'integrazione degli annunci Facebook non supporta gli utenti con più di 25 account pubblicitari.
 - Tipo *elenco clienti* Facebook solo in [gruppi di destinatari personalizzati](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
   > [!NOTE]
   > In alcuni casi, nell'elenco a discesa, potrebbero essere visualizzati segmenti di pubblico personalizzati di diversi tipi. Se selezioni un tipo diverso da *elenco clienti*, l'esportazione non riuscirà.

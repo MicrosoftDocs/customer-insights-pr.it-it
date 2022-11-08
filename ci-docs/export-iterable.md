@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 69e2bd207c98fc2530620018bf95dd869d1798f6
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195434"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724551"
 ---
 # <a name="export-segments-to-iterable-preview"></a>Esportare segmenti in Iterable (anteprima)
 
@@ -28,6 +28,7 @@ Esportare segmenti di profili cliente unificati in Iterable e utilizzarli per at
 
 ## <a name="known-limitations"></a>Limitazioni note
 
+- Il collegamento privato in combinazione con Bring your own storage (BYOS) non è supportato.
 - È possibile esportare fino a 1 milione di profili cliente in Iterable e il completamento di tale operazione può richiedere fino a 30 minuti. Il numero di profili cliente che puoi esportare in Iterable dipende dal tuo contratto con Iterable.
 - Solo segmenti.
 

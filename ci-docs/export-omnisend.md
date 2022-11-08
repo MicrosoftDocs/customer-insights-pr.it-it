@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196169"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725175"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Esportare segmenti in Omnisend (anteprima)
 
@@ -28,6 +28,7 @@ Esporta segmenti di profili cliente unificati in Omnisend e utilizzali per le at
 
 ## <a name="known-limitations"></a>Limitazioni note
 
+- Il collegamento privato in combinazione con Bring your own storage (BYOS) non è supportato.
 - È possibile esportare fino a 1 milione di profili cliente per esportazione in Omnisend e il completamento di tale operazione può richiedere fino a quattro ore. Il numero di profili cliente che puoi esportare in Omnisend dipende dal tuo contratto con Omnisend.
 - Solo segmenti.
 

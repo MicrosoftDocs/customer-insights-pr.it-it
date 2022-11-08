@@ -8,12 +8,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fc4ac34c1de096e25ba6c374fe17b1da6b2f745f
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196951"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724899"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Esportazione di segmenti in Sendinblue (anteprima)
 
@@ -29,6 +29,7 @@ Esporta i segmenti di profii clienti unificati per generare campagne, offrire e-
 
 ## <a name="known-limitations"></a>Limitazioni note
 
+- Il collegamento privato in combinazione con Bring your own storage (BYOS) non è supportato.
 - È possibile esportare fino a 1 milione di profili cliente per esportazione in Sendinblue e il completamento di tale operazione può richiedere fino a 90 minuti. Il numero di profili cliente che puoi esportare in Sendinblue dipende dal tuo contratto con Sendinblue.
 - Solo segmenti.
 

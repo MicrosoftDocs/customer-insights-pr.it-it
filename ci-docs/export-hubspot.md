@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0281be288b2c4d9e5da7ad8e2ed25f7b51b8498e
-ms.sourcegitcommit: f959c85871777e5f4eab289e91b2fd114cd72153
+ms.openlocfilehash: b34f1d54fa499f6c6b80fa547a8aaf61af3b35a1
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "9588908"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725359"
 ---
 # <a name="export-segments-to-hubspot-preview"></a>Esportare segmenti in HubSpot (anteprima)
 
@@ -27,6 +27,7 @@ Esportare segmenti di profili cliente unificati in HubSpot e utilizzarli per att
 
 ## <a name="known-limitations"></a>Limitazioni note
 
+- Il collegamento privato in combinazione con Bring your own storage (BYOS) non è supportato.
 - Fino a 100.000 profili cliente per esportazione in HubSpot, il cui completamento può richiedere fino a 15 minuti. Il numero di profili cliente che puoi esportare in HubSpot dipende e si limita dal tuo contratto con HubSpot.
 - Solo segmenti.
 
