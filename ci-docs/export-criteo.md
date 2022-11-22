@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
-ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
+ms.openlocfilehash: 811752da943cd5e40608d48644a1744c7971d3c8
+ms.sourcegitcommit: 40ae3322ac95913e485607494754dd03814e42bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "9724794"
+ms.lasthandoff: 11/11/2022
+ms.locfileid: "9760031"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Esportazione dei segmenti in Criteo (anteprima)
 
@@ -27,7 +27,6 @@ Esporta segmenti di profili clienti unificati per generare campagne, fornire e-m
 
 ## <a name="known-limitations"></a>Limitazioni note
 
-- Il collegamento privato in combinazione con Bring your own storage (BYOS) non è supportato.
 - È possibile esportare fino a 1 milione di profili cliente per esportazione in Criteo e il completamento di tale  operazione può richiedere fino a 30 minuti. Il numero di profili cliente che puoi esportare in Criteo dipende dal tuo contratto con Criteo.
 - Solo segmenti.
 
